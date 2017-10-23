@@ -109,6 +109,25 @@ public class TutorialPlayer : MonoBehaviour
         return damage;
     }
 
+    internal void setTime(bool enemyPhase, float enemyTime)
+    {
+        if (enemyPhase)
+        {
+            Timer = enemyTime;
+            timeLeft.maxValue = enemyTime;
+        }
+        else
+        {
+            Timer = resetTime;
+            timeLeft.maxValue = resetTime;
+
+        }
+
+        greenZone = Timer * .8f;
+        redZone = Timer * .25f;
+    }
+
+
     //Reduce the player's health, with a_damage being the enemy's attack.
     public void DamagePlayer(float a_damage)
     {

@@ -19,6 +19,11 @@ public class TutorialMonster : MonoBehaviour
     public TutorialCalculator calculator;
 
 
+    bool phase = true;
+
+    public TutmultipleContainer container;
+
+
     //Update healthbar as it changes.
     void Update()
     {
@@ -101,6 +106,10 @@ public class TutorialMonster : MonoBehaviour
         }
 
         string answerNeeded = answer.ToString("F0");
+
+
+        phase = !phase;
+        container.SetMultiple(answer, phase);
 
 
         string answerWords;

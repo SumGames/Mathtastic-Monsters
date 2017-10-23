@@ -213,9 +213,8 @@ public class Player : MonoBehaviour
 
         }
 
-
-        greenZone = resetTime * critTime;
-        redZone = resetTime * .25f;
+        greenZone = Timer * critTime;
+        redZone = Timer * .25f;
     }
 
     //Calculate exp modifier based on health remaining and if the quiz has been completed before.
