@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class TutmultipleContainer : MonoBehaviour
 {
@@ -55,18 +56,18 @@ public class TutmultipleContainer : MonoBehaviour
         answers[index].gameObject.SetActive(true);
         answers[index].setAnswer(enemyAnswerNeeded);
 
-        for (int i = 1; i < 2; i++)
+
+        int[] wrongAnswers = new int[2];
+        wrongAnswers[0] = enemyAnswerNeeded + 1;
+        wrongAnswers[1] = enemyAnswerNeeded - 1;
+
+        for (int i = 1; i < 3; i++)
         {
-            int wrongAnswer = -3;
-            while (wrongAnswer <= 1 || wrongAnswer >= 5)// || CheckMultiple(a_running, wrongAnswer))
-            {
-                int range = Random.Range(-1, 2);
-                wrongAnswer = enemyAnswerNeeded + range;
-            }
+            int wrongAnswer = wrongAnswers[(i - 1)];
 
 
             index = Random.Range(0, 8);
-            while (answers[index].getAnswer() != -1)
+            while (answers[index].gameObject.activeSelf)
             {
                 index = Random.Range(0, 8);
             }
@@ -82,5 +83,13 @@ public class TutmultipleContainer : MonoBehaviour
             item.gameObject.SetActive(false);
         }
         calculator.SetActive(true);
+    }
+
+    public void interactableButtons(bool canInteract)
+    {
+        foreach (TutMultipleAnswer item in answers)
+        {
+            item.gameObject.GetComponent<Button>().interactable = false;
+        }
     }
 }

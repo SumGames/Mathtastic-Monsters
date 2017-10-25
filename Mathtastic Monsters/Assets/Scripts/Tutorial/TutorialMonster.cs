@@ -19,7 +19,7 @@ public class TutorialMonster : MonoBehaviour
     public TutorialCalculator calculator;
 
 
-    bool phase = true;
+    bool enemyAttackPhase;
 
     public TutmultipleContainer container;
 
@@ -44,10 +44,17 @@ public class TutorialMonster : MonoBehaviour
     //Player is hurt, and a new question is built.
     internal void EnemyAttack()
     {
-        player.DamagePlayer(attack);
-        MakeQuestion();
+        if (enemyAttackPhase)
+        {
+            player.DamagePlayer(attack);
+            MakeQuestion();
 
-        FindObjectOfType<StepManager>().ProgressTutorial();
+            FindObjectOfType<StepManager>().ProgressTutorial();
+        }
+        else
+        {
+            MakeQuestion();
+        }
     }
 
 
@@ -77,7 +84,7 @@ public class TutorialMonster : MonoBehaviour
     }
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal void MakeQuestion()
+    internal void MakeQuestion(int newPhase=0)
     {
 
 
@@ -101,16 +108,21 @@ public class TutorialMonster : MonoBehaviour
         //if Answer is too low/too high, or requires rounding to solve, we try again.
         if (answer <= 1 || answer >= 9)
         {
-            MakeQuestion();
+            MakeQuestion(newPhase);
             return;
         }
 
         string answerNeeded = answer.ToString("F0");
 
 
-        phase = !phase;
-        container.SetMultiple(answer, phase);
+        if (newPhase == 0)
+            enemyAttackPhase = !enemyAttackPhase;
+        else if (newPhase == 1)
+            enemyAttackPhase = true;
+        else
+            enemyAttackPhase = false;
 
+        container.SetMultiple(answer, enemyAttackPhase);
 
         string answerWords;
 

@@ -89,6 +89,7 @@ public class StepManager : MonoBehaviour
                 levelSelect.SetActive(false);
                 myButton.interactable = true;
 
+                TutorialMonster.MakeQuestion(2);
                 break;
             case 5:
                 lillyText.text = "This is your health bar. We'll lose if it runs out.";
@@ -129,29 +130,39 @@ public class StepManager : MonoBehaviour
                 OutlineGlows[6].SetActive(true);
                 break;
 
+
             case 13:
-                lillyText.text = "I'll now lower the freeze barrier when you're ready. Good luck, Hero!";
+                lillyText.text = "When your gauge hits 0, the enemy will attack.";
+                TutorialMonster.MakeQuestion(1);
                 OutlineGlows[6].SetActive(false);
                 break;
 
             case 14:
+                lillyText.text = "To evade, hit the button with the Correct Answer";
+                break;
+
+            case 15:
+                lillyText.text = "I'll now lower the freeze barrier when you're ready. Good luck, Hero!";
+                break;
+
+            case 16:
                 lillyText.text = "Answer the monster's questions to lower its health!!";
-                TutorialMonster.MakeQuestion();
+                TutorialMonster.MakeQuestion(2);
                 player.Frozen = 0;
                 tutorialCalculator.ButtonsActive(true);
                 myButton.interactable = false;
                 break;
-            case 15:
+            case 17:
                 lillyText.text = "Hero! Please be more careful! I had to freeze the beast again.";
                 myButton.interactable = true;
                 player.Frozen = 3;
                 tutorialCalculator.ButtonsActive(false);
                 break;
 
-            case 16:
+            case 18:
                 if (!victory)
                 {
-                    SetStep(13);
+                    SetStep(15);
                     TutorialMonster.LoadMonster();
                     player.ResetPlayer();
                     return;

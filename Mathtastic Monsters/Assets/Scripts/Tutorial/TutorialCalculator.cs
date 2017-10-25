@@ -69,6 +69,8 @@ public class TutorialCalculator : MonoBehaviour
 
     public void ButtonsActive(bool a_on)
     {
+        FindObjectOfType<TutmultipleContainer>().interactableButtons(a_on);
+
         foreach (Button item in buttonsAll)
         {
             item.interactable = a_on;
