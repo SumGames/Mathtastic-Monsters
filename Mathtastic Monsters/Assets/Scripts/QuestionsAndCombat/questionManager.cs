@@ -21,16 +21,10 @@ public class questionManager : MonoBehaviour
         int answer = -2;
         string oper = "";
 
+		//Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
             numbers[i] = (int)UnityEngine.Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
-        }
-
-
-        //If operator is 'x', second number is one of two.
-        if (a_running.Operator == 'x')
-        {
-            numbers[1] = (int)UnityEngine.Random.Range(a_running.secondNumberMin, (a_running.secondNumberMax + 1));
         }
 
         switch (a_running.Operator)
@@ -52,6 +46,9 @@ public class questionManager : MonoBehaviour
                 }
                 break;
             case 'x':
+			    //If operator is 'x', second number is one of two possible numbers.
+				numbers[1] = (int)UnityEngine.Random.Range(a_running.secondNumberMin, (a_running.secondNumberMax + 1));
+			
                 answer = numbers[0] * numbers[1];
                 oper = "x ";
                 break;

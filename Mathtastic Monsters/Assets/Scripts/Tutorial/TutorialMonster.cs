@@ -33,10 +33,12 @@ public class TutorialMonster : MonoBehaviour
     //Monster's health is reduced by player's attack, possibly switching to won state.
     internal void MonsterHurt()
     {
-        health -= player.PlayerAttack();
+        if (!enemyAttackPhase)
+        {
+            health -= player.PlayerAttack();
 
-        CheckDeath();
-
+            CheckDeath();
+        }
 
         MakeQuestion();
     }
@@ -47,14 +49,10 @@ public class TutorialMonster : MonoBehaviour
         if (enemyAttackPhase)
         {
             player.DamagePlayer(attack);
-            MakeQuestion();
 
             FindObjectOfType<StepManager>().ProgressTutorial();
         }
-        else
-        {
-            MakeQuestion();
-        }
+        MakeQuestion();
     }
 
 

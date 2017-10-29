@@ -89,7 +89,7 @@ public class TutmultipleContainer : MonoBehaviour
     {
         foreach (TutMultipleAnswer item in answers)
         {
-            item.gameObject.GetComponent<Button>().interactable = false;
+            item.gameObject.GetComponent<Button>().interactable = canInteract;
         }
     }
 }
