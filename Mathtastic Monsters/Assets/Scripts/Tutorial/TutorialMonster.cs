@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TutorialMonster : MonoBehaviour
 {
-    float health; //The current health of the monster, as set by the quizButton.
+    public float health; //The current health of the monster, as set by the quizButton.
     float attack;
 
 
@@ -26,8 +26,7 @@ public class TutorialMonster : MonoBehaviour
 
     //Update healthbar as it changes.
     void Update()
-    {
-        healthBar.value = health;
+    {        
     }
 
     //Monster's health is reduced by player's attack, possibly switching to won state.
@@ -36,6 +35,7 @@ public class TutorialMonster : MonoBehaviour
         if (!enemyAttackPhase)
         {
             health -= player.PlayerAttack();
+            healthBar.value = health;
 
             CheckDeath();
         }
@@ -58,7 +58,7 @@ public class TutorialMonster : MonoBehaviour
 
     void CheckDeath()
     {
-        if (health < 0)
+        if (health <= 0)
         {
 
             FindObjectOfType<StepManager>().playerWon();
@@ -79,6 +79,8 @@ public class TutorialMonster : MonoBehaviour
         attack = 1;
 
         healthBar.maxValue = health;
+
+        healthBar.value = health;
     }
 
     //Uses given values to calculate a random sum and its components, then store and display them.

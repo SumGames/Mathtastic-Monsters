@@ -163,7 +163,7 @@ public class StepManager : MonoBehaviour
                 if (!victory)
                 {
                     SetStep(15);
-                    TutorialMonster.LoadMonster();
+                    //TutorialMonster.LoadMonster();
                     player.ResetPlayer();
                     return;
                 }
@@ -183,6 +183,8 @@ public class StepManager : MonoBehaviour
     internal void playerWon()
     {
         victory = true;
-        SetStep(16);
+        SetStep(18);
+        player.Frozen = 3;
+        tutorialCalculator.ButtonsActive(false);
     }
 }
