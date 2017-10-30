@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657695, g: 0.49641138, b: 0.5748176, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 41803942}
   - component: {fileID: 41803941}
   m_Layer: 5
-  m_Name: Add9
+  m_Name: Add8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,11 +558,11 @@ RectTransform:
   m_Children:
   - {fileID: 1276200253}
   m_Father: {fileID: 288741781}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51.6, y: 28.1}
+  m_AnchoredPosition: {x: 27, y: 15.1}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41803941
@@ -578,15 +578,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
-  minNumber: 10
-  maxNumber: 99
+  levelTime: 25
+  minNumber: 100
+  maxNumber: 899
   Operator: 43
-  minAnswer: 1
-  maxAnswer: 198
-  difficulty: 14
+  minAnswer: 200
+  maxAnswer: 999
+  difficulty: 17
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   rounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
@@ -2236,7 +2236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &288741781
 Transform:
   m_ObjectHideFlags: 0
@@ -2254,8 +2254,8 @@ Transform:
   - {fileID: 1255812455}
   - {fileID: 740681437}
   - {fileID: 1673962225}
-  - {fileID: 1219344382}
   - {fileID: 41803940}
+  - {fileID: 1219344382}
   - {fileID: 1499900384}
   - {fileID: 1690181366}
   m_Father: {fileID: 543391330}
@@ -5673,7 +5673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Addition 8
+  m_Text: Addition 9
 --- !u!222 &610913025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7377,16 +7377,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
-  minNumber: 10
-  maxNumber: 99
+  levelTime: 25
+  minNumber: 20
+  maxNumber: 79
   Operator: 43
   minAnswer: 1
-  maxAnswer: 198
-  difficulty: 14
+  maxAnswer: 99
+  difficulty: 15
   MonsterHealth: 15
-  MonsterAttack: 2
-  rounding: 1
+  MonsterAttack: 1
+  rounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -7699,7 +7699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 15
   minNumber: 1
   maxNumber: 9
   Operator: 43
@@ -9689,16 +9689,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
-  maxNumber: 48
+  maxNumber: 10
   Operator: 43
-  minAnswer: 1
-  maxAnswer: 49
+  minAnswer: 10
+  maxAnswer: 19
   difficulty: 12
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 1
+  rounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -10249,12 +10249,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
-  maxNumber: 9
+  maxNumber: 10
   Operator: 43
-  minAnswer: 1
-  maxAnswer: 20
+  minAnswer: 11
+  maxAnswer: 19
   difficulty: 11
   MonsterHealth: 10
   MonsterAttack: 1
@@ -12655,7 +12655,7 @@ GameObject:
   - component: {fileID: 1219344384}
   - component: {fileID: 1219344383}
   m_Layer: 5
-  m_Name: Add8
+  m_Name: Add9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12673,11 +12673,11 @@ RectTransform:
   m_Children:
   - {fileID: 610913023}
   m_Father: {fileID: 288741781}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.1, y: 15.7}
+  m_AnchoredPosition: {x: 64.4, y: 10.4}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219344383
@@ -12692,16 +12692,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 2
-  levelTime: 0
-  minNumber: 10
+  variableCount: 3
+  levelTime: 25
+  minNumber: 1
   maxNumber: 99
   Operator: 43
   minAnswer: 1
   maxAnswer: 198
-  difficulty: 14
+  difficulty: 18
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   rounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
@@ -13149,16 +13149,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 5
   minNumber: 10
-  maxNumber: 99
+  maxNumber: 39
   Operator: 43
-  minAnswer: 1
-  maxAnswer: 198
+  minAnswer: 20
+  maxAnswer: 49
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 1
+  rounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -13817,7 +13817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Addition 9
+  m_Text: Addition 8
 --- !u!222 &1276200255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15951,7 +15951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65.1, y: -4.8999996}
+  m_AnchoredPosition: {x: 70.4, y: -29.2}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499900385
@@ -15966,17 +15966,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 2
-  levelTime: 0
-  minNumber: 10
+  variableCount: 3
+  levelTime: 15
+  minNumber: 1
   maxNumber: 99
   Operator: 43
   minAnswer: 1
   maxAnswer: 198
-  difficulty: 14
-  MonsterHealth: 15
+  difficulty: 19
+  MonsterHealth: 20
   MonsterAttack: 2
-  rounding: 1
+  rounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -17938,16 +17938,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 25
   minNumber: 10
   maxNumber: 99
   Operator: 43
   minAnswer: 1
   maxAnswer: 198
-  difficulty: 14
+  difficulty: 16
   MonsterHealth: 15
-  MonsterAttack: 2
-  rounding: 1
+  MonsterAttack: 1
+  rounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -20311,12 +20311,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
-  minNumber: 10
-  maxNumber: 89
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 48
   Operator: 43
-  minAnswer: 1
-  maxAnswer: 99
+  minAnswer: 20
+  maxAnswer: 49
   difficulty: 13
   MonsterHealth: 10
   MonsterAttack: 1
