@@ -62,9 +62,9 @@ public class questionManager : MonoBehaviour
                 break;
         }
 
-        bool rounding = a_running.rounding;
+        bool rounding = a_running.preventRounding;
 
-        if (a_running.rounding) //if box is ticked, need to make sure numbers don't require rounding up.
+        if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
         {
             rounding = preventRounding(numbers, a_running, answer);
         }
@@ -103,20 +103,34 @@ public class questionManager : MonoBehaviour
     //Repeatedly run the Rounding function using different digit amounts.
     public bool preventRounding(int[] a_numbers, QuizButton a_running, int a_answer)
     {
-        if (a_answer > 1000)
+        int checkingAnswer = a_answer;
+
+        if(a_numbers[0]>a_answer)
+        {
+            checkingAnswer = a_numbers[0];
+        }
+
+
+        if (checkingAnswer > 1000)
         {
             if (rounding(a_numbers, a_running.Operator, 1000))
-                return true;
+            {
+                return true;                
+            }
         }
-        if (a_answer > 100)
+        if (checkingAnswer > 100)
         {
             if (rounding(a_numbers, a_running.Operator, 100))
+            {
                 return true;
+            }
         }
-        if (a_answer > 10)
+        if (checkingAnswer > 10)
         {
             if (rounding(a_numbers, a_running.Operator, 10))
+            {
                 return true;
+            }
         }
 
         return false;
@@ -153,7 +167,7 @@ public class questionManager : MonoBehaviour
                 {
                     total -= shortened[i];
                 }
-                if (total <= (a_digits / 10))
+                if (total < (a_digits / 10))
                 {
                     return true;
                 }

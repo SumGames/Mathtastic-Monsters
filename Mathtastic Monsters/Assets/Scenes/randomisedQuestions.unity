@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657695, g: 0.49641138, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641156, b: 0.5748181, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -813,7 +813,7 @@ MonoBehaviour:
   difficulty: 17
   MonsterHealth: 15
   MonsterAttack: 1
-  rounding: 1
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -946,7 +946,7 @@ MonoBehaviour:
   difficulty: 23
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 3
   secondNumberMax: 6
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   difficulty: 18
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   difficulty: 20
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 1
   secondNumberMax: 2
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -2295,7 +2295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 2
+  variableCount: 3
   levelTime: 25
   minNumber: 10
   maxNumber: 199
@@ -2305,7 +2305,7 @@ MonoBehaviour:
   difficulty: 23
   MonsterHealth: 20
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -2885,7 +2885,7 @@ MonoBehaviour:
   difficulty: 19
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -4232,7 +4232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.1, y: -45.2}
+  m_AnchoredPosition: {x: 20.099998, y: -45.2}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403351037
@@ -4257,7 +4257,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -4578,7 +4578,7 @@ MonoBehaviour:
   difficulty: 22
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 4
   secondNumberMax: 8
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -6644,7 +6644,7 @@ MonoBehaviour:
   difficulty: 15
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 1
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -7277,7 +7277,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -7793,7 +7793,7 @@ MonoBehaviour:
   difficulty: 17
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 1
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -8747,7 +8747,7 @@ MonoBehaviour:
   difficulty: 15
   MonsterHealth: 15
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -9069,7 +9069,7 @@ MonoBehaviour:
   difficulty: 10
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -9373,7 +9373,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -9708,7 +9708,7 @@ MonoBehaviour:
   difficulty: 12
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -9879,7 +9879,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -10067,7 +10067,7 @@ MonoBehaviour:
   difficulty: 20
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -10501,7 +10501,7 @@ MonoBehaviour:
   difficulty: 11
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -10653,7 +10653,7 @@ MonoBehaviour:
   difficulty: 12
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -10956,7 +10956,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -11641,7 +11641,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -12115,7 +12115,7 @@ MonoBehaviour:
   difficulty: 12
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -12242,7 +12242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.8, y: -8.3}
+  m_AnchoredPosition: {x: 68.8, y: -8.299999}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991637861
@@ -12267,7 +12267,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -12665,7 +12665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 2
+  variableCount: 3
   levelTime: 35
   minNumber: 10
   maxNumber: 199
@@ -12675,7 +12675,7 @@ MonoBehaviour:
   difficulty: 22
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -12882,7 +12882,7 @@ MonoBehaviour:
   difficulty: 21
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 5
   secondNumberMax: 10
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -13053,7 +13053,7 @@ MonoBehaviour:
   difficulty: 11
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 1
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -14628,7 +14628,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -15802,7 +15802,7 @@ MonoBehaviour:
   difficulty: 18
   MonsterHealth: 15
   MonsterAttack: 1
-  rounding: 1
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -15935,7 +15935,7 @@ MonoBehaviour:
   difficulty: 13
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -16043,7 +16043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65.2, y: 17.6}
+  m_AnchoredPosition: {x: -65.19999, y: 17.6}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1242327713
@@ -16087,7 +16087,7 @@ MonoBehaviour:
   difficulty: 13
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -16258,7 +16258,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -16606,7 +16606,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -16832,7 +16832,7 @@ MonoBehaviour:
   difficulty: 16
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -18589,7 +18589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.1, y: 34}
+  m_AnchoredPosition: {x: -27.099998, y: 34}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421154645
@@ -18614,7 +18614,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -18815,7 +18815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.99998, y: 194.2}
+  m_AnchoredPosition: {x: -182.99998, y: 157.8}
   m_SizeDelta: {x: 360.9, y: 166.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446319020
@@ -19224,7 +19224,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -19376,7 +19376,7 @@ MonoBehaviour:
   difficulty: 19
   MonsterHealth: 20
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -20699,7 +20699,7 @@ MonoBehaviour:
   difficulty: 10
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -21068,7 +21068,7 @@ MonoBehaviour:
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -21647,7 +21647,7 @@ MonoBehaviour:
   difficulty: 16
   MonsterHealth: 15
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -21780,7 +21780,7 @@ MonoBehaviour:
   difficulty: 11
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -21888,7 +21888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.3, y: -22.399998}
+  m_AnchoredPosition: {x: -53.299995, y: -22.399998}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1680404662
@@ -22352,7 +22352,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -23052,7 +23052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.1, y: 26.9}
+  m_AnchoredPosition: {x: 17.099998, y: 26.9}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791208199
@@ -23077,7 +23077,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -23229,7 +23229,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -23455,7 +23455,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 15
   MonsterAttack: 2
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -24481,7 +24481,7 @@ MonoBehaviour:
   difficulty: 13
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -25156,7 +25156,7 @@ MonoBehaviour:
   difficulty: 14
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -25713,7 +25713,7 @@ MonoBehaviour:
   difficulty: 21
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -26746,7 +26746,7 @@ MonoBehaviour:
   difficulty: 10
   MonsterHealth: 10
   MonsterAttack: 1
-  rounding: 0
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}

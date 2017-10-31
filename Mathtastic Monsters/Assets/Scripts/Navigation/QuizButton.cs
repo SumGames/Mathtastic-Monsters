@@ -29,7 +29,7 @@ public class QuizButton : MonoBehaviour
     MonsterManager p_manager; //A link to the quizManager so it can tell it to start.
 
 
-    public bool rounding;
+    public bool preventRounding;
 
     public int secondNumberMin;
     public int secondNumberMax;
