@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641156, b: 0.5748181, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1289,11 +1289,11 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 15
-  minNumber: 10
-  maxNumber: 199
+  minNumber: 1
+  maxNumber: 49
   Operator: 45
   minAnswer: 1
-  maxAnswer: 189
+  maxAnswer: 48
   difficulty: 18
   MonsterHealth: 15
   MonsterAttack: 2
@@ -2298,10 +2298,10 @@ MonoBehaviour:
   variableCount: 3
   levelTime: 25
   minNumber: 10
-  maxNumber: 199
+  maxNumber: 999
   Operator: 45
-  minAnswer: 1
-  maxAnswer: 189
+  minAnswer: 30
+  maxAnswer: 979
   difficulty: 23
   MonsterHealth: 20
   MonsterAttack: 2
@@ -2877,11 +2877,11 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 35
-  minNumber: 10
-  maxNumber: 199
+  minNumber: 1
+  maxNumber: 99
   Operator: 45
   minAnswer: 1
-  maxAnswer: 189
+  maxAnswer: 98
   difficulty: 19
   MonsterHealth: 10
   MonsterAttack: 1
@@ -7518,7 +7518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &659668826
 Transform:
   m_ObjectHideFlags: 0
@@ -7788,7 +7788,7 @@ MonoBehaviour:
   minNumber: 1
   maxNumber: 49
   Operator: 45
-  minAnswer: 40
+  minAnswer: 1
   maxAnswer: 48
   difficulty: 17
   MonsterHealth: 10
@@ -12668,10 +12668,10 @@ MonoBehaviour:
   variableCount: 3
   levelTime: 35
   minNumber: 10
-  maxNumber: 199
+  maxNumber: 999
   Operator: 45
-  minAnswer: 1
-  maxAnswer: 189
+  minAnswer: 30
+  maxAnswer: 979
   difficulty: 22
   MonsterHealth: 10
   MonsterAttack: 1
@@ -15724,10 +15724,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3103d21cabcb5b54e9a307ee6059a498, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -25705,11 +25705,11 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 35
-  minNumber: 10
-  maxNumber: 199
+  minNumber: 100
+  maxNumber: 999
   Operator: 45
   minAnswer: 1
-  maxAnswer: 189
+  maxAnswer: 899
   difficulty: 21
   MonsterHealth: 10
   MonsterAttack: 1
