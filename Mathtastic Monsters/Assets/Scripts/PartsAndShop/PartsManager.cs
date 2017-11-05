@@ -46,6 +46,8 @@ public class PartsManager : MonoBehaviour
     AbilitiesManager abilities;
     bool changed = false;
 
+    monsterSteps tutorial;
+
 
     // Use this for initialization
     internal void Begin()
@@ -56,11 +58,19 @@ public class PartsManager : MonoBehaviour
 
         currentType = partType.Torso;
         getPart();
+
+        tutorial = FindObjectOfType<monsterSteps>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (tutorial && tutorial.tutorialStage < 15)
+        {
+            equipItemButton.interactable = false;
+            return;
+        }
+
         if (changed)
         {
             previewAbilities.text = abilities.setAbilities();
@@ -261,6 +271,12 @@ public class PartsManager : MonoBehaviour
 
     void addingTorso()
     {
+        if (tutorial && tutorial.tutorialStage == 15)
+        {
+            tutorial.ProgressTutorial();
+        }
+
+
         if (TorsoEquipped != null)
         {
             Destroy(TorsoEquipped.gameObject);

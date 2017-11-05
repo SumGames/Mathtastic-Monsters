@@ -304,9 +304,6 @@ public class equipmentList : MonoBehaviour
         listOfTorso[0].GetComponent<ItemPart>().owned = true;
         changeEquip(listOfTorso[0], partType.Torso, 0);
 
-        listofHeads[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listofHeads[0], partType.Head, 0);
-
         listofLeftArms[0].GetComponent<ItemPart>().owned = true;
         changeEquip(listofLeftArms[0], partType.LeftArm, 0);
 

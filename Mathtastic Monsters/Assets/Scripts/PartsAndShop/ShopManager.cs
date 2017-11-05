@@ -31,6 +31,9 @@ public class ShopManager : MonoBehaviour
     AbilitiesManager abilities;
 
 
+    public monsterSteps tutorial;
+
+
     // Use this for initialization
     internal void Begin()
     {
@@ -40,6 +43,8 @@ public class ShopManager : MonoBehaviour
         }
         currentType = partType.Torso;
         readyPart();
+
+        tutorial = FindObjectOfType<monsterSteps>();
     }
 
     // Update is called once per frame
@@ -55,6 +60,15 @@ public class ShopManager : MonoBehaviour
 
         ItemPart part = currentPart.GetComponent<ItemPart>();
 
+        if (tutorial != null)
+        {
+            if (tutorial.tutorialStage < 9)
+            {
+                equipItemButton.interactable = false;
+                displayCurrent.text = "Not ready";
+                return;
+            }
+        }
 
         if (part.owned)
         {
