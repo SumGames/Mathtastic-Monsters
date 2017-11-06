@@ -24,6 +24,11 @@ public class combatFeedback : MonoBehaviour
     public Image PlayerImage;
     public Image EnemyImage;
 
+    public AudioSource[] sounds;
+    public AudioSource attack;
+    public AudioSource hurt;
+
+
     public float resetTimer = 3;
 
     float timer;
@@ -31,6 +36,10 @@ public class combatFeedback : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        sounds = GetComponents<AudioSource>();
+        attack = sounds[0];
+        hurt = sounds[1];
+
         PlayerImage.enabled = false;
         EnemyImage.enabled = false;
 
@@ -59,6 +68,7 @@ public class combatFeedback : MonoBehaviour
             case SetImage.hit:
                 EnemyImage.sprite = attackHit;
                 EnemyImage.enabled = true;
+                attack.Play();
                 break;
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
@@ -67,6 +77,7 @@ public class combatFeedback : MonoBehaviour
             case SetImage.hurt:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
+                hurt.Play();
                 break;
             case SetImage.miss:
                 PlayerImage.sprite = dodged;

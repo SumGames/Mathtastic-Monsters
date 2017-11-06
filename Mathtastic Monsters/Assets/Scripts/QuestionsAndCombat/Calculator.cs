@@ -73,12 +73,12 @@ public class Calculator : MonoBehaviour
         if (answer == answerNeeded)
         {
             monster.MonsterHurt();
-//            attack.Play();
+ //           attack.Play();
         }
         else
         {
             monster.EnemyAttack();
-//            hurt.Play();
+ //           hurt.Play();
         }
     }
 }
