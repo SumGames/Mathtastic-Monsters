@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641156, b: 0.5748181, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4781,7 +4781,7 @@ Transform:
   m_GameObject: {fileID: 468417858}
   m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 649.31, y: -112.1, z: 0}
-  m_LocalScale: {x: 1000, y: 1000, z: 800}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446319019}
   m_RootOrder: 0
@@ -8416,7 +8416,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dcf623d77f322d44f863dc3338c3997c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8502,7 +8502,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c4e5187c9e225e499f24f4570aa29ee, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9237,7 +9237,7 @@ MonoBehaviour:
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
-  monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -12283,7 +12283,7 @@ MonoBehaviour:
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
-  monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -13221,7 +13221,7 @@ MonoBehaviour:
   preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
-  monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5

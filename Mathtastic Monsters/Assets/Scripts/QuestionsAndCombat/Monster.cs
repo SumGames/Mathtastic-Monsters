@@ -25,6 +25,9 @@ public class Monster : MonoBehaviour
 
     public multipleContainer multiple;
 
+
+    Animator animator;
+
     // Use this for initialization
     void Start()
     {
@@ -50,7 +53,10 @@ public class Monster : MonoBehaviour
     internal void MonsterHurt()
     {
         if (!enemyPhase)
+        {
             health -= player.PlayerAttack();
+            animator.Play("Hurt");
+        }
         else
             health -= player.playerCounter();
 
@@ -64,8 +70,10 @@ public class Monster : MonoBehaviour
     internal void EnemyAttack()
     {
         if (enemyPhase)
+        {
             player.DamagePlayer(attack);
-
+            animator.Play("Attack");
+        }
         enemyPhase = !enemyPhase;
         questions.makeQuestion(parent.quizRunning,enemyPhase);
     }
@@ -107,6 +115,7 @@ public class Monster : MonoBehaviour
         {
             sprite = Instantiate(parent.quizRunning.monsterArt, monsterSpot.transform, false);
             sprite.transform.localScale = parent.quizRunning.monsterArt.transform.localScale;
+            animator = sprite.GetComponent<Animator>();
         }
         parent = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
 
