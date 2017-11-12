@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     internal Monster enemy; //so enemy will attack when you lose.
 
-    internal StateManager manager;
+    //internal StateManager manager;
 
 
     float critMod = 2; //Multiplier of attack damage on crit.
@@ -50,6 +50,8 @@ public class Player : MonoBehaviour
 
 
     combatFeedback feedback;
+
+    public ParentsStateManager manager;
 
 
     //Set Health+time to full.
@@ -114,7 +116,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.getGameState() == playStatus.playing)
+        if (manager.isPlaying())
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;
@@ -177,10 +179,12 @@ public class Player : MonoBehaviour
 
         currentHealth -= a_damage;
 
-        if (currentHealth <= 0)
-        {
-            manager.changeState(playStatus.Lost);
-        }
+        enemy.CheckDeath();
+    }
+
+    internal float getPlayerHealth()
+    {
+        return currentHealth;
     }
 
 

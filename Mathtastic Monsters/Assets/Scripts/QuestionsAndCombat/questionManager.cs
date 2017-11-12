@@ -29,7 +29,7 @@ public class questionManager : MonoBehaviour
 
         switch (a_running.Operator)
         {
-            case '+':
+            case operators.Addition:
                 answer = numbers[0];
                 for (int i = 1; i < a_running.variableCount; i++)
                 {
@@ -37,7 +37,7 @@ public class questionManager : MonoBehaviour
                     oper = "+ ";
                 }
                 break;
-            case '-':
+            case operators.Subtraction:
                 answer = numbers[0];
                 for (int i = 1; i < a_running.variableCount; i++)
                 {
@@ -45,7 +45,7 @@ public class questionManager : MonoBehaviour
                     oper = "- ";
                 }
                 break;
-            case 'x':
+            case operators.Multiplication:
 			    //If operator is 'x', second number is one of two possible numbers.
 				numbers[1] = (int)UnityEngine.Random.Range(a_running.secondNumberMin, (a_running.secondNumberMax + 1));
 			
@@ -139,7 +139,7 @@ public class questionManager : MonoBehaviour
 
     //Checking if the calculation needs rounding. Returns true if yes.
     //a_operator is + or -, and a_digits as the number of digits of the comparison being made
-    public bool rounding(int[] a_numbers, char a_operator, int a_digits)
+    public bool rounding(int[] a_numbers, operators a_operator, int a_digits)
     {
         int[] shortened = new int[a_numbers.Length];
         a_numbers.CopyTo(shortened, 0);
@@ -151,7 +151,7 @@ public class questionManager : MonoBehaviour
         int total = shortened[0];
         switch (a_operator)
         {
-            case '+':
+            case operators.Addition:
                 for (int i = 1; i < a_numbers.Length; i++)
                 {
                     total += shortened[i];
@@ -162,7 +162,7 @@ public class questionManager : MonoBehaviour
                 }
                 break;
 
-            case '-':
+            case operators.Subtraction:
                 for (int i = 1; i < a_numbers.Length; i++)
                 {
                     total -= shortened[i];

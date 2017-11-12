@@ -4,7 +4,7 @@ using UnityEngine;
 public class MonsterManager : MonoBehaviour
 {
 
-    internal QuizButton quizRunning; //The current quiz that has been running. This object passes in number range and other question specific variables.
+    public QuizButton quizRunning; //The current quiz that has been running. This object passes in number range and other question specific variables.
 
     internal StateManager stateManager;
 

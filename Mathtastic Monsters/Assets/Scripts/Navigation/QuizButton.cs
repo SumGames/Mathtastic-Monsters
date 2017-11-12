@@ -3,8 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum operators
+{
+    Addition,
+    Subtraction,
+    Multiplication,
+    Division,
+    Fortress,
+    AdditionSubtraction
+}
+
 public class QuizButton : MonoBehaviour
 {
+
+
+
     public int quizIndex;
     internal questionContainer parent;
 
@@ -15,7 +28,7 @@ public class QuizButton : MonoBehaviour
     public float minNumber; //Smallest possible number a variable can reach.
     public float maxNumber; //Largest possible number a variable can reach.
 
-    public char Operator; //+, - or x. Division will be included later.
+    public operators Operator; //+, - or x. Division will be included later.
 
     public int minAnswer = 1; //Lowest acceptable answer.
     public int maxAnswer = 100000; //Highest possible answer.
@@ -42,13 +55,13 @@ public class QuizButton : MonoBehaviour
     public int enemyAnswerRange = 2;
 
     // Use this for initialization
-    void Start()
+    public virtual void Start()
     {
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if ((!parent) || quizIndex <= parent.getCompleted())
         {
@@ -62,7 +75,7 @@ public class QuizButton : MonoBehaviour
 
 
     //Call the quizManager to start a quiz using this button as the basis.
-    public void buttonUsed()
+    public virtual void buttonUsed()
     {
         p_manager.startLevel(this);
     }
