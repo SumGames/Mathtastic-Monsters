@@ -53,6 +53,17 @@ public class Player : MonoBehaviour
 
     public ParentsStateManager manager;
 
+    public AudioSource[] sounds;
+    public AudioSource getShards;
+    public AudioSource victoryMusic;
+
+    private void Start()
+    {
+        sounds = GetComponents<AudioSource>();
+        getShards = sounds[0];
+        victoryMusic = sounds[1];
+        
+    }
 
     //Set Health+time to full.
     public void ResetPlayer()
@@ -248,6 +259,10 @@ public class Player : MonoBehaviour
 
         exp *= abilities.returnExpBoost();
 
+        getShards.Play();
+        victoryMusic.Play();
+
         return (int)exp; //Send back the calculated experience.
+        
     }
 }
