@@ -112,7 +112,6 @@ public class endlessMonsterManager : MonsterManager
 
     public void DisplayScore()
     {
-        Debug.Log(endlessState.gameState);
 
         switch (endlessState.getGameState())
         {
