@@ -96,6 +96,7 @@ public class combatFeedback : MonoBehaviour
             case SetImage.YouNissed:
                 EnemyImage.sprite = Missed;
                 EnemyImage.enabled = true;
+                miss.Play();
                 //Miss enemy here.
                 break;
             case SetImage.Counter:
