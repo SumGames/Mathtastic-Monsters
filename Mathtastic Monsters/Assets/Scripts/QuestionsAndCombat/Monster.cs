@@ -74,6 +74,10 @@ public class Monster : MonoBehaviour
             player.DamagePlayer(attack);
             animator.Play("Attack");
         }
+        else
+        {
+            FindObjectOfType<combatFeedback>().DamageSet(SetImage.YouNissed);
+        }
         enemyPhase = !enemyPhase;
         questions.makeQuestion(parent.quizRunning,enemyPhase);
     }

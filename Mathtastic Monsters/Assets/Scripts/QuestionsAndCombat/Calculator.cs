@@ -80,8 +80,7 @@ public class Calculator : MonoBehaviour
         }
         else
         {
-            monster.EnemyAttack();
- //           hurt.Play();
+            monster.EnemyAttack();            
         }
     }
 }

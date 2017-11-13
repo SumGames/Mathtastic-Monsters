@@ -210,7 +210,7 @@ public class Player : MonoBehaviour
             feedback.DamageSet(SetImage.Counter);
             return attack;
         }
-        feedback.DamageSet(SetImage.miss);
+        feedback.DamageSet(SetImage.YouDodgeD);
         return 0;
     }
 

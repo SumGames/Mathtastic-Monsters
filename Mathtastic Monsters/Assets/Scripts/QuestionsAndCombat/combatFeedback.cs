@@ -8,7 +8,8 @@ public enum SetImage
     hit,
     crit,
     hurt,
-    miss,
+    YouDodgeD, //When attack misses enemy.
+    YouNissed,
     Counter
 }
 
@@ -17,6 +18,7 @@ public class combatFeedback : MonoBehaviour
     public Sprite attackHit;
     public Sprite attackCrit;
     public Sprite dodged;
+    public Sprite Missed;
     public Sprite Countered;
 
     public Sprite playerHurt;
@@ -86,10 +88,15 @@ public class combatFeedback : MonoBehaviour
                 PlayerImage.enabled = true;
                 hurt.Play();
                 break;
-            case SetImage.miss:
+            case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
                 miss.Play();
+                break;
+            case SetImage.YouNissed:
+                EnemyImage.sprite = Missed;
+                EnemyImage.enabled = true;
+                //Miss enemy here.
                 break;
             case SetImage.Counter:
                 EnemyImage.sprite = Countered;
