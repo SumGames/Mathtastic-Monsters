@@ -111,6 +111,11 @@ public class backgroundManager : MonoBehaviour
         }
 
         if (newImage != null)
+        {
             thisScreen.sprite = newImage;
+            thisScreen.enabled = true;
+        }
+        else
+            thisScreen.enabled = false;
     }
 }
