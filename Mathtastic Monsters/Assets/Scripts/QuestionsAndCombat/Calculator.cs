@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class Calculator : MonoBehaviour
 {
-    Text input; //The textbox where charactera are added.
+    public Text input; //The textbox where charactera are added.
 
-    Monster monster; //Reference to the opponent. Used to call a check command.
+    public Monster monster; //Reference to the opponent. Used to call a check command.
 
-    StateManager manager;
+    public ParentsStateManager manager;
 
     internal string answerNeeded; //The number, as a string, that a player must input.
 
@@ -26,11 +26,14 @@ public class Calculator : MonoBehaviour
         attack = sounds[0];
         hurt = sounds[1];
 
-        manager = GameObject.Find("Manager").GetComponent<StateManager>();
+        if (manager == null)
+            manager = GameObject.Find("Manager").GetComponent<StateManager>();
 
-        monster = GameObject.Find("Monster").GetComponent<Monster>();
+        if (monster == null)
+            monster = GameObject.Find("Monster").GetComponent<Monster>();
 
-        input = GetComponentInChildren<Text>();
+        if (input == null)
+            input = GetComponentInChildren<Text>();
         ok.interactable = cancel.interactable = false;
     }
 
@@ -38,7 +41,7 @@ public class Calculator : MonoBehaviour
     //a_name is the letter that will be added
     public void AddInput(string a_name)
     {
-        if (!manager || manager.getGameState() != playStatus.playing)
+        if (!manager || !manager.isPlaying())
             return;
 
         switch (a_name)
@@ -65,7 +68,7 @@ public class Calculator : MonoBehaviour
     //It then either attacks the player or is attacked.
     internal void checkAnswer(string answer)
     {
-        if (manager.getGameState() != playStatus.playing)
+        if (!manager.isPlaying())
         {
             return;
         }
@@ -77,8 +80,7 @@ public class Calculator : MonoBehaviour
         }
         else
         {
-            monster.EnemyAttack();
- //           hurt.Play();
+            monster.EnemyAttack();            
         }
     }
 }

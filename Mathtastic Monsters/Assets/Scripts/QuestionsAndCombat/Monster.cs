@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
-    float health; //The current health of the monster, as set by the quizButton.
+    public float health; //The current health of the monster, as set by the quizButton.
     float attack;
 
     public bool enemyPhase;
@@ -16,7 +16,7 @@ public class Monster : MonoBehaviour
     internal Player player;
 
 
-    internal StateManager manager;
+    internal ParentsStateManager manager;
 
     public GameObject monsterSpot;
     GameObject sprite;
@@ -74,6 +74,10 @@ public class Monster : MonoBehaviour
             player.DamagePlayer(attack);
             animator.Play("Attack");
         }
+        else
+        {
+            FindObjectOfType<combatFeedback>().DamageSet(SetImage.YouNissed);
+        }
         enemyPhase = !enemyPhase;
         questions.makeQuestion(parent.quizRunning,enemyPhase);
     }
@@ -92,12 +96,18 @@ public class Monster : MonoBehaviour
         questions.makeQuestion(parent.quizRunning,enemyPhase);
     }
 
-    void CheckDeath()
+    public virtual void CheckDeath()
     {
+
         if (health < 0)
         {
             manager.changeState(playStatus.Won);
             return;
+        }
+
+        if (player.getPlayerHealth() <= 0)
+        {
+            manager.changeState(playStatus.Lost);
         }
     }
 
@@ -117,7 +127,8 @@ public class Monster : MonoBehaviour
             sprite.transform.localScale = parent.quizRunning.monsterArt.transform.localScale;
             animator = sprite.GetComponent<Animator>();
         }
-        parent = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
+        if (parent == null)
+            parent = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
 
         enemyPhase = false;
 

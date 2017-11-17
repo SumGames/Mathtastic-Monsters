@@ -21,7 +21,12 @@ public enum playStatus //Enumerator to prevent states being changed manually, an
     Parents,
     Credits,
     Login,
-    Splash
+    Splash,
+    ArenaHome,
+    ArenaStart,
+    ArenaCombat,
+    ArenaContinue,
+    ArenaLost
 }
 
 public class ParentsStateManager : MonoBehaviour
@@ -59,6 +64,14 @@ public class ParentsStateManager : MonoBehaviour
 
         backgrounds = backs.GetComponent<backgroundManager>();
     }
+
+    public bool isPlaying()
+    {
+        if (gameState == playStatus.playing || gameState == playStatus.ArenaCombat)
+            return true;
+        return false;
+    }
+
 
     
     //Change the game's state, closing/opening containers and changing text.

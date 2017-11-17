@@ -33,10 +33,18 @@ public class ShopManager : MonoBehaviour
 
     public monsterSteps tutorial;
 
+    public AudioSource[] sounds;
+    public AudioSource purchase;
+  
+
 
     // Use this for initialization
     internal void Begin()
     {
+        sounds = GetComponents<AudioSource>();
+        purchase = sounds[0];
+      
+
         if (manager == null)
         {
             manager = list.equip;
@@ -140,6 +148,7 @@ public class ShopManager : MonoBehaviour
 
 
         manager.shards -= part.cost;
+        purchase.Play();
 
         part.owned = true;
         readyPart();

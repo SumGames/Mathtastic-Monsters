@@ -162,7 +162,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -807,7 +807,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 100
   maxNumber: 899
-  Operator: 43
+  Operator: 0
   minAnswer: 200
   maxAnswer: 999
   difficulty: 17
@@ -940,7 +940,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 3
   maxAnswer: 72
   difficulty: 23
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 49
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 48
   difficulty: 18
@@ -1498,7 +1498,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 1
   maxAnswer: 24
   difficulty: 20
@@ -2299,7 +2299,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 10
   maxNumber: 999
-  Operator: 45
+  Operator: 1
   minAnswer: 30
   maxAnswer: 979
   difficulty: 23
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   levelTime: 35
   minNumber: 1
   maxNumber: 99
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 98
   difficulty: 19
@@ -3056,6 +3056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc85db3337711344a6a3a6352e03d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quizRunning: {fileID: 0}
 --- !u!4 &289822713
 Transform:
   m_ObjectHideFlags: 0
@@ -4251,7 +4252,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -4572,7 +4573,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 4
   maxAnswer: 96
   difficulty: 22
@@ -4797,6 +4798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c99e28381a89ea4b9cb16c723c0b31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   enemyPhase: 0
   healthBar: {fileID: 1172944113}
   monsterSpot: {fileID: 468417858}
@@ -6366,6 +6368,8 @@ GameObject:
   - component: {fileID: 574737961}
   - component: {fileID: 574737962}
   - component: {fileID: 574737963}
+  - component: {fileID: 574737965}
+  - component: {fileID: 574737964}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6411,6 +6415,10 @@ MonoBehaviour:
   timeLeft: {fileID: 331346454}
   bar: {fileID: 1157291065}
   container: {fileID: 568349161}
+  manager: {fileID: 382568555}
+  sounds: []
+  getShards: {fileID: 574737965}
+  victoryMusic: {fileID: 574737965}
 --- !u!114 &574737963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6427,6 +6435,166 @@ MonoBehaviour:
   - {fileID: 1293133568}
   - {fileID: 900849002}
   - {fileID: 656933866}
+--- !u!82 &574737964
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574737960}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8d2cbf484bf0c4846ab17caedb0ab433, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &574737965
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574737960}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a9bbee2e82eb52641b520e897c44a46e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &585587340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,7 +6806,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 1
   maxNumber: 19
-  Operator: 45
+  Operator: 1
   minAnswer: 10
   maxAnswer: 18
   difficulty: 15
@@ -7271,7 +7439,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -7787,7 +7955,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 1
   maxNumber: 49
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 48
   difficulty: 17
@@ -8357,6 +8525,8 @@ GameObject:
   - component: {fileID: 710504298}
   - component: {fileID: 710504301}
   - component: {fileID: 710504299}
+  - component: {fileID: 710504302}
+  - component: {fileID: 710504303}
   m_Layer: 5
   m_Name: Feedback
   m_TagString: Untagged
@@ -8398,6 +8568,7 @@ MonoBehaviour:
   attackHit: {fileID: 21300000, guid: 35110bf7300909547909aac74f749525, type: 3}
   attackCrit: {fileID: 21300000, guid: 0b91888f59394824cbeca7b8da21e8d9, type: 3}
   dodged: {fileID: 21300000, guid: 3dafc6ed3be918243819e9bb3f98ed12, type: 3}
+  Missed: {fileID: 21300000, guid: c66346bf75421074b8b406fc7824f0d7, type: 3}
   Countered: {fileID: 21300000, guid: 647e6b9e3fc4b0b46b19ebc98f67c062, type: 3}
   playerHurt: {fileID: 21300000, guid: 15a4e2983b26d5e4a8fca8fe40ef909b, type: 3}
   PlayerImage: {fileID: 1851572898}
@@ -8405,6 +8576,8 @@ MonoBehaviour:
   sounds: []
   attack: {fileID: 710504301}
   hurt: {fileID: 710504299}
+  miss: {fileID: 710504301}
+  crit: {fileID: 710504301}
   resetTimer: 1
 --- !u!82 &710504299
 AudioSource:
@@ -8502,6 +8675,166 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c4e5187c9e225e499f24f4570aa29ee, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &710504302
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710504296}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bbb24e4a50a6e704dad90b4e183f7c69, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &710504303
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710504296}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 66184ebf6620e9c489381ff621eaa8a7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8906,7 +9239,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 20
   maxNumber: 79
-  Operator: 43
+  Operator: 0
   minAnswer: 1
   maxAnswer: 99
   difficulty: 15
@@ -9228,7 +9561,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 9
-  Operator: 43
+  Operator: 0
   minAnswer: 1
   maxAnswer: 9
   difficulty: 10
@@ -9532,7 +9865,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -9867,7 +10200,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 48
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 49
   difficulty: 12
@@ -10038,7 +10371,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -10226,7 +10559,7 @@ MonoBehaviour:
   levelTime: 35
   minNumber: 10
   maxNumber: 199
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 189
   difficulty: 20
@@ -10660,7 +10993,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 9
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 20
   difficulty: 11
@@ -10812,7 +11145,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 48
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 49
   difficulty: 12
@@ -11115,7 +11448,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -11800,7 +12133,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -12274,7 +12607,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 10
-  Operator: 43
+  Operator: 0
   minAnswer: 10
   maxAnswer: 19
   difficulty: 12
@@ -12426,7 +12759,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -12834,7 +13167,7 @@ MonoBehaviour:
   levelTime: 35
   minNumber: 10
   maxNumber: 999
-  Operator: 45
+  Operator: 1
   minAnswer: 30
   maxAnswer: 979
   difficulty: 22
@@ -13041,7 +13374,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 12
-  Operator: 120
+  Operator: 2
   minAnswer: 5
   maxAnswer: 120
   difficulty: 21
@@ -13212,7 +13545,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 10
-  Operator: 43
+  Operator: 0
   minAnswer: 11
   maxAnswer: 19
   difficulty: 11
@@ -14787,7 +15120,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -15961,7 +16294,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 1
   maxNumber: 99
-  Operator: 43
+  Operator: 0
   minAnswer: 1
   maxAnswer: 198
   difficulty: 18
@@ -16094,7 +16427,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 10
   maxNumber: 89
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 99
   difficulty: 13
@@ -16246,7 +16579,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 10
   maxNumber: 89
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 99
   difficulty: 13
@@ -16417,7 +16750,7 @@ MonoBehaviour:
   levelTime: 5
   minNumber: 10
   maxNumber: 39
-  Operator: 43
+  Operator: 0
   minAnswer: 20
   maxAnswer: 49
   difficulty: 14
@@ -16765,7 +17098,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -16991,7 +17324,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 1
   maxNumber: 19
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 18
   difficulty: 16
@@ -18773,7 +19106,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -19383,7 +19716,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -19535,7 +19868,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 99
-  Operator: 43
+  Operator: 0
   minAnswer: 1
   maxAnswer: 198
   difficulty: 19
@@ -20858,7 +21191,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 9
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 9
   difficulty: 10
@@ -21227,7 +21560,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 1
   maxNumber: 13
-  Operator: 120
+  Operator: 2
   minAnswer: 7
   maxAnswer: 108
   difficulty: 24
@@ -21806,7 +22139,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 0
   minAnswer: 1
   maxAnswer: 198
   difficulty: 16
@@ -21939,7 +22272,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 9
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 20
   difficulty: 11
@@ -22511,7 +22844,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -23236,7 +23569,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 4
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -23388,7 +23721,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -23614,7 +23947,7 @@ MonoBehaviour:
   levelTime: 0
   minNumber: 10
   maxNumber: 99
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -24640,7 +24973,7 @@ MonoBehaviour:
   levelTime: 15
   minNumber: 1
   maxNumber: 48
-  Operator: 43
+  Operator: 0
   minAnswer: 20
   maxAnswer: 49
   difficulty: 13
@@ -25315,7 +25648,7 @@ MonoBehaviour:
   levelTime: 25
   minNumber: 1
   maxNumber: 9
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 8
   difficulty: 14
@@ -25872,7 +26205,7 @@ MonoBehaviour:
   levelTime: 35
   minNumber: 100
   maxNumber: 999
-  Operator: 45
+  Operator: 1
   minAnswer: 1
   maxAnswer: 899
   difficulty: 21
@@ -26277,6 +26610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5a01dd096c258439718aa3687f9f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  monster: {fileID: 0}
+  manager: {fileID: 0}
   ok: {fileID: 573083426}
   cancel: {fileID: 329710927}
   sounds: []
@@ -26905,7 +27241,7 @@ MonoBehaviour:
   levelTime: 10
   minNumber: 1
   maxNumber: 9
-  Operator: 43
+  Operator: 3
   minAnswer: 1
   maxAnswer: 9
   difficulty: 10

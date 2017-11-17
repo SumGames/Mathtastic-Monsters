@@ -8,7 +8,8 @@ public enum SetImage
     hit,
     crit,
     hurt,
-    miss,
+    YouDodgeD, //When attack misses enemy.
+    YouNissed,
     Counter
 }
 
@@ -17,6 +18,7 @@ public class combatFeedback : MonoBehaviour
     public Sprite attackHit;
     public Sprite attackCrit;
     public Sprite dodged;
+    public Sprite Missed;
     public Sprite Countered;
 
     public Sprite playerHurt;
@@ -27,6 +29,9 @@ public class combatFeedback : MonoBehaviour
     public AudioSource[] sounds;
     public AudioSource attack;
     public AudioSource hurt;
+    public AudioSource miss;
+    public AudioSource crit;
+    
 
 
     public float resetTimer = 3;
@@ -39,6 +44,9 @@ public class combatFeedback : MonoBehaviour
         sounds = GetComponents<AudioSource>();
         attack = sounds[0];
         hurt = sounds[1];
+        miss = sounds[2];
+        crit = sounds[3];
+        
 
         PlayerImage.enabled = false;
         EnemyImage.enabled = false;
@@ -73,19 +81,28 @@ public class combatFeedback : MonoBehaviour
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
                 EnemyImage.enabled = true;
+                crit.Play();
                 break;
             case SetImage.hurt:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
                 hurt.Play();
                 break;
-            case SetImage.miss:
+            case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
+                miss.Play();
+                break;
+            case SetImage.YouNissed:
+                EnemyImage.sprite = Missed;
+                EnemyImage.enabled = true;
+                miss.Play();
+                //Miss enemy here.
                 break;
             case SetImage.Counter:
                 EnemyImage.sprite = Countered;
                 PlayerImage.enabled = true;
+                attack.Play();
                 break;
             default:
                 break;

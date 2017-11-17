@@ -29,7 +29,8 @@ public class backgroundManager : MonoBehaviour
         thisScreen = GetComponent<Image>();
 
         GameObject helper = GameObject.Find("Helper");
-        helper.transform.SetParent(this.transform, false);
+        if (helper != null)
+            helper.transform.SetParent(this.transform, false);
 
         changeBack(a_state);
 	}

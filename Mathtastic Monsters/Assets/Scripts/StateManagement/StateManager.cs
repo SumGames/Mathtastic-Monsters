@@ -86,13 +86,13 @@ public class StateManager : ParentsStateManager
 
         switch (monsterM.quizRunning.Operator)
         {
-            case '+':
+            case operators.Addition:
                 changeState(playStatus.Addition);
                 break;
-            case '-':
+            case operators.Subtraction:
                 changeState(playStatus.Subtraction);
                 break;
-            case 'x':
+            case operators.Multiplication:
                 changeState(playStatus.Multiplication);
                 break;
             default:
@@ -208,20 +208,17 @@ public class StateManager : ParentsStateManager
     //SubjectButtons[] is an array starting at subtraction, as addition will never be disabled.
     void checkLevelsAvailable()
     {
-        //For sub, checking Addition.
-        if (list.equip.completedLevels[0] >= 5)
-            subjectButtons[0].interactable = true;
-        else
-            subjectButtons[0].interactable = false;
 
-        //For Mult, checking sub.
-        if (list.equip.completedLevels[1] >= 5)
+        subjectButtons[0].interactable = true;
+
+        //For Mult, checking Add.
+        if (list.equip.completedLevels[0] >= 5)
             subjectButtons[1].interactable = true;
         else
             subjectButtons[1].interactable = false;
 
         //For Div, checking mult.
-        if (list.equip.completedLevels[2] >= 5)
+        if (list.equip.completedLevels[1] >= 5)
             subjectButtons[2].interactable = true;
         else
             subjectButtons[2].interactable = false;

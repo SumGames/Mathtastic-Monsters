@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     internal Monster enemy; //so enemy will attack when you lose.
 
-    internal StateManager manager;
+    //internal StateManager manager;
 
 
     float critMod = 2; //Multiplier of attack damage on crit.
@@ -51,6 +51,19 @@ public class Player : MonoBehaviour
 
     combatFeedback feedback;
 
+    public ParentsStateManager manager;
+
+    public AudioSource[] sounds;
+    public AudioSource getShards;
+    public AudioSource victoryMusic;
+
+    private void Start()
+    {
+        sounds = GetComponents<AudioSource>();
+        getShards = sounds[0];
+        victoryMusic = sounds[1];
+        
+    }
 
     //Set Health+time to full.
     public void ResetPlayer()
@@ -114,7 +127,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.getGameState() == playStatus.playing)
+        if (manager.isPlaying())
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;
@@ -177,10 +190,12 @@ public class Player : MonoBehaviour
 
         currentHealth -= a_damage;
 
-        if (currentHealth <= 0)
-        {
-            manager.changeState(playStatus.Lost);
-        }
+        enemy.CheckDeath();
+    }
+
+    internal float getPlayerHealth()
+    {
+        return currentHealth;
     }
 
 
@@ -195,7 +210,7 @@ public class Player : MonoBehaviour
             feedback.DamageSet(SetImage.Counter);
             return attack;
         }
-        feedback.DamageSet(SetImage.miss);
+        feedback.DamageSet(SetImage.YouDodgeD);
         return 0;
     }
 
@@ -244,6 +259,10 @@ public class Player : MonoBehaviour
 
         exp *= abilities.returnExpBoost();
 
+        getShards.Play();
+        victoryMusic.Play();
+
         return (int)exp; //Send back the calculated experience.
+        
     }
 }
