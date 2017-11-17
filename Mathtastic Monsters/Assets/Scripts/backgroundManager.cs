@@ -74,19 +74,22 @@ public class backgroundManager : MonoBehaviour
                 newImage = mathfortressScreen;
                 break;
             case playStatus.playing:
+                return;
                 break;
             case playStatus.Won:
+                return;
                 break;
             case playStatus.Lost:
+                return;
                 break;
             case playStatus.MyMonster:
                 newImage = menuScreen;
                 break;
             case playStatus.MonsterCustomisation:
-                newImage = playerhomeScreen;
+                newImage = menuScreen;
                 break;
             case playStatus.LillyHome:
-                newImage = lillyhomeScreen;
+                newImage = menuScreen;
                 break;
             case playStatus.Options:
                 newImage = menuScreen;
