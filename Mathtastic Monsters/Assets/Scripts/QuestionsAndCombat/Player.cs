@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
         if (avatar != null)
             Destroy(avatar);
 
-        avatar = list.buildCharacter(container);
+        avatar = list.BuildCharacter(container);
 
 
         if (!abilities)

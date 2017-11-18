@@ -19,6 +19,8 @@ public class endlessState : ParentsStateManager
 
     public endlessMonsterManager monsterManager;
 
+    public GameObject leaderboard;
+
 
     public Player player;
     public EndlessMonster enemy;
@@ -60,18 +62,21 @@ public class endlessState : ParentsStateManager
                 continueScreen.SetActive(true);
                 break;
             case playStatus.ArenaLost:
+                lossScreen.SetActive(true);
                 monsterManager.PlayerLost();
-                lossScreen.SetActive(false);
                 break;
             case playStatus.subjectSelect:
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(0);                
                 break;
 
+            case playStatus.ArenaLeaderBoard:
+                leaderboard.SetActive(true);
+                break;
             default:
                 break;
         }
+      
     }
-
 
     //Disables all objects by default so it doesn't have to be done manually.
     void disableObjects()
@@ -81,5 +86,6 @@ public class endlessState : ParentsStateManager
         continueScreen.SetActive(false);
         lossScreen.SetActive(false);
         battleScreen.SetActive(false);
+        leaderboard.SetActive(false);
     }
 }

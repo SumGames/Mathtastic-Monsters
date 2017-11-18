@@ -49,7 +49,7 @@ public class TutorialPlayer : MonoBehaviour
             Destroy(avatar);
 
         if (list)
-            avatar = list.buildCharacter(container);
+            avatar = list.BuildCharacter(container);
 
 
         currentHealth = healthBar.maxValue = baseHealth;

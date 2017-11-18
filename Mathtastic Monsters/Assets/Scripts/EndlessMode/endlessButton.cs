@@ -36,6 +36,14 @@
 
         minAnswer = 1;
         maxAnswer = 5;
+
+        preventRounding = false;
+
+        secondNumberMin = 0;
+        secondNumberMax = 1;
+
+        enemyChoices = 3;
+        enemyAnswerRange = 2;
     }
 
     internal void BoostStats(EndlessModifierButton a_button)
@@ -63,14 +71,26 @@
             case modifierType.monsterAttack:
                 MonsterAttack += (int)intensity;
                 break;
-            case modifierType.AttackTime:
+            case modifierType.YourAttackTime:
                 levelTime += intensity;
                 break;
-            case modifierType.counterTime:
+            case modifierType.MonsterAttackTime:
                 enemPhaseTime += (int)intensity;
                 break;
-            case modifierType.boostGenerated:
-                minNumber = maxNumber * (0.1f * intensity);
+            case modifierType.numberofCounterAnswers:
+                enemyChoices++;
+                break;
+            case modifierType.difficultyJump:
+                maxNumber += 5 * intensity;
+                minAnswer += 4 * (int)intensity;
+                maxAnswer += 9 * (int)intensity;
+                break;
+
+            case modifierType.RemoveLimb:
+                endlessMonster.OtherModifiers(type, intensity);
+                break;
+            case modifierType.LessBreaks:
+                endlessMonster.OtherModifiers(type, intensity);
                 break;
             default:
                 break;

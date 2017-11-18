@@ -191,6 +191,10 @@ public class StateManager : ParentsStateManager
                 gameInstruction.text = "";
                 splashContainer.SetActive(true);
                 break;
+
+            case playStatus.ArenaHome:
+                SceneManager.LoadScene(5);
+                break;
             default:
                 break;
         }

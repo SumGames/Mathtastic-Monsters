@@ -59,7 +59,7 @@ public class equipmentList : MonoBehaviour
             return;
 
         //Setting the equipmentManager's availability flags.
-        setManagerAvailabilityUsingList();
+        SetManagerAvailabilityUsingList();
 
         string fileName = Application.persistentDataPath + "/" + playerName + ".gd";
 
@@ -88,7 +88,7 @@ public class equipmentList : MonoBehaviour
     }
 
     //Take variables from this list and add them to equipment Manager
-    public void setManagerAvailabilityUsingList()
+    public void SetManagerAvailabilityUsingList()
     {
         for (int i = 0; i < listOfTorso.Capacity && i < equip.torsoAvailability.Length; i++)
         {
@@ -127,7 +127,7 @@ public class equipmentList : MonoBehaviour
     }
 
     //Ask the manager's list if the items on the list are owned.
-    public void setAvailabilityUsingManager()
+    public void SetAvailabilityUsingManager()
     {
         for (int i = 0; i < listOfTorso.Capacity && i < equip.torsoAvailability.Length; i++)
         {
@@ -160,7 +160,7 @@ public class equipmentList : MonoBehaviour
     }
 
     //Check the list of items and use the manager's index to get our monster ready for building.
-    void setEquippedUsingIndex(int[] equipped)
+    void SetEquippedUsingIndex(int[] equipped)
     {
         if (equip.equippedParts[(int)partType.Head] >= 0)
             currentTorsoPrefab = listOfTorso[equip.equippedParts[(int)partType.Head]];
@@ -198,7 +198,7 @@ public class equipmentList : MonoBehaviour
     }
 
     //Change our index and the part we'll spawn. Called when we make a new monster.
-    public void changeEquip(GameObject a_setting, partType a_type, int index)
+    public void ChangeEquip(GameObject a_setting, partType a_type, int index)
     {
         equip.setEquipped(a_type, index);
 
@@ -294,27 +294,27 @@ public class equipmentList : MonoBehaviour
             mod.owned = false;
         }
 
-        equipDefault();
+        EquipDefault();
 
         Save();    
     }
 
-    void equipDefault()
+    void EquipDefault()
     {
         listOfTorso[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listOfTorso[0], partType.Torso, 0);
+        ChangeEquip(listOfTorso[0], partType.Torso, 0);
 
         listofLeftArms[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listofLeftArms[0], partType.LeftArm, 0);
+        ChangeEquip(listofLeftArms[0], partType.LeftArm, 0);
 
         listofRightArms[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listofRightArms[0], partType.RightArm, 0);
+        ChangeEquip(listofRightArms[0], partType.RightArm, 0);
 
         listofLeftLegs[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listofLeftLegs[0], partType.LeftLeg, 0);
+        ChangeEquip(listofLeftLegs[0], partType.LeftLeg, 0);
 
         listofRightLegs[0].GetComponent<ItemPart>().owned = true;
-        changeEquip(listofRightLegs[0], partType.RightLeg, 0);
+        ChangeEquip(listofRightLegs[0], partType.RightLeg, 0);
     }
 
     //Set up our profile based upon the conditions we gave.
@@ -336,15 +336,15 @@ public class equipmentList : MonoBehaviour
         {
             if (Load())
             {
-                setAvailabilityUsingManager();
-                setEquippedUsingIndex(equip.equippedParts);
+                SetAvailabilityUsingManager();
+                SetEquippedUsingIndex(equip.equippedParts);
             }
             else
                 newGame();
         }
     }
 
-    public GameObject buildCharacter(GameObject characterContainer, PartsManager caller = null)
+    public GameObject BuildCharacter(GameObject characterContainer, PartsManager caller = null)
     {
         if (currentTorsoPrefab == null)
             return null;

@@ -8,13 +8,16 @@ public enum modifierType
     none,
     monsterHealth,
     monsterAttack,
-    AttackTime,
-    LessBreaks,
-    RemoveLimb,
-    counterTime,
+    YourAttackTime,
+    MonsterAttackTime,
     boostAnswer,
-    boostGenerated
+    numberofCounterAnswers,
+    difficultyJump,
+
+    LessBreaks,
+    RemoveLimb
 }
+
 
 public class EndlessModifierButton : MonoBehaviour
 {
@@ -28,18 +31,25 @@ public class EndlessModifierButton : MonoBehaviour
     public modifierType modTwo;
     public float modTwoIntensity;
 
+    public bool locked = false;
+
+    internal endlessMonsterManager endlessMonster;
+
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
+        endlessMonster = FindObjectOfType<endlessMonsterManager>();
+
         GetComponentInChildren<Text>().text = DisplayText();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-		
-	}
+
+    }
 
     string DisplayText()
     {
@@ -57,6 +67,19 @@ public class EndlessModifierButton : MonoBehaviour
 
     public void buttonUsed()
     {
-        FindObjectOfType<endlessMonsterManager>().NextLevel(this);
+        endlessMonster.NextLevel(this);
+    }
+
+    internal bool checkIfLocked(endlessMonsterManager manager)
+    {
+
+        if (locked)
+            return true;
+        if (modifierChange < 0 && ((modifierChange * -1) > manager.Modifier))
+        {
+            locked = true;
+            return true;
+        }
+        return false;
     }
 }

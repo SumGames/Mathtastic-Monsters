@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class backgroundManager : MonoBehaviour 
+public class backgroundManager : MonoBehaviour
 {
     public Sprite mainScreen;
     public Sprite menuScreen;
@@ -20,8 +20,8 @@ public class backgroundManager : MonoBehaviour
 
     Sprite newImage;
 
-	// Use this for initialization
-	internal void startBack (playStatus a_state) 
+    // Use this for initialization
+    internal void startBack(playStatus a_state)
     {
 
         transform.SetSiblingIndex(0);
@@ -33,13 +33,13 @@ public class backgroundManager : MonoBehaviour
             helper.transform.SetParent(this.transform, false);
 
         changeBack(a_state);
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-		
-	}
+
+    }
 
 
 
@@ -75,13 +75,10 @@ public class backgroundManager : MonoBehaviour
                 break;
             case playStatus.playing:
                 return;
-                break;
             case playStatus.Won:
                 return;
-                break;
             case playStatus.Lost:
                 return;
-                break;
             case playStatus.MyMonster:
                 newImage = menuScreen;
                 break;
