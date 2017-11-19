@@ -3,11 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-
-
-
 public class endlessMonsterManager : MonsterManager
 {
 
@@ -15,6 +10,9 @@ public class endlessMonsterManager : MonsterManager
     internal float Modifier;
     public float Score;
     public int levels;
+
+    public int crit;
+    public int counter;
 
 
     public int fightsBetweenBreaks = 1;
@@ -147,6 +145,12 @@ public class endlessMonsterManager : MonsterManager
     {
         levels++;
         Score += Modifier;
+        Score += (crit * .5f);
+        Score += (counter * .25f);
+
+
+        crit = 0;
+        counter = 0;
 
         fightsSinceBreak++;
         if (fightsSinceBreak < fightsBetweenBreaks)
@@ -198,6 +202,11 @@ public class endlessMonsterManager : MonsterManager
 
     internal void PlayerLost()
     {
+        Score += (crit * .5f);
+        Score += (counter * .25f);
+        crit = 0;
+        counter = 0;
+
 
         Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";
         int highScore = highScores.checkLevel(running.Operator, levels, Score, list.playerName);

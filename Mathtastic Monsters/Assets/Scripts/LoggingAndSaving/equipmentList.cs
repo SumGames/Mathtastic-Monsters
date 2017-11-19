@@ -21,7 +21,7 @@ public class equipmentList : MonoBehaviour
 
 
     //The set of Game objects that will be created when the Monster is needed.
-    internal GameObject currentTorsoPrefab;
+    public GameObject currentTorsoPrefab;
     internal GameObject currentHeadPrefab;
 
     internal GameObject currentLeftArmPrefab;
@@ -162,13 +162,17 @@ public class equipmentList : MonoBehaviour
     //Check the list of items and use the manager's index to get our monster ready for building.
     void SetEquippedUsingIndex(int[] equipped)
     {
-        if (equip.equippedParts[(int)partType.Head] >= 0)
-            currentTorsoPrefab = listOfTorso[equip.equippedParts[(int)partType.Head]];
-        else
-            currentTorsoPrefab = null;
-
         if (equip.equippedParts[(int)partType.Torso] >= 0)
-            currentHeadPrefab = listofHeads[equip.equippedParts[(int)partType.Torso]];
+        {
+            currentTorsoPrefab = listOfTorso[equip.equippedParts[(int)partType.Torso]];
+        }
+        else
+        {
+            currentTorsoPrefab = null;
+        }
+
+        if (equip.equippedParts[(int)partType.Head] >= 0)
+            currentHeadPrefab = listofHeads[equip.equippedParts[(int)partType.Head]];
         else
             currentHeadPrefab = null;
 
@@ -346,8 +350,10 @@ public class equipmentList : MonoBehaviour
 
     public GameObject BuildCharacter(GameObject characterContainer, PartsManager caller = null)
     {
+        SetEquippedUsingIndex(equip.equippedParts);
+
         if (currentTorsoPrefab == null)
-            return null;
+            return null;        
 
         GameObject ad = Instantiate(currentTorsoPrefab, characterContainer.transform, false);
         ad.transform.localPosition = Vector3.zero;

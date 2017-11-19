@@ -135,11 +135,8 @@ public class HighSaveScore : MonoBehaviour
         highScoreNames = new string[5, 6];
     }
 
-    //If our profile wasn't special, save it as .gd.
     public void Save(string playerName)
     {
-        if (playerName == "Guest" || playerName == "ADMIN" || playerName == "")
-            return;
 
 
         data = new HighSaveData();
@@ -224,7 +221,5 @@ public class HighSaveScore : MonoBehaviour
                 highScoreScore[i, j] = data.highest_ScoreScore[i][j];
             }
         }
-
-
     }
 }

@@ -57,11 +57,15 @@ public class Player : MonoBehaviour
     public AudioSource getShards;
     public AudioSource victoryMusic;
 
+    endlessMonsterManager endlessMonster;
+
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
         getShards = sounds[0];
         victoryMusic = sounds[1];
+
+        endlessMonster = FindObjectOfType<endlessMonsterManager>();
         
     }
 
@@ -157,6 +161,8 @@ public class Player : MonoBehaviour
             {
                 damage = attack * critMod;
                 feedback.DamageSet(SetImage.crit);
+                if (endlessMonster)
+                    endlessMonster.crit++;
             }
 
 
@@ -168,8 +174,11 @@ public class Player : MonoBehaviour
         
         if (Timer > greenZone)
         {
+
             damage *= critMod;
             feedback.DamageSet(SetImage.crit);
+            if (endlessMonster)
+                endlessMonster.crit++;
         }
 
         Timer = resetTime;
@@ -207,6 +216,8 @@ public class Player : MonoBehaviour
 
         if (Timer > greenZone)
         {
+            if (endlessMonster)
+                endlessMonster.counter++;
             feedback.DamageSet(SetImage.Counter);
             return attack;
         }
