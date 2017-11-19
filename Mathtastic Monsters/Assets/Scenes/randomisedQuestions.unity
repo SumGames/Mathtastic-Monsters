@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657642, g: 0.49641156, b: 0.5748181, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -159,22 +159,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 25
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
-  minAnswer: 7
+  minAnswer: 6
   maxAnswer: 108
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondNumberMin: 7
+  secondNumberMin: 6
   secondNumberMax: 9
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &1932964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,20 +804,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
-  minNumber: 100
-  maxNumber: 899
+  levelTime: 10
+  minNumber: 1
+  maxNumber: 48
   Operator: 0
-  minAnswer: 200
-  maxAnswer: 999
-  difficulty: 17
+  minAnswer: 21
+  maxAnswer: 49
+  difficulty: 20
   MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &41803942
@@ -937,22 +937,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
-  minAnswer: 3
-  maxAnswer: 72
+  minAnswer: 4
+  maxAnswer: 48
   difficulty: 23
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondNumberMin: 3
-  secondNumberMax: 6
+  secondNumberMin: 4
+  secondNumberMax: 8
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &42479489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,9 +1495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
   minAnswer: 1
   maxAnswer: 24
@@ -1508,9 +1508,9 @@ MonoBehaviour:
   secondNumberMin: 1
   secondNumberMax: 2
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &134946888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   Operator: 1
   minAnswer: 30
   maxAnswer: 979
-  difficulty: 23
+  difficulty: 28
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
@@ -2876,20 +2876,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
+  levelTime: 25
   minNumber: 1
-  maxNumber: 99
+  maxNumber: 49
   Operator: 1
   minAnswer: 1
-  maxAnswer: 98
-  difficulty: 19
-  MonsterHealth: 10
+  maxAnswer: 48
+  difficulty: 20
+  MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &266040129
@@ -4570,22 +4570,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 5
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
-  minAnswer: 4
-  maxAnswer: 96
+  minAnswer: 5
+  maxAnswer: 120
   difficulty: 22
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondNumberMin: 4
-  secondNumberMax: 8
+  secondNumberMin: 5
+  secondNumberMax: 10
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &420629063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6816,7 +6816,7 @@ MonoBehaviour:
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &602279654
@@ -7952,20 +7952,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 15
   minNumber: 1
-  maxNumber: 49
+  maxNumber: 19
   Operator: 1
   minAnswer: 1
-  maxAnswer: 48
+  maxAnswer: 18
   difficulty: 17
   MonsterHealth: 10
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &669584557
@@ -9163,7 +9163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &727568995
 Transform:
   m_ObjectHideFlags: 0
@@ -9237,20 +9237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
-  minNumber: 20
-  maxNumber: 79
+  levelTime: 20
+  minNumber: 1
+  maxNumber: 40
   Operator: 0
-  minAnswer: 1
-  maxAnswer: 99
-  difficulty: 15
+  minAnswer: 19
+  maxAnswer: 49
+  difficulty: 16
   MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &740681439
@@ -9559,11 +9559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 5
   minNumber: 1
-  maxNumber: 9
+  maxNumber: 8
   Operator: 0
-  minAnswer: 1
+  minAnswer: 2
   maxAnswer: 9
   difficulty: 10
   MonsterHealth: 10
@@ -9572,7 +9572,7 @@ MonoBehaviour:
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &756958628
@@ -10557,20 +10557,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
-  minNumber: 10
-  maxNumber: 199
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 49
   Operator: 1
-  minAnswer: 1
-  maxAnswer: 189
-  difficulty: 20
-  MonsterHealth: 10
+  minAnswer: 2
+  maxAnswer: 48
+  difficulty: 22
+  MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &847322376
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 0
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
   minAnswer: 7
   maxAnswer: 108
@@ -12131,22 +12131,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 25
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
-  minAnswer: 7
-  maxAnswer: 108
+  minAnswer: 11
+  maxAnswer: 144
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondNumberMin: 7
-  secondNumberMax: 9
+  secondNumberMin: 11
+  secondNumberMax: 12
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &945962637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12605,7 +12605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 0
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -12614,7 +12614,7 @@ MonoBehaviour:
   difficulty: 12
   MonsterHealth: 10
   MonsterAttack: 1
-  preventRounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
@@ -13164,21 +13164,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 3
-  levelTime: 35
-  minNumber: 10
-  maxNumber: 999
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 99
   Operator: 1
-  minAnswer: 30
-  maxAnswer: 979
-  difficulty: 22
-  MonsterHealth: 10
+  minAnswer: 2
+  maxAnswer: 98
+  difficulty: 26
+  MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &999825829
@@ -13372,7 +13372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -13385,9 +13385,9 @@ MonoBehaviour:
   secondNumberMin: 5
   secondNumberMax: 10
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &1011991641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13543,7 +13543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 5
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -13556,7 +13556,7 @@ MonoBehaviour:
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &1012138164
@@ -15118,22 +15118,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 15
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
   minAnswer: 7
-  maxAnswer: 108
+  maxAnswer: 96
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
   secondNumberMin: 7
-  secondNumberMax: 9
+  secondNumberMax: 8
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &1136386985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16291,21 +16291,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizIndex: 0
-  variableCount: 3
-  levelTime: 25
-  minNumber: 1
-  maxNumber: 99
+  variableCount: 2
+  levelTime: 20
+  minNumber: 20
+  maxNumber: 79
   Operator: 0
-  minAnswer: 1
-  maxAnswer: 198
-  difficulty: 18
+  minAnswer: 40
+  maxAnswer: 99
+  difficulty: 22
   MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &1219344384
@@ -17098,7 +17098,7 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 0
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
   minAnswer: 7
   maxAnswer: 108
@@ -17322,16 +17322,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 5
   minNumber: 1
   maxNumber: 19
   Operator: 1
-  minAnswer: 1
+  minAnswer: 10
   maxAnswer: 18
   difficulty: 16
   MonsterHealth: 10
   MonsterAttack: 1
-  preventRounding: 0
+  preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
@@ -19872,7 +19872,7 @@ MonoBehaviour:
   Operator: 0
   minAnswer: 1
   maxAnswer: 198
-  difficulty: 19
+  difficulty: 24
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
@@ -21558,22 +21558,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 25
   minNumber: 1
-  maxNumber: 13
+  maxNumber: 12
   Operator: 2
   minAnswer: 7
-  maxAnswer: 108
+  maxAnswer: 96
   difficulty: 24
   MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
   secondNumberMin: 7
-  secondNumberMax: 9
+  secondNumberMax: 8
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
 --- !u!114 &1650553954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22137,20 +22137,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
-  minNumber: 10
-  maxNumber: 99
+  levelTime: 20
+  minNumber: 1
+  maxNumber: 48
   Operator: 0
-  minAnswer: 1
-  maxAnswer: 198
-  difficulty: 16
+  minAnswer: 21
+  maxAnswer: 49
+  difficulty: 18
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &1673962227
@@ -25180,20 +25180,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 5
   minNumber: 1
-  maxNumber: 48
+  maxNumber: 10
   Operator: 0
-  minAnswer: 20
-  maxAnswer: 49
+  minAnswer: 10
+  maxAnswer: 19
   difficulty: 13
   MonsterHealth: 10
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &1921638463
@@ -25855,7 +25855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 15
   minNumber: 1
   maxNumber: 9
   Operator: 1
@@ -25868,7 +25868,7 @@ MonoBehaviour:
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &1994220171
@@ -26412,20 +26412,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
-  minNumber: 100
-  maxNumber: 999
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 49
   Operator: 1
-  minAnswer: 1
-  maxAnswer: 899
-  difficulty: 21
-  MonsterHealth: 10
+  minAnswer: 2
+  maxAnswer: 48
+  difficulty: 24
+  MonsterHealth: 15
   MonsterAttack: 1
-  preventRounding: 1
+  preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1484293714337666, guid: e91504776eef65f408daafd3e4f164c2, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
 --- !u!114 &2032169422
@@ -26930,7 +26930,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -27010,7 +27010,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
