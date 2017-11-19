@@ -112,7 +112,7 @@ public class StateManager : ParentsStateManager
         {
             case playStatus.Login:
                 list.Save();
-                gameInstruction.text = "Tell me your name!";
+                gameInstruction.text = "";
                 login.SetActive(true);
                 break;
             case playStatus.Start:
