@@ -1,13 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 
+
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
+
+
 public class endlessMonsterManager : MonsterManager
 {
-    float Modifier;
-    float Score;
-    int levels;
+
+
+    internal float Modifier;
+    public float Score;
+    public int levels;
+
+
+    public int fightsBetweenBreaks = 1;
+    int fightsSinceBreak = 0;
+    bool skipHeal = false;
 
     public endlessState endlessState;
 
@@ -18,15 +30,34 @@ public class endlessMonsterManager : MonsterManager
     public Text currentScoreText;
 
 
-    public GameObject[] modifierButtons;
+    public EndlessModifierButton[] modifierButtons;
     public GameObject[] spots;
-    GameObject[] buttons;
+    EndlessModifierButton[] buttons;
+
+    bool[] removedLimbs;
+
+    equipmentList list;
+
+    public HighSaveScore highScores;
+
+
+
+
+    public Text highestLevel;
+    public Text highestScore;
+
+    public Text lostText;
 
 
     // Use this for initialization
     void Start()
     {
-        buttons = new GameObject[3];
+
+        list = FindObjectOfType<equipmentList>();
+
+        removedLimbs = new bool[6];
+
+        buttons = new EndlessModifierButton[3];
 
         player = endlessState.player;
         enemy = endlessState.enemy;
@@ -37,36 +68,50 @@ public class endlessMonsterManager : MonsterManager
         enemy.manager = endlessState;
         enemy.parent = this;
 
+
+        highScores = GetComponent<HighSaveScore>();
+
+
+        highScores.setHighZero();
+
+
+        highScores.Load();
+                    
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
 
     public void ToSubjectScreen(endlessButton button)
     {
-        Welcome.text = SubjectTitle();
         endlessState.changeState(playStatus.ArenaStart);
 
-    }
+        highestScore.text = highScores.returnBest(button.Operator, true);
+        highestLevel.text = highScores.returnBest(button.Operator, false);
 
 
-    public string SubjectTitle()
-    {
-        return "Welcome to the " + quizRunning.Operator + " Arena!";
     }
 
     public void newGame()
     {
+        for (int i = 0; i < 6; i++)
+        {
+            removedLimbs[i] = false;
+        }
 
         running.resetToBasic();
         Modifier = 10;
         Score = 0;
         levels = 1;
         NextLevel(null);
+
+        fightsBetweenBreaks = 1;
+        fightsSinceBreak = 0;
     }
 
 
@@ -76,11 +121,10 @@ public class endlessMonsterManager : MonsterManager
         {
             Modifier += button.modifierChange;
             running.BoostStats(button);
-            levels++;
 
-            foreach (GameObject item in buttons)
+            foreach (EndlessModifierButton item in buttons)
             {
-                Destroy(item);
+                Destroy(item.gameObject);
             }
         }
 
@@ -88,25 +132,116 @@ public class endlessMonsterManager : MonsterManager
 
         enemy.loadMonster();
 
+        RemoveLimbs();
+
+        if(skipHeal)
+        {
+            skipHeal = false;
+            return;
+        }
+
         player.ResetPlayer();
     }
 
     internal void PlayerWon()
     {
+        levels++;
         Score += Modifier;
+
+        fightsSinceBreak++;
+        if (fightsSinceBreak < fightsBetweenBreaks)
+        {
+            skipHeal = true;
+            NextLevel(null);
+            return;
+        }
+        else
+        {
+            fightsSinceBreak = 0;
+        }
+
+        int[] locked = new int[3];
 
         for (int i = 0; i < 3; i++)
         {
-            int rand = Random.Range(0, modifierButtons.Length);
-            buttons[i] = Instantiate(modifierButtons[rand], spots[i].transform, false);
+            EndlessModifierButton button = null;
+
+            while (button == null)
+            {
+                int rand = Random.Range(0, modifierButtons.Length);
+                EndlessModifierButton modifierButton = modifierButtons[rand];
+
+                if (!modifierButton.locked)
+                {
+                    button = modifierButtons[rand];
+                    button.locked = true;
+                    locked[i] = rand;
+                }
+
+            }
+            buttons[i] = Instantiate(button, spots[i].transform, false);
             buttons[i].transform.localScale = new Vector3(1, 1, 1);
 
         }
+        for (int i = 0; i < 3; i++)
+        {
+            modifierButtons[locked[i]].locked = false;
+        }
+
         DisplayScore();
+    }
+
+    public void quitButton()
+    {
+        endlessState.changeState(playStatus.Lost);        
     }
 
     internal void PlayerLost()
     {
+
+        Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";
+        int highScore = highScores.checkLevel(running.Operator, levels, Score, list.playerName);
+        int highLevel = highScores.checkScore(running.Operator, Score, levels, list.playerName);
+
+
+        save();
+
+
+        if (highScore == 0 && highLevel == 0)
+        {
+            lostText.text = "You reached the Highest Level AND score! WOW!";
+        }
+        else if(highScore==0)
+        {
+            lostText.text = "You got the highest Score. Grats!";
+
+        }
+        else if(highLevel==0)
+        {
+            lostText.text = "You got the furthest in. Grats!";
+        }
+        else if (highScore >= 0 || highLevel >= 0)
+        {
+            lostText.text = "You're on the leaderboard!";
+        }
+        else
+        {
+            lostText.text = "Keep trying. You'll do better next time!";
+        }
+    }
+
+    void RemoveLimbs()
+    {
+        list = FindObjectOfType<equipmentList>();
+
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (removedLimbs[i])
+            {
+                list.ChangeEquip(null, (partType)3, -1);
+            }
+        }
 
     }
 
@@ -116,9 +251,13 @@ public class endlessMonsterManager : MonsterManager
         switch (endlessState.getGameState())
         {
             case playStatus.ArenaHome:
+                if (quizRunning != null)
+                    quizRunning = null;
+                Welcome.text = "Welcome to the Endless Arena!!";
                 currentScoreText.text = "";
                 break;
             case playStatus.ArenaStart:
+                Welcome.text = "Welcome to the " + quizRunning.Operator + " Arena!";
                 currentScoreText.text = "";
                 break;
             case playStatus.ArenaCombat:
@@ -133,17 +272,41 @@ public class endlessMonsterManager : MonsterManager
                 currentScoreText.text += "\nMultiplier: " + Modifier;
                 break;
             case playStatus.ArenaLost:
-                Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";
-
                 currentScoreText.text = "This Run of.... " + running.Operator;
                 currentScoreText.text += "\nLevel : " + levels.ToString() + ". Score: " + Score.ToString();
                 currentScoreText.text += "\bMultiplier: " + Modifier;
+                break;
+
+            case playStatus.ArenaLeaderBoard:
+                Welcome.text = "The Endless Arena Leaderboard!";
+
                 break;
             default:
                 currentScoreText.text = "";
                 break;
         }
-
     }
+
+    internal void OtherModifiers(modifierType mod, float intensity)
+    {
+        switch (mod)
+        {
+            case modifierType.LessBreaks:
+                fightsBetweenBreaks += (int)intensity;
+                break;
+            case modifierType.RemoveLimb:
+                removedLimbs[(int)intensity] = true;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void save()
+    {
+        list = FindObjectOfType<equipmentList>();
+        highScores.Save(list.playerName);
+    }
+
 
 }

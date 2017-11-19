@@ -112,7 +112,7 @@ public class StateManager : ParentsStateManager
         {
             case playStatus.Login:
                 list.Save();
-                gameInstruction.text = "Tell me your name!";
+                gameInstruction.text = "";
                 login.SetActive(true);
                 break;
             case playStatus.Start:
@@ -190,6 +190,10 @@ public class StateManager : ParentsStateManager
             case playStatus.Splash:
                 gameInstruction.text = "";
                 splashContainer.SetActive(true);
+                break;
+
+            case playStatus.ArenaHome:
+                SceneManager.LoadScene(5);
                 break;
             default:
                 break;

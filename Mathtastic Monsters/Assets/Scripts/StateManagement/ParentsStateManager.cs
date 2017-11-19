@@ -26,7 +26,8 @@ public enum playStatus //Enumerator to prevent states being changed manually, an
     ArenaStart,
     ArenaCombat,
     ArenaContinue,
-    ArenaLost
+    ArenaLost,
+    ArenaLeaderBoard
 }
 
 public class ParentsStateManager : MonoBehaviour

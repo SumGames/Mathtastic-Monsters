@@ -62,7 +62,8 @@ MonoBehaviour:
   modOne: 3
   modOneIntensity: -5
   modTwo: 0
-  modTwoIntensity: 0
+  modTwoIntensity: 1
+  locked: 0
 --- !u!114 &114636663618638304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,5 +227,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.3299999, y: -4.6866455}
-  m_SizeDelta: {x: 284.7, y: 107.9}
+  m_SizeDelta: {x: 300, y: 107.9}
   m_Pivot: {x: 0.5, y: 0.5}

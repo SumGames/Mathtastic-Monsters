@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public int baseAttack = 1; //Amount of damage a player can inflict.
     internal int attack;
 
-    public float baseTimeGiven = 15;
+    public float baseTimeGiven = 10;
 
     float Timer; //Time left until attacked.
     public float resetTime; //Time players start with per question.
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
         if (avatar != null)
             Destroy(avatar);
 
-        avatar = list.buildCharacter(container);
+        avatar = list.BuildCharacter(container);
 
 
         if (!abilities)
