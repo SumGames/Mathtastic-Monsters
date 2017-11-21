@@ -285,29 +285,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listOfTorso:
-  - {fileID: 1228483288107546, guid: f87a6eb9de524b74987e6a0ad431a4cd, type: 2}
-  - {fileID: 1358157001647200, guid: 7d0f5fdb80a058e429a154ceea8b4094, type: 2}
-  - {fileID: 1076139784504200, guid: a4305e4684eb35f4f8f816909d907bbf, type: 2}
+  - {fileID: 1024053904159560, guid: 1ebcbaca4c435624eab5d8a35802d13c, type: 2}
   listofHeads:
-  - {fileID: 1179039147860486, guid: 34c6abf4e0dbd1542bdf12161ed290f1, type: 2}
-  - {fileID: 1621142275359232, guid: 4bd42ca7957e1f24c8ecd0c9ff9b86b4, type: 2}
-  - {fileID: 1584071155146890, guid: ba34add3a63e8ac408d71494b111bd1c, type: 2}
+  - {fileID: 1812446572820670, guid: 7bfaab288df1cde4883f0389bfb98f5d, type: 2}
   listofLeftArms:
-  - {fileID: 1294184764705664, guid: bac2f63779259f8448108892d3a7fbdc, type: 2}
-  - {fileID: 1662056326616106, guid: a94bca137b9976547b8fb261626cae3e, type: 2}
-  - {fileID: 1838206303674580, guid: 33cd9f4d048cb694d8451a4c8066fd04, type: 2}
+  - {fileID: 1088619396623102, guid: cccc5379ca6acf349bc342d702a34bfd, type: 2}
+  - {fileID: 1426216432493910, guid: d956bb40efac1d945b08614d811503c1, type: 2}
+  - {fileID: 1235352180288524, guid: e1c03538c14465b479b46960251592ee, type: 2}
   listofRightArms:
-  - {fileID: 1570801312397740, guid: 53535f3d253783b43a6d1547353507f9, type: 2}
-  - {fileID: 1242162239469298, guid: 1b64ea6eada386e42a12c79a7994dc4f, type: 2}
-  - {fileID: 1041277846893860, guid: f1ae8e3baa019c3428a5896d901f15d7, type: 2}
+  - {fileID: 1137811134933438, guid: 8e51db5a05f490e4a9c97aad8cf45cda, type: 2}
+  - {fileID: 1137033706671788, guid: 3d89e14e0cc97b44c8bdfbc1c5306b5d, type: 2}
+  - {fileID: 1541362923979122, guid: 637a83fa1c60b68438637c95ace87549, type: 2}
   listofLeftLegs:
-  - {fileID: 1377761721270370, guid: 9ae233b6c3294ad40827e7884cf81a38, type: 2}
-  - {fileID: 1612584387599566, guid: e959602e417ed0b4183f95736bce6165, type: 2}
-  - {fileID: 1409340424432532, guid: dc935edbe0128a54791385c18e5f07d6, type: 2}
+  - {fileID: 1296388900075654, guid: 4854e94366eac464290d9e5c3ad153df, type: 2}
+  - {fileID: 1623113324087256, guid: 0d521a054bb067145b4a74f20bc274f2, type: 2}
+  - {fileID: 1209163686168098, guid: e959602e417ed0b4183f95736bce6165, type: 2}
   listofRightLegs:
-  - {fileID: 1059533664539102, guid: dda32af5d90bc6a43bbb9587fd8f1fd9, type: 2}
-  - {fileID: 1059533664539102, guid: 50d55702a42f69444a91ca6221ad5854, type: 2}
-  - {fileID: 1059533664539102, guid: 2c0a529eb9f8a3e4580852034cd782c4, type: 2}
+  - {fileID: 1331782947880018, guid: f7fe952e36488a74a831f25917c2d993, type: 2}
+  - {fileID: 1109658101836260, guid: b613a19052d7273458e53ac5e975750d, type: 2}
+  - {fileID: 1723716953447716, guid: aee23c1f91de4ad45937f2a9ff9a40d0, type: 2}
   equip:
     completedLevels: 
     equippedParts: 
@@ -319,6 +315,7 @@ MonoBehaviour:
     rightLegAvailability: 
     shards: 0
   playerName: 
+  currentTorsoPrefab: {fileID: 0}
 --- !u!114 &114434375159908096
 MonoBehaviour:
   m_ObjectHideFlags: 1

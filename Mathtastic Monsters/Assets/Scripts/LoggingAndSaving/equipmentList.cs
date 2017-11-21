@@ -300,7 +300,7 @@ public class equipmentList : MonoBehaviour
 
         EquipDefault();
 
-        Save();    
+        Save();
     }
 
     void EquipDefault()
@@ -353,7 +353,7 @@ public class equipmentList : MonoBehaviour
         SetEquippedUsingIndex(equip.equippedParts);
 
         if (currentTorsoPrefab == null)
-            return null;        
+            return null;
 
         GameObject ad = Instantiate(currentTorsoPrefab, characterContainer.transform, false);
         ad.transform.localPosition = Vector3.zero;
@@ -366,7 +366,7 @@ public class equipmentList : MonoBehaviour
 
         if (currentHeadPrefab != null)
         {
-            GameObject adding = Instantiate(currentHeadPrefab, parent.headPivot.transform, false);
+            GameObject adding = Instantiate(currentHeadPrefab, parent.neckForHead.transform, false);
             adding.transform.localPosition = Vector3.zero;
             if (caller != null)
             {
@@ -376,40 +376,47 @@ public class equipmentList : MonoBehaviour
 
         if (currentLeftArmPrefab != null)
         {
-            GameObject adding = Instantiate(currentLeftArmPrefab, parent.leftArmPivot.transform, false);
-            adding.transform.localPosition = Vector3.zero;
+            GameObject adding = Instantiate(currentLeftArmPrefab, parent.LeftArmUpper.transform, false);
+            ArmPart armPart = adding.GetComponent<ArmPart>();
+            armPart.EquipArm(parent.LeftArmUpper, parent.LeftArmFore, parent.LeftArmHand);
             if (caller != null)
             {
-                caller.leftArmEquipped = adding.GetComponent<ItemPart>();
+                caller.leftArmEquipped = armPart;
             }
         }
         if (currentRightArmPrefab != null)
         {
-            GameObject adding = Instantiate(currentRightArmPrefab, parent.rightArmPivot.transform, false);
-            adding.transform.localPosition = Vector3.zero;
+            GameObject adding = Instantiate(currentRightArmPrefab, parent.RightArmUpper.transform, false);
+            ArmPart armPart = adding.GetComponent<ArmPart>();
+
+            armPart.EquipArm(parent.RightArmUpper, parent.RightArmFore, parent.RightArmHand);
             if (caller != null)
             {
-                caller.rightArmEquipped = adding.GetComponent<ItemPart>();
+                caller.rightArmEquipped = armPart;
             }
         }
 
 
         if (currentLeftLegPrefab != null)
         {
-            GameObject adding = Instantiate(currentLeftLegPrefab, parent.leftLegPivot.transform, false);
-            adding.transform.localPosition = Vector3.zero;
+            GameObject adding = Instantiate(currentLeftLegPrefab, parent.LeftUpperThigh.transform, false);
+            LegPart legPart = adding.GetComponent<LegPart>();
+
+            legPart.EquipLeg(parent.LeftUpperThigh, parent.Leftshin, parent.LefttAnkle, parent.LeftFoot);
             if (caller != null)
             {
-                caller.leftLegEquipped = adding.GetComponent<ItemPart>();
+                caller.leftLegEquipped = legPart;
             }
         }
         if (currentRightLegPrefab != null)
         {
-            GameObject adding = Instantiate(currentRightLegPrefab, parent.RightLegPivot.transform, false);
-            adding.transform.localPosition = Vector3.zero;
+            GameObject adding = Instantiate(currentRightLegPrefab, parent.RightUpperThigh.transform, false);
+            LegPart legPart = adding.GetComponent<LegPart>();
+
+            legPart.EquipLeg(parent.RightUpperThigh, parent.Rightshin, parent.RightAnkle, parent.RightFoot);
             if (caller != null)
             {
-                caller.rightLegEquipped = adding.GetComponent<ItemPart>();
+                caller.rightLegEquipped = legPart;
             }
         }
 

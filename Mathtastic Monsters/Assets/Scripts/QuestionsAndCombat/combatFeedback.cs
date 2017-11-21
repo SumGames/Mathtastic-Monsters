@@ -38,6 +38,8 @@ public class combatFeedback : MonoBehaviour
 
     float timer;
 
+    public TorsoPart body;
+
     // Use this for initialization
     void Start()
     {
@@ -69,6 +71,9 @@ public class combatFeedback : MonoBehaviour
 
     internal void DamageSet(SetImage setImage)
     {
+        if (!body)
+            body = FindObjectOfType<TorsoPart>();
+
         timer = 3;
 
         switch (setImage)
@@ -77,33 +82,39 @@ public class combatFeedback : MonoBehaviour
                 EnemyImage.sprite = attackHit;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
+                body.Animate(Animations.Attack);
                 attack.Play();
                 break;
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
+                body.Animate(Animations.Attack);
                 crit.Play();
                 break;
             case SetImage.hurt:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
                 EnemyImage.enabled = false;
+                body.Animate(Animations.Hurt);
                 hurt.Play();
                 break;
             case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
                 EnemyImage.enabled = false;
+                body.Animate(Animations.Idle);
                 miss.Play();
                 break;
             case SetImage.YouNissed:
                 EnemyImage.sprite = Missed;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
+                body.Animate(Animations.Hurt);
                 miss.Play();
                 break;
             case SetImage.Counter:
+                body.Animate(Animations.Attack);
                 EnemyImage.sprite = Countered;
                 PlayerImage.enabled = false;
                 EnemyImage.enabled = true;

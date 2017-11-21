@@ -31,11 +31,11 @@ public class PartsManager : MonoBehaviour
 
     public ItemPart headEquipped;
 
-    public ItemPart leftArmEquipped;
-    public ItemPart rightArmEquipped;
+    public ArmPart leftArmEquipped;
+    public ArmPart rightArmEquipped;
 
-    public ItemPart leftLegEquipped;
-    public ItemPart rightLegEquipped;
+    public LegPart leftLegEquipped;
+    public LegPart rightLegEquipped;
 
 
     public Text displayCurrent; //Display the name of the currentPart.
@@ -182,7 +182,7 @@ public class PartsManager : MonoBehaviour
                     Destroy(headEquipped.gameObject);
                 }
 
-                adding = Instantiate(currentPart, TorsoEquipped.headPivot.transform, false);
+                adding = Instantiate(currentPart, TorsoEquipped.neckForHead.transform, false);
                 headEquipped = adding.GetComponent<ItemPart>();
                 list.ChangeEquip(currentPart, partType.Head, currentIndex);
                 adding.name = currentPart.name;
@@ -191,17 +191,19 @@ public class PartsManager : MonoBehaviour
             case partType.LeftArm:
                 if (leftArmEquipped != null && currentPart.name == leftArmEquipped.gameObject.name)
                 {
-                    Destroy(leftArmEquipped.gameObject);
+                    leftArmEquipped.deleteArm();
                     leftArmEquipped = null;
                     list.ChangeEquip(null, partType.LeftArm, -2);
                     return;
                 }
                 if (leftArmEquipped != null)
                 {
-                    Destroy(leftArmEquipped.gameObject);
+                    leftArmEquipped.deleteArm();
                 }
-                adding = Instantiate(currentPart, TorsoEquipped.leftArmPivot.transform, false);
-                leftArmEquipped = adding.GetComponent<ItemPart>();
+                adding = Instantiate(currentPart, TorsoEquipped.LeftArmUpper.transform, false);
+                leftArmEquipped = adding.GetComponent<ArmPart>();
+                leftArmEquipped.EquipArm(TorsoEquipped.LeftArmUpper, TorsoEquipped.LeftArmFore, TorsoEquipped.LeftArmHand);
+
                 adding.name = currentPart.name;
                 list.ChangeEquip(currentPart, partType.LeftArm, currentIndex);
                 adding = null;
@@ -210,17 +212,20 @@ public class PartsManager : MonoBehaviour
             case partType.RightArm:
                 if (rightArmEquipped != null && currentPart.name == rightArmEquipped.gameObject.name)
                 {
-                    Destroy(rightArmEquipped.gameObject);
+                    rightArmEquipped.deleteArm();
                     rightArmEquipped = null;
                     list.ChangeEquip(null, partType.RightArm, -2);
                     return;
                 }
                 if (rightArmEquipped != null)
                 {
-                    Destroy(rightArmEquipped.gameObject);
+                    rightArmEquipped.deleteArm();
                 }
-                adding = Instantiate(currentPart, TorsoEquipped.rightArmPivot.transform, false);
-                rightArmEquipped = adding.GetComponent<ItemPart>();
+                adding = Instantiate(currentPart, TorsoEquipped.RightArmUpper.transform, false);
+
+                rightArmEquipped = adding.GetComponent<ArmPart>();
+                rightArmEquipped.EquipArm(TorsoEquipped.RightArmUpper, TorsoEquipped.RightArmFore, TorsoEquipped.RightArmHand);
+
                 adding.name = currentPart.name;
                 list.ChangeEquip(currentPart, partType.RightArm, currentIndex);
                 adding = null;
@@ -229,17 +234,20 @@ public class PartsManager : MonoBehaviour
             case partType.LeftLeg:
                 if (leftLegEquipped != null && currentPart.name == leftLegEquipped.gameObject.name)
                 {
-                    Destroy(leftLegEquipped.gameObject);
+                    leftLegEquipped.DeleteLeg();
                     leftLegEquipped = null;
                     list.ChangeEquip(null, partType.LeftLeg, -2);
                     return;
                 }
                 if (leftLegEquipped != null)
                 {
-                    Destroy(leftLegEquipped.gameObject);
+                    leftLegEquipped.DeleteLeg();
                 }
-                adding = Instantiate(currentPart, TorsoEquipped.leftLegPivot.transform, false);
-                leftLegEquipped = adding.GetComponent<ItemPart>();
+                adding = Instantiate(currentPart, TorsoEquipped.RightUpperThigh.transform, false);
+                leftLegEquipped = adding.GetComponent<LegPart>();
+                leftLegEquipped.EquipLeg(TorsoEquipped.LeftUpperThigh, TorsoEquipped.Leftshin, TorsoEquipped.LefttAnkle, TorsoEquipped.LeftFoot);
+
+
                 list.ChangeEquip(currentPart, partType.LeftLeg, currentIndex);
                 adding.name = currentPart.name;
                 adding = null;
@@ -248,17 +256,20 @@ public class PartsManager : MonoBehaviour
             case partType.RightLeg:
                 if (rightLegEquipped != null && currentPart.name == rightLegEquipped.gameObject.name)
                 {
-                    Destroy(rightLegEquipped.gameObject);
+                    rightLegEquipped.DeleteLeg();
                     rightLegEquipped = null;
                     list.ChangeEquip(null, partType.RightLeg, -2);
                     return;
                 }
                 if (rightLegEquipped != null)
                 {
-                    Destroy(rightLegEquipped.gameObject);
+                    rightLegEquipped.DeleteLeg();
                 }
-                adding = Instantiate(currentPart, TorsoEquipped.RightLegPivot.transform, false);
-                rightLegEquipped = adding.GetComponent<ItemPart>();
+                adding = Instantiate(currentPart, TorsoEquipped.RightUpperThigh.transform, false);
+                rightLegEquipped = adding.GetComponent<LegPart>();
+                rightLegEquipped.EquipLeg(TorsoEquipped.RightUpperThigh, TorsoEquipped.Rightshin, TorsoEquipped.RightAnkle, TorsoEquipped.RightFoot);
+
+
                 list.ChangeEquip(currentPart, partType.RightLeg, currentIndex);
                 adding.name = currentPart.name;
                 adding = null;

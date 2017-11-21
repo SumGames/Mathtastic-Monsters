@@ -55,7 +55,6 @@ public class Monster : MonoBehaviour
         if (!enemyPhase)
         {
             health -= player.PlayerAttack();
-            animator.Play("Hurt");
         }
         else
             health -= player.playerCounter();
@@ -84,12 +83,9 @@ public class Monster : MonoBehaviour
 
 
     internal void SkipQuestion(bool damage)
-    {
-        Debug.Log("Skip");
-
-        if(damage)
+    {       
+        if (damage)
         {
-            Debug.Log("Hurt");
             health -= (player.attack);
             CheckDeath();
         }
@@ -98,6 +94,7 @@ public class Monster : MonoBehaviour
 
     public virtual void CheckDeath()
     {
+        animator.Play("Hurt");
 
         if (health < 0)
         {

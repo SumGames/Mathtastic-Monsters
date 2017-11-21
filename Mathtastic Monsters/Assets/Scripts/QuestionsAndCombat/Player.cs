@@ -104,6 +104,8 @@ public class Player : MonoBehaviour
         resetTime = parent.quizRunning.levelTime + baseTimeGiven + abilities.equipmentTime();
 
         Timer = timeLeft.maxValue = resetTime;
+
+        FindObjectOfType<TorsoPart>().Animate(Animations.Idle);
     }
 
     //Counts down time while game is playing. Tale damage if hits 0.

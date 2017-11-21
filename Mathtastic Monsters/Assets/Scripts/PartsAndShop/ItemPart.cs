@@ -14,6 +14,8 @@ public enum classType
 
 public class ItemPart : MonoBehaviour
 {
+    public Vector3 Scale = new Vector3(1, 1, 1);
+
 
     //Can we equip this item?
     public bool owned;
@@ -26,8 +28,6 @@ public class ItemPart : MonoBehaviour
     public int levelsNeeded;
 
     public abilityTypes ability;
-
-    public Animator objectAnimator;
 
     //Returns true if number of levels completed in a subject is greater than required.
     public bool checkAvailable(equipmentManager numbered)

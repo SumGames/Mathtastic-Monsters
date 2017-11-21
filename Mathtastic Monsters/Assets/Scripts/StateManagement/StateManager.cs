@@ -161,7 +161,7 @@ public class StateManager : ParentsStateManager
             case playStatus.Lost:
                 combatContainer.SetActive(true);
                 gameInstruction.text = "You Lost, don;t worry! You can try again :)";
-                player.gameObject.SetActive(false);
+                FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 resetContainer.SetActive(true);
                 container.SetMultiple(-1, false, null);
                 container.gameObject.SetActive(false);
