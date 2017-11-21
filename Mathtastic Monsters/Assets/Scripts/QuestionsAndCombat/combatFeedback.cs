@@ -76,32 +76,37 @@ public class combatFeedback : MonoBehaviour
             case SetImage.hit:
                 EnemyImage.sprite = attackHit;
                 EnemyImage.enabled = true;
+                PlayerImage.enabled = false;
                 attack.Play();
                 break;
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
                 EnemyImage.enabled = true;
+                PlayerImage.enabled = false;
                 crit.Play();
                 break;
             case SetImage.hurt:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
+                EnemyImage.enabled = false;
                 hurt.Play();
                 break;
             case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
+                EnemyImage.enabled = false;
                 miss.Play();
                 break;
             case SetImage.YouNissed:
                 EnemyImage.sprite = Missed;
                 EnemyImage.enabled = true;
+                PlayerImage.enabled = false;
                 miss.Play();
-                //Miss enemy here.
                 break;
             case SetImage.Counter:
                 EnemyImage.sprite = Countered;
-                PlayerImage.enabled = true;
+                PlayerImage.enabled = false;
+                EnemyImage.enabled = true;
                 attack.Play();
                 break;
             default:
