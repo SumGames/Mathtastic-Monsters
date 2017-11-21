@@ -238,7 +238,6 @@ public class StateManager : ParentsStateManager
     //Disables all objects by default so it doesn't have to be done manually.
     void disableObjects()
     {
-        startContainer.SetActive(false);
         combatContainer.SetActive(false);
         subjectContainer.SetActive(false);
         resetContainer.SetActive(false);
