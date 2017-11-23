@@ -198,6 +198,7 @@ public class ShopManager : MonoBehaviour
             Destroy(preview);
 
         preview = Instantiate(currentPart, previewParent.transform, false);
+        preview.transform.localScale = preview.GetComponent<ItemPart>().Scale;
 
         if (abilities == null)
             abilities = FindObjectOfType<AbilitiesManager>();

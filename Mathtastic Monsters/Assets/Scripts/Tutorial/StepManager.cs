@@ -78,7 +78,7 @@ public class StepManager : MonoBehaviour
                 levelSelect.SetActive(true);
                 break;
             case 4:
-                lillyText.text = "Hello, player! The beast is frozen, but it won't last long. Let me explain.";
+                lillyText.text = "Hello, player! The beast is frozen. Let me explain.";
                 combatContainer.SetActive(true);
                 calculator.SetActive(false);
                 player.ResetPlayer();
@@ -142,7 +142,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 15:
-                lillyText.text = "I'll now lower the freeze barrier when you're ready. Good luck, Hero!";
+                lillyText.text = "I'll now lower the freeze barrier when you're ready.";
                 break;
 
             case 16:
@@ -163,7 +163,6 @@ public class StepManager : MonoBehaviour
                 if (!victory)
                 {
                     SetStep(15);
-                    //TutorialMonster.LoadMonster();
                     player.ResetPlayer();
                     return;
                 }

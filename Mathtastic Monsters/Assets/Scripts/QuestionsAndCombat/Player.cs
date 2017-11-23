@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
 
     public int baseAttack = 1; //Amount of damage a player can inflict.
-    internal int attack;
+    internal float attack;
 
     public float baseTimeGiven = 10;
 
@@ -210,7 +210,7 @@ public class Player : MonoBehaviour
     }
 
 
-    internal int playerCounter()
+    internal float playerCounter()
     {
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
