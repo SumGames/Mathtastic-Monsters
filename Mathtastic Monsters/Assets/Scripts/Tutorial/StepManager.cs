@@ -30,7 +30,7 @@ public class StepManager : MonoBehaviour
     void Start()
     {
         myButton = gameObject.GetComponent<Button>();
-        SetStep(1);
+        SetStep(2);
     }
 
     // Update is called once per frame
@@ -54,19 +54,18 @@ public class StepManager : MonoBehaviour
         switch (a_step)
         {
             case 1:
-                subjectSelect.SetActive(false);
-                levelSelect.SetActive(false);
-                combatContainer.SetActive(false);
-
                 lillyText.text = "";
                 exposition.SetActive(true);
                 myButton.interactable = true;
 
+                break;
+            case 2:
                 foreach (GameObject item in OutlineGlows)
                     item.SetActive(false);
 
-                break;
-            case 2:
+                subjectSelect.SetActive(false);
+                levelSelect.SetActive(false);
+                combatContainer.SetActive(false);
                 lillyText.text = "This way to tutorias!\nHurry!";
                 exposition.SetActive(false);
                 subjectSelect.SetActive(true);
