@@ -76,6 +76,8 @@ public class combatFeedback : MonoBehaviour
 
         timer = 3;
 
+        body.Animate(Animations.Idle);
+
         switch (setImage)
         {
             case SetImage.hit:
@@ -102,8 +104,7 @@ public class combatFeedback : MonoBehaviour
             case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
-                EnemyImage.enabled = false;
-                body.Animate(Animations.Idle);
+                EnemyImage.enabled = false;                
                 miss.Play();
                 break;
             case SetImage.YouNissed:

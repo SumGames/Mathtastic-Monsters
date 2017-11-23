@@ -16,6 +16,7 @@ public enum operators
 public class QuizButton : MonoBehaviour
 {
 
+    public bool boss;
 
 
     public int quizIndex;

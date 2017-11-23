@@ -18,9 +18,14 @@ public class MusicManager : MonoBehaviour
     public AudioSource click;
 
 
+    public AudioClip[] combatMusic = new AudioClip[6];
+    public AudioClip[] bossMusic = new AudioClip[6];
+
+
+
     // Use this for initialization
     void Start()
-    {        
+    {
         setMusic(playStatus.Start);
 
 
@@ -69,8 +74,8 @@ public class MusicManager : MonoBehaviour
                 adding = music[6];
                 break;
             case playStatus.playing:
-                adding = music[7];
-                break;
+                musicSource.Stop();
+                return;
             case playStatus.Won:
                 adding = music[8];
                 break;
@@ -101,13 +106,53 @@ public class MusicManager : MonoBehaviour
             case playStatus.Login:
                 adding = music[17];
                 break;
+            case playStatus.Splash:
+                adding = music[0];
+                break;
+            case playStatus.ArenaHome:
+                adding = music[0];
+                break;
+            case playStatus.ArenaStart:
+                adding = music[1];
+                break;
+            case playStatus.ArenaCombat:
+                musicSource.Stop();
+                return;
+            case playStatus.ArenaContinue:
+                adding = music[8];
+                break;
+            case playStatus.ArenaLost:
+                adding = music[9];
+                break;
+            case playStatus.ArenaLeaderBoard:
+                break;
             default:
                 break;
         }
-        if (adding != musicSource.clip && adding != null)
+        if (adding != null && adding != musicSource.clip)
         {
             musicSource.clip = adding;
             musicSource.Play();
         }
+
+    }
+
+    internal void SetCombatMusic(operators a_op, bool a_boss)
+    {
+        AudioClip adding = null;
+
+        if (a_boss)
+        {
+            adding = combatMusic[(int)a_op];
+        }
+        else
+            adding = bossMusic[(int)a_op];
+
+        if (adding != null)
+        {
+            musicSource.clip = adding;
+            musicSource.Play();
+        }
+
     }
 }

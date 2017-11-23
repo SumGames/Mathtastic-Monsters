@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
+
     public float health; //The current health of the monster, as set by the quizButton.
     float attack;
 
@@ -27,6 +28,8 @@ public class Monster : MonoBehaviour
 
 
     Animator animator;
+
+    MusicManager music;
 
     // Use this for initialization
     void Start()
@@ -136,5 +139,12 @@ public class Monster : MonoBehaviour
         attack = parent.quizRunning.MonsterAttack;
 
         healthBar.maxValue = health;
+
+        if (!music)
+            music = FindObjectOfType<MusicManager>();
+
+        if (music)
+            music.SetCombatMusic(parent.quizRunning.Operator, parent.quizRunning.boss);
+
     }
 }

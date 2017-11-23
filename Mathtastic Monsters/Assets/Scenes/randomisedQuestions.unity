@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731135, g: 0.38073704, b: 0.35873428, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311387, g: 0.3807373, b: 0.35873425, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -820,6 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -1040,6 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -1211,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -1391,6 +1395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -1598,6 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -2399,6 +2405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 3
   levelTime: 25
@@ -2825,7 +2832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.490005, y: 53.6}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
   m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253925230
@@ -3044,8 +3051,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24413791, y: 0.87000006}
   m_AnchorMax: {x: 0.75600004, y: 0.9798621}
-  m_AnchoredPosition: {x: 5, y: 6.25}
-  m_SizeDelta: {x: -180, y: 12.542}
+  m_AnchoredPosition: {x: 2.9, y: 11.560486}
+  m_SizeDelta: {x: -180, y: 1.9209981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254689264
 MonoBehaviour:
@@ -3135,6 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -4511,6 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -4832,6 +4841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -5114,7 +5124,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468417858}
   m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 518, y: -277.31, z: 76}
+  m_LocalPosition: {x: 518, y: -284.2, z: 76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446319019}
@@ -6345,7 +6355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1051.1, y: 629}
+  m_AnchoredPosition: {x: 1051.1, y: 608.72}
   m_SizeDelta: {x: 79.19, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572901172
@@ -6941,6 +6951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -7574,6 +7585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -8090,6 +8102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -9376,6 +9389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 20
@@ -9563,6 +9577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -9867,6 +9882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -10202,6 +10218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -10373,6 +10390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -10630,6 +10648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -11000,6 +11019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -11152,6 +11172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -11455,6 +11476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -12227,6 +12249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -12701,6 +12724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -12853,6 +12877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -13261,6 +13286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -13468,6 +13494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -13639,6 +13666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -14590,7 +14618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1103.6, y: 630}
+  m_AnchoredPosition: {x: 1103.6, y: 608.72}
   m_SizeDelta: {x: 79.19, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107416356
@@ -15140,6 +15168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -15644,7 +15673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 559, y: 77}
+  m_AnchoredPosition: {x: 559, y: 99.8}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172944113
@@ -16327,6 +16356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 20
@@ -16460,6 +16490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -16612,6 +16643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -16783,6 +16815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -17131,6 +17164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -17357,6 +17391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -18196,8 +18231,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322934934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
+  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
   m_Children:
   - {fileID: 1213640566}
   m_Father: {fileID: 1395773092}
@@ -18205,8 +18240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 371, y: -298}
-  m_SizeDelta: {x: 321.8, y: 68.2}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
+  m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322934936
 MonoBehaviour:
@@ -18816,15 +18851,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1368933594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.199776}
-  m_LocalScale: {x: 0.9999809, y: 0.9999809, z: 0.9999809}
+  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
+  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
   m_Children: []
   m_Father: {fileID: 1692169361}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.48982, y: 53.59985}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
   m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368933596
@@ -19226,6 +19261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -19594,7 +19630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.99998, y: 157.8}
+  m_AnchoredPosition: {x: -182.99998, y: 171.6}
   m_SizeDelta: {x: 360.9, y: 166.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446319020
@@ -20061,6 +20097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -20213,6 +20250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 3
   levelTime: 15
@@ -20342,15 +20380,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505563735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.19962}
-  m_LocalScale: {x: 0.99997944, y: 0.99997944, z: 0.99997944}
+  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
+  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
   m_Children: []
   m_Father: {fileID: 2069570669}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.4897, y: 53.599777}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
   m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505563737
@@ -21674,6 +21712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -22052,6 +22091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 25
@@ -22496,6 +22536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 20
@@ -22629,6 +22670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
@@ -22905,15 +22947,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1690181365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
+  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
   m_Children: []
   m_Father: {fileID: 288741781}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.49, y: 53.6}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
   m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690181367
@@ -23304,6 +23346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -24096,6 +24139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -24248,6 +24292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -24561,6 +24606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -25661,6 +25707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 5
@@ -26336,6 +26383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -26893,6 +26941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 15
@@ -27693,15 +27742,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100133276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.19962}
-  m_LocalScale: {x: 0.99997944, y: 0.99997944, z: 0.99997944}
+  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
+  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
   m_Children: []
   m_Father: {fileID: 1045945878}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.48971, y: 53.599777}
+  m_AnchoredPosition: {x: 80.490005, y: 48.45}
   m_SizeDelta: {x: 13.77, y: 8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100133278
@@ -28016,6 +28065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 10
