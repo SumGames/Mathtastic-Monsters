@@ -79,7 +79,7 @@ public class TorsoPart : ItemPart
             default:
                 return;
         }
-        bodyAnimator.Play(anim);
+        bodyAnimator.Play(anim, -1, 0);
 
     }
 }

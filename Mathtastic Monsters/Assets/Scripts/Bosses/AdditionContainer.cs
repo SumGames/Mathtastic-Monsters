@@ -1,48 +1,28 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class multipleContainer : MonoBehaviour
+public class AdditionContainer : MonoBehaviour
 {
-
     public int enemyAnswerNeeded;
 
-    public GameObject calculator;
-
-    public MultipleAnswer[] answers;
+    public AdditionAnswer[] answers;
 
     public Player player;
 
-    // Use this for initialization
-    void Start()
+
+    bool gotten;
+
+
+    internal void MultipleAnswers(BossMonster boss, BossButton a_running)
     {
-    }
+        DisableMultiple();
 
-    // Update is called once per frame
-    void Update()
-    {
+        enemyAnswerNeeded = boss.answerNeeded;
 
-    }
+        player.setTime(true, a_running.levelTime);
 
-    internal void SetMultiple(int answer, bool phase, QuizButton a_running)
-    {
-        enemyAnswerNeeded = answer;
-
-        if (phase && a_running != null)
-        {
-            MultipleAnswers(a_running);
-        }
-        else
-        {
-            DisableMultiple();
-        }
-        if (a_running)
-            player.setTime(phase, a_running.enemPhaseTime);
-    }
-
-    void MultipleAnswers(QuizButton a_running)
-    {
-        calculator.SetActive(false);
-
-        foreach (MultipleAnswer item in answers)
+        foreach (AdditionAnswer item in answers)
         {
             item.setAnswer(-1);
         }
@@ -60,14 +40,14 @@ public class multipleContainer : MonoBehaviour
         for (int i = 1; i < a_running.enemyChoices; i++)
         {
             int wrongAnswer = -3;
-            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer)// || CheckMultiple(a_running, wrongAnswer))
+            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer || CheckMultiple(a_running, wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
                 wrongAnswer = enemyAnswerNeeded + range;
             }
 
 
-            index = Random.Range(0, 8);
+            index = Random.Range(0, answers.Length);
             while (answers[index].getAnswer() != -1)
             {
                 index = Random.Range(0, 8);
@@ -82,8 +62,13 @@ public class multipleContainer : MonoBehaviour
     {
         int number = 1;
 
-        foreach (MultipleAnswer item in answers)
+        int differentAnswers = 0;
+
+        foreach (AdditionAnswer item in answers)
         {
+            if (item.getAnswer() >= 0)
+                differentAnswers++;
+
             if (result == item.getAnswer())
                 number++;
         }
@@ -95,7 +80,7 @@ public class multipleContainer : MonoBehaviour
         }
 
         //Duplicates, but too many to avoid getting more :(
-        if (number >= button.enemyAnswerRange)
+        if (differentAnswers >= button.enemyAnswerRange)
         {
             return false;
         }
@@ -104,18 +89,20 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal void DisableMultiple(bool both=false)
+    void DisableMultiple()
     {
-        foreach (MultipleAnswer item in answers)
+        if (!gotten)
+            getChildren();
+
+        foreach (AdditionAnswer item in answers)
         {
             item.gameObject.SetActive(false);
         }
+    }
 
-        if (both)
-            calculator.SetActive(false);
-        else
-        {
-            calculator.SetActive(true);
-        }
+    void getChildren()
+    {
+        answers = GetComponentsInChildren<AdditionAnswer>();
+        gotten = true;
     }
 }

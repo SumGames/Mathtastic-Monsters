@@ -76,8 +76,6 @@ public class combatFeedback : MonoBehaviour
 
         timer = 3;
 
-        body.Animate(Animations.Idle);
-
         switch (setImage)
         {
             case SetImage.hit:

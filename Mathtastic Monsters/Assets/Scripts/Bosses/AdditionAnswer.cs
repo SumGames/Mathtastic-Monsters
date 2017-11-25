@@ -3,25 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MultipleAnswer : MonoBehaviour
+public class AdditionAnswer : MonoBehaviour
 {
     int Answer;
 
     Text answerText;
 
-    multipleContainer container;
-    public Monster monster;
+    AdditionContainer container;
+    BossMonster monster;
 
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     internal int getAnswer()
     {
@@ -40,14 +30,11 @@ public class MultipleAnswer : MonoBehaviour
 
     public void submitAnswer()
     {
-        if(!monster)
+        if (!monster)
         {
-            monster = FindObjectOfType<Monster>();
+            container = GetComponentInParent<AdditionContainer>();
+            monster = FindObjectOfType<BossMonster>();
         }
-
-        if (!container)
-            container = FindObjectOfType<multipleContainer>();
-
 
         if (Answer == container.enemyAnswerNeeded)
         {

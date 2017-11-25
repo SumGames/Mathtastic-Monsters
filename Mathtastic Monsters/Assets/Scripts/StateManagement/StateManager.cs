@@ -163,7 +163,6 @@ public class StateManager : ParentsStateManager
                 gameInstruction.text = "You Lost, don;t worry! You can try again :)";
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 resetContainer.SetActive(true);
-                container.SetMultiple(-1, false, null);
                 container.gameObject.SetActive(false);
                 break;
 
@@ -176,7 +175,6 @@ public class StateManager : ParentsStateManager
                 int exp = player.CalculateExperience();
                 list.equip.shards += exp;
                 gameInstruction.text = "You won, earning " + exp.ToString("F0") + " Monster Shards!";
-                container.SetMultiple(-1, false, null);
                 container.gameObject.SetActive(false);
                 break;
             case playStatus.MyMonster:

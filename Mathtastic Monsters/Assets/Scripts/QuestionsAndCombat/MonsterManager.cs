@@ -9,7 +9,8 @@ public class MonsterManager : MonoBehaviour
     internal StateManager stateManager;
 
     internal Player player;
-    internal Monster enemy;
+    public Monster enemy;
+    public BossMonster boss;
 
     void start()
     {        
@@ -24,9 +25,23 @@ public class MonsterManager : MonoBehaviour
 
         stateManager.changeState(playStatus.playing);
 
-        enemy.loadMonster();
+        if (!quizRunning.boss)
+        {
 
-        player.ResetPlayer();
+            enemy.loadMonster();
+            boss.additionContainer.gameObject.SetActive(false);
+            boss.DestroyMonster();
+        }
+        else
+        {
+            boss.player = player;
+            boss.parent = this;
+            boss.loadMonster();
+            enemy.DestroyMonster();
+        }
+
+
+        player.ResetPlayer(quizRunning.boss);
 
     }
 

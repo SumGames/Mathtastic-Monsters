@@ -5,7 +5,7 @@ public class Monster : MonoBehaviour
 {
 
     public float health; //The current health of the monster, as set by the quizButton.
-    float attack;
+    internal float attack;
 
     public bool enemyPhase;
 
@@ -20,16 +20,16 @@ public class Monster : MonoBehaviour
     internal ParentsStateManager manager;
 
     public GameObject monsterSpot;
-    GameObject sprite;
+    internal GameObject sprite;
 
     internal questionManager questions;
 
     public multipleContainer multiple;
 
 
-    Animator animator;
+    internal Animator animator;
 
-    MusicManager music;
+    internal MusicManager music;
 
     // Use this for initialization
     void Start()
@@ -40,7 +40,6 @@ public class Monster : MonoBehaviour
     //Update healthbar as it changes.
     void Update()
     {
-        healthBar.value = health;
     }
 
     internal void ScratchMonster()
@@ -53,7 +52,7 @@ public class Monster : MonoBehaviour
     }
 
     //Monster's health is reduced by player's attack, possibly switching to won state.
-    internal void MonsterHurt()
+    internal virtual void MonsterHurt()
     {
         if (!enemyPhase)
         {
@@ -69,12 +68,14 @@ public class Monster : MonoBehaviour
     }
 
     //Player is hurt, and a new question is built.
-    internal void EnemyAttack()
+    internal virtual void EnemyAttack()
     {
+
         if (enemyPhase)
         {
             player.DamagePlayer(attack);
-            animator.Play("Attack");
+            if (animator)
+                animator.Play("Attack");
         }
         else
         {
@@ -97,7 +98,11 @@ public class Monster : MonoBehaviour
 
     public virtual void CheckDeath()
     {
-        animator.Play("Hurt");
+        healthBar.value = health;
+
+
+        if (animator)
+            animator.Play("Hurt");
 
         if (health < 0)
         {
@@ -111,16 +116,22 @@ public class Monster : MonoBehaviour
         }
     }
 
-
-    //Called only when a quiz begins. Loads a question AND sets health/attack.
-    public void loadMonster()
+    internal void DestroyMonster()
     {
-        questions = FindObjectOfType<questionManager>();
-
         if (sprite != null)
         {
             Destroy(sprite.gameObject);
         }
+
+    }
+
+    //Called only when a quiz begins. Loads a question AND sets health/attack.
+    public virtual void loadMonster()
+    {
+        questions = FindObjectOfType<questionManager>();
+
+        DestroyMonster();
+
         if (parent.quizRunning.monsterArt != null)
         {
             sprite = Instantiate(parent.quizRunning.monsterArt, monsterSpot.transform, false);
@@ -139,6 +150,10 @@ public class Monster : MonoBehaviour
         attack = parent.quizRunning.MonsterAttack;
 
         healthBar.maxValue = health;
+        multiple.DisableMultiple();
+
+
+        healthBar.value = health;
 
         if (!music)
             music = FindObjectOfType<MusicManager>();

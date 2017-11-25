@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731135, g: 0.38073704, b: 0.35873428, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311387, g: 0.3807373, b: 0.35873425, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2724,6 +2724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &248722289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3330,7 +3331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &288741781
 Transform:
   m_ObjectHideFlags: 0
@@ -3366,6 +3367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318f21a16d40054c86a5e042f9fdee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedQuestions: 0
   type: 0
 --- !u!1 &289822711
 GameObject:
@@ -3395,6 +3397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
+  enemy: {fileID: 468417860}
+  boss: {fileID: 350346458}
 --- !u!4 &289822713
 Transform:
   m_ObjectHideFlags: 0
@@ -3895,6 +3899,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344226760}
+--- !u!114 &350346458 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114348491790481526, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1707814167}
+  m_Script: {fileID: 11500000, guid: 5a2240fad094a3845abfee3885db8e09, type: 3}
+--- !u!4 &350346459 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1707814167}
 --- !u!1 &352973766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,6 +4202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &377852254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7874,6 +7890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318f21a16d40054c86a5e042f9fdee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedQuestions: 0
   type: 1
 --- !u!1 &663741057
 GameObject:
@@ -12527,6 +12544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &958896073
 GameObject:
   m_ObjectHideFlags: 0
@@ -13860,6 +13878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &1036650590
 GameObject:
   m_ObjectHideFlags: 0
@@ -14059,6 +14078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318f21a16d40054c86a5e042f9fdee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedQuestions: 0
   type: 3
 --- !u!1 &1050568304
 GameObject:
@@ -14584,6 +14604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &1107416354
 GameObject:
   m_ObjectHideFlags: 0
@@ -16812,28 +16833,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255812454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 5
-  minNumber: 10
-  maxNumber: 39
+  levelTime: 20
+  minNumber: 4
+  maxNumber: 50
   Operator: 0
-  minAnswer: 20
-  maxAnswer: 49
-  difficulty: 14
-  MonsterHealth: 15
-  MonsterAttack: 2
+  minAnswer: 1
+  maxAnswer: 100
+  difficulty: 15
+  MonsterHealth: 10
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
-  enemyChoices: 4
-  enemyAnswerRange: 7
+  enemPhaseTime: 8
+  enemyChoices: 3
+  enemyAnswerRange: 2
 --- !u!114 &1255812457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16853,9 +16874,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.41911763, g: 0.29584774, b: 0.29584774, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16953,7 +16974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -374.39996, y: -298}
+  m_AnchoredPosition: {x: -374.39996, y: -263.74}
   m_SizeDelta: {x: 200.9, y: 69.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264111430
@@ -18231,8 +18252,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322934934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.19999}
-  m_LocalScale: {x: 0.9999835, y: 0.9999835, z: 0.9999835}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1213640566}
   m_Father: {fileID: 1395773092}
@@ -18240,8 +18261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.490005, y: 48.45}
-  m_SizeDelta: {x: 13.77, y: 8.5}
+  m_AnchoredPosition: {x: 398.6, y: -87.1}
+  m_SizeDelta: {x: 312.7, y: 69.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322934936
 MonoBehaviour:
@@ -19625,6 +19646,7 @@ RectTransform:
   m_Children:
   - {fileID: 468417859}
   - {fileID: 1172944112}
+  - {fileID: 350346459}
   m_Father: {fileID: 751589143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20247,28 +20269,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1499900383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 3
-  levelTime: 15
-  minNumber: 1
-  maxNumber: 99
+  variableCount: 2
+  levelTime: 20
+  minNumber: 100
+  maxNumber: 300
   Operator: 0
-  minAnswer: 1
-  maxAnswer: 198
-  difficulty: 24
-  MonsterHealth: 20
-  MonsterAttack: 2
+  minAnswer: 100
+  maxAnswer: 3000
+  difficulty: 0
+  MonsterHealth: 15
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
-  enemyChoices: 5
-  enemyAnswerRange: 10
+  enemPhaseTime: 8
+  enemyChoices: 3
+  enemyAnswerRange: 2
 --- !u!114 &1499900386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20288,9 +20310,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.41911763, g: 0.29584774, b: 0.29584774, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -20696,6 +20718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!114 &1530457938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20708,6 +20731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &1551848716
 GameObject:
   m_ObjectHideFlags: 0
@@ -21398,6 +21422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 468417860}
 --- !u!1 &1612867214
 GameObject:
   m_ObjectHideFlags: 0
@@ -23450,6 +23475,76 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704393343}
+--- !u!1001 &1707814167
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1446319019}
+    m_Modifications:
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 518
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -284.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 75.99983
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037772061919040, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167705424575612, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167705424575612, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -460
+      objectReference: {fileID: 0}
+    - target: {fileID: 114407363407238904, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 574737962}
+    - target: {fileID: 114348491790481526, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1172944113}
+    - target: {fileID: 114348491790481526, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+        type: 2}
+      propertyPath: monsterSpot
+      value: 
+      objectReference: {fileID: 468417858}
+    - target: {fileID: 114348491790481526, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+        type: 2}
+      propertyPath: questionText
+      value: 
+      objectReference: {fileID: 1446319021}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1725639566
 GameObject:
   m_ObjectHideFlags: 0
@@ -27096,6 +27191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318f21a16d40054c86a5e042f9fdee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedQuestions: 0
   type: 2
 --- !u!1 &2072091757
 GameObject:

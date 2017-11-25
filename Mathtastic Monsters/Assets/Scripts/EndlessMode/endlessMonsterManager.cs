@@ -138,7 +138,7 @@ public class endlessMonsterManager : MonsterManager
             return;
         }
 
-        player.ResetPlayer();
+        player.ResetPlayer(false);
     }
 
     internal void PlayerWon()

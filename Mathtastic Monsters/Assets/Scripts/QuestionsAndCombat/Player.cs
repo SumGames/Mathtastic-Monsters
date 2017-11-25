@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
 
     endlessMonsterManager endlessMonster;
 
+    bool bossFighting;
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
@@ -70,8 +71,10 @@ public class Player : MonoBehaviour
     }
 
     //Set Health+time to full.
-    public void ResetPlayer()
+    public void ResetPlayer(bool a_boss)
     {
+        bossFighting = a_boss;
+         
         if (!list)
         {
             list = FindObjectOfType<equipmentList>();
@@ -88,12 +91,12 @@ public class Player : MonoBehaviour
             abilities = GetComponent<playerAbilities>();
             abilities.Begin();
         }
-        abilities.setupAbilities();
-
+        abilities.setupAbilities(a_boss);
 
         Frozen = 0;
 
-        FindObjectOfType<Calculator>().AddInput("Cancel");
+        if (!a_boss)
+            FindObjectOfType<Calculator>().AddInput("Cancel");
 
         maxHealth = baseHealth + abilities.equipmentHealth();
 
@@ -139,7 +142,17 @@ public class Player : MonoBehaviour
             timeLeft.value = Timer;
 
             if (Timer < 0)
-                enemy.EnemyAttack();
+            {
+                if (bossFighting)
+                {
+                    Debug.Log("Attacking Player");
+                    parent.boss.EnemyAttack();
+                }
+                else
+                {
+                    enemy.EnemyAttack();
+                }
+            }
         }
     }
 

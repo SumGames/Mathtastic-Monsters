@@ -15,9 +15,7 @@ public enum operators
 
 public class QuizButton : MonoBehaviour
 {
-
     public bool boss;
-
 
     public int quizIndex;
     internal questionContainer parent;
@@ -40,7 +38,7 @@ public class QuizButton : MonoBehaviour
     public int MonsterAttack = 1; //Damage the monster will inflict on hit.
 
 
-    MonsterManager p_manager; //A link to the quizManager so it can tell it to start.
+    internal MonsterManager p_manager; //A link to the quizManager so it can tell it to start.
 
 
     public bool preventRounding;
@@ -57,7 +55,7 @@ public class QuizButton : MonoBehaviour
 
     // Use this for initialization
     public virtual void Start()
-    {
+    {        
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
     }
 
@@ -74,10 +72,10 @@ public class QuizButton : MonoBehaviour
         }
     }
 
-
     //Call the quizManager to start a quiz using this button as the basis.
     public virtual void buttonUsed()
     {
+        boss = false;
         p_manager.startLevel(this);
     }
 }

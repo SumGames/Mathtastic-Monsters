@@ -13,6 +13,9 @@ public class EndlessMonster : Monster
 
     public override void CheckDeath()
     {
+
+        healthBar.value = health;
+
         if (health < 0)
         {
             manager.changeState(playStatus.ArenaContinue);

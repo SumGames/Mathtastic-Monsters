@@ -6,7 +6,7 @@ public class questionContainer : MonoBehaviour
 {
     internal QuizButton[] buttons;
 
-    int completedQuestions;
+    public int completedQuestions;
 
     public classType type = classType.None; //Used for when we want to ask/tell the manager how many levels are completed.
 

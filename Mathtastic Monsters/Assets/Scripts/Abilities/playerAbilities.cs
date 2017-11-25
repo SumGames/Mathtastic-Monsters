@@ -37,16 +37,20 @@ public class playerAbilities : MonoBehaviour
 	}
 
     //Called every time a monster fight starts.
-    internal void setupAbilities()
+    internal void setupAbilities(bool a_boss)
     {
 
         //Reset ability buttons.
         foreach (abilityButton  item in abilityButtons)
         {
             item.resetButton();
+            item.setButtonActive();
         }
 
         abilities.Clear(); //Empty dictionary.
+
+        if (a_boss)
+            return;
 
 
         for (int i = 1, j = 0; i < manager.abilities.Length && j < abilityButtons.Length; i++)
