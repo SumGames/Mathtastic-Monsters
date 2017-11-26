@@ -59,7 +59,12 @@ public class PartsManager : MonoBehaviour
         currentType = partType.Torso;
         getPart();
 
-        tutorial = FindObjectOfType<monsterSteps>();
+        tutorial = FindObjectOfType<monsterSteps>();        
+    }
+
+    void Start()
+    {
+        previewAbilities.text = abilities.setAbilities();
     }
 
     // Update is called once per frame
@@ -105,7 +110,7 @@ public class PartsManager : MonoBehaviour
 
         if (plus)
         {
-            if (currentIndex >= (currentList.Count - 1))
+            if (currentIndex >= (currentList.Count - 1) || currentList.Count == 1)
             {
                 currentIndex = 0;
             }
@@ -113,6 +118,9 @@ public class PartsManager : MonoBehaviour
             {
                 currentIndex++;
             }
+
+            if (currentList[currentIndex] == null)
+                return;
 
             ItemPart part = currentList[currentIndex].GetComponent<ItemPart>();
             if (!part.owned)

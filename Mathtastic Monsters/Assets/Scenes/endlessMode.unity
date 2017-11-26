@@ -845,6 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &289822711
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
+  enemy: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!4 &289822713
 Transform:
   m_ObjectHideFlags: 0
@@ -900,10 +903,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
+  enemy: {fileID: 0}
+  boss: {fileID: 0}
   Score: 0
   levels: 0
-  crit: 0
-  counter: 0
   fightsBetweenBreaks: 1
   endlessState: {fileID: 382568555}
   Welcome: {fileID: 1984627480}
@@ -922,6 +925,7 @@ MonoBehaviour:
   highestLevel: {fileID: 1616356494}
   highestScore: {fileID: 2093228172}
   lostText: {fileID: 836345610}
+  m_playerAbilities: {fileID: 574737963}
 --- !u!114 &289822715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,6 +1690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &382568554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ee3a31a3305c84aaeda19a7e31904b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 6
   baseAttack: 1
   baseTimeGiven: 15
   resetTime: 0
@@ -2713,6 +2717,9 @@ MonoBehaviour:
   - {fileID: 1293133568}
   - {fileID: 900849002}
   - {fileID: 656933866}
+  Crits: 0
+  Counters: 0
+  attacking: 0
 --- !u!82 &574737964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2955,6 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b2abc2de3e650469add72c28b435ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
@@ -4054,6 +4062,7 @@ MonoBehaviour:
   miss: {fileID: 710504301}
   crit: {fileID: 710504301}
   resetTimer: 1
+  body: {fileID: 0}
 --- !u!82 &710504299
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5420,6 +5429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &996563627
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +5837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &1050568304
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &1113350422
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,6 +8375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!114 &1530457938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8375,6 +8388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &1542141186
 GameObject:
   m_ObjectHideFlags: 0
@@ -8754,6 +8768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &1616356492
 GameObject:
   m_ObjectHideFlags: 0

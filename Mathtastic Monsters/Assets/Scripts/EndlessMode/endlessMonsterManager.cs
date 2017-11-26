@@ -11,9 +11,6 @@ public class endlessMonsterManager : MonsterManager
     public float Score;
     public int levels;
 
-    public int crit;
-    public int counter;
-
 
     public int fightsBetweenBreaks = 1;
     int fightsSinceBreak = 0;
@@ -45,6 +42,8 @@ public class endlessMonsterManager : MonsterManager
     public Text highestScore;
 
     public Text lostText;
+
+    public playerAbilities m_playerAbilities;
 
 
     // Use this for initialization
@@ -143,14 +142,10 @@ public class endlessMonsterManager : MonsterManager
 
     internal void PlayerWon()
     {
+        
+
         levels++;
-        Score += Modifier;
-        Score += (crit * .5f);
-        Score += (counter * .25f);
-
-
-        crit = 0;
-        counter = 0;
+        Score += (Modifier * m_playerAbilities.returnExpBoost());
 
         fightsSinceBreak++;
         if (fightsSinceBreak < fightsBetweenBreaks)
@@ -202,10 +197,7 @@ public class endlessMonsterManager : MonsterManager
 
     internal void PlayerLost()
     {
-        Score += (crit * .5f);
-        Score += (counter * .25f);
-        crit = 0;
-        counter = 0;
+        Score += (Modifier * FindObjectOfType<playerAbilities>().returnExpBoost());
 
 
         Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";

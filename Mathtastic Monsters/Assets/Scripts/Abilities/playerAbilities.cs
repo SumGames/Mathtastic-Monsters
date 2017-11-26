@@ -17,11 +17,11 @@ public class playerAbilities : MonoBehaviour
     Player player;
     Monster enemy;
 
+    public int Crits;
+    public int Counters;
 
-    int oozeLimit = 0; //Will we use the slime ability every three turns or two?
+    public int attacking;
 
-    //How many turns passed since slime ability was used.
-    int turns = 0;
 
 	// Use this for initialization
 	internal void Begin () 
@@ -40,19 +40,22 @@ public class playerAbilities : MonoBehaviour
     internal void setupAbilities(bool a_boss)
     {
 
+        Counters = 0;
+        Crits = 0;
+
         //Reset ability buttons.
         foreach (abilityButton  item in abilityButtons)
         {
             item.resetButton();
-            item.setButtonActive();
         }
 
         abilities.Clear(); //Empty dictionary.
 
         if (a_boss)
+        {
+            Debug.Log("Stopped for boss");
             return;
-
-
+        }
         for (int i = 1, j = 0; i < manager.abilities.Length && j < abilityButtons.Length; i++)
         {
             //If an ability's charges is over 0, add it to a button and set up that button.
@@ -71,11 +74,6 @@ public class playerAbilities : MonoBehaviour
             player.Frozen = 3;
         }
 
-        if (abilities.ContainsKey(abilityTypes.Ooze) && abilities[abilityTypes.Ooze] >= 3)
-            oozeLimit = 3;
-
-        if (abilities.ContainsKey(abilityTypes.Hellfire) && abilities[abilityTypes.Hellfire] >= 3)
-            oozeLimit = 2;
 
         //Set the buttons active if they have abiltiies on them. Disables them if they didn't.
         foreach (abilityButton item in abilityButtons)
@@ -88,69 +86,118 @@ public class playerAbilities : MonoBehaviour
     //Return a float that will multiply with our exp received to boost it.
     internal float returnExpBoost()
     {
-        if (!abilities.ContainsKey(abilityTypes.Greedy))
-            return 1;
+        float returning = 1;
 
-        float returning = 1 + (abilities[abilityTypes.Greedy] * .25f);
-
-        return returning;
-
-    }
-
-    //At turn's end, check if we can use slime ability.
-    internal void turnEnded()
-    {
-        if (oozeLimit == 0) return;
-        turns++;
-        if(turns>=oozeLimit)
+        if (abilities.ContainsKey(abilityTypes.Mastery) && abilities[abilityTypes.Mastery] >= 3)
         {
-            enemy.ScratchMonster();
-            turns -= oozeLimit;
+            int mastery = abilities[abilityTypes.Mastery] % 3;
+
+            returning += (Crits * (.10f * mastery));
+
+            returning += (Counters * (.10f * mastery));
+
+            Counters = 0;
+            Crits = 0;
         }
+
+        if (abilities.ContainsKey(abilityTypes.Scavenger))
+        {
+            returning += (abilities[abilityTypes.Scavenger] * .20f);
+        }
+       
+        return returning;
     }
+
 
     //If we're wearing four healthy pieces, increase health by 10.
-    internal int equipmentHealth()
+    internal float equipmentHealth()
     {
-        int returning = 0;
+        float returning = 1;
 
-        if (abilities.ContainsKey(abilityTypes.Angelic) && abilities[abilityTypes.Angelic] == 4)
+        if (abilities.ContainsKey(abilityTypes.ArmourUp))
         {
-            returning += 10;
+            returning += (abilities[abilityTypes.ArmourUp] * .10f);
         }
 
         return returning;
     }
 	
     //Boost our speed relative to amount of pieces with speed.
-    internal int equipmentTime()
+    internal float equipmentTime()
     {
         int returning = 0;
 
-        if (abilities.ContainsKey(abilityTypes.Speed))
+        if (abilities.ContainsKey(abilityTypes.SuperSpeed))
         {
-            returning = 2 * abilities[abilityTypes.Speed];
+            returning = 2 * abilities[abilityTypes.SuperSpeed];
         }
         return returning;
-
     }
 
     //Increase our attack if Fury power is over 3.
-    internal int equipmentAttack()
+    internal float equipmentAttack()
     {
-        if (abilities.ContainsKey(abilityTypes.Fury) && abilities[abilityTypes.Fury] >= 3)
+        float returning = 1;
+
+        if (abilities.ContainsKey(abilityTypes.BoulderFist))
         {
-            return 1;
+            returning += (.05f * abilities[abilityTypes.BoulderFist]);
+
         }
-        return 0;
+        return returning;
+    }
+
+    internal float equipmentCounter()
+    {
+        float returning = 1;
+
+        if (abilities.ContainsKey(abilityTypes.SandSlice))
+        {
+            returning += (0.2f * abilities[abilityTypes.SandSlice]);
+        }
+
+
+        return returning;
+    }
+
+    internal float counterTimeModify()
+    {
+        float returning = 1;
+
+        if (abilities.ContainsKey(abilityTypes.SandSlice))
+        {
+            returning += (0.05f * abilities[abilityTypes.SandSlice]);
+
+        }
+
+
+        return returning;
+    }
+
+    internal float reduceDamage()
+    {
+        float returning = 1;
+
+        if (abilities.ContainsKey(abilityTypes.BarkSkin))
+        {
+            returning -= (0.05f * abilities[abilityTypes.BarkSkin]);
+        }
+
+        return returning;
     }
 
 
-	// Update is called once per frame
-	void Update () 
+    internal float bounceDamage()
     {
-		
-	}
+        float returning = 1;
+
+        if (abilities.ContainsKey(abilityTypes.SlimeSkin))
+        {
+            returning -= (0.1f * abilities[abilityTypes.SlimeSkin]);
+        }
+
+        return returning;
+    }
 
 
     public void useButton(abilityTypes a_type)
@@ -160,14 +207,19 @@ public class playerAbilities : MonoBehaviour
             case abilityTypes.Freeze:
                 player.Frozen = 1;
                 break;
-            case abilityTypes.Evaporate:
-                enemy.SkipQuestion(false);
+            case abilityTypes.Dodge:
+                enemy.SkipQuestion();
                 break;
-            case abilityTypes.Cryoblast:
-                player.Frozen = 2;
+
+            case abilityTypes.StorePower:
+                enemy.abilityDamage(abilities[abilityTypes.StorePower] * 0.05f * player.attackDamage);
+
                 break;
-            case abilityTypes.Disintegrate:
-                enemy.SkipQuestion(true);
+            case abilityTypes.FireStorm:
+                enemy.abilityDamage((player.attackDamage * (0.35f * abilities[abilityTypes.FireStorm])));
+                break;
+            case abilityTypes.Burn:
+                FindObjectOfType<multipleContainer>().removeSingle();
                 break;
             default:
                 break;

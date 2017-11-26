@@ -37,6 +37,7 @@ public class abilityButton : MonoBehaviour
     internal void resetButton()
     {
         thisButton = abilityTypes.None;
+        gameObject.SetActive(false);
     }
 
     //Command the ability manager to use the ability, remove the charges, and check if the ability is still usable.
@@ -45,6 +46,45 @@ public class abilityButton : MonoBehaviour
         abilities.useButton(thisButton);
         chargesLeft -= chargesNeeded;
         setButtonActive();
+    }
+
+
+    public void disablePhase(bool enemyPhase)
+    {
+        switch (thisButton)
+        {
+            case abilityTypes.Dodge:
+                if (enemyPhase && chargesLeft >= chargesNeeded)
+                    m_button.interactable = true;
+                else
+                    m_button.interactable = false;
+                break;
+
+            case abilityTypes.Freeze:
+                if (enemyPhase && chargesLeft >= chargesNeeded)
+                    m_button.interactable = false;
+                else
+                    m_button.interactable = true;
+
+                break;
+            case abilityTypes.Burn:
+                if (enemyPhase && chargesLeft >= chargesNeeded)
+                    m_button.interactable = true;
+                else
+                {
+                    m_button.interactable = false;
+
+                }
+                break;
+            case abilityTypes.StorePower:
+                if (enemyPhase && chargesLeft >= chargesNeeded)
+                    m_button.interactable = false;
+                else
+                    m_button.interactable = true;
+                break;
+            default:
+                break;
+        }
     }
 
     //Set info using the ability's type.
@@ -68,38 +108,49 @@ public class abilityButton : MonoBehaviour
             case abilityTypes.None:
                 gameObject.SetActive(false);
                 return;
-            case abilityTypes.Greedy:
+            case abilityTypes.Scavenger:
                 m_button.interactable = false;
                 return;
-            case abilityTypes.Speed:
+            case abilityTypes.Dodge:
+                chargesNeeded = 2;
+                break;
+            case abilityTypes.BarkSkin:
+                m_button.interactable = false;
+                return;
+            case abilityTypes.SuperSpeed:
+                m_button.interactable = false;
+                return;
+            case abilityTypes.SlimeSkin:
                 m_button.interactable = false;
                 return;
             case abilityTypes.Freeze:
-                if (chargesLeft > 2)
-                    chargesLeft = 2;
-                chargesNeeded = 1;
-                break;
-            case abilityTypes.Evaporate:
-                if (chargesLeft > 3)
-                    chargesLeft = 3;
-                chargesNeeded = 1;
-                break;
-            case abilityTypes.Ooze:
-                m_button.interactable = false;
-                return;
-            case abilityTypes.Fury:
-                m_button.interactable = false;
-                return;
-            case abilityTypes.Cryoblast:
                 chargesNeeded = 2;
                 break;
-            case abilityTypes.Disintegrate:
+            case abilityTypes.Burn:
                 chargesNeeded = 2;
                 break;
-            case abilityTypes.Angelic:
+            case abilityTypes.BoulderFist:
                 m_button.interactable = false;
                 return;
-            case abilityTypes.Hellfire:
+            case abilityTypes.FireStorm:
+                chargesNeeded = chargesLeft;
+                break;
+            case abilityTypes.Mastery:
+                m_button.interactable = false;
+                return;
+            case abilityTypes.SandSlice:
+                m_button.interactable = false;
+                return;
+            case abilityTypes.Hourglass:
+                chargesNeeded = chargesLeft;
+                break;
+            case abilityTypes.StorePower:
+                chargesNeeded = chargesLeft;
+                break;
+            case abilityTypes.ArmourUp:
+                m_button.interactable = false;
+                return;
+            case abilityTypes.DoubleStrike:
                 m_button.interactable = false;
                 return;
             case abilityTypes.TimeLord:
@@ -110,7 +161,7 @@ public class abilityButton : MonoBehaviour
         }
 
         //If not enough charges left, disable it.
-        if (chargesLeft < chargesNeeded)
+        if (chargesLeft < chargesNeeded || chargesNeeded == 0)
             m_button.interactable = false;
 
 

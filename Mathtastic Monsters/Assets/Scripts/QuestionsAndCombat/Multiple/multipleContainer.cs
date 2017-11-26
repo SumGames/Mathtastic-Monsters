@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class multipleContainer : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class multipleContainer : MonoBehaviour
     public MultipleAnswer[] answers;
 
     public Player player;
+
+    playerAbilities playerAbilities;
 
     // Use this for initialization
     void Start()
@@ -24,6 +27,8 @@ public class multipleContainer : MonoBehaviour
 
     internal void SetMultiple(int answer, bool phase, QuizButton a_running)
     {
+        player.EndTurn(phase);
+
         enemyAnswerNeeded = answer;
 
         if (phase && a_running != null)
@@ -40,6 +45,8 @@ public class multipleContainer : MonoBehaviour
 
     void MultipleAnswers(QuizButton a_running)
     {
+
+
         calculator.SetActive(false);
 
         foreach (MultipleAnswer item in answers)
@@ -65,7 +72,6 @@ public class multipleContainer : MonoBehaviour
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
                 wrongAnswer = enemyAnswerNeeded + range;
             }
-
 
             index = Random.Range(0, 8);
             while (answers[index].getAnswer() != -1)
@@ -103,6 +109,24 @@ public class multipleContainer : MonoBehaviour
         return true;
     }
 
+
+    internal void removeSingle()
+    {
+        MultipleAnswer removing = null;
+
+        foreach (MultipleAnswer item in answers)
+        {
+            if (item.getAnswer() != enemyAnswerNeeded && item.getAnswer() > 0)
+            {
+                removing = item;
+            }
+        }
+        if (removing)
+        {
+            removing.setAnswer(-2);
+            removing.gameObject.SetActive(false);
+        }
+    }
 
     internal void DisableMultiple(bool both=false)
     {

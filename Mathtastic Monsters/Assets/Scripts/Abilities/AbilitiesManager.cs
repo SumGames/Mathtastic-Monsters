@@ -6,17 +6,23 @@ using UnityEngine;
 public enum abilityTypes
 {
     None,
-    Greedy,
-    Speed,
+    Scavenger,
+    Dodge,
+    BarkSkin,
+    SuperSpeed,
+    SlimeSkin,
     Freeze,
-    Evaporate,
-    Ooze,
-    Fury,
-    Cryoblast,
-    Disintegrate,
-    Angelic,
-    Hellfire,
+    Burn,
+    BoulderFist,
+    FireStorm,
+    Mastery,
+    SandSlice,
+    Hourglass,
+    StorePower,
+    ArmourUp,
+    DoubleStrike,
     TimeLord
+
 }
 public class AbilitiesManager : MonoBehaviour
 {
@@ -41,38 +47,53 @@ public class AbilitiesManager : MonoBehaviour
         {
             case abilityTypes.None:
                 break;
-            case abilityTypes.Greedy:
-                a_string += "/1. Passive:Gain 25% more shards per piece.(Max = 4)";
+            case abilityTypes.Scavenger:
+                a_string += " "+ a_type.ToString() + ": Collect more shards per piece";
                 break;
-            case abilityTypes.Speed:
-                a_string += "/1. Passive:Gain two more seconds per question per piece(Max = 4)";
+            case abilityTypes.Dodge:
+                a_string += " " + a_type.ToString() + ": Use during enemy turn to avoid it's attack. (1 charge per 2 pieces)";
+                break;
+            case abilityTypes.BarkSkin:
+                a_string += " " + a_type.ToString() + ": Take less damage per piece equipped.";
+                break;
+            case abilityTypes.SuperSpeed:
+                a_string += " " + abilityTypes.SuperSpeed + ": Gain more time per piece equipped.";
+                break;
+            case abilityTypes.SlimeSkin:
+                a_string += " " + a_type.ToString() + ": Return some damage when you're hit.";
                 break;
             case abilityTypes.Freeze:
-                a_string += "/1. Active: Freezes time until the question is answered.  (Max = 2)";
+                a_string += " " + a_type.ToString() + ": Freeze Timer until end of player's phase. Attack cannot crit. (1 charge per 2 pieces)";
                 break;
-            case abilityTypes.Evaporate:
-                a_string += "/1. Active: Skip current question.(Max = 2)";
+            case abilityTypes.Burn:
+                a_string += " " + a_type.ToString() + ": Remove one multiple choice answer. One use per piece.";
                 break;
-            case abilityTypes.Ooze:
-                a_string += "/3. Passive: Every (3rd) question deal 1 damage.";
+            case abilityTypes.BoulderFist:
+                a_string += " " + a_type.ToString() + ": Increase damage, and crits, per piece.";
                 break;
-            case abilityTypes.Fury:
-                a_string += "/3. Passive: Adds 1 additional damage to each attack.";
+            case abilityTypes.FireStorm:
+                a_string += " " + a_type.ToString() + ": Damage enemy. Only one use, but intensity scales with pieces equipped.";
                 break;
-            case abilityTypes.Cryoblast:
-                a_string += "/2. Active: Freeze time until question is answered. Deal 2x damage on answer";
+            case abilityTypes.Mastery:
+                a_string += " " + a_type.ToString() + ": Gain extra shards for each counter and crit. Increases in strength per 3 pieces.";
                 break;
-            case abilityTypes.Disintegrate:
-                a_string += "/2. Active: Skp current question and inflict normal damage";
+            case abilityTypes.SandSlice:
+                a_string += " " + a_type.ToString() + ": Increase counter damage, and enemy timer, per piece.";
                 break;
-            case abilityTypes.Angelic:
-                a_string += "/4. Passive: Gain 10 health";
+            case abilityTypes.Hourglass:
+                a_string += " " + a_type.ToString() + ": Restore your health. Only one use, but intensity scales with pieces equipped.";
                 break;
-            case abilityTypes.Hellfire:
-                a_string += "/2. Passive: Every (2nd) question deal 1 damage.";
+            case abilityTypes.StorePower:
+                a_string += " " + a_type.ToString() + ": One use. Damage increases, per piece, as you answer questions. ";
+                break;
+            case abilityTypes.ArmourUp:
+                a_string += " " + a_type.ToString() + ": Gain health per piece.";
+                break;
+            case abilityTypes.DoubleStrike:
+                a_string += " " + a_type.ToString() + ": Gain a second player turn when 5 pieces equipped..";
                 break;
             case abilityTypes.TimeLord:
-                a_string += "/4. Passive: Time does not move. All attacks crit";
+                a_string += " " + a_type.ToString() + ": Time does not move. All attacks crit. Requires entire set equipped.";
                 break;
             default:
                 break;

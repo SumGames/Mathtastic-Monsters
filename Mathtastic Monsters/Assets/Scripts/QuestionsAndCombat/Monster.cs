@@ -42,12 +42,16 @@ public class Monster : MonoBehaviour
     {
     }
 
+    internal void abilityDamage(float damage)
+    {
+
+        health -= damage;
+        CheckDeath();
+    }
+
     internal void ScratchMonster()
     {
         health -= 1;
-
-        Debug.Log("Scratch");
-
         CheckDeath();
     }
 
@@ -86,14 +90,9 @@ public class Monster : MonoBehaviour
     }
 
 
-    internal void SkipQuestion(bool damage)
-    {       
-        if (damage)
-        {
-            health -= (player.attack);
-            CheckDeath();
-        }
-        questions.makeQuestion(parent.quizRunning,enemyPhase);
+    internal void SkipQuestion()
+    {
+        questions.makeQuestion(parent.quizRunning, enemyPhase);
     }
 
     public virtual void CheckDeath()

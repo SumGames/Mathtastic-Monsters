@@ -4,12 +4,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    public float baseHealth = 6; //Player's starting health. prob affected by equipment.
+    internal float baseHealth = 6; //Player's starting health. prob affected by equipment.
     float maxHealth;
     float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
 
     public int baseAttack = 1; //Amount of damage a player can inflict.
-    internal float attack;
+    internal float attackDamage;
+    internal float counterDamage;
 
     public float baseTimeGiven = 10;
 
@@ -57,16 +58,19 @@ public class Player : MonoBehaviour
     public AudioSource getShards;
     public AudioSource victoryMusic;
 
-    endlessMonsterManager endlessMonster;
+
+    float counterTimeModifier;
 
     bool bossFighting;
+
+
+    internal float attacksLanded;
+
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
         getShards = sounds[0];
         victoryMusic = sounds[1];
-
-        endlessMonster = FindObjectOfType<endlessMonsterManager>();
         
     }
 
@@ -91,16 +95,19 @@ public class Player : MonoBehaviour
             abilities = GetComponent<playerAbilities>();
             abilities.Begin();
         }
+
         abilities.setupAbilities(a_boss);
+        if (!a_boss)
+            EndTurn(false);
 
         Frozen = 0;
 
         if (!a_boss)
             FindObjectOfType<Calculator>().AddInput("Cancel");
 
-        maxHealth = baseHealth + abilities.equipmentHealth();
+        maxHealth = baseHealth * abilities.equipmentHealth();
 
-        attack = baseAttack + abilities.equipmentAttack();
+        attackDamage = baseAttack * abilities.equipmentAttack();
 
         currentHealth = healthBar.maxValue = maxHealth;
 
@@ -108,7 +115,21 @@ public class Player : MonoBehaviour
 
         Timer = timeLeft.maxValue = resetTime;
 
+        counterTimeModifier = abilities.counterTimeModify();
+        counterDamage = baseAttack * abilities.equipmentCounter();
+
         FindObjectOfType<TorsoPart>().Animate(Animations.Idle);
+    }
+
+    internal void EndTurn(bool a_enemy)
+    {
+        if (abilities)
+        {
+            foreach (abilityButton item in abilities.abilityButtons)
+            {
+                item.disablePhase(a_enemy);
+            }
+        }
     }
 
     //Counts down time while game is playing. Tale damage if hits 0.
@@ -145,7 +166,7 @@ public class Player : MonoBehaviour
             {
                 if (bossFighting)
                 {
-                    Debug.Log("Attacking Player");
+                    Debug.Log("Boss is Attacking Player");
                     parent.boss.EnemyAttack();
                 }
                 else
@@ -162,9 +183,10 @@ public class Player : MonoBehaviour
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        abilities.turnEnded();
 
-        float damage = attack;
+        abilities.attacking++;
+
+        float damage = attackDamage;
 
         feedback.DamageSet(SetImage.hit);
 
@@ -174,10 +196,9 @@ public class Player : MonoBehaviour
             Timer = resetTime;
             if (Frozen > 1)
             {
-                damage = attack * critMod;
+                damage = attackDamage * critMod;
                 feedback.DamageSet(SetImage.crit);
-                if (endlessMonster)
-                    endlessMonster.crit++;
+                abilities.Crits++;
             }
 
 
@@ -192,8 +213,7 @@ public class Player : MonoBehaviour
 
             damage *= critMod;
             feedback.DamageSet(SetImage.crit);
-            if (endlessMonster)
-                endlessMonster.crit++;
+            abilities.Crits++;
         }
 
         Timer = resetTime;
@@ -208,11 +228,11 @@ public class Player : MonoBehaviour
 
         feedback.DamageSet(SetImage.hurt);
 
-        abilities.turnEnded();
-
         Timer = resetTime;
 
-        currentHealth -= a_damage;
+        currentHealth -= a_damage * abilities.reduceDamage();
+
+        enemy.abilityDamage(a_damage * abilities.bounceDamage());
 
         enemy.CheckDeath();
     }
@@ -231,10 +251,9 @@ public class Player : MonoBehaviour
 
         if (Timer > greenZone)
         {
-            if (endlessMonster)
-                endlessMonster.counter++;
+            abilities.Counters++;
             feedback.DamageSet(SetImage.Counter);
-            return attack;
+            return attackDamage;
         }
         feedback.DamageSet(SetImage.YouDodgeD);
         return 0;
@@ -244,7 +263,7 @@ public class Player : MonoBehaviour
     {
         if (enemyPhase)
         {
-            Timer = enemyTime;
+            Timer = enemyTime * counterTimeModifier;
             timeLeft.maxValue = enemyTime;
         }
         else

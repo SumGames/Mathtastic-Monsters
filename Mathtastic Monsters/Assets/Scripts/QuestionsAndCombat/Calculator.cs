@@ -76,11 +76,13 @@ public class Calculator : MonoBehaviour
         if (answer == answerNeeded)
         {
             monster.MonsterHurt();
- //           attack.Play();
+
+            monster.player.attacksLanded++;
         }
         else
         {
-            monster.EnemyAttack();            
+            monster.EnemyAttack();
+            monster.player.attacksLanded = 0;
         }
     }
 }
