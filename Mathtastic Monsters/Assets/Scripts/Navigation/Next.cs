@@ -27,8 +27,6 @@ public class Next : MonoBehaviour
 
     public void go()
     {
-        button = container.buttons[(button.quizIndex + 1)];
-
-        parent.startLevel(button);
+        container.buttons[(button.quizIndex + 1)].buttonUsed();
     }
 }
