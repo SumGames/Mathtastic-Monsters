@@ -11,6 +11,7 @@ public class LegPart : ItemPart
 
     public void EquipLeg(GameObject upperThighSpot, GameObject ShinSpot, GameObject AnkleSpot,GameObject FootSpot)
     {
+
         upperThighSpot.transform.localScale = Scale;
 
         transform.SetParent(upperThighSpot.transform, false);

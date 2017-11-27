@@ -13,12 +13,12 @@ public class AdditionAnswer : MonoBehaviour
     BossMonster monster;
 
 
-    internal int getAnswer()
+    internal int GetAnswer()
     {
         return Answer;
     }
 
-    internal void setAnswer(int newAnswer)
+    internal void SetAnswer(int newAnswer)
     {
         Answer = newAnswer;
         if (!answerText)

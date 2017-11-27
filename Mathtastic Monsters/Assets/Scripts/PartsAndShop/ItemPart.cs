@@ -29,6 +29,29 @@ public class ItemPart : MonoBehaviour
 
     public abilityTypes ability;
 
+    Renderer[] renderers;
+
+    public Material textureMaterial;
+
+
+    private void Start()
+    {        
+
+        if (textureMaterial != null)
+        {
+
+            renderers = GetComponentsInChildren<Renderer>();
+
+            foreach (Renderer item in renderers)
+            {
+                item.material = textureMaterial;
+            }
+
+        }
+    }
+
+
+
     //Returns true if number of levels completed in a subject is greater than required.
     public bool checkAvailable(equipmentManager numbered)
     {

@@ -14,8 +14,13 @@ public class AdditionContainer : MonoBehaviour
     bool gotten;
 
 
+    Dictionary<int, int> abilities; //A list of abilities with charges >1, and their charge count.
+
     internal void MultipleAnswers(BossMonster boss, BossButton a_running)
     {
+
+
+
         DisableMultiple();
 
         enemyAnswerNeeded = boss.answerNeeded;
@@ -24,7 +29,7 @@ public class AdditionContainer : MonoBehaviour
 
         foreach (AdditionAnswer item in answers)
         {
-            item.setAnswer(-1);
+            item.SetAnswer(-1);
         }
         int index = Random.Range(0, 8);
 
@@ -35,7 +40,7 @@ public class AdditionContainer : MonoBehaviour
 
 
         answers[index].gameObject.SetActive(true);
-        answers[index].setAnswer(enemyAnswerNeeded);
+        answers[index].SetAnswer(enemyAnswerNeeded);
 
         for (int i = 1; i < a_running.enemyChoices; i++)
         {
@@ -48,12 +53,12 @@ public class AdditionContainer : MonoBehaviour
 
 
             index = Random.Range(0, answers.Length);
-            while (answers[index].getAnswer() != -1)
+            while (answers[index].GetAnswer() != -1)
             {
                 index = Random.Range(0, 8);
             }
             answers[index].gameObject.SetActive(true);
-            answers[index].setAnswer(wrongAnswer);
+            answers[index].SetAnswer(wrongAnswer);
         }
     }
 
@@ -66,10 +71,10 @@ public class AdditionContainer : MonoBehaviour
 
         foreach (AdditionAnswer item in answers)
         {
-            if (item.getAnswer() >= 0)
+            if (item.GetAnswer() >= 0)
                 differentAnswers++;
 
-            if (result == item.getAnswer())
+            if (result == item.GetAnswer())
                 number++;
         }
 
@@ -92,7 +97,7 @@ public class AdditionContainer : MonoBehaviour
     void DisableMultiple()
     {
         if (!gotten)
-            getChildren();
+            GetChildren();
 
         foreach (AdditionAnswer item in answers)
         {
@@ -100,7 +105,7 @@ public class AdditionContainer : MonoBehaviour
         }
     }
 
-    void getChildren()
+    void GetChildren()
     {
         answers = GetComponentsInChildren<AdditionAnswer>();
         gotten = true;

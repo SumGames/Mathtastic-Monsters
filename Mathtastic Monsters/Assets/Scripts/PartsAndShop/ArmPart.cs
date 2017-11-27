@@ -7,8 +7,11 @@ public class ArmPart : ItemPart
     public GameObject foreArm;
     public GameObject hand;
 
+
     public void EquipArm(GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot)
     {
+
+
         upperArmSpot.transform.localScale = Scale;
 
         transform.SetParent(upperArmSpot.transform, false);
