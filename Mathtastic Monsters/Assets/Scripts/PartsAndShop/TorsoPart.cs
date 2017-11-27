@@ -44,6 +44,20 @@ public class TorsoPart : ItemPart
     // Use this for initialization
     void Start ()
     {
+
+        if (textureMaterial != null)
+        {
+
+            renderers = GetComponentsInChildren<Renderer>();
+
+            foreach (Renderer item in renderers)
+            {
+                item.material = textureMaterial;
+            }
+
+        }
+
+
         bodyAnimator = GetComponent<Animator>();
 		
 	}
