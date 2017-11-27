@@ -155,7 +155,7 @@ public class combatFeedback : MonoBehaviour
 
         if (playing != null)
         {
-            playing.volume = PlayerPrefs.GetFloat("Volume", 0);
+            playing.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
             playing.Play();
         }
     }

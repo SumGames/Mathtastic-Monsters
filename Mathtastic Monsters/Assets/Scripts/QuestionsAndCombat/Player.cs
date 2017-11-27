@@ -305,8 +305,8 @@ public class Player : MonoBehaviour
         exp *= abilities.returnExpBoost();
 
 
-        getShards.volume = PlayerPrefs.GetFloat("Volume", 0);
-        victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0);
+        getShards.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
+        victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
 
         getShards.Play();
         victoryMusic.Play();
