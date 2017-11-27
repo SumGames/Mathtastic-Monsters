@@ -23,6 +23,7 @@ public class TutorialMonster : MonoBehaviour
 
     public TutmultipleContainer container;
 
+    combatFeedback feedback;
 
     //Update healthbar as it changes.
     void Update()
@@ -35,7 +36,6 @@ public class TutorialMonster : MonoBehaviour
         if (!enemyAttackPhase)
         {
             health -= player.PlayerAttack();
-            healthBar.value = health;
 
             CheckDeath();
         }
@@ -46,11 +46,20 @@ public class TutorialMonster : MonoBehaviour
     //Player is hurt, and a new question is built.
     internal void EnemyAttack()
     {
+        if(!feedback)
+        {
+            feedback = FindObjectOfType<combatFeedback>();
+        }
+
         if (enemyAttackPhase)
         {
             player.DamagePlayer(attack);
 
             FindObjectOfType<StepManager>().ProgressTutorial();
+        }
+        else
+        {
+            feedback.DamageSet(SetImage.YouNissed);
         }
         MakeQuestion();
     }
@@ -58,6 +67,8 @@ public class TutorialMonster : MonoBehaviour
 
     void CheckDeath()
     {
+        healthBar.value = health;
+
         if (health <= 0)
         {
 
