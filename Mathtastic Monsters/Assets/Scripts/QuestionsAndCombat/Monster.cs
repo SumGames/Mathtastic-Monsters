@@ -10,7 +10,7 @@ public class Monster : MonoBehaviour
     public bool enemyPhase;
 
 
-    internal MonsterManager parent; //Game's manager. Mostly for states, but also check the current active quizButton.
+    public MonsterManager parent; //Game's manager. Mostly for states, but also check the current active quizButton.
 
     public Slider healthBar; //visually display health
 
@@ -22,7 +22,7 @@ public class Monster : MonoBehaviour
     public GameObject monsterSpot;
     internal GameObject sprite;
 
-    internal questionManager questions;
+    public questionManager questions;
 
     public multipleContainer multiple;
 
@@ -92,6 +92,7 @@ public class Monster : MonoBehaviour
 
     internal void SkipQuestion()
     {
+        enemyPhase = !enemyPhase;
         questions.makeQuestion(parent.quizRunning, enemyPhase);
     }
 

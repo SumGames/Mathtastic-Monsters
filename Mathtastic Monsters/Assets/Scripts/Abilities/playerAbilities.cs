@@ -15,7 +15,7 @@ public class playerAbilities : MonoBehaviour
     Dictionary<abilityTypes, int> abilities; //A list of abilities with charges >1, and their charge count.
 
     Player player;
-    Monster enemy;
+    public Monster enemy;
 
     public int Crits;
     public int Counters;
@@ -27,7 +27,8 @@ public class playerAbilities : MonoBehaviour
 	internal void Begin () 
     {
         player = gameObject.GetComponent<Player>();
-        enemy = FindObjectOfType<Monster>();
+
+        enemy = player.enemy;
 
         abilities = new Dictionary<abilityTypes, int>(4);
 
@@ -189,11 +190,11 @@ public class playerAbilities : MonoBehaviour
 
     internal float bounceDamage()
     {
-        float returning = 1;
+        float returning = 0;
 
         if (abilities.ContainsKey(abilityTypes.SlimeSkin))
         {
-            returning -= (0.1f * abilities[abilityTypes.SlimeSkin]);
+            returning += (0.1f * abilities[abilityTypes.SlimeSkin]);
         }
 
         return returning;

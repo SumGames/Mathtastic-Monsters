@@ -53,7 +53,7 @@ public class BossMonster : Monster
         if (Operator == operators.Addition)
         {
             m_button.enemyChoices++;
-            m_button.enemyAnswerRange += (int)(m_button.minNumber / 2);
+            m_button.enemyAnswerRange += 1;
         }
 
         if (feedback == null)
@@ -77,6 +77,7 @@ public class BossMonster : Monster
         m_button = (BossButton)parent.quizRunning;
 
         m_button.enemyChoices = 2;
+        m_button.enemyAnswerRange = 2;
 
         Operator = parent.quizRunning.Operator;
 
