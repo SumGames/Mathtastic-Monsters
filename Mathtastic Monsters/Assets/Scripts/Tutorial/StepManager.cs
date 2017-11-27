@@ -75,6 +75,7 @@ public class StepManager : MonoBehaviour
                 lillyText.text = "Over here, hero! The beast has found me!";
                 subjectSelect.SetActive(false);
                 levelSelect.SetActive(true);
+                FindObjectOfType<equipmentList>().removeHead();
                 break;
             case 4:
                 lillyText.text = "Hello, player! The beast is frozen. Let me explain.";

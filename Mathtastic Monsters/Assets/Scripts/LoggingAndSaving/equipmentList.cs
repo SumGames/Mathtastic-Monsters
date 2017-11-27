@@ -308,6 +308,9 @@ public class equipmentList : MonoBehaviour
         listOfTorso[0].GetComponent<ItemPart>().owned = true;
         ChangeEquip(listOfTorso[0], partType.Torso, 0);
 
+        listofHeads[0].GetComponent<ItemPart>().owned = true;
+        ChangeEquip(listofHeads[0], partType.Head, 0);
+
         listofLeftArms[0].GetComponent<ItemPart>().owned = true;
         ChangeEquip(listofLeftArms[0], partType.LeftArm, 0);
 
@@ -319,6 +322,13 @@ public class equipmentList : MonoBehaviour
 
         listofRightLegs[0].GetComponent<ItemPart>().owned = true;
         ChangeEquip(listofRightLegs[0], partType.RightLeg, 0);
+    }
+
+    internal void removeHead()
+    {
+        listofHeads[0].GetComponent<ItemPart>().owned = false;
+        ChangeEquip(null, partType.Head, -1);
+
     }
 
     //Set up our profile based upon the conditions we gave.

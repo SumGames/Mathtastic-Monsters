@@ -52,7 +52,6 @@ public class combatFeedback : MonoBehaviour
 
         PlayerImage.enabled = false;
         EnemyImage.enabled = false;
-
     }
 
     // Update is called once per frame

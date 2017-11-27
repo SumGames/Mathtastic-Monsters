@@ -37,6 +37,8 @@ public class TutorialPlayer : MonoBehaviour
     public int Frozen;
 
 
+    combatFeedback feedback;
+
     //Set Health+time to full.
     public void ResetPlayer()
     {
@@ -60,6 +62,8 @@ public class TutorialPlayer : MonoBehaviour
 
         greenZone = resetTime * .80f;
         redZone = resetTime * .25f;
+
+        FindObjectOfType<TorsoPart>().Animate(Animations.Idle);
     }
 
     //Counts down time while game is playing. Tale damage if hits 0.
@@ -98,12 +102,18 @@ public class TutorialPlayer : MonoBehaviour
     //Calculate player's damage and return it.
     internal float PlayerAttack()
     {
+        if (feedback == null)
+            feedback = FindObjectOfType<combatFeedback>();
+
+        feedback.DamageSet(SetImage.hit);
+
         float damage = attack;
 
         
         if (Timer > greenZone)
         {
             damage *= 2;
+            feedback.DamageSet(SetImage.crit);
         }
         Timer = resetTime;
         return damage;
