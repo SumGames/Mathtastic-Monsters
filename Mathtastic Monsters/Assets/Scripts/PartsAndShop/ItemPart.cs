@@ -29,7 +29,7 @@ public class ItemPart : MonoBehaviour
 
     public abilityTypes ability;
 
-    Renderer[] renderers;
+    internal Renderer[] renderers;
 
     public Material textureMaterial;
 
