@@ -83,44 +83,80 @@ public class combatFeedback : MonoBehaviour
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Attack);
-                attack.Play();
+                PlaySound(setImage);
                 break;
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Attack);
-                crit.Play();
+                PlaySound(setImage);
                 break;
             case SetImage.hurt:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
                 EnemyImage.enabled = false;
                 body.Animate(Animations.Hurt);
-                hurt.Play();
+                PlaySound(setImage);
                 break;
             case SetImage.YouDodgeD:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
-                EnemyImage.enabled = false;                
-                miss.Play();
+                EnemyImage.enabled = false;
+                PlaySound(setImage);
                 break;
             case SetImage.YouNissed:
                 EnemyImage.sprite = Missed;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Hurt);
-                miss.Play();
+                PlaySound(setImage);
                 break;
             case SetImage.Counter:
                 body.Animate(Animations.Attack);
                 EnemyImage.sprite = Countered;
                 PlayerImage.enabled = false;
                 EnemyImage.enabled = true;
-                attack.Play();
+                PlaySound(setImage);
                 break;
             default:
                 break;
+        }
+    }
+
+    void PlaySound(SetImage a_sound)
+    {
+        AudioSource playing = null;
+
+
+        switch (a_sound)
+        {
+            case SetImage.hit:
+                playing = attack;
+                break;
+            case SetImage.crit:
+                playing = crit;
+                break;
+            case SetImage.hurt:
+                playing = hurt;
+                break;
+            case SetImage.YouDodgeD:
+                playing = miss;
+                break;
+            case SetImage.YouNissed:
+                playing = miss;
+                break;
+            case SetImage.Counter:
+                playing = attack;
+                break;
+            default:
+                break;
+        }
+
+        if (playing != null)
+        {
+            playing.volume = PlayerPrefs.GetFloat("Volume", 0);
+            playing.Play();
         }
     }
 }
