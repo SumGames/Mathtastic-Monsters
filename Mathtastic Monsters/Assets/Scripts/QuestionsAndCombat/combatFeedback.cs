@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public enum SetImage
 {
-    hit,
-    crit,
-    hurt,
-    YouDodgeD, //When attack misses enemy.
-    YouNissed,
-    Counter
+    EnemyHit,
+    EnemyCrit,
+    PlayerHit,
+    PlayerDodged,
+    PlayerMissed,
+    PlayerCountered
 }
 public class combatFeedback : MonoBehaviour
 {
@@ -30,12 +30,26 @@ public class combatFeedback : MonoBehaviour
     public float resetTimer = 3;
     float timer;
     public TorsoPart body;
-    public ParticleSystem[] hitParticle; // The array for the hit particles
-    public GameObject particleHit; //The Particle To Play when hit
-
+    public ParticleSystem[] enemyhitParticle;
+    public ParticleSystem[] enemycritParticle;
+    public ParticleSystem[] playerhitParticle;
+    public ParticleSystem[] enemymissedParticle;
+    public ParticleSystem[] playermissedParticle;
+    public ParticleSystem[] playercounteredParticle;
+    public GameObject particleEnemyhit;
+    public GameObject particleEnemycrit;
+    public GameObject particlePlayerhit;
+    public GameObject particleEnemymissed;
+    public GameObject particlePlayermissed;
+    public GameObject particlePlayercountered;
     void Start()
     {
-        hitParticle = particleHit.GetComponentsInChildren<ParticleSystem>();
+        enemyhitParticle = particleEnemyhit.GetComponentsInChildren<ParticleSystem>();
+        enemycritParticle = particleEnemycrit.GetComponentsInChildren<ParticleSystem>();
+        playerhitParticle = particlePlayerhit.GetComponentsInChildren<ParticleSystem>();
+        enemymissedParticle = particleEnemymissed.GetComponentsInChildren<ParticleSystem>();
+        playermissedParticle = particlePlayermissed.GetComponentsInChildren<ParticleSystem>();
+        playercounteredParticle = particlePlayercountered.GetComponentsInChildren<ParticleSystem>();
         sounds = GetComponents<AudioSource>();
         attack = sounds[0];
         hurt = sounds[1];
@@ -56,95 +70,108 @@ public class combatFeedback : MonoBehaviour
             EnemyImage.enabled = false;
         }
     }
-
     internal void DamageSet(SetImage setImage)
     {
         if (!body)
             body = FindObjectOfType<TorsoPart>();
-
         timer = 3;
-
         switch (setImage)
         {
-            case SetImage.hit:
+            case SetImage.EnemyHit:
                 EnemyImage.sprite = attackHit;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Attack);
                 PlaySound(setImage);
-                foreach (ParticleSystem item in hitParticle)
+                foreach (ParticleSystem item in enemyhitParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.crit:
+            case SetImage.EnemyCrit:
                 EnemyImage.sprite = attackCrit;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Attack);
                 PlaySound(setImage);
+                foreach (ParticleSystem item in enemycritParticle)
+                {
+                    item.Play();
+                }
                 break;
-            case SetImage.hurt:
+            case SetImage.PlayerHit:
                 PlayerImage.sprite = playerHurt;
                 PlayerImage.enabled = true;
                 EnemyImage.enabled = false;
                 body.Animate(Animations.Hurt);
                 PlaySound(setImage);
+                foreach (ParticleSystem item in playerhitParticle)
+                {
+                    item.Play();
+                }
                 break;
-            case SetImage.YouDodgeD:
+            case SetImage.PlayerDodged:
                 PlayerImage.sprite = dodged;
                 PlayerImage.enabled = true;
                 EnemyImage.enabled = false;
                 PlaySound(setImage);
+                foreach (ParticleSystem item in enemymissedParticle)
+                {
+                    item.Play();
+                }
                 break;
-            case SetImage.YouNissed:
+            case SetImage.PlayerMissed:
                 EnemyImage.sprite = Missed;
                 EnemyImage.enabled = true;
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Hurt);
                 PlaySound(setImage);
+                foreach (ParticleSystem item in playermissedParticle)
+                {
+                    item.Play();
+                }
                 break;
-            case SetImage.Counter:
+            case SetImage.PlayerCountered:
                 body.Animate(Animations.Attack);
                 EnemyImage.sprite = Countered;
                 PlayerImage.enabled = false;
                 EnemyImage.enabled = true;
                 PlaySound(setImage);
+                foreach (ParticleSystem item in playercounteredParticle)
+                {
+                    item.Play();
+                }
                 break;
             default:
                 break;
         }
     }
-
     void PlaySound(SetImage a_sound)
     {
         AudioSource playing = null;
-
-
         switch (a_sound)
         {
-            case SetImage.hit:
+            case SetImage.EnemyHit:
                 playing = attack;
                 break;
-            case SetImage.crit:
+            case SetImage.EnemyCrit:
                 playing = crit;
                 break;
-            case SetImage.hurt:
+            case SetImage.PlayerHit:
                 playing = hurt;
                 break;
-            case SetImage.YouDodgeD:
+            case SetImage.PlayerDodged:
                 playing = miss;
                 break;
-            case SetImage.YouNissed:
+            case SetImage.PlayerMissed:
                 playing = miss;
                 break;
-            case SetImage.Counter:
+            case SetImage.PlayerCountered:
                 playing = attack;
                 break;
             default:
                 break;
         }
-
         if (playing != null)
         {
             playing.volume = PlayerPrefs.GetFloat("Volume", 0.6f);

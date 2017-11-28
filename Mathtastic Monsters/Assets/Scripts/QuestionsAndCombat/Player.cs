@@ -195,12 +195,12 @@ public class Player : MonoBehaviour
             if (Frozen > 1)
             {
                 damage = attackDamage * critMod;
-                feedback.DamageSet(SetImage.crit);
+                feedback.DamageSet(SetImage.EnemyCrit);
                 abilities.Crits++;
             }
             else
             {
-                feedback.DamageSet(SetImage.hit);
+                feedback.DamageSet(SetImage.EnemyHit);
             }
 
 
@@ -213,12 +213,12 @@ public class Player : MonoBehaviour
         if (Timer > greenZone)
         {
             damage *= critMod;
-            feedback.DamageSet(SetImage.crit);
+            feedback.DamageSet(SetImage.EnemyCrit);
             abilities.Crits++;
         }
         else
         {
-            feedback.DamageSet(SetImage.hit);
+            feedback.DamageSet(SetImage.EnemyHit);
         }
 
 
@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        feedback.DamageSet(SetImage.hurt);
+        feedback.DamageSet(SetImage.PlayerHit);
 
         Timer = resetTime;
 
@@ -258,10 +258,10 @@ public class Player : MonoBehaviour
         if (Timer > greenZone)
         {
             abilities.Counters++;
-            feedback.DamageSet(SetImage.Counter);
+            feedback.DamageSet(SetImage.PlayerCountered);
             return attackDamage;
         }
-        feedback.DamageSet(SetImage.YouDodgeD);
+        feedback.DamageSet(SetImage.PlayerDodged);
         return 0;
     }
 

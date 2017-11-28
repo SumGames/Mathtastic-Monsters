@@ -39,7 +39,7 @@ public class BossMonster : Monster
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        feedback.DamageSet(SetImage.hurt);
+        feedback.DamageSet(SetImage.PlayerHit);
 
         player.DamagePlayer(1);
 
@@ -59,7 +59,7 @@ public class BossMonster : Monster
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        feedback.DamageSet(SetImage.hit);
+        feedback.DamageSet(SetImage.EnemyHit);
 
         --health;
 

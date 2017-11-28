@@ -59,7 +59,7 @@ public class TutorialMonster : MonoBehaviour
         }
         else
         {
-            feedback.DamageSet(SetImage.YouNissed);
+            feedback.DamageSet(SetImage.PlayerMissed);
         }
         MakeQuestion();
     }
