@@ -54,7 +54,6 @@ public class playerAbilities : MonoBehaviour
 
         if (a_boss)
         {
-            Debug.Log("Stopped for boss");
             return;
         }
         for (int i = 1, j = 0; i < manager.abilities.Length && j < abilityButtons.Length; i++)

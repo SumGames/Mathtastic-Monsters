@@ -75,7 +75,7 @@ public class BossMonster : Monster
         FindObjectOfType<multipleContainer>().DisableMultiple(true);
 
         m_button = (BossButton)parent.quizRunning;
-
+        
         m_button.enemyChoices = 2;
         m_button.enemyAnswerRange = 2;
 

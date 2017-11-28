@@ -16,11 +16,10 @@ public class AdditionContainer : MonoBehaviour
 
     Dictionary<int, int> abilities; //A list of abilities with charges >1, and their charge count.
 
+    List<int> answersList;
+
     internal void MultipleAnswers(BossMonster boss, BossButton a_running)
     {
-
-
-
         DisableMultiple();
 
         enemyAnswerNeeded = boss.answerNeeded;
@@ -31,61 +30,60 @@ public class AdditionContainer : MonoBehaviour
         {
             item.SetAnswer(-1);
         }
-        int index = Random.Range(0, 8);
+        int index = Random.Range(0, answers.Length);
 
 
 
-        if (a_running.enemyChoices > 8)
-            a_running.enemyChoices = 8;
+        answersList = new List<int>();
 
 
         answers[index].gameObject.SetActive(true);
         answers[index].SetAnswer(enemyAnswerNeeded);
 
+        answersList.Add(enemyAnswerNeeded);
+
         for (int i = 1; i < a_running.enemyChoices; i++)
         {
+
+
             int wrongAnswer = -3;
-            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer || CheckMultiple(a_running, wrongAnswer))
+            while (wrongAnswer < a_running.minNumber || wrongAnswer > a_running.maxNumber || CheckMultiple(a_running,wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
+
                 wrongAnswer = enemyAnswerNeeded + range;
             }
-
-
             index = Random.Range(0, answers.Length);
             while (answers[index].GetAnswer() != -1)
             {
-                index = Random.Range(0, 8);
+                index = Random.Range(0, answers.Length);
             }
             answers[index].gameObject.SetActive(true);
             answers[index].SetAnswer(wrongAnswer);
+
         }
     }
 
     //Loop if we return true.
     bool CheckMultiple(QuizButton button, int result)
     {
-        int number = 1;
-
-        int differentAnswers = 0;
+        bool dupes=false;
 
         foreach (AdditionAnswer item in answers)
         {
-            if (item.GetAnswer() >= 0)
-                differentAnswers++;
-
             if (result == item.GetAnswer())
-                number++;
+                dupes = true;
         }
 
         //No duplicates.
-        if (number == 1)
+        if (dupes==false)
         {
+            answersList.Add(result);
             return false;
         }
 
         //Duplicates, but too many to avoid getting more :(
-        if (differentAnswers >= button.enemyAnswerRange)
+        if (answersList.Count >= button.enemyAnswerRange * 2)
         {
             return false;
         }

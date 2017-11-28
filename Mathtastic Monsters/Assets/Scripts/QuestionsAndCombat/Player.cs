@@ -188,8 +188,6 @@ public class Player : MonoBehaviour
 
         float damage = attackDamage;
 
-        feedback.DamageSet(SetImage.hit);
-
 
         if (Frozen > 0)
         {
@@ -199,6 +197,10 @@ public class Player : MonoBehaviour
                 damage = attackDamage * critMod;
                 feedback.DamageSet(SetImage.crit);
                 abilities.Crits++;
+            }
+            else
+            {
+                feedback.DamageSet(SetImage.hit);
             }
 
 
@@ -210,11 +212,15 @@ public class Player : MonoBehaviour
         
         if (Timer > greenZone)
         {
-
             damage *= critMod;
             feedback.DamageSet(SetImage.crit);
             abilities.Crits++;
         }
+        else
+        {
+            feedback.DamageSet(SetImage.hit);
+        }
+
 
         Timer = resetTime;
         return damage;

@@ -14,6 +14,8 @@ public class multipleContainer : MonoBehaviour
 
     playerAbilities playerAbilities;
 
+    public List<int> answersList;
+
     // Use this for initialization
     void Start()
     {
@@ -55,10 +57,14 @@ public class multipleContainer : MonoBehaviour
         }
         int index = Random.Range(0, 8);
 
+        answersList = new List<int>();
+        answersList.Add(enemyAnswerNeeded);
 
 
         if (a_running.enemyChoices > 8)
             a_running.enemyChoices = 8;
+
+
 
 
         answers[index].gameObject.SetActive(true);
@@ -67,7 +73,7 @@ public class multipleContainer : MonoBehaviour
         for (int i = 1; i < a_running.enemyChoices; i++)
         {
             int wrongAnswer = -3;
-            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer)// || CheckMultiple(a_running, wrongAnswer))
+            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer || CheckMultiple(a_running, wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
                 wrongAnswer = enemyAnswerNeeded + range;
@@ -86,22 +92,23 @@ public class multipleContainer : MonoBehaviour
     //Loop if we return true.
     bool CheckMultiple(QuizButton button, int result)
     {
-        int number = 1;
+        bool dupes = false;
 
         foreach (MultipleAnswer item in answers)
         {
             if (result == item.getAnswer())
-                number++;
+                dupes = true;
         }
 
         //No duplicates.
-        if (number == 1)
+        if (dupes == false)
         {
+            answersList.Add(result);
             return false;
         }
 
         //Duplicates, but too many to avoid getting more :(
-        if (number >= button.enemyAnswerRange)
+        if (answersList.Count >= button.enemyAnswerRange * 2)
         {
             return false;
         }
