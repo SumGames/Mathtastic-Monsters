@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum SetImage
+public enum SetFeedback
 {
     EnemyHit,
     EnemyCrit,
@@ -14,22 +14,11 @@ public enum SetImage
 }
 public class combatFeedback : MonoBehaviour
 {
-    public Sprite attackHit;
-    public Sprite attackCrit;
-    public Sprite dodged;
-    public Sprite Missed;
-    public Sprite Countered;
-    public Sprite playerHurt;
-    public Image PlayerImage;
-    public Image EnemyImage;
     public AudioSource[] sounds;
     public AudioSource attack;
     public AudioSource hurt;
     public AudioSource miss;
     public AudioSource crit;
-    public float resetTimer = 3;
-    float timer;
-    public TorsoPart body;
     public ParticleSystem[] enemyhitParticle;
     public ParticleSystem[] enemycritParticle;
     public ParticleSystem[] playerhitParticle;
@@ -42,6 +31,9 @@ public class combatFeedback : MonoBehaviour
     public GameObject particleEnemymissed;
     public GameObject particlePlayermissed;
     public GameObject particlePlayercountered;
+    public float resetTimer = 3;
+    float timer;
+    public TorsoPart body;
     void Start()
     {
         enemyhitParticle = particleEnemyhit.GetComponentsInChildren<ParticleSystem>();
@@ -55,8 +47,6 @@ public class combatFeedback : MonoBehaviour
         hurt = sounds[1];
         miss = sounds[2];
         crit = sounds[3];      
-        PlayerImage.enabled = false;
-        EnemyImage.enabled = false;
     }
     void Update()
     {
@@ -64,79 +54,56 @@ public class combatFeedback : MonoBehaviour
         {            
             timer -= Time.deltaTime;
         }
-        else
-        {
-            PlayerImage.enabled = false;
-            EnemyImage.enabled = false;
-        }
     }
-    internal void DamageSet(SetImage setImage)
+    internal void DamageSet(SetFeedback setFeedback)
     {
         if (!body)
             body = FindObjectOfType<TorsoPart>();
         timer = 3;
-        switch (setImage)
+        switch (setFeedback)
         {
-            case SetImage.EnemyHit:
-                EnemyImage.sprite = attackHit;
-                EnemyImage.enabled = true;
-                PlayerImage.enabled = false;
+            case SetFeedback.EnemyHit:
                 body.Animate(Animations.Attack);
-                PlaySound(setImage);
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in enemyhitParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.EnemyCrit:
-                EnemyImage.sprite = attackCrit;
-                EnemyImage.enabled = true;
-                PlayerImage.enabled = false;
+            case SetFeedback.EnemyCrit:
                 body.Animate(Animations.Attack);
-                PlaySound(setImage);
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in enemycritParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.PlayerHit:
-                PlayerImage.sprite = playerHurt;
-                PlayerImage.enabled = true;
-                EnemyImage.enabled = false;
+            case SetFeedback.PlayerHit:
                 body.Animate(Animations.Hurt);
-                PlaySound(setImage);
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in playerhitParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.PlayerDodged:
-                PlayerImage.sprite = dodged;
-                PlayerImage.enabled = true;
-                EnemyImage.enabled = false;
-                PlaySound(setImage);
+            case SetFeedback.PlayerDodged:
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in enemymissedParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.PlayerMissed:
-                EnemyImage.sprite = Missed;
-                EnemyImage.enabled = true;
-                PlayerImage.enabled = false;
+            case SetFeedback.PlayerMissed:
                 body.Animate(Animations.Hurt);
-                PlaySound(setImage);
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in playermissedParticle)
                 {
                     item.Play();
                 }
                 break;
-            case SetImage.PlayerCountered:
+            case SetFeedback.PlayerCountered:
                 body.Animate(Animations.Attack);
-                EnemyImage.sprite = Countered;
-                PlayerImage.enabled = false;
-                EnemyImage.enabled = true;
-                PlaySound(setImage);
+                PlaySound(setFeedback);
                 foreach (ParticleSystem item in playercounteredParticle)
                 {
                     item.Play();
@@ -146,27 +113,27 @@ public class combatFeedback : MonoBehaviour
                 break;
         }
     }
-    void PlaySound(SetImage a_sound)
+    void PlaySound(SetFeedback a_sound)
     {
         AudioSource playing = null;
         switch (a_sound)
         {
-            case SetImage.EnemyHit:
+            case SetFeedback.EnemyHit:
                 playing = attack;
                 break;
-            case SetImage.EnemyCrit:
+            case SetFeedback.EnemyCrit:
                 playing = crit;
                 break;
-            case SetImage.PlayerHit:
+            case SetFeedback.PlayerHit:
                 playing = hurt;
                 break;
-            case SetImage.PlayerDodged:
+            case SetFeedback.PlayerDodged:
                 playing = miss;
                 break;
-            case SetImage.PlayerMissed:
+            case SetFeedback.PlayerMissed:
                 playing = miss;
                 break;
-            case SetImage.PlayerCountered:
+            case SetFeedback.PlayerCountered:
                 playing = attack;
                 break;
             default:

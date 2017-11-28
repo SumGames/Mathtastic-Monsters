@@ -50,12 +50,12 @@ public class TutMultipleAnswer : MonoBehaviour
         if (Answer == container.enemyAnswerNeeded)
         {
             monster.MonsterHurt();
-            FindObjectOfType<combatFeedback>().DamageSet(SetImage.PlayerCountered);
+            FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerCountered);
         }
         else
         {
             monster.EnemyAttack();
-            FindObjectOfType<combatFeedback>().DamageSet(SetImage.PlayerHit);
+            FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerHit);
         }
 
     }

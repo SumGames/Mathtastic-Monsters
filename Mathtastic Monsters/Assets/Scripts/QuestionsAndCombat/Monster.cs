@@ -83,7 +83,7 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<combatFeedback>().DamageSet(SetImage.PlayerMissed);
+            FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerMissed);
         }
         enemyPhase = !enemyPhase;
         questions.makeQuestion(parent.quizRunning,enemyPhase);

@@ -105,7 +105,7 @@ public class TutorialPlayer : MonoBehaviour
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        feedback.DamageSet(SetImage.EnemyHit);
+        feedback.DamageSet(SetFeedback.EnemyHit);
 
         float damage = attack;
 
@@ -113,7 +113,7 @@ public class TutorialPlayer : MonoBehaviour
         if (Timer > greenZone)
         {
             damage *= 2;
-            feedback.DamageSet(SetImage.EnemyCrit);
+            feedback.DamageSet(SetFeedback.EnemyCrit);
         }
         Timer = resetTime;
         return damage;
