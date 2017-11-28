@@ -12,7 +12,6 @@ public enum SetImage
     YouNissed,
     Counter
 }
-
 public class combatFeedback : MonoBehaviour
 {
     public Sprite attackHit;
@@ -20,41 +19,31 @@ public class combatFeedback : MonoBehaviour
     public Sprite dodged;
     public Sprite Missed;
     public Sprite Countered;
-
     public Sprite playerHurt;
-
     public Image PlayerImage;
     public Image EnemyImage;
-
     public AudioSource[] sounds;
     public AudioSource attack;
     public AudioSource hurt;
     public AudioSource miss;
     public AudioSource crit;
-    
-
-
     public float resetTimer = 3;
-
     float timer;
-
     public TorsoPart body;
+    public ParticleSystem[] hitParticle; // The array for the hit particles
+    public GameObject particleHit; //The Particle To Play when hit
 
-    // Use this for initialization
     void Start()
     {
+        hitParticle = particleHit.GetComponentsInChildren<ParticleSystem>();
         sounds = GetComponents<AudioSource>();
         attack = sounds[0];
         hurt = sounds[1];
         miss = sounds[2];
-        crit = sounds[3];
-        
-
+        crit = sounds[3];      
         PlayerImage.enabled = false;
         EnemyImage.enabled = false;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (timer >= 0)
@@ -83,6 +72,10 @@ public class combatFeedback : MonoBehaviour
                 PlayerImage.enabled = false;
                 body.Animate(Animations.Attack);
                 PlaySound(setImage);
+                foreach (ParticleSystem item in hitParticle)
+                {
+                    item.Play();
+                }
                 break;
             case SetImage.crit:
                 EnemyImage.sprite = attackCrit;
