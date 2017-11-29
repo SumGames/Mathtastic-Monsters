@@ -237,6 +237,7 @@ public class equipmentList : MonoBehaviour
     void newGame()
     {
         equip.shards = 0;
+        equip.tutorialComplete = false;
 
         equip.completedLevels = new int[5];
 

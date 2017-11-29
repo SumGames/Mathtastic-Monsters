@@ -200,6 +200,13 @@ public class StepManager : MonoBehaviour
                 myButton.interactable = true;
                 tutorialCalculator.ButtonsActive(false);
                 lillyText.text = "The beast has fallen! Good work, Hero!";
+                if (!list.equip.tutorialComplete)
+                {
+                    list.equip.shards += 20;
+                    lillyText.text = "\nYou also got 20 shards!";
+                    list.equip.tutorialComplete = true;
+                }
+
                 TutorialMonster.gameObject.SetActive(false);
                 TutorialMonster.healthBar.gameObject.SetActive(false);
 

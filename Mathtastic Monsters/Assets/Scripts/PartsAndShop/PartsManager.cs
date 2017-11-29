@@ -299,23 +299,29 @@ public class PartsManager : MonoBehaviour
         if (TorsoEquipped != null)
         {
             Destroy(TorsoEquipped.gameObject);
-            TorsoEquipped = null;
-            list.ChangeEquip(null, partType.Torso, -2);
-            list.ChangeEquip(null, partType.Head, -2);
-
-            list.ChangeEquip(null, partType.LeftArm, -2);
-            list.ChangeEquip(null, partType.RightArm, -2);
-            list.ChangeEquip(null, partType.LeftLeg, -2);
-            list.ChangeEquip(null, partType.RightLeg, -2);
         }
-        GameObject adding = Instantiate(currentPart, parentOfTorso.transform, true);
-        adding.transform.localPosition = Vector3.zero;
-        adding.transform.localScale = currentPart.transform.localScale;
-        TorsoEquipped = adding.GetComponent<TorsoPart>();
 
         list.ChangeEquip(currentPart, partType.Torso, currentIndex);
-        adding.name = currentPart.name;
+
+        list.BuildCharacter(parentOfTorso, this);
+
     }
+
+    public void ModelTrash()
+    {
+        Destroy(TorsoEquipped.gameObject);
+        list.ChangeEquip(null, partType.Head, -2);
+
+        list.ChangeEquip(null, partType.LeftArm, -2);
+        list.ChangeEquip(null, partType.RightArm, -2);
+        list.ChangeEquip(null, partType.LeftLeg, -2);
+        list.ChangeEquip(null, partType.RightLeg, -2);
+
+
+        list.BuildCharacter(parentOfTorso, this);
+
+    }
+
 
     public void getPart()
     {

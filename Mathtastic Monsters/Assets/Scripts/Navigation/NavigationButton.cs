@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NavigationButton : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class NavigationButton : MonoBehaviour
     ParentsStateManager manager; //Parent encompassing every stateManager type. Can use to move states.
 
     MusicManager musicManager;
+
+    public void startTutorial()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 
     public void used()
     {

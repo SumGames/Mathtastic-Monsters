@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 14
+  stateTarget: 24
 --- !u!114 &99497760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 99497759}
-        m_MethodName: used
+        m_MethodName: startTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1486,7 +1486,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INSTRUCTIONS
+  m_Text: Play Tutorial.
 --- !u!222 &1174478726
 CanvasRenderer:
   m_ObjectHideFlags: 0

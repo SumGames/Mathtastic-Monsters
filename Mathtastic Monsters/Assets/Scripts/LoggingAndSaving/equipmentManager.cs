@@ -34,6 +34,8 @@ public class equipmentManager
     [SerializeField]
     public int shards;
 
+    public bool tutorialComplete;
+
 
     public void setEquipped(partType a_type, int index)
     {
