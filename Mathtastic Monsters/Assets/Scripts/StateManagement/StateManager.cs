@@ -15,7 +15,7 @@ public class StateManager : ParentsStateManager
     public GameObject enemyContainer;
 
     public GameObject splashContainer;
-    public GameObject login;
+//    public GameObject login;
     public GameObject startContainer; //Container of the start screen.
 
     public GameObject subjectContainer; //Container for level select.
@@ -40,10 +40,16 @@ public class StateManager : ParentsStateManager
 
     public multipleContainer container;
 
+    public loginManager login;
+
     //Start off by linking every internal object to each other.
     void Start()
     {
         base.Find();
+
+
+        login.Begin(this, list);
+
 
         gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
 
@@ -110,11 +116,13 @@ public class StateManager : ParentsStateManager
         gameState = newState;
         switch (gameState)
         {
+            /*
             case playStatus.Login:
                 list.Save();
                 gameInstruction.text = "";
                 login.SetActive(true);
                 break;
+             */
             case playStatus.Start:
                 gameInstruction.text = "";
                 startContainer.SetActive(true);
@@ -244,7 +252,7 @@ public class StateManager : ParentsStateManager
         multiplicationSelection.SetActive(false);
         divisionSelection.SetActive(false);
         mathfortressSelection.SetActive(false);
-        login.SetActive(false);
+        //login.SetActive(false);
         splashContainer.SetActive(false);
         nextButton.gameObject.SetActive(false);
         retreatObject.SetActive(false);

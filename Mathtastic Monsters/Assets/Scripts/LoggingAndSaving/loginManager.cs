@@ -22,17 +22,17 @@ public class loginManager : MonoBehaviour
     //otherwise display this.
     public GameObject[] loadProfile;
 
-    equipmentList list;
+    public equipmentList list;
 
     StateManager states; //Tell this to continue onto main menu.
 
     public GameObject tutorialPopUp;
 
     // Use this for initialization
-    void Start()
+    internal void Begin(StateManager a_state, equipmentList a_list)
     {
-        states = FindObjectOfType<StateManager>();
-        list = FindObjectOfType<equipmentList>();
+        states = a_state;
+        list = a_list;
 
         nameOne = PlayerPrefs.GetString("NameOne", "");
         nameTwo = PlayerPrefs.GetString("NameTwo", "");
@@ -127,7 +127,7 @@ public class loginManager : MonoBehaviour
     //Called from all start screens. Jump to the main menu.
     void continueToStartScreen()
     {
-        states.login.SetActive(false);
+        //states.login.SetActive(false);
         states.changeState(playStatus.subjectSelect);
         EnableProfiles();
     }
