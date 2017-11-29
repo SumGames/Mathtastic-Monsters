@@ -26,9 +26,40 @@ public class StepManager : MonoBehaviour
 
     public GameObject[] OutlineGlows;
 
+    equipmentList list;
+    public GameObject prefabbedList;
+
+    public GameObject backPrefab;
+    GameObject backs;
+
+    internal backgroundManager backgrounds;
+
     // Use this for initialization
     void Start()
     {
+        list = FindObjectOfType<equipmentList>();
+        if (list == null)
+        {
+            GameObject adding = Instantiate(prefabbedList, null, false);
+            list = adding.GetComponent<equipmentList>();
+            adding.name = "List";
+
+            StateManager check = gameObject.GetComponent<StateManager>();
+
+            if (!check)
+                list.startGame("Guest", true);
+        }
+
+        GameObject can = GameObject.Find("Canvas");
+        backs = Instantiate(backPrefab, can.transform, false);
+
+        backgrounds = backs.GetComponent<backgroundManager>();
+
+        backgrounds.startBack(playStatus.subjectSelect);
+
+
+
+
         myButton = gameObject.GetComponent<Button>();
         SetStep(2);
     }
@@ -170,6 +201,7 @@ public class StepManager : MonoBehaviour
                 tutorialCalculator.ButtonsActive(false);
                 lillyText.text = "The beast has fallen! Good work, Hero!";
                 TutorialMonster.gameObject.SetActive(false);
+                TutorialMonster.healthBar.gameObject.SetActive(false);
 
                 break;
             default:
