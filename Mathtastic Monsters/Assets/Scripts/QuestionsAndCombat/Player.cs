@@ -28,7 +28,9 @@ public class Player : MonoBehaviour
     float critTime = 0.80f; //Percentage of time left needed to crit.
 
 
-    public Slider healthBar; //Visually represents health.
+    //public Slider healthBar; //Visually represents health.
+
+    public Healthbars Healthbar;
 
 
     public Slider timeLeft; //Visually represents time.
@@ -109,7 +111,8 @@ public class Player : MonoBehaviour
 
         attackDamage = baseAttack * abilities.equipmentAttack();
 
-        currentHealth = healthBar.maxValue = maxHealth;
+        currentHealth = maxHealth;
+        Healthbar.setMaxHealth(maxHealth, true);
 
         resetTime = parent.quizRunning.levelTime + baseTimeGiven + abilities.equipmentTime();
 
@@ -141,7 +144,7 @@ public class Player : MonoBehaviour
         }
 
 
-        healthBar.value = currentHealth;
+        //healthBar.value = currentHealth;
 
         if (Frozen > 0)
         {
@@ -237,6 +240,8 @@ public class Player : MonoBehaviour
         Timer = resetTime;
 
         currentHealth -= a_damage * abilities.reduceDamage();
+
+        Healthbar.changeHealth(true, currentHealth);
 
         enemy.abilityDamage(a_damage * abilities.bounceDamage());
 

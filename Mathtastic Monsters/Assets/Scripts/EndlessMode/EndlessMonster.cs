@@ -5,16 +5,10 @@ using UnityEngine;
 public class EndlessMonster : Monster
 {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
 
     public override void CheckDeath()
     {
-
-        healthBar.value = health;
+        bar.changeHealth(false, health);
 
         if (health < 0)
         {

@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour
 
     public MonsterManager parent; //Game's manager. Mostly for states, but also check the current active quizButton.
 
-    public Slider healthBar; //visually display health
+    public Healthbars bar;
 
     internal Player player;
 
@@ -34,7 +34,7 @@ public class Monster : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        healthBar = GameObject.Find("EnemyHealth").GetComponent<Slider>();
+        bar = FindObjectOfType<Healthbars>();
     }
 
     //Update healthbar as it changes.
@@ -98,7 +98,7 @@ public class Monster : MonoBehaviour
 
     public virtual void CheckDeath()
     {
-        healthBar.value = health;
+        bar.changeHealth(false, health);
 
 
         if (animator)
@@ -145,15 +145,13 @@ public class Monster : MonoBehaviour
 
         questions.makeQuestion(parent.quizRunning, enemyPhase);
 
-
         health = parent.quizRunning.MonsterHealth;
         attack = parent.quizRunning.MonsterAttack;
 
-        healthBar.maxValue = health;
         multiple.DisableMultiple();
 
 
-        healthBar.value = health;
+        bar.setMaxHealth(health, false);
 
         if (!music)
             music = FindObjectOfType<MusicManager>();

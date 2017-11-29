@@ -7,7 +7,7 @@ public class TutorialMonster : MonoBehaviour
     float attack;
 
 
-    public Slider healthBar; //visually display health
+    public Healthbars healthBar; //visually display health
 
     public TutorialPlayer player;
 
@@ -67,7 +67,7 @@ public class TutorialMonster : MonoBehaviour
 
     void CheckDeath()
     {
-        healthBar.value = health;
+        healthBar.changeHealth(false, health);
 
         if (health <= 0)
         {
@@ -82,6 +82,8 @@ public class TutorialMonster : MonoBehaviour
     //Called only when a quiz begins. Loads a question AND sets health/attack.
     public void LoadMonster()
     {
+        if (!healthBar)
+            healthBar = FindObjectOfType<Healthbars>();
 
 
         MakeQuestion();
@@ -89,9 +91,7 @@ public class TutorialMonster : MonoBehaviour
         health = 6;
         attack = 1;
 
-        healthBar.maxValue = health;
-
-        healthBar.value = health;
+        healthBar.setMaxHealth(health, false);
     }
 
     //Uses given values to calculate a random sum and its components, then store and display them.

@@ -150,5 +150,4 @@ public class TutorialPlayer : MonoBehaviour
         /* Heal player*/
 
     }
-
 }

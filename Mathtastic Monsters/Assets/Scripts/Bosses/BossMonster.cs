@@ -23,6 +23,8 @@ public class BossMonster : Monster
     // Use this for initialization
     void Start()
     {
+        bar = FindObjectOfType<Healthbars>();
+
         manager = FindObjectOfType<StateManager>();
 
     }
@@ -98,9 +100,8 @@ public class BossMonster : Monster
         health = parent.quizRunning.MonsterHealth;
         attack = parent.quizRunning.MonsterAttack;
 
-        healthBar.maxValue = health;
+        bar.setMaxHealth(health, false);
 
-        healthBar.value = health;
 
         if (!music)
             music = FindObjectOfType<MusicManager>();

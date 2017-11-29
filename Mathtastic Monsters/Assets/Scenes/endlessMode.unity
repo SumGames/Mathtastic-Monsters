@@ -669,11 +669,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174993630}
---- !u!4 &213443152 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4113593028244104, guid: f035bd03d3c1e40458506babd7b23f62,
-    type: 2}
-  m_PrefabInternal: {fileID: 865087304}
 --- !u!1 &230282086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2120,7 @@ MonoBehaviour:
   health: 0
   enemyPhase: 0
   parent: {fileID: 0}
-  healthBar: {fileID: 1172944113}
+  bar: {fileID: 751589144}
   monsterSpot: {fileID: 468417858}
   questions: {fileID: 0}
   multiple: {fileID: 847845818}
@@ -2700,7 +2695,7 @@ MonoBehaviour:
   baseAttack: 1
   baseTimeGiven: 15
   resetTime: 0
-  healthBar: {fileID: 949516104}
+  Healthbar: {fileID: 751589144}
   timeLeft: {fileID: 331346454}
   bar: {fileID: 1157291065}
   container: {fileID: 568349161}
@@ -4037,7 +4032,7 @@ RectTransform:
   m_Children:
   - {fileID: 1282455592}
   - {fileID: 1851572897}
-  - {fileID: 213443152}
+  - {fileID: 865087305}
   m_Father: {fileID: 751589143}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4057,23 +4052,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fc086e699a5504dbe0f91ed36c41e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackHit: {fileID: 21300000, guid: 35110bf7300909547909aac74f749525, type: 3}
-  attackCrit: {fileID: 21300000, guid: 0b91888f59394824cbeca7b8da21e8d9, type: 3}
-  dodged: {fileID: 21300000, guid: 3dafc6ed3be918243819e9bb3f98ed12, type: 3}
-  Missed: {fileID: 21300000, guid: c66346bf75421074b8b406fc7824f0d7, type: 3}
-  Countered: {fileID: 21300000, guid: 647e6b9e3fc4b0b46b19ebc98f67c062, type: 3}
-  playerHurt: {fileID: 21300000, guid: 15a4e2983b26d5e4a8fca8fe40ef909b, type: 3}
-  PlayerImage: {fileID: 1851572898}
-  EnemyImage: {fileID: 1282455593}
   sounds: []
   attack: {fileID: 710504301}
   hurt: {fileID: 710504299}
   miss: {fileID: 710504301}
   crit: {fileID: 710504301}
+  enemyhitParticle: []
+  enemycritParticle: []
+  playerhitParticle: []
+  enemymissedParticle: []
+  playermissedParticle: []
+  playercounteredParticle: []
+  particleEnemyhit: {fileID: 0}
+  particleEnemycrit: {fileID: 0}
+  particlePlayerhit: {fileID: 0}
+  particleEnemymissed: {fileID: 0}
+  particlePlayermissed: {fileID: 0}
+  particlePlayercountered: {fileID: 0}
   resetTimer: 1
   body: {fileID: 0}
-  hitParticle: []
-  particleHit: {fileID: 710504296}
 --- !u!82 &710504299
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4440,6 +4437,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 751589143}
+  - component: {fileID: 751589144}
   m_Layer: 0
   m_Name: Combat
   m_TagString: Untagged
@@ -4468,6 +4466,19 @@ Transform:
   m_Father: {fileID: 543391330}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751589144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751589142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88edd9dfff2c2cf488c864b08707f8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBar: {fileID: 949516104}
+  enemyBar: {fileID: 1172944113}
 --- !u!1 &770468973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +4953,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f035bd03d3c1e40458506babd7b23f62, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &865087305 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 865087304}
 --- !u!1 &897947639
 GameObject:
   m_ObjectHideFlags: 0
