@@ -55,7 +55,7 @@ public class equipmentList : MonoBehaviour
     //If our profile wasn't special, save it as .gd.
     internal void Save()
     {
-        if (playerName == "Guest" || playerName == "ADMIN" || playerName == "")
+        if (playerName == "Guest" || playerName == "")
             return;
 
         //Setting the equipmentManager's availability flags.
@@ -337,12 +337,6 @@ public class equipmentList : MonoBehaviour
     {
         playerName = nameGiven;
 
-        if (nameGiven == "ADMIN")
-        {
-            ByPassRestrictions();
-            return;
-        }
-
         if (a_begin)
         {
             newGame();
@@ -356,6 +350,13 @@ public class equipmentList : MonoBehaviour
             }
             else
                 newGame();
+        }
+
+
+        if (nameGiven == "Lilly")
+        {
+            ByPassRestrictions();
+            return;
         }
     }
 
@@ -443,6 +444,40 @@ public class equipmentList : MonoBehaviour
             equip.completedLevels[i] = 11;
         }
         equip.shards = 999999;
+
+        for (int i = 0; i < equip.torsoAvailability.Length; i++)
+        {
+            ItemPart item = listOfTorso[i].GetComponent<ItemPart>();
+            item.owned = true;
+        }
+        foreach (GameObject item in listofHeads)
+        {
+            ItemPart mod = item.GetComponent<ItemPart>();
+            mod.owned = true;
+        }
+
+        foreach (GameObject item in listofLeftArms)
+        {
+            ItemPart mod = item.GetComponent<ItemPart>();
+            mod.owned = true;
+        }
+        foreach (GameObject item in listofRightArms)
+        {
+            ItemPart mod = item.GetComponent<ItemPart>();
+            mod.owned = true;
+        }
+
+        foreach (GameObject item in listofLeftLegs)
+        {
+            ItemPart mod = item.GetComponent<ItemPart>();
+            mod.owned = true;
+        }
+
+        foreach (GameObject item in listofRightLegs)
+        {
+            ItemPart mod = item.GetComponent<ItemPart>();
+            mod.owned = true;
+        }
     }
 
     public string getShards()

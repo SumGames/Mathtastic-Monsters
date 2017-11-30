@@ -99,9 +99,10 @@ public class loginManager : MonoBehaviour
             return;
         }
 
-        if (inputNames[(index - 1)].text == "ADMIN")
+        if (inputNames[(index - 1)].text == "Lilly")
         {
-            list.startGame("ADMIN", true);
+            setNameUsingIndex(index, inputNames[(index - 1)].text);
+            list.startGame("Lilly", true);
             continueToStartScreen();
             return;
         }
