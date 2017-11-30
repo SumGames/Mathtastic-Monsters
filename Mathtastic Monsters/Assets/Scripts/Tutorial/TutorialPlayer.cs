@@ -103,17 +103,19 @@ public class TutorialPlayer : MonoBehaviour
     internal float PlayerAttack()
     {
         if (feedback == null)
-            feedback = FindObjectOfType<combatFeedback>();
-
-        feedback.DamageSet(SetFeedback.EnemyHit);
+            feedback = FindObjectOfType<combatFeedback>();        
 
         float damage = attack;
 
-        
+
         if (Timer > greenZone)
         {
             damage *= 2;
             feedback.DamageSet(SetFeedback.EnemyCrit);
+        }
+        else
+        {
+            feedback.DamageSet(SetFeedback.EnemyHit);
         }
         Timer = resetTime;
         return damage;
