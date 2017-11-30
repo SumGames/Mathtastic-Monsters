@@ -203,7 +203,7 @@ public class StepManager : MonoBehaviour
                 if (!list.equip.tutorialComplete)
                 {
                     list.equip.shards += 20;
-                    lillyText.text = "\nYou also got 20 shards!";
+                    lillyText.text += "\nYou also got 20 shards!";
                     list.equip.tutorialComplete = true;
                 }
 

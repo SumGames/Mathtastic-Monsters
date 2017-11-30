@@ -20,6 +20,7 @@ public class TutorialCalculator : MonoBehaviour
 
     public Text text;
 
+    public TutmultipleContainer tutmultiple;
 
     // Use this for initialization
     void Start()
@@ -69,7 +70,7 @@ public class TutorialCalculator : MonoBehaviour
 
     public void ButtonsActive(bool a_on)
     {
-        FindObjectOfType<TutmultipleContainer>().interactableButtons(a_on);
+        tutmultiple.interactableButtons(a_on);
 
         foreach (Button item in buttonsAll)
         {
