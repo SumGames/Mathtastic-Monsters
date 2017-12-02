@@ -95,22 +95,22 @@ public class loginManager : MonoBehaviour
         if (index == 4)
         {
             list.startGame("Guest", true);
-            continueToStartScreen();
+            ContinueToStartScreen();
             return;
         }
 
         if (inputNames[(index - 1)].text == "Lilly")
         {
-            setNameUsingIndex(index, inputNames[(index - 1)].text);
+            SetNameUsingIndex(index, inputNames[(index - 1)].text);
             list.startGame("Lilly", true);
-            continueToStartScreen();
+            ContinueToStartScreen();
             return;
         }
 
         if (inputNames[(index - 1)].text == "")
             return;
 
-        setNameUsingIndex(index, inputNames[(index - 1)].text);
+        SetNameUsingIndex(index, inputNames[(index - 1)].text);
         list.startGame(inputNames[(index - 1)].text, true);
 
         tutorialPopUp.SetActive(true);
@@ -119,14 +119,14 @@ public class loginManager : MonoBehaviour
     //Called from clicking of the main button of LoadProfile. Loads the profile.
     public void loadLinked(int index)
     {
-        string profileNname = loadUsingIndex(index);
+        string profileNname = LoadUsingIndex(index);
         list.startGame(profileNname, false);
 
-        continueToStartScreen();
+        ContinueToStartScreen();
     }
 
     //Called from all start screens. Jump to the main menu.
-    void continueToStartScreen()
+    void ContinueToStartScreen()
     {
         //states.login.SetActive(false);
         states.changeState(playStatus.subjectSelect);
@@ -137,19 +137,19 @@ public class loginManager : MonoBehaviour
     //Called from clicking of the main button of LoadProfile. Deletes the profile.
     public void deleteLinked(int index)
     {
-        string delName = Application.persistentDataPath + "/" + loadUsingIndex(index) + ".gd";
+        string delName = Application.persistentDataPath + "/" + LoadUsingIndex(index) + ".gd";
 
         if (File.Exists(delName))
         {
             File.Delete(delName);
         }
-        setNameUsingIndex(index, "");
+        SetNameUsingIndex(index, "");
 
         EnableProfiles();
     }
 
     //Use the index of the button clicked on to return the associated name.
-    string loadUsingIndex(int index)
+    string LoadUsingIndex(int index)
     {
         switch (index)
         {
@@ -164,7 +164,7 @@ public class loginManager : MonoBehaviour
         }
     }
     //When a name is created, set its name, set its playerpref, update its name.
-    void setNameUsingIndex(int index, string newName)
+    void SetNameUsingIndex(int index, string newName)
     {
         switch (index)
         {
@@ -197,7 +197,7 @@ public class loginManager : MonoBehaviour
         }
         else
         {
-            continueToStartScreen();
+            ContinueToStartScreen();
         }
 
 

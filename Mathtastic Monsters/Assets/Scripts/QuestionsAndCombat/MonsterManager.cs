@@ -6,38 +6,52 @@ public class MonsterManager : MonoBehaviour
 
     public QuizButton quizRunning; //The current quiz that has been running. This object passes in number range and other question specific variables.
 
-    internal StateManager stateManager;
+    public StateManager stateManager;
 
     internal Player player;
-    public Monster enemy;
+    public Monster monster;
     public BossMonster boss;
 
-    void start()
-    {        
+    public bool fightingBoss;
+
+    internal Monster currentEnemy;
+
+    public Vector3 initialPosition;
+
+    public virtual void Start()
+    {
         player = stateManager.player;
-        enemy = stateManager.enemy;
+        monster = stateManager.enemy;
+
+        initialPosition = monster.transform.position;
     }
 
     //Called by clicking on a button. Creates questions and loads them.
-    internal void startLevel(QuizButton a_button)
+    internal void StartLevel(QuizButton a_button)
     {
+        monster.transform.position = initialPosition;
+
         quizRunning = a_button; //The button selected will be used as the basis for calculation and creation.
 
         stateManager.changeState(playStatus.playing);
 
+        fightingBoss = quizRunning.boss;
+
         if (!quizRunning.boss)
         {
+            currentEnemy = monster;
 
-            enemy.loadMonster();
             boss.additionContainer.gameObject.SetActive(false);
             boss.DestroyMonster();
         }
         else
         {
+            currentEnemy = boss;
+
             boss.player = player;
             boss.parent = this;
-            boss.loadMonster();
-            enemy.DestroyMonster();
+
+            monster.DestroyMonster();
         }
 
 
@@ -50,7 +64,7 @@ public class MonsterManager : MonoBehaviour
     {
         if (quizRunning != null)
         {
-            startLevel(quizRunning);
+            StartLevel(quizRunning);
         }
     }
 }

@@ -20,6 +20,16 @@ public class BossMonster : Monster
 
     combatFeedback feedback;
 
+    public float depth = -5;
+
+    public float playerTime;
+
+
+
+    public GameObject subtractionBottom;
+
+    public Vector3 highSpot;
+
     // Use this for initialization
     void Start()
     {
@@ -41,17 +51,54 @@ public class BossMonster : Monster
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
+        if (Operator == operators.Subtraction)
+        {
+            EnemyAttackSubtraction();
+            return;
+        }
+
         feedback.DamageSet(SetFeedback.PlayerHit);
+
 
         player.DamagePlayer(1);
 
+        CheckDeath();
+
+
         CreateQuestion();
 
-        CheckDeath();
+
+    }
+
+    void EnemyAttackSubtraction()
+    {
+        if (depth == 0)
+        {
+            feedback.DamageSet(SetFeedback.PlayerMissed);
+
+            depth = -5;
+            CreateQuestion();
+            return;
+        }
+
+        if (player.returnTimer() <= 0)
+        {
+            depth = -5;
+        }
+        player.DamagePlayer(1);
+        feedback.DamageSet(SetFeedback.PlayerHit);
+
+        CreateSubtraction(true, false);
     }
 
     internal override void MonsterHurt()
     {
+        if (Operator == operators.Subtraction)
+        {
+            SubtractionAttacked();
+            return;
+        }
+
         if (Operator == operators.Addition)
         {
             m_button.enemyChoices++;
@@ -70,18 +117,63 @@ public class BossMonster : Monster
         CheckDeath();
     }
 
+    void SubtractionAttacked()
+    {
+        if (depth >= 0)
+        {
+            health--;
+
+            depth = -5;
+
+            CreateQuestion();
+            CheckDeath();
+            return;
+        }
+        else if (depth == -1)
+        {
+            playerTime = player.returnTimer();
+
+            CreateSubtraction(false, false);
+
+            depth = 0;
+            return;
+        }
+        else
+        {
+            playerTime = player.returnTimer();
+
+            depth++;
+
+            CreateSubtraction(true, false);
+            return;
+        }
+
+    }
 
     public override void loadMonster()
     {
+        highSpot = monsterSpot.transform.position;
 
-        FindObjectOfType<multipleContainer>().DisableMultiple(true);
+        questions = FindObjectOfType<questionManager>();
+
+        if (!multipleContainer)
+            multipleContainer = FindObjectOfType<multipleContainer>();
+
+        multipleContainer.setAttacks(true, false);
+
+
+        multipleContainer.DisableMultiple(true);
 
         m_button = (BossButton)parent.quizRunning;
-        
-        m_button.enemyChoices = 2;
-        m_button.enemyAnswerRange = 2;
 
         Operator = parent.quizRunning.Operator;
+
+
+        if (Operator == operators.Addition)
+        {
+            m_button.enemyChoices = 2;
+            m_button.enemyAnswerRange = 2;
+        }
 
         if (sprite != null)
         {
@@ -124,6 +216,8 @@ public class BossMonster : Monster
                 CreateAddition();
                 break;
             case operators.Subtraction:
+                CreateSubtraction(true,true);
+
                 break;
             case operators.Multiplication:
                 break;
@@ -140,10 +234,18 @@ public class BossMonster : Monster
 
     }
 
+    void CreateSubtraction(bool EnemyAttackingPhase, bool resetTime)
+    {
+        EnemyAttackingPhase = questions.makeQuestion(m_button, resetTime);
+
+        float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 5));
+
+        monsterSpot.transform.position = new Vector3(monsterSpot.transform.position.x, positionY, monsterSpot.transform.position.z);
+
+    }
+
     void CreateAddition()
     {        
-
-
         additionContainer.gameObject.SetActive(true);
 
         int[] numbers = new int[m_button.variableCount];

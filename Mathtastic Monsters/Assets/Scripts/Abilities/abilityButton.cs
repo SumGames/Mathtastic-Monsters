@@ -8,8 +8,8 @@ public class abilityButton : MonoBehaviour
     abilityTypes thisButton; //This button's current ability.
 
     //Active buttons are disabled if charges left is less than needed.
-    int chargesLeft; 
-    int chargesNeeded;
+    public int chargesLeft; 
+    public int chargesNeeded;
 
     Button m_button;
 
@@ -23,18 +23,18 @@ public class abilityButton : MonoBehaviour
     //buttontype is the avility this button will be responsible for.
     //Charges if how many uses it has.
     //a_abilities is a reference to the ability manager.
-    internal void setUpButton(abilityTypes buttonType,int charges,playerAbilities a_abilities)
+    internal void SetUpButton(abilityTypes buttonType,int charges,playerAbilities a_abilities)
     {
         abilities = a_abilities;
 
         thisButton = buttonType;
         chargesLeft = charges;
 
-        setButtonActive();
+        SetButtonActive();
     }
 
     //If type is set to none, everything will be considered default.
-    internal void resetButton()
+    internal void ResetButton()
     {
         thisButton = abilityTypes.None;
         gameObject.SetActive(false);
@@ -45,11 +45,11 @@ public class abilityButton : MonoBehaviour
     {
         abilities.useButton(thisButton);
         chargesLeft -= chargesNeeded;
-        setButtonActive();
+        SetButtonActive();
     }
 
 
-    public void disablePhase(bool enemyPhase)
+    public void DisablePhase(bool enemyPhase)
     {
         switch (thisButton)
         {
@@ -61,10 +61,10 @@ public class abilityButton : MonoBehaviour
                 break;
 
             case abilityTypes.Freeze:
-                if (enemyPhase && chargesLeft >= chargesNeeded)
-                    m_button.interactable = false;
-                else
+                if (!enemyPhase && chargesLeft >= chargesNeeded)
                     m_button.interactable = true;
+                else
+                    m_button.interactable = false;
 
                 break;
             case abilityTypes.Burn:
@@ -77,10 +77,10 @@ public class abilityButton : MonoBehaviour
                 }
                 break;
             case abilityTypes.StorePower:
-                if (enemyPhase && chargesLeft >= chargesNeeded)
-                    m_button.interactable = false;
-                else
+                if (!enemyPhase && chargesLeft >= chargesNeeded)
                     m_button.interactable = true;
+                else
+                    m_button.interactable = false;
                 break;
             default:
                 break;
@@ -89,7 +89,7 @@ public class abilityButton : MonoBehaviour
 
     //Set info using the ability's type.
     //This determines if the ability is usable, it's cost, it's name, etc.
-    internal void setButtonActive()
+    internal void SetButtonActive()
     {
         if (!m_button)
         {

@@ -24,7 +24,7 @@ public class AdditionContainer : MonoBehaviour
 
         enemyAnswerNeeded = boss.answerNeeded;
 
-        player.setTime(true, a_running.levelTime);
+        player.SetTime(true, a_running.levelTime);
 
         foreach (AdditionAnswer item in answers)
         {

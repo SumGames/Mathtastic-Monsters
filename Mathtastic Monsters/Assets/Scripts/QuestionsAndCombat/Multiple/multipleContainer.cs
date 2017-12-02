@@ -16,6 +16,11 @@ public class multipleContainer : MonoBehaviour
 
     public List<int> answersList;
 
+    public int attacksPherPhase = 1;
+
+    public int attacks = 1;
+    bool attacking;
+
     // Use this for initialization
     void Start()
     {
@@ -27,22 +32,68 @@ public class multipleContainer : MonoBehaviour
 
     }
 
-    internal void SetMultiple(int answer, bool phase, QuizButton a_running)
+    internal void setAttacks(bool boss, bool startWithAttack)
     {
-        player.EndTurn(phase);
+        if (!playerAbilities)
+            playerAbilities = FindObjectOfType<playerAbilities>();
 
+        bool doubleAttck = playerAbilities.DoubleStrike();
+
+        if (doubleAttck && !boss)
+        {
+            attacksPherPhase = 2;
+        }
+        else
+        {
+            attacksPherPhase = 1;
+        }
+        if (startWithAttack)
+        {
+            attacks = attacksPherPhase;
+        }
+        else
+            attacks = 0;
+    }
+
+
+    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime)
+    {        
         enemyAnswerNeeded = answer;
 
-        if (phase && a_running != null)
+        if (attacks > 0)
         {
+            attacking = false;
+            attacks--;
+
+        }
+        else
+        {
+            attacks = attacksPherPhase;
+            attacking = true;            
+        }
+
+        bool enemyPhase = false;
+
+        if (attacking)
+        {
+            enemyPhase = true;
+            attacks = attacksPherPhase;
             MultipleAnswers(a_running);
         }
         else
         {
+            enemyPhase = false;
+            attacks--;
             DisableMultiple();
         }
-        if (a_running)
-            player.setTime(phase, a_running.enemPhaseTime);
+        if (a_running && resetTime)
+        {
+            player.SetTime(enemyPhase, a_running.enemPhaseTime);
+        }
+
+        player.EndTurn(enemyPhase);
+
+        return enemyPhase;
     }
 
     void MultipleAnswers(QuizButton a_running)
@@ -51,18 +102,20 @@ public class multipleContainer : MonoBehaviour
 
         calculator.SetActive(false);
 
+        DisableMultiple(true);
+
         foreach (MultipleAnswer item in answers)
         {
             item.setAnswer(-1);
         }
-        int index = Random.Range(0, 8);
+        int index = Random.Range(0, 6);
 
         answersList = new List<int>();
         answersList.Add(enemyAnswerNeeded);
 
 
-        if (a_running.enemyChoices > 8)
-            a_running.enemyChoices = 8;
+        if (a_running.enemyChoices > 6)
+            a_running.enemyChoices = 6;
 
 
 
@@ -79,10 +132,10 @@ public class multipleContainer : MonoBehaviour
                 wrongAnswer = enemyAnswerNeeded + range;
             }
 
-            index = Random.Range(0, 8);
+            index = Random.Range(0, 6);
             while (answers[index].getAnswer() != -1)
             {
-                index = Random.Range(0, 8);
+                index = Random.Range(0, 6);
             }
             answers[index].gameObject.SetActive(true);
             answers[index].setAnswer(wrongAnswer);

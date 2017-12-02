@@ -36,12 +36,15 @@ public class combatFeedback : MonoBehaviour
     public TorsoPart body;
     void Start()
     {
-        enemyhitParticle = particleEnemyhit.GetComponentsInChildren<ParticleSystem>();
-        enemycritParticle = particleEnemycrit.GetComponentsInChildren<ParticleSystem>();
-        playerhitParticle = particlePlayerhit.GetComponentsInChildren<ParticleSystem>();
-        enemymissedParticle = particleEnemymissed.GetComponentsInChildren<ParticleSystem>();
-        playermissedParticle = particlePlayermissed.GetComponentsInChildren<ParticleSystem>();
-        playercounteredParticle = particlePlayercountered.GetComponentsInChildren<ParticleSystem>();
+        if (particleEnemyhit)
+        {
+            enemyhitParticle = particleEnemyhit.GetComponentsInChildren<ParticleSystem>();
+            enemycritParticle = particleEnemycrit.GetComponentsInChildren<ParticleSystem>();
+            playerhitParticle = particlePlayerhit.GetComponentsInChildren<ParticleSystem>();
+            enemymissedParticle = particleEnemymissed.GetComponentsInChildren<ParticleSystem>();
+            playermissedParticle = particlePlayermissed.GetComponentsInChildren<ParticleSystem>();
+            playercounteredParticle = particlePlayercountered.GetComponentsInChildren<ParticleSystem>();
+        }
         sounds = GetComponents<AudioSource>();
         attack = sounds[0];
         hurt = sounds[1];

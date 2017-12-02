@@ -46,8 +46,7 @@ public class endlessMonsterManager : MonsterManager
     public playerAbilities m_playerAbilities;
 
 
-    // Use this for initialization
-    void Start()
+    public override void Start()
     {
 
         list = FindObjectOfType<equipmentList>();
@@ -57,13 +56,13 @@ public class endlessMonsterManager : MonsterManager
         buttons = new EndlessModifierButton[3];
 
         player = endlessState.player;
-        enemy = endlessState.enemy;
+        monster = endlessState.enemy;
 
-        player.enemy = enemy;
+        player.enemy = monster;
         player.parent = this;
-        enemy.player = player;
-        enemy.manager = endlessState;
-        enemy.parent = this;
+        monster.player = player;
+        monster.manager = endlessState;
+        monster.parent = this;
 
 
         highScores = GetComponent<HighSaveScore>();
@@ -73,8 +72,8 @@ public class endlessMonsterManager : MonsterManager
 
 
         highScores.Load();
-                    
 
+        currentEnemy = monster;
 
     }
 
@@ -125,14 +124,13 @@ public class endlessMonsterManager : MonsterManager
             }
         }
 
-        endlessState.changeState(playStatus.ArenaCombat);
-
-        enemy.loadMonster();
+        endlessState.changeState(playStatus.ArenaCombat);        
 
         RemoveLimbs();
 
         if(skipHeal)
         {
+            monster.loadMonster();
             skipHeal = false;
             return;
         }
@@ -145,7 +143,7 @@ public class endlessMonsterManager : MonsterManager
         
 
         levels++;
-        Score += (Modifier * m_playerAbilities.returnExpBoost());
+        Score += (Modifier * m_playerAbilities.ReturnExpBoost());
 
         fightsSinceBreak++;
         if (fightsSinceBreak < fightsBetweenBreaks)
@@ -197,7 +195,7 @@ public class endlessMonsterManager : MonsterManager
 
     internal void PlayerLost()
     {
-        Score += (Modifier * FindObjectOfType<playerAbilities>().returnExpBoost());
+        Score += (Modifier * FindObjectOfType<playerAbilities>().ReturnExpBoost());
 
 
         Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";

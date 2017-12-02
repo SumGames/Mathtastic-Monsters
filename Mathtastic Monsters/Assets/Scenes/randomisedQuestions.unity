@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731135, g: 0.38073704, b: 0.35873428, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311387, g: 0.3807373, b: 0.35873425, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 104422975}
   - component: {fileID: 104422974}
   - component: {fileID: 104422973}
-  - component: {fileID: 104422972}
+  - component: {fileID: 104422976}
   m_Layer: 5
   m_Name: Sub5
   m_TagString: Untagged
@@ -1212,36 +1212,6 @@ RectTransform:
   m_AnchoredPosition: {x: -11.799999, y: -20.600002}
   m_SizeDelta: {x: 187.2, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &104422972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 104422970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boss: 0
-  quizIndex: 0
-  variableCount: 2
-  levelTime: 15
-  minNumber: 1
-  maxNumber: 49
-  Operator: 1
-  minAnswer: 1
-  maxAnswer: 48
-  difficulty: 18
-  MonsterHealth: 15
-  MonsterAttack: 2
-  preventRounding: 0
-  secondNumberMin: 0
-  secondNumberMax: 0
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
-  enemyChoices: 4
-  enemyAnswerRange: 7
 --- !u!114 &104422973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1251,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 104422972}
+      - m_Target: {fileID: 104422976}
         m_MethodName: buttonUsed
         m_Mode: 1
         m_Arguments:
@@ -1327,6 +1297,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 104422970}
+--- !u!114 &104422976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104422970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 0
+  minNumber: 4
+  maxNumber: 30
+  Operator: 1
+  minAnswer: 2
+  maxAnswer: 100000
+  difficulty: 5
+  MonsterHealth: 5
+  MonsterAttack: 1
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 30
+  enemyChoices: 3
+  enemyAnswerRange: 4
 --- !u!1 &117661190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,7 +2919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!1 &248722289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,8 +3523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
-  enemy: {fileID: 468417860}
+  stateManager: {fileID: 382568555}
+  monster: {fileID: 0}
   boss: {fileID: 350346458}
+  fightingBoss: 0
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &289822713
 Transform:
   m_ObjectHideFlags: 0
@@ -4421,6 +4424,10 @@ MonoBehaviour:
   multiple: {fileID: 0}
   questionText: {fileID: 1446319021}
   additionContainer: {fileID: 959067216}
+  depth: -5
+  playerTime: 0
+  subtractionBottom: {fileID: 0}
+  highSpot: {x: 0, y: 0, z: 0}
 --- !u!4 &350346459
 Transform:
   m_ObjectHideFlags: 0
@@ -4709,26 +4716,13 @@ RectTransform:
   m_Children:
   - {fileID: 17694282}
   m_Father: {fileID: 847845817}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.02, y: -1.26}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.369999, y: -3.7799997}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &368686416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114956137992765470, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1680404662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
 --- !u!1 &377852254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,8 +6468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.400003, y: -1.26}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -8.110001, y: -3.7799997}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487627863
 MonoBehaviour:
@@ -8636,134 +8630,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 633368098}
---- !u!1 &637968817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1304354321225474, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 637968818}
-  - component: {fileID: 637968821}
-  - component: {fileID: 637968820}
-  - component: {fileID: 637968819}
-  - component: {fileID: 1101471474}
-  m_Layer: 5
-  m_Name: Button (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &637968818
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224687560638197002, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637968817}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.25082}
-  m_LocalScale: {x: 0.01606, y: 0.01606, z: 0.01606}
-  m_Children:
-  - {fileID: 1328402907}
-  m_Father: {fileID: 847845817}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.4, y: -1.8800001}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &637968819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114484961910923102, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637968817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 637968820}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1101471474}
-        m_MethodName: submitAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &637968820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114138271251606692, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637968817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &637968821
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222824934170729354, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637968817}
 --- !u!1 &640714725
 GameObject:
   m_ObjectHideFlags: 0
@@ -8903,7 +8769,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &647072813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9038,6 +8904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5a6fa3f0e2e2d479eb9a22198a5ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargesLeft: 0
+  chargesNeeded: 0
 --- !u!114 &656933867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9606,7 +9474,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.800003, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9760,8 +9628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.02, y: -0.62}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.369999, y: -2.0500002}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702762170
 MonoBehaviour:
@@ -10658,7 +10526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &751589143
 Transform:
   m_ObjectHideFlags: 0
@@ -11064,7 +10932,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &780108257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11261,8 +11129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.4, y: -0.018949509}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -8.110001, y: -0.43}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797579304
 MonoBehaviour:
@@ -11400,7 +11268,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &805332697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11538,7 +11406,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.800003, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11784,7 +11652,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &830498471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12257,8 +12125,6 @@ Transform:
   - {fileID: 2072091758}
   - {fileID: 797579303}
   - {fileID: 487627862}
-  - {fileID: 637968818}
-  - {fileID: 1680404663}
   - {fileID: 366973881}
   m_Father: {fileID: 751589143}
   m_RootOrder: 6
@@ -12283,11 +12149,11 @@ MonoBehaviour:
   - {fileID: 958303210}
   - {fileID: 1034353467}
   - {fileID: 1528398044}
-  - {fileID: 1101471474}
-  - {fileID: 368686416}
   - {fileID: 1612767998}
   player: {fileID: 574737962}
   answersList: 
+  attacksPherPhase: 1
+  attacks: 1
 --- !u!1 &850981980
 GameObject:
   m_ObjectHideFlags: 0
@@ -12304,7 +12170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &872121911
 GameObject:
   m_ObjectHideFlags: 0
@@ -12320,7 +12186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &872121912
 Transform:
   m_ObjectHideFlags: 0
@@ -12562,7 +12428,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &877657525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13237,6 +13103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5a6fa3f0e2e2d479eb9a22198a5ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargesLeft: 0
+  chargesNeeded: 0
 --- !u!114 &900849003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14133,7 +14001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!1 &958896073
 GameObject:
   m_ObjectHideFlags: 0
@@ -15566,7 +15434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!1 &1036650590
 GameObject:
   m_ObjectHideFlags: 0
@@ -16322,19 +16190,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1088046565}
---- !u!114 &1101471474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114459872920956682, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 637968817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
 --- !u!1 &1107416354
 GameObject:
   m_ObjectHideFlags: 0
@@ -17108,6 +16963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5a6fa3f0e2e2d479eb9a22198a5ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargesLeft: 0
+  chargesNeeded: 0
 --- !u!114 &1156040843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17224,7 +17081,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.799988, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18415,7 +18272,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &1242327715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19745,6 +19602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5a6fa3f0e2e2d479eb9a22198a5ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargesLeft: 0
+  chargesNeeded: 0
 --- !u!114 &1293133569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20362,84 +20221,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1324378108}
---- !u!1 &1328402906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1143142499072170, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1328402907}
-  - component: {fileID: 1328402909}
-  - component: {fileID: 1328402908}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1328402907
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224373889328941242, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1328402906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 637968818}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1328402908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114764350913826802, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1328402906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &1328402909
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222152429091584372, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1328402906}
 --- !u!1 &1333908679
 GameObject:
   m_ObjectHideFlags: 0
@@ -22022,7 +21803,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &1496906210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22603,7 +22384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!114 &1530457938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22616,7 +22397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!1 &1551058784
 GameObject:
   m_ObjectHideFlags: 0
@@ -23098,7 +22879,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 235271322}
+      - m_Target: {fileID: 1583705485}
         m_MethodName: used
         m_Mode: 1
         m_Arguments:
@@ -23316,7 +23097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd645aea637a5f543abb8a1503bc5f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 468417860}
+  MonsterManager: {fileID: 0}
 --- !u!1 &1612867214
 GameObject:
   m_ObjectHideFlags: 0
@@ -24779,134 +24560,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1678241909}
---- !u!1 &1680404662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1523366888026626, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1680404663}
-  - component: {fileID: 1680404666}
-  - component: {fileID: 1680404665}
-  - component: {fileID: 1680404664}
-  - component: {fileID: 368686416}
-  m_Layer: 5
-  m_Name: Button (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1680404663
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224760940911750522, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1680404662}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.25081}
-  m_LocalScale: {x: 0.01606, y: 0.01606, z: 0.01606}
-  m_Children:
-  - {fileID: 1855902659}
-  m_Father: {fileID: 847845817}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.02, y: -1.8800001}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1680404664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114267790461759696, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1680404662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1680404665}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 368686416}
-        m_MethodName: submitAnswer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1680404665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114726795654227642, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1680404662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1680404666
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222634562213814356, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1680404662}
 --- !u!1 &1690181365
 GameObject:
   m_ObjectHideFlags: 0
@@ -25110,8 +24763,8 @@ RectTransform:
   m_Father: {fileID: 996563628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26227,7 +25880,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &1796357277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26541,7 +26194,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &1822298807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26901,84 +26554,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1844921940}
---- !u!1 &1855902658
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1052012599009300, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1855902659}
-  - component: {fileID: 1855902661}
-  - component: {fileID: 1855902660}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1855902659
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224280248769672240, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855902658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1680404663}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1855902660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114620187147477804, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855902658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &1855902661
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222299965091765794, guid: 926dd01df1dbe1247ba93b73001b8d0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1855902658}
 --- !u!1 &1855904307
 GameObject:
   m_ObjectHideFlags: 0
@@ -27016,8 +26591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.02, y: -0.018949509}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -11.369999, y: -0.43}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855904309
 MonoBehaviour:
@@ -28579,7 +28154,7 @@ MonoBehaviour:
   minNumber: 1
   maxNumber: 9
   Operator: 1
-  minAnswer: 1
+  minAnswer: 2
   maxAnswer: 8
   difficulty: 14
   MonsterHealth: 10
@@ -29324,8 +28899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.4, y: -0.61}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -8.110001, y: -2.0099964}
+  m_SizeDelta: {x: 198.86, y: 80.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072091759
 MonoBehaviour:
@@ -29543,13 +29118,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 0}
-  monster: {fileID: 0}
   manager: {fileID: 0}
   ok: {fileID: 573083426}
   cancel: {fileID: 329710927}
   sounds: []
   attack: {fileID: 2085180832}
   hurt: {fileID: 2085180831}
+  monsterManager: {fileID: 0}
 --- !u!114 &2085180829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30551,12 +30126,12 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondNumberMin: 0
-  secondNumberMax: 0
+  secondNumberMin: 2
+  secondNumberMax: 5
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 6
 --- !u!114 &2138070410
 MonoBehaviour:
   m_ObjectHideFlags: 0

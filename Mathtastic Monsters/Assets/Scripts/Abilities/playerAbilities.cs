@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class playerAbilities : MonoBehaviour 
 {
@@ -38,7 +34,7 @@ public class playerAbilities : MonoBehaviour
 	}
 
     //Called every time a monster fight starts.
-    internal void setupAbilities(bool a_boss)
+    internal void SetupAbilities(bool a_boss)
     {
 
         Counters = 0;
@@ -47,7 +43,7 @@ public class playerAbilities : MonoBehaviour
         //Reset ability buttons.
         foreach (abilityButton  item in abilityButtons)
         {
-            item.resetButton();
+            item.ResetButton();
         }
 
         abilities.Clear(); //Empty dictionary.
@@ -62,7 +58,7 @@ public class playerAbilities : MonoBehaviour
             if (manager.abilities[i] > 0)
             {
                 abilities.Add((abilityTypes)i, manager.abilities[i]);
-                abilityButtons[j].setUpButton((abilityTypes)i, manager.abilities[i], this);
+                abilityButtons[j].SetUpButton((abilityTypes)i, manager.abilities[i], this);
                 j++;
             }
         }
@@ -78,13 +74,13 @@ public class playerAbilities : MonoBehaviour
         //Set the buttons active if they have abiltiies on them. Disables them if they didn't.
         foreach (abilityButton item in abilityButtons)
         {
-            item.setButtonActive();
+            item.SetButtonActive();
         }
 
     }
 
     //Return a float that will multiply with our exp received to boost it.
-    internal float returnExpBoost()
+    internal float ReturnExpBoost()
     {
         float returning = 1;
 
@@ -110,7 +106,7 @@ public class playerAbilities : MonoBehaviour
 
 
     //If we're wearing four healthy pieces, increase health by 10.
-    internal float equipmentHealth()
+    internal float EquipmentHealth()
     {
         float returning = 1;
 
@@ -123,7 +119,7 @@ public class playerAbilities : MonoBehaviour
     }
 	
     //Boost our speed relative to amount of pieces with speed.
-    internal float equipmentTime()
+    internal float EquipmentTime()
     {
         int returning = 0;
 
@@ -135,7 +131,7 @@ public class playerAbilities : MonoBehaviour
     }
 
     //Increase our attack if Fury power is over 3.
-    internal float equipmentAttack()
+    internal float EquipmentAttack()
     {
         float returning = 1;
 
@@ -147,7 +143,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
-    internal float equipmentCounter()
+    internal float EquipmentCounter()
     {
         float returning = 1;
 
@@ -160,7 +156,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
-    internal float counterTimeModify()
+    internal float CounterTimeModify()
     {
         float returning = 1;
 
@@ -174,7 +170,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
-    internal float reduceDamage()
+    internal float ReduceDamage()
     {
         float returning = 1;
 
@@ -187,7 +183,7 @@ public class playerAbilities : MonoBehaviour
     }
 
 
-    internal float bounceDamage()
+    internal float BounceDamage()
     {
         float returning = 0;
 
@@ -197,6 +193,11 @@ public class playerAbilities : MonoBehaviour
         }
 
         return returning;
+    }
+
+    internal bool DoubleStrike()
+    {
+        return (abilities.ContainsKey(abilityTypes.DoubleStrike) && abilities[abilityTypes.DoubleStrike] >= 5);
     }
 
 
@@ -220,6 +221,10 @@ public class playerAbilities : MonoBehaviour
                 break;
             case abilityTypes.Burn:
                 FindObjectOfType<multipleContainer>().removeSingle();
+                break;
+
+            case abilityTypes.Hourglass:
+                player.healPlayer(abilities[abilityTypes.Hourglass]);
                 break;
             default:
                 break;

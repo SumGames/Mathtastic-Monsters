@@ -76,6 +76,6 @@ public class QuizButton : MonoBehaviour
     public virtual void buttonUsed()
     {
         boss = false;
-        p_manager.startLevel(this);
+        p_manager.StartLevel(this);
     }
 }

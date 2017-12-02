@@ -10,7 +10,8 @@ public class MultipleAnswer : MonoBehaviour
     Text answerText;
 
     multipleContainer container;
-    public Monster monster;
+
+    public MonsterManager MonsterManager;
 
 
     // Use this for initialization
@@ -40,9 +41,9 @@ public class MultipleAnswer : MonoBehaviour
 
     public void submitAnswer()
     {
-        if(!monster)
+        if(!MonsterManager)
         {
-            monster = FindObjectOfType<Monster>();
+            MonsterManager = FindObjectOfType<MonsterManager>();
         }
 
         if (!container)
@@ -51,11 +52,11 @@ public class MultipleAnswer : MonoBehaviour
 
         if (Answer == container.enemyAnswerNeeded)
         {
-            monster.MonsterHurt();
+            MonsterManager.currentEnemy.MonsterHurt();
         }
         else
         {
-            monster.EnemyAttack();
+            MonsterManager.currentEnemy.EnemyAttack();
         }
 
     }

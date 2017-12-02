@@ -16,7 +16,7 @@ public class EndlessMonster : Monster
             return;
         }
 
-        if (player.getPlayerHealth() <= 0)
+        if (player.GetPlayerHealth() <= 0)
         {
             manager.changeState(playStatus.ArenaLost);
         }

@@ -64,7 +64,7 @@ public class StateManager : ParentsStateManager
 
 
         monsterM.stateManager = this;
-        monsterM.enemy = enemy;
+        monsterM.monster = enemy;
         monsterM.player = player;
 
         list = FindObjectOfType<equipmentList>();

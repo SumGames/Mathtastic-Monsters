@@ -31,6 +31,9 @@ public class Monster : MonoBehaviour
 
     internal MusicManager music;
 
+    internal multipleContainer multipleContainer;
+
+
     // Use this for initialization
     void Start()
     {
@@ -63,7 +66,7 @@ public class Monster : MonoBehaviour
             health -= player.PlayerAttack();
         }
         else
-            health -= player.playerCounter();
+            health -= player.PlayerCounter();
 
         CheckDeath();
 
@@ -110,7 +113,7 @@ public class Monster : MonoBehaviour
             return;
         }
 
-        if (player.getPlayerHealth() <= 0)
+        if (player.GetPlayerHealth() <= 0)
         {
             manager.changeState(playStatus.Lost);
         }
@@ -128,6 +131,11 @@ public class Monster : MonoBehaviour
     //Called only when a quiz begins. Loads a question AND sets health/attack.
     public virtual void loadMonster()
     {
+        if (!multipleContainer)
+            multipleContainer = FindObjectOfType<multipleContainer>();
+
+        multipleContainer.setAttacks(false, true);
+
         questions = FindObjectOfType<questionManager>();
 
         DestroyMonster();

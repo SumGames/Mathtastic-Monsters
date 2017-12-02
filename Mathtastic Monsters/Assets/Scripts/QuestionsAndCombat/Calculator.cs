@@ -6,8 +6,6 @@ public class Calculator : MonoBehaviour
 {
     public Text input; //The textbox where charactera are added.
 
-    public Monster monster; //Reference to the opponent. Used to call a check command.
-
     public ParentsStateManager manager;
 
     internal string answerNeeded; //The number, as a string, that a player must input.
@@ -17,6 +15,8 @@ public class Calculator : MonoBehaviour
     public AudioSource[] sounds;
     public AudioSource attack;
     public AudioSource hurt;
+
+    public MonsterManager monsterManager;
 
 
     // Use this for initialization
@@ -29,8 +29,8 @@ public class Calculator : MonoBehaviour
         if (manager == null)
             manager = GameObject.Find("Manager").GetComponent<StateManager>();
 
-        if (monster == null)
-            monster = GameObject.Find("Monster").GetComponent<Monster>();
+        if (monsterManager == null)
+            monsterManager = FindObjectOfType<MonsterManager>();
 
         if (input == null)
             input = GetComponentInChildren<Text>();
@@ -75,14 +75,13 @@ public class Calculator : MonoBehaviour
 
         if (answer == answerNeeded)
         {
-            monster.MonsterHurt();
+            monsterManager.currentEnemy.MonsterHurt();
 
-            monster.player.attacksLanded++;
         }
         else
         {
-            monster.EnemyAttack();
-            monster.player.attacksLanded = 0;
+            monsterManager.currentEnemy.EnemyAttack();
+            monsterManager.player.attacksLanded = 0;
         }
     }
 }

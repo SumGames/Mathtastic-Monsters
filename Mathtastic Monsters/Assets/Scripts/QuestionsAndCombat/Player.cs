@@ -73,14 +73,14 @@ public class Player : MonoBehaviour
         sounds = GetComponents<AudioSource>();
         getShards = sounds[0];
         victoryMusic = sounds[1];
-        
+
     }
 
     //Set Health+time to full.
     public void ResetPlayer(bool a_boss)
     {
         bossFighting = a_boss;
-         
+
         if (!list)
         {
             list = FindObjectOfType<equipmentList>();
@@ -98,30 +98,34 @@ public class Player : MonoBehaviour
             abilities.Begin();
         }
 
-        abilities.setupAbilities(a_boss);
+        abilities.SetupAbilities(a_boss);
         if (!a_boss)
             EndTurn(false);
 
         Frozen = 0;
 
         if (!a_boss)
+        {
             FindObjectOfType<Calculator>().AddInput("Cancel");
+        }
+        maxHealth = baseHealth * abilities.EquipmentHealth();
 
-        maxHealth = baseHealth * abilities.equipmentHealth();
-
-        attackDamage = baseAttack * abilities.equipmentAttack();
+        attackDamage = baseAttack * abilities.EquipmentAttack();
 
         currentHealth = maxHealth;
         Healthbar.setMaxHealth(maxHealth, true);
 
-        resetTime = parent.quizRunning.levelTime + baseTimeGiven + abilities.equipmentTime();
+        resetTime = parent.quizRunning.levelTime + baseTimeGiven + abilities.EquipmentTime();
 
-        Timer = timeLeft.maxValue = resetTime;
-
-        counterTimeModifier = abilities.counterTimeModify();
-        counterDamage = baseAttack * abilities.equipmentCounter();
+        counterTimeModifier = abilities.CounterTimeModify();
+        counterDamage = baseAttack * abilities.EquipmentCounter();
 
         FindObjectOfType<TorsoPart>().Animate(Animations.Idle);
+
+        parent.currentEnemy.loadMonster();
+
+
+        SetTime(false, 0);
     }
 
     internal void EndTurn(bool a_enemy)
@@ -130,7 +134,7 @@ public class Player : MonoBehaviour
         {
             foreach (abilityButton item in abilities.abilityButtons)
             {
-                item.disablePhase(a_enemy);
+                item.DisablePhase(a_enemy);
             }
         }
     }
@@ -138,7 +142,7 @@ public class Player : MonoBehaviour
     //Counts down time while game is playing. Tale damage if hits 0.
     void Update()
     {
-        if(!list)
+        if (!list)
         {
             list = FindObjectOfType<equipmentList>();
         }
@@ -160,7 +164,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.isPlaying())
+        if (manager.isPlaying() && timeLeft.maxValue > 1)
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;
@@ -212,7 +216,7 @@ public class Player : MonoBehaviour
 
             return damage;
         }
-        
+
         if (Timer > greenZone)
         {
             damage *= critMod;
@@ -239,22 +243,22 @@ public class Player : MonoBehaviour
 
         Timer = resetTime;
 
-        currentHealth -= a_damage * abilities.reduceDamage();
+        currentHealth -= a_damage * abilities.ReduceDamage();
 
         Healthbar.changeHealth(true, currentHealth);
 
-        enemy.abilityDamage(a_damage * abilities.bounceDamage());
+        enemy.abilityDamage(a_damage * abilities.BounceDamage());
 
         enemy.CheckDeath();
     }
 
-    internal float getPlayerHealth()
+    internal float GetPlayerHealth()
     {
         return currentHealth;
     }
 
 
-    internal float playerCounter()
+    internal float PlayerCounter()
     {
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
@@ -270,8 +274,14 @@ public class Player : MonoBehaviour
         return 0;
     }
 
-    internal void setTime(bool enemyPhase, float enemyTime)
+    internal void SetTime(bool enemyPhase, float enemyTime)
     {
+        if (resetTime == 0)
+        {
+            resetTime = 15;
+
+        }
+
         if (enemyPhase)
         {
             Timer = enemyTime * counterTimeModifier;
@@ -284,8 +294,14 @@ public class Player : MonoBehaviour
 
         }
 
+
         greenZone = Timer * critTime;
         redZone = Timer * .25f;
+    }
+
+    internal float returnTimer()
+    {
+        return Timer;
     }
 
     //Calculate exp modifier based on health remaining and if the quiz has been completed before.
@@ -313,7 +329,7 @@ public class Player : MonoBehaviour
             exp *= .25f;
         }
 
-        exp *= abilities.returnExpBoost();
+        exp *= abilities.ReturnExpBoost();
 
 
         getShards.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
@@ -322,7 +338,18 @@ public class Player : MonoBehaviour
         getShards.Play();
         victoryMusic.Play();
 
-        return (int)exp; //Send back the calculated experience.
-        
+        return (int)exp; //Send back the calculated experience.        
+    }
+
+    internal void healPlayer(int pieces)
+    {
+        float healing = maxHealth / 10;
+        healing *= pieces;
+
+        currentHealth += healing;
+
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+
     }
 }

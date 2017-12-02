@@ -121,7 +121,7 @@ public class TutorialPlayer : MonoBehaviour
         return damage;
     }
 
-    internal void setTime(bool enemyPhase, float enemyTime)
+    internal void SetTime(bool enemyPhase, float enemyTime)
     {
         if (enemyPhase)
         {

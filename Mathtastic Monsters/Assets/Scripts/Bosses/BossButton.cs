@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BossButton : QuizButton
 {
@@ -14,6 +12,6 @@ public class BossButton : QuizButton
     public override void buttonUsed()
     {
         boss = true;
-        p_manager.startLevel(this);
+        p_manager.StartLevel(this);
     }
 }

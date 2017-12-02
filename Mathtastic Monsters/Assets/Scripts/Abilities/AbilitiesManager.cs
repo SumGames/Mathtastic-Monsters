@@ -35,7 +35,7 @@ public class AbilitiesManager : MonoBehaviour
     void Start()
     {
         list = gameObject.GetComponent<equipmentList>();
-        abilities = new int[12];
+        abilities = new int[(int)abilityTypes.TimeLord];
     }
 
     //In the customisation scene, tell players what their equipped abilities will do.

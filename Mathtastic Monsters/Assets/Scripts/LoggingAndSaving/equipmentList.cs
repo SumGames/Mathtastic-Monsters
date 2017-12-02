@@ -234,7 +234,7 @@ public class equipmentList : MonoBehaviour
     }
 
     //Build the arrays for the equipmentlists, and set everything to false/0/null.
-    void newGame()
+    void NewGame()
     {
         equip.shards = 0;
         equip.tutorialComplete = false;
@@ -325,7 +325,7 @@ public class equipmentList : MonoBehaviour
         ChangeEquip(listofRightLegs[0], partType.RightLeg, 0);
     }
 
-    internal void removeHead()
+    internal void RemoveHead()
     {
         listofHeads[0].GetComponent<ItemPart>().owned = false;
         ChangeEquip(null, partType.Head, -1);
@@ -339,7 +339,7 @@ public class equipmentList : MonoBehaviour
 
         if (a_begin)
         {
-            newGame();
+            NewGame();
         }
         else
         {
@@ -349,7 +349,7 @@ public class equipmentList : MonoBehaviour
                 SetEquippedUsingIndex(equip.equippedParts);
             }
             else
-                newGame();
+                NewGame();
         }
 
 
@@ -437,7 +437,7 @@ public class equipmentList : MonoBehaviour
 
     void ByPassRestrictions()
     {
-        newGame();
+        NewGame();
 
         for (int i = 0; i < 5; i++)
         {

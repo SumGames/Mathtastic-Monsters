@@ -37,7 +37,7 @@ public class TutmultipleContainer : MonoBehaviour
             DisableMultiple();
         }
 
-        player.setTime(phase, 5);
+        player.SetTime(phase, 5);
     }
 
     void MultipleAnswers()
@@ -48,7 +48,7 @@ public class TutmultipleContainer : MonoBehaviour
         {
             item.setAnswer(-1);
         }
-        int index = Random.Range(0, 8);
+        int index = Random.Range(0, 6);
 
 
 
@@ -66,10 +66,10 @@ public class TutmultipleContainer : MonoBehaviour
             int wrongAnswer = wrongAnswers[(i - 1)];
 
 
-            index = Random.Range(0, 8);
+            index = Random.Range(0, 6);
             while (answers[index].gameObject.activeSelf)
             {
-                index = Random.Range(0, 8);
+                index = Random.Range(0, 6);
             }
             answers[index].gameObject.SetActive(true);
             answers[index].setAnswer(wrongAnswer);
