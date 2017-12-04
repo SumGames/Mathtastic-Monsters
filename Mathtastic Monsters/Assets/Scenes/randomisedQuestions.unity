@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311387, g: 0.3807373, b: 0.35873425, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731135, g: 0.38073704, b: 0.35873428, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1312,19 +1312,19 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 0
-  minNumber: 4
-  maxNumber: 30
+  minNumber: 1
+  maxNumber: 19
   Operator: 1
-  minAnswer: 2
-  maxAnswer: 10
-  difficulty: 5
-  MonsterHealth: 5
+  minAnswer: 1
+  maxAnswer: 18
+  difficulty: 18
+  MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 40
+  enemPhaseTime: 60
   enemyChoices: 3
   enemyAnswerRange: 4
 --- !u!1 &117661190
@@ -2588,28 +2588,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 231425596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 3
-  levelTime: 25
-  minNumber: 10
-  maxNumber: 999
+  variableCount: 2
+  levelTime: 0
+  minNumber: 1
+  maxNumber: 99
   Operator: 1
-  minAnswer: 30
-  maxAnswer: 979
+  minAnswer: 1
+  maxAnswer: 98
   difficulty: 28
-  MonsterHealth: 20
-  MonsterAttack: 2
+  MonsterHealth: 10
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
-  enemyChoices: 5
-  enemyAnswerRange: 10
+  enemPhaseTime: 60
+  enemyChoices: 3
+  enemyAnswerRange: 4
 --- !u!114 &231425599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5910,7 +5910,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462552500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -312.84726}
+  m_LocalPosition: {x: 0, y: 0, z: 7}
   m_LocalScale: {x: 0.98130983, y: 0.98130983, z: 0.98130983}
   m_Children:
   - {fileID: 1185327269}
@@ -5919,7 +5919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.418566, y: -78.538315}
+  m_AnchoredPosition: {x: 1, y: -68}
   m_SizeDelta: {x: 234.32, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462552502
@@ -10351,7 +10351,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 726718450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0031504107}
+  m_LocalPosition: {x: 0, y: 0, z: -4.47}
   m_LocalScale: {x: 0.0142715685, y: 0.0142715685, z: 0.0142715685}
   m_Children:
   - {fileID: 997957758}
