@@ -60,13 +60,15 @@ public class Monster : MonoBehaviour
 
     //Monster's health is reduced by player's attack, possibly switching to won state.
     internal virtual void MonsterHurt()
-    {
+    {        
         if (!enemyPhase)
         {
             health -= player.PlayerAttack();
         }
         else
             health -= player.PlayerCounter();
+
+        bar.changeHealth(false, health);
 
         CheckDeath();
 
@@ -101,8 +103,6 @@ public class Monster : MonoBehaviour
 
     public virtual void CheckDeath()
     {
-        bar.changeHealth(false, health);
-
 
         if (animator)
             animator.Play("Hurt");

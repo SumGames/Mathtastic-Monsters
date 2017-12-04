@@ -1316,7 +1316,7 @@ MonoBehaviour:
   maxNumber: 30
   Operator: 1
   minAnswer: 2
-  maxAnswer: 100000
+  maxAnswer: 10
   difficulty: 5
   MonsterHealth: 5
   MonsterAttack: 1
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 30
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
 --- !u!1 &117661190
@@ -4426,7 +4426,7 @@ MonoBehaviour:
   additionContainer: {fileID: 959067216}
   depth: -5
   playerTime: 0
-  subtractionBottom: {fileID: 0}
+  subtractionBottom: {fileID: 1905652092}
   highSpot: {x: 0, y: 0, z: 0}
 --- !u!4 &350346459
 Transform:
@@ -21304,6 +21304,7 @@ RectTransform:
   - {fileID: 468417859}
   - {fileID: 1172944112}
   - {fileID: 350346459}
+  - {fileID: 1905652093}
   m_Father: {fileID: 751589143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27267,6 +27268,34 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1897959688}
+--- !u!1 &1905652092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1905652093}
+  m_Layer: 0
+  m_Name: BottomSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1905652093
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1905652092}
+  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 518, y: -684.48, z: 75.99983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1446319019}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!1 &1906766241
 GameObject:
   m_ObjectHideFlags: 0

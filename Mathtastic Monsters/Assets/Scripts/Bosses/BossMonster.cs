@@ -75,7 +75,6 @@ public class BossMonster : Monster
         if (depth == 0)
         {
             feedback.DamageSet(SetFeedback.PlayerMissed);
-
             depth = -5;
             CreateQuestion();
             return;
@@ -84,6 +83,10 @@ public class BossMonster : Monster
         if (player.returnTimer() <= 0)
         {
             depth = -5;
+            CreateQuestion();
+            player.DamagePlayer(1);
+            feedback.DamageSet(SetFeedback.PlayerHit);
+            return;
         }
         player.DamagePlayer(1);
         feedback.DamageSet(SetFeedback.PlayerHit);
@@ -93,6 +96,7 @@ public class BossMonster : Monster
 
     internal override void MonsterHurt()
     {
+        
         if (Operator == operators.Subtraction)
         {
             SubtractionAttacked();
@@ -112,6 +116,8 @@ public class BossMonster : Monster
 
         --health;
 
+        bar.changeHealth(false, health);
+
         CreateQuestion();
 
         CheckDeath();
@@ -122,6 +128,8 @@ public class BossMonster : Monster
         if (depth >= 0)
         {
             health--;
+
+            bar.changeHealth(false, health);
 
             depth = -5;
 
@@ -236,7 +244,15 @@ public class BossMonster : Monster
 
     void CreateSubtraction(bool EnemyAttackingPhase, bool resetTime)
     {
-        EnemyAttackingPhase = questions.makeQuestion(m_button, resetTime);
+        int over;
+
+        if (EnemyAttackingPhase)
+            over = 1;
+        else
+            over = 2;
+
+
+        EnemyAttackingPhase = questions.makeQuestion(m_button, resetTime, over);
 
         float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 5));
 

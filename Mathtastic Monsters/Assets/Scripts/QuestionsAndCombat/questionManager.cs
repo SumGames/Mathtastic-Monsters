@@ -9,7 +9,7 @@ public class questionManager : MonoBehaviour
     public multipleContainer container;
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal bool makeQuestion(QuizButton a_running, bool resetTime = true)
+    internal bool makeQuestion(QuizButton a_running, bool resetTime = true, int overRide = 0)
     {
         if (calculator == null)
             calculator = FindObjectOfType<Calculator>();
@@ -77,13 +77,13 @@ public class questionManager : MonoBehaviour
         //if Answer is too low/too high, or requires rounding to solve, we try again.
         if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
-            return makeQuestion(a_running, resetTime);
-            
+            return makeQuestion(a_running, resetTime, overRide);
+
         }
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide);
 
         string answerWords;
 
@@ -191,6 +191,6 @@ public class questionManager : MonoBehaviour
             return true;
 
         }
-        return false;        
+        return false;
     }
 }

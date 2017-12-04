@@ -56,20 +56,30 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime)
+    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, int overRide)
     {        
         enemyAnswerNeeded = answer;
-
-        if (attacks > 0)
+        if (overRide == 0)
         {
-            attacking = false;
-            attacks--;
+            if (attacks > 0)
+            {
+                attacking = false;
+                attacks--;
 
+            }
+            else
+            {
+                attacks = attacksPherPhase;
+                attacking = true;
+            }
+        }
+        else if (overRide == 1)
+        {
+            attacking = true;
         }
         else
         {
-            attacks = attacksPherPhase;
-            attacking = true;            
+            attacking = false;
         }
 
         bool enemyPhase = false;
