@@ -96,6 +96,12 @@ public class multipleContainer : MonoBehaviour
             attacks--;
             DisableMultiple();
         }
+        if(!resetTime)
+        {
+            Debug.Log("Not resetting");
+        }
+
+
         if (a_running && resetTime)
         {
             player.SetTime(enemyPhase, a_running.enemPhaseTime);

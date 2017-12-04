@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class questionManager : MonoBehaviour
@@ -7,6 +8,9 @@ public class questionManager : MonoBehaviour
     public Calculator calculator;
 
     public multipleContainer container;
+
+    List<operators> ops;
+
 
     //Uses given values to calculate a random sum and its components, then store and display them.
     internal bool makeQuestion(QuizButton a_running, bool resetTime = true, int overRide = 0)
@@ -67,7 +71,7 @@ public class questionManager : MonoBehaviour
 
         if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
         {
-            rounding = preventRounding(numbers, a_running, (int)answer);
+            rounding = PreventRounding(numbers, a_running, (int)answer);
         }
 
 
@@ -107,7 +111,7 @@ public class questionManager : MonoBehaviour
 
 
     //Repeatedly run the Rounding function using different digit amounts.
-    public bool preventRounding(float[] a_numbers, QuizButton a_running, int a_answer)
+    bool PreventRounding(float[] a_numbers, QuizButton a_running, int a_answer)
     {
         float checkingAnswer = a_answer;
 
@@ -119,21 +123,21 @@ public class questionManager : MonoBehaviour
 
         if (checkingAnswer > 1000)
         {
-            if (rounding(a_numbers, a_running.Operator, 1000))
+            if (Rounding(a_numbers, a_running.Operator, 1000))
             {
                 return true;
             }
         }
         if (checkingAnswer > 100)
         {
-            if (rounding(a_numbers, a_running.Operator, 100))
+            if (Rounding(a_numbers, a_running.Operator, 100))
             {
                 return true;
             }
         }
         if (checkingAnswer > 10)
         {
-            if (rounding(a_numbers, a_running.Operator, 10))
+            if (Rounding(a_numbers, a_running.Operator, 10))
             {
                 return true;
             }
@@ -145,7 +149,7 @@ public class questionManager : MonoBehaviour
 
     //Checking if the calculation needs rounding. Returns true if yes.
     //a_operator is + or -, and a_digits as the number of digits of the comparison being made
-    public bool rounding(float[] a_numbers, operators a_operator, int a_digits)
+    bool Rounding(float[] a_numbers, operators a_operator, int a_digits)
     {
         float[] shortened = new float[a_numbers.Length];
         a_numbers.CopyTo(shortened, 0);
@@ -192,5 +196,75 @@ public class questionManager : MonoBehaviour
 
         }
         return false;
+    }
+
+
+    List<operators> ChooseOperators(operators main, int size)
+    {
+        int newOp = 0;
+
+        List<operators> op = new List<operators>();
+
+        for (int i = 0; i < size; i++)
+        {
+
+            switch (main)
+            {
+                case operators.AddSub:
+                    newOp = Random.Range(0, 2);
+                    break;
+                case operators.AddSubMult:
+                    newOp = Random.Range(0, 3);
+                    break;
+                case operators.AddSubMultDiv:
+                    newOp = Random.Range(0, 4);
+                    break;
+                default:
+                    break;
+            }
+            op[i] = (operators)newOp;
+        }
+        return op;
+    }
+
+    void CalculateBosMass(QuizButton a_running)
+    {
+        List<int> numbers = new List<int>();
+
+
+
+        //Randomise as many numbers as required, within range.
+        for (int i = 0; i < a_running.variableCount; i++)
+        {
+            numbers.Add((int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1)));
+        }
+
+        if (ops.Contains(operators.Division))
+        {
+
+        }
+
+        for (int i = 0; i < ops.Count; i++)
+        {
+            if (ops[i] == operators.Division)
+            {                
+                numbers[i] /= numbers[(i + 1)];
+                numbers.RemoveAt(i + 1);
+                ops.RemoveAt(i);
+            }
+            if (ops[i] == operators.Multiplication)
+            {
+
+            }
+
+            if (ops[i] == operators.Addition)
+            {
+
+            }
+            if (ops[i] == operators.Subtraction)
+            {
+
+            }
+        }
     }
 }

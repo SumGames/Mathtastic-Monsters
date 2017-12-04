@@ -10,7 +10,9 @@ public enum operators
     Multiplication,
     Division,
     Fortress,
-    AdditionSubtraction
+    AddSub,
+    AddSubMult,
+    AddSubMultDiv
 }
 
 public class QuizButton : MonoBehaviour

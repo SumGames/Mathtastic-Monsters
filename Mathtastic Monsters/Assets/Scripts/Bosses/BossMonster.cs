@@ -94,6 +94,7 @@ public class BossMonster : Monster
         CreateSubtraction(true, false);
     }
 
+
     internal override void MonsterHurt()
     {
         
@@ -211,6 +212,7 @@ public class BossMonster : Monster
 
 
         CreateQuestion();
+
     }
 
 
@@ -232,8 +234,6 @@ public class BossMonster : Monster
             case operators.Division:
                 break;
             case operators.Fortress:
-                break;
-            case operators.AdditionSubtraction:
                 break;
             default:
                 break;

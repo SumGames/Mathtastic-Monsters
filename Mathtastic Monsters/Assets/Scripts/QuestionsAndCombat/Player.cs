@@ -124,8 +124,6 @@ public class Player : MonoBehaviour
 
         parent.currentEnemy.loadMonster();
 
-
-        SetTime(false, 0);
     }
 
     internal void EndTurn(bool a_enemy)
@@ -279,7 +277,7 @@ public class Player : MonoBehaviour
         if (resetTime == 0)
         {
             resetTime = 15;
-
+            Debug.Log("Set");
         }
 
         if (enemyPhase)
