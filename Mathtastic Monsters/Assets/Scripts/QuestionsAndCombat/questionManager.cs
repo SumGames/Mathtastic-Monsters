@@ -9,11 +9,11 @@ public class questionManager : MonoBehaviour
 
     public multipleContainer container;
 
-    List<operators> ops;
+
 
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal bool makeQuestion(QuizButton a_running, bool resetTime = true, int overRide = 0)
+    internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, int overRide = 0)
     {
         if (calculator == null)
             calculator = FindObjectOfType<Calculator>();
@@ -64,7 +64,8 @@ public class questionManager : MonoBehaviour
                 oper = "/ ";
                 break;
             default:
-                break;
+                return CalculateBODMAS(numbers, a_running, resetTime, overRide);
+
         }
 
         bool rounding = a_running.preventRounding;
@@ -81,7 +82,7 @@ public class questionManager : MonoBehaviour
         //if Answer is too low/too high, or requires rounding to solve, we try again.
         if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
-            return makeQuestion(a_running, resetTime, overRide);
+            return MakeQuestion(a_running, resetTime, overRide);
 
         }
 
@@ -222,49 +223,130 @@ public class questionManager : MonoBehaviour
                 default:
                     break;
             }
-            op[i] = (operators)newOp;
+            op.Add((operators)newOp);
         }
         return op;
     }
 
-    void CalculateBosMass(QuizButton a_running)
+    bool CalculateBODMAS(float[] a_summing, QuizButton a_running, bool resetTime = true, int overRide = 0)
     {
-        List<int> numbers = new List<int>();
+
+        List<int> summingNumbers = new List<int>(5);
 
 
+        List<operators> ops = ChooseOperators(a_running.Operator, (a_running.variableCount - 1));
+
+        string[] operatorStrings = new string[ops.Count];
+
+        for (int i = 0; i < operatorStrings.Length; i++)
+        {
+            switch (ops[i])
+            {
+                case operators.Addition:
+                    operatorStrings[i] = "+ ";
+                    break;
+                case operators.Subtraction:
+                    operatorStrings[i] = "- ";
+                    break;
+                case operators.Multiplication:
+                    operatorStrings[i] = "x ";
+                    break;
+                case operators.Division:
+                    operatorStrings[i] = "/ ";
+                    break;
+                default:
+                    break;
+            }
+        }
 
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            numbers.Add((int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1)));
+            summingNumbers.Add((int)a_summing[i]);
         }
 
-        if (ops.Contains(operators.Division))
+        while (ops.Count > 0)
         {
+            if (ops.Contains(operators.Division))
+            {
+                int i = ops.IndexOf(operators.Division);
 
-        }
-
-        for (int i = 0; i < ops.Count; i++)
-        {
-            if (ops[i] == operators.Division)
-            {                
-                numbers[i] /= numbers[(i + 1)];
-                numbers.RemoveAt(i + 1);
+                summingNumbers[i] /= summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
                 ops.RemoveAt(i);
-            }
-            if (ops[i] == operators.Multiplication)
-            {
-
+                continue;
             }
 
-            if (ops[i] == operators.Addition)
+            if (ops.Contains(operators.Multiplication))
             {
+                int i = ops.IndexOf(operators.Multiplication);
 
+                summingNumbers[i] *= summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
+                ops.RemoveAt(i);
+                continue;
             }
-            if (ops[i] == operators.Subtraction)
-            {
 
+            if (ops.Contains(operators.Addition))
+            {
+                int i = ops.IndexOf(operators.Addition);
+
+                summingNumbers[i] += summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
+                ops.RemoveAt(i);
+                continue;
+            }
+            if (ops.Contains(operators.Subtraction))
+            {
+                int i = ops.IndexOf(operators.Subtraction);
+
+                summingNumbers[i] -= summingNumbers[(i + 1)];
+
+                Debug.Log(summingNumbers[i]);
+
+                summingNumbers.RemoveAt(i + 1);
+                ops.RemoveAt(i);
+                continue;
             }
         }
+        int answer = summingNumbers[0];
+
+        bool rounding = a_running.preventRounding;
+
+        if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
+        {
+            rounding = PreventRounding(a_summing, a_running, answer);
+        }
+
+
+        bool whole = IsWhole(answer);
+
+
+        //if Answer is too low/too high, or requires rounding to solve, we try again.
+        if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
+        {
+            return CalculateBODMAS(a_summing, a_running, resetTime, overRide);
+        }
+
+        string answerNeeded = answer.ToString("F0");
+
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide);
+
+        string answerWords;
+
+        answerWords = "   ";
+        answerWords += a_summing[0].ToString("F0");
+
+        for (int i = 1; i < a_running.variableCount; i++)
+        {
+            answerWords += "\n" + operatorStrings[(i - 1)] + a_summing[i].ToString("F0");
+        }
+
+        answerWords += "\n= ";
+        GetComponent<Text>().text = answerWords;
+
+        calculator.answerNeeded = answerNeeded;
+
+        return enemyPhase;
     }
 }

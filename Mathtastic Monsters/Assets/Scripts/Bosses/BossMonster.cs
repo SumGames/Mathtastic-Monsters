@@ -252,7 +252,7 @@ public class BossMonster : Monster
             over = 2;
 
 
-        EnemyAttackingPhase = questions.makeQuestion(m_button, resetTime, over);
+        EnemyAttackingPhase = questions.MakeQuestion(m_button, resetTime, over);
 
         float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 5));
 

@@ -72,7 +72,7 @@ public class Monster : MonoBehaviour
 
         CheckDeath();
 
-        enemyPhase = questions.makeQuestion(parent.quizRunning);
+        enemyPhase = questions.MakeQuestion(parent.quizRunning);
     }
 
     //Player is hurt, and a new question is built.
@@ -90,14 +90,14 @@ public class Monster : MonoBehaviour
             FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerMissed);
         }
         enemyPhase = !enemyPhase;
-        enemyPhase = questions.makeQuestion(parent.quizRunning);
+        enemyPhase = questions.MakeQuestion(parent.quizRunning);
     }
 
 
     internal void SkipQuestion()
     {
         enemyPhase = !enemyPhase;
-        enemyPhase = questions.makeQuestion(parent.quizRunning);
+        enemyPhase = questions.MakeQuestion(parent.quizRunning);
     }
 
     public virtual void CheckDeath()
@@ -150,7 +150,7 @@ public class Monster : MonoBehaviour
 
         enemyPhase = false;
 
-        enemyPhase = questions.makeQuestion(parent.quizRunning);
+        enemyPhase = questions.MakeQuestion(parent.quizRunning);
 
         health = parent.quizRunning.MonsterHealth;
         attack = parent.quizRunning.MonsterAttack;
