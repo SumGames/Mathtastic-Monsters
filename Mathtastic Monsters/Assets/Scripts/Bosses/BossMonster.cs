@@ -233,8 +233,7 @@ public class BossMonster : Monster
                 break;
             case operators.Division:
                 break;
-            case operators.Fortress:
-                break;
+
             default:
                 break;
         }

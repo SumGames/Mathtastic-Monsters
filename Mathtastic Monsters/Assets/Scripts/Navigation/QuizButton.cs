@@ -9,7 +9,6 @@ public enum operators
     Subtraction,
     Multiplication,
     Division,
-    Fortress,
     AddSub,
     AddSubMult,
     AddSubMultDiv
