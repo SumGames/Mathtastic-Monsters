@@ -33,6 +33,7 @@ public class ItemPart : MonoBehaviour
 
     public Material textureMaterial;
 
+    public int starRequired;
 
     private void Start()
     {        
