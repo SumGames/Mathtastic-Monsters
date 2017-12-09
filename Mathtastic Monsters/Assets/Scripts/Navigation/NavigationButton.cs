@@ -12,7 +12,7 @@ public class NavigationButton : MonoBehaviour
 
     public void startTutorial()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
 

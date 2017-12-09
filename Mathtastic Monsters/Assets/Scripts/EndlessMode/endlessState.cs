@@ -66,7 +66,7 @@ public class endlessState : ParentsStateManager
                 monsterManager.PlayerLost();
                 break;
             case playStatus.subjectSelect:
-                SceneManager.LoadScene(0);                
+                SceneManager.LoadScene(1);                
                 break;
 
             case playStatus.ArenaLeaderBoard:

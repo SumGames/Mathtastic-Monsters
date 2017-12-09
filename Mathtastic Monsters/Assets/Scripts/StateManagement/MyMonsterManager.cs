@@ -60,7 +60,7 @@ public class MyMonsterManager : ParentsStateManager
                 gameInstruction.text = "Hello, " + list.playerName.ToString() + "! trade me your shards, so I may grant you the power to defeat Lord Calculi!";
                 break;
             case playStatus.subjectSelect:
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 break;
 
             default:

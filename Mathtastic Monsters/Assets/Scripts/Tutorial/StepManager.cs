@@ -213,7 +213,7 @@ public class StepManager : MonoBehaviour
                 break;
             default:
                 Destroy(gameObject);
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(5);
                 break;
         }
     }

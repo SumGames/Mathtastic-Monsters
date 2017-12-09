@@ -26,12 +26,9 @@ public class LevelSelection : MonoBehaviour
 
     public Button[] jumpButtons;
 
-    public Button nextLevel, previousLevel;
 
-
-
-    public float swipeTimeNeeded = 0.3f;
-    public float minSwipeDistance = 50;
+    float swipeTimeNeeded = 0.3f;
+    float minSwipeDistance = 50;
 
     float swipeStartTime;
     float swipeStartPosition;

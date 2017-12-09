@@ -6,9 +6,9 @@ public class MonsterManager : MonoBehaviour
 
     public QuizButton quizRunning; //The current quiz that has been running. This object passes in number range and other question specific variables.
 
-    public StateManager stateManager;
+    public ParentsStateManager stateManager;
 
-    internal Player player;
+    public Player player;
     public Monster monster;
     public BossMonster boss;
 
@@ -20,8 +20,6 @@ public class MonsterManager : MonoBehaviour
 
     public virtual void Start()
     {
-        player = stateManager.player;
-        monster = stateManager.enemy;
 
         initialPosition = monster.transform.position;
     }

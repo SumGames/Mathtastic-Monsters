@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class StateManager : ParentsStateManager
+public class CombatStateManager : ParentsStateManager
 {
 
     public Player player;
@@ -13,10 +13,6 @@ public class StateManager : ParentsStateManager
     public MonsterManager monsterM;
 
     public GameObject enemyContainer;
-
-    public GameObject splashContainer;
-//    public GameObject login;
-    public GameObject startContainer; //Container of the start screen.
 
     public GameObject subjectContainer; //Container for level select.
     public GameObject additionSelection; //The container where additions selection buttons are.
@@ -40,7 +36,6 @@ public class StateManager : ParentsStateManager
 
     public multipleContainer container;
 
-    public loginManager login;
 
     public GameObject levelSelect;
 
@@ -48,10 +43,6 @@ public class StateManager : ParentsStateManager
     void Start()
     {
         base.Find();
-
-
-        login.Begin(this, list);
-
 
         gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
 
@@ -122,16 +113,14 @@ public class StateManager : ParentsStateManager
         gameState = newState;
         switch (gameState)
         {
-            /*
             case playStatus.Login:
                 list.Save();
-                gameInstruction.text = "";
-                login.SetActive(true);
+                SceneManager.LoadScene(0);
+                Debug.Log("Login");
                 break;
-             */
             case playStatus.Start:
-                gameInstruction.text = "";
-                startContainer.SetActive(true);
+                list.Save();
+                SceneManager.LoadScene(0);
                 break;
             case playStatus.subjectSelect:
                 checkLevelsAvailable();
@@ -192,20 +181,19 @@ public class StateManager : ParentsStateManager
                 container.gameObject.SetActive(false);
                 break;
             case playStatus.MyMonster:
-                SceneManager.LoadScene(1);
-                break;
-
-            case playStatus.Options:
                 SceneManager.LoadScene(2);
                 break;
 
+            case playStatus.Options:
+                SceneManager.LoadScene(3);
+                break;
+
             case playStatus.Splash:
-                gameInstruction.text = "";
-                splashContainer.SetActive(true);
+                SceneManager.LoadScene(0);
                 break;
 
             case playStatus.ArenaHome:
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(6);
                 break;
             default:
                 break;
@@ -259,7 +247,6 @@ public class StateManager : ParentsStateManager
         divisionSelection.SetActive(false);
         mathfortressSelection.SetActive(false);
         //login.SetActive(false);
-        splashContainer.SetActive(false);
         nextButton.gameObject.SetActive(false);
         retreatObject.SetActive(false);
         levelSelect.SetActive(false);

@@ -128,7 +128,8 @@ public class loginManager : MonoBehaviour
     //Called from all start screens. Jump to the main menu.
     void ContinueToStartScreen()
     {
-        //states.login.SetActive(false);
+        SceneManager.LoadScene(1);
+
         states.changeState(playStatus.subjectSelect);
         EnableProfiles();
     }
@@ -192,14 +193,12 @@ public class loginManager : MonoBehaviour
     {
         if (startTutorial)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
 
         }
         else
         {
             ContinueToStartScreen();
         }
-
-
     }
 }

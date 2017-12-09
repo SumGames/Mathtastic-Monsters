@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/randomisedQuestions.unity
-    guid: 2aaf642f3522f5846bb27ce881e1aa23
+    path: Assets/Scenes/FormerlyRandomised/OpeningScene.unity
+    guid: 15f4ca54ccca06e45b383933e93d8da4
+  - enabled: 1
+    path: Assets/Scenes/FormerlyRandomised/SelectAndCombat.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MyMonster.unity
     guid: 4f40d59085881a748a4598c433cafd5d
@@ -22,4 +25,4 @@ EditorBuildSettings:
     guid: f762c812ef6811e478ab9202d1651066
   - enabled: 1
     path: Assets/Scenes/endlessMode.unity
-    guid: 00000000000000000000000000000000
+    guid: 726044389dc5ee44fa85746374c858c8

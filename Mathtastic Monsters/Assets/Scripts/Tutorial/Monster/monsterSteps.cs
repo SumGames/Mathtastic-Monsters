@@ -173,7 +173,7 @@ public class monsterSteps : MonoBehaviour
             //https://docs.google.com/document/d/155cqU4X-KrRZv3BxWMFZFX1zls94GhRntpJP6tYW5Sk/edit#heading=h.gjdgxs
             default:
                 Destroy(gameObject);
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 break;
         }
     }

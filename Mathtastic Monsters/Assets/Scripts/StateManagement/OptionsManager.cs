@@ -74,7 +74,7 @@ public class OptionsManager : ParentsStateManager
                 gameInstruction.text = "The wonderful Team at 'Sum Games'!";
                 break;
             case playStatus.subjectSelect:
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 break;
             default:
                 break;
