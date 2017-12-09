@@ -236,9 +236,6 @@ public class equipmentList : MonoBehaviour
     //Build the arrays for the equipmentlists, and set everything to false/0/null.
     void NewGame()
     {
-        equip.StarsAcquired = new int[50];
-
-
         equip.shards = 0;
         equip.tutorialComplete = false;
 

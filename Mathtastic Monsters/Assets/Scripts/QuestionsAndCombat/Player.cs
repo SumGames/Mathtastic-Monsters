@@ -68,10 +68,6 @@ public class Player : MonoBehaviour
 
     internal float attacksLanded;
 
-
-    public Calculator calculator;
-
-
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
@@ -107,11 +103,11 @@ public class Player : MonoBehaviour
             EndTurn(false);
 
         Frozen = 0;
-        if (!calculator)
-            calculator = FindObjectOfType<Calculator>();
 
-        calculator.AddInput("Cancel");
-
+        if (!a_boss)
+        {
+            FindObjectOfType<Calculator>().AddInput("Cancel");
+        }
         maxHealth = baseHealth * abilities.EquipmentHealth();
 
         attackDamage = baseAttack * abilities.EquipmentAttack();
@@ -320,15 +316,11 @@ public class Player : MonoBehaviour
             exp *= 1.5f;
         }
 
-        parent.quizRunning.parent.levelSelection.SetStars((currentHealth == maxHealth), parent.quizRunning);
-
-
         int completed = parent.quizRunning.parent.getCompleted();
 
         if (parent.quizRunning.quizIndex == completed) //Level was not completed, unlock next.
         {
             parent.quizRunning.parent.incrementCompleted();
-
         }
         else //Divide experience to a quarter.
         {

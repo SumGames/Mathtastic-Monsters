@@ -9,7 +9,6 @@ public enum operators
     Subtraction,
     Multiplication,
     Division,
-    Fortress,
     AddSub,
     AddSubMult,
     AddSubMultDiv
@@ -55,15 +54,23 @@ public class QuizButton : MonoBehaviour
     public int enemyChoices = 3;
     public int enemyAnswerRange = 2;
 
-    internal bool Hard;
-
-    public QuizButton hardMode;
-
-
     // Use this for initialization
     public virtual void Start()
     {        
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
+    }
+
+    // Update is called once per frame
+    public virtual void Update()
+    {
+        if ((!parent) || quizIndex <= parent.getCompleted())
+        {
+            GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            GetComponent<Button>().interactable = false;
+        }
     }
 
     //Call the quizManager to start a quiz using this button as the basis.

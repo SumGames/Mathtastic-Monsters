@@ -106,7 +106,7 @@ public class Monster : MonoBehaviour
         if (animator)
             animator.Play("Hurt");
 
-        if (health <= 0)
+        if (health < 0)
         {
             manager.changeState(playStatus.Won);
             return;

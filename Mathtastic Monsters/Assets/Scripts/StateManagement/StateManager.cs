@@ -42,8 +42,6 @@ public class StateManager : ParentsStateManager
 
     public loginManager login;
 
-    public GameObject levelSelect;
-
     //Start off by linking every internal object to each other.
     void Start()
     {
@@ -94,10 +92,8 @@ public class StateManager : ParentsStateManager
 
         switch (monsterM.quizRunning.Operator)
         {
-            //need to set proper integer here.;
-
             case operators.Addition:
-                changeState(playStatus.Addition);                
+                changeState(playStatus.Addition);
                 break;
             case operators.Subtraction:
                 changeState(playStatus.Subtraction);
@@ -106,10 +102,8 @@ public class StateManager : ParentsStateManager
                 changeState(playStatus.Multiplication);
                 break;
             default:
-                changeState(playStatus.MathFortress);
-                break;                
+                break;
         }
-        FindObjectOfType<LevelSelection>().ChangeIndex(monsterM.quizRunning.quizIndex);
     }
 
     //Change the game's state, closing/opening containers and changing text.
@@ -262,6 +256,5 @@ public class StateManager : ParentsStateManager
         splashContainer.SetActive(false);
         nextButton.gameObject.SetActive(false);
         retreatObject.SetActive(false);
-        levelSelect.SetActive(false);
     }
 }

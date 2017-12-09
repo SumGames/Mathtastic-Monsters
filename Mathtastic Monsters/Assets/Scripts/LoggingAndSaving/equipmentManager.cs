@@ -37,9 +37,6 @@ public class equipmentManager
     public bool tutorialComplete;
 
 
-    public int[] StarsAcquired;
-
-
     public void setEquipped(partType a_type, int index)
     {
         equippedParts[(int)a_type] = index;
@@ -54,18 +51,5 @@ public class equipmentManager
     public int getCompletedLevels(int type)
     {
         return completedLevels[type];
-    }
-
-    public int GetTotalStars()
-    {
-        int star = 0;
-
-        foreach (int item in StarsAcquired)
-        {
-            star += item;
-        }
-
-
-        return star;
     }
 }

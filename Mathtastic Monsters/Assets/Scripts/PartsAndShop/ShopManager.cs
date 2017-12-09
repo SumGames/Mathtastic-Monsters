@@ -35,9 +35,7 @@ public class ShopManager : MonoBehaviour
 
     public AudioSource[] sounds;
     public AudioSource purchase;
-
-
-    int stars;
+  
 
 
     // Use this for initialization
@@ -55,7 +53,6 @@ public class ShopManager : MonoBehaviour
         readyPart();
 
         tutorial = FindObjectOfType<monsterSteps>();
-        stars = list.equip.GetTotalStars();
     }
 
     // Update is called once per frame
@@ -91,11 +88,7 @@ public class ShopManager : MonoBehaviour
             equipItemButton.interactable = false;
             displayCurrent.text = availableText;
         }
-        else if (stars < part.starRequired)
-        {
-            displayCurrent.text = "Not enough Stars. \n Needs " + part.starRequired;
-            equipItemButton.interactable = false;
-        }
+
 
         else if (manager.shards < part.cost)
         {
