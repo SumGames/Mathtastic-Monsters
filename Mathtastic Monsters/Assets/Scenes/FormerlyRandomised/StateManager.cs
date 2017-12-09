@@ -39,16 +39,8 @@ public class StateManager : ParentsStateManager
 
         list = FindObjectOfType<equipmentList>();
 
-        if (list.playerName == "")
-        {
-            changeState(playStatus.Splash);
-            backgrounds.startBack(playStatus.Splash);
-        }
-        else
-        {
-            changeState(playStatus.subjectSelect);
-            backgrounds.startBack(playStatus.subjectSelect);
-        }        
+        changeState(playStatus.Splash);
+        backgrounds.startBack(playStatus.Splash);
     }
 
 

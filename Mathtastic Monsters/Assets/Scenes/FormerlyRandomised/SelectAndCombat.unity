@@ -3351,6 +3351,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 289822712}
+    - target: {fileID: 114407363407238904, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 574737962}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b236b9b8bdbf8ca49a7f0f2c04a3064a, type: 2}
   m_IsPrefabParent: 0
@@ -11044,7 +11049,7 @@ MonoBehaviour:
   boss: 1
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 20
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -13046,7 +13051,7 @@ MonoBehaviour:
   boss: 1
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 20
   minNumber: 1
   maxNumber: 10
   Operator: 0
