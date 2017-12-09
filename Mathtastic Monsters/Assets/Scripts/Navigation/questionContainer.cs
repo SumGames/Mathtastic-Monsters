@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class questionContainer : MonoBehaviour
 {
-    internal QuizButton[] buttons;
+    public QuizButton[] buttons;
 
     public int completedQuestions;
 
@@ -14,20 +14,16 @@ public class questionContainer : MonoBehaviour
 
     bool alreadyTurnedOn;
 
+    public LevelSelection levelSelection;
+
     public void Awaken()
     {
         if (!alreadyTurnedOn)
         {
-
             if (list == null)
             {
                 list = FindObjectOfType<equipmentList>();
             }
-
-            buttons = new QuizButton[10];
-
-            buttons = GetComponentsInChildren<QuizButton>();
-
             int i = 0;
             foreach (QuizButton item in buttons)
             {
@@ -38,6 +34,8 @@ public class questionContainer : MonoBehaviour
             alreadyTurnedOn = true;
         }
         checkCompleted();
+        levelSelection.setContainer(this);
+        gameObject.SetActive(false);
     }
 
     public void checkCompleted()
@@ -46,7 +44,7 @@ public class questionContainer : MonoBehaviour
     }
 
 
-//Return number completed, when checking requirements.
+    //Return number completed, when checking requirements.
     public int getCompleted()
     {
         return completedQuestions;
@@ -57,4 +55,5 @@ public class questionContainer : MonoBehaviour
         completedQuestions++;
         list.equip.setCompletedLevels(completedQuestions, (int)type);
     }
+
 }
