@@ -96,4 +96,27 @@ public class TorsoPart : ItemPart
         bodyAnimator.Play(anim, -1, 0);
 
     }
+
+    public void Animate(int a_num)
+    {
+        switch (a_num)
+        {
+            case 0:
+                Animate(Animations.Idle);
+                break;
+            case 1:
+                Animate(Animations.Attack);
+                break;
+            case 2:
+                Animate(Animations.Hurt);
+                break;
+            case 3:
+                Animate(Animations.Dead);
+                break;
+            default:
+                return;
+        }
+
+
+    }
 }

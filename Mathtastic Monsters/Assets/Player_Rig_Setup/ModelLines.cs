@@ -6,13 +6,17 @@ public class ModelLines : MonoBehaviour
 {
     public Transform[] links;
 
+    public Animator animator;
+
 
 	// Use this for initialization
 	void Start ()
     {
-//        links = GetComponentsInChildren<Transform>();        
+        links = GetComponentsInChildren<Transform>();
 	}
-	
+
+
+
 	// Update is called once per frame
 	void Update ()
     {
