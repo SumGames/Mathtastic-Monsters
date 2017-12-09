@@ -47,7 +47,7 @@ public class multipleContainer : MonoBehaviour
         {
             attacksPherPhase = 1;
         }
-        if (startWithAttack)
+        if (startWithAttack || !boss)
         {
             attacks = attacksPherPhase;
         }
@@ -133,6 +133,10 @@ public class multipleContainer : MonoBehaviour
         if (a_running.enemyChoices > 6)
             a_running.enemyChoices = 6;
 
+        if (a_running.enemyAnswerRange * 2 < a_running.enemyChoices)
+        {
+            a_running.enemyAnswerRange = a_running.enemyChoices / 2 + 2;
+        }
 
 
 
