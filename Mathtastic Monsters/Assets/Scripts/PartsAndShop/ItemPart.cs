@@ -24,8 +24,6 @@ public class ItemPart : MonoBehaviour
     public int cost;
 
 
-    public classType typeRequired;
-    public int levelsNeeded;
 
     public abilityTypes ability;
 
@@ -49,29 +47,5 @@ public class ItemPart : MonoBehaviour
             }
 
         }
-    }
-
-
-
-    //Returns true if number of levels completed in a subject is greater than required.
-    public bool checkAvailable(equipmentManager numbered)
-    {
-        if (typeRequired == classType.None)
-        {
-            return true;
-        }
-
-        int completed = numbered.completedLevels[(int)typeRequired];
-        if (completed >= levelsNeeded)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    //Displays subject name and number needed.
-    public string setAvailableText()
-    {
-        return "Beat " + typeRequired.ToString() + " Level " + levelsNeeded.ToString();
     }
 }

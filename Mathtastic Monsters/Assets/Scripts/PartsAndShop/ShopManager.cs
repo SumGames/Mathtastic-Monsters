@@ -212,8 +212,7 @@ public class ShopManager : MonoBehaviour
 
         abilityText.text = abilities.displayPower(part.ability);
 
-        available = part.checkAvailable(manager);
-        availableText = part.setAvailableText();
+
     }
 
     public void getMoney()
