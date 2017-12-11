@@ -23,12 +23,13 @@ public class LegPart : ItemPart
         Shin.transform.localRotation = Quaternion.identity;
         Shin.transform.localPosition = Vector3.zero;
         Shin.transform.localScale = Vector3.one;
-
-        Ankle.transform.SetParent(AnkleSpot.transform, false);
-        Ankle.transform.localRotation = Quaternion.identity;
-        Ankle.transform.localPosition = Vector3.zero;
-        Ankle.transform.localScale = Vector3.one;
-
+        if (Ankle != null)
+        {
+            Ankle.transform.SetParent(AnkleSpot.transform, false);
+            Ankle.transform.localRotation = Quaternion.identity;
+            Ankle.transform.localPosition = Vector3.zero;
+            Ankle.transform.localScale = Vector3.one;
+        }
         Foot.transform.SetParent(FootSpot.transform, false);
         Foot.transform.localRotation = Quaternion.identity;
         Foot.transform.localPosition = Vector3.zero;
@@ -38,7 +39,8 @@ public class LegPart : ItemPart
     public void DeleteLeg()
     {
         Destroy(Shin);
-        Destroy(Ankle);
+        if (Ankle != null)
+            Destroy(Ankle);
         Destroy(Foot);
         Destroy(gameObject);
 

@@ -37,7 +37,7 @@ public class TutmultipleContainer : MonoBehaviour
             DisableMultiple();
         }
 
-        player.SetTime(phase, 5);
+        player.SetTime(phase, 20);
     }
 
     void MultipleAnswers()

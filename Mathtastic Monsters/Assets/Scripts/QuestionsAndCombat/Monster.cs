@@ -102,6 +102,8 @@ public class Monster : MonoBehaviour
 
     public virtual void CheckDeath()
     {
+        manager = FindObjectOfType<ParentsStateManager>();
+
 
         if (animator)
             animator.Play("Hurt");

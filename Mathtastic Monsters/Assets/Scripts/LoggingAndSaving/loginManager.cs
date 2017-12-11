@@ -114,6 +114,8 @@ public class loginManager : MonoBehaviour
         list.startGame(inputNames[(index - 1)].text, true);
 
         tutorialPopUp.SetActive(true);
+
+        transform.parent.gameObject.SetActive(false);
     }
 
     //Called from clicking of the main button of LoadProfile. Loads the profile.
