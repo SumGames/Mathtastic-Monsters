@@ -35,8 +35,7 @@ public class BossMonster : Monster
     {
         bar = FindObjectOfType<Healthbars>();
 
-        manager = FindObjectOfType<StateManager>();
-
+        manager = FindObjectOfType<ParentsStateManager>();
     }
 
     //Update healthbar as it changes.
@@ -62,7 +61,10 @@ public class BossMonster : Monster
 
         player.DamagePlayer(1);
 
+
         CheckDeath();
+
+        Debug.Log("Player hit");
 
 
         CreateQuestion();

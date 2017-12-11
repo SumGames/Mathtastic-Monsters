@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 
     internal float baseHealth = 6; //Player's starting health. prob affected by equipment.
     float maxHealth;
-    float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
+    public float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
 
     public int baseAttack = 1; //Amount of damage a player can inflict.
     internal float attackDamage;
@@ -249,9 +249,10 @@ public class Player : MonoBehaviour
 
         Healthbar.changeHealth(true, currentHealth);
 
-        enemy.abilityDamage(a_damage * abilities.BounceDamage());
+        parent.currentEnemy.abilityDamage(a_damage * abilities.BounceDamage());
 
-        enemy.CheckDeath();
+
+        parent.currentEnemy.CheckDeath();
     }
 
     internal float GetPlayerHealth()
