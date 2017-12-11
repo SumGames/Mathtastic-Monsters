@@ -50,8 +50,17 @@ public class questionManager : MonoBehaviour
                 }
                 break;
             case operators.Multiplication:
-                //If operator is 'x', second number is one of two possible numbers.
-                numbers[1] = (int)UnityEngine.Random.Range(a_running.secondNumberMin, (a_running.secondNumberMax + 1));
+                //If operator is 'x', second number is one of two possible numbers
+
+
+                bool first = Random.value <= 0.5f;
+
+                if (first)
+                    numbers[1] = a_running.secondNumberMin;
+                else
+                    numbers[1] = a_running.secondNumberMax;
+
+
 
                 answer = numbers[0] * numbers[1];
                 oper = "x ";
