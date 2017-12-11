@@ -47,7 +47,7 @@ public class AdditionContainer : MonoBehaviour
 
 
             int wrongAnswer = -3;
-            while (wrongAnswer < a_running.minNumber || wrongAnswer > a_running.maxNumber || CheckMultiple(a_running,wrongAnswer))
+            while (wrongAnswer < a_running.minNumber || CheckMultiple(a_running,wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
 

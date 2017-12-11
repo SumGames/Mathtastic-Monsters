@@ -15,7 +15,7 @@ public class Next : MonoBehaviour
         button = parent.quizRunning;
         container = button.parent;
 
-        if (button.quizIndex < (container.buttons.Length - 1))
+        if (!button.Hard && button.quizIndex < (container.buttons.Length - 1))
         {
             gameObject.SetActive(true);
         }

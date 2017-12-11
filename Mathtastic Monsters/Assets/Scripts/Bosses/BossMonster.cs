@@ -194,7 +194,7 @@ public class BossMonster : Monster
         if (Operator == operators.Addition)
         {
             m_button.enemyChoices = 2;
-            m_button.enemyAnswerRange = 2;
+            m_button.enemyAnswerRange = 3;
         }
 
         if (sprite != null)

@@ -57,7 +57,7 @@ public class multipleContainer : MonoBehaviour
 
 
     internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, int overRide)
-    {        
+    {
         enemyAnswerNeeded = answer;
         if (overRide == 0)
         {
@@ -96,7 +96,7 @@ public class multipleContainer : MonoBehaviour
             attacks--;
             DisableMultiple();
         }
-        if(!resetTime)
+        if (!resetTime)
         {
             Debug.Log("Not resetting");
             return true;
@@ -134,11 +134,6 @@ public class multipleContainer : MonoBehaviour
 
         if (a_running.enemyChoices > 6)
             a_running.enemyChoices = 6;
-
-        if (a_running.enemyAnswerRange * 2 < a_running.enemyChoices)
-        {
-            a_running.enemyAnswerRange = a_running.enemyChoices / 2 + 2;
-        }
 
 
 
@@ -210,7 +205,7 @@ public class multipleContainer : MonoBehaviour
         }
     }
 
-    internal void DisableMultiple(bool both=false)
+    internal void DisableMultiple(bool both = false)
     {
         foreach (MultipleAnswer item in answers)
         {
