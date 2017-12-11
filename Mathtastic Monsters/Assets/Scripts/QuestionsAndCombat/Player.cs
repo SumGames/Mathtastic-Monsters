@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.isPlaying() && timeLeft.maxValue > 1)
+        if (manager.isPlaying())
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;
@@ -184,6 +184,10 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            Debug.Log("??");
+        }
     }
 
     //Calculate player's damage and return it.
@@ -200,7 +204,6 @@ public class Player : MonoBehaviour
 
         if (Frozen > 0)
         {
-            Timer = resetTime;
             if (Frozen > 1)
             {
                 damage = attackDamage * critMod;
@@ -230,8 +233,6 @@ public class Player : MonoBehaviour
             feedback.DamageSet(SetFeedback.EnemyHit);
         }
 
-
-        Timer = resetTime;
         return damage;
     }
 
@@ -243,7 +244,6 @@ public class Player : MonoBehaviour
 
         feedback.DamageSet(SetFeedback.PlayerHit);
 
-        Timer = resetTime;
 
         currentHealth -= a_damage * abilities.ReduceDamage();
 

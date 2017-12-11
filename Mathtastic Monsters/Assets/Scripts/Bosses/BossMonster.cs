@@ -86,7 +86,10 @@ public class BossMonster : Monster
         {
             depth = -5;
             CreateQuestion();
-            player.DamagePlayer(1);
+            //player.DamagePlayer(1);
+            player.currentHealth--;
+            CheckDeath();
+
             feedback.DamageSet(SetFeedback.PlayerHit);
             return;
         }
@@ -99,7 +102,9 @@ public class BossMonster : Monster
 
     internal override void MonsterHurt()
     {
-        
+        if (feedback == null)
+            feedback = FindObjectOfType<combatFeedback>();
+
         if (Operator == operators.Subtraction)
         {
             SubtractionAttacked();
@@ -130,6 +135,8 @@ public class BossMonster : Monster
     {
         if (depth >= 0)
         {
+            feedback.DamageSet(SetFeedback.PlayerHit);
+
             health--;
 
             bar.changeHealth(false, health);
@@ -142,6 +149,8 @@ public class BossMonster : Monster
         }
         else if (depth == -1)
         {
+            feedback.DamageSet(SetFeedback.PlayerDodged);
+
             playerTime = player.returnTimer();
 
             CreateSubtraction(false, false);
@@ -151,6 +160,8 @@ public class BossMonster : Monster
         }
         else
         {
+            feedback.DamageSet(SetFeedback.PlayerDodged);
+
             playerTime = player.returnTimer();
 
             depth++;
@@ -253,12 +264,18 @@ public class BossMonster : Monster
             over = 2;
 
 
-        EnemyAttackingPhase = questions.MakeQuestion(m_button, resetTime, over);
+        EnemyAttackingPhase = questions.MakeQuestion(m_button, false, over);
 
         float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 5));
 
         monsterSpot.transform.position = new Vector3(monsterSpot.transform.position.x, positionY, monsterSpot.transform.position.z);
 
+        if (resetTime)
+        {
+            Debug.Log("Set time to " + m_button.enemPhaseTime);
+            player.SetTime(true, m_button.enemPhaseTime);
+
+        }
     }
 
     void CreateAddition()
