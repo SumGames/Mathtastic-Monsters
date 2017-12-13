@@ -25,7 +25,7 @@ public class OptionsManager : ParentsStateManager
         gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
         list = FindObjectOfType<equipmentList>();
 
-        FindObjectOfType<MusicManager>().setSlider();
+        FindObjectOfType<MusicManager>().SetSlider();
 
         changeState(playStatus.Options);
 

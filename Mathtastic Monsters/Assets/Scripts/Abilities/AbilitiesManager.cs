@@ -108,14 +108,14 @@ public class AbilitiesManager : MonoBehaviour
     {
         Array.Clear(abilities, 0, abilities.Length);
 
-        checkPart(list.currentTorsoPrefab);
-        checkPart(list.currentHeadPrefab);
+        CheckPart(list.currentTorsoPrefab);
+        CheckPart(list.currentHeadPrefab);
 
-        checkPart(list.currentLeftArmPrefab);
-        checkPart(list.currentRightArmPrefab);
+        CheckPart(list.currentLeftArmPrefab);
+        CheckPart(list.currentRightArmPrefab);
 
-        checkPart(list.currentLeftLegPrefab);
-        checkPart(list.currentRightLegPrefab);
+        CheckPart(list.currentLeftLegPrefab);
+        CheckPart(list.currentRightLegPrefab);
 
         string returning = "";
 
@@ -131,7 +131,7 @@ public class AbilitiesManager : MonoBehaviour
     }
 
     //Check if the part has an ability, and increment it.
-    void checkPart(GameObject a_part)
+    void CheckPart(GameObject a_part)
     {
         if (a_part == null)
             return;

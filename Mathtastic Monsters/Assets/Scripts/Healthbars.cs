@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class Healthbars : MonoBehaviour
 {
-    float playerHealth;
+    float playerHealth; //what the character's health is actually at.
     float enemyHealth;
 
-    float playerFill;
+    float playerFill; //Where the player's health bar level is at.
     float enemyFill;
 
     public Slider playerBar;
@@ -22,6 +22,7 @@ public class Healthbars : MonoBehaviour
 	}
 	
 	// Update is called once per frame
+    //For each bar it slowly empties out as they take damage, using the difference between the two to determine speed.
 	void Update ()
     {
         if (playerBar != null)
@@ -38,6 +39,7 @@ public class Healthbars : MonoBehaviour
 
 
 
+    //Called at the start of the a fight, setting the character's healthbar to max.
     public void setMaxHealth(float Max, bool player)
     {
         if (player)
@@ -52,6 +54,7 @@ public class Healthbars : MonoBehaviour
 
     }
 
+    //After a character is damaged, set health so we can lerp down to that level.
     internal void changeHealth(bool player, float current)
     {
         if (player)

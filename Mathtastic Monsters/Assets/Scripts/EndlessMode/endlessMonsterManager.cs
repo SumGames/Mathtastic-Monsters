@@ -7,29 +7,29 @@ public class endlessMonsterManager : MonsterManager
 {
 
 
-    internal float Modifier;
-    public float Score;
-    public int levels;
+    internal float Modifier; //Points we're earning every round.
+    public float Score; //Total Points we've earned
+    public int levels; //How many monsters we've beaten.
 
 
-    public int fightsBetweenBreaks = 1;
+    public int fightsBetweenBreaks = 1; //We usually stop after every fight, but a mod will skip that phase
     int fightsSinceBreak = 0;
-    bool skipHeal = false;
+    bool skipHeal = false; //if we aren't taking a break, we aren't getting healed.
 
     public endlessState endlessState;
 
-    public Text Welcome;
+    public Text Welcome; //Changes based off state.
 
     public endlessButton running;
 
     public Text currentScoreText;
 
 
-    public EndlessModifierButton[] modifierButtons;
-    public GameObject[] spots;
-    EndlessModifierButton[] buttons;
+    public EndlessModifierButton[] modifierButtons; //A list of potential buttons that can appear.
+    public GameObject[] spots; //Places for buttons.
+    EndlessModifierButton[] buttons; //Buttons that have appeared.
 
-    bool[] removedLimbs;
+    bool[] removedLimbs; //Parts we can't use anymore.
 
     equipmentList list;
 
@@ -93,6 +93,8 @@ public class endlessMonsterManager : MonsterManager
 
     }
 
+
+    //Reset all stats to initial.
     public void newGame()
     {
         for (int i = 0; i < 6; i++)
@@ -110,7 +112,8 @@ public class endlessMonsterManager : MonsterManager
         fightsSinceBreak = 0;
     }
 
-
+    //Start the next level in the arena.
+    //If the button wasn't null, it's because we started a new level by giving ourselves a penalty.
     internal void NextLevel(EndlessModifierButton button = null)
     {
         if (button != null)
@@ -139,14 +142,12 @@ public class endlessMonsterManager : MonsterManager
     }
 
     internal void PlayerWon()
-    {
-        
-
+    {       
         levels++;
         Score += (Modifier * m_playerAbilities.ReturnExpBoost());
 
         fightsSinceBreak++;
-        if (fightsSinceBreak < fightsBetweenBreaks)
+        if (fightsSinceBreak < fightsBetweenBreaks) //Not picking a button or healing. We're just starting the next round now!
         {
             skipHeal = true;
             NextLevel(null);
@@ -159,7 +160,7 @@ public class endlessMonsterManager : MonsterManager
 
         int[] locked = new int[3];
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) //Run through the buttons, picking out three that aren't locked.
         {
             EndlessModifierButton button = null;
 
@@ -180,7 +181,7 @@ public class endlessMonsterManager : MonsterManager
             buttons[i].transform.localScale = new Vector3(1, 1, 1);
 
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) //Unlock all buttons.
         {
             modifierButtons[locked[i]].locked = false;
         }
@@ -188,12 +189,12 @@ public class endlessMonsterManager : MonsterManager
         DisplayScore();
     }
 
-    public void quitButton()
+    public void quitButton() //Surrender and go to lost screen.
     {
         endlessState.changeState(playStatus.Lost);        
     }
 
-    internal void PlayerLost()
+    internal void PlayerLost() //Player lost. Now we tell them how they did, and if they got any high scores.
     {
         Score += (Modifier * FindObjectOfType<playerAbilities>().ReturnExpBoost());
 
@@ -202,9 +203,7 @@ public class endlessMonsterManager : MonsterManager
         int highScore = highScores.checkLevel(running.Operator, levels, Score, list.playerName);
         int highLevel = highScores.checkScore(running.Operator, Score, levels, list.playerName);
 
-
         save();
-
 
         if (highScore == 0 && highLevel == 0)
         {
@@ -229,10 +228,10 @@ public class endlessMonsterManager : MonsterManager
         }
     }
 
+    //If we bought the penalties, we're going to lose our limbs.
     void RemoveLimbs()
     {
         list = FindObjectOfType<equipmentList>();
-
 
         for (int i = 0; i < 6; i++)
         {
@@ -243,10 +242,9 @@ public class endlessMonsterManager : MonsterManager
         }
 
     }
-
+    //Changes the text as we change states.
     public void DisplayScore()
     {
-
         switch (endlessState.getGameState())
         {
             case playStatus.ArenaHome:
@@ -286,6 +284,7 @@ public class endlessMonsterManager : MonsterManager
         }
     }
 
+    //For non-standard mmodifiers, they're passed to this class and funcion.
     internal void OtherModifiers(modifierType mod, float intensity)
     {
         switch (mod)

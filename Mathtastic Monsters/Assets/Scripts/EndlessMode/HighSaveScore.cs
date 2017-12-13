@@ -26,9 +26,12 @@ public class HighSaveScore : MonoBehaviour
     HighSaveData data;
 
 
-    public int checkLevel(operators op, int newLevel, float andScore, string playerName, int startingI = 0)
+    //Check if we got a level higher than startingIndex
+    //As an example, the external check would be first place, so 0.
+    //If that was true, we'd continually check the score we're replacing is better than any other score.
+    public int checkLevel(operators op, int newLevel, float andScore, string playerName, int startingIndex = 0) 
     {
-        for (int i = startingI; i < 5; i++)
+        for (int i = startingIndex; i < 5; i++)
         {
             if (newLevel > HighLevelLevels[i, (int)op])
             {
@@ -43,9 +46,10 @@ public class HighSaveScore : MonoBehaviour
 
         }
 
-        return -1;
+        return -1; //We got no high score.
     }
 
+    //Above, but for scores.
     public int checkScore(operators op, float newScore, int andLevel, string playerName, int startingI = 0)
     {
         for (int i = startingI; i < 5; i++)
@@ -65,6 +69,7 @@ public class HighSaveScore : MonoBehaviour
         return -1;
     }
 
+    //Return the highest score's stats,
     public string returnBest(operators op, bool Score)
     {
         string returning = "";
@@ -84,7 +89,8 @@ public class HighSaveScore : MonoBehaviour
         return returning;
     }
 
-
+    //Return the Ranking scores.
+    //No for loop because 1st, 2nd is different for each, and we'd need another array for that.
     public string returnRanking(operators op, bool Score)
     {
         int index = 0;
@@ -123,7 +129,7 @@ public class HighSaveScore : MonoBehaviour
     }
 
 
-
+    //Set all scores to zero.
     public void setHighZero()
     {
         HighLevelLevels = new int[5, 6];
@@ -135,13 +141,12 @@ public class HighSaveScore : MonoBehaviour
         highScoreNames = new string[5, 6];
     }
 
+
+    //Save our high scores to the data class, then serialise it.
     public void Save(string playerName)
     {
-
-
         data = new HighSaveData();
 
-        //Setting the equipmentManager's availability flags.
         saveToData();
 
         string fileName = Application.persistentDataPath + "/HighScores.gd";
@@ -173,6 +178,7 @@ public class HighSaveScore : MonoBehaviour
         return false;
     }
 
+    //Convert our 2D arrays to 1D serialisable arrays.
     public void saveToData()
     {
         data.Highest_LevelLevels = new int[5][];
@@ -206,6 +212,7 @@ public class HighSaveScore : MonoBehaviour
         }
     }
 
+    //Converting from 1D arrays to 2D.
     public void loadFromData()
     {
         for (int i = 0; i < HighLevelLevels.GetLength(0); i++)

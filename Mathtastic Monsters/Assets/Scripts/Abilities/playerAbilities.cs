@@ -141,7 +141,7 @@ public class playerAbilities : MonoBehaviour
         }
         return returning;
     }
-
+    //Boost counter damage if we have sand parts.
     internal float EquipmentCounter()
     {
         float returning = 1;
@@ -155,6 +155,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
+    //If we have sandslice parts, we'll gain more counter time.
     internal float CounterTimeModify()
     {
         float returning = 1;
@@ -169,6 +170,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
+    //If we have barkskin parts, we'll take less damage.
     internal float ReduceDamage()
     {
         float returning = 1;
@@ -181,7 +183,7 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
-
+    //If we have Slime parts and take damage, the enemy will take damage themselves.
     internal float BounceDamage()
     {
         float returning = 0;
@@ -194,12 +196,14 @@ public class playerAbilities : MonoBehaviour
         return returning;
     }
 
+    //Return true if we had Five of this piece equipped.
     internal bool DoubleStrike()
     {
         return (abilities.ContainsKey(abilityTypes.DoubleStrike) && abilities[abilityTypes.DoubleStrike] >= 5);
     }
 
 
+    //For active buttons, called when we clicked on them in scene.
     public void useButton(abilityTypes a_type)
     {
         switch (a_type)

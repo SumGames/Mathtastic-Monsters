@@ -2,7 +2,7 @@
 
 public class BossButton : QuizButton
 {
-    public int maxDepth = -3;
+    public int maxDepth = -3; //The level the Subtraction boss will run to when hurt.
 
 
     // Use this for initialization

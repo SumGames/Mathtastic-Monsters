@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    internal void setSlider()
+    internal void SetSlider()
     {
         FindObjectOfType<Slider>().value = PlayerPrefs.GetFloat("Volume", 0.6f);
     }

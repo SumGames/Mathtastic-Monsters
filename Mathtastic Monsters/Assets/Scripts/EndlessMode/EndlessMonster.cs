@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndlessMonster : Monster
 {
 
-
+    //The arena uses different states
     public override void CheckDeath()
     {
         bar.changeHealth(false, health);

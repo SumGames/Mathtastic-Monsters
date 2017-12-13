@@ -3,18 +3,16 @@ using UnityEngine.UI;
 
 public class leaderBoard : MonoBehaviour
 {
-    public Text bestBox;
+    public Text bestBox; //Where we displ our scores.
+    public Text buttonText; //Button where we pick levels or score.
 
     endlessMonsterManager monsterManager;
 
 
 
-    bool showScores;
+    bool showScores; //We either want to display our best scores, or our best levels.
 
-
-    int currentOperator;
-
-    public Text buttonText;
+    int currentOperator; //We have scoreboards for every operator type.    
 
     // Use this for initialization
     void Start ()
@@ -25,7 +23,7 @@ public class leaderBoard : MonoBehaviour
         displayHighScores(0);
 	}
 
-    public void changeType()
+    public void changeType() //Changing from showing levels to scores.
     {
         showScores = !showScores;
         displayHighScores(currentOperator);
@@ -40,7 +38,7 @@ public class leaderBoard : MonoBehaviour
         }
     }
 
-    public void displayHighScores(int ops)
+    public void displayHighScores(int ops) //Displaying best after changing our operator.
     {
         currentOperator = ops;
 

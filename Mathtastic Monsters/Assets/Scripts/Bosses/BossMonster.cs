@@ -5,32 +5,32 @@ using UnityEngine.UI;
 
 public class BossMonster : Monster
 {
-    operators Operator;
-
+    operators Operator; //Our current operator affects not just question, but mechanic/gimmick.
 
     BossButton m_button;
 
+    //We'll make a few answers without the calculator, so this lets us do this without it.
     internal int answerNeeded;
-
-
     public Text questionText;
 
-
+    //Addition boss has a special multiple choice.
     public AdditionContainer additionContainer;
 
     combatFeedback feedback;
 
-    public float depth = -5;
-
-    public float playerTime;
+    float depth = -5;
 
 
 
+    //The lowest point our monster can reach.
     public GameObject subtractionBottom;
 
+
+    //The spot the Addition boss emerges, or any other boss hits.
     public Vector3 highSpot;
 
 
+    //Used in addition with container.
     internal int bossSpacing;
 
 
@@ -48,13 +48,15 @@ public class BossMonster : Monster
 
     }
 
+
+    //Player was wrong or so slow, enemy gets an attack!
     internal override void EnemyAttack()
     {
 
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
-        if (Operator == operators.Subtraction)
+        if (Operator == operators.Subtraction) //Player might not take damage, or enemy might retreat!
         {
             EnemyAttackSubtraction();
             return;
@@ -78,7 +80,7 @@ public class BossMonster : Monster
 
     void EnemyAttackSubtraction()
     {
-        if (depth == 0)
+        if (depth == 0) //Player failed at surface. Player takes no damage, but Timer and enemy retreats.
         {
             feedback.DamageSet(SetFeedback.PlayerMissed);
             depth = m_button.maxDepth;
@@ -86,24 +88,25 @@ public class BossMonster : Monster
             return;
         }
 
-        if (player.returnTimer() <= 0)
+        if (player.returnTimer() <= 0) //Timer hit 0. Player is damaged, enemy submerges and timer resets.
         {
             depth = m_button.maxDepth;
             CreateQuestion();
-            //player.DamagePlayer(1);
-            player.currentHealth--;
+            player.currentHealth -= m_button.MonsterAttack;
             CheckDeath();
 
             feedback.DamageSet(SetFeedback.PlayerHit);
             return;
         }
+        //else player simply got any other answer wrong.
+
         player.DamagePlayer(1);
         feedback.DamageSet(SetFeedback.PlayerHit);
 
         CreateSubtraction(true, false);
     }
 
-
+    //Player attacks monster.
     internal override void MonsterHurt()
     {
         if (feedback == null)
@@ -115,6 +118,7 @@ public class BossMonster : Monster
             return;
         }
 
+        //Addition boss gets harder with each phase.
         if (Operator == operators.Addition)
         {
             m_button.enemyChoices++;
@@ -136,9 +140,10 @@ public class BossMonster : Monster
         CheckDeath();
     }
 
+    //Subtraction boss sometimes ignores damage, but just floats up.
     void SubtractionAttacked()
     {
-        if (depth >= 0)
+        if (depth >= 0) //Depth is 0. We punch him in the face, and he retreats.
         {
             feedback.DamageSet(SetFeedback.EnemyHit);
 
@@ -152,22 +157,20 @@ public class BossMonster : Monster
             CheckDeath();
             return;
         }
-        else if (depth == -1)
+        /*
+        else if (depth == -1) //No damage, but the enemy is at the top!
         {
             feedback.DamageSet(SetFeedback.PlayerDodged);
-
-            playerTime = player.returnTimer();
 
             CreateSubtraction(false, false);
 
             depth = 0;
             return;
         }
-        else
+        */
+        else //No damage, enemy grows closer.
         {
             feedback.DamageSet(SetFeedback.PlayerDodged);
-
-            playerTime = player.returnTimer();
 
             depth++;
 
@@ -177,6 +180,7 @@ public class BossMonster : Monster
 
     }
 
+    //Monster is initiated.
     public override void loadMonster()
     {
         highSpot = monsterSpot.transform.position;
@@ -196,7 +200,7 @@ public class BossMonster : Monster
         Operator = parent.quizRunning.Operator;
 
 
-        if (Operator == operators.Addition)
+        if (Operator == operators.Addition) //Addition resets in difficulty.
         {
             m_button.enemyChoices = 2;
             m_button.enemyAnswerRange = 3;
@@ -234,7 +238,7 @@ public class BossMonster : Monster
 
     }
 
-
+    //Choose the type of question we're going to make from this type.
     public void CreateQuestion()
     {
         additionContainer.gameObject.SetActive(false);
@@ -260,6 +264,8 @@ public class BossMonster : Monster
 
     }
 
+    //Enemy moves from bottom of ocean.
+    //Most new questions won't actually reset the timer.
     void CreateSubtraction(bool EnemyAttackingPhase, bool resetTime)
     {
         int over;
@@ -272,7 +278,7 @@ public class BossMonster : Monster
 
         EnemyAttackingPhase = questions.MakeQuestion(m_button, false, over);
 
-        float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 5));
+        float positionY = Mathf.Lerp(highSpot.y, subtractionBottom.transform.position.y, ((depth * -1) / 3));
 
         monsterSpot.transform.position = new Vector3(monsterSpot.transform.position.x, positionY, monsterSpot.transform.position.z);
 
@@ -284,6 +290,7 @@ public class BossMonster : Monster
         }
     }
 
+    //We're creating a simple question like a normal monster one, but we're going to answer it using the addition container instead of anything else.
     void CreateAddition()
     {        
         additionContainer.gameObject.SetActive(true);

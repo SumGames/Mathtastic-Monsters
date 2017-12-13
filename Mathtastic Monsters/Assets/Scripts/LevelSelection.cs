@@ -5,33 +5,31 @@ using UnityEngine.UI;
 
 public class LevelSelection : MonoBehaviour
 {
-    public questionContainer[] containers;
+    public questionContainer[] containers; //The containers that store all buttons for addition, etc.
 
-
-    public questionContainer currentContainer;
+    public questionContainer currentContainer; //The one the player selected.
 
     equipmentList list;
-
 
     classType currentSubject;
     public int currentLevel;
 
-    int starsUnlocked;
+    int starsUnlocked; //How many stars we have for this level.
 
-    public Button starOne, starTwo, starThree;
+    public Button starOne, starTwo, starThree; //Stars light up if we have their star.
 
-    public Button NormalMode;
+    public Button NormalMode; //Clicked on to start normal mode.
 
-    public Button hardMode;
+    public Button hardMode; //If we have two stars, click on to start the normal mode's "hard mode" button.
 
-    public Button[] jumpButtons;
+    public Button[] jumpButtons; //An array of buttons we can jump between.
 
 
     float swipeTimeNeeded = 0.3f;
     float minSwipeDistance = 50;
 
-    float swipeStartTime;
-    float swipeStartPosition;
+    float swipeStartTime; //Used to calculate how long we held on.
+    float swipeStartPosition;//Where we started moving from. Only need X coord here.
 
 
     // Use this for initialization
@@ -42,7 +40,7 @@ public class LevelSelection : MonoBehaviour
 
     void Update()
     {
-        //if (touch.phase == TouchPhase.Began) { }
+        //Starting a mouse swipe.
         if (Input.GetMouseButtonDown(0))
         {
             swipeStartTime = Time.time;
@@ -50,7 +48,7 @@ public class LevelSelection : MonoBehaviour
 
         }
 
-        //else if (touch.phase == TouchPhase.Ended) { }
+        //Ending mouse swipe
         else if (Input.GetMouseButtonUp(0))
         {
             float endTime = Time.time;
@@ -83,16 +81,16 @@ public class LevelSelection : MonoBehaviour
         }
     
 
-
+        //Handle touch swipe.
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began) //Start touch swipe.
             {
                 swipeStartTime = Time.time;
                 swipeStartPosition = touch.position.x;
             }
-            else if (touch.phase == TouchPhase.Ended)
+            else if (touch.phase == TouchPhase.Ended) //touch ended
             {
                 float endTime = Time.time;
                 float endPos = touch.position.x;
@@ -122,7 +120,7 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
-
+    //Open up the script by setting up variables relative to selection.
     public void setContainer(questionContainer op)
     {
         currentContainer = op;
@@ -136,11 +134,14 @@ public class LevelSelection : MonoBehaviour
         op.gameObject.SetActive(false);
     }
 
+    //Start playing with the button's level..
     public void UseNormalButton()
     {
         currentContainer.buttons[currentLevel].buttonUsed();
         gameObject.SetActive(false);
     }
+
+    //Star our normal button's hard mode.
     public void useHardButton()
     {
         QuizButton button = currentContainer.buttons[currentLevel].hardMode;
@@ -151,6 +152,8 @@ public class LevelSelection : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+
+    //Disable buttons, add names as required.
     void SetButtons()
     {
         NormalMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].name;
@@ -169,6 +172,10 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
+    //Called from player if we won.
+    //If we won, 1 star.
+    //If we were at 100% health, 2 stars.
+    //If it was hardmode, 3.
     public void SetStars(bool fullHealth, QuizButton a_button)
     {
         if (!list)
@@ -201,7 +208,7 @@ public class LevelSelection : MonoBehaviour
         CheckStars(a_button);
     }
 
-
+    //Use our current star levels to light up stars, buttons.
     public void CheckStars(QuizButton a_button)
     {
         if (!list)
@@ -223,14 +230,15 @@ public class LevelSelection : MonoBehaviour
         starThree.interactable = (starsUnlocked >= 3);
         
     }
-
+    //Clicked on a button, so we go up by one.
     public void ChangeIndex(int a_index)
     {
         currentLevel = a_index;
         SetButtons();
         CheckStars(currentContainer.buttons[a_index]);
     }
-
+    //Swiped Right for true, left for false.
+    //Add/Remove 1 from index as needed.
     void IncrementIndex(bool Positive)
     {
         if (Positive)

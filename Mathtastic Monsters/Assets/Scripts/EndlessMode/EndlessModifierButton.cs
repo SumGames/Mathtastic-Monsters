@@ -23,11 +23,15 @@ public class EndlessModifierButton : MonoBehaviour
 {
     bool used;
 
+    //The modifier points we'll get in return for using this.
     public float modifierChange;
 
+
+    //The type of stat we;re changing, and the amount.
     public modifierType modOne;
     public float modOneIntensity;
 
+    //Some buttons might change two.
     public modifierType modTwo;
     public float modTwoIntensity;
 
@@ -51,6 +55,8 @@ public class EndlessModifierButton : MonoBehaviour
 
     }
 
+
+    //Display enum name, and the amount.
     string DisplayText()
     {
         string nameplate = "Mod += " + modifierChange.ToString();
@@ -65,11 +71,13 @@ public class EndlessModifierButton : MonoBehaviour
         return nameplate;
     }
 
+    //We clicked on this button.
     public void buttonUsed()
     {
         endlessMonster.NextLevel(this);
     }
 
+    //Can't have duplicate buttons, can't have negative modifier if our modifier is 0.
     internal bool checkIfLocked(endlessMonsterManager manager)
     {
 

@@ -20,7 +20,7 @@ public class backgroundManager : MonoBehaviour
 
     Sprite newImage;
 
-    // Use this for initialization
+    //Initiate scene by setting background and setting up objects
     internal void startBack(playStatus a_state)
     {
 
@@ -35,14 +35,8 @@ public class backgroundManager : MonoBehaviour
         changeBack(a_state);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-
-
+    //We're changing states, which means changing the background to suit that state.
     public void changeBack(playStatus a_state)
     {
         if (thisScreen == null)

@@ -12,12 +12,13 @@ public class AdditionAnswer : MonoBehaviour
     AdditionContainer container;
     BossMonster monster;
 
-
+    //Return our answer.
     internal int GetAnswer()
     {
         return Answer;
     }
 
+    //Set this answer, then set the button's text.
     internal void SetAnswer(int newAnswer)
     {
         Answer = newAnswer;
@@ -28,6 +29,7 @@ public class AdditionAnswer : MonoBehaviour
         answerText.text = newAnswer.ToString();
     }
 
+    //Player has clicked on button, button checks if the answer was correct, and acts accordingly.
     public void submitAnswer()
     {
         if (!monster)

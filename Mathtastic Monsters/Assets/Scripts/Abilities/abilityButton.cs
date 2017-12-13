@@ -48,7 +48,8 @@ public class abilityButton : MonoBehaviour
         SetButtonActive();
     }
 
-
+    //Most active buttons do not work in some phases.
+    //This checks if they're active and of that type, and if so, changes their status.
     public void DisablePhase(bool enemyPhase)
     {
         switch (thisButton)

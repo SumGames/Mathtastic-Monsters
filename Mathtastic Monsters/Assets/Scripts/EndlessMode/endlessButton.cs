@@ -2,14 +2,6 @@
 {
     public endlessMonsterManager endlessMonster;
 
-
-    // Use this for initialization
-    public override void Start ()
-    {
-		
-	}
-
-
     public override void buttonUsed()
     {
         endlessMonster.running = this;
@@ -18,7 +10,7 @@
         endlessMonster.ToSubjectScreen(this);
     }
 
-
+    //Starting from scratch. enemy has basic stats.
     public void resetToBasic()
     {
         MonsterHealth = 6;
@@ -41,6 +33,7 @@
         enemyAnswerRange = 2;
     }
 
+    //Enemy is going to get stronger now.
     internal void BoostStats(EndlessModifierButton a_button)
     {
         
@@ -54,6 +47,8 @@
 
     }
 
+    //Called in from a button we clicked on.
+    //Will take one stat, and affect it, but give us more points in future.
     public void parseModifier(modifierType type, float intensity)
     {
         switch (type)
