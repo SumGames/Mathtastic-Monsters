@@ -18,8 +18,6 @@ public class ShopManager : MonoBehaviour
 
     public Text Currency;
 
-    bool available;
-    string availableText;
 
     equipmentManager manager;
 
@@ -86,11 +84,7 @@ public class ShopManager : MonoBehaviour
             equipItemButton.interactable = false;
             displayCurrent.text = "Already owned";
         }
-        else if (!available)
-        {
-            equipItemButton.interactable = false;
-            displayCurrent.text = availableText;
-        }
+
         else if (stars < part.starRequired)
         {
             displayCurrent.text = "Not enough Stars. \n Needs " + part.starRequired;

@@ -434,7 +434,6 @@ public class equipmentList : MonoBehaviour
                 caller.rightLegEquipped = legPart;
             }
         }
-
         return ad;
     }
 

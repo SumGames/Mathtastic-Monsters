@@ -37,7 +37,7 @@ public class QuizButton : MonoBehaviour
     public int difficulty; //The amount of base experience given for completing the level.
 
     public int MonsterHealth = 6; //The monster's health.
-    public int MonsterAttack = 1; //Damage the monster will inflict on hit.
+    public float MonsterAttack = 1; //Damage the monster will inflict on hit.
 
 
     internal MonsterManager p_manager; //A link to the quizManager so it can tell it to start.

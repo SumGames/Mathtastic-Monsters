@@ -48,6 +48,8 @@ public class PartsManager : MonoBehaviour
 
     monsterSteps tutorial;
 
+    bool built = false;
+
 
     // Use this for initialization
     internal void Begin()
@@ -55,6 +57,7 @@ public class PartsManager : MonoBehaviour
         abilities = FindObjectOfType<AbilitiesManager>();
 
         list.BuildCharacter(parentOfTorso, this);
+        
 
         currentType = partType.Torso;
         getPart();
@@ -70,6 +73,12 @@ public class PartsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!built && TorsoEquipped!=null)
+        {
+            TorsoEquipped.Animate(Animations.Idle);
+            built = true;
+        }
+
         if (tutorial && tutorial.tutorialStage < 15)
         {
             equipItemButton.interactable = false;
@@ -305,6 +314,8 @@ public class PartsManager : MonoBehaviour
 
         list.BuildCharacter(parentOfTorso, this);
 
+        built = false;
+
     }
 
     public void ModelTrash()
@@ -319,7 +330,6 @@ public class PartsManager : MonoBehaviour
 
 
         list.BuildCharacter(parentOfTorso, this);
-
     }
 
 
@@ -331,6 +341,7 @@ public class PartsManager : MonoBehaviour
             case partType.Torso:
                 currentList = list.listOfTorso;
                 adding = list.listOfTorso[currentIndex];
+                
                 break;
             case partType.Head:
                 currentList = list.listofHeads;

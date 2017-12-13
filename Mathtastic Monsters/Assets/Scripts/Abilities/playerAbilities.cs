@@ -13,13 +13,13 @@ public class playerAbilities : MonoBehaviour
     Player player;
     public Monster enemy;
 
-    public int Crits;
-    public int Counters;
+    public int Crits; //Number of crits we got since starting fight.
+    public int Counters; //Number of counters since star.
 
-    public int attacking;
+    public int attacking; //Number of attacks since in a row since last taken damage. Used in store power. 
 
 
-	// Use this for initialization
+	//initialization, called manually by player when it's ready.
 	internal void Begin () 
     {
         player = gameObject.GetComponent<Player>();
@@ -33,9 +33,10 @@ public class playerAbilities : MonoBehaviour
 
 	}
 
-    //Called every time a monster fight starts.
+    //Called every time a monster fight starts. If fight is a boss, everything is turned off.
     internal void SetupAbilities(bool a_boss)
     {
+        attacking = 0;
 
         Counters = 0;
         Crits = 0;
@@ -48,7 +49,7 @@ public class playerAbilities : MonoBehaviour
 
         abilities.Clear(); //Empty dictionary.
 
-        if (a_boss)
+        if (a_boss) //Abilities are left disabled during a boss fight.
         {
             return;
         }
@@ -84,7 +85,7 @@ public class playerAbilities : MonoBehaviour
     {
         float returning = 1;
 
-        if (abilities.ContainsKey(abilityTypes.Mastery) && abilities[abilityTypes.Mastery] >= 3)
+        if (abilities.ContainsKey(abilityTypes.Mastery) && abilities[abilityTypes.Mastery] >= 3) //If we have More than 3 exp boosting parts...
         {
             int mastery = abilities[abilityTypes.Mastery] % 3;
 
@@ -92,11 +93,9 @@ public class playerAbilities : MonoBehaviour
 
             returning += (Counters * (.10f * mastery));
 
-            Counters = 0;
-            Crits = 0;
         }
 
-        if (abilities.ContainsKey(abilityTypes.Scavenger))
+        if (abilities.ContainsKey(abilityTypes.Scavenger)) //If we have at least 1 scavenger part.
         {
             returning += (abilities[abilityTypes.Scavenger] * .20f);
         }
@@ -105,7 +104,7 @@ public class playerAbilities : MonoBehaviour
     }
 
 
-    //If we're wearing four healthy pieces, increase health by 10.
+    //If we're wearing healthy pieces, we get some health per part.
     internal float EquipmentHealth()
     {
         float returning = 1;
@@ -213,11 +212,13 @@ public class playerAbilities : MonoBehaviour
                 break;
 
             case abilityTypes.StorePower:
-                enemy.abilityDamage(abilities[abilityTypes.StorePower] * 0.05f * player.attackDamage);
+                enemy.abilityDamage(abilities[abilityTypes.StorePower] * 0.05f * player.attackDamage * attacking);
 
                 break;
             case abilityTypes.FireStorm:
-                enemy.abilityDamage((player.attackDamage * (0.35f * abilities[abilityTypes.FireStorm])));
+                float damage = (player.attackDamage * (0.35f * abilities[abilityTypes.FireStorm]));
+                enemy.abilityDamage(damage);
+                Debug.Log(damage);
                 break;
             case abilityTypes.Burn:
                 FindObjectOfType<multipleContainer>().removeSingle();

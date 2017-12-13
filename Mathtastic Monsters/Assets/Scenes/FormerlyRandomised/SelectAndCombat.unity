@@ -955,7 +955,7 @@ GameObject:
   - component: {fileID: 80857872}
   - component: {fileID: 80857871}
   m_Layer: 5
-  m_Name: Add1 (2)
+  m_Name: Boss16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 84581228}
   - component: {fileID: 84581227}
   m_Layer: 5
-  m_Name: Add1 (7)
+  m_Name: Boss11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   maxAnswer: 18
   difficulty: 18
   MonsterHealth: 10
-  MonsterAttack: 1
+  MonsterAttack: 0
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
@@ -1287,6 +1287,7 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  maxDepth: -3
 --- !u!222 &104422975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1307,7 +1308,7 @@ GameObject:
   - component: {fileID: 131801335}
   - component: {fileID: 131801334}
   m_Layer: 5
-  m_Name: Add1 (4)
+  m_Name: Boss17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1811,7 +1812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &230282087
 Transform:
   m_ObjectHideFlags: 0
@@ -1905,6 +1906,7 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  maxDepth: -3
 --- !u!222 &231425601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2940,7 +2942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &366973878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3076,7 +3078,7 @@ GameObject:
   - component: {fileID: 372748580}
   - component: {fileID: 372748579}
   m_Layer: 5
-  m_Name: Add1 (23)
+  m_Name: Boss3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3994,7 +3996,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnswerNeeded: 0
-  answers: []
+  answers:
+  - {fileID: 1016855161}
+  - {fileID: 1517603551}
+  - {fileID: 372748579}
+  - {fileID: 1229986568}
+  - {fileID: 1390318932}
+  - {fileID: 1717645010}
+  - {fileID: 1928467921}
+  - {fileID: 1367922236}
+  - {fileID: 547425963}
+  - {fileID: 2076145360}
+  - {fileID: 84581227}
+  - {fileID: 1296250579}
+  - {fileID: 1704047477}
+  - {fileID: 1401712634}
+  - {fileID: 2004738818}
+  - {fileID: 80857871}
+  - {fileID: 131801334}
   player: {fileID: 574737962}
 --- !u!1 &474163171
 GameObject:
@@ -4093,7 +4112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &487627862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4669,7 +4688,7 @@ GameObject:
   - component: {fileID: 547425964}
   - component: {fileID: 547425963}
   m_Layer: 5
-  m_Name: Add1 (10)
+  m_Name: Boss9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5853,7 +5872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &637968818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6052,7 +6071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &656933865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6465,7 +6484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &702762169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7191,7 +7210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &797579303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8458,7 +8477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &900849001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10009,7 +10028,7 @@ GameObject:
   - component: {fileID: 1016855162}
   - component: {fileID: 1016855161}
   m_Layer: 5
-  m_Name: Add1 (24)
+  m_Name: Boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11281,7 +11300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1156040841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12194,7 +12213,7 @@ GameObject:
   - component: {fileID: 1229986569}
   - component: {fileID: 1229986568}
   m_Layer: 5
-  m_Name: Add1 (26)
+  m_Name: Boss4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12458,6 +12477,7 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  maxDepth: -3
 --- !u!222 &1255812459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12900,7 +12920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1293133567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13032,7 +13052,7 @@ GameObject:
   - component: {fileID: 1296250580}
   - component: {fileID: 1296250579}
   m_Layer: 5
-  m_Name: Add1 (5)
+  m_Name: Boss12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13446,7 +13466,7 @@ GameObject:
   - component: {fileID: 1367922237}
   - component: {fileID: 1367922236}
   m_Layer: 5
-  m_Name: Add1 (28)
+  m_Name: Boss8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13835,7 +13855,7 @@ GameObject:
   - component: {fileID: 1390318933}
   - component: {fileID: 1390318932}
   m_Layer: 5
-  m_Name: Add1 (13)
+  m_Name: Boss5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14080,7 +14100,7 @@ GameObject:
   - component: {fileID: 1401712635}
   - component: {fileID: 1401712634}
   m_Layer: 5
-  m_Name: Add1 (18)
+  m_Name: Boss14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15145,6 +15165,7 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  maxDepth: -3
 --- !u!222 &1499900388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15243,7 +15264,7 @@ GameObject:
   - component: {fileID: 1517603552}
   - component: {fileID: 1517603551}
   m_Layer: 5
-  m_Name: Add1 (25)
+  m_Name: Boss2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17035,7 +17056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1680404663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17534,7 +17555,7 @@ GameObject:
   - component: {fileID: 1704047478}
   - component: {fileID: 1704047477}
   m_Layer: 5
-  m_Name: Add1 (21)
+  m_Name: Boss13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17827,7 +17848,7 @@ GameObject:
   - component: {fileID: 1717645011}
   - component: {fileID: 1717645010}
   m_Layer: 5
-  m_Name: Add1 (27)
+  m_Name: Boss6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19100,7 +19121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1855904308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19836,7 +19857,7 @@ GameObject:
   - component: {fileID: 1928467922}
   - component: {fileID: 1928467921}
   m_Layer: 5
-  m_Name: Add1 (29)
+  m_Name: Boss7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20796,7 +20817,7 @@ GameObject:
   - component: {fileID: 2004738819}
   - component: {fileID: 2004738818}
   m_Layer: 5
-  m_Name: Add1 (15)
+  m_Name: Boss15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21220,7 +21241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2072091758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21343,7 +21364,7 @@ GameObject:
   - component: {fileID: 2076145361}
   - component: {fileID: 2076145360}
   m_Layer: 5
-  m_Name: Add1 (12)
+  m_Name: Boss10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

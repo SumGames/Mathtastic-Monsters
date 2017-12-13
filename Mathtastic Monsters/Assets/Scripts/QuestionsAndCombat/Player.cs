@@ -239,6 +239,8 @@ public class Player : MonoBehaviour
     //Reduce the player's health, with a_damage being the enemy's attack.
     public void DamagePlayer(float a_damage)
     {
+        abilities.attacking = 0;
+
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 

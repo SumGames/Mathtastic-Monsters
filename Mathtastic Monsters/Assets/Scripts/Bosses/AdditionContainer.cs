@@ -18,8 +18,17 @@ public class AdditionContainer : MonoBehaviour
 
     List<int> answersList;
 
+    int spacing;
+
     internal void MultipleAnswers(BossMonster boss, BossButton a_running)
     {
+        spacing = boss.bossSpacing;
+        if (spacing > answers.Length)
+        {
+            spacing = answers.Length;
+        }
+
+
         DisableMultiple();
 
         enemyAnswerNeeded = boss.answerNeeded;
@@ -30,7 +39,7 @@ public class AdditionContainer : MonoBehaviour
         {
             item.SetAnswer(-1);
         }
-        int index = Random.Range(0, answers.Length);
+        int index = Random.Range(0, spacing);
 
 
 
@@ -53,10 +62,10 @@ public class AdditionContainer : MonoBehaviour
 
                 wrongAnswer = enemyAnswerNeeded + range;
             }
-            index = Random.Range(0, answers.Length);
+            index = Random.Range(0, spacing);
             while (answers[index].GetAnswer() != -1)
             {
-                index = Random.Range(0, answers.Length);
+                index = Random.Range(0, spacing);
             }
             answers[index].gameObject.SetActive(true);
             answers[index].SetAnswer(wrongAnswer);
@@ -94,18 +103,10 @@ public class AdditionContainer : MonoBehaviour
 
     void DisableMultiple()
     {
-        if (!gotten)
-            GetChildren();
 
         foreach (AdditionAnswer item in answers)
         {
             item.gameObject.SetActive(false);
         }
-    }
-
-    void GetChildren()
-    {
-        answers = GetComponentsInChildren<AdditionAnswer>();
-        gotten = true;
     }
 }

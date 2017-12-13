@@ -30,6 +30,10 @@ public class BossMonster : Monster
 
     public Vector3 highSpot;
 
+
+    internal int bossSpacing;
+
+
     // Use this for initialization
     void Start()
     {
@@ -77,14 +81,14 @@ public class BossMonster : Monster
         if (depth == 0)
         {
             feedback.DamageSet(SetFeedback.PlayerMissed);
-            depth = -5;
+            depth = m_button.maxDepth;
             CreateQuestion();
             return;
         }
 
         if (player.returnTimer() <= 0)
         {
-            depth = -5;
+            depth = m_button.maxDepth;
             CreateQuestion();
             //player.DamagePlayer(1);
             player.currentHealth--;
@@ -115,6 +119,7 @@ public class BossMonster : Monster
         {
             m_button.enemyChoices++;
             m_button.enemyAnswerRange += 1;
+            bossSpacing += 2;
         }
 
         if (feedback == null)
@@ -135,13 +140,13 @@ public class BossMonster : Monster
     {
         if (depth >= 0)
         {
-            feedback.DamageSet(SetFeedback.PlayerHit);
+            feedback.DamageSet(SetFeedback.EnemyHit);
 
             health--;
 
             bar.changeHealth(false, health);
 
-            depth = -5;
+            depth = m_button.maxDepth;
 
             CreateQuestion();
             CheckDeath();
@@ -195,6 +200,7 @@ public class BossMonster : Monster
         {
             m_button.enemyChoices = 2;
             m_button.enemyAnswerRange = 3;
+            bossSpacing = 4;
         }
 
         if (sprite != null)

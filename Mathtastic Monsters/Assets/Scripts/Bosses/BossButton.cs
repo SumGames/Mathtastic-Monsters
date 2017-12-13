@@ -2,6 +2,8 @@
 
 public class BossButton : QuizButton
 {
+    public int maxDepth = -3;
+
 
     // Use this for initialization
     public override void Start()
