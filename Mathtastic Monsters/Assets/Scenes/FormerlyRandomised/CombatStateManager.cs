@@ -116,7 +116,7 @@ public class CombatStateManager : ParentsStateManager
             case playStatus.Login:
                 list.Save();
                 SceneManager.LoadScene(0);
-                Debug.Log("Login");
+
                 break;
             case playStatus.Start:
                 list.Save();
