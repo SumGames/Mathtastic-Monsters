@@ -134,7 +134,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 459756516}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,9 +164,9 @@ MonoBehaviour:
   Operator: 2
   minAnswer: 6
   maxAnswer: 108
-  difficulty: 24
+  difficulty: 26
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 6
   secondNumberMax: 9
@@ -173,13 +174,85 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 459756517}
 --- !u!222 &1932966
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932961}
+--- !u!1 &1965507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1965508}
+  - component: {fileID: 1965510}
+  - component: {fileID: 1965509}
+  m_Layer: 5
+  m_Name: Multi2_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1965508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 1011991644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00017929077, y: 0.0000104904175}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1965509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 5
+  maxAnswer: 120
+  difficulty: 26
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 5
+  secondNumberMax: 10
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1965510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965507}
 --- !u!1 &9231242
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +563,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.2}
   m_LocalScale: {x: 0.1557432, y: 0.1557432, z: 0.1557432}
-  m_Children: []
+  m_Children:
+  - {fileID: 843822241}
   m_Father: {fileID: 288741781}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -529,7 +603,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 843822242}
 --- !u!222 &41803944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -583,7 +657,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 2071202715}
 --- !u!222 &42479491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -599,7 +673,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15572947, y: 0.15572947, z: 0.15572947}
-  m_Children: []
+  m_Children:
+  - {fileID: 2071202714}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1481,7 +1556,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 566513258}
 --- !u!222 &134946890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1497,7 +1572,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 566513257}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1719,6 +1795,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 6
+--- !u!1 &158523892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 158523893}
+  - component: {fileID: 158523895}
+  - component: {fileID: 158523894}
+  m_Layer: 5
+  m_Name: Sub6_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &158523893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158523892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 266040127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00005173683, y: -0.000010609627}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &158523894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158523892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 49
+  Operator: 1
+  minAnswer: 1
+  maxAnswer: 48
+  difficulty: 25
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &158523895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158523892}
 --- !u!1 &174993630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1945,150 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174993630}
+--- !u!1 &179533772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 179533773}
+  - component: {fileID: 179533775}
+  - component: {fileID: 179533774}
+  m_Layer: 5
+  m_Name: Div3_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &179533773
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179533772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 805332700}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00015640259, y: 0.000052452087}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &179533774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179533772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 5
+  maxNumber: 100
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 31
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 5
+  secondNumberMax: 10
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 10
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 179533774}
+--- !u!222 &179533775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179533772}
+--- !u!1 &180767178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 180767179}
+  - component: {fileID: 180767181}
+  - component: {fileID: 180767180}
+  m_Layer: 5
+  m_Name: Sub7_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &180767179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180767178}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 847322374}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000002861023, y: 0.000005722046}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &180767180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180767178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 49
+  Operator: 1
+  minAnswer: 2
+  maxAnswer: 48
+  difficulty: 27
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &180767181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180767178}
 --- !u!1 &230282086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2452,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15577373, y: 0.15577373, z: 0.15577373}
-  m_Children: []
+  m_Children:
+  - {fileID: 158523893}
   m_Father: {fileID: 659668826}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2199,7 +2492,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 158523894}
 --- !u!222 &266040131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2449,6 +2742,78 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224587627883675248, guid: 7d5394e556008834994e831b06e0ceeb,
     type: 2}
   m_PrefabInternal: {fileID: 1383442850}
+--- !u!1 &320723821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 320723822}
+  - component: {fileID: 320723824}
+  - component: {fileID: 320723823}
+  m_Layer: 5
+  m_Name: Add2_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &320723822
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320723821}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000048990536}
+  m_LocalScale: {x: 1.00007, y: 1.0000706, z: 1.0000706}
+  m_Children: []
+  m_Father: {fileID: 1012138162}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00017929077, y: 0.00006201863}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &320723823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320723821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 5
+  minNumber: 1
+  maxNumber: 10
+  Operator: 0
+  minAnswer: 11
+  maxAnswer: 19
+  difficulty: 16
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &320723824
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320723821}
 --- !u!1 &329710925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,7 +4038,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1779347334}
 --- !u!222 &420629065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3689,7 +4054,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 1779347333}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3888,6 +4254,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436551933}
+--- !u!1 &459756515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 459756516}
+  - component: {fileID: 459756518}
+  - component: {fileID: 459756517}
+  m_Layer: 5
+  m_Name: Multi6_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &459756516
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459756515}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1932962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00024557114, y: 0.00005340576}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &459756517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459756515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 6
+  maxAnswer: 108
+  difficulty: 31
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 6
+  secondNumberMax: 9
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &459756518
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459756515}
 --- !u!1 &468417858
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +5252,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 547425961}
+--- !u!1 &566513256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 566513257}
+  - component: {fileID: 566513259}
+  - component: {fileID: 566513258}
+  m_Layer: 5
+  m_Name: Multi1_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &566513257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566513256}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 134946891}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00008392334, y: 0.00004386902}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &566513258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566513256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 1
+  maxAnswer: 24
+  difficulty: 25
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 1
+  secondNumberMax: 2
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &566513259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566513256}
 --- !u!1 &568349161
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5964,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 1103991473}
   m_Father: {fileID: 659668826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5493,7 +6004,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1103991474}
 --- !u!222 &602279656
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6007,7 +6518,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1257189537}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6046,13 +6558,85 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1257189538}
 --- !u!222 &647072815
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647072810}
+--- !u!1 &652766554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 652766555}
+  - component: {fileID: 652766557}
+  - component: {fileID: 652766556}
+  m_Layer: 5
+  m_Name: Add7_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &652766555
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652766554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0001961, y: 1.0001961, z: 1.0001961}
+  m_Children: []
+  m_Father: {fileID: 1673962225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00025367737, y: -0.0000014305115}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &652766556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652766554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 20
+  minNumber: 1
+  maxNumber: 48
+  Operator: 0
+  minAnswer: 21
+  maxAnswer: 49
+  difficulty: 23
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &652766557
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652766554}
 --- !u!1 &656933864
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,7 +6884,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1309326883}
 --- !u!222 &669584559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6316,7 +6900,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15572947, y: 0.15572947, z: 0.15572947}
-  m_Children: []
+  m_Children:
+  - {fileID: 1309326882}
   m_Father: {fileID: 659668826}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6730,6 +7315,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709084957}
+--- !u!1 &726148640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 726148641}
+  - component: {fileID: 726148643}
+  - component: {fileID: 726148642}
+  m_Layer: 5
+  m_Name: Multi7_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &726148641
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726148640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650553952}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00019836426, y: -0.0000038146973}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &726148642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726148640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 7
+  maxAnswer: 96
+  difficulty: 33
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 7
+  secondNumberMax: 8
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &726148643
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 726148640}
 --- !u!1 &726653363
 GameObject:
   m_ObjectHideFlags: 0
@@ -6871,7 +7528,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.2}
   m_LocalScale: {x: 0.1557432, y: 0.1557432, z: 0.1557432}
-  m_Children: []
+  m_Children:
+  - {fileID: 1893550541}
   m_Father: {fileID: 288741781}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6910,7 +7568,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1893550542}
 --- !u!222 &740681441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7364,7 +8022,7 @@ MonoBehaviour:
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 179533774}
 --- !u!222 &805332699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7380,7 +8038,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 179533773}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7415,7 +8074,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1408469342}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7454,7 +8114,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 9
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1408469343}
 --- !u!222 &830498473
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7775,6 +8435,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 841958906}
+--- !u!1 &843822240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 843822241}
+  - component: {fileID: 843822243}
+  - component: {fileID: 843822242}
+  m_Layer: 5
+  m_Name: Add8_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &843822241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843822240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0001961, y: 1.0001961, z: 1.0001961}
+  m_Children: []
+  m_Father: {fileID: 41803940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00004386902, y: -0.00006866455}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &843822242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843822240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 10
+  minNumber: 1
+  maxNumber: 48
+  Operator: 0
+  minAnswer: 21
+  maxAnswer: 49
+  difficulty: 25
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &843822243
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 843822240}
 --- !u!1 &847322373
 GameObject:
   m_ObjectHideFlags: 0
@@ -7801,7 +8533,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15577373, y: 0.15577373, z: 0.15577373}
-  m_Children: []
+  m_Children:
+  - {fileID: 180767179}
   m_Father: {fileID: 659668826}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7840,7 +8573,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 180767180}
 --- !u!222 &847322378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8095,7 +8828,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 963259404}
 --- !u!222 &877657527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8111,7 +8844,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 963259403}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8440,7 +9174,7 @@ MonoBehaviour:
   Operator: 2
   minAnswer: 7
   maxAnswer: 108
-  difficulty: 24
+  difficulty: 34
   MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
@@ -8969,7 +9703,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1379293375}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8998,9 +9733,9 @@ MonoBehaviour:
   Operator: 2
   minAnswer: 11
   maxAnswer: 144
-  difficulty: 24
+  difficulty: 32
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 11
   secondNumberMax: 12
@@ -9008,7 +9743,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1379293376}
 --- !u!222 &945962639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9116,6 +9851,222 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterManager: {fileID: 0}
+--- !u!1 &963259402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 963259403}
+  - component: {fileID: 963259405}
+  - component: {fileID: 963259404}
+  m_Layer: 5
+  m_Name: Div2_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &963259403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963259402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 877657528}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00017929077, y: 0.0000166893}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &963259404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963259402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 5
+  maxNumber: 100
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 30
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 5
+  secondNumberMax: 10
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &963259405
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963259402}
+--- !u!1 &969472088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 969472089}
+  - component: {fileID: 969472091}
+  - component: {fileID: 969472090}
+  m_Layer: 5
+  m_Name: Add4_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &969472089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969472088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000048991336}
+  m_LocalScale: {x: 1.0002843, y: 1.0002843, z: 1.0002843}
+  m_Children: []
+  m_Father: {fileID: 1921638466}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00020980835, y: 0.0000038146973}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &969472090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969472088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 5
+  minNumber: 1
+  maxNumber: 10
+  Operator: 0
+  minAnswer: 10
+  maxAnswer: 19
+  difficulty: 18
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &969472091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969472088}
+--- !u!1 &975259589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 975259590}
+  - component: {fileID: 975259592}
+  - component: {fileID: 975259591}
+  m_Layer: 5
+  m_Name: Div1_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &975259590
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975259589}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 2138070413}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00008392334, y: -0.0000076293945}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &975259591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975259589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 20
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 29
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 1
+  secondNumberMax: 2
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &975259592
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975259589}
 --- !u!1 &977039559
 GameObject:
   m_ObjectHideFlags: 0
@@ -9337,7 +10288,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 1456059766}
   m_Father: {fileID: 288741781}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9367,16 +10319,16 @@ MonoBehaviour:
   minAnswer: 10
   maxAnswer: 19
   difficulty: 12
-  MonsterHealth: 10
-  MonsterAttack: 1
+  MonsterHealth: 20
+  MonsterAttack: 2
   preventRounding: 1
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
-  enemyChoices: 3
-  enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 1456059767}
 --- !u!222 &986227753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9670,7 +10622,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15577373, y: 0.15577373, z: 0.15577373}
-  m_Children: []
+  m_Children:
+  - {fileID: 2058854667}
   m_Father: {fileID: 659668826}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9709,7 +10662,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 2058854668}
 --- !u!222 &999825831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9837,7 +10790,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1965509}
 --- !u!222 &1011991643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9853,7 +10806,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 1965508}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9888,7 +10842,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 320723822}
   m_Father: {fileID: 288741781}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9927,7 +10882,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 320723823}
 --- !u!222 &1012138166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10483,6 +11438,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonsterManager: {fileID: 0}
+--- !u!1 &1103991472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1103991473}
+  - component: {fileID: 1103991475}
+  - component: {fileID: 1103991474}
+  m_Layer: 5
+  m_Name: Sub2_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1103991473
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103991472}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0002675, y: 1.0002681, z: 1.0002681}
+  m_Children: []
+  m_Father: {fileID: 602279652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00011444092, y: 0.000039577484}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1103991474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103991472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 19
+  Operator: 1
+  minAnswer: 10
+  maxAnswer: 18
+  difficulty: 20
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1103991475
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103991472}
 --- !u!1 &1107416354
 GameObject:
   m_ObjectHideFlags: 0
@@ -10628,7 +11655,7 @@ GameObject:
   - component: {fileID: 1111345918}
   - component: {fileID: 1111345915}
   m_Layer: 5
-  m_Name: Hard Addition, 1
+  m_Name: Add1_Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10666,22 +11693,22 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
-  minNumber: 100
-  maxNumber: 200
+  levelTime: 5
+  minNumber: 1
+  maxNumber: 8
   Operator: 0
-  minAnswer: 100
-  maxAnswer: 400
-  difficulty: 10
-  MonsterHealth: 1
-  MonsterAttack: 8
+  minAnswer: 2
+  maxAnswer: 9
+  difficulty: 15
+  MonsterHealth: 20
+  MonsterAttack: 2
   preventRounding: 0
   secondNumberMin: 0
   secondNumberMax: 0
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 5
-  enemyChoices: 3
-  enemyAnswerRange: 5
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
   hardMode: {fileID: 0}
 --- !u!222 &1111345918
 CanvasRenderer:
@@ -11016,6 +12043,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1128181899}
+--- !u!1 &1135233059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1135233060}
+  - component: {fileID: 1135233062}
+  - component: {fileID: 1135233061}
+  m_Layer: 5
+  m_Name: Multi8_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1135233060
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135233059}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1136386983}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00021362305, y: 0.00006484985}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1135233061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135233059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 7
+  maxAnswer: 96
+  difficulty: 35
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 7
+  secondNumberMax: 8
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1135233062
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135233059}
 --- !u!1 &1135732316
 GameObject:
   m_ObjectHideFlags: 0
@@ -11120,7 +12219,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1135233060}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11149,9 +12249,9 @@ MonoBehaviour:
   Operator: 2
   minAnswer: 7
   maxAnswer: 96
-  difficulty: 24
+  difficulty: 30
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 8
@@ -11159,7 +12259,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1135233061}
 --- !u!222 &1136386987
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11611,6 +12711,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160246443}
+--- !u!1 &1162192728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1162192729}
+  - component: {fileID: 1162192731}
+  - component: {fileID: 1162192730}
+  m_Layer: 5
+  m_Name: Div4_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1162192729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162192728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048991336}
+  m_LocalScale: {x: 1.0002803, y: 1.0002803, z: 1.0002803}
+  m_Children: []
+  m_Father: {fileID: 1242327718}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00019337237, y: -0.0000038146973}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1162192730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162192728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 3
+  maxNumber: 60
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 32
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 3
+  secondNumberMax: 6
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1162192731
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162192728}
 --- !u!1 &1172944111
 GameObject:
   m_ObjectHideFlags: 0
@@ -11998,7 +13170,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.2}
   m_LocalScale: {x: 0.1557432, y: 0.1557432, z: 0.1557432}
-  m_Children: []
+  m_Children:
+  - {fileID: 1908872061}
   m_Father: {fileID: 288741781}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12037,7 +13210,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1908872062}
 --- !u!222 &1219344386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12384,7 +13557,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 3
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1162192730}
 --- !u!222 &1242327717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12400,7 +13573,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15572947, y: 0.15572947, z: 0.15572947}
-  m_Children: []
+  m_Children:
+  - {fileID: 1162192729}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12556,6 +13730,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1256074513}
+--- !u!1 &1257189536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1257189537}
+  - component: {fileID: 1257189539}
+  - component: {fileID: 1257189538}
+  m_Layer: 5
+  m_Name: Div7_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1257189537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257189536}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 647072811}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000076293945, y: -0.000071525574}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1257189538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257189536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 4
+  maxNumber: 80
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 37
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 4
+  secondNumberMax: 8
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1257189539
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257189536}
 --- !u!1 &1264111428
 GameObject:
   m_ObjectHideFlags: 0
@@ -12776,7 +14022,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 2046631005}
   m_Father: {fileID: 659668826}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12815,7 +14062,7 @@ MonoBehaviour:
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 2046631006}
 --- !u!222 &1273667092
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13176,6 +14423,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296250577}
+--- !u!1 &1309326881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1309326882}
+  - component: {fileID: 1309326884}
+  - component: {fileID: 1309326883}
+  m_Layer: 5
+  m_Name: Sub4_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1309326882
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309326881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0002843, y: 1.0002843, z: 1.0002843}
+  m_Children: []
+  m_Father: {fileID: 669584560}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00020599365, y: 0.00005340576}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1309326883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309326881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 19
+  Operator: 1
+  minAnswer: 1
+  maxAnswer: 18
+  difficulty: 22
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1309326884
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309326881}
 --- !u!1 &1322934934
 GameObject:
   m_ObjectHideFlags: 0
@@ -13724,6 +15043,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1368933594}
+--- !u!1 &1379293374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1379293375}
+  - component: {fileID: 1379293377}
+  - component: {fileID: 1379293376}
+  m_Layer: 5
+  m_Name: Multi9_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1379293375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379293374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945962635}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000289917, y: 0.000038444996}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1379293376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379293374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 11
+  maxAnswer: 144
+  difficulty: 37
+  MonsterHealth: 15
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 11
+  secondNumberMax: 12
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1379293377
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379293374}
 --- !u!1001 &1383442850
 Prefab:
   m_ObjectHideFlags: 0
@@ -14224,6 +15615,150 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1401712632}
+--- !u!1 &1407845462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1407845463}
+  - component: {fileID: 1407845465}
+  - component: {fileID: 1407845464}
+  m_Layer: 5
+  m_Name: Div6_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1407845463
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407845462}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822298805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1407845464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407845462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 35
+  minNumber: 4
+  maxNumber: 80
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 35
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 4
+  secondNumberMax: 8
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1407845465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1407845462}
+--- !u!1 &1408469341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1408469342}
+  - component: {fileID: 1408469344}
+  - component: {fileID: 1408469343}
+  m_Layer: 5
+  m_Name: Div8_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1408469342
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408469341}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 830498469}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000102996826, y: -0.000015258789}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1408469343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408469341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 35
+  minNumber: 9
+  maxNumber: 180
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 39
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 9
+  secondNumberMax: 9
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1408469344
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408469341}
 --- !u!1 &1421154643
 GameObject:
   m_ObjectHideFlags: 0
@@ -14707,6 +16242,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448555900}
+--- !u!1 &1456059765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1456059766}
+  - component: {fileID: 1456059768}
+  - component: {fileID: 1456059767}
+  m_Layer: 5
+  m_Name: Add3_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456059766
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456059765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000048990536}
+  m_LocalScale: {x: 1.0002675, y: 1.0002681, z: 1.0002681}
+  m_Children: []
+  m_Father: {fileID: 986227749}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000102996826, y: 0.00002670288}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1456059767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456059765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 0
+  minNumber: 1
+  maxNumber: 10
+  Operator: 0
+  minAnswer: 10
+  maxAnswer: 19
+  difficulty: 17
+  MonsterHealth: 10
+  MonsterAttack: 1
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 10
+  enemyChoices: 3
+  enemyAnswerRange: 5
+  hardMode: {fileID: 0}
+--- !u!222 &1456059768
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456059765}
 --- !u!1 &1472479557
 GameObject:
   m_ObjectHideFlags: 0
@@ -15051,7 +16658,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1727928564}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15090,7 +16698,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 11
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1727928565}
 --- !u!222 &1496906212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16154,6 +17762,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1585328117}
+--- !u!1 &1605281340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1605281341}
+  - component: {fileID: 1605281343}
+  - component: {fileID: 1605281342}
+  m_Layer: 5
+  m_Name: Sub1_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1605281341
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605281340}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0002675, y: 1.0002681, z: 1.0002681}
+  m_Children: []
+  m_Father: {fileID: 1994220174}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00018310547, y: -0.000034332275}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1605281342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605281340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 9
+  Operator: 1
+  minAnswer: 1
+  maxAnswer: 8
+  difficulty: 19
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1605281343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605281340}
 --- !u!114 &1612767998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16468,7 +18148,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 726148641}
   m_Father: {fileID: 2069570669}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16497,9 +18178,9 @@ MonoBehaviour:
   Operator: 2
   minAnswer: 7
   maxAnswer: 96
-  difficulty: 24
+  difficulty: 28
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
   secondNumberMin: 7
   secondNumberMax: 8
@@ -16507,7 +18188,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 726148642}
 --- !u!222 &1650553956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16836,7 +18517,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.2}
   m_LocalScale: {x: 0.1557432, y: 0.1557432, z: 0.1557432}
-  m_Children: []
+  m_Children:
+  - {fileID: 652766555}
   m_Father: {fileID: 288741781}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16875,7 +18557,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 652766556}
 --- !u!222 &1673962229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17832,6 +19514,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704393343}
+--- !u!1 &1708806999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1708807000}
+  - component: {fileID: 1708807002}
+  - component: {fileID: 1708807001}
+  m_Layer: 5
+  m_Name: Sub8_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1708807000
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708806999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032169420}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00015258789, y: 0.000020980835}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1708807001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708806999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 49
+  Operator: 1
+  minAnswer: 2
+  maxAnswer: 48
+  difficulty: 29
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1708807002
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708806999}
 --- !u!1 &1717645008
 GameObject:
   m_ObjectHideFlags: 0
@@ -18295,6 +20049,150 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725639566}
+--- !u!1 &1727928563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1727928564}
+  - component: {fileID: 1727928566}
+  - component: {fileID: 1727928565}
+  m_Layer: 5
+  m_Name: Div9_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1727928564
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727928563}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1496906208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000059127808, y: -0.000091552734}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1727928565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727928563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 35
+  minNumber: 11
+  maxNumber: 220
+  Operator: 3
+  minAnswer: 1
+  maxAnswer: 20
+  difficulty: 41
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 11
+  secondNumberMax: 12
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1727928566
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727928563}
+--- !u!1 &1779347332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1779347333}
+  - component: {fileID: 1779347335}
+  - component: {fileID: 1779347334}
+  m_Layer: 5
+  m_Name: Multi3_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1779347333
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779347332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048990536}
+  m_LocalScale: {x: 1.0002636, y: 1.0002639, z: 1.0002639}
+  m_Children: []
+  m_Father: {fileID: 420629066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00009918213, y: -0.000052452087}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1779347334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779347332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 5
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 5
+  maxAnswer: 120
+  difficulty: 27
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 5
+  secondNumberMax: 10
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1779347335
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779347332}
 --- !u!1 &1785314451
 GameObject:
   m_ObjectHideFlags: 0
@@ -18702,7 +20600,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19998}
   m_LocalScale: {x: 0.1557731, y: 0.1557731, z: 0.1557731}
-  m_Children: []
+  m_Children:
+  - {fileID: 1407845463}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18741,7 +20640,7 @@ MonoBehaviour:
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1407845464}
 --- !u!222 &1822298809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19623,6 +21522,78 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890865919}
+--- !u!1 &1893550540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1893550541}
+  - component: {fileID: 1893550543}
+  - component: {fileID: 1893550542}
+  m_Layer: 5
+  m_Name: Add6_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1893550541
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1893550540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0001961, y: 1.0001961, z: 1.0001961}
+  m_Children: []
+  m_Father: {fileID: 740681437}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00013828278, y: -0.000020980835}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893550542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1893550540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 20
+  minNumber: 1
+  maxNumber: 40
+  Operator: 0
+  minAnswer: 19
+  maxAnswer: 49
+  difficulty: 21
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1893550543
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1893550540}
 --- !u!1 &1897829240
 GameObject:
   m_ObjectHideFlags: 0
@@ -19769,6 +21740,78 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1902509502}
+--- !u!1 &1908872060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1908872061}
+  - component: {fileID: 1908872063}
+  - component: {fileID: 1908872062}
+  m_Layer: 5
+  m_Name: Add9_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1908872061
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908872060}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0001961, y: 1.0001961, z: 1.0001961}
+  m_Children: []
+  m_Father: {fileID: 1219344382}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: -0.000030517578}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1908872062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908872060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 20
+  minNumber: 20
+  maxNumber: 79
+  Operator: 0
+  minAnswer: 40
+  maxAnswer: 99
+  difficulty: 27
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &1908872063
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908872060}
 --- !u!1 &1921638461
 GameObject:
   m_ObjectHideFlags: 0
@@ -19816,7 +21859,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 969472090}
 --- !u!222 &1921638465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19832,7 +21875,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15572947, y: 0.15572947, z: 0.15572947}
-  m_Children: []
+  m_Children:
+  - {fileID: 969472089}
   m_Father: {fileID: 288741781}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20533,7 +22577,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1605281342}
 --- !u!222 &1994220173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20549,7 +22593,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 1605281341}
   m_Father: {fileID: 659668826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21110,7 +23155,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15577373, y: 0.15577373, z: 0.15577373}
-  m_Children: []
+  m_Children:
+  - {fileID: 1708807000}
   m_Father: {fileID: 659668826}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21149,13 +23195,157 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 1708807001}
 --- !u!222 &2032169424
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032169419}
+--- !u!1 &2046631004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2046631005}
+  - component: {fileID: 2046631007}
+  - component: {fileID: 2046631006}
+  m_Layer: 5
+  m_Name: Sub3_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2046631005
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046631004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0002675, y: 1.0002681, z: 1.0002681}
+  m_Children: []
+  m_Father: {fileID: 1273667088}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0.00005340576}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2046631006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046631004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 5
+  minNumber: 1
+  maxNumber: 19
+  Operator: 1
+  minAnswer: 10
+  maxAnswer: 18
+  difficulty: 21
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 1
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 10
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &2046631007
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046631004}
+--- !u!1 &2058854666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2058854667}
+  - component: {fileID: 2058854669}
+  - component: {fileID: 2058854668}
+  m_Layer: 5
+  m_Name: Sub9_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058854667
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058854666}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 999825827}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00020217896, y: -0.000002861023}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2058854668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058854666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 25
+  minNumber: 1
+  maxNumber: 99
+  Operator: 1
+  minAnswer: 2
+  maxAnswer: 98
+  difficulty: 31
+  MonsterHealth: 25
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 0
+  secondNumberMax: 0
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 25
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &2058854669
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058854666}
 --- !u!1 &2069570668
 GameObject:
   m_ObjectHideFlags: 0
@@ -21220,6 +23410,78 @@ MonoBehaviour:
   completedQuestions: 0
   type: 2
   levelSelection: {fileID: 977039561}
+--- !u!1 &2071202713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2071202714}
+  - component: {fileID: 2071202716}
+  - component: {fileID: 2071202715}
+  m_Layer: 5
+  m_Name: Multi4_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071202714
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071202713}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000048991336}
+  m_LocalScale: {x: 1.0002803, y: 1.0002803, z: 1.0002803}
+  m_Children: []
+  m_Father: {fileID: 42479492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -0.000034332275}
+  m_SizeDelta: {x: 187.2, y: 48.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071202715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071202713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 2
+  levelTime: 15
+  minNumber: 1
+  maxNumber: 12
+  Operator: 2
+  minAnswer: 4
+  maxAnswer: 48
+  difficulty: 28
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondNumberMin: 4
+  secondNumberMax: 8
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+--- !u!222 &2071202716
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071202713}
 --- !u!1 &2072091757
 GameObject:
   m_ObjectHideFlags: 0
@@ -22068,7 +24330,7 @@ MonoBehaviour:
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 2
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 975259591}
 --- !u!222 &2138070412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22084,7 +24346,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.19999}
   m_LocalScale: {x: 0.15573208, y: 0.155732, z: 0.155732}
-  m_Children: []
+  m_Children:
+  - {fileID: 975259590}
   m_Father: {fileID: 1045945878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
