@@ -24,6 +24,7 @@ public class questionManager : MonoBehaviour
         float[] numbers = new float[a_running.variableCount];
         float answer = -2;
         string oper = "";
+        bool first;
 
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
@@ -51,9 +52,7 @@ public class questionManager : MonoBehaviour
                 break;
             case operators.Multiplication:
                 //If operator is 'x', second number is one of two possible numbers
-
-
-                bool first = Random.value <= 0.5f;
+                first = Random.value <= 0.5f;
 
                 if (first)
                     numbers[1] = a_running.secondNumberMin;
@@ -67,8 +66,13 @@ public class questionManager : MonoBehaviour
                 break;
 
             case operators.Division:
-                answer = numbers[0];
-                numbers[1] = (int)UnityEngine.Random.Range(a_running.secondNumberMin, (a_running.secondNumberMax + 1));
+                first = Random.value <= 0.5f;
+
+                if (first)
+                    numbers[1] = a_running.secondNumberMin;
+                else
+                    numbers[1] = a_running.secondNumberMax;
+
                 answer = numbers[0] / numbers[1];
                 oper = "/ ";
                 break;

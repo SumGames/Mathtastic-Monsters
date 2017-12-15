@@ -98,7 +98,6 @@ public class multipleContainer : MonoBehaviour
         }
         if (!resetTime)
         {
-            Debug.Log("Not resetting");
             return true;
         }
 
@@ -106,7 +105,6 @@ public class multipleContainer : MonoBehaviour
         if (a_running && resetTime)
         {
             player.SetTime(enemyPhase, a_running.enemPhaseTime);
-            Debug.Log("reset time");
         }
 
         player.EndTurn(enemyPhase);

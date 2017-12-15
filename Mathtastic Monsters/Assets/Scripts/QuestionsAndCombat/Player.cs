@@ -184,10 +184,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.Log("??");
-        }
     }
 
     //Calculate player's damage and return it.

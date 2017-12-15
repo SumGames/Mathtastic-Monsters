@@ -68,6 +68,9 @@ public class StateManager : ParentsStateManager
             case operators.Multiplication:
                 changeState(playStatus.Multiplication);
                 break;
+            case operators.Division:
+                changeState(playStatus.Division);
+                break;
             default:
                 changeState(playStatus.MathFortress);
                 break;                
