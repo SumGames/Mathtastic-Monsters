@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6045,7 +6045,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
 --- !u!222 &647072815
 CanvasRenderer:
@@ -6822,7 +6822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &727568995
 Transform:
   m_ObjectHideFlags: 0
@@ -7181,7 +7181,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 11
   hardMode: {fileID: 0}
 --- !u!222 &780108259
 CanvasRenderer:
@@ -7363,7 +7363,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 5
   hardMode: {fileID: 0}
 --- !u!222 &805332699
 CanvasRenderer:
@@ -7453,7 +7453,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 9
   hardMode: {fileID: 0}
 --- !u!222 &830498473
 CanvasRenderer:
@@ -8094,7 +8094,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 4
+  enemyAnswerRange: 5
   hardMode: {fileID: 0}
 --- !u!222 &877657527
 CanvasRenderer:
@@ -12383,7 +12383,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 4
+  enemyAnswerRange: 3
   hardMode: {fileID: 0}
 --- !u!222 &1242327717
 CanvasRenderer:
@@ -15089,7 +15089,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 11
   hardMode: {fileID: 0}
 --- !u!222 &1496906212
 CanvasRenderer:
@@ -18590,7 +18590,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 3
   hardMode: {fileID: 0}
 --- !u!222 &1796357279
 CanvasRenderer:
@@ -18740,7 +18740,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
 --- !u!222 &1822298809
 CanvasRenderer:
@@ -20592,7 +20592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378.26743, y: -282}
+  m_AnchoredPosition: {x: 378.26743, y: -313}
   m_SizeDelta: {x: 321.8, y: 68.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995756101
@@ -22067,7 +22067,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
-  enemyAnswerRange: 4
+  enemyAnswerRange: 2
   hardMode: {fileID: 0}
 --- !u!222 &2138070412
 CanvasRenderer:
