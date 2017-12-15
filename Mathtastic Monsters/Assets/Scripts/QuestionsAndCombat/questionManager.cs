@@ -32,6 +32,8 @@ public class questionManager : MonoBehaviour
             numbers[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
         }
 
+        float multiple = 1;
+
         switch (a_running.Operator)
         {
             case operators.Addition:
@@ -59,6 +61,7 @@ public class questionManager : MonoBehaviour
                 else
                     numbers[1] = a_running.secondNumberMax;
 
+                multiple = numbers[1];
 
 
                 answer = numbers[0] * numbers[1];
@@ -72,6 +75,8 @@ public class questionManager : MonoBehaviour
                     numbers[1] = a_running.secondNumberMin;
                 else
                     numbers[1] = a_running.secondNumberMax;
+
+                multiple = numbers[1];
 
                 answer = numbers[0] / numbers[1];
                 oper = "/ ";
@@ -101,7 +106,7 @@ public class questionManager : MonoBehaviour
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide, multiple);
 
         string answerWords;
 
@@ -343,7 +348,7 @@ public class questionManager : MonoBehaviour
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide, 1);
 
         string answerWords;
 

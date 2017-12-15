@@ -56,7 +56,7 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, int overRide)
+    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, int overRide, float multiple)
     {
         enemyAnswerNeeded = answer;
         if (overRide == 0)
@@ -88,7 +88,7 @@ public class multipleContainer : MonoBehaviour
         {
             enemyPhase = true;
             attacks = attacksPherPhase;
-            MultipleAnswers(a_running);
+            MultipleAnswers(a_running, multiple);
         }
         else
         {
@@ -112,7 +112,7 @@ public class multipleContainer : MonoBehaviour
         return enemyPhase;
     }
 
-    void MultipleAnswers(QuizButton a_running)
+    void MultipleAnswers(QuizButton a_running, float multiple)
     {
 
 
@@ -141,10 +141,10 @@ public class multipleContainer : MonoBehaviour
         for (int i = 1; i < a_running.enemyChoices; i++)
         {
             int wrongAnswer = -3;
-            while (wrongAnswer <= a_running.minAnswer || wrongAnswer >= a_running.maxAnswer || CheckMultiple(a_running, wrongAnswer))
+            while (wrongAnswer <= a_running.minAnswer || CheckMultiple(a_running, wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
-                wrongAnswer = enemyAnswerNeeded + range;
+                wrongAnswer = enemyAnswerNeeded + (int)(range * multiple);
             }
 
             index = Random.Range(0, 6);
