@@ -43,25 +43,16 @@ public class CombatStateManager : ParentsStateManager
     void Start()
     {
         base.Find();
-
-        gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
-
-
         player.parent = monsterM;
         player.enemy = enemy;
         player.manager = this;
-
         enemy.manager = this;
         enemy.parent = monsterM;
         enemy.player = player;
-
-
         monsterM.stateManager = this;
         monsterM.monster = enemy;
         monsterM.player = player;
-
         list = FindObjectOfType<equipmentList>();
-
         if (list.playerName == "")
         {
             changeState(playStatus.Splash);
@@ -126,32 +117,26 @@ public class CombatStateManager : ParentsStateManager
                 checkLevelsAvailable();
                 monsterM.quizRunning = null;
                 subjectContainer.SetActive(true);
-                gameInstruction.text = "Select a subject!";
                 break;
             case playStatus.Addition:
                 awakenSubject(additionSelection);
-                additionSelection.SetActive(true);
-                gameInstruction.text = "Select a level!";                
+                additionSelection.SetActive(true);            
                 break;
             case playStatus.Subtraction:
                 awakenSubject(subtractionSelection);
                 subtractionSelection.SetActive(true);
-                gameInstruction.text = "Select a level!";
                 break;
             case playStatus.Multiplication:
                 awakenSubject(multiplicationSelection);
                 multiplicationSelection.SetActive(true);
-                gameInstruction.text = "Select a level!";
                 break;
             case playStatus.Division:
                 awakenSubject(divisionSelection);
                 divisionSelection.SetActive(true);
-                gameInstruction.text = "Select a level!";
                 break;
             case playStatus.MathFortress:
                 awakenSubject(multiplicationSelection);
                 mathfortressSelection.SetActive(true);
-                gameInstruction.text = "Select a level!";
                 break;
             case playStatus.playing:
                 player.gameObject.SetActive(true);
@@ -159,39 +144,31 @@ public class CombatStateManager : ParentsStateManager
                 combatContainer.SetActive(true);
                 retreatObject.SetActive(true);
                 container.gameObject.SetActive(true);
-                gameInstruction.text = "Click on buttons to answer questions!";
                 break;
             case playStatus.Lost:
                 combatContainer.SetActive(true);
-                gameInstruction.text = "You Lost, don;t worry! You can try again :)";
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 resetContainer.SetActive(true);
                 container.gameObject.SetActive(false);
                 break;
-
             case playStatus.Won:
                 nextButton.ready();
                 combatContainer.SetActive(true);
-                gameInstruction.text = "You won! I knew you could do it";
                 enemyContainer.gameObject.SetActive(false);
                 resetContainer.SetActive(true);
                 int exp = player.CalculateExperience();
                 list.equip.shards += exp;
-                gameInstruction.text = "You won, earning " + exp.ToString("F0") + " Monster Shards!";
                 container.gameObject.SetActive(false);
                 break;
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);
                 break;
-
             case playStatus.Options:
                 SceneManager.LoadScene(3);
                 break;
-
             case playStatus.Splash:
                 SceneManager.LoadScene(0);
                 break;
-
             case playStatus.ArenaHome:
                 SceneManager.LoadScene(6);
                 break;
@@ -199,8 +176,6 @@ public class CombatStateManager : ParentsStateManager
                 break;
         }
     }
-
-
     void awakenSubject(GameObject subject)
     {
         questionContainer sub = subject.GetComponent<questionContainer>();

@@ -32,22 +32,11 @@ public class StateManager : ParentsStateManager
     void Start()
     {
         base.Find();
-
-
         login.Begin(this, list);
-
-
-        gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
-
-
-
         list = FindObjectOfType<equipmentList>();
-
         changeState(playStatus.Splash);
         backgrounds.startBack(playStatus.Splash);
-
         slider.value = PlayerPrefs.GetFloat("Volume", 0.6f);
-
     }
 
     public void MuteVolume()
@@ -119,13 +108,11 @@ public class StateManager : ParentsStateManager
                 break;
              */
             case playStatus.Start:
-                gameInstruction.text = "";
                 startContainer.SetActive(true);
                 break;
             case playStatus.subjectSelect:
                 SceneManager.LoadScene(1);
                 break;
-
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);
                 break;
@@ -133,12 +120,9 @@ public class StateManager : ParentsStateManager
             case playStatus.Options:
                 SceneManager.LoadScene(3);
                 break;
-
             case playStatus.Splash:
-                gameInstruction.text = "";
                 splashContainer.SetActive(true);
                 break;
-
             case playStatus.ArenaHome:
                 SceneManager.LoadScene(6);
                 break;
@@ -146,8 +130,6 @@ public class StateManager : ParentsStateManager
                 break;
         }
     }
-
-
     void awakenSubject(GameObject subject)
     {
         questionContainer sub = subject.GetComponent<questionContainer>();
