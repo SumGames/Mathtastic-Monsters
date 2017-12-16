@@ -135,7 +135,7 @@ public class Monster : MonoBehaviour
         if (!multipleContainer)
             multipleContainer = FindObjectOfType<multipleContainer>();
 
-        multipleContainer.setAttacks(false, true);
+        multipleContainer.SetAttacks(false, true);
 
         questions = FindObjectOfType<questionManager>();
 

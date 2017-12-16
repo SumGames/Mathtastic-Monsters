@@ -32,7 +32,7 @@ public class multipleContainer : MonoBehaviour
 
     }
 
-    internal void setAttacks(bool boss, bool startWithAttack)
+    internal void SetAttacks(bool boss, bool startWithAttack)
     {
         if (!playerAbilities)
             playerAbilities = FindObjectOfType<playerAbilities>();
@@ -56,10 +56,10 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, int overRide, float multiple)
+    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, float multiple, OverRidePhases overRide)
     {
         enemyAnswerNeeded = answer;
-        if (overRide == 0)
+        if (overRide == OverRidePhases.Default)
         {
             if (attacks > 0)
             {
@@ -73,11 +73,11 @@ public class multipleContainer : MonoBehaviour
                 attacking = true;
             }
         }
-        else if (overRide == 1)
+        else if (overRide == OverRidePhases.EnemyAttack)
         {
             attacking = true;
         }
-        else
+        else if (overRide == OverRidePhases.EnemyDefend)
         {
             attacking = false;
         }
@@ -126,8 +126,10 @@ public class multipleContainer : MonoBehaviour
         }
         int index = Random.Range(0, 6);
 
-        answersList = new List<int>();
-        answersList.Add(enemyAnswerNeeded);
+        answersList = new List<int>
+        {
+            enemyAnswerNeeded
+        };
 
 
         if (a_running.enemyChoices > 6)
@@ -185,7 +187,7 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal void removeSingle()
+    internal void RemoveSingle()
     {
         MultipleAnswer removing = null;
 

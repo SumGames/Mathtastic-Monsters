@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum OverRidePhases
+{
+    Default,
+    EnemyAttack,
+    EnemyDefend
+
+}
+
+
 public class BossMonster : Monster
 {
     operators Operator; //Our current operator affects not just question, but mechanic/gimmick.
@@ -157,17 +166,7 @@ public class BossMonster : Monster
             CheckDeath();
             return;
         }
-        /*
-        else if (depth == -1) //No damage, but the enemy is at the top!
-        {
-            feedback.DamageSet(SetFeedback.PlayerDodged);
 
-            CreateSubtraction(false, false);
-
-            depth = 0;
-            return;
-        }
-        */
         else //No damage, enemy grows closer.
         {
             feedback.DamageSet(SetFeedback.PlayerDodged);
@@ -190,7 +189,7 @@ public class BossMonster : Monster
         if (!multipleContainer)
             multipleContainer = FindObjectOfType<multipleContainer>();
 
-        multipleContainer.setAttacks(true, false);
+        multipleContainer.SetAttacks(true, false);
 
 
         multipleContainer.DisableMultiple(true);
@@ -255,6 +254,7 @@ public class BossMonster : Monster
             case operators.Multiplication:
                 break;
             case operators.Division:
+                CreateDivision();
                 break;
 
             default:
@@ -268,12 +268,12 @@ public class BossMonster : Monster
     //Most new questions won't actually reset the timer.
     void CreateSubtraction(bool EnemyAttackingPhase, bool resetTime)
     {
-        int over;
+        OverRidePhases over;
 
         if (EnemyAttackingPhase)
-            over = 1;
+            over = OverRidePhases.EnemyAttack;
         else
-            over = 2;
+            over = OverRidePhases.EnemyDefend;
 
 
         EnemyAttackingPhase = questions.MakeQuestion(m_button, false, over);
@@ -353,5 +353,20 @@ public class BossMonster : Monster
 
         answerWords += "\n= " + result.ToString();
         questionText.text = answerWords;
+    }
+
+    void CreateDivision()
+    {
+        enemyPhase = !enemyPhase;
+
+        if (enemyPhase)
+        {
+            questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+        }
+        else
+        {
+
+        }
+
     }
 }

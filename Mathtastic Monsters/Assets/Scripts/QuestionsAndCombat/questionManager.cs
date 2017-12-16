@@ -13,7 +13,7 @@ public class questionManager : MonoBehaviour
 
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, int overRide = 0)
+    internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, OverRidePhases overRide = OverRidePhases.Default)
     {
         if (calculator == null)
             calculator = FindObjectOfType<Calculator>();
@@ -82,7 +82,7 @@ public class questionManager : MonoBehaviour
                 oper = "/ ";
                 break;
             default:
-                return CalculateBODMAS(numbers, a_running, resetTime, overRide);
+                return CalculateBODMAS(numbers, a_running, resetTime);
 
         }
 
@@ -106,7 +106,7 @@ public class questionManager : MonoBehaviour
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide, multiple);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, multiple, overRide);
 
         string answerWords;
 
@@ -246,7 +246,7 @@ public class questionManager : MonoBehaviour
         return op;
     }
 
-    bool CalculateBODMAS(float[] a_summing, QuizButton a_running, bool resetTime = true, int overRide = 0)
+    bool CalculateBODMAS(float[] a_summing, QuizButton a_running, bool resetTime = true)
     {
 
         List<int> summingNumbers = new List<int>(5);
@@ -343,12 +343,12 @@ public class questionManager : MonoBehaviour
         //if Answer is too low/too high, or requires rounding to solve, we try again.
         if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
-            return CalculateBODMAS(a_summing, a_running, resetTime, overRide);
+            return CalculateBODMAS(a_summing, a_running, resetTime);
         }
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, overRide, 1);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, 1, OverRidePhases.Default);
 
         string answerWords;
 

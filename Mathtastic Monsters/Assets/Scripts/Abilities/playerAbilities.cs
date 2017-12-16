@@ -225,7 +225,7 @@ public class playerAbilities : MonoBehaviour
                 Debug.Log(damage);
                 break;
             case abilityTypes.Burn:
-                FindObjectOfType<multipleContainer>().removeSingle();
+                FindObjectOfType<multipleContainer>().RemoveSingle();
                 break;
 
             case abilityTypes.Hourglass:
