@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5664,7 +5664,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   baseAttack: 1
-  baseTimeGiven: 15
   resetTime: 0
   Healthbar: {fileID: 751589144}
   timeLeft: {fileID: 331346454}
@@ -5675,6 +5674,7 @@ MonoBehaviour:
   getShards: {fileID: 574737965}
   victoryMusic: {fileID: 574737965}
   calculator: {fileID: 2085180828}
+  levelSelection: {fileID: 977039561}
 --- !u!114 &574737963
 MonoBehaviour:
   m_ObjectHideFlags: 0

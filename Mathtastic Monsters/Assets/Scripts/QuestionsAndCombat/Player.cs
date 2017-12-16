@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
     internal float attackDamage;
     internal float counterDamage;
 
-    public float baseTimeGiven = 10;
-
     float Timer; //Time left until attacked.
     public float resetTime; //Time players start with per question.
 
@@ -71,6 +69,7 @@ public class Player : MonoBehaviour
 
     public Calculator calculator;
 
+    public LevelSelection levelSelection;
 
     private void Start()
     {
@@ -119,7 +118,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         Healthbar.setMaxHealth(maxHealth, true);
 
-        resetTime = parent.quizRunning.levelTime + baseTimeGiven + abilities.EquipmentTime();
+        resetTime = parent.quizRunning.levelTime + abilities.EquipmentTime();
 
         counterTimeModifier = abilities.CounterTimeModify();
         counterDamage = baseAttack * abilities.EquipmentCounter();
@@ -319,20 +318,30 @@ public class Player : MonoBehaviour
             exp *= 1.5f;
         }
 
-        parent.quizRunning.parent.levelSelection.SetStars((currentHealth == maxHealth), parent.quizRunning);
 
-
-        int completed = parent.quizRunning.parent.getCompleted();
-
-        if (parent.quizRunning.quizIndex == completed) //Level was not completed, unlock next.
+        if (parent.quizRunning.Hard)
         {
-            parent.quizRunning.parent.incrementCompleted();
-
+            if (list.equip.StarsAcquired[3] == 3)
+            {
+                exp *= .25f;
+            }            
         }
-        else //Divide experience to a quarter.
+        else
         {
-            exp *= .25f;
+            int completed = parent.quizRunning.parent.getCompleted();
+            if (parent.quizRunning.quizIndex == completed) //Level was not completed, unlock next.
+            {
+                parent.quizRunning.parent.incrementCompleted();
+
+            }
+
+            else //Divide experience to a quarter.
+            {
+                exp *= .25f;
+            }
         }
+        if (levelSelection)
+            levelSelection.SetStars((currentHealth == maxHealth), parent.quizRunning);
 
         exp *= abilities.ReturnExpBoost();
 
