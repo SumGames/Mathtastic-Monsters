@@ -6,36 +6,40 @@ using UnityEngine.UI;
 
 public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    internal int DraggerAnswer;
+    public int DraggerAnswer;
 
-    public Vector3 parentPositon;
-
+    bool positionSet;
+    Vector3 originalPosition;
 
     bool dragging;
 
     Vector3 lastKnownMousePosition;
 
-    DivisionAnswers CurrentAnswer;
     // Use this for initialization
     void Start()
     {
-        parentPositon = transform.position;
+        originalPosition = transform.position;
     }
 
-    bool AnswerCorrect()
+    internal void ResetDragger()
     {
-        if (CurrentAnswer == null)
-            return false;
+        if(!positionSet)
+        {
+            originalPosition = transform.position;
+            positionSet = true;
+        }
+        else
+        {
+            transform.position = originalPosition;
 
-        if (DraggerAnswer == CurrentAnswer.ReturnAnswer())
-            return true;
+        }
 
+        GetComponent<Image>().color = Color.white;
 
-        return false;
+        DraggerAnswer = -2;
+
 
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -94,9 +98,29 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         dragging = false;
     }
 
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
+        if (other.tag == "Answer")
+        {
+            DivisionAnswers answer = other.GetComponent<DivisionAnswers>();
+            answer.ChangeDragger(this, true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Answer")
+        {
+            DivisionAnswers answer = other.GetComponent<DivisionAnswers>();
+            answer.ChangeDragger(this, false);
+
+
+        }
 
     }
+
+
+
 }

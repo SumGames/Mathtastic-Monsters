@@ -42,6 +42,8 @@ public class BossMonster : Monster
     //Used in addition with container.
     internal int bossSpacing;
 
+    public BossDivision bossDivision;
+
 
     // Use this for initialization
     void Start()
@@ -120,6 +122,16 @@ public class BossMonster : Monster
     {
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
+
+
+
+        if (Operator == operators.Division && enemyPhase)
+        {
+            feedback.DamageSet(SetFeedback.PlayerDodged);
+            CreateQuestion();
+            return;
+        }
+
 
         if (Operator == operators.Subtraction)
         {
@@ -240,6 +252,9 @@ public class BossMonster : Monster
     //Choose the type of question we're going to make from this type.
     public void CreateQuestion()
     {
+        bossDivision.gameObject.SetActive(false);
+
+
         additionContainer.gameObject.SetActive(false);
 
         switch (Operator)
@@ -359,13 +374,21 @@ public class BossMonster : Monster
     {
         enemyPhase = !enemyPhase;
 
-        if (enemyPhase)
+        if (!enemyPhase)
         {
             questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
         }
         else
         {
+            questions.GetComponent<Text>().text = "";
 
+            player.SetTime(true, m_button.enemPhaseTime);
+
+
+            multipleContainer.DisableMultiple(true);
+
+            bossDivision.gameObject.SetActive(true);
+            bossDivision.GenerateDivision(m_button);
         }
 
     }

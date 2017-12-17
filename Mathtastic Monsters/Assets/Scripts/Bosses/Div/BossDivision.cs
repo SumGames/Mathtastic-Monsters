@@ -10,7 +10,9 @@ public class BossDivision : MonoBehaviour
     public DivisionAnswers[] answers = new DivisionAnswers[3];
 
 
-    int[] AnswerList = new int[6];
+    public int[] AnswerList = new int[6];
+
+    BossMonster boss;
 
 
     // Use this for initialization
@@ -34,6 +36,7 @@ public class BossDivision : MonoBehaviour
         answers[2].GetComponentInChildren<Text>().text = MakeQuestion(button, 2);
 
 
+        SetDraggerButtons();
     }
 
 
@@ -97,6 +100,74 @@ public class BossDivision : MonoBehaviour
 
     void ClearEverything()
     {
+        foreach (DivisionDragger item in draggers)
+        {
+            item.ResetDragger();
+
+        }
+        foreach (DivisionAnswers item in answers)
+        {
+            item.SetAnswer(-2);
+        }
+
+    }
+
+    void SetDraggerButtons()
+    {
+        int wrongAnswer = -2;
+
+        for (int i = 0, j = 3; i < 3; i++, j++)
+        {
+            while (wrongAnswer <= 0 || !NoDuplicateInAnswers(wrongAnswer))
+            {
+                int range = Random.Range(-5, 5);
+                wrongAnswer = AnswerList[i] + range;
+            }
+            AnswerList[j] = wrongAnswer;
+        }
+
+
+        for (int i = 0; i < draggers.Length; i++)
+        {
+            int index = Random.Range(0, draggers.Length);
+            while (draggers[index].DraggerAnswer > 0)
+            {
+                index = Random.Range(0, draggers.Length);
+            }
+
+            draggers[index].GetComponentInChildren<Text>().text = AnswerList[i].ToString();
+            draggers[index].DraggerAnswer = AnswerList[i];
+
+        }
+    }
+
+
+    public void CalculateCorrect()
+    {
+        bool correct = true;
+
+        if (!boss)
+            boss = FindObjectOfType<BossMonster>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (!answers[i].AnswerCorrect())
+            {
+                correct = false;
+                break;
+            }
+        }
+
+        if (correct)
+        {
+            boss.MonsterHurt();
+        }
+        else
+
+        {
+            boss.EnemyAttack();
+        }
+
 
     }
 }
