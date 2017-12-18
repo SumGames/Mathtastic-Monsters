@@ -22636,7 +22636,7 @@ MonoBehaviour:
   maxNumber: 300
   Operator: 3
   minAnswer: 1
-  maxAnswer: 100000
+  maxAnswer: 20
   difficulty: 0
   MonsterHealth: 10
   MonsterAttack: 0.5
@@ -22644,7 +22644,7 @@ MonoBehaviour:
   secondNumberMin: 3
   secondNumberMax: 5
   monsterArt: {fileID: 0}
-  enemPhaseTime: 30
+  enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
@@ -26147,7 +26147,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Confirm and Defend!
+  m_Text: Defend!
 --- !u!222 &2083582121
 CanvasRenderer:
   m_ObjectHideFlags: 0

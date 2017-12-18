@@ -62,9 +62,14 @@ public class DivisionAnswers : MonoBehaviour
         }
         else
         {
-            if (draggedIn != null)
-                draggedIn.GetComponent<Image>().color = Color.white;
-            draggedIn = null;
+            if (draggedIn != null && collided == draggedIn)
+            {
+
+                if (draggedIn != null)
+                    draggedIn.GetComponent<Image>().color = Color.white;
+                draggedIn = null;
+
+            }
         }
     }
 
