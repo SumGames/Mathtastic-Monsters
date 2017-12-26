@@ -44,6 +44,7 @@ public class BossMonster : Monster
 
     public BossDivision bossDivision;
 
+    public MultiplicationContainer multiplicationContainer;
 
     // Use this for initialization
     void Start()
@@ -256,6 +257,7 @@ public class BossMonster : Monster
 
 
         additionContainer.gameObject.SetActive(false);
+        multiplicationContainer.gameObject.SetActive(false);
 
         switch (Operator)
         {
@@ -264,9 +266,9 @@ public class BossMonster : Monster
                 break;
             case operators.Subtraction:
                 CreateSubtraction(true,true);
-
                 break;
             case operators.Multiplication:
+                CreateMultiplication();
                 break;
             case operators.Division:
                 CreateDivision();
@@ -370,6 +372,29 @@ public class BossMonster : Monster
         questionText.text = answerWords;
     }
 
+    void CreateMultiplication()
+    {
+
+        enemyPhase = !enemyPhase;
+
+        if (!enemyPhase)
+        {
+            multipleContainer.DisableMultiple();
+            questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+        }
+        else
+        {
+            player.SetTime(true, m_button.enemPhaseTime);
+
+
+            multipleContainer.DisableMultiple(true);
+
+            multiplicationContainer.gameObject.SetActive(true);
+            multiplicationContainer.GenerateMultiplication(m_button, this);
+        }
+    }
+
+
     void CreateDivision()
     {
         enemyPhase = !enemyPhase;
@@ -390,6 +415,5 @@ public class BossMonster : Monster
             bossDivision.gameObject.SetActive(true);
             bossDivision.GenerateDivision(m_button);
         }
-
     }
 }

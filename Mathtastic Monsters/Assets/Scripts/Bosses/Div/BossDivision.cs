@@ -167,7 +167,6 @@ public class BossDivision : MonoBehaviour
         {
             boss.EnemyAttack();
         }
-
-
     }
+
 }

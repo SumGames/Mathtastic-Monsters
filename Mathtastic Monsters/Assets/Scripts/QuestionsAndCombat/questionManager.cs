@@ -9,7 +9,7 @@ public class questionManager : MonoBehaviour
 
     public multipleContainer container;
 
-
+    public QuizButton button;
 
 
     //Uses given values to calculate a random sum and its components, then store and display them.
@@ -21,7 +21,9 @@ public class questionManager : MonoBehaviour
         if (container == null)
             container = FindObjectOfType<multipleContainer>();
 
-        float[] numbers = new float[a_running.variableCount];
+        button = a_running;
+
+        float[] numbers = new float[button.variableCount];
         float answer = -2;
         string oper = "";
         bool first;
@@ -29,7 +31,9 @@ public class questionManager : MonoBehaviour
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            numbers[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
+            Debug.Log(i);
+
+            numbers[i] = (int)Random.Range(button.minNumber, (button.maxNumber + 1));
         }
 
         float multiple = 1;
@@ -56,11 +60,13 @@ public class questionManager : MonoBehaviour
                 //If operator is 'x', second number is one of two possible numbers
                 first = Random.value <= 0.5f;
 
-                if (first)
-                    numbers[1] = a_running.secondNumberMin;
-                else
-                    numbers[1] = a_running.secondNumberMax;
-
+                if (!button.boss)
+                {
+                    if (first)
+                        numbers[1] = a_running.secondNumberMin;
+                    else
+                        numbers[1] = a_running.secondNumberMax;
+                }
                 multiple = numbers[1];
 
 

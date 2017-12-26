@@ -39,11 +39,12 @@ public class MonsterManager : MonoBehaviour
         {
             currentEnemy = monster;
 
-            boss.additionContainer.gameObject.SetActive(false);
+            boss.gameObject.SetActive(false);
             boss.DestroyMonster();
         }
         else
         {
+            boss.gameObject.SetActive(true);
             currentEnemy = boss;
 
             boss.player = player;

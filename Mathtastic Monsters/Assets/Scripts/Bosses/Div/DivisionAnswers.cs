@@ -7,7 +7,6 @@ public class DivisionAnswers : MonoBehaviour
 {
     int CorrectAnswer;
 
-
     DivisionDragger draggedIn;
 
     internal bool AnswerCorrect()
@@ -18,23 +17,14 @@ public class DivisionAnswers : MonoBehaviour
         if (CorrectAnswer == draggedIn.DraggerAnswer)
             return true;
 
-
         return false;
-
     }
 
 
     // Use this for initialization
     void Start ()
     {
-        GetComponent<Image>().color = Color.yellow;
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
+        GetComponent<Image>().color = Color.yellow;		
 	}
 
     internal void SetAnswer(int a_answer)
