@@ -71,6 +71,8 @@ public class Player : MonoBehaviour
 
     public LevelSelection levelSelection;
 
+    public TransitionManager transition;
+
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
@@ -165,7 +167,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.isPlaying())
+        if (manager.isPlaying() && (!transition || transition.transitionState == TransitionState.None))
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;

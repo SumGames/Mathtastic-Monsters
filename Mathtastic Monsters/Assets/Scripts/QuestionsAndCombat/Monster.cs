@@ -157,8 +157,6 @@ public class Monster : MonoBehaviour
         health = parent.quizRunning.MonsterHealth;
         attack = parent.quizRunning.MonsterAttack;
 
-        multiple.DisableMultiple();
-
 
         bar.setMaxHealth(health, false);
 

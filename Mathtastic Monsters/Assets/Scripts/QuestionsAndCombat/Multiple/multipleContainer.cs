@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+public enum TransitioningObjects
+{
+    SwapToMultiple,
+    SwapToCalculator,
+    JustSwap
+}
+
 public class multipleContainer : MonoBehaviour
 {
 
@@ -20,6 +27,10 @@ public class multipleContainer : MonoBehaviour
 
     public int attacks = 1;
     bool attacking;
+
+
+    public TransitionManager transitionManager;
+
 
     // Use this for initialization
     void Start()
@@ -94,7 +105,7 @@ public class multipleContainer : MonoBehaviour
         {
             enemyPhase = false;
             attacks--;
-            DisableMultiple();
+            TransitionButtons(false, a_running);
         }
         if (!resetTime)
         {
@@ -115,10 +126,9 @@ public class multipleContainer : MonoBehaviour
     void MultipleAnswers(QuizButton a_running, float multiple)
     {
 
+        DisableMultipleChoiceButtons();
 
-        calculator.SetActive(false);
-
-        DisableMultiple(true);
+        TransitionButtons(true, a_running);
 
         foreach (MultipleAnswer item in answers)
         {
@@ -205,18 +215,65 @@ public class multipleContainer : MonoBehaviour
         }
     }
 
-    internal void DisableMultiple(bool both = false)
+    void DisableMultipleChoiceButtons()
     {
         foreach (MultipleAnswer item in answers)
         {
             item.gameObject.SetActive(false);
         }
+    }
 
-        if (both)
-            calculator.SetActive(false);
+    internal void DisableThisAndCalculator()
+    {
+        DisableMultipleChoiceButtons();
+        calculator.SetActive(false);
+    }
+
+
+    void TransitionButtons(bool both, QuizButton a_Button = null)
+    {
+        if (transitionManager)
+        {
+            if (a_Button == null || a_Button.boss)
+            {
+                if (both)
+                    calculator.SetActive(false);
+                else
+                {
+                    calculator.SetActive(true);
+                }
+
+                transitionManager.TransitionContainers(TransitioningObjects.JustSwap);
+                return;
+            }
+            calculator.SetActive(true);
+
+            if (both)
+            {
+                transitionManager.TransitionContainers(TransitioningObjects.SwapToMultiple);
+            }
+            else
+            {
+                transitionManager.TransitionContainers(TransitioningObjects.SwapToCalculator);
+            }
+        }
         else
         {
-            calculator.SetActive(true);
+            DisableMultipleChoiceButtons();
+
+
+            foreach (MultipleAnswer item in answers)
+            {
+                item.gameObject.SetActive(false);
+            }
+
+            if (both)
+                calculator.SetActive(false);
+            else
+            {
+                calculator.SetActive(true);
+            }
+
         }
     }
 }

@@ -8,6 +8,8 @@ public class Calculator : MonoBehaviour
 
     public ParentsStateManager manager;
 
+    internal string displayText;
+
     internal string answerNeeded; //The number, as a string, that a player must input.
 
     public Button ok;

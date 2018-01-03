@@ -205,7 +205,7 @@ public class BossMonster : Monster
         multipleContainer.SetAttacks(true, false);
 
 
-        multipleContainer.DisableMultiple(true);
+        multipleContainer.DisableThisAndCalculator();
 
         m_button = (BossButton)parent.quizRunning;
 
@@ -379,7 +379,7 @@ public class BossMonster : Monster
 
         if (!enemyPhase)
         {
-            multipleContainer.DisableMultiple();
+            //multipleContainer.DisableMultiple();
             questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
         }
         else
@@ -387,7 +387,7 @@ public class BossMonster : Monster
             player.SetTime(true, m_button.enemPhaseTime);
 
 
-            multipleContainer.DisableMultiple(true);
+            multipleContainer.DisableThisAndCalculator();
 
             multiplicationContainer.gameObject.SetActive(true);
             multiplicationContainer.GenerateMultiplication(m_button, this);
@@ -410,7 +410,7 @@ public class BossMonster : Monster
             player.SetTime(true, m_button.enemPhaseTime);
 
 
-            multipleContainer.DisableMultiple(true);
+            multipleContainer.DisableThisAndCalculator();
 
             bossDivision.gameObject.SetActive(true);
             bossDivision.GenerateDivision(m_button);

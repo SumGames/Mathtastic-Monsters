@@ -11,6 +11,31 @@ public class questionManager : MonoBehaviour
 
     public QuizButton button;
 
+    public TransitionManager transition;
+
+    string questionNeeded;
+
+    bool justTransitioned;
+
+    void Update()
+    {
+        if (!transition)
+            return;
+
+        if (transition.transitionState == TransitionState.None&&justTransitioned)
+        {
+            GetComponent<Text>().text = questionNeeded;
+        }
+        else
+        {
+            if (GetComponent<Text>().text != "")
+            {
+                questionNeeded = GetComponent<Text>().text;
+                GetComponent<Text>().text = "";
+                justTransitioned = true;
+            }
+        }
+    }
 
     //Uses given values to calculate a random sum and its components, then store and display them.
     internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, OverRidePhases overRide = OverRidePhases.Default)
@@ -31,8 +56,6 @@ public class questionManager : MonoBehaviour
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            Debug.Log(i);
-
             numbers[i] = (int)Random.Range(button.minNumber, (button.maxNumber + 1));
         }
 
@@ -127,6 +150,10 @@ public class questionManager : MonoBehaviour
         }
 
         answerWords += "\n= ";
+
+        justTransitioned = true;
+        questionNeeded = answerWords;
+
         GetComponent<Text>().text = answerWords;
 
         calculator.answerNeeded = answerNeeded;
