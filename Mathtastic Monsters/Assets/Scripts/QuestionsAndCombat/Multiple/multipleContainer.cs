@@ -232,7 +232,7 @@ public class multipleContainer : MonoBehaviour
 
     void TransitionButtons(bool both, QuizButton a_Button = null)
     {
-        if (transitionManager)
+        if (transitionManager && PlayerPrefs.GetInt("Transitions", 1) == 1)
         {
             if (a_Button == null || a_Button.boss)
             {
@@ -260,7 +260,6 @@ public class multipleContainer : MonoBehaviour
         else
         {
             DisableMultipleChoiceButtons();
-
 
             foreach (MultipleAnswer item in answers)
             {

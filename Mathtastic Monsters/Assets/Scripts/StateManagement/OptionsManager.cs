@@ -17,6 +17,8 @@ public class OptionsManager : ParentsStateManager
 
     MusicManager music;
 
+    public Toggle toggle;
+
     // Use this for initialization
     void Start()
     {
@@ -30,6 +32,8 @@ public class OptionsManager : ParentsStateManager
         changeState(playStatus.Options);
 
         backgrounds.startBack(playStatus.Options);
+
+        setTransition();
 
     }
 
@@ -56,13 +60,13 @@ public class OptionsManager : ParentsStateManager
 
         gameState = newState;
         switch (gameState)
-        {            
+        {
             case playStatus.Options:
                 optionsSelection.SetActive(true);
                 gameInstruction.text = "Select an Option!";
                 break;
             case playStatus.Instructions:
-               instructionsSelection.SetActive(true);
+                instructionsSelection.SetActive(true);
                 gameInstruction.text = "Learn how to play!";
                 break;
             case playStatus.Parents:
@@ -89,5 +93,36 @@ public class OptionsManager : ParentsStateManager
         instructionsSelection.SetActive(false);
         parentsSelection.SetActive(false);
         creditsSelection.SetActive(false);
+    }
+
+    public void TransitionsOn(Toggle a_trans)
+    {
+        int value = PlayerPrefs.GetInt("Transitions", 1);
+       
+        if (toggle.isOn)
+        {
+            value = 1;
+        }
+        else
+        {
+            value = 0;
+        }
+
+        PlayerPrefs.SetInt("Transitions", value);
+
+    }
+
+    void setTransition()
+    {
+        int value = PlayerPrefs.GetInt("Transitions", 1);
+
+        if (value == 1)
+        {
+            toggle.isOn = true;
+        }
+        else
+        {
+            toggle.isOn = false;
+        }
     }
 }
