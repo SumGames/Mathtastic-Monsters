@@ -128,8 +128,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137811134933438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4781083848379032}
@@ -137,7 +137,7 @@ Transform:
   - {fileID: 4751678480314806}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!4 &4392644283506122
 Transform:
   m_ObjectHideFlags: 1
@@ -322,9 +322,8 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 1
   cost: 0
-  typeRequired: 0
-  levelsNeeded: 0
   ability: 0
   textureMaterial: {fileID: 2100000, guid: bf995f9d6cb806244b5f29ebfae029ad, type: 2}
+  starRequired: 0
   foreArm: {fileID: 1620704962174738}
   hand: {fileID: 1609675890140316}

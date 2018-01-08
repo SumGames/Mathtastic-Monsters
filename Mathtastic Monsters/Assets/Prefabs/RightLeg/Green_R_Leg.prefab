@@ -159,8 +159,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882521665586490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.4514363, y: 0.21047851, z: -0.8429863, w: -0.2031703}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4810584453842770}
@@ -176,13 +176,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971702256604278}
-  m_LocalRotation: {x: 0.65328145, y: 0.27059814, z: 0.27059817, w: 0.65328145}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.41076413, y: 0.5755631, z: 0.57556313, w: 0.41076416}
+  m_LocalPosition: {x: 0.001, y: -0.032, z: -0}
   m_LocalScale: {x: 0.032808445, y: 0.032808397, z: 0.032808453}
   m_Children: []
   m_Father: {fileID: 4950745136119936}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: -18.971, y: 90.00001, z: 90.00001}
 --- !u!4 &4532264870326134
 Transform:
   m_ObjectHideFlags: 1
@@ -190,7 +190,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608138512593892}
   m_LocalRotation: {x: 0.17719771, y: 0.6845443, z: 0.17719766, w: 0.6845444}
-  m_LocalPosition: {x: -0, y: 0.078, z: -0.008}
+  m_LocalPosition: {x: 0.079, y: 0.078, z: -0.008}
   m_LocalScale: {x: 0.03280841, y: 0.032808445, z: 0.032808438}
   m_Children: []
   m_Father: {fileID: 4684648133211666}
@@ -265,7 +265,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c1736de3d91c7f47811a5185f98011b, type: 2}
+  - {fileID: 2100000, guid: 5c12f6936f515674cabd5fe77f5b86ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -297,7 +297,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c1736de3d91c7f47811a5185f98011b, type: 2}
+  - {fileID: 2100000, guid: 5c12f6936f515674cabd5fe77f5b86ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,7 +329,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c1736de3d91c7f47811a5185f98011b, type: 2}
+  - {fileID: 2100000, guid: 5c12f6936f515674cabd5fe77f5b86ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,7 +361,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9c1736de3d91c7f47811a5185f98011b, type: 2}
+  - {fileID: 2100000, guid: 5c12f6936f515674cabd5fe77f5b86ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -421,10 +421,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
-  cost: 20
-  typeRequired: 0
-  levelsNeeded: 0
-  ability: 3
+  cost: 0
+  ability: 0
+  textureMaterial: {fileID: 2100000, guid: 9c1736de3d91c7f47811a5185f98011b, type: 2}
+  starRequired: 0
   Shin: {fileID: 1000909585298098}
   Ankle: {fileID: 1285788278231766}
   Foot: {fileID: 1479841410432640}

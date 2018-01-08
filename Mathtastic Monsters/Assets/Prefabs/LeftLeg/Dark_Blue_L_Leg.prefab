@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1296388900075654}
   m_LocalRotation: {x: 0.4514363, y: 0.21047851, z: -0.8429863, w: -0.2031703}
-  m_LocalPosition: {x: 1.12, y: 1.0696105, z: -0.10896304}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4353777038259946}
@@ -422,10 +422,9 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 1
   cost: 0
-  typeRequired: 0
-  levelsNeeded: 0
   ability: 0
   textureMaterial: {fileID: 2100000, guid: 8718c617f50d9434bbe9abca3c1e6d64, type: 2}
+  starRequired: 0
   Shin: {fileID: 1401431326884196}
   Ankle: {fileID: 1164683195708510}
   Foot: {fileID: 1997143852873696}

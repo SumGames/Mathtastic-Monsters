@@ -127,21 +127,21 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1906605774158298}
-  m_LocalRotation: {x: 0.705911, y: -0.041106276, z: -0.04110624, w: 0.705911}
-  m_LocalPosition: {x: -0.059, y: -0.174, z: 0.039}
+  m_LocalRotation: {x: 0.5359507, y: 0.25819653, z: 0.13692133, w: 0.79205054}
+  m_LocalPosition: {x: 0.001, y: -0.061, z: -0.005}
   m_LocalScale: {x: 1.6049588, y: 1.6049557, z: 1.6049609}
   m_Children: []
   m_Father: {fileID: 4915387824625352}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 96.66498, y: 89.99999, z: 89.99999}
+  m_LocalEulerAnglesHint: {x: 128.89499, y: 242.268, z: 231.832}
 --- !u!4 &4675774466118244
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221090130033256}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.4514363, y: 0.21047851, z: -0.8429863, w: -0.2031703}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4842294447582276}
@@ -320,10 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
+  owned: 0
   cost: 20
-  typeRequired: 0
-  levelsNeeded: 0
   ability: 3
   textureMaterial: {fileID: 0}
   starRequired: 0
