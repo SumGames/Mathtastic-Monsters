@@ -33,7 +33,7 @@ public class OptionsManager : ParentsStateManager
 
         backgrounds.startBack(playStatus.Options);
 
-        setTransition();
+        SetTransition();
 
     }
 
@@ -56,7 +56,7 @@ public class OptionsManager : ParentsStateManager
     {
         base.changeState(newState);
 
-        disableObjects();
+        DisableObjects();
 
         gameState = newState;
         switch (gameState)
@@ -87,7 +87,7 @@ public class OptionsManager : ParentsStateManager
 
 
     //Disables all objects by default so it doesn't have to be done manually.
-    void disableObjects()
+    void DisableObjects()
     {
         optionsSelection.SetActive(false);
         instructionsSelection.SetActive(false);
@@ -112,7 +112,7 @@ public class OptionsManager : ParentsStateManager
 
     }
 
-    void setTransition()
+    void SetTransition()
     {
         int value = PlayerPrefs.GetInt("Transitions", 1);
 

@@ -190,7 +190,7 @@ public class CombatStateManager : ParentsStateManager
     //SubjectButtons[] is an array starting at subtraction, as addition will never be disabled.
     void checkLevelsAvailable()
     {
-
+        //For Sub, check nothing.
         subjectButtons[0].interactable = true;
 
         //For Mult, checking Add.
@@ -205,7 +205,7 @@ public class CombatStateManager : ParentsStateManager
         else
             subjectButtons[2].interactable = false;
 
-        //For Mult, checking sub.
+        //For Fortess, checking all..
         if (list.equip.completedLevels[0] > 9 && list.equip.completedLevels[1] > 9 && list.equip.completedLevels[2] > 9)
             subjectButtons[3].interactable = true;
         else

@@ -18,6 +18,8 @@ public class LevelSelection : MonoBehaviour
 
     public Button starOne, starTwo, starThree; //Stars light up if we have their star.
 
+    public Button Medallion;
+
     public Button NormalMode; //Clicked on to start normal mode.
 
     public Button hardMode; //If we have two stars, click on to start the normal mode's "hard mode" button.
@@ -222,6 +224,18 @@ public class LevelSelection : MonoBehaviour
 
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
 
+        if (currentLevel == 4 || currentLevel == 9)
+        {
+            Medallion.gameObject.SetActive(true);
+            hardMode.gameObject.SetActive(false);
+            starOne.gameObject.SetActive(false);
+            Medallion.interactable = (starsUnlocked >= 1);
+            return;
+        }
+
+        Medallion.gameObject.SetActive(false);
+        hardMode.gameObject.SetActive(true);
+        starOne.gameObject.SetActive(true);
 
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);

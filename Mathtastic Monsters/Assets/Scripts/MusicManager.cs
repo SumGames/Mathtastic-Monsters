@@ -33,12 +33,14 @@ public class MusicManager : MonoBehaviour
         if (haskey)
         {
             musicSource.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
+            click.volume=PlayerPrefs.GetFloat("Volume", 0.6f);
         }
     }
 
     internal void SetSlider()
     {
         FindObjectOfType<Slider>().value = PlayerPrefs.GetFloat("Volume", 0.6f);
+
     }
 
     //Select a music clip, and check if the clip is different. If so, swap it in and play it.
