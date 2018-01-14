@@ -175,11 +175,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 459756517}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1932966
 CanvasRenderer:
@@ -253,11 +253,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1965510
 CanvasRenderer:
@@ -737,11 +737,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 843822242}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &41803944
 CanvasRenderer:
@@ -797,11 +797,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2071202715}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &42479491
 CanvasRenderer:
@@ -896,11 +896,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &46592437
 MonoBehaviour:
@@ -1587,11 +1587,11 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &104422975
@@ -1862,11 +1862,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 566513258}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &134946890
 CanvasRenderer:
@@ -2228,11 +2228,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &158523895
 CanvasRenderer:
@@ -2519,11 +2519,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 179533774}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &179533775
 CanvasRenderer:
@@ -2597,11 +2597,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &180767181
 CanvasRenderer:
@@ -2792,11 +2792,11 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &231425601
@@ -3053,6 +3053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b34a80d5a4f1c4ab591be11c4106fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questionText: {fileID: 1446319021}
   monsterSpot: {fileID: 468417858}
   calculator: {fileID: 2085180828}
   nextime: 0
@@ -3139,11 +3140,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 158523894}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &266040131
 CanvasRenderer:
@@ -3595,11 +3596,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &320723824
 CanvasRenderer:
@@ -4511,11 +4512,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &403351038
 MonoBehaviour:
@@ -4838,11 +4839,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1779347334}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &420629065
 CanvasRenderer:
@@ -5274,11 +5275,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &459756518
 CanvasRenderer:
@@ -6633,11 +6634,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &566513259
 CanvasRenderer:
@@ -7399,11 +7400,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1103991474}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &602279656
 CanvasRenderer:
@@ -8265,11 +8266,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1257189538}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &647072815
 CanvasRenderer:
@@ -8343,11 +8344,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &652766557
 CanvasRenderer:
@@ -8603,11 +8604,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1309326883}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &669584559
 CanvasRenderer:
@@ -9219,11 +9220,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &726148643
 CanvasRenderer:
@@ -9413,11 +9414,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1893550542}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &740681441
 CanvasRenderer:
@@ -9614,11 +9615,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1111345915}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: roooar
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &756958630
 CanvasRenderer:
@@ -9905,11 +9906,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 11
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &780108259
 CanvasRenderer:
@@ -10093,11 +10094,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 179533774}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &805332699
 CanvasRenderer:
@@ -10191,11 +10192,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 9
   hardMode: {fileID: 1408469343}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &830498473
 CanvasRenderer:
@@ -10583,11 +10584,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &843822243
 CanvasRenderer:
@@ -10662,11 +10663,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 180767180}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &847322378
 CanvasRenderer:
@@ -11088,11 +11089,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 963259404}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &877657527
 CanvasRenderer:
@@ -11247,11 +11248,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &891795339
 MonoBehaviour:
@@ -11530,11 +11531,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &900274933
@@ -12170,11 +12171,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1379293376}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &945962639
 CanvasRenderer:
@@ -12349,11 +12350,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &963259405
 CanvasRenderer:
@@ -12427,11 +12428,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &969472091
 CanvasRenderer:
@@ -12505,11 +12506,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &975259592
 CanvasRenderer:
@@ -12781,11 +12782,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 1456059767}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &986227753
 CanvasRenderer:
@@ -13032,11 +13033,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &991637862
 MonoBehaviour:
@@ -13298,11 +13299,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2058854668}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &999825831
 CanvasRenderer:
@@ -13432,11 +13433,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1965509}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1011991643
 CanvasRenderer:
@@ -13530,11 +13531,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 320723823}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1012138166
 CanvasRenderer:
@@ -14231,11 +14232,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1103991475
 CanvasRenderer:
@@ -14443,11 +14444,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1111345918
 CanvasRenderer:
@@ -14922,11 +14923,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1135233062
 CanvasRenderer:
@@ -15079,11 +15080,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1135233061}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1136386987
 CanvasRenderer:
@@ -15602,11 +15603,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1162192731
 CanvasRenderer:
@@ -16116,11 +16117,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1908872062}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1219344386
 CanvasRenderer:
@@ -16178,11 +16179,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1227120641
 MonoBehaviour:
@@ -16475,11 +16476,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 3
   hardMode: {fileID: 1162192730}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1242327717
 CanvasRenderer:
@@ -16572,11 +16573,11 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1255812459
@@ -16725,11 +16726,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1257189539
 CanvasRenderer:
@@ -16925,11 +16926,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1266290548
@@ -17079,11 +17080,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2046631006}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1273667092
 CanvasRenderer:
@@ -17585,11 +17586,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1309326884
 CanvasRenderer:
@@ -18309,11 +18310,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1379293377
 CanvasRenderer:
@@ -18887,11 +18888,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1407845465
 CanvasRenderer:
@@ -18965,11 +18966,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1408469344
 CanvasRenderer:
@@ -19045,11 +19046,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1421154646
 MonoBehaviour:
@@ -19534,11 +19535,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1456059768
 CanvasRenderer:
@@ -20176,11 +20177,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 11
   hardMode: {fileID: 1727928565}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1496906212
 CanvasRenderer:
@@ -20254,11 +20255,11 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1499900388
@@ -21317,11 +21318,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1605281343
 CanvasRenderer:
@@ -21541,11 +21542,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1631045934
 MonoBehaviour:
@@ -21839,11 +21840,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 726148642}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1650553956
 CanvasRenderer:
@@ -22336,11 +22337,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 652766556}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1673962229
 CanvasRenderer:
@@ -22398,11 +22399,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1675167665
 MonoBehaviour:
@@ -23354,11 +23355,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1704393346
 MonoBehaviour:
@@ -23511,11 +23512,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1708807002
 CanvasRenderer:
@@ -24052,11 +24053,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1727928566
 CanvasRenderer:
@@ -24130,11 +24131,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1779347335
 CanvasRenderer:
@@ -24288,11 +24289,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!114 &1791208200
 MonoBehaviour:
@@ -24594,11 +24595,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1796357279
@@ -24752,11 +24753,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1407845464}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1822298809
 CanvasRenderer:
@@ -25876,11 +25877,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1893550543
 CanvasRenderer:
@@ -26100,11 +26101,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1908872063
 CanvasRenderer:
@@ -26160,11 +26161,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 969472090}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1921638465
 CanvasRenderer:
@@ -26884,11 +26885,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1605281342}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &1994220173
 CanvasRenderer:
@@ -27508,11 +27509,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1708807001}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &2032169424
 CanvasRenderer:
@@ -27586,11 +27587,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &2046631007
 CanvasRenderer:
@@ -27664,11 +27665,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &2058854669
 CanvasRenderer:
@@ -27806,11 +27807,11 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &2071202716
 CanvasRenderer:
@@ -28876,11 +28877,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 975259591}
-  previousLevelWords: You won!
+  previousLevelString: You won!
   previousTime: 6
-  nextLevelProgress: ' Entering level X!'
+  nextLevelString: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyString: Now Fight!!
   enemyTime: 2
 --- !u!222 &2138070412
 CanvasRenderer:
