@@ -175,6 +175,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 459756517}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1932966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -247,6 +253,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1965510
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -542,8 +554,8 @@ RectTransform:
   m_Father: {fileID: 412457695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 2.25}
   m_SizeDelta: {x: 20, y: -4.5}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -725,6 +737,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 843822242}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &41803944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -779,6 +797,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2071202715}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &42479491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -872,6 +896,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &46592437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,6 +1587,12 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &104422975
 CanvasRenderer:
@@ -1826,6 +1862,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 566513258}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &134946890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2186,6 +2228,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &158523895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2471,6 +2519,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 179533774}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &179533775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2543,12 +2597,92 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &180767181
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180767178}
+--- !u!1 &189936179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 189936180}
+  - component: {fileID: 189936181}
+  - component: {fileID: 189936182}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &189936180
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189936179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 543391330}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -328, y: -222}
+  m_SizeDelta: {x: 465, y: 186}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &189936181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189936179}
+--- !u!114 &189936182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189936179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!1 &230282086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,6 +2792,12 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &231425601
 CanvasRenderer:
@@ -2886,6 +3026,50 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 254689262}
+--- !u!1 &255308280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 255308282}
+  - component: {fileID: 255308281}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &255308281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255308280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b34a80d5a4f1c4ab591be11c4106fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calculator: {fileID: 2085180828}
+  textDisplay: {fileID: 189936182}
+  objectSpot: 0
+  movingObject: {fileID: 508652009}
+--- !u!4 &255308282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255308280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &266040126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +3137,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 158523894}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &266040131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3403,6 +3593,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &320723824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3559,13 +3755,13 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331346452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
   m_LocalScale: {x: 1.019589, y: 1.019589, z: 1.019589}
   m_Children:
   - {fileID: 436551934}
   - {fileID: 897947640}
   - {fileID: 996563628}
-  m_Father: {fileID: 751589143}
+  m_Father: {fileID: 508652010}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4313,6 +4509,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &403351038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4634,6 +4836,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1779347334}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &420629065
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5064,6 +5272,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &459756518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5747,6 +5961,41 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 508458927}
+--- !u!1 &508652009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 508652010}
+  m_Layer: 0
+  m_Name: Movement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508652010
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508652009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1446319019}
+  - {fileID: 949516103}
+  - {fileID: 331346453}
+  - {fileID: 1156040841}
+  - {fileID: 1293133567}
+  - {fileID: 900849001}
+  - {fileID: 656933865}
+  m_Father: {fileID: 751589143}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537701929
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,6 +6359,7 @@ RectTransform:
   - {fileID: 1045945878}
   - {fileID: 1692169361}
   - {fileID: 2006003337}
+  - {fileID: 189936180}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6381,6 +6631,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &566513259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6413,7 +6669,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 574737961}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 50.92, z: 0}
 --- !u!1 &572901170
 GameObject:
@@ -6705,14 +6961,9 @@ Transform:
   m_LocalPosition: {x: -42.531887, y: -8.795997, z: -0.07558636}
   m_LocalScale: {x: 6.0520816, y: 6.0520816, z: 6.0520816}
   m_Children:
-  - {fileID: 949516103}
   - {fileID: 568349162}
-  - {fileID: 1156040841}
-  - {fileID: 1293133567}
-  - {fileID: 900849001}
-  - {fileID: 656933865}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &574737962
 MonoBehaviour:
@@ -6725,6 +6976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ee3a31a3305c84aaeda19a7e31904b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyManager: {fileID: 255308281}
   currentHealth: 0
   baseAttack: 1
   resetTime: 0
@@ -7145,6 +7397,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1103991474}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &602279656
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8005,6 +8263,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1257189538}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &647072815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8077,6 +8341,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &652766557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8109,16 +8379,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656933864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.012496948}
-  m_LocalScale: {x: 0.16840497, y: 0.16840497, z: 0.16840497}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1.0192006, y: 1.0192006, z: 1.0192006}
   m_Children:
   - {fileID: 409002419}
-  m_Father: {fileID: 574737961}
-  m_RootOrder: 5
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.5, y: -33.4}
+  m_AnchoredPosition: {x: -372.37036, y: -210.93552}
   m_SizeDelta: {x: 217.6, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &656933866
@@ -8331,6 +8601,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1309326883}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &669584559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8459,7 +8735,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.800003, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8941,6 +9217,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &726148643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9129,6 +9411,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1893550542}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &740681441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9150,7 +9438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &751589143
 Transform:
   m_ObjectHideFlags: 0
@@ -9161,13 +9449,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -0.000045295543}
   m_LocalScale: {x: 0.9807874, y: 0.9807874, z: 0.9807874}
   m_Children:
-  - {fileID: 1446319019}
+  - {fileID: 508652010}
   - {fileID: 230282087}
-  - {fileID: 331346453}
   - {fileID: 574737961}
   - {fileID: 1995756100}
-  - {fileID: 302607801}
   - {fileID: 847845817}
+  - {fileID: 302607801}
   m_Father: {fileID: 543391330}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9325,6 +9612,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1111345915}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &756958630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9610,6 +9903,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 11
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &780108259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9792,6 +10091,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 179533774}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &805332699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9884,6 +10189,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 9
   hardMode: {fileID: 1408469343}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &830498473
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10270,6 +10581,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &843822243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10343,6 +10660,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 180767180}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &847322378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10362,7 +10685,7 @@ Transform:
   m_Children:
   - {fileID: 1352538777}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &847845818
 MonoBehaviour:
@@ -10763,6 +11086,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 963259404}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &877657527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10916,6 +11245,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &891795339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11193,6 +11528,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &900274933
 CanvasRenderer:
@@ -11226,16 +11567,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 900849000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.012496948}
-  m_LocalScale: {x: 0.16840497, y: 0.16840497, z: 0.16840497}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1.0192006, y: 1.0192006, z: 1.0192006}
   m_Children:
   - {fileID: 1008849114}
-  m_Father: {fileID: 574737961}
-  m_RootOrder: 4
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.5, y: -24.2}
+  m_AnchoredPosition: {x: -372.37036, y: -155.25635}
   m_SizeDelta: {x: 217.6, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900849002
@@ -11643,7 +11984,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.800003, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11827,6 +12168,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1379293376}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &945962639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11858,18 +12205,18 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949516102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.012489318}
-  m_LocalScale: {x: 0.16523246, y: 0.16523246, z: 0.1652324}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1890865920}
   - {fileID: 1071193049}
   - {fileID: 840916849}
-  m_Father: {fileID: 574737961}
-  m_RootOrder: 0
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.432602, y: 46.231358}
+  m_AnchoredPosition: {x: -371.9624, y: 270.99997}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949516104
@@ -12000,6 +12347,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &963259405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12072,6 +12425,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &969472091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12144,6 +12503,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &975259592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12165,7 +12530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &977039560
 Transform:
   m_ObjectHideFlags: 0
@@ -12414,6 +12779,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 1456059767}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &986227753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12659,6 +13030,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &991637862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12919,6 +13296,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2058854668}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &999825831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13047,6 +13430,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1965509}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1011991643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13139,6 +13528,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 320723823}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1012138166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13834,6 +14229,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1103991475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14040,6 +14441,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1111345918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14513,6 +14920,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1135233062
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14664,6 +15077,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1135233061}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1136386987
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14810,16 +15229,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1156040840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.012496948}
-  m_LocalScale: {x: 0.16846913, y: 0.16846913, z: 0.16846913}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1.019589, y: 1.019589, z: 1.019589}
   m_Children:
   - {fileID: 2131099806}
-  m_Father: {fileID: 574737961}
-  m_RootOrder: 2
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.800003, y: -5.8999996}
+  m_AnchoredPosition: {x: -374.18597, y: -44.503273}
   m_SizeDelta: {x: 217.6, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156040842
@@ -14951,7 +15370,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.799988, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15181,6 +15600,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1162192731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15689,6 +16114,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1908872062}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1219344386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15745,6 +16176,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1227120641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16036,6 +16473,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 3
   hardMode: {fileID: 1162192730}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1242327717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16127,6 +16570,12 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &1255812459
 CanvasRenderer:
@@ -16274,6 +16723,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1257189539
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16468,6 +16923,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &1266290548
 CanvasRenderer:
@@ -16616,6 +17077,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2046631006}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1273667092
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16726,16 +17193,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293133566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.012496948}
-  m_LocalScale: {x: 0.16840497, y: 0.16840497, z: 0.16840497}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1.0192006, y: 1.0192006, z: 1.0192006}
   m_Children:
   - {fileID: 709084958}
-  m_Father: {fileID: 574737961}
-  m_RootOrder: 3
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.800003, y: -14.799999}
+  m_AnchoredPosition: {x: -374.18597, y: -98.36679}
   m_SizeDelta: {x: 217.6, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293133568
@@ -17116,6 +17583,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1309326884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17834,6 +18307,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1379293377
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17885,7 +18364,7 @@ Prefab:
     - target: {fileID: 224587627883675248, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224587627883675248, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
@@ -18406,6 +18885,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1407845465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18478,6 +18963,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1408469344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18552,6 +19043,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1421154646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18669,8 +19166,8 @@ RectTransform:
   m_Father: {fileID: 840916849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18814,14 +19311,14 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1446319018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468417859}
   - {fileID: 1172944112}
   - {fileID: 1940008110}
   - {fileID: 677298094}
-  m_Father: {fileID: 751589143}
+  m_Father: {fileID: 508652010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -19035,6 +19532,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1456059768
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19671,6 +20174,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 11
   hardMode: {fileID: 1727928565}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1496906212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19743,6 +20252,12 @@ MonoBehaviour:
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &1499900388
 CanvasRenderer:
@@ -20800,6 +21315,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1605281343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21018,6 +21539,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1631045934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21310,6 +21837,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 726148642}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1650553956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21801,6 +22334,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 652766556}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1673962229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21857,6 +22396,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1675167665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22426,8 +22971,8 @@ RectTransform:
   m_Father: {fileID: 996563628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22807,6 +23352,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1704393346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22958,6 +23509,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1708807002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23493,6 +24050,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1727928566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23565,6 +24128,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1779347335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23717,6 +24286,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!114 &1791208200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24017,6 +24592,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &1796357279
 CanvasRenderer:
@@ -24169,6 +24750,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1407845464}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1822298809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25287,6 +25874,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1893550543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25505,6 +26098,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1908872063
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25559,6 +26158,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 969472090}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1921638465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26277,6 +26882,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1605281342}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &1994220173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26332,7 +26943,7 @@ RectTransform:
   m_Children:
   - {fileID: 1393398529}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26895,6 +27506,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1708807001}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &2032169424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26967,6 +27584,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &2046631007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27039,6 +27662,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &2058854669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27175,6 +27804,12 @@ MonoBehaviour:
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &2071202716
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28239,6 +28874,12 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 975259591}
+  previousLevelWords: You won!
+  previousTime: 0
+  nextLevelProgress: ' Entering level X!'
+  nextime: 10
+  enemyWords: 
+  enemyTime: 2
 --- !u!222 &2138070412
 CanvasRenderer:
   m_ObjectHideFlags: 0

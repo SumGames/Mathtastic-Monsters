@@ -11,7 +11,7 @@ public class BossButton : QuizButton
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
     }
 
-    public override void buttonUsed()
+    public override void buttonUsed(phases phase)
     {
         boss = true;
         p_manager.StartLevel(this);

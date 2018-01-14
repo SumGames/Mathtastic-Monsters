@@ -139,7 +139,7 @@ public class LevelSelection : MonoBehaviour
     //Start playing with the button's level..
     public void UseNormalButton()
     {
-        currentContainer.buttons[currentLevel].buttonUsed();
+        currentContainer.buttons[currentLevel].buttonUsed(phases.None);
         gameObject.SetActive(false);
     }
 
@@ -150,7 +150,7 @@ public class LevelSelection : MonoBehaviour
         if (button == null)
             return;
         button.Hard = true;
-        button.buttonUsed();
+        button.buttonUsed(phases.None);
         gameObject.SetActive(false);
     }
 

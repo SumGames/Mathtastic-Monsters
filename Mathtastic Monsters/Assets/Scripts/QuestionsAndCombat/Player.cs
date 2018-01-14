@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    public StoryManager storyManager;
+
     internal float baseHealth = 6; //Player's starting health. prob affected by equipment.
     float maxHealth;
     public float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
@@ -167,7 +169,7 @@ public class Player : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-        if (manager.isPlaying() && (!transition || transition.transitionState == TransitionState.None))
+        if (manager.isPlaying() && (!transition || transition.transitionState == TransitionState.None) && (!storyManager || storyManager.phase == phases.None))
         {
             Timer -= Time.deltaTime;
             timeLeft.value = Timer;

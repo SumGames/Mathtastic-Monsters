@@ -27,6 +27,6 @@ public class Next : MonoBehaviour
 
     public void go()
     {
-        container.buttons[(button.quizIndex + 1)].buttonUsed();
+        container.buttons[(button.quizIndex + 1)].buttonUsed(phases.previous);
     }
 }

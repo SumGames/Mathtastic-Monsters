@@ -17,6 +17,8 @@ public enum operators
 
 public class QuizButton : MonoBehaviour
 {
+    StoryManager storyManager;
+
     public bool boss;
 
     public int quizIndex;
@@ -59,17 +61,34 @@ public class QuizButton : MonoBehaviour
 
     public QuizButton hardMode;
 
+    public string previousLevelWords = "You won!";
+    public float previousTime = 6;
+
+    public string nextLevelProgress = " Entering level X!";
+    public float nextime = 10;
+
+    public string enemyWords = "Now Fight!!";
+    public float enemyTime = 2;
+
+
 
     // Use this for initialization
     public virtual void Start()
-    {        
+    {
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
     }
 
     //Call the quizManager to start a quiz using this button as the basis.
-    public virtual void buttonUsed()
+    public virtual void buttonUsed(phases a_phase)
     {
+        if (!storyManager)
+            storyManager = FindObjectOfType<StoryManager>();
+
+        storyManager.StartTransition(this, a_phase);
+
         boss = false;
+
+
         p_manager.StartLevel(this);
     }
 }

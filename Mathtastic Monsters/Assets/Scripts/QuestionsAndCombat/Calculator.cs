@@ -86,4 +86,13 @@ public class Calculator : MonoBehaviour
             monsterManager.player.attacksLanded = 0;
         }
     }
+
+    internal void AbleCalculator(bool enable)
+    {
+        foreach (Button item in transform.parent.GetComponentsInChildren<Button>())
+        {
+            item.interactable = enable;
+
+        }
+    }
 }
