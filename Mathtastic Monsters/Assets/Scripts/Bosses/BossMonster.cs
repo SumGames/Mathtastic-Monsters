@@ -20,8 +20,7 @@ public class BossMonster : Monster
 
     //We'll make a few answers without the calculator, so this lets us do this without it.
     internal int answerNeeded;
-    public Text questionText;
-
+    public questionManager text;
     //Addition boss has a special multiple choice.
     public AdditionContainer additionContainer;
 
@@ -369,7 +368,10 @@ public class BossMonster : Monster
         }
 
         answerWords += "\n= " + result.ToString();
-        questionText.text = answerWords;
+
+        questions.GetComponent<Text>().text = answerWords;
+        questions.questionNeeded = answerWords;
+        
     }
 
     void CreateMultiplication()

@@ -61,13 +61,13 @@ public class QuizButton : MonoBehaviour
 
     public QuizButton hardMode;
 
-    public string previousLevelWords = "You won!";
+    public string previousLevelString = "You won!";
     public float previousTime = 6;
 
-    public string nextLevelProgress = " Entering level X!";
+    public string nextLevelString = " Entering level X!";
     public float nextime = 10;
 
-    public string enemyWords = "Now Fight!!";
+    public string enemyString = "Now Fight!!";
     public float enemyTime = 2;
 
 

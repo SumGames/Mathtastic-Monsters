@@ -139,7 +139,7 @@ public class LevelSelection : MonoBehaviour
     //Start playing with the button's level..
     public void UseNormalButton()
     {
-        currentContainer.buttons[currentLevel].buttonUsed(phases.None);
+        currentContainer.buttons[currentLevel].buttonUsed(phases.next);
         gameObject.SetActive(false);
     }
 

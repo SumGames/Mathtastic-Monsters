@@ -14,16 +14,18 @@ public enum phases
 
 public class StoryManager : MonoBehaviour
 {
-    public Calculator calculator;
+    public Text questionText;
 
-    QuizButton nextLevel;
+    public GameObject monsterSpot;
+
+    public Calculator calculator;
 
 
     string previousLevelWords;
     float previousTime;
 
     string nextLevelWords;
-    float nextime;
+    public float nextime;
 
     string enemyWords;
     float enemyTime;
@@ -43,7 +45,8 @@ public class StoryManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        phase = phases.None;
+        textDisplay.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,6 +54,9 @@ public class StoryManager : MonoBehaviour
     {
         if (phase != phases.None)
         {
+            if (monsterSpot.transform.localPosition.x != 448)
+                monsterSpot.transform.localPosition = new Vector3(448, monsterSpot.transform.localPosition.y, monsterSpot.transform.localPosition.z);
+
             timer += Time.deltaTime;
 
             objectSpot += (movementIncrement * Time.deltaTime);
@@ -72,7 +78,7 @@ public class StoryManager : MonoBehaviour
                 }
                 break;
             case phases.next:
-                if (timer > previousTime)
+                if (timer > nextime)
                 {
                     phase = phases.enemy;
                     timer = 0;
@@ -96,7 +102,7 @@ public class StoryManager : MonoBehaviour
     {
         phase = phases.None;
         SetMovementStartAndSpeed(phase);
-        textDisplay.text = "";
+        textDisplay.text = "";        
 
         calculator.AbleCalculator(true);
 
@@ -110,33 +116,50 @@ public class StoryManager : MonoBehaviour
             return;
         }
 
+        textDisplay.gameObject.SetActive(true);
+
+        timer = 0;
 
         calculator.AbleCalculator(false);
 
-        nextLevel = a_button;
-
-        previousLevelWords = a_button.previousLevelWords;
+        previousLevelWords = a_button.previousLevelString;
         previousTime = a_button.previousTime;
 
-        nextLevelWords = a_button.nextLevelProgress;
+        nextLevelWords = a_button.nextLevelString;
         nextime = a_button.nextime;
 
-        enemyWords = a_button.enemyWords;
+        enemyWords = a_button.enemyString;
         enemyTime = a_button.enemyTime;
+        SetMovementStartAndSpeed(a_startingPhase);
 
         phase = a_startingPhase;
-        SetMovementStartAndSpeed(a_startingPhase);
+
 
     }
     void SetMovementStartAndSpeed(phases position)
     {
+        questionText.enabled = false;
+
         if (position == phases.enemy || position == phases.None)
         {
+            if (position == phases.None)
+                questionText.enabled = true;
+
+            Debug.Log(position);
+
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(0, 0, 0);
+            movementIncrement = 0;
         }
         if (position == phases.previous)
         {
+            if (previousTime == 0)
+            {
+                movementIncrement = 0;
+                return;
+            }
+            monsterSpot.gameObject.SetActive(false);
+
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(objectSpot, 0, 0);
             movementIncrement = -(1200 / previousTime);
@@ -144,10 +167,18 @@ public class StoryManager : MonoBehaviour
         }
         else if (position == phases.next)
         {
+            if (nextime == 0)
+            {
+                movementIncrement = 0;
+                return;
+            }
+
+            monsterSpot.gameObject.SetActive(true);
+
             objectSpot = 1200;
-            movingObject.transform.localPosition = new Vector3(objectSpot, 0, 0);
+            movingObject.transform.localPosition = new Vector3(1200, 0, 0);
             movementIncrement = -(1200 / nextime);
-            textDisplay.text = nextLevelWords;
-        }
+            textDisplay.text = nextLevelWords;            
+        }        
     }
 }

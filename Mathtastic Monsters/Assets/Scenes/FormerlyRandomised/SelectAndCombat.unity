@@ -176,7 +176,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 459756517}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -254,7 +254,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -738,7 +738,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 843822242}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -798,7 +798,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 2071202715}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -897,7 +897,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 566513258}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -2229,7 +2229,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 179533774}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -2598,7 +2598,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -2632,16 +2632,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189936179}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
+  m_LocalScale: {x: 1.019589, y: 1.019589, z: 1.019589}
   m_Children: []
-  m_Father: {fileID: 543391330}
-  m_RootOrder: 12
+  m_Father: {fileID: 751589143}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: -222}
+  m_AnchoredPosition: {x: -334.42517, y: -226.34875}
   m_SizeDelta: {x: 465, y: 186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &189936181
@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2671,11 +2671,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2707,7 +2707,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230282086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.95, y: -59.1, z: -0.09619141}
+  m_LocalPosition: {x: -7.9499993, y: -59.099995, z: -0.09609278}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1869729633}
@@ -2723,8 +2723,8 @@ Transform:
   - {fileID: 1522167183}
   - {fileID: 573083425}
   - {fileID: 2085180827}
-  m_Father: {fileID: 751589143}
-  m_RootOrder: 1
+  m_Father: {fileID: 508652010}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231425596
 GameObject:
@@ -2793,7 +2793,7 @@ MonoBehaviour:
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -3053,7 +3053,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b34a80d5a4f1c4ab591be11c4106fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterSpot: {fileID: 468417858}
   calculator: {fileID: 2085180828}
+  nextime: 0
   textDisplay: {fileID: 189936182}
   objectSpot: 0
   movingObject: {fileID: 508652009}
@@ -3138,7 +3140,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 158523894}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -3594,7 +3596,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -4510,7 +4512,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -4837,7 +4839,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1779347334}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -5273,7 +5275,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -5380,12 +5382,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468417858}
-  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 447.9, y: -297.01, z: 76.00018}
+  m_LocalRotation: {x: -0, y: 0.2588191, z: -0, w: 0.9659258}
+  m_LocalPosition: {x: 447.8999, y: -297.01, z: 76.000305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1446319019}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!114 &468417860
 MonoBehaviour:
@@ -5993,6 +5995,7 @@ Transform:
   - {fileID: 1293133567}
   - {fileID: 900849001}
   - {fileID: 656933865}
+  - {fileID: 230282087}
   m_Father: {fileID: 751589143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6359,7 +6362,6 @@ RectTransform:
   - {fileID: 1045945878}
   - {fileID: 1692169361}
   - {fileID: 2006003337}
-  - {fileID: 189936180}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6632,7 +6634,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -6963,7 +6965,7 @@ Transform:
   m_Children:
   - {fileID: 568349162}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &574737962
 MonoBehaviour:
@@ -7398,7 +7400,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1103991474}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -8264,7 +8266,7 @@ MonoBehaviour:
   enemyAnswerRange: 4
   hardMode: {fileID: 1257189538}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -8342,7 +8344,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -8602,7 +8604,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1309326883}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -8651,7 +8653,7 @@ MonoBehaviour:
   monsterSpot: {fileID: 468417858}
   questions: {fileID: 1446319020}
   multiple: {fileID: 847845818}
-  questionText: {fileID: 1446319021}
+  text: {fileID: 0}
   additionContainer: {fileID: 469966699}
   subtractionBottom: {fileID: 1940008109}
   highSpot: {x: 0, y: 0, z: 0}
@@ -8672,7 +8674,7 @@ Transform:
   - {fileID: 1341949667}
   - {fileID: 155898115}
   m_Father: {fileID: 1446319019}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!1 &678696956
 GameObject:
@@ -9218,7 +9220,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -9412,7 +9414,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1893550542}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -9450,11 +9452,11 @@ Transform:
   m_LocalScale: {x: 0.9807874, y: 0.9807874, z: 0.9807874}
   m_Children:
   - {fileID: 508652010}
-  - {fileID: 230282087}
   - {fileID: 574737961}
   - {fileID: 1995756100}
   - {fileID: 847845817}
   - {fileID: 302607801}
+  - {fileID: 189936180}
   m_Father: {fileID: 543391330}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9613,10 +9615,10 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1111345915}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
-  enemyWords: 
+  enemyWords: roooar
   enemyTime: 2
 --- !u!222 &756958630
 CanvasRenderer:
@@ -9904,7 +9906,7 @@ MonoBehaviour:
   enemyAnswerRange: 11
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -10092,7 +10094,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 179533774}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -10190,7 +10192,7 @@ MonoBehaviour:
   enemyAnswerRange: 9
   hardMode: {fileID: 1408469343}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -10582,7 +10584,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -10661,7 +10663,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 180767180}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -10685,7 +10687,7 @@ Transform:
   m_Children:
   - {fileID: 1352538777}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &847845818
 MonoBehaviour:
@@ -11087,7 +11089,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 963259404}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -11246,7 +11248,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -11529,7 +11531,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -12169,7 +12171,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1379293376}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -12348,7 +12350,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -12426,7 +12428,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -12504,7 +12506,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -12780,7 +12782,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 1456059767}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -13031,7 +13033,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -13297,7 +13299,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 2058854668}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -13431,7 +13433,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1965509}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -13529,7 +13531,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 320723823}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -14230,7 +14232,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -14442,7 +14444,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -14921,7 +14923,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -15078,7 +15080,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1135233061}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -15601,7 +15603,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -15644,7 +15646,7 @@ RectTransform:
   - {fileID: 1147423692}
   - {fileID: 412457695}
   m_Father: {fileID: 1446319019}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16115,7 +16117,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1908872062}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -16177,7 +16179,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -16474,7 +16476,7 @@ MonoBehaviour:
   enemyAnswerRange: 3
   hardMode: {fileID: 1162192730}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -16571,7 +16573,7 @@ MonoBehaviour:
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -16724,7 +16726,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -16924,7 +16926,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -17078,7 +17080,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 2046631006}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -17584,7 +17586,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -18308,7 +18310,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -18364,7 +18366,7 @@ Prefab:
     - target: {fileID: 224587627883675248, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224587627883675248, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
@@ -18886,7 +18888,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -18964,7 +18966,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -19044,7 +19046,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -19314,10 +19316,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0.000046182835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 468417859}
   - {fileID: 1172944112}
   - {fileID: 1940008110}
   - {fileID: 677298094}
+  - {fileID: 468417859}
   m_Father: {fileID: 508652010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19533,7 +19535,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -20175,7 +20177,7 @@ MonoBehaviour:
   enemyAnswerRange: 11
   hardMode: {fileID: 1727928565}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -20253,7 +20255,7 @@ MonoBehaviour:
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -21316,7 +21318,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -21540,7 +21542,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -21838,7 +21840,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 726148642}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -22335,7 +22337,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 652766556}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -22397,7 +22399,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -23353,7 +23355,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -23510,7 +23512,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -24051,7 +24053,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -24129,7 +24131,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -24287,7 +24289,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -24593,7 +24595,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -24751,7 +24753,7 @@ MonoBehaviour:
   enemyAnswerRange: 4
   hardMode: {fileID: 1407845464}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -25875,7 +25877,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -26099,7 +26101,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -26159,7 +26161,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 969472090}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -26595,7 +26597,7 @@ Transform:
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children: []
   m_Father: {fileID: 1446319019}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1940008113
 MeshFilter:
@@ -26883,7 +26885,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1605281342}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -26943,7 +26945,7 @@ RectTransform:
   m_Children:
   - {fileID: 1393398529}
   m_Father: {fileID: 751589143}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27507,7 +27509,7 @@ MonoBehaviour:
   enemyAnswerRange: 5
   hardMode: {fileID: 1708807001}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -27585,7 +27587,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -27663,7 +27665,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -27805,7 +27807,7 @@ MonoBehaviour:
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 
@@ -28875,7 +28877,7 @@ MonoBehaviour:
   enemyAnswerRange: 2
   hardMode: {fileID: 975259591}
   previousLevelWords: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelProgress: ' Entering level X!'
   nextime: 10
   enemyWords: 

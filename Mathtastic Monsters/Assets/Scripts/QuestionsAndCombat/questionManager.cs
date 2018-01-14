@@ -13,7 +13,7 @@ public class questionManager : MonoBehaviour
 
     public TransitionManager transition;
 
-    string questionNeeded;
+    internal string questionNeeded;
 
     bool justTransitioned;
 
@@ -22,7 +22,7 @@ public class questionManager : MonoBehaviour
         if (!transition)
             return;
 
-        if (transition.transitionState == TransitionState.None&&justTransitioned)
+        if (transition.transitionState == TransitionState.None && justTransitioned)
         {
             GetComponent<Text>().text = questionNeeded;
         }

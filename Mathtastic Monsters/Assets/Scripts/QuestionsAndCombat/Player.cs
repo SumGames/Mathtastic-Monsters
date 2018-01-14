@@ -283,7 +283,6 @@ public class Player : MonoBehaviour
         if (resetTime == 0)
         {
             resetTime = 15;
-            Debug.Log("Set");
         }
 
         if (enemyPhase)

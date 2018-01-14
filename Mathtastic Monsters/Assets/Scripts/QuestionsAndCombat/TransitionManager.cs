@@ -100,8 +100,6 @@ public class TransitionManager : MonoBehaviour
 
     internal void TransitionContainers(TransitioningObjects a_mode)
     {
-        Debug.Log(a_mode.ToString());
-
         switch (a_mode)
         {
             case TransitioningObjects.SwapToMultiple:
