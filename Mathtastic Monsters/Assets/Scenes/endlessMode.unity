@@ -931,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
   stateManager: {fileID: 0}
+  player: {fileID: 0}
   monster: {fileID: 0}
   boss: {fileID: 0}
   fightingBoss: 0
@@ -2673,8 +2674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ee3a31a3305c84aaeda19a7e31904b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyManager: {fileID: 0}
+  currentHealth: 0
   baseAttack: 1
-  baseTimeGiven: 15
   resetTime: 0
   Healthbar: {fileID: 751589144}
   timeLeft: {fileID: 331346454}
@@ -2684,6 +2686,9 @@ MonoBehaviour:
   sounds: []
   getShards: {fileID: 574737964}
   victoryMusic: {fileID: 574737964}
+  calculator: {fileID: 0}
+  levelSelection: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!114 &574737963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2949,7 +2954,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 20
   minNumber: 0
   maxNumber: 0
   Operator: 0
@@ -2965,6 +2970,13 @@ MonoBehaviour:
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
+  hardMode: {fileID: 0}
+  previousLevelString: You won!
+  previousTime: 6
+  nextLevelString: ' Entering level X!'
+  nextime: 10
+  enemyString: Now Fight!!
+  enemyTime: 2
   endlessMonster: {fileID: 289822714}
 --- !u!1 &626037664
 GameObject:
@@ -4698,6 +4710,7 @@ MonoBehaviour:
   answersList: 
   attacksPherPhase: 1
   attacks: 1
+  transitionManager: {fileID: 0}
 --- !u!1 &850981980
 GameObject:
   m_ObjectHideFlags: 0
@@ -6459,7 +6472,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 597748409}
-        m_MethodName: buttonUsed
+        m_MethodName: Used
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7596,6 +7609,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculator: {fileID: 2085180828}
   container: {fileID: 847845818}
+  button: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!114 &1446319021
 MonoBehaviour:
   m_ObjectHideFlags: 0

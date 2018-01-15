@@ -84,7 +84,8 @@ public class endlessMonsterManager : MonsterManager
 
 
     public void ToSubjectScreen(endlessButton button)
-    {
+    {        
+
         endlessState.changeState(playStatus.ArenaStart);
 
         highestScore.text = highScores.returnBest(button.Operator, true);

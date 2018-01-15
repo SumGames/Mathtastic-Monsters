@@ -2,7 +2,7 @@
 {
     public endlessMonsterManager endlessMonster;
 
-    public override void buttonUsed(phases phase)
+    public void Used()
     {
         endlessMonster.running = this;
         endlessMonster.quizRunning = this;
