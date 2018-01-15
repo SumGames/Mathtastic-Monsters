@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Type
+{
+    Torso,
+    FourArm,
+    FourLeg
+}
+
 public class ModelLines : MonoBehaviour
 {
+    public Type m_type;
+
     public Transform[] links;
 
 
@@ -16,10 +25,12 @@ public class ModelLines : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Draw();
+        if (m_type == Type.Torso)
+            DrawNormal();
+
     }
 
-    public void Draw()
+    public void DrawNormal()
     {
         Debug.DrawLine(links[1].position, links[2].position);
         Debug.DrawLine(links[1].position, links[3].position);
