@@ -110,7 +110,8 @@ public class StoryManager : MonoBehaviour
     {
         phase = phases.None;
         SetMovementStartAndSpeed(phase);
-        textDisplay.text = "";
+
+        textDisplay.gameObject.SetActive(false);
 
         if (button.boss)
         {
