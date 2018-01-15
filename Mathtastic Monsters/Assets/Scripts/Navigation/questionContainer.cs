@@ -28,6 +28,7 @@ public class questionContainer : MonoBehaviour
             foreach (QuizButton item in buttons)
             {
                 item.quizIndex = i;
+
                 item.parent = this;
                 i++;
             }

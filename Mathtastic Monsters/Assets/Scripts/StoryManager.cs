@@ -127,7 +127,7 @@ public class StoryManager : MonoBehaviour
     {
         button = a_button;
 
-        if(a_startingPhase==phases.None)
+        if (a_startingPhase == phases.None)
         {
             EndMovement();
             return;
@@ -195,7 +195,7 @@ public class StoryManager : MonoBehaviour
             objectSpot = 1200;
             movingObject.transform.localPosition = new Vector3(1200, 0, 0);
             movementIncrement = -(1200 / nextime);
-            textDisplay.text = nextLevelWords;            
-        }        
+            textDisplay.text = nextLevelWords;
+        }
     }
 }

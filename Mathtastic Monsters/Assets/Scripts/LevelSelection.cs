@@ -147,6 +147,9 @@ public class LevelSelection : MonoBehaviour
     public void useHardButton()
     {
         QuizButton button = currentContainer.buttons[currentLevel].hardMode;
+        button.quizIndex = currentContainer.buttons[currentLevel].quizIndex;
+
+
         if (button == null)
             return;
         button.Hard = true;
