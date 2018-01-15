@@ -14,6 +14,9 @@ public enum phases
 
 public class StoryManager : MonoBehaviour
 {
+    QuizButton button;
+    public BossMonster boss;
+
     public Text questionText;
 
     public GameObject monsterSpot;
@@ -54,6 +57,11 @@ public class StoryManager : MonoBehaviour
     {
         if (phase != phases.None)
         {
+            if (button.boss)
+            {
+                boss.EnableBossSpecific(false);
+            }
+
             if (monsterSpot.transform.localPosition.x != 448)
                 monsterSpot.transform.localPosition = new Vector3(448, monsterSpot.transform.localPosition.y, monsterSpot.transform.localPosition.z);
 
@@ -102,7 +110,13 @@ public class StoryManager : MonoBehaviour
     {
         phase = phases.None;
         SetMovementStartAndSpeed(phase);
-        textDisplay.text = "";        
+        textDisplay.text = "";
+
+        if (button.boss)
+        {
+            boss.EnableBossSpecific(true);
+        }
+
 
         calculator.AbleCalculator(true);
 
@@ -110,6 +124,8 @@ public class StoryManager : MonoBehaviour
 
     internal void StartTransition(QuizButton a_button, phases a_startingPhase)
     {
+        button = a_button;
+
         if(a_startingPhase==phases.None)
         {
             EndMovement();

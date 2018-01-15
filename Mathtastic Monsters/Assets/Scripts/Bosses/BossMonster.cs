@@ -418,4 +418,27 @@ public class BossMonster : Monster
             bossDivision.GenerateDivision(m_button);
         }
     }
+
+    internal void EnableBossSpecific(bool setActive)
+    {
+        switch (Operator)
+        {
+            case operators.Addition:
+                additionContainer.gameObject.SetActive(setActive);
+
+                break;
+            case operators.Subtraction:
+                break;
+            case operators.Multiplication:
+                multiplicationContainer.gameObject.SetActive(setActive);
+                break;
+            case operators.Division:
+                bossDivision.gameObject.SetActive(setActive);
+                break;
+            case operators.AddSubMultDiv:
+                break;
+            default:
+                break;
+        }
+    }
 }
