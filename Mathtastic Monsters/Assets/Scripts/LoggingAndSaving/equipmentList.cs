@@ -481,9 +481,8 @@ public class equipmentList : MonoBehaviour
             mod.owned = true;
         }
     }
-
     public string getShards()
     {
-        return "Shards: " + equip.shards.ToString();
+        return equip.shards.ToString();
     }
 }

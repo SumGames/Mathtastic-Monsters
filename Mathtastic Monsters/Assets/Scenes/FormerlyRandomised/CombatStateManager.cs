@@ -27,6 +27,9 @@ public class CombatStateManager : ParentsStateManager
     public GameObject retreatObject;
 
     Text gameInstruction; //Tells player what to do.
+    public Text playernameUI; // Shows the player thir name in the UI
+    public Text shardsUI; //Shows the player the amount of shards they have in the UI
+    public Text starsUI; // Shows the player the amount of stars they have in the UI
 
 
 
@@ -64,8 +67,13 @@ public class CombatStateManager : ParentsStateManager
             backgrounds.startBack(playStatus.subjectSelect);
         }        
     }
-
-
+    private void Update()
+    {
+        shardsUI.text = list.getShards();
+        list.equip.GetTotalStars();
+        starsUI.text = list.equip.GetTotalStars().ToString();
+        playernameUI.text = list.playerName;
+    }
     //Revert back to lesson's subject. 
     public void backToSubject()
     {
