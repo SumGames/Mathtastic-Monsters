@@ -237,4 +237,20 @@ public class CombatStateManager : ParentsStateManager
         retreatObject.SetActive(false);
         levelSelect.SetActive(false);
     }
+
+    public void BackButton()
+    {
+        switch (gameState)
+        {
+            case playStatus.Start:
+                changeState(playStatus.Login);
+                break;
+            case playStatus.subjectSelect:
+                changeState(playStatus.Start);
+                break;
+            default:
+                changeState(playStatus.subjectSelect);
+                break;
+        }
+    }
 }
