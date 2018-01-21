@@ -186,7 +186,10 @@ public class LevelSelection : MonoBehaviour
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);
         hardMode.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
-        starThree.interactable = (starsUnlocked >= 3);        
+        starThree.interactable = (starsUnlocked >= 3);
+        bronzestarParticle.SetActive(starOne.interactable);
+        silverstarParticle.SetActive(starTwo.interactable);
+        goldstarParticle.SetActive(starThree.interactable);
     }
     //Clicked on a button, so we go up by one.
     public void ChangeIndex(int a_index)
