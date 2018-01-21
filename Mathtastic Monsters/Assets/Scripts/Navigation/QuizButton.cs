@@ -75,12 +75,13 @@ public class QuizButton : MonoBehaviour
     // Use this for initialization
     public virtual void Start()
     {
-        p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
     }
 
     //Call the quizManager to start a quiz using this button as the basis.
     public virtual void buttonUsed(phases a_phase)
     {
+        p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
+
         if (!storyManager)
             storyManager = FindObjectOfType<StoryManager>();
 

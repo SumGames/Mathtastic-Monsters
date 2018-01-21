@@ -42,6 +42,8 @@ public class CombatStateManager : ParentsStateManager
 
     public GameObject levelSelect;
 
+    public Image[] medals;
+
     //Start off by linking every internal object to each other.
     void Start()
     {
@@ -163,6 +165,7 @@ public class CombatStateManager : ParentsStateManager
                 container.gameObject.SetActive(false);
                 break;
             case playStatus.Won:
+				checkLevelsAvailable();
                 nextButton.ready();
                 combatContainer.SetActive(true);
                 enemyContainer.gameObject.SetActive(false);
@@ -198,6 +201,20 @@ public class CombatStateManager : ParentsStateManager
     //SubjectButtons[] is an array starting at subtraction, as addition will never be disabled.
     void checkLevelsAvailable()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            if (list.equip.completedLevels[i] > 9)
+            {
+                medals[i].color = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                medals[i].color = new Color(.2f, .2f, .2f, 1);
+            }
+
+        }
+
+
         //For Sub, check nothing.
         subjectButtons[0].interactable = true;
 
@@ -214,7 +231,15 @@ public class CombatStateManager : ParentsStateManager
             subjectButtons[2].interactable = false;
 
         //For Fortess, checking all..
-        if (list.equip.completedLevels[0] > 9 && list.equip.completedLevels[1] > 9 && list.equip.completedLevels[2] > 9)
+
+        bool all = true;
+        for (int i = 0; i < 4; i++)
+        {
+            if (list.equip.completedLevels[i] <= 9)
+                all = false;
+        }
+
+        if (all)
             subjectButtons[3].interactable = true;
         else
             subjectButtons[3].interactable = false;
