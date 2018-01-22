@@ -26,9 +26,7 @@ public class LevelSelection : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        goldstarParticle.gameObject.SetActive(false);
-        silverstarParticle.gameObject.SetActive(false);
-        bronzestarParticle.gameObject.SetActive(false);
+
     }
     void Update()
     {
