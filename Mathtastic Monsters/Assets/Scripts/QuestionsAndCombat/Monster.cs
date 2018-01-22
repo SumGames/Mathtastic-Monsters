@@ -70,6 +70,9 @@ public class Monster : MonoBehaviour
 
         bar.changeHealth(false, health);
 
+        if (animator)
+            animator.Play("Hurt");
+
         CheckDeath();
 
         enemyPhase = questions.MakeQuestion(parent.quizRunning);
@@ -105,11 +108,11 @@ public class Monster : MonoBehaviour
         manager = FindObjectOfType<ParentsStateManager>();
 
 
-        if (animator)
-            animator.Play("Hurt");
-
         if (health <= 0)
         {
+            if (animator)
+                animator.Play("Death");
+
             manager.changeState(playStatus.Won);
             return;
         }

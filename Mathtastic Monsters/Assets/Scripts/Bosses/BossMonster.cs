@@ -64,6 +64,8 @@ public class BossMonster : Monster
     internal override void EnemyAttack()
     {
 
+
+
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
@@ -72,6 +74,9 @@ public class BossMonster : Monster
             EnemyAttackSubtraction();
             return;
         }
+
+        if (animator)
+            animator.Play("Attack");
 
         feedback.DamageSet(SetFeedback.PlayerHit);
 
@@ -101,6 +106,9 @@ public class BossMonster : Monster
 
         if (player.returnTimer() <= 0) //Timer hit 0. Player is damaged, enemy submerges and timer resets.
         {
+            if (animator)
+                animator.Play("Attack");
+
             depth = m_button.maxDepth;
             CreateQuestion();
             player.currentHealth -= m_button.MonsterAttack;
@@ -110,6 +118,9 @@ public class BossMonster : Monster
             return;
         }
         //else player simply got any other answer wrong.
+
+        if (animator)
+            animator.Play("Attack");
 
         player.DamagePlayer(1);
         feedback.DamageSet(SetFeedback.PlayerHit);
@@ -139,6 +150,10 @@ public class BossMonster : Monster
             return;
         }
 
+        if (animator)
+            animator.Play("Hurt");
+
+
         //Addition boss gets harder with each phase.
         if (Operator == operators.Addition)
         {
@@ -166,6 +181,9 @@ public class BossMonster : Monster
     {
         if (depth >= 0) //Depth is 0. We punch him in the face, and he retreats.
         {
+            if (animator)
+                animator.Play("Hurt");
+
             feedback.DamageSet(SetFeedback.EnemyHit);
 
             health--;
