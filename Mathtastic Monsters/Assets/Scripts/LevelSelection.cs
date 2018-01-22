@@ -123,8 +123,6 @@ public class LevelSelection : MonoBehaviour
     void SetButtons()
     {
         NormalMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].name;
-        if (currentContainer.buttons[currentLevel].hardMode != null)
-            hardMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].hardMode.name;
         for (int i = 0; i < 10; i++)
         {
             if (i <= currentContainer.completedQuestions)
@@ -191,6 +189,16 @@ public class LevelSelection : MonoBehaviour
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);
         hardMode.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
+
+        if (currentContainer.buttons[currentLevel].hardMode != null && hardMode.interactable)
+        {
+            hardMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].hardMode.name;
+        }
+        else
+        {
+            hardMode.GetComponentInChildren<Text>().text = "Complete Normal at full health";
+        }
+
         starThree.interactable = (starsUnlocked >= 3);
         bronzestarParticle.SetActive(starOne.interactable);
         silverstarParticle.SetActive(starTwo.interactable);
