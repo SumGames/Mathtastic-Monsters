@@ -177,12 +177,19 @@ public class LevelSelection : MonoBehaviour
             Medallion.gameObject.SetActive(true);
             hardMode.gameObject.SetActive(false);
             starOne.gameObject.SetActive(false);
+            starTwo.gameObject.SetActive(false);
+            starThree.gameObject.SetActive(false);
+            bronzestarParticle.gameObject.SetActive(false);
+            silverstarParticle.gameObject.SetActive(false);
+            goldstarParticle.gameObject.SetActive(false);
             Medallion.interactable = (starsUnlocked >= 1);
             return;
         }
         Medallion.gameObject.SetActive(false);
         hardMode.gameObject.SetActive(true);
         starOne.gameObject.SetActive(true);
+        starTwo.gameObject.SetActive(true);
+        starThree.gameObject.SetActive(true);
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);
         hardMode.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
