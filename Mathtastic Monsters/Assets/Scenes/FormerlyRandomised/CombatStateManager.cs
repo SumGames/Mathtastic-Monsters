@@ -148,7 +148,7 @@ public class CombatStateManager : ParentsStateManager
                 divisionSelection.SetActive(true);
                 break;
             case playStatus.MathFortress:
-                awakenSubject(multiplicationSelection);
+                awakenSubject(mathfortressSelection);
                 mathfortressSelection.SetActive(true);
                 break;
             case playStatus.playing:

@@ -45,6 +45,10 @@ public class BossMonster : Monster
 
     public MultiplicationContainer multiplicationContainer;
 
+    public Abacus abacus;
+
+    public Calculator calculator;
+
     // Use this for initialization
     void Start()
     {
@@ -63,8 +67,6 @@ public class BossMonster : Monster
     //Player was wrong or so slow, enemy gets an attack!
     internal override void EnemyAttack()
     {
-
-
 
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
@@ -270,6 +272,8 @@ public class BossMonster : Monster
     //Choose the type of question we're going to make from this type.
     public void CreateQuestion()
     {
+        abacus.gameObject.SetActive(false);
+
         bossDivision.gameObject.SetActive(false);
 
 
@@ -282,7 +286,7 @@ public class BossMonster : Monster
                 CreateAddition();
                 break;
             case operators.Subtraction:
-                CreateSubtraction(true,true);
+                CreateSubtraction(true, true);
                 break;
             case operators.Multiplication:
                 CreateMultiplication();
@@ -291,7 +295,11 @@ public class BossMonster : Monster
                 CreateDivision();
                 break;
 
-            default:
+            case operators.AddSub:
+            case operators.AddSubMult:
+            case operators.AddSubMultDiv:
+            case operators.Fortress:
+                CreateMultipleChoice();
                 break;
         }
 
@@ -326,7 +334,7 @@ public class BossMonster : Monster
 
     //We're creating a simple question like a normal monster one, but we're going to answer it using the addition container instead of anything else.
     void CreateAddition()
-    {        
+    {
         additionContainer.gameObject.SetActive(true);
 
         int[] numbers = new int[m_button.variableCount];
@@ -389,7 +397,7 @@ public class BossMonster : Monster
 
         questions.GetComponent<Text>().text = answerWords;
         questions.questionNeeded = answerWords;
-        
+
     }
 
     void CreateMultiplication()
@@ -454,9 +462,35 @@ public class BossMonster : Monster
                 bossDivision.gameObject.SetActive(setActive);
                 break;
             case operators.AddSubMultDiv:
+                abacus.gameObject.SetActive(setActive);
                 break;
             default:
                 break;
+        }
+    }
+
+    internal void CreateMultipleChoice()
+    {
+        Debug.Log("fort");
+
+        abacus.gameObject.SetActive(true);
+
+
+        questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+
+
+        multipleContainer.DisableThisAndCalculator();
+    }
+
+    public void SubmitAbacus()
+    {
+        if (abacus.CalculateTotal() == calculator.answerNeeded)
+        {
+            MonsterHurt();
+        }
+        else
+        {
+            EnemyAttack();
         }
     }
 }

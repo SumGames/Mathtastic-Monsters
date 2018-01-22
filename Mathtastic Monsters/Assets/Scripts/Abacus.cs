@@ -41,18 +41,21 @@ public class Abacus : MonoBehaviour
     public Text ThreeText;
     public Text FourText;
 
-    public Text TotalText;
-
+    int Total;
 
     // Use this for initialization
     void Start()
+    {
+
+        setText();
+    }
+
+    void setText()
     {
         OneText.text = OneValue.ToString();
         TwoText.text = TwoValue.ToString();
         ThreeText.text = ThreeValue.ToString();
         FourText.text = FourValue.ToString();
-
-
     }
 
     // Update is called once per frame
@@ -144,7 +147,7 @@ public class Abacus : MonoBehaviour
         }
     }
 
-    public void CalculateTotal()
+    public string CalculateTotal()
     {
         int total = 0;
 
@@ -154,7 +157,7 @@ public class Abacus : MonoBehaviour
             total += returnTrueBools(i);
         }
 
-        TotalText.text = total.ToString();
+        return total.ToString();
     }
 
     int returnTrueBools(int row)

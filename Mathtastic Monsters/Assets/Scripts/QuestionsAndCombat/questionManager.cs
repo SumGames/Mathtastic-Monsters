@@ -25,8 +25,9 @@ public class questionManager : MonoBehaviour
         if (transition.transitionState == TransitionState.None && justTransitioned)
         {
             GetComponent<Text>().text = questionNeeded;
+            justTransitioned = false;
         }
-        else
+        else if (transition.transitionState != TransitionState.None)
         {
             if (GetComponent<Text>().text != "")
             {
@@ -36,6 +37,7 @@ public class questionManager : MonoBehaviour
             }
         }
     }
+
 
     //Uses given values to calculate a random sum and its components, then store and display them.
     internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, OverRidePhases overRide = OverRidePhases.Default)
