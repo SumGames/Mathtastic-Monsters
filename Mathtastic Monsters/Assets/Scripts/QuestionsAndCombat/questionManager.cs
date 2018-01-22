@@ -273,6 +273,9 @@ public class questionManager : MonoBehaviour
                 case operators.AddSubMultDiv:
                     newOp = Random.Range(0, 4);
                     break;
+                case operators.Fortress:
+                    newOp = Random.Range(0, 4);
+                    break;
                 default:
                     break;
             }
@@ -379,6 +382,7 @@ public class questionManager : MonoBehaviour
         if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
             return CalculateBODMAS(a_summing, a_running, resetTime);
+
         }
 
         string answerNeeded = answer.ToString("F0");
