@@ -273,6 +273,12 @@ public class CombatStateManager : ParentsStateManager
             case playStatus.subjectSelect:
                 changeState(playStatus.Start);
                 break;
+
+            case playStatus.playing:
+            case playStatus.Won:
+            case playStatus.Lost:
+                backToSubject();
+                break;
             default:
                 changeState(playStatus.subjectSelect);
                 break;
