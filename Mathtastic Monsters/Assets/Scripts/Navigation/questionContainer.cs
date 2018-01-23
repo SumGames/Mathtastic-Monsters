@@ -18,9 +18,6 @@ public class questionContainer : MonoBehaviour
 
     public void Awaken()
     {
-        buttons = GetComponentsInChildren<QuizButton>();
-
-
         if (!alreadyTurnedOn)
         {
             if (list == null)

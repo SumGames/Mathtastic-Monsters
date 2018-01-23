@@ -69,13 +69,6 @@ public class CombatStateManager : ParentsStateManager
             backgrounds.startBack(playStatus.subjectSelect);
         }        
     }
-    private void Update()
-    {
-        shardsUI.text = list.getShards();
-        list.equip.GetTotalStars();
-        starsUI.text = list.equip.GetTotalStars().ToString();
-        playernameUI.text = list.playerName;
-    }
     //Revert back to lesson's subject. 
     public void backToSubject()
     {
@@ -110,6 +103,12 @@ public class CombatStateManager : ParentsStateManager
     //Change the game's state, closing/opening containers and changing text.
     public override void changeState(playStatus newState)
     {
+        shardsUI.text = list.getShards();
+        list.equip.GetTotalStars();
+        starsUI.text = list.equip.GetTotalStars().ToString();
+        playernameUI.text = list.playerName;
+
+
         base.changeState(newState);
 
         disableObjects();
