@@ -239,15 +239,16 @@ public class CombatStateManager : ParentsStateManager
 
     public void BackButton()
     {
+        
+
         switch (gameState)
         {
-            case playStatus.Start:
-                changeState(playStatus.Login);
-                break;
             case playStatus.subjectSelect:
-                changeState(playStatus.Start);
-                break;
-
+                {
+                    list.Save();
+                    SceneManager.LoadScene(0);
+                    return;
+                }
             case playStatus.playing:
             case playStatus.Won:
             case playStatus.Lost:
