@@ -11,7 +11,7 @@ public class MyMonsterManager : ParentsStateManager
     public GameObject lillyhomeSelection; //Above, for Lillys home
 
 
-    Text gameInstruction; //Tells player what to do.
+    public Text gameInstruction; //Tells player what to do.
 
 
     //Links to part and shop managers. Links them to list and tells them to start.
@@ -27,9 +27,6 @@ public class MyMonsterManager : ParentsStateManager
         shop.Begin();
         parts.list = list;
         parts.Begin();
-
-
-        gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
 
 
         changeState(playStatus.MyMonster);
@@ -75,5 +72,18 @@ public class MyMonsterManager : ParentsStateManager
         mymonsterSelection.SetActive(false);
         monstercustomisationSelection.SetActive(false);
         lillyhomeSelection.SetActive(false);
+    }
+
+    public void MonsterBack()
+    {
+        if(gameState==playStatus.MyMonster)
+        {
+            changeState(playStatus.subjectSelect);
+        }
+        else
+        {
+            changeState(playStatus.MyMonster);
+        }
+
     }
 }

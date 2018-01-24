@@ -66,7 +66,7 @@ public class endlessState : ParentsStateManager
                 monsterManager.PlayerLost();
                 break;
             case playStatus.subjectSelect:
-                SceneManager.LoadScene(1);                
+                SceneManager.LoadScene(1);
                 break;
 
             case playStatus.ArenaLeaderBoard:
@@ -75,7 +75,7 @@ public class endlessState : ParentsStateManager
             default:
                 break;
         }
-      
+
     }
 
     //Disables all objects by default so it doesn't have to be done manually.
@@ -87,5 +87,21 @@ public class endlessState : ParentsStateManager
         lossScreen.SetActive(false);
         battleScreen.SetActive(false);
         leaderboard.SetActive(false);
+    }
+
+    public void EndlessBack()
+    {
+        if (gameState == playStatus.ArenaStart)
+        {
+            changeState(playStatus.subjectSelect);
+        }
+        else if (gameState == playStatus.ArenaCombat)
+        {
+            changeState(playStatus.ArenaLost);
+        }
+        else
+        {
+            changeState(playStatus.ArenaStart);
+        }
     }
 }
