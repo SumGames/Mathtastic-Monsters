@@ -27,10 +27,6 @@ public class CombatStateManager : ParentsStateManager
     public GameObject retreatObject;
 
     Text gameInstruction; //Tells player what to do.
-    public Text playernameUI; // Shows the player thir name in the UI
-    public Text shardsUI; //Shows the player the amount of shards they have in the UI
-    public Text starsUI; // Shows the player the amount of stars they have in the UI
-
 
 
     public Button[] subjectButtons; //Links to the subject buttons. Since we don't want players progressing until they beat early levels.
@@ -42,7 +38,6 @@ public class CombatStateManager : ParentsStateManager
 
     public GameObject levelSelect;
 
-    public Image[] medals;
 
     //Start off by linking every internal object to each other.
     void Start()
@@ -103,12 +98,6 @@ public class CombatStateManager : ParentsStateManager
     //Change the game's state, closing/opening containers and changing text.
     public override void changeState(playStatus newState)
     {
-        shardsUI.text = list.getShards();
-        list.equip.GetTotalStars();
-        starsUI.text = list.equip.GetTotalStars().ToString();
-        playernameUI.text = list.playerName;
-
-
         base.changeState(newState);
 
         disableObjects();
@@ -200,20 +189,6 @@ public class CombatStateManager : ParentsStateManager
     //SubjectButtons[] is an array starting at subtraction, as addition will never be disabled.
     void checkLevelsAvailable()
     {
-        for (int i = 0; i < 4; i++)
-        {
-            if (list.equip.completedLevels[i] > 9)
-            {
-                medals[i].color = new Color(1, 1, 1, 1);
-            }
-            else
-            {
-                medals[i].color = new Color(.2f, .2f, .2f, 1);
-            }
-
-        }
-
-
         //For Sub, check nothing.
         subjectButtons[0].interactable = true;
 

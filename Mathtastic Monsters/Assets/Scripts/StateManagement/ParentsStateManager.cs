@@ -1,5 +1,6 @@
 ﻿//Class every button inherits. Primary purpose is making changeState universal across all managers.
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum playStatus //Enumerator to prevent states being changed manually, and to keep them in order.
 {
@@ -44,6 +45,7 @@ public class ParentsStateManager : MonoBehaviour
     public GameObject prefabbedList;
     internal equipmentList list;
 
+    public HeaderGUI header;
 
     public void Find ()
     {
@@ -73,11 +75,12 @@ public class ParentsStateManager : MonoBehaviour
         return false;
     }
 
-
-    
     //Change the game's state, closing/opening containers and changing text.
     public virtual void changeState(playStatus newState)
     {
+        if (header)
+            header.UINeedsUpdate = true;
+
         backgrounds.changeBack(newState);
 
         if (manager == null)
