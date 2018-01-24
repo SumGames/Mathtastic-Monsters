@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7080,7 +7080,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4488177266424554, guid: 8add68b8ee97d18498f67c108da5ecb4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 287.52408
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4488177266424554, guid: 8add68b8ee97d18498f67c108da5ecb4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7109,70 +7109,6 @@ Prefab:
     - target: {fileID: 4488177266424554, guid: 8add68b8ee97d18498f67c108da5ecb4, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674326121913618, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674326121913618, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1264585175
-      objectReference: {fileID: 0}
-    - target: {fileID: 198350976327574608, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198350976327574608, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: randomSeed
-      value: -293322068
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674906878299306, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674906878299306, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1983202026
-      objectReference: {fileID: 0}
-    - target: {fileID: 198372897159595746, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198372897159595746, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1886303282
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674326121913618, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198674906878299306, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198372897159595746, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198350976327574608, guid: 8add68b8ee97d18498f67c108da5ecb4,
-        type: 2}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1763678879597848, guid: 8add68b8ee97d18498f67c108da5ecb4, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8add68b8ee97d18498f67c108da5ecb4, type: 2}
