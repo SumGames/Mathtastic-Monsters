@@ -3,84 +3,124 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OptionsManager : ParentsStateManager
+public class OptionsManager : MonoBehaviour
 {
 
     public GameObject optionsSelection; //Container for options select
-    public GameObject instructionsSelection; //Above, for instructions
-    public GameObject parentsSelection; //Above, for parents screen
+    public GameObject SoundsOptions; //Under Parents.
     public GameObject creditsSelection; //Above, for team credits
-
-
-    Text gameInstruction; //Tells player what to do.
-
+    public GameObject otherOptions;
 
     MusicManager music;
 
     public Toggle toggle;
 
+    public playStatus optionState;
+
+    public Slider MusicSlider;
+    public Slider VolumeSlider;
+
+
     // Use this for initialization
     void Start()
     {
-        base.Find();
+        music = FindObjectOfType<MusicManager>();
 
-        gameInstruction = GameObject.Find("Helper").GetComponent<Text>();
-        list = FindObjectOfType<equipmentList>();
+        MusicSlider.value = PlayerPrefs.GetFloat("Music");
+        VolumeSlider.value = PlayerPrefs.GetFloat("Volume");
 
-        FindObjectOfType<MusicManager>().SetSlider();
 
         changeState(playStatus.Options);
 
-        backgrounds.startBack(playStatus.Options);
 
         SetTransition();
+
+        Time.timeScale = 0.01f;
 
     }
 
     public void changeVolume(Slider used)
     {
-        if (music == null)
+        if (used == MusicSlider)
         {
-            music = FindObjectOfType<MusicManager>();
-            return;
-        }
-        if (music.musicSource == null)
-            music.musicSource = gameObject.GetComponent<AudioSource>();
+            Debug.Log("Music!!");
 
-        PlayerPrefs.SetFloat("Volume", used.value);
-        music.musicSource.volume = used.value;
+            if (music == null)
+            {
+                music = FindObjectOfType<MusicManager>();
+            }
+            PlayerPrefs.SetFloat("Music", used.value);
+            music.musicSource.volume = used.value;
+        }
+        else if(used == VolumeSlider)
+        {
+            if (music == null)
+            {
+                music = FindObjectOfType<MusicManager>();
+            }
+            if (music.musicSource == null)
+                music.musicSource = gameObject.GetComponent<AudioSource>();
+
+            PlayerPrefs.SetFloat("Volume", used.value);
+            music.click.volume = used.value;
+
+        }
+        Debug.Log("Neither");
     }
 
-    //Change the game's state, closing/opening containers and changing text.
-    public override void changeState(playStatus newState)
+    public void MuteVolume()
     {
-        base.changeState(newState);
+        VolumeSlider.value = 0;
+        PlayerPrefs.SetFloat("Volume", 0);
+        music.click.volume = 0;
 
+        MusicSlider.value = 0;
+        PlayerPrefs.SetFloat("Music", 0);
+        music.musicSource.volume = 0;
+    }
+
+    public GameObject Tut;
+
+    public void LoadTutorial()
+    {
+        StateManager state = FindObjectOfType<StateManager>();
+
+        if (state == null)
+        {
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            Destroy(Tut.gameObject);
+        }
+
+
+    }
+
+
+    //Change the game's state, closing/opening containers and changing text.
+    public void changeState(playStatus newState)
+    {
         DisableObjects();
 
-        gameState = newState;
-        switch (gameState)
+        optionState = newState;
+        switch (optionState)
         {
             case playStatus.Options:
                 optionsSelection.SetActive(true);
-                gameInstruction.text = "Select an Option!";
                 break;
-            case playStatus.Instructions:
-                instructionsSelection.SetActive(true);
-                gameInstruction.text = "Learn how to play!";
+            case playStatus.SoundControl:
+                SoundsOptions.SetActive(true);
                 break;
-            case playStatus.Parents:
-                parentsSelection.SetActive(true);
-                gameInstruction.text = "Parents and Teachers section";
+            case playStatus.OtherOptions:
+                otherOptions.SetActive(true);
                 break;
             case playStatus.Credits:
                 creditsSelection.SetActive(true);
-                gameInstruction.text = "The wonderful Team at 'Sum Games'!";
-                break;
-            case playStatus.subjectSelect:
-                SceneManager.LoadScene(1);
                 break;
             default:
+                Destroy(gameObject);
+                Time.timeScale = 1;
                 break;
         }
     }
@@ -90,8 +130,8 @@ public class OptionsManager : ParentsStateManager
     void DisableObjects()
     {
         optionsSelection.SetActive(false);
-        instructionsSelection.SetActive(false);
-        parentsSelection.SetActive(false);
+        otherOptions.SetActive(false);
+        SoundsOptions.SetActive(false);
         creditsSelection.SetActive(false);
     }
 

@@ -85,12 +85,6 @@ public class backgroundManager : MonoBehaviour
             case playStatus.Options:
                 newImage = menuScreen;
                 break;
-            case playStatus.Instructions:
-                newImage = menuScreen;
-                break;
-            case playStatus.Parents:
-                newImage = menuScreen;
-                break;
             case playStatus.Credits:
                 newImage = menuScreen;
                 break;

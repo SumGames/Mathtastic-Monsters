@@ -10,6 +10,19 @@ public class NavigationButton : MonoBehaviour
 
     MusicManager musicManager;
 
+    public GameObject optionsPrefab;
+
+    public void OptionsMenu()
+    {
+        if (optionsPrefab)
+        {
+            Instantiate(optionsPrefab, FindObjectOfType<Canvas>().transform, false);
+            return;
+        }
+        Debug.Log("Prefab not set");
+    }
+
+
     public void startTutorial()
     {
         SceneManager.LoadScene(4);
@@ -32,4 +45,18 @@ public class NavigationButton : MonoBehaviour
 
         manager.changeState(stateTarget);
     }
+
+
+    public void OptionUsed()
+    {
+        if (!musicManager)
+        {
+            musicManager = FindObjectOfType<MusicManager>();
+        }
+        if (musicManager)
+            musicManager.click.Play();
+        FindObjectOfType<OptionsManager>().changeState(stateTarget);
+
+    }
+
 }
