@@ -165,14 +165,11 @@ public class CombatStateManager : ParentsStateManager
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);
                 break;
-            case playStatus.Options:
-                SceneManager.LoadScene(3);
-                break;
             case playStatus.Splash:
                 SceneManager.LoadScene(0);
                 break;
             case playStatus.ArenaHome:
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(5);
                 break;
             default:
                 break;

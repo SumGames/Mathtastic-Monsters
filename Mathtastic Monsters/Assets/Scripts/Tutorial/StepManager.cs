@@ -37,6 +37,8 @@ public class StepManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1;
+
         list = FindObjectOfType<equipmentList>();
         if (list == null)
         {
@@ -213,7 +215,7 @@ public class StepManager : MonoBehaviour
                 break;
             default:
                 Destroy(gameObject);
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(4);
                 break;
         }
     }

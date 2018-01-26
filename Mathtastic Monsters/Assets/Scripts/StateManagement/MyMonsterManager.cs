@@ -46,15 +46,13 @@ public class MyMonsterManager : ParentsStateManager
         {
             case playStatus.MyMonster:
                 mymonsterSelection.SetActive(true);
-                gameInstruction.text = "Welcome home, " + list.playerName.ToString() + "."; //Player 1 To be changed to monsters given name
                 break;
             case playStatus.MonsterCustomisation:
                 monstercustomisationSelection.SetActive(true);
-                gameInstruction.text = "Customise your monster here!";
                 break;
             case playStatus.LillyHome:
                 lillyhomeSelection.SetActive(true);
-                gameInstruction.text = "Hello, " + list.playerName.ToString() + "! trade me your shards, so I may grant you the power to defeat Lord Calculi!";
+
                 break;
             case playStatus.subjectSelect:
                 SceneManager.LoadScene(1);

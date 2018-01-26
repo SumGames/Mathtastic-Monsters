@@ -95,14 +95,11 @@ public class StateManager : ParentsStateManager
                 SceneManager.LoadScene(2);
                 break;
 
-            case playStatus.Options:
-                SceneManager.LoadScene(3);
-                break;
             case playStatus.Splash:
                 splashContainer.SetActive(true);
                 break;
             case playStatus.ArenaHome:
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene(5);
                 break;
             default:
                 break;

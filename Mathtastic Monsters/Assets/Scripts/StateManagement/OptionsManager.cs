@@ -37,6 +37,14 @@ public class OptionsManager : MonoBehaviour
 
         Time.timeScale = 0.01f;
 
+        StateManager state = FindObjectOfType<StateManager>();
+
+        if (state)
+        {
+            Destroy(Tut.gameObject);
+        }
+
+
     }
 
     public void changeVolume(Slider used)
@@ -83,16 +91,7 @@ public class OptionsManager : MonoBehaviour
 
     public void LoadTutorial()
     {
-        StateManager state = FindObjectOfType<StateManager>();
-
-        if (state == null)
-        {
-            SceneManager.LoadScene(4);
-        }
-        else
-        {
-            Destroy(Tut.gameObject);
-        }
+        SceneManager.LoadScene(3);
 
 
     }

@@ -195,7 +195,7 @@ public class loginManager : MonoBehaviour
     {
         if (startTutorial)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
 
         }
         else
