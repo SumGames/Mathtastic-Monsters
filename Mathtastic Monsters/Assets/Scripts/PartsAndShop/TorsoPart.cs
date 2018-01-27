@@ -11,6 +11,14 @@ public enum Animations
 
 }
 
+public enum BodyType
+{
+    Normal,
+    FourArm,
+    FourLeg
+
+}
+
 public class TorsoPart : ItemPart
 {
 
@@ -26,7 +34,6 @@ public class TorsoPart : ItemPart
     public GameObject RightArmHand;
 
 
-
     public GameObject RightUpperThigh;
     public GameObject Rightshin;
     public GameObject RightAnkle;
@@ -37,8 +44,19 @@ public class TorsoPart : ItemPart
     public GameObject LefttAnkle;
     public GameObject LeftFoot;
 
-
     public Animator bodyAnimator;
+
+
+    public BodyType bodyType;
+
+    public GameObject LowerLeftArmUpper;
+    public GameObject LowerLeftArmFore;
+    public GameObject LowerLeftArmHand;
+
+
+    public GameObject LowerRightArmUpper;
+    public GameObject LowerRightArmFore;
+    public GameObject LowerRightArmHand;
 
 
     // Use this for initialization

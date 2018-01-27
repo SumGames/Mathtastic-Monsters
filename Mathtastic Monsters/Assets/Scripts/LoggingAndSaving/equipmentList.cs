@@ -434,6 +434,28 @@ public class equipmentList : MonoBehaviour
                 caller.rightLegEquipped = legPart;
             }
         }
+
+        if (parent.bodyType == BodyType.FourArm)
+        {
+            Debug.Log("Four");
+
+            if (currentRightArmPrefab != null)
+            {
+                GameObject adding = Instantiate(currentRightArmPrefab, parent.LowerRightArmUpper.transform, false);
+                ArmPart armPart = adding.GetComponent<ArmPart>();
+
+                armPart.EquipArm(parent.LowerRightArmUpper, parent.LowerRightArmFore, parent.LowerRightArmHand);
+            }
+
+            if (currentLeftArmPrefab != null)
+            {
+                GameObject adding = Instantiate(currentLeftArmPrefab, parent.LowerLeftArmUpper.transform, false);
+                ArmPart armPart = adding.GetComponent<ArmPart>();
+
+                armPart.EquipArm(parent.LowerLeftArmUpper, parent.LowerLeftArmFore, parent.LowerLeftArmHand);
+            }
+
+        }
         return ad;
     }
 
