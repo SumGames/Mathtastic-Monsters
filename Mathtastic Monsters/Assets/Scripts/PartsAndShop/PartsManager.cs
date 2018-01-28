@@ -219,7 +219,7 @@ public class PartsManager : MonoBehaviour
                 }
                 adding = Instantiate(currentPart, TorsoEquipped.LeftArmUpper.transform, false);
                 leftArmEquipped = adding.GetComponent<ArmPart>();
-                leftArmEquipped.EquipArm(TorsoEquipped.LeftArmUpper, TorsoEquipped.LeftArmFore, TorsoEquipped.LeftArmHand);
+                leftArmEquipped.EquipArm(TorsoEquipped, TorsoEquipped.LeftArmUpper, TorsoEquipped.LeftArmFore, TorsoEquipped.LeftArmHand);
 
                 adding.name = currentPart.name;
                 list.ChangeEquip(currentPart, partType.LeftArm, currentIndex);
@@ -241,7 +241,7 @@ public class PartsManager : MonoBehaviour
                 adding = Instantiate(currentPart, TorsoEquipped.RightArmUpper.transform, false);
 
                 rightArmEquipped = adding.GetComponent<ArmPart>();
-                rightArmEquipped.EquipArm(TorsoEquipped.RightArmUpper, TorsoEquipped.RightArmFore, TorsoEquipped.RightArmHand);
+                rightArmEquipped.EquipArm(TorsoEquipped, TorsoEquipped.RightArmUpper, TorsoEquipped.RightArmFore, TorsoEquipped.RightArmHand);
 
                 adding.name = currentPart.name;
                 list.ChangeEquip(currentPart, partType.RightArm, currentIndex);
