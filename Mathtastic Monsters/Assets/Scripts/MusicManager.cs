@@ -29,12 +29,8 @@ public class MusicManager : MonoBehaviour
         setMusic(playStatus.Start);
 
 
-        bool haskey = PlayerPrefs.HasKey("Volume");
-        if (haskey)
-        {
-            musicSource.volume = PlayerPrefs.GetFloat("Music", 0.6f);
-            click.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
-        }
+        musicSource.volume = PlayerPrefs.GetFloat("Music", 0.3f);
+        click.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
     }
 
     //Select a music clip, and check if the clip is different. If so, swap it in and play it.
@@ -45,6 +41,8 @@ public class MusicManager : MonoBehaviour
 
 
         AudioClip adding = null;
+
+        musicSource.loop = true;
 
         switch (newState)
         {
@@ -76,6 +74,7 @@ public class MusicManager : MonoBehaviour
                 adding = music[8];
                 break;
             case playStatus.Lost:
+                musicSource.loop = false;
                 adding = music[9];
                 break;
             case playStatus.MyMonster:

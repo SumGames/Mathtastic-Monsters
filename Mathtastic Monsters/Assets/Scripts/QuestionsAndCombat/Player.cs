@@ -351,8 +351,8 @@ public class Player : MonoBehaviour
         list.Save();
 
 
-        getShards.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
-        victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
+        getShards.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
+        victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
         shards.Play(true);
         getShards.Play();
         victoryMusic.Play();

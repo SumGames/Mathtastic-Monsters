@@ -144,7 +144,7 @@ public class combatFeedback : MonoBehaviour
         }
         if (playing != null)
         {
-            playing.volume = PlayerPrefs.GetFloat("Volume", 0.6f);
+            playing.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
             playing.Play();
         }
     }

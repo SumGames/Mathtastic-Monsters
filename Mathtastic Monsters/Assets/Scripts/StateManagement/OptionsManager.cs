@@ -26,8 +26,8 @@ public class OptionsManager : MonoBehaviour
     {
         music = FindObjectOfType<MusicManager>();
 
-        MusicSlider.value = PlayerPrefs.GetFloat("Music");
-        VolumeSlider.value = PlayerPrefs.GetFloat("Volume");
+        MusicSlider.value = PlayerPrefs.GetFloat("Music", 0.3f);
+        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 0.3f);
 
 
         changeState(playStatus.Options);
@@ -51,8 +51,6 @@ public class OptionsManager : MonoBehaviour
     {
         if (used == MusicSlider)
         {
-            Debug.Log("Music!!");
-
             if (music == null)
             {
                 music = FindObjectOfType<MusicManager>();
@@ -72,8 +70,8 @@ public class OptionsManager : MonoBehaviour
             PlayerPrefs.SetFloat("Volume", used.value);
             music.click.volume = used.value;
 
+
         }
-        Debug.Log("Neither");
     }
 
     public void MuteVolume()
