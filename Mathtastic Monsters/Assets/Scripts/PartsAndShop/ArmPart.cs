@@ -15,7 +15,7 @@ public class ArmPart : ItemPart
     public GameObject foreArm;
     public GameObject hand;
 
-    ArmType armType;
+    public ArmType armType;
 
     public void EquipArm(TorsoPart torso, GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot)
     {

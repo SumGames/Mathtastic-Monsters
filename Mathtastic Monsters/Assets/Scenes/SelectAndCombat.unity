@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2759,7 +2759,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155898114}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -253.14304, y: -26.923773, z: -233.94624}
+  m_LocalPosition: {x: -219, y: -26.923773, z: -294}
   m_LocalScale: {x: 64.276245, y: 64.276245, z: 64.276245}
   m_Children:
   - {fileID: 775584027}
@@ -4471,7 +4471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307081516}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -442.1498, y: 146.99521, z: -343.0117}
+  m_LocalPosition: {x: -408, y: 146.99521, z: -403}
   m_LocalScale: {x: 0.99976337, y: 0.899787, z: 0.99976337}
   m_Children:
   - {fileID: 241325928}
@@ -6353,7 +6353,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5e33c8a3c1ef81a44abc812dcad19834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6952,7 +6952,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 469966697}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -135.06677, y: -146.16624, z: -323.87354}
+  m_LocalPosition: {x: -100, y: -146.16624, z: -384}
   m_LocalScale: {x: 64.22607, y: 64.22607, z: 64.22607}
   m_Children:
   - {fileID: 80857870}
@@ -21515,7 +21515,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341949666}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -253.14307, y: -26.923773, z: -233.94626}
+  m_LocalPosition: {x: -219, y: -26.923773, z: -294}
   m_LocalScale: {x: 64.27624, y: 64.27624, z: 64.27624}
   m_Children:
   - {fileID: 1628999584}
@@ -28736,7 +28736,7 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 20
   minNumber: 3
-  maxNumber: 300
+  maxNumber: 100
   Operator: 3
   minAnswer: 1
   maxAnswer: 20
@@ -28754,9 +28754,9 @@ MonoBehaviour:
   previousLevelString: You won!
   previousTime: 6
   nextLevelString: ' Entering level X!'
-  nextime: 10
+  nextime: 2
   enemyString: Now Fight!!
-  enemyTime: 2
+  enemyTime: 1
   maxDepth: -3
 --- !u!222 &1796357279
 CanvasRenderer:

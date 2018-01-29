@@ -353,7 +353,8 @@ public class Player : MonoBehaviour
 
         list.Save();
 
-        enemy.multipleContainer.DisableThisAndCalculator();
+        if (enemy && enemy.multipleContainer)
+            enemy.multipleContainer.DisableThisAndCalculator();
 
 
         getShards.volume = PlayerPrefs.GetFloat("Volume", 0.3f);

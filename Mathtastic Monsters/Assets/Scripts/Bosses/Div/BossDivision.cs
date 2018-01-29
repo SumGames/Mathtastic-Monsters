@@ -44,18 +44,30 @@ public class BossDivision : MonoBehaviour
     //Uses given values to calculate a random sum and its components, then store and display them.
     string MakeQuestion(QuizButton a_running, int index)
     {
-        float[] numbers = new float[a_running.variableCount];
+        float numberRandom;
+        float numberEither;
 
-        //Randomise as many numbers as required, within range.
-        for (int i = 0; i < 2; i++)
-        {
-            numbers[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
-        }
+        numberRandom = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
 
-        int answer = IsWhole(numbers[0] / numbers[1]);
+
+        bool first = Random.value <= 0.5f;
+
+        if (first)
+            numberEither = a_running.secondNumberMin;
+        else
+            numberEither = a_running.secondNumberMax;
+
+        float firstanswer = IsWhole(numberRandom / numberEither);
+
+        Debug.Log("Either " + numberEither);
+        Debug.Log("Rand " + numberRandom);
+
+        Debug.Log("float " + firstanswer);
+
+        int answer = IsWhole(firstanswer);
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if (answer < a_running.minAnswer || !NoDuplicateInAnswers(answer))
+        if (answer < a_running.minAnswer || !NoDuplicateInAnswers(answer) && answer > a_running.maxAnswer)
         {
             return MakeQuestion(a_running, index);
         }
@@ -66,14 +78,10 @@ public class BossDivision : MonoBehaviour
         string answerWords;
 
         answerWords = "   ";
-        answerWords += numbers[0].ToString("F0");
+        answerWords += numberRandom.ToString("F0");
 
-        for (int i = 1; i < a_running.variableCount; i++)
-        {
-            answerWords += "\n /" + numbers[i].ToString("F0");
-        }
 
-        answerWords += "\n= ";
+        answerWords += "\n /" + numberEither.ToString("F0");
 
 
         return answerWords;
