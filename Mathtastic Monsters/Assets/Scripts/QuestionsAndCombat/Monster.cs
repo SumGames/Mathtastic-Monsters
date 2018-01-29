@@ -47,14 +47,9 @@ public class Monster : MonoBehaviour
 
     internal void abilityDamage(float damage)
     {
-
         health -= damage;
-        CheckDeath();
-    }
 
-    internal void ScratchMonster()
-    {
-        health -= 1;
+        bar.changeHealth(false, health);
         CheckDeath();
     }
 

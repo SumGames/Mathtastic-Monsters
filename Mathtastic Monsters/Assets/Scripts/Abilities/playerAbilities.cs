@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class playerAbilities : MonoBehaviour 
+public class playerAbilities : MonoBehaviour
 {
     public abilityButton[] abilityButtons;
 
@@ -19,8 +19,8 @@ public class playerAbilities : MonoBehaviour
     public int attacking; //Number of attacks since in a row since last taken damage. Used in store power. 
 
 
-	//initialization, called manually by player when it's ready.
-	internal void Begin () 
+    //initialization, called manually by player when it's ready.
+    internal void Begin()
     {
         player = gameObject.GetComponent<Player>();
 
@@ -31,7 +31,7 @@ public class playerAbilities : MonoBehaviour
         manager = FindObjectOfType<AbilitiesManager>();
         manager.setAbilities();
 
-	}
+    }
 
     //Called every time a monster fight starts. If fight is a boss, everything is turned off.
     internal void SetupAbilities(bool a_boss)
@@ -42,7 +42,7 @@ public class playerAbilities : MonoBehaviour
         Crits = 0;
 
         //Reset ability buttons.
-        foreach (abilityButton  item in abilityButtons)
+        foreach (abilityButton item in abilityButtons)
         {
             item.ResetButton();
         }
@@ -99,7 +99,7 @@ public class playerAbilities : MonoBehaviour
         {
             returning += (abilities[abilityTypes.Scavenger] * .20f);
         }
-       
+
         return returning;
     }
 
@@ -116,7 +116,7 @@ public class playerAbilities : MonoBehaviour
 
         return returning;
     }
-	
+
     //Boost our speed relative to amount of pieces with speed.
     internal float EquipmentTime()
     {
@@ -222,7 +222,7 @@ public class playerAbilities : MonoBehaviour
             case abilityTypes.FireStorm:
                 float damage = (player.attackDamage * (0.35f * abilities[abilityTypes.FireStorm]));
                 enemy.abilityDamage(damage);
-                Debug.Log(damage);
+                Debug.Log("Fireblast  " + damage);
                 break;
             case abilityTypes.Burn:
                 FindObjectOfType<multipleContainer>().RemoveSingle();
