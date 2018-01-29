@@ -353,6 +353,8 @@ public class Player : MonoBehaviour
 
         list.Save();
 
+        enemy.multipleContainer.DisableThisAndCalculator();
+
 
         getShards.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
         victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0.3f);

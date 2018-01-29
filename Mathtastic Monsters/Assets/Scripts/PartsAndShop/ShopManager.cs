@@ -37,10 +37,14 @@ public class ShopManager : MonoBehaviour
 
     int stars;
 
+    HeaderGUI gUI;
+
 
     // Use this for initialization
     internal void Begin()
     {
+        gUI = FindObjectOfType<HeaderGUI>();
+
         sounds = GetComponents<AudioSource>();
         purchase = sounds[0];
       
@@ -147,8 +151,13 @@ public class ShopManager : MonoBehaviour
             return;
         ItemPart part = currentPart.GetComponent<ItemPart>();
 
+        gUI.UINeedsUpdate = true;
+
 
         manager.shards -= part.cost;
+
+        purchase.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
+
         purchase.Play();
 
         part.owned = true;

@@ -295,6 +295,14 @@ public class PartsManager : MonoBehaviour
             default:
                 break;
         }
+
+        if (TorsoEquipped.bodyType == BodyType.FourArm)
+        {
+            Destroy(TorsoEquipped.gameObject);
+            list.BuildCharacter(parentOfTorso, this);
+            return;
+        }
+
     }
 
     void addingTorso()

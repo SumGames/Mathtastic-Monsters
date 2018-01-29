@@ -163,7 +163,7 @@ public class abilityButton : MonoBehaviour
 
         //If not enough charges left, disable it.
         if (chargesLeft < chargesNeeded || chargesNeeded == 0)
-            m_button.interactable = false;
+            m_button.gameObject.SetActive(false);
 
 
         //If charges are left, tell us how many uses left.
