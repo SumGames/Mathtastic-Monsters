@@ -9,42 +9,47 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public int DraggerAnswer;
 
     bool positionSet;
-    Vector3 originalPosition;
+    public Vector3 originalPosition;
 
     bool dragging;
 
     Vector3 lastKnownMousePosition;
 
-    // Use this for initialization
-    void Start()
-    {
-        originalPosition = transform.position;
-    }
-
     internal void ResetDragger()
     {
         if(!positionSet)
         {
-            originalPosition = transform.position;
+            originalPosition = transform.localPosition;
             positionSet = true;
         }
         else
         {
-            transform.position = originalPosition;
+            transform.localPosition = originalPosition;
 
         }
 
         GetComponent<Image>().color = Color.white;
 
-        DraggerAnswer = -2;
+        SetDragger(-2);
+    }
 
+    internal void SetDragger(int newValue)
+    {
+        DraggerAnswer = newValue;
 
+        if (DraggerAnswer <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (dragging)
         {
             Vector3 inputMoved = new Vector3();

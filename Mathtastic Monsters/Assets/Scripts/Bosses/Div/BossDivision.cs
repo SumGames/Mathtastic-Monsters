@@ -14,6 +14,8 @@ public class BossDivision : MonoBehaviour
 
     BossMonster boss;
 
+    int runningNumber;
+
 
     // Use this for initialization
     void Start()
@@ -50,6 +52,17 @@ public class BossDivision : MonoBehaviour
         numberRandom = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
 
 
+        runningNumber = a_running.enemyChoices;
+        if (a_running.enemyChoices < 3)
+        {
+            runningNumber = 3;
+        }
+        else if (a_running.enemyChoices > 5)
+        {
+            runningNumber = 5;
+        }
+
+
         bool first = Random.value <= 0.5f;
 
         if (first)
@@ -59,10 +72,6 @@ public class BossDivision : MonoBehaviour
 
         float firstanswer = IsWhole(numberRandom / numberEither);
 
-        Debug.Log("Either " + numberEither);
-        Debug.Log("Rand " + numberRandom);
-
-        Debug.Log("float " + firstanswer);
 
         int answer = IsWhole(firstanswer);
 
@@ -117,6 +126,10 @@ public class BossDivision : MonoBehaviour
         {
             item.SetAnswer(-2);
         }
+        for (int i = 0; i < AnswerList.Length; i++)
+        {
+            AnswerList[i] = -2;
+        }
 
     }
 
@@ -124,7 +137,7 @@ public class BossDivision : MonoBehaviour
     {
         int wrongAnswer = -2;
 
-        for (int i = 0, j = 3; i < 3; i++, j++)
+        for (int i = 0, j = 3; i < 3 && j < runningNumber; i++, j++)
         {
             while (wrongAnswer <= 0 || !NoDuplicateInAnswers(wrongAnswer))
             {
@@ -133,20 +146,19 @@ public class BossDivision : MonoBehaviour
             }
             AnswerList[j] = wrongAnswer;
         }
-
-
         for (int i = 0; i < draggers.Length; i++)
         {
             int index = Random.Range(0, draggers.Length);
-            while (draggers[index].DraggerAnswer > 0)
+            while (draggers[index].DraggerAnswer >= 0)
             {
                 index = Random.Range(0, draggers.Length);
             }
 
             draggers[index].GetComponentInChildren<Text>().text = AnswerList[i].ToString();
-            draggers[index].DraggerAnswer = AnswerList[i];
-
+            draggers[index].SetDragger(AnswerList[i]);
+            Debug.Log("Setting" + index + " to " + AnswerList[i]);
         }
+        Debug.Log("ended");
     }
 
 
