@@ -4885,6 +4885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 19
+  optionsPrefab: {fileID: 0}
 --- !u!114 &939285230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,6 +5220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 24
+  optionsPrefab: {fileID: 0}
 --- !u!114 &1016705496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7144,6 +7146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 23
+  optionsPrefab: {fileID: 0}
 --- !u!1 &1382472948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7594,23 +7597,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448555900}
---- !u!1 &1480776815 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1509466382059996, guid: 3d4aa6cdf91bab647bb9a8f0c6215e8c,
-    type: 2}
-  m_PrefabInternal: {fileID: 158544119}
---- !u!114 &1480776817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1480776815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateTarget: 1
 --- !u!1 &1522167182
 GameObject:
   m_ObjectHideFlags: 0
@@ -9114,6 +9100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 20
+  optionsPrefab: {fileID: 0}
 --- !u!114 &1868628097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9574,6 +9561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTarget: 19
+  optionsPrefab: {fileID: 0}
 --- !u!114 &1941482417
 MonoBehaviour:
   m_ObjectHideFlags: 0

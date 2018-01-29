@@ -91,7 +91,7 @@ public class endlessState : ParentsStateManager
 
     public void EndlessBack()
     {
-        if (gameState == playStatus.ArenaStart)
+        if (gameState == playStatus.ArenaHome)
         {
             changeState(playStatus.subjectSelect);
         }
@@ -101,7 +101,7 @@ public class endlessState : ParentsStateManager
         }
         else
         {
-            changeState(playStatus.ArenaStart);
+            changeState(playStatus.ArenaHome);
         }
     }
 }
