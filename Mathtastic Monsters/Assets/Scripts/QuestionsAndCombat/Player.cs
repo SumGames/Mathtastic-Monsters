@@ -285,16 +285,19 @@ public class Player : MonoBehaviour
             resetTime = 15;
         }
 
+
+
         if (enemyPhase)
         {
             Timer = enemyTime * counterTimeModifier;
-            timeLeft.maxValue = enemyTime;
+            timeLeft.maxValue = Timer;
+            timeLeft.value = Timer;
         }
         else
         {
             Timer = resetTime;
             timeLeft.maxValue = resetTime;
-
+            timeLeft.value = resetTime;
         }
 
 

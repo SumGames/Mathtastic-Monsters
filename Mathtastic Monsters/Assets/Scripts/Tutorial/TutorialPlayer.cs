@@ -69,7 +69,7 @@ public class TutorialPlayer : MonoBehaviour
     //Counts down time while game is playing. Tale damage if hits 0.
     void Update()
     {
-        if(!list)
+        if (!list)
         {
             list = FindObjectOfType<equipmentList>();
         }
@@ -91,9 +91,8 @@ public class TutorialPlayer : MonoBehaviour
         else
             bar.color = Color.yellow;
 
-
-            Timer -= Time.deltaTime;
-            timeLeft.value = Timer;
+        Timer -= Time.deltaTime;
+        timeLeft.value = Timer;
 
         if (Timer < 0)
             enemy.EnemyAttack();
