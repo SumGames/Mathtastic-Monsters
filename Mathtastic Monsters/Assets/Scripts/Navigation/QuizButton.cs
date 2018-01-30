@@ -47,8 +47,8 @@ public class QuizButton : MonoBehaviour
 
     public bool preventRounding;
 
-    public int secondNumberMin;
-    public int secondNumberMax;
+
+    public int[] secondFixedNumber = { 1, 2 };
 
     public GameObject monsterArt;
 

@@ -44,15 +44,18 @@ public class MultiplicationContainer : MonoBehaviour
 
     string CreateCorrectAnswer(QuizButton a_running)
     {
-        int[] numbers = new int[a_running.variableCount];
+        int numberOne;
+        int numberTwo;
+
+        numberOne = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
 
 
-        //Randomise as many numbers as required, within range.
-        for (int i = 0; i < a_running.variableCount; i++)
-        {
-            numbers[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
-        }
-        CorrectAnswer = numbers[0] * numbers[1];
+        int rand = Random.Range(0, (a_running.secondFixedNumber.Length));
+        numberTwo = a_running.secondFixedNumber[rand];
+
+
+
+        CorrectAnswer = numberOne * numberTwo;
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
@@ -61,8 +64,8 @@ public class MultiplicationContainer : MonoBehaviour
             return CreateCorrectAnswer(a_running);
         }
 
-        AnswerList[0] = numbers[0];
-        AnswerList[1] = numbers[1];
+        AnswerList[0] = numberOne;
+        AnswerList[1] = numberTwo;
 
 
         return "_ x _\n=" + CorrectAnswer.ToString();

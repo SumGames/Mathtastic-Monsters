@@ -53,7 +53,6 @@ public class questionManager : MonoBehaviour
         float[] numbers = new float[button.variableCount];
         float answer = -2;
         string oper = "";
-        bool first;
 
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
@@ -83,29 +82,21 @@ public class questionManager : MonoBehaviour
                 break;
             case operators.Multiplication:
                 //If operator is 'x', second number is one of two possible numbers
-                first = Random.value <= 0.5f;
 
-                if (!button.boss)
-                {
-                    if (first)
-                        numbers[1] = a_running.secondNumberMin;
-                    else
-                        numbers[1] = a_running.secondNumberMax;
-                }
+                int rand = Random.Range(0, (a_running.secondFixedNumber.Length));
+
+                numbers[1] = a_running.secondFixedNumber[rand];
+
                 multiple = numbers[1];
 
 
                 answer = numbers[0] * numbers[1];
                 oper = "x ";
                 break;
-
             case operators.Division:
-                first = Random.value <= 0.5f;
+                int rand2 = Random.Range(0, (a_running.secondFixedNumber.Length));
 
-                if (first)
-                    numbers[1] = a_running.secondNumberMin;
-                else
-                    numbers[1] = a_running.secondNumberMax;
+                numbers[1] = a_running.secondFixedNumber[rand2];
 
                 multiple = numbers[1];
 

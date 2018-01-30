@@ -162,7 +162,6 @@ public class StoryManager : MonoBehaviour
             if (position == phases.None)
                 questionText.enabled = true;
 
-            Debug.Log(position);
 
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(0, 0, 0);

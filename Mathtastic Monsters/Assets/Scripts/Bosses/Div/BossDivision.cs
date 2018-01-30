@@ -63,12 +63,9 @@ public class BossDivision : MonoBehaviour
         }
 
 
-        bool first = Random.value <= 0.5f;
+        int rand = Random.Range(0, (a_running.secondFixedNumber.Length));
 
-        if (first)
-            numberEither = a_running.secondNumberMin;
-        else
-            numberEither = a_running.secondNumberMax;
+        numberEither = a_running.secondFixedNumber[rand];
 
         float firstanswer = IsWhole(numberRandom / numberEither);
 

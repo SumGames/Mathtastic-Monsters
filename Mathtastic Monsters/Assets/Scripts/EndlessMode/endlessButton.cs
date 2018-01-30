@@ -26,8 +26,8 @@
 
         preventRounding = false;
 
-        secondNumberMin = 0;
-        secondNumberMax = 1;
+        secondFixedNumber[0] = 1;
+        secondFixedNumber[1] = 2;
 
         enemyChoices = 3;
         enemyAnswerRange = 2;
