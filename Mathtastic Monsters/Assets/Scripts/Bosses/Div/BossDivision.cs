@@ -73,7 +73,7 @@ public class BossDivision : MonoBehaviour
         int answer = IsWhole(firstanswer);
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if (answer < a_running.minAnswer || !NoDuplicateInAnswers(answer) && answer > a_running.maxAnswer)
+        if (answer < a_running.minAnswer || !NoDuplicateInAnswers(answer) || answer > a_running.maxAnswer)
         {
             return MakeQuestion(a_running, index);
         }
