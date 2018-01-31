@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 35
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -168,17 +168,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0600000009000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 459756517}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1932966
 CanvasRenderer:
@@ -235,27 +235,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 5
   maxAnswer: 120
   difficulty: 26
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1965510
 CanvasRenderer:
@@ -881,7 +881,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 20
   minNumber: 1
   maxNumber: 48
   Operator: 0
@@ -891,17 +891,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 20
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 843822242}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &41803944
 CanvasRenderer:
@@ -940,7 +940,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 25
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -950,17 +950,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0300000004000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2071202715}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &42479491
 CanvasRenderer:
@@ -2071,17 +2071,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 0
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 60
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelString: You won!
+  previousLevelString: You stopped Subterranean for now but he will return!
   previousTime: 6
-  nextLevelString: ' Entering level X!'
+  nextLevelString: Subterranean is trying to stop you from saving Monstertopia!
   nextime: 10
-  enemyString: Now Fight!!
+  enemyString: Defeat him by blocking his attacks!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &104422975
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 25
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -2485,11 +2485,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 566513258}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &134946890
 CanvasRenderer:
@@ -2844,17 +2844,17 @@ MonoBehaviour:
   MonsterHealth: 25
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &158523895
 CanvasRenderer:
@@ -3124,27 +3124,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 10
   minNumber: 5
-  maxNumber: 100
+  maxNumber: 120
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 31
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 179533774}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &179533775
 CanvasRenderer:
@@ -3211,17 +3211,17 @@ MonoBehaviour:
   MonsterHealth: 25
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &180767181
 CanvasRenderer:
@@ -3518,17 +3518,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 8
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelString: You won!
+  previousLevelString: You have saved the oceans from Subterraneans evil! Congratulations!
   previousTime: 6
-  nextLevelString: ' Entering level X!'
+  nextLevelString: Subterranean is making a final stand. Stop him once and for all!
   nextime: 10
-  enemyString: Now Fight!!
+  enemyString: Defeat him by blocking his attacks!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &231425601
@@ -3952,17 +3952,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 158523894}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &266040131
 CanvasRenderer:
@@ -4612,27 +4612,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 5
+  levelTime: 15
   minNumber: 1
   maxNumber: 10
   Operator: 0
   minAnswer: 11
   maxAnswer: 19
   difficulty: 16
-  MonsterHealth: 1
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &320723824
 CanvasRenderer:
@@ -6045,7 +6045,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 15
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -6055,17 +6055,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1779347334}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &420629065
 CanvasRenderer:
@@ -6722,27 +6722,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 30
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 6
   maxAnswer: 108
   difficulty: 31
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0600000009000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &459756518
 CanvasRenderer:
@@ -8436,27 +8436,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 1
   maxAnswer: 24
   difficulty: 25
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &566513259
 CanvasRenderer:
@@ -9311,17 +9311,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1103991474}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &602279656
 CanvasRenderer:
@@ -10169,25 +10169,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 25
   minNumber: 4
-  maxNumber: 80
+  maxNumber: 96
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 32
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0400000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1257189538}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &647072815
 CanvasRenderer:
@@ -10244,27 +10244,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 25
   minNumber: 1
   maxNumber: 48
   Operator: 0
   minAnswer: 21
   maxAnswer: 49
   difficulty: 23
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &652766557
 CanvasRenderer:
@@ -10583,17 +10583,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1309326883}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &669584559
 CanvasRenderer:
@@ -11317,27 +11317,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 30
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 7
   maxAnswer: 96
   difficulty: 33
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &726148643
 CanvasRenderer:
@@ -11508,7 +11508,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 30
   minNumber: 1
   maxNumber: 40
   Operator: 0
@@ -11518,17 +11518,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1893550542}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &740681441
 CanvasRenderer:
@@ -11845,17 +11845,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1111345915}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &756958630
 CanvasRenderer:
@@ -12315,34 +12315,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 780108254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
-  minNumber: 11
-  maxNumber: 220
+  levelTime: 20
+  minNumber: 1
+  maxNumber: 144
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
-  difficulty: 38
+  maxAnswer: 12
+  difficulty: 28
   MonsterHealth: 15
-  MonsterAttack: 1
+  MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 040000000700000008000000090000000b0000000c000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 50
   enemyChoices: 3
-  enemyAnswerRange: 11
+  enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: The Dunes of Division are free of Divisors terror, well done!
+  previousTime: 3
+  nextLevelString: Divisor is making a desperate last stand. Stop her at all costs!
+  nextime: 5
+  enemyString: Drag the correct answers onto the dam walls to make sure they dont
+    break!
   enemyTime: 2
+  maxDepth: -3
 --- !u!222 &780108259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12578,25 +12580,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 15
   minNumber: 5
-  maxNumber: 100
+  maxNumber: 120
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 26
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 179533774}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &805332699
 CanvasRenderer:
@@ -12679,26 +12681,26 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 35
-  minNumber: 9
-  maxNumber: 180
+  minNumber: 7
+  maxNumber: 108
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 34
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000009000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 9
   hardMode: {fileID: 1408469343}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &830498473
 CanvasRenderer:
@@ -13069,27 +13071,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
   maxNumber: 48
   Operator: 0
   minAnswer: 21
   maxAnswer: 49
   difficulty: 25
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &843822243
 CanvasRenderer:
@@ -13157,17 +13159,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 180767180}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &847322378
 CanvasRenderer:
@@ -13771,25 +13773,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 25
   minNumber: 5
-  maxNumber: 100
+  maxNumber: 120
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 25
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 963259404}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &877657527
 CanvasRenderer:
@@ -14129,26 +14131,26 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 10
-  minNumber: 2
-  maxNumber: 10
+  minNumber: 1
+  maxNumber: 12
   Operator: 2
   minAnswer: 1
-  maxAnswer: 100000
-  difficulty: 31
+  maxAnswer: 144
+  difficulty: 34
   MonsterHealth: 9
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 060000000700000008000000090000000b0000000c000000
   monsterArt: {fileID: 0}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: The mountains are clear of evil! Congratulations
+  previousTime: 3
+  nextLevelString: Multisaurus is making a final stand, stop him!
+  nextime: 5
+  enemyString: Defeat Multisaurus by tapping the numbers that make up the answer!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &900274933
@@ -15056,7 +15058,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 35
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -15066,17 +15068,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0b0000000c000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1379293376}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &945962639
 CanvasRenderer:
@@ -15273,27 +15275,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 20
   minNumber: 5
-  maxNumber: 100
+  maxNumber: 120
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 30
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &963259405
 CanvasRenderer:
@@ -15350,27 +15352,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 5
+  levelTime: 15
   minNumber: 1
   maxNumber: 10
   Operator: 0
   minAnswer: 10
   maxAnswer: 19
   difficulty: 18
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &969472091
 CanvasRenderer:
@@ -15427,27 +15429,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 20
   minNumber: 1
-  maxNumber: 20
+  maxNumber: 24
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 29
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &975259592
 CanvasRenderer:
@@ -15709,7 +15711,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 10
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -15719,17 +15721,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 1456059767}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &986227753
 CanvasRenderer:
@@ -16080,17 +16082,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2058854668}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &999825831
 CanvasRenderer:
@@ -16203,7 +16205,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 25
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -16213,17 +16215,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1965509}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1011991643
 CanvasRenderer:
@@ -16300,7 +16302,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -16310,17 +16312,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 320723823}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1012138166
 CanvasRenderer:
@@ -16887,7 +16889,7 @@ MonoBehaviour:
   - {fileID: 647072812}
   - {fileID: 830498470}
   - {fileID: 1496906209}
-  - {fileID: 780108256}
+  - {fileID: 0}
   completedQuestions: 0
   type: 3
   levelSelection: {fileID: 977039561}
@@ -17520,17 +17522,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1103991475
 CanvasRenderer:
@@ -17587,27 +17589,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 5
+  levelTime: 15
   minNumber: 1
   maxNumber: 8
   Operator: 0
   minAnswer: 2
   maxAnswer: 9
   difficulty: 15
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1111345918
 CanvasRenderer:
@@ -18065,27 +18067,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 7
   maxAnswer: 96
   difficulty: 35
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1135233062
 CanvasRenderer:
@@ -18221,7 +18223,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 25
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -18231,17 +18233,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1135233061}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1136386987
 CanvasRenderer:
@@ -18846,27 +18848,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 20
   minNumber: 3
-  maxNumber: 60
+  maxNumber: 72
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 32
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0300000006000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1162192731
 CanvasRenderer:
@@ -19559,7 +19561,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 30
   minNumber: 20
   maxNumber: 79
   Operator: 0
@@ -19569,17 +19571,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1908872062}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1219344386
 CanvasRenderer:
@@ -19911,25 +19913,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 25
   minNumber: 3
-  maxNumber: 60
+  maxNumber: 72
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 27
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0300000006000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 3
   hardMode: {fileID: 1162192730}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1242327717
 CanvasRenderer:
@@ -20015,17 +20017,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1276757086025982, guid: 0218ffd0c1b68e548863a9afc85e6c3a, type: 2}
   enemPhaseTime: 10
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: You stopped Addalon for now, but he will return!
+  previousTime: 3
+  nextLevelString: Addalon is corrupting the Forest. Stop him!
+  nextime: 5
+  enemyString: Defeat him by tapping on the correct seeds
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1255812459
@@ -20157,27 +20159,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 20
   minNumber: 4
-  maxNumber: 80
+  maxNumber: 96
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 37
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0400000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1257189539
 CanvasRenderer:
@@ -20357,26 +20359,26 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 10
-  minNumber: 2
-  maxNumber: 10
+  minNumber: 1
+  maxNumber: 12
   Operator: 2
   minAnswer: 1
-  maxAnswer: 100000
-  difficulty: 31
+  maxAnswer: 120
+  difficulty: 24
   MonsterHealth: 9
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 01000000020000000300000005000000
+  secondFixedNumber: 01000000020000000300000004000000050000000a000000
   monsterArt: {fileID: 0}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: You scared off Multisaurus for now, but he will return!
+  previousTime: 3
+  nextLevelString: Multisaurus is blokcing your path! Defeat him!
+  nextime: 5
+  enemyString: Defeat Multisaurus by tapping the numbers that make up the answer!
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1266290548
@@ -20519,17 +20521,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 2046631006}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1273667092
 CanvasRenderer:
@@ -21150,17 +21152,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1309326884
 CanvasRenderer:
@@ -21899,27 +21901,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 30
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 11
   maxAnswer: 144
   difficulty: 37
-  MonsterHealth: 15
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0b0000000c000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1379293377
 CanvasRenderer:
@@ -22622,27 +22624,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
+  levelTime: 30
   minNumber: 4
-  maxNumber: 80
+  maxNumber: 96
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 35
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0400000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1407845465
 CanvasRenderer:
@@ -22699,27 +22701,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
-  minNumber: 9
-  maxNumber: 180
+  levelTime: 30
+  minNumber: 7
+  maxNumber: 108
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 39
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000009000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1408469344
 CanvasRenderer:
@@ -23221,27 +23223,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 5
   minNumber: 1
   maxNumber: 10
   Operator: 0
   minAnswer: 10
   maxAnswer: 19
   difficulty: 17
-  MonsterHealth: 10
-  MonsterAttack: 1
+  MonsterHealth: 15
+  MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 5
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1456059768
 CanvasRenderer:
@@ -23792,25 +23794,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 35
   minNumber: 11
-  maxNumber: 220
+  maxNumber: 144
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 36
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0b0000000c000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 11
   hardMode: {fileID: 1727928565}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1496906212
 CanvasRenderer:
@@ -23877,17 +23879,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 2
   enemyAnswerRange: 3
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Addalon is defeated for good and the Forest is cleansed!
+  previousTime: 3
+  nextLevelString: Addalon is making a final stand. Stop him!
+  nextime: 5
+  enemyString: Defeat him by tapping on the correct seeds
   enemyTime: 2
   maxDepth: -3
 --- !u!222 &1499900388
@@ -25309,7 +25311,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 9
   Operator: 1
@@ -25319,17 +25321,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1605281343
 CanvasRenderer:
@@ -25890,7 +25892,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 25
+  levelTime: 35
   minNumber: 1
   maxNumber: 12
   Operator: 2
@@ -25900,17 +25902,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 726148642}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1650553956
 CanvasRenderer:
@@ -26551,7 +26553,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 30
   minNumber: 1
   maxNumber: 48
   Operator: 0
@@ -26561,17 +26563,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 652766556}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1673962229
 CanvasRenderer:
@@ -27590,17 +27592,17 @@ MonoBehaviour:
   MonsterHealth: 25
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1708807002
 CanvasRenderer:
@@ -28171,27 +28173,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 35
+  levelTime: 30
   minNumber: 11
-  maxNumber: 220
+  maxNumber: 144
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 41
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0b0000000c000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1727928566
 CanvasRenderer:
@@ -28287,27 +28289,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 5
+  levelTime: 10
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 5
   maxAnswer: 120
   difficulty: 27
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 050000000a000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1779347335
 CanvasRenderer:
@@ -28669,27 +28671,29 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 2
   levelTime: 20
-  minNumber: 3
-  maxNumber: 100
+  minNumber: 1
+  maxNumber: 120
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
-  difficulty: 0
+  maxAnswer: 12
+  difficulty: 28
   MonsterHealth: 10
-  MonsterAttack: 0.5
+  MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 01000000020000000300000006000000
-  monsterArt: {fileID: 0}
+  secondFixedNumber: 01000000020000000300000005000000060000000a000000
+  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 2
-  enemyString: Now Fight!!
-  enemyTime: 1
+  previousLevelString: You defeated Divisor, but she will return!
+  previousTime: 3
+  nextLevelString: Divisor! Lord Calculis most trusted Advisor, she now stands in
+    your way
+  nextime: 5
+  enemyString: Drag the correct answers onto the dam walls to make sure they dont
+    break!
+  enemyTime: 2
   maxDepth: -3
 --- !u!222 &1796357279
 CanvasRenderer:
@@ -28953,25 +28957,25 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 35
   minNumber: 4
-  maxNumber: 80
+  maxNumber: 96
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 30
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0400000008000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 1407845464}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1822298809
 CanvasRenderer:
@@ -30116,7 +30120,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 25
   minNumber: 1
   maxNumber: 40
   Operator: 0
@@ -30126,17 +30130,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1893550543
 CanvasRenderer:
@@ -30411,27 +30415,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 25
   minNumber: 20
   maxNumber: 79
   Operator: 0
   minAnswer: 40
   maxAnswer: 99
   difficulty: 27
-  MonsterHealth: 25
+  MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1908872063
 CanvasRenderer:
@@ -30646,17 +30650,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 969472090}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: The Addition Forest is scary, we must defeat the monsters here
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1921638465
 CanvasRenderer:
@@ -31498,17 +31502,17 @@ MonoBehaviour:
   MonsterHealth: 10
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1605281342}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &1994220173
 CanvasRenderer:
@@ -32354,17 +32358,17 @@ MonoBehaviour:
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
   hardMode: {fileID: 1708807001}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Subtraction Sea is full of evil monsters. Defeat them!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &2032169424
 CanvasRenderer:
@@ -32431,17 +32435,17 @@ MonoBehaviour:
   MonsterHealth: 20
   MonsterAttack: 2
   preventRounding: 1
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &2046631007
 CanvasRenderer:
@@ -32634,17 +32638,17 @@ MonoBehaviour:
   MonsterHealth: 25
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 25
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster!
+  previousTime: 3
+  nextLevelString: These monsters are harder than before! We must defeat them
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &2058854669
 CanvasRenderer:
@@ -32912,27 +32916,27 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 15
+  levelTime: 20
   minNumber: 1
   maxNumber: 12
   Operator: 2
   minAnswer: 4
   maxAnswer: 48
   difficulty: 28
-  MonsterHealth: 20
+  MonsterHealth: 15
   MonsterAttack: 2
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0300000004000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 0}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: Mt.Multiplication is treachorous, look out for dangerous monsters!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &2071202716
 CanvasRenderer:
@@ -34276,10 +34280,10 @@ MonoBehaviour:
   variableCount: 2
   levelTime: 25
   minNumber: 1
-  maxNumber: 20
+  maxNumber: 24
   Operator: 3
   minAnswer: 1
-  maxAnswer: 20
+  maxAnswer: 12
   difficulty: 24
   MonsterHealth: 10
   MonsterAttack: 1
@@ -34290,11 +34294,11 @@ MonoBehaviour:
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 975259591}
-  previousLevelString: You won!
-  previousTime: 6
-  nextLevelString: ' Entering level X!'
-  nextime: 10
-  enemyString: Now Fight!!
+  previousLevelString: Defeat the next monster
+  previousTime: 3
+  nextLevelString: The Division Dunes are harsh, watch yourself out there!
+  nextime: 5
+  enemyString: Defeat the monster using your Math Power!
   enemyTime: 2
 --- !u!222 &2138070412
 CanvasRenderer:
