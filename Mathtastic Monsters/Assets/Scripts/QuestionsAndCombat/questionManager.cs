@@ -54,6 +54,8 @@ public class questionManager : MonoBehaviour
         float answer = -2;
         string oper = "";
 
+        int rand = 1;
+
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
@@ -83,8 +85,14 @@ public class questionManager : MonoBehaviour
             case operators.Multiplication:
                 //If operator is 'x', second number is one of two possible numbers
 
-                int rand = Random.Range(0, (a_running.secondFixedNumber.Length));
-
+                if (a_running.boss && a_running.validNumbers != 0)
+                {
+                    rand = Random.Range(0, (a_running.validNumbers));
+                }
+                else
+                {
+                    rand = Random.Range(0, (a_running.secondFixedNumber.Length));
+                }
                 numbers[1] = a_running.secondFixedNumber[rand];
 
                 multiple = numbers[1];
@@ -94,9 +102,9 @@ public class questionManager : MonoBehaviour
                 oper = "x ";
                 break;
             case operators.Division:
-                int rand2 = Random.Range(0, (a_running.secondFixedNumber.Length));
+                rand = Random.Range(0, (a_running.secondFixedNumber.Length));
 
-                numbers[1] = a_running.secondFixedNumber[rand2];
+                numbers[1] = a_running.secondFixedNumber[rand];
 
                 multiple = numbers[1];
 

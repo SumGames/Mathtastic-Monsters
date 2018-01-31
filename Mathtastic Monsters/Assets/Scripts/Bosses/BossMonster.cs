@@ -49,6 +49,21 @@ public class BossMonster : Monster
 
     public Calculator calculator;
 
+
+
+    //multBoss;
+
+    int Heads;
+
+    internal int validNumbers;
+
+    int multHealthOne = 4;
+    int multHealthTwo = 4;
+    int multHealthThree = 4;
+
+    int multAttacks;
+
+
     // Use this for initialization
     void Start()
     {
@@ -136,8 +151,13 @@ public class BossMonster : Monster
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
+        if (Operator == operators.Multiplication)
+        {
+            
 
-
+            multiplicationHeads(1);
+            return;
+        }
         if (Operator == operators.Division && enemyPhase)
         {
             feedback.DamageSet(SetFeedback.PlayerDodged);
@@ -154,6 +174,7 @@ public class BossMonster : Monster
 
         if (animator)
             animator.Play("Hurt");
+
 
 
         //Addition boss gets harder with each phase.
@@ -255,8 +276,20 @@ public class BossMonster : Monster
         health = parent.quizRunning.MonsterHealth;
         attack = parent.quizRunning.MonsterAttack;
 
-        bar.setMaxHealth(health, false);
-
+        if (Operator == operators.Multiplication)
+        {
+            bar.setMaxHealth(health, false, true);
+            validNumbers = 2;
+            multHealthOne = 4;
+            multHealthTwo = 4;
+            multHealthThree = 4;
+            Heads = 3;
+            multAttacks = 3;
+        }
+        else
+        {
+            bar.setMaxHealth(health, false);
+        }
 
         if (!music)
             music = FindObjectOfType<MusicManager>();
@@ -289,6 +322,7 @@ public class BossMonster : Monster
                 CreateSubtraction(true, true);
                 break;
             case operators.Multiplication:
+                multiplicationHeads(0);
                 CreateMultiplication();
                 break;
             case operators.Division:
@@ -400,26 +434,26 @@ public class BossMonster : Monster
 
     }
 
-    void CreateMultiplication()
-    {
-
-        enemyPhase = !enemyPhase;
-
-        if (!enemyPhase)
+    internal void CreateMultiplication()
+    {        
+        if (multAttacks <= 0)
         {
-            //multipleContainer.DisableMultiple();
             questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+            multiplicationContainer.gameObject.SetActive(false);
+
         }
         else
         {
+            multAttacks--;
             player.SetTime(true, m_button.enemPhaseTime);
 
-
             multipleContainer.DisableThisAndCalculator();
-
             multiplicationContainer.gameObject.SetActive(true);
+
             multiplicationContainer.GenerateMultiplication(m_button, this);
         }
+
+
     }
 
 
@@ -481,6 +515,83 @@ public class BossMonster : Monster
 
         multipleContainer.DisableThisAndCalculator();
     }
+
+
+    internal void multiplicationHeads(int damage)
+    {
+        if (damage > 0)
+        {
+            Debug.Log("Impact");
+
+            if (animator)
+                animator.Play("Hurt");           
+        }
+
+        Heads = headCheck(damage);
+
+        switch (Heads)
+        {
+            case 1:
+                validNumbers = 2;
+                m_button.levelTime = 30;
+                m_button.enemPhaseTime = 30;
+                break;
+            case 2:
+                validNumbers = 4;
+                m_button.levelTime = 25;
+                m_button.enemPhaseTime = 25;
+                break;
+            case 3:
+                validNumbers = 6;
+                m_button.levelTime = 20;
+                m_button.enemPhaseTime = 20;
+                break;
+            default:
+                health = -2;
+                CheckDeath();
+                return;
+        }
+
+        multAttacks = Heads;
+
+        CreateMultiplication();
+    }
+
+
+    int headCheck(int damage)
+    {
+        if (multHealthThree > 0)
+        {           
+            multHealthThree -= damage;
+
+            bar.SetEnemyBars(3, multHealthThree);
+
+            if (multHealthThree > 0)
+                return 3;
+        }
+        if (multHealthTwo > 0)
+        {
+            multHealthTwo -= damage;
+
+            bar.SetEnemyBars(2, multHealthTwo);
+
+            if (multHealthTwo > 0)
+                return 2;
+        }
+        if (multHealthOne > 0)
+        {
+            multHealthOne -= damage;
+
+            health = multHealthOne;
+
+            bar.SetEnemyBars(1, multHealthOne);
+
+            if (multHealthOne > 0)
+                return 1;
+        }
+        return 0;
+    }
+
 
     public void SubmitAbacus()
     {

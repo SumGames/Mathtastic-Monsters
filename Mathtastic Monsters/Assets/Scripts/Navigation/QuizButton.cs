@@ -70,6 +70,7 @@ public class QuizButton : MonoBehaviour
     public string enemyString = "Now Fight!!";
     public float enemyTime = 2;
 
+    internal int validNumbers;
 
 
     // Use this for initialization

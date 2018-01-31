@@ -17,7 +17,6 @@ public class MultiplicationContainer : MonoBehaviour
     internal MultiplicationBox buttonOne;
     internal MultiplicationBox buttonTwo;
 
-
     BossMonster boss;
 
 
@@ -145,7 +144,8 @@ public class MultiplicationContainer : MonoBehaviour
 
         if (CorrectAnswer == answer)
         {
-            boss.MonsterHurt();
+            boss.CreateMultiplication();
+
         }
         else
         {

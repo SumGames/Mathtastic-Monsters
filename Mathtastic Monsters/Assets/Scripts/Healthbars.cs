@@ -16,6 +16,15 @@ public class Healthbars : MonoBehaviour
 
     public Slider enemyBar;
 
+    public Slider SecondBar;
+    float secondFill;
+    float secondHealth;
+    public Slider ThirdBar;
+    float thirdFill;
+    float thirdHealth;
+
+    bool multiActive;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -35,22 +44,55 @@ public class Healthbars : MonoBehaviour
             enemyFill = Mathf.Lerp(enemyFill, enemyHealth, Time.deltaTime);
             enemyBar.value = enemyFill;
         }
+
+        if(multiActive)
+        {
+            if (SecondBar != null)
+            {
+                secondFill = Mathf.Lerp(secondFill, secondHealth, Time.deltaTime);
+                SecondBar.value = secondFill;
+            }
+            if (ThirdBar != null)
+            {
+                thirdFill = Mathf.Lerp(thirdFill, thirdHealth, Time.deltaTime);
+                ThirdBar.value = thirdFill;
+            }
+        }
+
     }
 
 
 
     //Called at the start of the a fight, setting the character's healthbar to max.
-    public void setMaxHealth(float Max, bool player)
+    public void setMaxHealth(float Max, bool player, bool Three=false)
     {
+        if (Three)
+        {
+            Debug.Log("Start");
+
+            multiActive = true;
+
+            SecondBar.gameObject.SetActive(true);
+
+            ThirdBar.gameObject.SetActive(true);
+            enemyBar.maxValue = enemyHealth = enemyFill = 4;
+            SecondBar.maxValue = secondHealth = secondFill = 4;
+            ThirdBar.maxValue = secondHealth = thirdFill = 4;
+
+            return;
+        }
         if (player)
         {
-            playerBar.maxValue = playerHealth = playerFill = Max;           
+            playerBar.maxValue = playerHealth = playerFill = Max;
         }
         else
         {
-            enemyBar.maxValue = enemyHealth = enemyFill = Max;
-        }
+            multiActive = false;
 
+            enemyBar.maxValue = enemyHealth = enemyFill = Max;
+            SecondBar.gameObject.SetActive(false);
+            ThirdBar.gameObject.SetActive(false);
+        }
 
     }
 
@@ -61,6 +103,24 @@ public class Healthbars : MonoBehaviour
             playerHealth = current;
         else
             enemyHealth = current;
+
+    }
+    internal void SetEnemyBars(int index, float health)
+    {
+        switch (index)
+        {
+            case 3:
+                thirdHealth = health;
+                break;
+            case 2:
+                secondHealth = health;
+                break;
+            case 1:
+                enemyHealth = health;
+                break;
+            default:
+                break;
+        }
 
     }
 

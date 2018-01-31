@@ -51,6 +51,7 @@ public class StoryManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         phase = phases.None;
         textDisplay.gameObject.SetActive(false);
         textBackground.SetActive(false);
