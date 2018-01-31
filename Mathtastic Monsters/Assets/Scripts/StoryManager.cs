@@ -45,11 +45,15 @@ public class StoryManager : MonoBehaviour
 
     internal phases phase;
 
+    public GameObject textBackground;
+
+
     // Use this for initialization
     void Start()
     {
         phase = phases.None;
         textDisplay.gameObject.SetActive(false);
+        textBackground.SetActive(false);
     }
 
     // Update is called once per frame
@@ -112,6 +116,7 @@ public class StoryManager : MonoBehaviour
         SetMovementStartAndSpeed(phase);
 
         textDisplay.gameObject.SetActive(false);
+        textBackground.SetActive(false);
 
         if (button.boss)
         {
@@ -132,7 +137,7 @@ public class StoryManager : MonoBehaviour
             EndMovement();
             return;
         }
-
+        textBackground.SetActive(true);
         textDisplay.gameObject.SetActive(true);
 
         timer = 0;
