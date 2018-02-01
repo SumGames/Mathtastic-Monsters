@@ -271,7 +271,8 @@ public class Abacus : MonoBehaviour
 
         if (result == Total)
         {
-            ResultText.text = "Correct! Time: " + timer.ToString("3");
+            ResultText.text = "Correct! Time: " + timer.ToString("N0");
+            timer = 0;
             SetRandom();
             return;
         }
