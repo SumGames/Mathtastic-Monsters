@@ -524,7 +524,9 @@ public class BossMonster : Monster
             Debug.Log("Impact");
 
             if (animator)
-                animator.Play("Hurt");           
+                animator.Play("Hurt");
+
+            feedback.DamageSet(SetFeedback.EnemyHit);
         }
 
         Heads = headCheck(damage);
@@ -568,6 +570,8 @@ public class BossMonster : Monster
 
             if (multHealthThree > 0)
                 return 3;
+            else
+                return 2;
         }
         if (multHealthTwo > 0)
         {
@@ -577,6 +581,8 @@ public class BossMonster : Monster
 
             if (multHealthTwo > 0)
                 return 2;
+            else
+                return 1;
         }
         if (multHealthOne > 0)
         {

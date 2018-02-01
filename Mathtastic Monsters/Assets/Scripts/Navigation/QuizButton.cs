@@ -17,7 +17,7 @@ public enum operators
 
 public class QuizButton : MonoBehaviour
 {
-    StoryManager storyManager;
+    internal StoryManager storyManager;
 
     public bool boss;
 

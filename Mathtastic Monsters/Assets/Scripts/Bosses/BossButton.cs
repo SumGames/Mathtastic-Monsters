@@ -2,8 +2,6 @@
 
 public class BossButton : QuizButton
 {
-    StoryManager storyManager;
-
     public int maxDepth = -3; //The level the Subtraction boss will run to when hurt.
 
 
