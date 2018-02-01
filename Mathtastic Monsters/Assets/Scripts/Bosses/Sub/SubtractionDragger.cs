@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class SubtractionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public int DraggerAnswer;
+    public string AnswerNeeded;
 
     bool positionSet;
     public Vector3 originalPosition;
@@ -15,9 +15,11 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     Vector3 lastKnownMousePosition;
 
-    internal void ResetDragger()
+    internal void ResetDragger(bool positionOnly)
     {
-        if(!positionSet)
+        dragging = false;
+
+        if (!positionSet)
         {
             originalPosition = transform.localPosition;
             positionSet = true;
@@ -27,15 +29,21 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             transform.localPosition = originalPosition;
 
         }
+
         GetComponent<Image>().color = Color.white;
-        SetDragger(-2);
+
+        if (positionOnly)
+            return;
+
+        SetDragger("", "");
     }
 
-    internal void SetDragger(int newValue)
+    internal void SetDragger(string answer, string words )
     {
-        DraggerAnswer = newValue;
+        AnswerNeeded = answer;
+        GetComponentInChildren<Text>().text = words;
 
-        if (DraggerAnswer <= 0)
+        if (answer == "")
         {
             gameObject.SetActive(false);
         }
@@ -99,28 +107,5 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void OnPointerUp(PointerEventData eventData)
     {
         dragging = false;
-    }
-
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Answer")
-        {
-            DivisionAnswers answer = other.GetComponent<DivisionAnswers>();
-            answer.ChangeDragger(this, true);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Answer")
-        {
-            DivisionAnswers answer = other.GetComponent<DivisionAnswers>();
-            answer.ChangeDragger(this, false);
-
-
-        }
-
     }
 }

@@ -75,6 +75,8 @@ public class Player : MonoBehaviour
 
     public TransitionManager transition;
 
+    public Image SliderFill;
+
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
@@ -278,8 +280,21 @@ public class Player : MonoBehaviour
         return 0;
     }
 
-    internal void SetTime(bool enemyPhase, float enemyTime)
+    internal void SetTime(bool enemyPhase, float enemyTime, bool Disable=false)
     {
+        if (Disable)
+        {
+            Timer = 100000;
+            SliderFill.enabled = false;
+        }
+        else if(SliderFill)
+        {
+            SliderFill.enabled = true;
+        }
+
+
+
+
         if (resetTime == 0)
         {
             resetTime = 15;
