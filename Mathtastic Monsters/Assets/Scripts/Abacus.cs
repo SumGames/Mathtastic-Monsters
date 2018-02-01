@@ -49,6 +49,8 @@ public class Abacus : MonoBehaviour
     public Text GoalText;
     public Text ResultText;
 
+    float timer;
+
     // Use this for initialization
     void Start()
     {
@@ -76,45 +78,51 @@ public class Abacus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
 
     }
 
     internal void SetRandom()
     {
-        int total = Random.Range(10, 200);
+        Total = Random.Range(10, 200);
 
-        GoalText.text = "Goal is: " + total.ToString();
+        GoalText.text = "Goal is: " + Total.ToString();
 
 
-        int remaining = total;
+        int remaining = Total;
 
-        int value = Random.Range(1, 4);
+        int value = Random.Range(4, 12);
         int bars = Random.Range(1, 5);
 
-        OneValue = value * bars;
-        remaining -= total;
-
-
-        value = Random.Range(2, 8);
-        bars = Random.Range(1, 4);
-
-        TwoValue = value * bars;
-        remaining -= total;
-
-
-
-        value = Random.Range(5, 20);
-        bars = Random.Range(1, 4);
-
-        ThreeValue = value * bars;
-        remaining -= total;
-
-
-
-        value = remaining;
-        Random.Range(1, 4);
-
         OneValue = value / bars;
+        remaining -= OneValue*bars;
+
+
+        value = Random.Range(8, 18);
+        bars = Random.Range(1, 4);
+
+        TwoValue = value / bars;
+        remaining -= TwoValue * bars;
+
+
+
+        value = Random.Range(10, 30);
+        bars = Random.Range(1, 4);
+
+        ThreeValue = value / bars;
+        remaining -= ThreeValue * bars;
+
+        if (remaining < 5)
+        {
+            FourValue = 1;
+        }
+        else
+        {
+            value = remaining;
+            Random.Range(1, 4);
+
+            FourValue = value / bars;
+        }
 
         setText();
     }
@@ -204,7 +212,7 @@ public class Abacus : MonoBehaviour
         }
     }
 
-    public string CalculateTotal()
+    public int CalculateTotal()
     {
         int total = 0;
 
@@ -214,7 +222,7 @@ public class Abacus : MonoBehaviour
             total += ReturnTrueBools(i);
         }
 
-        return total.ToString();
+        return total;
     }
 
     int ReturnTrueBools(int row)
@@ -259,6 +267,17 @@ public class Abacus : MonoBehaviour
 
     public void TestResult()
     {
+        int result = CalculateTotal();
+
+        if (result == Total)
+        {
+            ResultText.text = "Correct! Time: " + timer.ToString("3");
+            SetRandom();
+            return;
+        }
+
+
+        ResultText.text = result.ToString();
 
     }
 

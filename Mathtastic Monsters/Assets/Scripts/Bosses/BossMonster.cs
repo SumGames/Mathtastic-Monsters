@@ -601,7 +601,7 @@ public class BossMonster : Monster
 
     public void SubmitAbacus()
     {
-        if (abacus.CalculateTotal() == calculator.answerNeeded)
+        if (abacus.CalculateTotal().ToString() == calculator.answerNeeded)
         {
             MonsterHurt();
         }
