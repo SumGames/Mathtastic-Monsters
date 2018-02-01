@@ -43,11 +43,26 @@ public class Abacus : MonoBehaviour
 
     int Total;
 
+
+    public bool testing = false;
+
+    public Text GoalText;
+    public Text ResultText;
+
     // Use this for initialization
     void Start()
     {
 
-        setText();
+
+        if (testing)
+        {
+            SetRandom();
+
+        }
+        else
+        {
+            setText();
+        }
     }
 
     void setText()
@@ -63,6 +78,48 @@ public class Abacus : MonoBehaviour
     {
 
     }
+
+    internal void SetRandom()
+    {
+        int total = Random.Range(10, 200);
+
+        GoalText.text = "Goal is: " + total.ToString();
+
+
+        int remaining = total;
+
+        int value = Random.Range(1, 4);
+        int bars = Random.Range(1, 5);
+
+        OneValue = value * bars;
+        remaining -= total;
+
+
+        value = Random.Range(2, 8);
+        bars = Random.Range(1, 4);
+
+        TwoValue = value * bars;
+        remaining -= total;
+
+
+
+        value = Random.Range(5, 20);
+        bars = Random.Range(1, 4);
+
+        ThreeValue = value * bars;
+        remaining -= total;
+
+
+
+        value = remaining;
+        Random.Range(1, 4);
+
+        OneValue = value / bars;
+
+        setText();
+    }
+
+
 
     public void ClickBarOne(int index)
     {
@@ -154,13 +211,13 @@ public class Abacus : MonoBehaviour
 
         for (int i = 1; i < 5; i++)
         {
-            total += returnTrueBools(i);
+            total += ReturnTrueBools(i);
         }
 
         return total.ToString();
     }
 
-    int returnTrueBools(int row)
+    int ReturnTrueBools(int row)
     {
         int index = 0;
         switch (row)
@@ -198,6 +255,10 @@ public class Abacus : MonoBehaviour
         }
 
         return index;
+    }
+
+    public void TestResult()
+    {
 
     }
 
