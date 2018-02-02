@@ -11,7 +11,7 @@ public class MultipleAnswer : MonoBehaviour
 
     multipleContainer container;
 
-    public MonsterManager MonsterManager;
+    Image image;
 
 
     // Use this for initialization
@@ -31,6 +31,11 @@ public class MultipleAnswer : MonoBehaviour
 
     internal void setAnswer(int newAnswer)
     {
+        if (!image)
+            image = GetComponent<Image>();
+
+        image.color = Color.white;
+
         Answer = newAnswer;
         if (!answerText)
         {
@@ -39,25 +44,28 @@ public class MultipleAnswer : MonoBehaviour
         answerText.text = newAnswer.ToString();
     }
 
-    public void submitAnswer()
+    public void SelectButton()
     {
-        if(!MonsterManager)
-        {
-            MonsterManager = FindObjectOfType<MonsterManager>();
-        }
-
         if (!container)
             container = FindObjectOfType<multipleContainer>();
 
-
-        if (Answer == container.enemyAnswerNeeded)
+        if (container.SelectedAnswer != null)
         {
-            MonsterManager.currentEnemy.MonsterHurt();
+            if (container.SelectedAnswer = this)
+            {
+                container.submit.interactable = false;
+                container.SelectedAnswer = null;
+                return;
+            }
+            else
+            {
+                container.SelectedAnswer.image.color = Color.white;
+                container.SelectedAnswer = null;
+            }
         }
-        else
-        {
-            MonsterManager.currentEnemy.EnemyAttack();
-        }
+        container.submit.interactable = true;
+        image.color = Color.white;
+        container.SelectedAnswer = this;
 
     }
 }

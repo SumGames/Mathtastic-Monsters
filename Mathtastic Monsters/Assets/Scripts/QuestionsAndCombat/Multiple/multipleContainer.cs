@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public enum TransitioningObjects
 {
@@ -30,6 +31,14 @@ public class multipleContainer : MonoBehaviour
 
 
     public TransitionManager transitionManager;
+
+
+
+
+    public MultipleAnswer SelectedAnswer;
+    MonsterManager MonsterManager;
+    public Button submit;
+
 
 
     // Use this for initialization
@@ -125,6 +134,8 @@ public class multipleContainer : MonoBehaviour
 
     void MultipleAnswers(QuizButton a_running, float multiple)
     {
+        SelectedAnswer = null;
+        submit.interactable = false;
 
         DisableMultipleChoiceButtons();
 
@@ -274,5 +285,32 @@ public class multipleContainer : MonoBehaviour
             }
 
         }
+    }
+
+    public void submitAnswer()
+    {
+        if (SelectedAnswer == null)
+        {
+            submit.interactable = false;
+            return;
+        }
+        if (!MonsterManager)
+        {
+            MonsterManager = FindObjectOfType<MonsterManager>();
+        }
+
+        if (SelectedAnswer.getAnswer() == enemyAnswerNeeded)
+        {
+            MonsterManager.currentEnemy.MonsterHurt();
+        }
+        else
+        {
+            MonsterManager.currentEnemy.EnemyAttack();
+        }
+
+        submit.interactable = false;
+        SelectedAnswer.GetComponent<Image>().color = Color.white;
+        SelectedAnswer = null;
+
     }
 }
