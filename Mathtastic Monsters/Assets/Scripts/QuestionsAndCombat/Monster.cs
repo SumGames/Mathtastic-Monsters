@@ -33,6 +33,8 @@ public class Monster : MonoBehaviour
 
     internal multipleContainer multipleContainer;
 
+    public Vector3 startingPosition;
+
 
     // Use this for initialization
     void Start()
@@ -103,6 +105,8 @@ public class Monster : MonoBehaviour
         manager = FindObjectOfType<ParentsStateManager>();
 
 
+        sprite.transform.localPosition = startingPosition;
+
         if (health <= 0)
         {
             if (animator)
@@ -144,6 +148,7 @@ public class Monster : MonoBehaviour
             sprite = Instantiate(parent.quizRunning.monsterArt, monsterSpot.transform, false);
             sprite.transform.localScale = parent.quizRunning.monsterArt.transform.localScale;
             animator = sprite.GetComponent<Animator>();
+            startingPosition = sprite.transform.localPosition;
         }
         if (parent == null)
             parent = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();

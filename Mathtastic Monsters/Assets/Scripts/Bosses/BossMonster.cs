@@ -175,6 +175,7 @@ public class BossMonster : Monster
             sprite = Instantiate(parent.quizRunning.monsterArt, monsterSpot.transform, false);
             sprite.transform.localScale = parent.quizRunning.monsterArt.transform.localScale;
             animator = sprite.GetComponent<Animator>();
+            startingPosition = sprite.transform.localPosition;
         }
 
         enemyPhase = false;
