@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0600000009000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -879,7 +879,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0300000004000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -2000,7 +2000,7 @@ MonoBehaviour:
   MonsterAttack: 0
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 60
   enemyChoices: 2
   enemyAnswerRange: 3
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 8
   enemyChoices: 2
   enemyAnswerRange: 3
@@ -3918,7 +3918,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -5760,24 +5760,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 403351035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Script: {fileID: 11500000, guid: fb05de9405b5cce41b3846e8b11e40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
   variableCount: 2
   levelTime: 0
-  minNumber: 10
-  maxNumber: 99
-  Operator: 4
+  minNumber: 0
+  maxNumber: 0
+  Operator: 0
   minAnswer: 1
-  maxAnswer: 198
-  difficulty: 14
-  MonsterHealth: 15
-  MonsterAttack: 2
+  maxAnswer: 100000
+  difficulty: 0
+  MonsterHealth: 6
+  MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -5788,6 +5788,7 @@ MonoBehaviour:
   nextime: 10
   enemyString: Now Fight!!
   enemyTime: 2
+  maxDepth: -3
 --- !u!222 &403351040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5988,7 +5989,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -7713,7 +7714,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9353,7 +9354,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -10219,7 +10220,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0400000008000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 4
@@ -10625,7 +10626,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -11655,7 +11656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &751589143
 Transform:
   m_ObjectHideFlags: 0
@@ -12313,7 +12314,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 040000000700000008000000090000000b0000000c000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -12570,7 +12571,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -12672,7 +12673,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000009000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 9
@@ -13113,7 +13114,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13213,7 +13214,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -13323,7 +13324,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13979,7 +13980,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -14135,7 +14136,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -14338,7 +14339,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 060000000700000008000000090000000b0000000c000000
-  monsterArt: {fileID: 0}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -14983,7 +14984,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15266,7 +15267,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -16168,7 +16169,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -16280,7 +16281,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -16413,7 +16414,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -18467,7 +18468,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000008000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -18629,8 +18630,8 @@ RectTransform:
   m_Father: {fileID: 1070398253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18836,7 +18837,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.799988, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19177,8 +19178,8 @@ RectTransform:
   m_Father: {fileID: 536258084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19865,7 +19866,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: bd34a64a7cc447f41b5a3b206ca30db0, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -19924,7 +19925,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -20251,7 +20252,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0300000006000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 3
@@ -20698,7 +20699,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 01000000020000000300000004000000050000000a000000
-  monsterArt: {fileID: 0}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -20851,7 +20852,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -23548,7 +23549,7 @@ MonoBehaviour:
   MonsterAttack: 0.5
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 0}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -23598,8 +23599,8 @@ RectTransform:
   m_Father: {fileID: 840916849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24003,8 +24004,8 @@ RectTransform:
   m_Father: {fileID: 139926282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -24672,7 +24673,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 11
@@ -24749,7 +24750,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1276757086025982, guid: 0218ffd0c1b68e548863a9afc85e6c3a, type: 2}
   enemPhaseTime: 10
   enemyChoices: 2
   enemyAnswerRange: 3
@@ -26590,7 +26591,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -26915,7 +26916,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000008000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -27635,7 +27636,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -27947,7 +27948,7 @@ MonoBehaviour:
   - {fileID: 1704393345}
   - {fileID: 991637861}
   - {fileID: 46592436}
-  - {fileID: 403351037}
+  - {fileID: 0}
   completedQuestions: 0
   type: 4
   levelSelection: {fileID: 977039561}
@@ -28116,8 +28117,8 @@ RectTransform:
   m_Father: {fileID: 996563628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -28489,7 +28490,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -29761,7 +29762,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -29987,7 +29988,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 01000000020000000300000005000000060000000a000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
@@ -30360,7 +30361,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0400000008000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
   enemyAnswerRange: 4
@@ -32145,7 +32146,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: bd34a64a7cc447f41b5a3b206ca30db0, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -33169,7 +33170,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -34197,7 +34198,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 5
@@ -36215,7 +36216,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
   enemyAnswerRange: 2
