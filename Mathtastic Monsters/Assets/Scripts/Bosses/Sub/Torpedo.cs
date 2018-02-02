@@ -17,6 +17,8 @@ public class Torpedo : MonoBehaviour
 
     CombatStateManager stateManager;
 
+    float velocity;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -24,7 +26,7 @@ public class Torpedo : MonoBehaviour
 
 	}
 
-    internal void CreateTorpedo(RectTransform a_end, BossMonster a_boss, string a_answer,SubtractionContainer subtractionContainer)
+    internal void CreateTorpedo(RectTransform a_end, BossMonster a_boss, string a_answer,SubtractionContainer subtractionContainer, float a_velocity)
     {
         container = subtractionContainer;
 
@@ -35,6 +37,8 @@ public class Torpedo : MonoBehaviour
         rect = GetComponent<RectTransform>();
         end = a_end;
         boss = a_boss;
+
+        velocity = a_velocity;
     }
 
 	
@@ -49,7 +53,7 @@ public class Torpedo : MonoBehaviour
 
         if (end && rect)
         {
-            rect.localPosition = Vector2.MoveTowards(rect.localPosition, end.localPosition, (Time.deltaTime));
+            rect.localPosition = Vector2.MoveTowards(rect.localPosition, end.localPosition, (Time.deltaTime * velocity));
 
             if (rect.localPosition.y > 2.7)
             {
@@ -70,6 +74,11 @@ public class Torpedo : MonoBehaviour
                 Destroy(gameObject);
 
                 container.LaunchTorpedo();
+            }
+            else
+            {
+                boss.player.DamagePlayer(0.5f);
+                container.ResetPosition();
             }
         }
     }

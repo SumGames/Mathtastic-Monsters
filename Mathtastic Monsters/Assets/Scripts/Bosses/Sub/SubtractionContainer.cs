@@ -22,6 +22,7 @@ public class SubtractionContainer : MonoBehaviour
 
 
     public GameObject TorpedoPrefab;
+    public Torpedo FiredTorpedo;
     int TorpedoesFired;
 
 
@@ -33,7 +34,7 @@ public class SubtractionContainer : MonoBehaviour
 
     void Update()
     {
-        if (readyToFire && storyManager.phase == phases.None)
+        if (readyToFire && storyManager.phase == phases.None && FiredTorpedo == null)
         {
             LaunchTorpedo();
             readyToFire = false;
@@ -46,26 +47,42 @@ public class SubtractionContainer : MonoBehaviour
         if (stateManager.gameState != playStatus.playing)
             return;
 
-        foreach (SubtractionDragger item in draggers)
-        {
-            item.ResetDragger(true);
-        }
-
+        ResetPosition();
 
 
         if (TorpedoesFired >= 3)
-        {            
+        {
             boss.CreateSubtraction(false);
             return;
         }
 
 
         GameObject Torpedo = Instantiate(TorpedoPrefab, this.transform, false);
-        Torpedo torpedo = Torpedo.GetComponent<Torpedo>();
+        FiredTorpedo = Torpedo.GetComponent<Torpedo>();
 
-        torpedo.CreateTorpedo(end, boss, answers[TorpedoesFired].ToString(), this);
+        float speed = 1;
+
 
         TorpedoesFired++;
+
+        switch (TorpedoesFired)
+        {
+            case 1:
+                speed = 0.5f;
+                break;
+            case 2:
+                speed = 0.75f;
+                break;
+            case 3:
+                speed = 1;
+                break;
+            default:
+                speed = 2;
+                break;
+        }
+
+
+        FiredTorpedo.CreateTorpedo(end, boss, answers[TorpedoesFired].ToString(), this, speed);
     }
 
     internal void GenerateSubtraction(QuizButton button)
@@ -140,6 +157,14 @@ public class SubtractionContainer : MonoBehaviour
             answers[i] = 0;
             questions[i] = "";
         }
+    }
+
+    internal void ResetPosition()
+    {
+        foreach (SubtractionDragger item in draggers)
+        {
+            item.ResetDragger(true);
+        }
 
     }
 
@@ -147,14 +172,6 @@ public class SubtractionContainer : MonoBehaviour
     {
         for (int i = 0; i < draggers.Length; i++)
         {
-            /*
-            int index = Random.Range(0, draggers.Length);
-            while (draggers[index].AnswerNeeded == "")
-            {
-                index = Random.Range(0, draggers.Length);
-            }
-
-    */
             int index = i;
             draggers[index].GetComponentInChildren<Text>().text = answers[i].ToString();
             draggers[index].SetDragger(answers[i].ToString(), questions[i]);

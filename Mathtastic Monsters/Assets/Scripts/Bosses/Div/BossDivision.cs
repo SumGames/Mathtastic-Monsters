@@ -57,9 +57,9 @@ public class BossDivision : MonoBehaviour
         {
             runningNumber = 3;
         }
-        else if (a_running.enemyChoices > 5)
+        else if (a_running.enemyChoices > 6)
         {
-            runningNumber = 5;
+            runningNumber = 6;
         }
 
 
