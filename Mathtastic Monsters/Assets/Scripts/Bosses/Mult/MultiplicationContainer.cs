@@ -13,22 +13,25 @@ public class MultiplicationContainer : MonoBehaviour
 
     public int CorrectAnswer;
 
-
-    internal MultiplicationBox buttonOne;
-    internal MultiplicationBox buttonTwo;
+    public MultiplicationBox[] multiplicationBoxes = new MultiplicationBox[2];
 
     BossMonster boss;
 
+    int nextPick = 0;
+
+    public Button submit;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     internal void GenerateMultiplication(QuizButton button, BossMonster a_boss)
     {
@@ -102,11 +105,14 @@ public class MultiplicationContainer : MonoBehaviour
 
     void ClearEverything()
     {
-        if (buttonOne != null)
-            buttonOne.GetComponent<Image>().color = Color.white;
+        submit.interactable = false;
 
-        buttonOne = null;
-        buttonTwo = null;
+        for (int i = 0; i < 2; i++)
+        {
+            if (multiplicationBoxes[i] != null)
+                multiplicationBoxes[i].GetComponent<Image>().color = Color.white;
+            multiplicationBoxes[i] = null;
+        }
 
         for (int i = 0; i < AnswerList.Length; i++)
         {
@@ -131,27 +137,56 @@ public class MultiplicationContainer : MonoBehaviour
 
     internal void AddNewButton(MultiplicationBox box)
     {
-        if (buttonOne == null || box == buttonOne)
-        {            
-            buttonOne = box;
-            buttonOne.GetComponent<Image>().color = Color.yellow;
-            return;
+        for (int i = 0; i < 2; i++)
+        {
+            if (multiplicationBoxes[i] == null)
+            {
+                multiplicationBoxes[i] = box;
+                multiplicationBoxes[i].GetComponent<Image>().color = Color.yellow;
+
+                if (i == 1)
+                    submit.interactable = true;
+
+                return;
+            }
+            if (box == multiplicationBoxes[i])
+            {
+                multiplicationBoxes[i].GetComponent<Image>().color = Color.white;
+                multiplicationBoxes[i] = null;
+                submit.interactable = false;
+                return;
+            }
         }
+        multiplicationBoxes[nextPick].GetComponent<Image>().color = Color.white;
+        multiplicationBoxes[nextPick] = box;
+        multiplicationBoxes[nextPick].GetComponent<Image>().color = Color.yellow;
 
-        buttonTwo = box;
+        submit.interactable = true;
 
-        int answer = buttonOne.boxAnswer * buttonTwo.boxAnswer;
+
+        if (nextPick == 0)
+            nextPick = 1;
+        else
+            nextPick = 0;
+
+    }
+
+    public void SubmitAnswer()
+    {
+        submit.interactable = false;
+
+        if (multiplicationBoxes[1] == null)
+            return;
+
+        int answer = multiplicationBoxes[0].boxAnswer * multiplicationBoxes[1].boxAnswer;
 
         if (CorrectAnswer == answer)
         {
             boss.CreateMultiplication();
-
         }
         else
         {
             boss.EnemyAttack();
-
         }
-
     }
 }

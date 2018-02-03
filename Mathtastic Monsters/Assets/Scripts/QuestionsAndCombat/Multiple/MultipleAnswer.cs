@@ -51,7 +51,7 @@ public class MultipleAnswer : MonoBehaviour
 
         if (container.SelectedAnswer != null)
         {
-            if (container.SelectedAnswer = this)
+            if (container.SelectedAnswer == this)
             {
                 container.submit.interactable = false;
                 container.SelectedAnswer = null;
@@ -64,7 +64,7 @@ public class MultipleAnswer : MonoBehaviour
             }
         }
         container.submit.interactable = true;
-        image.color = Color.white;
+        image.color = Color.yellow;
         container.SelectedAnswer = this;
 
     }

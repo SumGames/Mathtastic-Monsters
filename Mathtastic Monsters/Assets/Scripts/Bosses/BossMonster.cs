@@ -86,6 +86,9 @@ public class BossMonster : Monster
 
         player.DamagePlayer(1);
 
+        sprite.transform.localPosition = startingPosition;
+        sprite.transform.localRotation = startingRotation;
+
 
         CheckDeath();
 
@@ -97,6 +100,7 @@ public class BossMonster : Monster
     //Player attacks monster.
     internal override void MonsterHurt()
     {
+
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
 
@@ -117,6 +121,8 @@ public class BossMonster : Monster
         if (animator)
             animator.Play("Hurt");
 
+        sprite.transform.localPosition = startingPosition;
+        sprite.transform.localRotation = startingRotation;
 
 
         //Addition boss gets harder with each phase.
