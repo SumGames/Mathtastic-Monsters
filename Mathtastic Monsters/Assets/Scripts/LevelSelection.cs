@@ -25,7 +25,7 @@ public class LevelSelection : MonoBehaviour
     float swipeStartPosition;//Where we started moving from. Only need X coord here.
                              // Use this for initialization
 
-    public SelectionImages selectionImages;
+    SelectionImages[] selectionImages;
 
     void Start()
     {
@@ -105,7 +105,10 @@ public class LevelSelection : MonoBehaviour
         SetButtons();
         op.gameObject.SetActive(false);
 
-        selectionImages.SetSprite(currentSubject);
+        selectionImages = GetComponents<SelectionImages>();
+
+        selectionImages[0].SetSprite(currentSubject);
+        selectionImages[1].SetSprite(currentSubject);
 
     }
     //Start playing with the button's level..
@@ -204,7 +207,7 @@ public class LevelSelection : MonoBehaviour
         }
         else
         {
-            hardMode.GetComponentInChildren<Text>().text = "Complete Normal at full health";
+            hardMode.GetComponentInChildren<Text>().text = "Locked";
         }
 
         starThree.interactable = (starsUnlocked >= 3);
