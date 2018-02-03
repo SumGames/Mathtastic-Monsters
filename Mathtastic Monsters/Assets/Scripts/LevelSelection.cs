@@ -23,7 +23,10 @@ public class LevelSelection : MonoBehaviour
     float minSwipeDistance = 50;
     float swipeStartTime; //Used to calculate how long we held on.
     float swipeStartPosition;//Where we started moving from. Only need X coord here.
-    // Use this for initialization
+                             // Use this for initialization
+
+    public SelectionImages selectionImages;
+
     void Start()
     {
 
@@ -101,6 +104,9 @@ public class LevelSelection : MonoBehaviour
         CheckStars(op.buttons[0]);
         SetButtons();
         op.gameObject.SetActive(false);
+
+        selectionImages.SetSprite(currentSubject);
+
     }
     //Start playing with the button's level..
     public void UseNormalButton()
@@ -144,6 +150,8 @@ public class LevelSelection : MonoBehaviour
             currentSubject = classType.Calculi;
         else
             currentSubject = (classType)a_button.Operator;
+        
+
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (starsUnlocked == 0)
             starsUnlocked = 1;

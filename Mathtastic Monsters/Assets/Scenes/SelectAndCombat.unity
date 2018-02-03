@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -15667,6 +15667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977039560}
   - component: {fileID: 977039561}
+  - component: {fileID: 977039562}
   m_Layer: 0
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -15731,6 +15732,37 @@ MonoBehaviour:
   goldstarParticle: {fileID: 1913327842}
   silverstarParticle: {fileID: 821412022}
   bronzestarParticle: {fileID: 465773440}
+  selectionImages: {fileID: 977039562}
+--- !u!114 &977039562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977039559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8304964d298ec44986d1c7eff1c6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
+  AdditionSprite: {fileID: 21300000, guid: a30d4bd235d514c4896b59f66e83a1af, type: 3}
+  SubtractionSprite: {fileID: 21300000, guid: 3dbe06fac4bc1fd4dbf1a3d4f8906ecc, type: 3}
+  MultiplicationSprite: {fileID: 0}
+  DivisionSprite: {fileID: 0}
+  CalculusSprite: {fileID: 0}
+  Buttons:
+  - {fileID: 421138866}
+  - {fileID: 1583593733}
+  - {fileID: 978991034}
+  - {fileID: 915521343}
+  - {fileID: 1828370983}
+  - {fileID: 1632523625}
+  - {fileID: 841958909}
+  - {fileID: 1722686523}
+  - {fileID: 2085774892}
+  - {fileID: 1886835285}
+  - {fileID: 1128181902}
+  - {fileID: 508458930}
 --- !u!1 &978991031
 GameObject:
   m_ObjectHideFlags: 0
