@@ -33,7 +33,6 @@ public class SelectionImages : MonoBehaviour
 
     internal void SetSprite(classType subject)
     {
-        Debug.Log("Crap");
 
         Sprite newSprite = null;
 

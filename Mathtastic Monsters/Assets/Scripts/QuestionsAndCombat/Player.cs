@@ -328,6 +328,12 @@ public class Player : MonoBehaviour
     //Calculate exp modifier based on health remaining and if the quiz has been completed before.
     internal int CalculateExperience()
     {
+        if (bossFighting)
+            parent.boss.animator.Play("Death");
+        else
+            enemy.animator.Play("Death");
+
+
         float exp = parent.quizRunning.difficulty;
 
         if (currentHealth == maxHealth)

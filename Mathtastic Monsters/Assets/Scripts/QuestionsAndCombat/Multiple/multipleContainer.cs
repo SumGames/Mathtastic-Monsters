@@ -39,6 +39,7 @@ public class multipleContainer : MonoBehaviour
     MonsterManager MonsterManager;
     public Button submit;
 
+    public GameObject Defend;
 
 
     // Use this for initialization
@@ -156,7 +157,8 @@ public class multipleContainer : MonoBehaviour
         if (a_running.enemyChoices > 6)
             a_running.enemyChoices = 6;
 
-
+        if (Defend)
+            Defend.gameObject.SetActive(true);
 
         answers[index].gameObject.SetActive(true);
         answers[index].setAnswer(enemyAnswerNeeded);
@@ -228,6 +230,9 @@ public class multipleContainer : MonoBehaviour
 
     void DisableMultipleChoiceButtons()
     {
+        if (Defend)
+            Defend.gameObject.SetActive(false);
+
         foreach (MultipleAnswer item in answers)
         {
             item.gameObject.SetActive(false);

@@ -67,7 +67,7 @@ public class Monster : MonoBehaviour
 
         bar.changeHealth(false, health);
 
-        if (animator)
+        if (animator && health > 0)
             animator.Play("Hurt");
 
         CheckDeath();
@@ -110,8 +110,9 @@ public class Monster : MonoBehaviour
 
         if (health <= 0)
         {
-            if (animator)
-                animator.Play("Death");
+            Debug.Log("Death");
+            animator.Play("Death");
+
 
             manager.changeState(playStatus.Won);
             return;

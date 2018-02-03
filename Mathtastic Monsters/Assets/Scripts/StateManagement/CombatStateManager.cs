@@ -147,6 +147,8 @@ public class CombatStateManager : ParentsStateManager
                 container.gameObject.SetActive(true);
                 break;
             case playStatus.Lost:
+                enemyContainer.gameObject.SetActive(false);
+
                 combatContainer.SetActive(true);
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 resetContainer.SetActive(true);
