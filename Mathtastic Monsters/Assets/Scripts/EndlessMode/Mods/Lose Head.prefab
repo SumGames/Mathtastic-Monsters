@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114897871529468336}
   - component: {fileID: 114276328651701202}
   m_Layer: 5
-  m_Name: Button 3
+  m_Name: Lose Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,11 +58,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7068569a2dad5804e892fff70ebb1efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifierChange: 1
-  modOne: 6
+  modifierChange: 5
+  modOne: 9
   modOneIntensity: 1
   modTwo: 0
-  modTwoIntensity: 1
+  modTwoIntensity: 0
   locked: 0
 --- !u!114 &114636663618638304
 MonoBehaviour:

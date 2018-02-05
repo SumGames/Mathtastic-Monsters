@@ -29,7 +29,7 @@ public class endlessMonsterManager : MonsterManager
     public GameObject[] spots; //Places for buttons.
     EndlessModifierButton[] buttons; //Buttons that have appeared.
 
-    bool[] removedLimbs; //Parts we can't use anymore.
+    public bool[] removedLimbs; //Parts we can't use anymore.
 
     equipmentList list;
 
@@ -197,7 +197,9 @@ public class endlessMonsterManager : MonsterManager
 
     internal void PlayerLost() //Player lost. Now we tell them how they did, and if they got any high scores.
     {
-        Score += (Modifier * FindObjectOfType<playerAbilities>().ReturnExpBoost());
+        playerAbilities abilities = player.GetComponent<playerAbilities>();
+
+        Score += (Modifier * abilities.ReturnExpBoost());
 
 
         Welcome.text = "Your run of " + quizRunning.Operator + " Arena is over...";
@@ -238,10 +240,9 @@ public class endlessMonsterManager : MonsterManager
         {
             if (removedLimbs[i])
             {
-                list.ChangeEquip(null, (partType)3, -1);
+                list.ChangeEquip(null, (partType)i, -1);
             }
         }
-
     }
     //Changes the text as we change states.
     public void DisplayScore()
@@ -270,9 +271,9 @@ public class endlessMonsterManager : MonsterManager
                 currentScoreText.text += "\nMultiplier: " + Modifier;
                 break;
             case playStatus.ArenaLost:
-                currentScoreText.text = "This Run of.... " + running.Operator;
+                currentScoreText.text = "You scored: " + running.Operator;
                 currentScoreText.text += "\nLevel : " + levels.ToString() + ". Score: " + Score.ToString();
-                currentScoreText.text += "\bMultiplier: " + Modifier;
+                currentScoreText.text += "\nMultiplier: " + Modifier;
                 break;
 
             case playStatus.ArenaLeaderBoard:
@@ -286,15 +287,15 @@ public class endlessMonsterManager : MonsterManager
     }
 
     //For non-standard mmodifiers, they're passed to this class and funcion.
-    internal void OtherModifiers(modifierType mod, float intensity)
+    internal void OtherModifiers(modifierType mod, int intensity)
     {
         switch (mod)
         {
             case modifierType.LessBreaks:
-                fightsBetweenBreaks += (int)intensity;
+                fightsBetweenBreaks += intensity;
                 break;
             case modifierType.RemoveLimb:
-                removedLimbs[(int)intensity] = true;
+                removedLimbs[intensity] = true;
                 break;
             default:
                 break;

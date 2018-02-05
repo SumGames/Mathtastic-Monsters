@@ -6,16 +6,15 @@ using UnityEngine.UI;
 public enum modifierType
 {
     none,
-    monsterHealth,
-    monsterAttack,
-    YourAttackTime,
-    MonsterAttackTime,
+    monsterHealth, //in
+    monsterAttack, //in 
+    YourAttackTime, //in
+    MonsterAttackTime, //in
     boostAnswer,
-    numberofCounterAnswers,
-    difficultyJump,
-
+    numberofCounterAnswers, //in
+    difficultyJump, //in
     LessBreaks,
-    RemoveLimb
+    RemoveLimb //ininin
 }
 
 
@@ -29,11 +28,11 @@ public class EndlessModifierButton : MonoBehaviour
 
     //The type of stat we;re changing, and the amount.
     public modifierType modOne;
-    public float modOneIntensity;
+    public int modOneIntensity;
 
     //Some buttons might change two.
     public modifierType modTwo;
-    public float modTwoIntensity;
+    public int modTwoIntensity;
 
     public bool locked = false;
 
@@ -60,16 +59,27 @@ public class EndlessModifierButton : MonoBehaviour
     string DisplayText()
     {
         string nameplate = "Mod += " + modifierChange.ToString();
-        nameplate += "\n" + modOne.ToString() + " " + modOneIntensity.ToString();
-
-        if (modTwo != modifierType.none)
-        {
-            nameplate += "\n" + modTwo.ToString() + " " + modTwoIntensity.ToString();
-
-        }
-
+        nameplate += NamePlate();
         return nameplate;
     }
+
+    string NamePlate()
+    {
+        string returning = "";
+
+        if (modOne != modifierType.RemoveLimb)
+        {
+            returning += "\n" + modOne.ToString() + " " + modOneIntensity.ToString();
+        }
+        else
+            returning += "\n" + gameObject.name;
+        if (modTwo != modifierType.none)
+        {
+            returning += "\n" + modTwo.ToString() + " " + modTwoIntensity.ToString();
+        }
+        return returning;
+    }
+
 
     //We clicked on this button.
     public void buttonUsed()

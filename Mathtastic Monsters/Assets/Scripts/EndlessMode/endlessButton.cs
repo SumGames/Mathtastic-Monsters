@@ -15,14 +15,14 @@
     {
         MonsterHealth = 6;
         MonsterAttack = 1;
-        levelTime = 5;
-        enemPhaseTime = 10;
+        levelTime = 25;
+        enemPhaseTime = 15;
 
         minNumber = 1;
         maxNumber = 6;
 
         minAnswer = 1;
-        maxAnswer = 5;
+        maxAnswer = 10;
 
         preventRounding = false;
 
@@ -30,7 +30,7 @@
         secondFixedNumber[1] = 2;
 
         enemyChoices = 3;
-        enemyAnswerRange = 2;
+        enemyAnswerRange = 4;
     }
 
     //Enemy is going to get stronger now.
@@ -49,34 +49,35 @@
 
     //Called in from a button we clicked on.
     //Will take one stat, and affect it, but give us more points in future.
-    public void parseModifier(modifierType type, float intensity)
+    public void parseModifier(modifierType type, int intensity)
     {
         switch (type)
         {
             case modifierType.none:
                 return;
             case modifierType.monsterHealth:
-                MonsterHealth += (int)intensity;
+                MonsterHealth += intensity;
                 break;
             case modifierType.monsterAttack:
-                MonsterAttack += (int)intensity;
+                MonsterAttack += intensity;
                 break;
             case modifierType.YourAttackTime:
                 levelTime += intensity;
                 break;
             case modifierType.MonsterAttackTime:
-                enemPhaseTime += (int)intensity;
+                enemPhaseTime += intensity;
                 break;
             case modifierType.numberofCounterAnswers:
                 enemyChoices++;
+                enemyAnswerRange++;
                 break;
             case modifierType.difficultyJump:
                 maxNumber += 5 * intensity;
-                minAnswer += 4 * (int)intensity;
-                maxAnswer += 9 * (int)intensity;
+                minAnswer += 4 * intensity;
+                maxAnswer += 9 * intensity;
                 break;
 
-            case modifierType.RemoveLimb:
+            case modifierType.RemoveLimb:                
                 endlessMonster.OtherModifiers(type, intensity);
                 break;
             case modifierType.LessBreaks:

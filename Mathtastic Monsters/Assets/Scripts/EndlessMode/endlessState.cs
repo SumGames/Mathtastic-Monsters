@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class endlessState : ParentsStateManager
 {
@@ -25,6 +26,9 @@ public class endlessState : ParentsStateManager
     public Player player;
     public EndlessMonster enemy;
 
+    public Button[] buttons;
+    public Button additionTwo;
+
     // Use this for initialization
     void Start()
     {
@@ -33,6 +37,8 @@ public class endlessState : ParentsStateManager
         changeState(playStatus.ArenaHome);
 
         backgrounds.startBack(playStatus.subjectSelect);
+
+        CheckAvailable();
     }
 
     //Change the game's state, closing/opening containers and changing text.
@@ -103,5 +109,25 @@ public class endlessState : ParentsStateManager
         {
             changeState(playStatus.ArenaHome);
         }
+    }
+
+
+    void CheckAvailable()
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            bool activate = list.equip.completedLevels[i] >= 5;
+            buttons[i].interactable = activate;
+        }
+        additionTwo.interactable = buttons[0].interactable;
+    }
+
+    public void Unlock()
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = true;
+        }
+        additionTwo.interactable = true;
     }
 }

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114897871529468336}
   - component: {fileID: 114276328651701202}
   m_Layer: 5
-  m_Name: Button 2
+  m_Name: Lose Left Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modifierChange: 5
-  modOne: 3
-  modOneIntensity: -5
+  modOne: 9
+  modOneIntensity: 4
   modTwo: 0
-  modTwoIntensity: 1
+  modTwoIntensity: 0
   locked: 0
 --- !u!114 &114636663618638304
 MonoBehaviour:

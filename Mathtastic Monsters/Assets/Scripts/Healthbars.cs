@@ -90,8 +90,11 @@ public class Healthbars : MonoBehaviour
             multiActive = false;
 
             enemyBar.maxValue = enemyHealth = enemyFill = Max;
-            SecondBar.gameObject.SetActive(false);
-            ThirdBar.gameObject.SetActive(false);
+            if (SecondBar)
+            {
+                SecondBar.gameObject.SetActive(false);
+                ThirdBar.gameObject.SetActive(false);
+            }
         }
 
     }

@@ -10,7 +10,7 @@ public class EndlessMonster : Monster
     {
         bar.changeHealth(false, health);
 
-        if (health < 0)
+        if (health <= 0)
         {
             manager.changeState(playStatus.ArenaContinue);
             return;
