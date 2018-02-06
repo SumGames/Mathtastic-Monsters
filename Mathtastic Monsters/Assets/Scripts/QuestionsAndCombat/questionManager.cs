@@ -109,7 +109,7 @@ public class questionManager : MonoBehaviour
                 multiple = numbers[1];
 
                 answer = numbers[0] / numbers[1];
-                oper = "/ ";
+                oper = "÷ ";
                 break;
             default:
                 return CalculateBODMAS(numbers, a_running, resetTime);

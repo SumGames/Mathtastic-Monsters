@@ -1102,29 +1102,29 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 0
   minNumber: 0
   maxNumber: 0
-  Operator: 1
+  Operator: 0
   minAnswer: 1
-  maxAnswer: 5
+  maxAnswer: 100000
   difficulty: 0
   MonsterHealth: 6
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  monsterArt: {fileID: 0}
+  enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelString: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelString: ' Entering level X!'
-  nextime: 0
+  nextime: 10
   enemyString: Now Fight!!
-  enemyTime: 0
-  endlessMonster: {fileID: 289822714}
+  enemyTime: 2
+  endlessMonster: {fileID: 0}
 --- !u!114 &246885396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,8 +1179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizRunning: {fileID: 0}
-  stateManager: {fileID: 0}
-  player: {fileID: 0}
+  stateManager: {fileID: 382568555}
+  player: {fileID: 574737962}
   monster: {fileID: 0}
   boss: {fileID: 0}
   fightingBoss: 0
@@ -1192,29 +1192,12 @@ MonoBehaviour:
   Welcome: {fileID: 1984627480}
   running: {fileID: 0}
   currentScoreText: {fileID: 419259801}
-  modifierButtons:
-  - {fileID: 114276328651701202, guid: a6688c327fc24684eb0584413fa3677c, type: 2}
-  - {fileID: 114276328651701202, guid: b593aacee25021e41a66b1874fc32d61, type: 2}
-  - {fileID: 114276328651701202, guid: 64ab254885f281f4e861b149d10650fe, type: 2}
-  - {fileID: 114276328651701202, guid: 933689d5d086b3e4e98106e3e4f0fc43, type: 2}
-  - {fileID: 114276328651701202, guid: 19594c9f8d697a346b3d19ab35a56fdf, type: 2}
-  - {fileID: 114276328651701202, guid: c639646d2a464d14b83522cb9c27a064, type: 2}
-  - {fileID: 114276328651701202, guid: 507aeb5f1f00226449c99b153f7cf533, type: 2}
-  - {fileID: 114276328651701202, guid: 6bc7be347e4d64545a1c28d047107fc1, type: 2}
-  - {fileID: 114276328651701202, guid: e355519bbf4c81146ad41bc4837f6d8c, type: 2}
-  - {fileID: 114276328651701202, guid: 3722e06fada935c459b4ede40b796253, type: 2}
-  - {fileID: 114276328651701202, guid: 060b1b383d8348d4fa56fe719dbc7b85, type: 2}
-  - {fileID: 114276328651701202, guid: a3dc63357b92ff74fa9174f28e87f56b, type: 2}
-  - {fileID: 114276328651701202, guid: 1c27537faa2188d42827c4d08edf0ffa, type: 2}
-  - {fileID: 114276328651701202, guid: 74d6d386c1a5be747baf611d0a98a199, type: 2}
-  spots:
-  - {fileID: 36097941}
-  - {fileID: 1542141186}
-  - {fileID: 831530365}
+  modifierButtons: []
+  spots: []
   removedLimbs: 
-  highScores: {fileID: 0}
-  highestLevel: {fileID: 1616356494}
-  highestScore: {fileID: 2093228172}
+  highScores: {fileID: 289822715}
+  highestLevel: {fileID: 0}
+  highestScore: {fileID: 0}
   lostText: {fileID: 836345610}
   m_playerAbilities: {fileID: 574737963}
 --- !u!114 &289822715
@@ -2378,10 +2361,10 @@ MonoBehaviour:
   health: 0
   enemyPhase: 0
   parent: {fileID: 0}
-  bar: {fileID: 751589144}
-  monsterSpot: {fileID: 468417858}
+  bar: {fileID: 0}
+  monsterSpot: {fileID: 0}
   questions: {fileID: 0}
-  multiple: {fileID: 847845818}
+  multiple: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   startingRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &487627861
@@ -2824,15 +2807,15 @@ MonoBehaviour:
   currentHealth: 0
   baseAttack: 1
   resetTime: 0
-  Healthbar: {fileID: 751589144}
-  timeLeft: {fileID: 331346454}
-  bar: {fileID: 1157291065}
-  container: {fileID: 568349161}
-  manager: {fileID: 382568555}
+  Healthbar: {fileID: 0}
+  timeLeft: {fileID: 0}
+  bar: {fileID: 0}
+  container: {fileID: 0}
+  manager: {fileID: 0}
   sounds: []
-  getShards: {fileID: 574737964}
-  victoryMusic: {fileID: 574737964}
-  calculator: {fileID: 2085180828}
+  getShards: {fileID: 0}
+  victoryMusic: {fileID: 0}
+  calculator: {fileID: 0}
   levelSelection: {fileID: 0}
   transition: {fileID: 0}
   SliderFill: {fileID: 0}
@@ -2847,11 +2830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70400c14a3448884eb754ae600a1f022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityButtons:
-  - {fileID: 1156040842}
-  - {fileID: 1293133568}
-  - {fileID: 900849002}
-  - {fileID: 656933866}
+  abilityButtons: []
   enemy: {fileID: 0}
   Crits: 0
   Counters: 0
@@ -3101,29 +3080,29 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 20
+  levelTime: 0
   minNumber: 0
   maxNumber: 0
   Operator: 0
   minAnswer: 1
-  maxAnswer: 5
+  maxAnswer: 100000
   difficulty: 0
   MonsterHealth: 6
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  monsterArt: {fileID: 0}
+  enemPhaseTime: 8
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
   previousLevelString: You won!
-  previousTime: 0
+  previousTime: 6
   nextLevelString: ' Entering level X!'
-  nextime: 0
+  nextime: 10
   enemyString: Now Fight!!
-  enemyTime: 0
-  endlessMonster: {fileID: 289822714}
+  enemyTime: 2
+  endlessMonster: {fileID: 0}
 --- !u!1 &626037664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3512,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.800003, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3960,7 +3939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &751589143
 Transform:
   m_ObjectHideFlags: 0
@@ -3993,8 +3972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88edd9dfff2c2cf488c864b08707f8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBar: {fileID: 1647282257}
-  enemyBar: {fileID: 1172944113}
+  playerBar: {fileID: 0}
+  enemyBar: {fileID: 0}
   SecondBar: {fileID: 0}
   ThirdBar: {fileID: 0}
 --- !u!1 &770468973
@@ -4345,22 +4324,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnswerNeeded: 0
-  calculator: {fileID: 230282086}
-  answers:
-  - {fileID: 1530457938}
-  - {fileID: 246885396}
-  - {fileID: 958303210}
-  - {fileID: 1034353467}
-  - {fileID: 1528398044}
-  - {fileID: 1612767998}
-  player: {fileID: 574737962}
+  calculator: {fileID: 0}
+  answers: []
+  player: {fileID: 0}
   answersList: 
   attacksPherPhase: 1
   attacks: 1
-  transitionManager: {fileID: 899075972}
+  transitionManager: {fileID: 0}
   SelectedAnswer: {fileID: 0}
-  submit: {fileID: 25178954}
-  Defend: {fileID: 25178952}
+  submit: {fileID: 0}
+  Defend: {fileID: 0}
 --- !u!1 &850981980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4513,7 +4486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a83391d81b5f44ebc57ea4b9b7cf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSpeed: 2
+  transitionSpeed: 1
   transitionMin: 0.1
   Calculator: {fileID: 230282086}
   MultipleChoice: {fileID: 850981980}
@@ -4794,7 +4767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 19
+  stateTarget: 0
   optionsPrefab: {fileID: 0}
 --- !u!114 &939285230
 MonoBehaviour:
@@ -5128,7 +5101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 24
+  stateTarget: 0
   optionsPrefab: {fileID: 0}
 --- !u!114 &1016705496
 MonoBehaviour:
@@ -5914,7 +5887,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.799988, y: 0}
   m_SizeDelta: {x: 19.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6513,8 +6486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9374008721e40854086652d61ba84ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestBox: {fileID: 44221137}
-  buttonText: {fileID: 1382472950}
+  bestBox: {fileID: 0}
+  buttonText: {fileID: 0}
 --- !u!1 &1277600898
 GameObject:
   m_ObjectHideFlags: 0
@@ -6985,7 +6958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 23
+  stateTarget: 0
   optionsPrefab: {fileID: 0}
 --- !u!1 &1353460523
 GameObject:
@@ -7386,10 +7359,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a98509575d5f10408af2005056b43f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calculator: {fileID: 2085180828}
-  container: {fileID: 847845818}
+  calculator: {fileID: 0}
+  container: {fileID: 0}
   button: {fileID: 0}
-  transition: {fileID: 899075972}
+  transition: {fileID: 0}
 --- !u!114 &1446319021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8224,12 +8197,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616356492}
---- !u!114 &1647282257 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114967280033010224, guid: 97ba1c13580bad545949dded6fd6b525,
-    type: 2}
-  m_PrefabInternal: {fileID: 83000095}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!224 &1647282258 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224018531019107708, guid: 97ba1c13580bad545949dded6fd6b525,
@@ -8483,8 +8450,8 @@ RectTransform:
   m_Father: {fileID: 996563628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9051,7 +9018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 20
+  stateTarget: 0
   optionsPrefab: {fileID: 0}
 --- !u!114 &1868628097
 MonoBehaviour:
@@ -9512,7 +9479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466049ad94b068d4190de1ef6320cb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTarget: 19
+  stateTarget: 0
   optionsPrefab: {fileID: 0}
 --- !u!114 &1941482417
 MonoBehaviour:
@@ -10366,13 +10333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5a01dd096c258439718aa3687f9f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 770468975}
-  manager: {fileID: 382568555}
-  ok: {fileID: 573083426}
-  cancel: {fileID: 329710927}
+  input: {fileID: 0}
+  manager: {fileID: 0}
+  ok: {fileID: 0}
+  cancel: {fileID: 0}
   sounds: []
-  attack: {fileID: 2085180832}
-  hurt: {fileID: 2085180831}
+  attack: {fileID: 0}
+  hurt: {fileID: 0}
   monsterManager: {fileID: 0}
 --- !u!114 &2085180829
 MonoBehaviour:

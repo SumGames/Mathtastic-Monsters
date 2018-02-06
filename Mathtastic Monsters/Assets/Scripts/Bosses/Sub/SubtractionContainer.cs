@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class SubtractionContainer : MonoBehaviour
 {
-    int[] answers = new int[4];
-    string[] questions = new string[4];
+    int[] answers = new int[3];
+    string[] questions = new string[3];
 
     public SubtractionDragger[] draggers;
 
-    public GameObject start;
+    public RectTransform start;
 
     public RectTransform end;
 
@@ -26,35 +26,33 @@ public class SubtractionContainer : MonoBehaviour
     int TorpedoesFired;
 
 
-    bool readyToFire;
-
     public StoryManager storyManager;
 
     public CombatStateManager stateManager;
 
+    public Text questionText;
+
+
+    int choices = 2;
+
     void Update()
     {
-        if (readyToFire && storyManager.phase == phases.None && FiredTorpedo == null)
+        if (storyManager.phase == phases.None && FiredTorpedo == null)
         {
             LaunchTorpedo();
-            readyToFire = false;
         }
     }
 
 
     internal void LaunchTorpedo()
     {
+        questionText.text = "";
+
         if (stateManager.gameState != playStatus.playing)
             return;
 
         ResetPosition();
 
-
-        if (TorpedoesFired >= 3)
-        {
-            boss.CreateSubtraction(false);
-            return;
-        }
 
 
         GameObject Torpedo = Instantiate(TorpedoPrefab, this.transform, false);
@@ -65,24 +63,9 @@ public class SubtractionContainer : MonoBehaviour
 
         TorpedoesFired++;
 
-        switch (TorpedoesFired)
-        {
-            case 1:
-                speed = 0.5f;
-                break;
-            case 2:
-                speed = 0.75f;
-                break;
-            case 3:
-                speed = 1;
-                break;
-            default:
-                speed = 2;
-                break;
-        }
+        speed = (TorpedoesFired * 0.2f);
 
-
-        FiredTorpedo.CreateTorpedo(end, boss, answers[TorpedoesFired].ToString(), this, speed);
+        FiredTorpedo.CreateTorpedo(start, end, boss, answers[TorpedoesFired].ToString(), this, speed);
     }
 
     internal void GenerateSubtraction(QuizButton button)
@@ -92,12 +75,10 @@ public class SubtractionContainer : MonoBehaviour
         MakeQuestion(button, 0);
         MakeQuestion(button, 1);
         MakeQuestion(button, 2);
-        MakeQuestion(button, 3);
 
         SetDraggerButtons();
 
         TorpedoesFired = 0;
-        readyToFire = true;
     }
 
 
@@ -105,6 +86,18 @@ public class SubtractionContainer : MonoBehaviour
     //Uses given values to calculate a random sum and its components, then store and display them.
     bool MakeQuestion(QuizButton a_running, int index)
     {
+        if (a_running.enemyChoices < 2)
+        {
+            choices = 2;
+        }
+        else if (a_running.enemyChoices > 3)
+        {
+            choices = 3;
+        }
+        else
+        {
+            choices = a_running.enemyChoices;
+        }
         int[] numberRandom = new int[2];
 
         for (int i = 0; i < 2; i++)
@@ -170,9 +163,14 @@ public class SubtractionContainer : MonoBehaviour
 
     void SetDraggerButtons()
     {
-        for (int i = 0; i < draggers.Length; i++)
+        for (int i = 0; i < draggers.Length && i < choices; i++)
         {
-            int index = i;
+            int index = Random.Range(0, choices);
+            while (draggers[index].AnswerNeeded != "")
+            {
+                index = Random.Range(0, choices);
+            }
+
             draggers[index].GetComponentInChildren<Text>().text = answers[i].ToString();
             draggers[index].SetDragger(answers[i].ToString(), questions[i]);
 

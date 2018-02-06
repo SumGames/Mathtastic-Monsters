@@ -11,7 +11,10 @@ public class Torpedo : MonoBehaviour
 
     RectTransform rect;
 
+    RectTransform start;
+
     RectTransform end;
+
 
     SubtractionContainer container;
 
@@ -19,15 +22,19 @@ public class Torpedo : MonoBehaviour
 
     float velocity;
 
-	// Use this for initialization
-	void Start ()
+    bool bounce;
+
+    // Use this for initialization
+    void Start()
     {
         stateManager = FindObjectOfType<CombatStateManager>();
 
-	}
+    }
 
-    internal void CreateTorpedo(RectTransform a_end, BossMonster a_boss, string a_answer,SubtractionContainer subtractionContainer, float a_velocity)
+    internal void CreateTorpedo(RectTransform a_start, RectTransform a_end, BossMonster a_boss, string a_answer, SubtractionContainer subtractionContainer, float a_velocity)
     {
+        start = a_start;
+
         container = subtractionContainer;
 
         Answer = a_answer;
@@ -41,39 +48,52 @@ public class Torpedo : MonoBehaviour
         velocity = a_velocity;
     }
 
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         if (stateManager && stateManager.gameState != playStatus.playing)
         {
             Destroy(gameObject);
         }
-
-
         if (end && rect)
         {
-            rect.localPosition = Vector2.MoveTowards(rect.localPosition, end.localPosition, (Time.deltaTime * velocity));
 
-            if (rect.localPosition.y > 2.7)
+            if (!bounce)
             {
-                playerHit();
-                return;
+                rect.localPosition = Vector2.MoveTowards(rect.localPosition, end.localPosition, (Time.deltaTime * velocity));
+
+
+                if (Vector3.Distance(transform.localPosition, end.localPosition) < 1)
+                {
+                    playerHit();
+                    return;
+                }
+            }
+            else
+            {
+
+                rect.localPosition = Vector2.MoveTowards(rect.localPosition, start.localPosition, (Time.deltaTime * 2));
+
+                if (Vector3.Distance(transform.localPosition, start.localPosition) < 1)
+                {
+                    boss.MonsterHurt();
+                    Destroy(gameObject);
+                    return;
+                }
             }
         }
-        
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Answer")
+        if (other.tag == "Answer" && !bounce)
         {
             if (other.GetComponent<SubtractionDragger>().AnswerNeeded == Answer)
             {
                 other.gameObject.SetActive(false);
-                Destroy(gameObject);
 
-                container.LaunchTorpedo();
+                bounce = true;
             }
             else
             {
@@ -86,10 +106,8 @@ public class Torpedo : MonoBehaviour
 
     void playerHit()
     {
-        container.LaunchTorpedo();
         boss.EnemyAttack();
         Destroy(gameObject);
         return;
     }
-
 }

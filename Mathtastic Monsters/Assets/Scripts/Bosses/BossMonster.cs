@@ -267,13 +267,7 @@ public class BossMonster : Monster
             subtractionContainer.gameObject.SetActive(true);
             subtractionContainer.GenerateSubtraction(m_button);
         }
-        else
-        {
-            questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
-            subtractionContainer.gameObject.SetActive(false);
-        }
-
-        player.SetTime(true, m_button.enemPhaseTime, EnemyAttackingPhase);
+        player.SetTime(true, m_button.enemPhaseTime, true);
 
     }
 
