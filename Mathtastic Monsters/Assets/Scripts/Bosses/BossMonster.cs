@@ -212,6 +212,11 @@ public class BossMonster : Monster
         if (music)
             music.SetCombatMusic(parent.quizRunning.Operator, parent.quizRunning.boss);
 
+        if (Operator == operators.Subtraction)
+        {
+            subtractionContainer.SetUpSubtraction(health);
+        }
+
 
         CreateQuestion();
 
@@ -265,7 +270,7 @@ public class BossMonster : Monster
         {
             multipleContainer.DisableThisAndCalculator();
             subtractionContainer.gameObject.SetActive(true);
-            subtractionContainer.GenerateSubtraction(m_button);
+            subtractionContainer.GenerateSubtraction(m_button, health);
         }
         player.SetTime(true, m_button.enemPhaseTime, true);
 

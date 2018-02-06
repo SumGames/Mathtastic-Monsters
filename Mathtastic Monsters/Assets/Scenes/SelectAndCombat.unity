@@ -1996,7 +1996,7 @@ MonoBehaviour:
   minAnswer: 1
   maxAnswer: 18
   difficulty: 18
-  MonsterHealth: 10
+  MonsterHealth: 15
   MonsterAttack: 0
   preventRounding: 0
   secondFixedNumber: 
@@ -3484,7 +3484,7 @@ MonoBehaviour:
   minAnswer: 1
   maxAnswer: 98
   difficulty: 28
-  MonsterHealth: 10
+  MonsterHealth: 20
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
@@ -28080,7 +28080,7 @@ MonoBehaviour:
   - {fileID: 1704393345}
   - {fileID: 991637861}
   - {fileID: 46592436}
-  - {fileID: 0}
+  - {fileID: 403351037}
   completedQuestions: 0
   type: 4
   levelSelection: {fileID: 977039561}
@@ -30742,7 +30742,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837312847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00077819824}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.015859997, y: 0.015859997, z: 0.015859997}
   m_Children:
   - {fileID: 1706363217}
@@ -30751,7 +30751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.6399994, y: -0.3}
+  m_AnchoredPosition: {x: -7.5, y: 5.63}
   m_SizeDelta: {x: 192.4, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837312849
@@ -31329,7 +31329,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1858260077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0007783522}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.015861578, y: 0.015861578, z: 0.015861578}
   m_Children:
   - {fileID: 407091359}
@@ -31338,7 +31338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.7199993, y: -1.81}
+  m_AnchoredPosition: {x: -5.58, y: 4.58}
   m_SizeDelta: {x: 192.4, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858260079
@@ -33111,7 +33111,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963668175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00077491}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.015861578, y: 0.015861578, z: 0.015861578}
   m_Children:
   - {fileID: 1350240371}
@@ -33120,7 +33120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.2199993, y: -0.29999912}
+  m_AnchoredPosition: {x: -4.08, y: 5.63}
   m_SizeDelta: {x: 192.4, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963668177

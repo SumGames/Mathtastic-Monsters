@@ -23,7 +23,6 @@ public class SubtractionContainer : MonoBehaviour
 
     public GameObject TorpedoPrefab;
     public Torpedo FiredTorpedo;
-    int TorpedoesFired;
 
 
     public StoryManager storyManager;
@@ -31,6 +30,9 @@ public class SubtractionContainer : MonoBehaviour
     public CombatStateManager stateManager;
 
     public Text questionText;
+
+    float bossMaxHealth;
+    float bossHealth;
 
 
     int choices = 2;
@@ -55,21 +57,20 @@ public class SubtractionContainer : MonoBehaviour
 
 
 
-        GameObject Torpedo = Instantiate(TorpedoPrefab, this.transform, false);
+        GameObject Torpedo = Instantiate(TorpedoPrefab, start.transform.position, start.transform.rotation, this.transform);
         FiredTorpedo = Torpedo.GetComponent<Torpedo>();
 
-        float speed = 1;
+        float speed = .04f;
 
+        speed = ((bossMaxHealth - bossHealth) * speed) + speed;
 
-        TorpedoesFired++;
-
-        speed = (TorpedoesFired * 0.2f);
-
-        FiredTorpedo.CreateTorpedo(start, end, boss, answers[TorpedoesFired].ToString(), this, speed);
+        FiredTorpedo.CreateTorpedo(start, end, boss, answers[0].ToString(), this, speed);
     }
 
-    internal void GenerateSubtraction(QuizButton button)
+    internal void GenerateSubtraction(QuizButton button, float Health)
     {
+        bossHealth = Health;
+
         ClearEverything();
 
         MakeQuestion(button, 0);
@@ -78,10 +79,19 @@ public class SubtractionContainer : MonoBehaviour
 
         SetDraggerButtons();
 
-        TorpedoesFired = 0;
     }
 
 
+    internal void SetUpSubtraction(float health)
+    {
+        if(FiredTorpedo)
+        {
+            Destroy(FiredTorpedo);
+        }
+
+        bossMaxHealth = health;
+
+    }
 
     //Uses given values to calculate a random sum and its components, then store and display them.
     bool MakeQuestion(QuizButton a_running, int index)
