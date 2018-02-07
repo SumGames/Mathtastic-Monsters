@@ -53,6 +53,7 @@ public class MultipleAnswer : MonoBehaviour
         {
             if (container.SelectedAnswer == this)
             {
+                container.SelectedAnswer.image.color = Color.white;
                 container.submit.interactable = false;
                 container.SelectedAnswer = null;
                 return;

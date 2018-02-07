@@ -61,10 +61,11 @@ public class Torpedo : MonoBehaviour
 
             if (!bounce)
             {
-                rect.localPosition = Vector2.MoveTowards(rect.localPosition, end.localPosition, (Time.deltaTime * velocity));
+
+                rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, end.anchoredPosition, (Time.deltaTime * velocity));
 
 
-                if (Vector3.Distance(transform.localPosition, end.localPosition) < 1)
+                if (Vector3.Distance(rect.anchoredPosition, end.anchoredPosition) < 0.5f)
                 {
                     playerHit();
                     return;
@@ -73,9 +74,9 @@ public class Torpedo : MonoBehaviour
             else
             {
 
-                rect.localPosition = Vector2.MoveTowards(rect.localPosition, start.localPosition, (Time.deltaTime * 2));
+                rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, start.anchoredPosition, (Time.deltaTime * velocity));
 
-                if (Vector3.Distance(transform.localPosition, start.localPosition) < 1)
+                if (Vector3.Distance(rect.anchoredPosition, start.anchoredPosition) < 0.5f)
                 {
                     boss.MonsterHurt();
                     Destroy(gameObject);
