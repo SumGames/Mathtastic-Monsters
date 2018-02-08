@@ -12,7 +12,6 @@ public class LevelSelection : MonoBehaviour
     public int currentLevel;
     int starsUnlocked; //How many stars we have for this level.
     public Button starOne, starTwo, starThree; //Stars light up if we have their star.
-    public Button Medallion;
     public Button NormalMode; //Clicked on to start normal mode.
     public Button hardMode; //If we have two stars, click on to start the normal mode's "hard mode" button.
     public Button[] jumpButtons; //An array of buttons we can jump between.
@@ -26,6 +25,10 @@ public class LevelSelection : MonoBehaviour
                              // Use this for initialization
 
     SelectionImages[] selectionImages;
+
+    public TalismanManager talismanManager;
+
+    public Talisman medal;
 
     void Start()
     {
@@ -183,7 +186,8 @@ public class LevelSelection : MonoBehaviour
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (currentLevel == 4 || currentLevel == 9)
         {
-            Medallion.gameObject.SetActive(true);
+            medal.SetChangingTalisman(list, talismanManager, currentSubject);
+
             hardMode.gameObject.SetActive(false);
             starOne.gameObject.SetActive(false);
             starTwo.gameObject.SetActive(false);
@@ -191,10 +195,9 @@ public class LevelSelection : MonoBehaviour
             bronzestarParticle.gameObject.SetActive(false);
             silverstarParticle.gameObject.SetActive(false);
             goldstarParticle.gameObject.SetActive(false);
-            Medallion.interactable = (starsUnlocked >= 1);
             return;
         }
-        Medallion.gameObject.SetActive(false);
+        medal.gameObject.SetActive(false);
         hardMode.gameObject.SetActive(true);
         starOne.gameObject.SetActive(true);
         starTwo.gameObject.SetActive(true);
