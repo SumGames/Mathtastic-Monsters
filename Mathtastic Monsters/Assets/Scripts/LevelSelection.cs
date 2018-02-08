@@ -107,8 +107,10 @@ public class LevelSelection : MonoBehaviour
 
         selectionImages = GetComponents<SelectionImages>();
 
-        selectionImages[0].SetSprite(currentSubject);
-        selectionImages[1].SetSprite(currentSubject);
+        foreach (SelectionImages item in selectionImages)
+        {
+            item.SetSprite(currentSubject);
+        }
 
     }
     //Start playing with the button's level..
