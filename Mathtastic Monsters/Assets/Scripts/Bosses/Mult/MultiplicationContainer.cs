@@ -21,6 +21,10 @@ public class MultiplicationContainer : MonoBehaviour
 
     public Button submit;
 
+
+    int enemyChoices;
+
+
     // Use this for initialization
     void Start()
     {
@@ -35,6 +39,13 @@ public class MultiplicationContainer : MonoBehaviour
 
     internal void GenerateMultiplication(QuizButton button, BossMonster a_boss)
     {
+        if (button.enemyChoices < 2)
+            enemyChoices = 2;
+        else if (button.enemyChoices > 6)
+            enemyChoices = 6;
+        else enemyChoices = button.enemyChoices;
+
+
         ClearEverything();
 
         QuestionText.text = CreateCorrectAnswer(button);
@@ -91,12 +102,12 @@ public class MultiplicationContainer : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < answers.Length; i++)
+        for (int i = 0; i < enemyChoices; i++)
         {
-            int index = Random.Range(0, answers.Length);
+            int index = Random.Range(0, enemyChoices);
             while (answers[index].boxAnswer > 0)
             {
-                index = Random.Range(0, answers.Length);
+                index = Random.Range(0, enemyChoices);
             }
 
             answers[index].SetAnswer(AnswerList[i]);

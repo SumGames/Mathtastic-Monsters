@@ -20,6 +20,15 @@ public class MultiplicationBox : MonoBehaviour
 
     internal void SetAnswer(int a_answer)
     {
+        if (a_answer < 0)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+
         boxAnswer = a_answer;
         GetComponentInChildren<Text>().text = a_answer.ToString();
     }
