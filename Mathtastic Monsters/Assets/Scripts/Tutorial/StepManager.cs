@@ -99,13 +99,13 @@ public class StepManager : MonoBehaviour
                 subjectSelect.SetActive(false);
                 levelSelect.SetActive(false);
                 combatContainer.SetActive(false);
-                lillyText.text = "This way to tutorias!\nHurry!";
+                lillyText.text = "Hello, Hero!\n Can you come find me? I'm waiting on my island.";
                 exposition.SetActive(false);
                 subjectSelect.SetActive(true);
                 myButton.interactable = false;
                 break;
             case 3:
-                lillyText.text = "Over here, hero! The beast has found me!";
+                lillyText.text = "Hurry! I hear a monster growing closer!";
                 subjectSelect.SetActive(false);
                 levelSelect.SetActive(true);
                 FindObjectOfType<equipmentList>().RemoveHead();
@@ -207,11 +207,14 @@ public class StepManager : MonoBehaviour
                     list.equip.shards += 20;
                     lillyText.text += "\nYou also got 20 shards!";
                     list.equip.tutorialComplete = true;
-                }
-
+                }                
                 TutorialMonster.gameObject.SetActive(false);
                 TutorialMonster.healthBar.gameObject.SetActive(false);
 
+                break;
+
+            case 19:
+                lillyText.text = "Since you're here, why don't I show you how to make parts?";
                 break;
             default:
                 Destroy(gameObject);

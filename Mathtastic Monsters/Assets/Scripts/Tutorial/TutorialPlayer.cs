@@ -56,7 +56,7 @@ public class TutorialPlayer : MonoBehaviour
 
         currentHealth = healthBar.maxValue = baseHealth;
 
-        resetTime = 20;
+        resetTime = 40;
 
         Timer = timeLeft.maxValue = resetTime;
 
