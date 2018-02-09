@@ -34,6 +34,18 @@ public class StepManager : MonoBehaviour
 
     internal backgroundManager backgrounds;
 
+
+    public Text QuestionText;
+    public Text InputText;
+
+
+    public Button AttackChoice;
+    public Button ConfirmAttack;
+
+    public Text[] multWrong;
+    public Button multRight;
+    public Button multSubmit;
+
     // Use this for initialization
     void Start()
     {
@@ -123,8 +135,10 @@ public class StepManager : MonoBehaviour
                 myButton.interactable = true;
 
                 TutorialMonster.MakeQuestion(2);
+                QuestionText.text = "4 \n+2\n=";
                 break;
             case 5:
+                QuestionText.text = "4 \n+2\n=";
                 lillyText.text = "This is your health bar. We'll lose if it runs out.";
                 OutlineGlows[0].SetActive(true);
                 break;
@@ -145,57 +159,95 @@ public class StepManager : MonoBehaviour
                 break;
             case 9:
                 lillyText.text = "But answering questions requires the relic! The monsterlator!";
+                QuestionText.text = "4 \n+2\n=";
                 calculator.SetActive(true);
                 break;
             case 10:
+                myButton.interactable = false;
+                AttackChoice.interactable = true;
                 lillyText.text = "Tapping on numbers writes your answer";
+                QuestionText.text = "4 \n+2\n=";
                 OutlineGlows[3].SetActive(false);
                 OutlineGlows[4].SetActive(true);
                 break;
             case 11:
+                AttackChoice.gameObject.SetActive(false);
+                ConfirmAttack.interactable = true;
+
                 lillyText.text = "Hitting attack will submit your answer!";
+                QuestionText.text = "4 \n+2\n=";
+                InputText.text = "6";
                 OutlineGlows[4].SetActive(false);
                 OutlineGlows[5].SetActive(true);
                 break;
             case 12:
-                lillyText.text = "Hitting Cancel will delete your answer!";
+                myButton.interactable = true;
+                ConfirmAttack.gameObject.SetActive(false);
+                QuestionText.text = "";
+                InputText.text = "";
+                lillyText.text = "Good work! Note that answering while the timer is in the Green zone will result in double damage!";
                 OutlineGlows[5].SetActive(false);
-                OutlineGlows[6].SetActive(true);
                 break;
 
 
             case 13:
-                lillyText.text = "When your gauge hits 0, the enemy will attack.";
+                QuestionText.text = "4\n+5=";
+                lillyText.text = "Once you've attacked, the enemy will attack with a multiple choice question!";
+                multRight.gameObject.SetActive(true);
+                multRight.interactable = false;
+                multSubmit.gameObject.SetActive(true);
+                multSubmit.interactable = false;
+
                 TutorialMonster.MakeQuestion(1);
                 OutlineGlows[6].SetActive(false);
+                QuestionText.text = "4\n+5=";
+                for (int i = 0; i < multWrong.Length; i++)
+                {
+                    multWrong[i].text = i.ToString();
+                }
                 break;
 
             case 14:
-                lillyText.text = "To evade, hit the button with the Correct Answer";
+                QuestionText.text = "4\n+5=";
+                multRight.interactable = true;                
+                myButton.interactable = false;
+                lillyText.text = "To evade, hit the button with the Correct Answer.";
                 break;
 
             case 15:
-                lillyText.text = "I'll now lower the freeze barrier when you're ready.";
+                multRight.interactable = false;
+                multSubmit.interactable = true;
+                lillyText.text = "Good! Now tap the Defend to confirm your answer and block the attack!";
                 break;
 
             case 16:
+                multRight.gameObject.SetActive(false);
+                multSubmit.gameObject.SetActive(false);
+                myButton.interactable = true;
+                lillyText.text = "Yay! By answering questions in this phase, you avoid damage! Answering quickly will result in a counter!";
+                break;
+            case 17:
+                lillyText.text = "I'll now lower the freeze barrier when you're ready.";
+                break;
+
+            case 18:
                 lillyText.text = "Answer the monster's questions to lower its health!!";
                 TutorialMonster.MakeQuestion(2);
                 player.Frozen = 0;
                 tutorialCalculator.ButtonsActive(true);
                 myButton.interactable = false;
                 break;
-            case 17:
+            case 19:
                 lillyText.text = "Hero! Please be more careful! I had to freeze the beast again.";
                 myButton.interactable = true;
                 player.Frozen = 3;
                 tutorialCalculator.ButtonsActive(false);
                 break;
 
-            case 18:
+            case 20:
                 if (!victory)
                 {
-                    SetStep(15);
+                    SetStep(18);
                     player.ResetPlayer();
                     return;
                 }
@@ -213,7 +265,7 @@ public class StepManager : MonoBehaviour
 
                 break;
 
-            case 19:
+            case 21:
                 lillyText.text = "Since you're here, why don't I show you how to make parts?";
                 break;
             default:
@@ -226,7 +278,7 @@ public class StepManager : MonoBehaviour
     internal void playerWon()
     {
         victory = true;
-        SetStep(18);
+        SetStep(20);
         player.Frozen = 3;
         tutorialCalculator.ButtonsActive(false);
     }

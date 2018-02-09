@@ -12,6 +12,14 @@ public class TutmultipleContainer : MonoBehaviour
 
     public TutorialPlayer player;
 
+    TutmultipleContainer container;
+    TutorialMonster monster;
+
+    internal TutMultipleAnswer SelectedAnswer;
+
+    public Button submit;
+
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +34,9 @@ public class TutmultipleContainer : MonoBehaviour
 
     internal void SetMultiple(int answer, bool phase)
     {
+        submit.interactable = false;
+
+
         enemyAnswerNeeded = answer;
 
         if (phase)
@@ -48,10 +59,10 @@ public class TutmultipleContainer : MonoBehaviour
         {
             item.setAnswer(-1);
         }
-        int index = Random.Range(0, 6);
+        int index = Random.Range(0, 3);
 
 
-
+        submit.gameObject.SetActive(true);
 
         answers[index].gameObject.SetActive(true);
         answers[index].setAnswer(enemyAnswerNeeded);
@@ -66,10 +77,10 @@ public class TutmultipleContainer : MonoBehaviour
             int wrongAnswer = wrongAnswers[(i - 1)];
 
 
-            index = Random.Range(0, 6);
+            index = Random.Range(0, 3);
             while (answers[index].gameObject.activeSelf)
             {
-                index = Random.Range(0, 6);
+                index = Random.Range(0, 3);
             }
             answers[index].gameObject.SetActive(true);
             answers[index].setAnswer(wrongAnswer);
@@ -83,6 +94,7 @@ public class TutmultipleContainer : MonoBehaviour
             item.gameObject.SetActive(false);
         }
         calculator.SetActive(true);
+        submit.gameObject.SetActive(false);
     }
 
     public void interactableButtons(bool canInteract)
@@ -91,5 +103,37 @@ public class TutmultipleContainer : MonoBehaviour
         {
             item.gameObject.GetComponent<Button>().interactable = canInteract;
         }
+    }
+
+
+    public void submitAnswer()
+    {
+        if (SelectedAnswer == null)
+        {
+            submit.interactable = false;
+            return;
+        }
+
+        if (!monster)
+        {
+            container = FindObjectOfType<TutmultipleContainer>();
+            monster = FindObjectOfType<TutorialMonster>();
+        }
+
+
+
+        if (SelectedAnswer.getAnswer() == enemyAnswerNeeded)
+        {
+            monster.MonsterHurt();
+        }
+        else
+        {
+            monster.EnemyAttack();
+        }
+
+        submit.interactable = false;
+        SelectedAnswer.GetComponent<Image>().color = Color.white;
+        SelectedAnswer = null;
+
     }
 }

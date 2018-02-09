@@ -10,8 +10,8 @@ public class TutMultipleAnswer : MonoBehaviour
     Text answerText;
 
     TutmultipleContainer container;
-    TutorialMonster monster;
 
+    internal Image image;
 
     // Use this for initialization
     void Start ()
@@ -41,22 +41,28 @@ public class TutMultipleAnswer : MonoBehaviour
 
     public void submitAnswer()
     {
-        if(!monster)
-        {
+        if (!container)
             container = FindObjectOfType<TutmultipleContainer>();
-            monster = FindObjectOfType<TutorialMonster>();
-        }
 
-        if (Answer == container.enemyAnswerNeeded)
-        {
-            monster.MonsterHurt();
-            FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerCountered);
-        }
-        else
-        {
-            monster.EnemyAttack();
-            FindObjectOfType<combatFeedback>().DamageSet(SetFeedback.PlayerHit);
-        }
+        image = GetComponent<Image>();
 
+        if (container.SelectedAnswer != null)
+        {
+            if (container.SelectedAnswer == this)
+            {
+                container.SelectedAnswer.image.color = Color.white;
+                container.submit.interactable = false;
+                container.SelectedAnswer = null;
+                return;
+            }
+            else
+            {
+                container.SelectedAnswer.image.color = Color.white;
+                container.SelectedAnswer = null;
+            }
+        }
+        container.submit.interactable = true;
+        image.color = Color.yellow;
+        container.SelectedAnswer = this;
     }
 }
