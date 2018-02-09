@@ -186,6 +186,8 @@ public class LevelSelection : MonoBehaviour
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (currentLevel == 4 || currentLevel == 9)
         {
+            medal.gameObject.SetActive(true);
+
             medal.SetChangingTalisman(list, talismanManager, currentSubject);
 
             hardMode.gameObject.SetActive(false);
