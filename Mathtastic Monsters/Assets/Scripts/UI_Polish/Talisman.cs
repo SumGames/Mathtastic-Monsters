@@ -23,6 +23,12 @@ public class Talisman : MonoBehaviour
 
         myType = a_type;
 
+        if (myType == classType.Calculi)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
         MainButton.sprite = talismanManager.ReturnSubject(myType, false);
         HalfButton.sprite = talismanManager.ReturnSubject(myType, true);
 

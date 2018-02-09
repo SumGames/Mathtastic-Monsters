@@ -238,6 +238,7 @@ public class equipmentList : MonoBehaviour
     {
         equip.StarsAcquired = new int[50];
 
+        PlayerPrefs.SetInt("Transitions", 1);
 
         equip.shards = 0;
         equip.tutorialComplete = false;
