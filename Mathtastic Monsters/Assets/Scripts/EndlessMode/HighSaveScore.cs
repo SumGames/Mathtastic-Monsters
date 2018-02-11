@@ -82,7 +82,7 @@ public class HighSaveScore : MonoBehaviour
         else
         {
             returning += "Best " + op.ToString() + " Level run by " + highLevelNames[0, (int)op] + "\n";
-            returning += "Points: " + HighLevelLevels[0, (int)op].ToString() + ".  Levels: " + highLevelScore[0, (int)op].ToString();
+            returning += "Levels: " + HighLevelLevels[0, (int)op].ToString() + ".  Points: " + highLevelScore[0, (int)op].ToString();
         }
 
 
