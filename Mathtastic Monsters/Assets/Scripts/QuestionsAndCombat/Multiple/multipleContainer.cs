@@ -169,7 +169,7 @@ public class multipleContainer : MonoBehaviour
             while (wrongAnswer <= a_running.minAnswer || CheckMultiple(a_running, wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
-                wrongAnswer = enemyAnswerNeeded + (int)(range * multiple);
+                wrongAnswer = enemyAnswerNeeded + range;
             }
 
             index = Random.Range(0, 6);
