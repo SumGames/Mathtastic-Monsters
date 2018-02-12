@@ -119,4 +119,11 @@ public class TransitionManager : MonoBehaviour
                 break;
         }
     }
+
+    internal void DisableContainerAndCalculator()
+    {
+        Calculator.SetActive(false);
+        MultipleChoice.SetActive(false);
+        transitionState = TransitionState.None;
+    }
 }
