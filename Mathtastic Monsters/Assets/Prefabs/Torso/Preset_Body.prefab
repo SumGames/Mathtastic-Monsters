@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 95560513662180110}
   - component: {fileID: 114002858262060534}
   m_Layer: 0
-  m_Name: Preset_Torso
+  m_Name: Preset_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,12 +865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
+  owned: 0
   cost: 0
-  typeRequired: 0
-  levelsNeeded: 0
   ability: 0
   textureMaterial: {fileID: 0}
+  starRequired: 0
   neckForHead: {fileID: 1399493971253048}
   LeftArmUpper: {fileID: 1874376612212124}
   LeftArmFore: {fileID: 1645811203601924}
@@ -887,3 +886,10 @@ MonoBehaviour:
   LefttAnkle: {fileID: 1157488942524522}
   LeftFoot: {fileID: 1688383771471992}
   bodyAnimator: {fileID: 95560513662180110}
+  bodyType: 0
+  LowerLeftArmUpper: {fileID: 0}
+  LowerLeftArmFore: {fileID: 0}
+  LowerLeftArmHand: {fileID: 0}
+  LowerRightArmUpper: {fileID: 0}
+  LowerRightArmFore: {fileID: 0}
+  LowerRightArmHand: {fileID: 0}
