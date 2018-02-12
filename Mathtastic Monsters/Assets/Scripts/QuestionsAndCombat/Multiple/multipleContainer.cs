@@ -162,16 +162,16 @@ public class multipleContainer : MonoBehaviour
 
         answers[index].gameObject.SetActive(true);
         answers[index].setAnswer(enemyAnswerNeeded);
+        
 
         for (int i = 1; i < a_running.enemyChoices; i++)
-        {
+        {        
             int wrongAnswer = -3;
             while (wrongAnswer <= a_running.minAnswer || CheckMultiple(a_running, wrongAnswer))
             {
                 int range = Random.Range(-a_running.enemyAnswerRange, a_running.enemyAnswerRange);
-                wrongAnswer = enemyAnswerNeeded + (int)(range * multiple);
+                wrongAnswer = enemyAnswerNeeded + range;
             }
-
             index = Random.Range(0, 6);
             while (answers[index].getAnswer() != -1)
             {

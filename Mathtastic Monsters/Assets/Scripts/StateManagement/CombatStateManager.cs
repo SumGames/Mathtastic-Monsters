@@ -155,14 +155,13 @@ public class CombatStateManager : ParentsStateManager
                 container.gameObject.SetActive(false);
                 break;
             case playStatus.Won:
-				checkLevelsAvailable();
+                checkLevelsAvailable();
                 nextButton.ready();
                 combatContainer.SetActive(true);
                 enemyContainer.gameObject.SetActive(false);
                 resetContainer.SetActive(true);
                 int exp = player.CalculateExperience();
                 list.equip.shards += exp;
-                container.gameObject.SetActive(false);
                 break;
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);
