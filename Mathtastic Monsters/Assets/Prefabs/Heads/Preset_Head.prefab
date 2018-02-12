@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4837911634128468}
   - component: {fileID: 114791787307398024}
   m_Layer: 0
-  m_Name: PresetHead
+  m_Name: Preset_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,6 +125,6 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 1
   cost: 0
-  typeRequired: 0
-  levelsNeeded: 0
   ability: 2
+  textureMaterial: {fileID: 0}
+  starRequired: 0
