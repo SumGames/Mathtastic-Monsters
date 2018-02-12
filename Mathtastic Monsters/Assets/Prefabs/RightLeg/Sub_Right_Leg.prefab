@@ -145,7 +145,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150577806898846}
-  m_LocalRotation: {x: 0.5560902, y: 0.08901953, z: 0.77793604, w: -0.2786663}
+  m_LocalRotation: {x: 0.5560901, y: 0.08901952, z: 0.7779359, w: -0.27866626}
   m_LocalPosition: {x: -0.2656225, y: 0.9534031, z: 0.108701676}
   m_LocalScale: {x: 0.90282655, y: 0.9028251, z: 0.9028263}
   m_Children: []
@@ -186,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852660450291718}
   m_LocalRotation: {x: 0.4514363, y: 0.21047851, z: -0.8429863, w: -0.2031703}
-  m_LocalPosition: {x: 0.52, y: 1.062, z: 0.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4148123124375216}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
+  owned: 0
   cost: 0
   ability: 3
   textureMaterial: {fileID: 0}
