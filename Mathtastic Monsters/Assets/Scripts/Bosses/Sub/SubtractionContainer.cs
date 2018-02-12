@@ -39,14 +39,9 @@ public class SubtractionContainer : MonoBehaviour
 
     void Update()
     {
-        if (storyManager.phase == phases.None)
+        if (storyManager.phase == phases.None && FiredTorpedo == null)
         {
-            if (FiredTorpedo == null)
-                LaunchTorpedo();
-        }
-        else
-        {
-            ResetPosition(false);
+            LaunchTorpedo();
         }
     }
 
@@ -58,7 +53,7 @@ public class SubtractionContainer : MonoBehaviour
         if (stateManager.gameState != playStatus.playing)
             return;
 
-        ResetPosition(true);
+        ResetPosition();
 
 
 
@@ -91,7 +86,7 @@ public class SubtractionContainer : MonoBehaviour
     {
         if(FiredTorpedo)
         {
-            Destroy(FiredTorpedo.gameObject);
+            Destroy(FiredTorpedo);
         }
 
         bossMaxHealth = health;
@@ -167,12 +162,10 @@ public class SubtractionContainer : MonoBehaviour
         }
     }
 
-    internal void ResetPosition(bool a_interactable)
+    internal void ResetPosition()
     {
         foreach (SubtractionDragger item in draggers)
         {
-            item.GetComponent<Button>().interactable = a_interactable;
-
             item.ResetDragger(true);
         }
 

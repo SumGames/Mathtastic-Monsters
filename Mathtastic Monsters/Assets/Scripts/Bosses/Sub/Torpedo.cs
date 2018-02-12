@@ -99,7 +99,7 @@ public class Torpedo : MonoBehaviour
             else
             {
                 boss.player.DamagePlayer(0.5f);
-                container.ResetPosition(true);
+                container.ResetPosition();
             }
         }
     }
