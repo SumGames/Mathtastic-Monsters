@@ -30,6 +30,8 @@ public class equipmentList : MonoBehaviour
     internal GameObject currentLeftLegPrefab;
     internal GameObject currentRightLegPrefab;
 
+    internal bool skipping;
+
     // Use this for initialization
     void Start()
     {
@@ -460,7 +462,7 @@ public class equipmentList : MonoBehaviour
         return ad;
     }
 
-    void ByPassRestrictions()
+    internal void ByPassRestrictions()
     {
         NewGame();
 
@@ -504,6 +506,7 @@ public class equipmentList : MonoBehaviour
             mod.owned = true;
         }
     }
+
     public string getShards()
     {
         return equip.shards.ToString();

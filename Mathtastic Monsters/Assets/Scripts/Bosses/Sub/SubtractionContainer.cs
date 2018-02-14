@@ -47,7 +47,6 @@ public class SubtractionContainer : MonoBehaviour
         else
         {
             ResetPosition(false);
-            LaunchTorpedo();
         }
     }
 

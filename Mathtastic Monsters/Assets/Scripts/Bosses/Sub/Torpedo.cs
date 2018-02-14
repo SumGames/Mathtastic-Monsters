@@ -24,11 +24,13 @@ public class Torpedo : MonoBehaviour
 
     bool bounce;
 
+    public GameObject bubbleSprite;
+
     // Use this for initialization
     void Start()
     {
         stateManager = FindObjectOfType<CombatStateManager>();
-
+        bubbleSprite.SetActive(false);
     }
 
     internal void CreateTorpedo(RectTransform a_start, RectTransform a_end, BossMonster a_boss, string a_answer, SubtractionContainer subtractionContainer, float a_velocity)
@@ -73,6 +75,9 @@ public class Torpedo : MonoBehaviour
             }
             else
             {
+                Vector3 compassRotation = rect.transform.eulerAngles;
+                compassRotation.z -= Time.deltaTime * 200;
+                rect.transform.eulerAngles = compassRotation;
 
                 rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, start.anchoredPosition, (Time.deltaTime * velocity));
 
@@ -92,9 +97,13 @@ public class Torpedo : MonoBehaviour
         {
             if (other.GetComponent<SubtractionDragger>().AnswerNeeded == Answer)
             {
+
                 other.gameObject.SetActive(false);
 
                 bounce = true;
+
+                velocity = (Vector2.Distance(rect.anchoredPosition, start.anchoredPosition));
+                bubbleSprite.SetActive(true);
             }
             else
             {
@@ -103,7 +112,6 @@ public class Torpedo : MonoBehaviour
             }
         }
     }
-
 
     void playerHit()
     {

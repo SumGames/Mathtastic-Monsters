@@ -103,4 +103,21 @@ public class ParentsStateManager : MonoBehaviour
     }
 
 
+    public void CheatMode(UnityEngine.UI.Button clickedOn)
+    {
+        if (list.playerName != "Guest")
+        {
+            Destroy(clickedOn.gameObject);
+            return;
+        }
+        list.ByPassRestrictions();
+        Destroy(clickedOn.gameObject);
+
+        changeState(gameState);
+
+        list.skipping = true;
+
+    }
+
+
 }

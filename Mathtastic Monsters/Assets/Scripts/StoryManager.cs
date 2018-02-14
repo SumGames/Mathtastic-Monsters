@@ -158,6 +158,13 @@ public class StoryManager : MonoBehaviour
         phase = a_startingPhase;
 
 
+        if(FindObjectOfType<equipmentList>().skipping)
+        {
+            enemyTime = 0;
+            previousTime = 0;
+            nextime = 0;
+        }
+
     }
     void SetMovementStartAndSpeed(phases position)
     {
