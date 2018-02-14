@@ -6,7 +6,7 @@ public class EndlessMonster : Monster
 {
 
     //The arena uses different states
-    public override void CheckDeath()
+    public override void CheckDeath(bool boss=false)
     {
         bar.changeHealth(false, health);
 

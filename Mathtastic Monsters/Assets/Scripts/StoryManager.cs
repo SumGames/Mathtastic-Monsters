@@ -47,6 +47,7 @@ public class StoryManager : MonoBehaviour
 
     public GameObject textBackground;
 
+    public GameObject CalculatorObject;
 
     // Use this for initialization
     void Start()
@@ -208,6 +209,7 @@ public class StoryManager : MonoBehaviour
             movingObject.transform.localPosition = new Vector3(1200, 0, 0);
             movementIncrement = -(1200 / nextime);
             textDisplay.text = nextLevelWords;
+
         }
     }
 }

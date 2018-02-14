@@ -3934,6 +3934,7 @@ MonoBehaviour:
   objectSpot: 0
   movingObject: {fileID: 508652009}
   textBackground: {fileID: 1589054711}
+  CalculatorObject: {fileID: 230282086}
 --- !u!4 &255308282
 Transform:
   m_ObjectHideFlags: 0
@@ -16446,7 +16447,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 10
+  levelTime: 15
   minNumber: 1
   maxNumber: 10
   Operator: 0
@@ -16458,7 +16459,7 @@ MonoBehaviour:
   preventRounding: 1
   secondFixedNumber: 
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
-  enemPhaseTime: 10
+  enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
   hardMode: {fileID: 1456059767}

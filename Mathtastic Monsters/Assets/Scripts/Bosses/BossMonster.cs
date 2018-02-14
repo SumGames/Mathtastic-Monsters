@@ -90,7 +90,7 @@ public class BossMonster : Monster
         sprite.transform.localRotation = startingRotation;
 
 
-        CheckDeath();
+        CheckDeath(true);
 
         Debug.Log("Player hit");
 
@@ -144,7 +144,7 @@ public class BossMonster : Monster
 
         CreateQuestion();
 
-        CheckDeath();
+        CheckDeath(true);
     }
 
     //Monster is initiated.
@@ -460,7 +460,7 @@ public class BossMonster : Monster
                 break;
             default:
                 health = -2;
-                CheckDeath();
+                CheckDeath(true);
                 return;
         }
 

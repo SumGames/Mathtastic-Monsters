@@ -152,7 +152,7 @@ public class CombatStateManager : ParentsStateManager
                 combatContainer.SetActive(true);
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 resetContainer.SetActive(true);
-                container.gameObject.SetActive(false);
+                container.DisableThisAndCalculator();
                 break;
             case playStatus.Won:
 				checkLevelsAvailable();
@@ -162,7 +162,7 @@ public class CombatStateManager : ParentsStateManager
                 resetContainer.SetActive(true);
                 int exp = player.CalculateExperience();
                 list.equip.shards += exp;
-                container.gameObject.SetActive(false);
+                container.DisableThisAndCalculator();
                 break;
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);

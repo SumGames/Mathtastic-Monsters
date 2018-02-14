@@ -100,7 +100,7 @@ public class Monster : MonoBehaviour
         enemyPhase = questions.MakeQuestion(parent.quizRunning);
     }
 
-    public virtual void CheckDeath()
+    public virtual void CheckDeath(bool boss=false)
     {
         manager = FindObjectOfType<ParentsStateManager>();
 
