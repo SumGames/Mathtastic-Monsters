@@ -24,8 +24,6 @@ public class LevelSelection : MonoBehaviour
     float swipeStartPosition;//Where we started moving from. Only need X coord here.
                              // Use this for initialization
 
-    SelectionImages[] selectionImages;
-
     public TalismanManager talismanManager;
 
     public Talisman medal;
@@ -108,12 +106,7 @@ public class LevelSelection : MonoBehaviour
         SetButtons();
         op.gameObject.SetActive(false);
 
-        selectionImages = GetComponents<SelectionImages>();
-
-        foreach (SelectionImages item in selectionImages)
-        {
-            item.SetSprite(currentSubject);
-        }
+        GetComponent<SelectionImagesIndividual>().SetSprite(currentSubject);
 
     }
     //Start playing with the button's level..

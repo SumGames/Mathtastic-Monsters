@@ -1050,7 +1050,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -14610,7 +14610,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -16150,6 +16150,7 @@ GameObject:
   - component: {fileID: 977039561}
   - component: {fileID: 977039562}
   - component: {fileID: 977039563}
+  - component: {fileID: 977039564}
   m_Layer: 0
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -16220,7 +16221,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977039559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b8304964d298ec44986d1c7eff1c6ae, type: 3}
   m_Name: 
@@ -16261,6 +16262,36 @@ MonoBehaviour:
   DivisionSprite: {fileID: 0}
   CalculusSprite: {fileID: 0}
   Buttons:
+  - {fileID: 421138866}
+  - {fileID: 1583593733}
+--- !u!114 &977039564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977039559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd794b4b86e3e94c901636f7ffa0d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
+  AdditionSprite: []
+  SubtractionSprite: []
+  MultiplicationSprite: []
+  DivisionSprite: []
+  CalculusSprite: []
+  Buttons:
+  - {fileID: 978991034}
+  - {fileID: 915521343}
+  - {fileID: 1828370983}
+  - {fileID: 1632523625}
+  - {fileID: 841958909}
+  - {fileID: 1722686523}
+  - {fileID: 2085774892}
+  - {fileID: 1886835285}
+  - {fileID: 1128181902}
+  - {fileID: 508458930}
   - {fileID: 421138866}
   - {fileID: 1583593733}
 --- !u!1 &978991031
@@ -16709,7 +16740,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -20832,7 +20863,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -27261,7 +27292,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -28320,7 +28351,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -29342,7 +29373,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -30540,7 +30571,7 @@ MonoBehaviour:
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 8
   enemyChoices: 3
-  enemyAnswerRange: 2
+  enemyAnswerRange: 4
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
