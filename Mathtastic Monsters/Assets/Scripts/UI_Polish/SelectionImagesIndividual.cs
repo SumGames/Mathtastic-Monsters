@@ -66,7 +66,6 @@ public class SelectionImagesIndividual : MonoBehaviour
         {
             if (i >= newSprite.Length)
             {
-                Debug.Log(i);
                 Buttons[i].sprite = DefaultSprite;
                 continue;
             }

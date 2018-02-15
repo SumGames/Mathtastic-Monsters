@@ -25,6 +25,8 @@ public class TransitionManager : MonoBehaviour
 
     public TransitionState transitionState;
 
+    public StoryManager storyManager;
+
     // Use this for initialization
     void Start()
     {
@@ -38,16 +40,25 @@ public class TransitionManager : MonoBehaviour
         if (transitionState == TransitionState.None)
             return;
 
+        if (storyManager && storyManager.phase != phases.None)
+        {
+            Calculator.SetActive(false);
+            MultipleChoice.SetActive(false);
+            return;
+        }
+
         if (transitionState == TransitionState.CalculatorGrow)
         {
             if (calSize >= 1)
             {
+                Calculator.SetActive(true);
                 calSize = 1;
                 Calculator.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
             }
             else
             {
+                Calculator.SetActive(true);
                 calSize += Time.deltaTime * transitionSpeed;
                 Calculator.transform.localScale = new Vector3(calSize, calSize);
             }
@@ -56,12 +67,14 @@ public class TransitionManager : MonoBehaviour
         {
             if (choSize >= 1)
             {
+                MultipleChoice.SetActive(true);
                 choSize = 1;
                 MultipleChoice.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
             }
             else
             {
+                MultipleChoice.SetActive(true);
                 choSize += Time.deltaTime * transitionSpeed;
                 MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
             }
@@ -71,12 +84,14 @@ public class TransitionManager : MonoBehaviour
         {
             if (calSize <= transitionMin)
             {
+                Calculator.SetActive(true);
                 calSize = transitionMin;
                 Calculator.transform.localScale = new Vector3(0, 0, 0);
                 transitionState = TransitionState.MultGrow;
             }
             else
             {
+                Calculator.SetActive(true);
                 calSize -= Time.deltaTime * transitionSpeed;
                 Calculator.transform.localScale = new Vector3(calSize, calSize);
             }
@@ -85,12 +100,14 @@ public class TransitionManager : MonoBehaviour
         {
             if (choSize <= transitionMin)
             {
+                MultipleChoice.SetActive(true);
                 choSize = transitionMin;
                 MultipleChoice.transform.localScale = new Vector3(0, 0, 0);
                 transitionState = TransitionState.CalculatorGrow;
             }
             else
             {
+                MultipleChoice.SetActive(true);
                 choSize -= Time.deltaTime * transitionSpeed;
                 MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
             }

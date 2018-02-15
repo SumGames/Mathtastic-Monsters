@@ -12,9 +12,7 @@ public class LevelSelection : MonoBehaviour
     public int currentLevel;
     int starsUnlocked; //How many stars we have for this level.
     public Button starOne, starTwo, starThree; //Stars light up if we have their star.
-    public Button NormalMode; //Clicked on to start normal mode.
-    public Button hardMode; //If we have two stars, click on to start the normal mode's "hard mode" button.
-    public Button[] jumpButtons; //An array of buttons we can jump between.
+
     public GameObject goldstarParticle;
     public GameObject silverstarParticle;
     public GameObject bronzestarParticle;
@@ -27,6 +25,9 @@ public class LevelSelection : MonoBehaviour
     public TalismanManager talismanManager;
 
     public Talisman medal;
+
+    public ButtonSelection[] subjectGroups;
+    ButtonSelection selectedSelection;
 
     void Start()
     {
@@ -100,15 +101,15 @@ public class LevelSelection : MonoBehaviour
     {
         currentContainer = op;
         currentSubject = op.type;
+
         currentLevel = 0;
         gameObject.SetActive(true);
         CheckStars(op.buttons[0]);
-        SetButtons();
         op.gameObject.SetActive(false);
 
-        GetComponent<SelectionImagesIndividual>().SetSprite(currentSubject);
-
+        SetButtons();
     }
+
     //Start playing with the button's level..
     public void UseNormalButton()
     {
@@ -129,13 +130,15 @@ public class LevelSelection : MonoBehaviour
     //Disable buttons, add names as required.
     void SetButtons()
     {
-        NormalMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].name;
+        SetupGroups((int)currentSubject);
+
+        selectedSelection.Normal.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].name;
         for (int i = 0; i < 10; i++)
         {
             if (i <= currentContainer.completedQuestions)
-                jumpButtons[i].interactable = true;
+                selectedSelection.buttons[i].interactable = true;
             else
-                jumpButtons[i].interactable = false;
+                selectedSelection.buttons[i].interactable = false;
         }
     }
     //Called from player if we won.
@@ -151,7 +154,7 @@ public class LevelSelection : MonoBehaviour
             currentSubject = classType.Calculi;
         else
             currentSubject = (classType)a_button.Operator;
-        
+
 
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (starsUnlocked == 0)
@@ -166,6 +169,8 @@ public class LevelSelection : MonoBehaviour
         }
         list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)] = starsUnlocked;
         CheckStars(a_button);
+
+        SetButtons();
     }
     //Use our current star levels to light up stars, buttons.
     public void CheckStars(QuizButton a_button)
@@ -176,6 +181,10 @@ public class LevelSelection : MonoBehaviour
             currentSubject = classType.Calculi;
         else
             currentSubject = (classType)a_button.Operator;
+
+
+        SetupGroups((int)currentSubject);
+
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (currentLevel == 4 || currentLevel == 9)
         {
@@ -183,7 +192,7 @@ public class LevelSelection : MonoBehaviour
 
             medal.SetChangingTalisman(list, talismanManager, currentSubject);
 
-            hardMode.gameObject.SetActive(false);
+            selectedSelection.Hard.gameObject.SetActive(false);
             starOne.gameObject.SetActive(false);
             starTwo.gameObject.SetActive(false);
             starThree.gameObject.SetActive(false);
@@ -193,21 +202,21 @@ public class LevelSelection : MonoBehaviour
             return;
         }
         medal.gameObject.SetActive(false);
-        hardMode.gameObject.SetActive(true);
+        selectedSelection.Hard.gameObject.SetActive(true);
         starOne.gameObject.SetActive(true);
         starTwo.gameObject.SetActive(true);
         starThree.gameObject.SetActive(true);
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);
-        hardMode.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
+        selectedSelection.Hard.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
 
-        if (currentContainer.buttons[currentLevel].hardMode != null && hardMode.interactable)
+        if (currentContainer.buttons[currentLevel].hardMode != null && selectedSelection.Hard.interactable)
         {
-            hardMode.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].hardMode.name;
+            selectedSelection.Hard.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].hardMode.name;
         }
         else
         {
-            hardMode.GetComponentInChildren<Text>().text = "Locked";
+            selectedSelection.Hard.GetComponentInChildren<Text>().text = "Locked";
         }
 
         starThree.interactable = (starsUnlocked >= 3);
@@ -248,5 +257,17 @@ public class LevelSelection : MonoBehaviour
                 ChangeIndex((currentLevel - 1));
             }
         }
+    }
+
+    void SetupGroups(int subject)
+    {
+        for (int i = 0; i < subjectGroups.Length; i++)
+        {
+            subjectGroups[i].gameObject.SetActive(false);
+        }
+        subjectGroups[subject].gameObject.SetActive(true);
+
+        selectedSelection = subjectGroups[subject];
+
     }
 }
