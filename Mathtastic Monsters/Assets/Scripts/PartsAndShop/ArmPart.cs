@@ -32,6 +32,12 @@ public class ArmPart : ItemPart
             hand.transform.rotation = new Quaternion(0, 20, -70, 0);
             hand.transform.localPosition += new Vector3(0, .1f, 0);
         }
+
+        if (textureMaterial)
+        {
+            foreArm.GetComponentInChildren<Renderer>().material = textureMaterial;
+            hand.GetComponentInChildren<Renderer>().material = textureMaterial;
+        }
     }
 
     public void deleteArm()

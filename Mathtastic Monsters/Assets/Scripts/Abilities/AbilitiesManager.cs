@@ -104,8 +104,13 @@ public class AbilitiesManager : MonoBehaviour
     //Set up abiltiies for display. 
     //First empty the array, then check every equipped part for an ability.
     //Finally, display every single ability's description along with its charges.
-    public string setAbilities()
+    public string setAbilities(equipmentList a_list=null)
     {
+        if (!list && a_list)
+        {
+            Start();
+        }
+
         Array.Clear(abilities, 0, abilities.Length);
 
         CheckPart(list.currentTorsoPrefab);

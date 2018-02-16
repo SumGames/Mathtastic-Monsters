@@ -34,6 +34,12 @@ public class LegPart : ItemPart
         Foot.transform.localRotation = Quaternion.identity;
         Foot.transform.localPosition = Vector3.zero;
         Foot.transform.localScale = Vector3.one;
+
+        if (textureMaterial)
+        {
+            Shin.GetComponentInChildren<Renderer>().material = textureMaterial;
+            Foot.GetComponentInChildren<Renderer>().material = textureMaterial;
+        }
     }
 
     public void DeleteLeg()

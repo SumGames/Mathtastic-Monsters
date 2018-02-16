@@ -21,7 +21,6 @@ public enum BodyType
 
 public class TorsoPart : ItemPart
 {
-
     public GameObject neckForHead;
 
     public GameObject LeftArmUpper;
@@ -59,12 +58,23 @@ public class TorsoPart : ItemPart
     public GameObject LowerRightArmHand;
 
 
+    public Renderer TorsoMesh;
+
+
     // Use this for initialization
     void Start ()
     {
+        bodyAnimator = GetComponent<Animator>();
+
 
         if (textureMaterial != null)
         {
+            if (TorsoMesh)
+            {
+                TorsoMesh.material = textureMaterial;
+                return;
+            }
+
 
             renderers = GetComponentsInChildren<Renderer>();
 
@@ -74,9 +84,6 @@ public class TorsoPart : ItemPart
             }
 
         }
-
-
-        bodyAnimator = GetComponent<Animator>();
 		
 	}
 	

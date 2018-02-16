@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class MyMonsterManager : ParentsStateManager
 {
     public GameObject mymonsterSelection; //The container that takes you to the monster overview
-    public GameObject monstercustomisationSelection; //Above, for monster customisation
     public GameObject lillyhomeSelection; //Above, for Lillys home
 
 
@@ -15,21 +14,17 @@ public class MyMonsterManager : ParentsStateManager
 
 
     //Links to part and shop managers. Links them to list and tells them to start.
-    public ShopManager shop;
-    public PartsManager parts;
+    public CombinedShop combinedShop;
+
 
     // Use this for initialization
     void Start()
     {
         base.Find();
 
-        shop.list = list;
-        shop.Begin();
-        parts.list = list;
-        parts.Begin();
+        combinedShop.Begin(list);
 
-
-        changeState(playStatus.MyMonster);
+        changeState(playStatus.LillyHome);
 
         backgrounds.startBack(playStatus.MyMonster);
     }
@@ -46,9 +41,6 @@ public class MyMonsterManager : ParentsStateManager
         {
             case playStatus.MyMonster:
                 mymonsterSelection.SetActive(true);
-                break;
-            case playStatus.MonsterCustomisation:
-                monstercustomisationSelection.SetActive(true);
                 break;
             case playStatus.LillyHome:
                 lillyhomeSelection.SetActive(true);
@@ -68,20 +60,12 @@ public class MyMonsterManager : ParentsStateManager
     void disableObjects()
     {
         mymonsterSelection.SetActive(false);
-        monstercustomisationSelection.SetActive(false);
         lillyhomeSelection.SetActive(false);
     }
 
     public void MonsterBack()
     {
-        if(gameState==playStatus.MyMonster)
-        {
-            changeState(playStatus.subjectSelect);
-        }
-        else
-        {
-            changeState(playStatus.MyMonster);
-        }
+        changeState(playStatus.subjectSelect);
 
     }
 }

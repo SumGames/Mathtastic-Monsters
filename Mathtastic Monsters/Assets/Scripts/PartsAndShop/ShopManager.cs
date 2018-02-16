@@ -6,18 +6,6 @@ public class ShopManager : MonoBehaviour
 {
     internal equipmentList list;
 
-    partType currentType; //Type of object we want.
-    List<GameObject> currentList; //The list our object is in.
-    int currentIndex; //Where in array we're looking at.
-    public GameObject currentPart; //The object, found at the index inside the list.
-
-
-
-    public Text displayCurrent; //Display the name of the currentPart.
-    public Button equipItemButton; //Turns off if we don't own this item.
-
-    public Text Currency;
-
 
     equipmentManager manager;
 
@@ -31,125 +19,37 @@ public class ShopManager : MonoBehaviour
 
     public monsterSteps tutorial;
 
-    public AudioSource[] sounds;
     public AudioSource purchase;
-
-
-    int stars;
 
     HeaderGUI gUI;
 
 
-    // Use this for initialization
-    internal void Begin()
-    {
-        gUI = FindObjectOfType<HeaderGUI>();
+    public CombinedShop combinedShop;
 
-        sounds = GetComponents<AudioSource>();
-        purchase = sounds[0];
+
+    // Use this for initialization
+    internal void Begin(CombinedShop shop)
+    {
+        combinedShop = shop;
+
+        gUI = FindObjectOfType<HeaderGUI>();
       
 
         if (manager == null)
         {
             manager = list.equip;
         }
-        currentType = partType.Torso;
-        readyPart();
+        ReadyPart();
 
         tutorial = FindObjectOfType<monsterSteps>();
-        stars = list.equip.GetTotalStars();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Currency.text = list.getShards();
-
-        if (currentPart == null)
-        {
-            displayCurrent.text = "";
-            return;
-        }
-
-        ItemPart part = currentPart.GetComponent<ItemPart>();
-
-        if (tutorial != null)
-        {
-            if (tutorial.tutorialStage < 9)
-            {
-                equipItemButton.interactable = false;
-                displayCurrent.text = "Not ready";
-                return;
-            }
-        }
-
-        if (part.owned)
-        {
-            equipItemButton.interactable = false;
-            displayCurrent.text = "Already owned";
-        }
-
-        else if (stars < part.starRequired)
-        {
-            displayCurrent.text = "Not enough Stars. \n Needs " + part.starRequired;
-            equipItemButton.interactable = false;
-        }
-
-        else if (manager.shards < part.cost)
-        {
-            displayCurrent.text = "Can't afford. \nCosts " + part.cost;
-            equipItemButton.interactable = false;
-        }
-        else
-        {
-            displayCurrent.text = currentPart.gameObject.name;
-            equipItemButton.interactable = true;
-        }
-    }
-
-    //Change from one list of objects to another.
-    public void setType(int type)
-    {
-        currentType = (partType)type;
-        currentIndex = 0;
-        readyPart();
-    }
-
-    //Change the index and set the part, taking care to not go out of bounds.
-    public void changeIndex(bool plus)
-    {
-        if (plus)
-        {
-            if (currentIndex >= (currentList.Count - 1))
-            {
-                currentIndex = 0;
-            }
-            else
-            {
-                currentIndex++;
-            }
-        }
-        else
-        {
-            if (currentIndex == 0)
-            {
-                currentIndex = (currentList.Count - 1);
-            }
-            else
-            {
-                currentIndex--;
-            }
-        }
-        readyPart();
-    }
-
 
     //Purchase your part. No need for money/owned/available check, as this was done above.
     public void buyPart()
     {
-        if (currentPart == null)
+        if (combinedShop.currentPart == null)
             return;
-        ItemPart part = currentPart.GetComponent<ItemPart>();
+        ItemPart part = combinedShop.currentPart.GetComponent<ItemPart>();
 
         gUI.UINeedsUpdate = true;
 
@@ -161,46 +61,16 @@ public class ShopManager : MonoBehaviour
         purchase.Play();
 
         part.owned = true;
-        readyPart();
+        ReadyPart();
     }
 
-    //Use your index, and list you're checking to find the part you want.
-    public GameObject getPart()
+    internal void ReadyPart()
     {
-        switch (currentType)
-        {
-            case partType.Torso:
-                currentList = list.listOfTorso;
-                return list.listOfTorso[currentIndex];
-            case partType.Head:
-                currentList = list.listofHeads;
-                return list.listofHeads[currentIndex];
+        combinedShop.Refresh = true;
 
-            case partType.LeftArm:
-                currentList = list.listofLeftArms;
-                return list.listofLeftArms[currentIndex];
-            case partType.RightArm:
-                currentList = list.listofRightArms;
-                return list.listofRightArms[currentIndex];
-
-            case partType.LeftLeg:
-                currentList = list.listofLeftLegs;
-                return list.listofLeftLegs[currentIndex];
-
-            case partType.RightLeg:
-                currentList = list.listofRightLegs;
-                return list.listofRightLegs[currentIndex];
-            default:
-                break;
-        }
-        currentList = null;
-        return null;
-    }
+        GameObject currentPart = combinedShop.getPart();
 
 
-    void readyPart()
-    {
-        currentPart = getPart();
         if (currentPart == null) return;
         ItemPart part = currentPart.GetComponent<ItemPart>();
 
@@ -214,45 +84,7 @@ public class ShopManager : MonoBehaviour
             abilities = FindObjectOfType<AbilitiesManager>();
 
         abilityText.text = abilities.displayPower(part.ability);
-
-
     }
 
-    public void getMoney()
-    {
-        list.equip.shards += 100;
-    }
-    public void resetOwned()
-    {
-        list.equip.shards = 0;
-        foreach (GameObject body in list.listOfTorso)
-        {
-            body.GetComponent<TorsoPart>().owned = false;
-        }
 
-        foreach (GameObject limb in list.listofHeads)
-        {
-            limb.GetComponent<ItemPart>().owned = false;
-        }
-
-        foreach (GameObject limb in list.listofLeftLegs)
-        {
-            limb.GetComponent<ItemPart>().owned = false;
-        }
-
-        foreach (GameObject limb in list.listofRightLegs)
-        {
-            limb.GetComponent<ItemPart>().owned = false;
-        }
-
-        foreach (GameObject limb in list.listofLeftArms)
-        {
-            limb.GetComponent<ItemPart>().owned = false;
-        }
-
-        foreach (GameObject limb in list.listofRightArms)
-        {
-            limb.GetComponent<ItemPart>().owned = false;
-        }
-    }
 }

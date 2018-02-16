@@ -44,6 +44,7 @@ public class backgroundManager : MonoBehaviour
 
         newImage = null;
 
+
         switch (a_state)
         {
             case playStatus.Start:
@@ -79,7 +80,7 @@ public class backgroundManager : MonoBehaviour
             case playStatus.MonsterCustomisation:
                 newImage = menuScreen;
                 break;
-            case playStatus.LillyHome:
+            case playStatus.LillyHome:                
                 newImage = menuScreen;
                 break;
             case playStatus.Options:

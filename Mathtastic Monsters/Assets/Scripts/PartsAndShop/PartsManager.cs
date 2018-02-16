@@ -17,14 +17,6 @@ public class PartsManager : MonoBehaviour
     internal equipmentList list;
 
 
-    partType currentType; //Type of object we want.
-    List<GameObject> currentList; //The list our object is in.
-    int currentIndex; //Where in array we're looking at.
-    GameObject currentPart; //The object, found at the index inside the list.
-    bool currentOwned; //Do we actually own this object?
-
-
-
     public GameObject parentOfTorso;
 
     public TorsoPart TorsoEquipped;
@@ -51,122 +43,58 @@ public class PartsManager : MonoBehaviour
     bool built = false;
 
 
+    CombinedShop combinedShop;
+
+
     // Use this for initialization
-    internal void Begin()
+    internal void Begin(CombinedShop shop)
     {
+        combinedShop = shop;
+
         abilities = FindObjectOfType<AbilitiesManager>();
 
         list.BuildCharacter(parentOfTorso, this);
-        
 
-        currentType = partType.Torso;
-        getPart();
+        tutorial = FindObjectOfType<monsterSteps>();
 
-        tutorial = FindObjectOfType<monsterSteps>();        
-    }
+        previewAbilities.text = abilities.setAbilities(list);
 
-    void Start()
-    {
-        previewAbilities.text = abilities.setAbilities();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!built && TorsoEquipped!=null)
+        if (!built && TorsoEquipped != null)
         {
             TorsoEquipped.Animate(Animations.Idle);
             built = true;
         }
 
-        if (tutorial && tutorial.tutorialStage < 15)
-        {
-            equipItemButton.interactable = false;
-            return;
-        }
 
         if (changed)
         {
-            previewAbilities.text = abilities.setAbilities();
+            previewAbilities.text = abilities.setAbilities(list);
             changed = false;
+            combinedShop.Refresh = true;
         }
-        if (currentPart == null)
-        {
-            displayCurrent.text = "";
-            return;
-        }
-        if (!currentOwned)
-        {
-            equipItemButton.interactable = false;
-            displayCurrent.text = currentPart.gameObject.name + " is locked";
-        }
-        else
-        {
-            equipItemButton.interactable = true;
-            displayCurrent.text = currentPart.gameObject.name;
-        }
-    }
-
-    public void setType(int type)
-    {
-        currentType = (partType)type;
-        currentIndex = 0;
-        getPart();
-    }
-
-    public void changeIndex(bool plus)
-    {
-
-        if (plus)
-        {
-            if (currentIndex >= (currentList.Count - 1) || currentList.Count == 1)
-            {
-                currentIndex = 0;
-            }
-            else
-            {
-                currentIndex++;
-            }
-
-            if (currentList[currentIndex] == null)
-                return;
-
-            ItemPart part = currentList[currentIndex].GetComponent<ItemPart>();
-            if (!part.owned)
-            {
-                changeIndex(true);
-                return;
-            }
-
-        }
-        else
-        {
-            if (currentIndex == 0)
-            {
-                currentIndex = (currentList.Count - 1);
-            }
-            else
-            {
-                currentIndex--;
-            }
-
-            ItemPart part = currentList[currentIndex].GetComponent<ItemPart>();
-            if (!part.owned)
-            {
-                changeIndex(false);
-                return;
-            }
-
-        }
-        getPart();
     }
 
 
     public void addLimb()
     {
+        combinedShop.Refresh = true;
+
         changed = true;
 
         GameObject adding;
+
+        GameObject currentPart = combinedShop.currentPart; //The object, found at the index inside the list.
+
+        int currentIndex = combinedShop.currentIndex;
+
+        partType currentType = combinedShop.currentType;
+
+
 
         if (currentPart == null)
             return;
@@ -307,6 +235,10 @@ public class PartsManager : MonoBehaviour
 
     void addingTorso()
     {
+        GameObject currentPart = combinedShop.currentPart; //The object, found at the index inside the list.
+
+        int currentIndex = combinedShop.currentIndex;
+
         if (tutorial && tutorial.tutorialStage == 15)
         {
             tutorial.ProgressTutorial();
@@ -338,52 +270,5 @@ public class PartsManager : MonoBehaviour
 
 
         list.BuildCharacter(parentOfTorso, this);
-    }
-
-
-    public void getPart()
-    {
-        GameObject adding = null;
-        switch (currentType)
-        {
-            case partType.Torso:
-                currentList = list.listOfTorso;
-                adding = list.listOfTorso[currentIndex];
-                
-                break;
-            case partType.Head:
-                currentList = list.listofHeads;
-                adding = list.listofHeads[currentIndex];
-                break;
-            case partType.LeftArm:
-                currentList = list.listofLeftArms;
-                adding = list.listofLeftArms[currentIndex];
-                break;
-            case partType.RightArm:
-                currentList = list.listofRightArms;
-                adding = list.listofRightArms[currentIndex];
-                break;
-
-            case partType.LeftLeg:
-                currentList = list.listofLeftLegs;
-                adding = list.listofLeftLegs[currentIndex];
-                break;
-
-            case partType.RightLeg:
-                currentList = list.listofRightLegs;
-                adding = list.listofRightLegs[currentIndex];
-                break;
-
-            default:
-                break;
-        }
-        if (adding == null)
-        {
-            currentPart = null;
-            currentOwned = false;
-            return;
-        }
-        currentPart = adding;
-        currentOwned = adding.GetComponent<ItemPart>().owned;
     }
 }

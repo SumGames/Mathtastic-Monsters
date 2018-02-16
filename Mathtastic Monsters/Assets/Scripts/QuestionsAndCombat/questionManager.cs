@@ -17,6 +17,8 @@ public class questionManager : MonoBehaviour
 
     bool justTransitioned;
 
+    int failures = 0;
+
     void Update()
     {
         if (!transition)
@@ -63,6 +65,8 @@ public class questionManager : MonoBehaviour
         }
 
         float multiple = 1;
+
+        failures = 0;
 
         switch (a_running.Operator)
         {
@@ -112,7 +116,7 @@ public class questionManager : MonoBehaviour
                 oper = "÷ ";
                 break;
             default:
-                return CalculateBODMAS(numbers, a_running, resetTime);
+                return CalculateBODMAS(a_running, resetTime);
 
         }
 
@@ -283,8 +287,16 @@ public class questionManager : MonoBehaviour
         return op;
     }
 
-    bool CalculateBODMAS(float[] a_summing, QuizButton a_running, bool resetTime = true)
+    bool CalculateBODMAS(QuizButton a_running, bool resetTime = true)
     {
+        float[] randomised = new float[a_running.variableCount];
+
+        //Randomise as many numbers as required, within range.
+        for (int i = 0; i < a_running.variableCount; i++)
+        {
+            randomised[i] = (int)Random.Range(button.minNumber, (button.maxNumber + 1));
+        }
+
 
         List<int> summingNumbers = new List<int>(5);
 
@@ -317,8 +329,9 @@ public class questionManager : MonoBehaviour
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            summingNumbers.Add((int)a_summing[i]);
+            summingNumbers.Add((int)randomised[i]);
         }
+
 
         while (ops.Count > 0)
         {
@@ -357,8 +370,6 @@ public class questionManager : MonoBehaviour
 
                 summingNumbers[i] -= summingNumbers[(i + 1)];
 
-                Debug.Log(summingNumbers[i]);
-
                 summingNumbers.RemoveAt(i + 1);
                 ops.RemoveAt(i);
                 continue;
@@ -370,7 +381,7 @@ public class questionManager : MonoBehaviour
 
         if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
         {
-            rounding = PreventRounding(a_summing, a_running, answer);
+            rounding = PreventRounding(randomised, a_running, answer);
         }
 
 
@@ -378,9 +389,9 @@ public class questionManager : MonoBehaviour
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
+        if (answer <= a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
-            return CalculateBODMAS(a_summing, a_running, resetTime);
+            return CalculateBODMAS(a_running, resetTime);
 
         }
 
@@ -391,11 +402,11 @@ public class questionManager : MonoBehaviour
         string answerWords;
 
         answerWords = "   ";
-        answerWords += a_summing[0].ToString("F0");
+        answerWords += randomised[0].ToString("F0");
 
         for (int i = 1; i < a_running.variableCount; i++)
         {
-            answerWords += "\n" + operatorStrings[(i - 1)] + a_summing[i].ToString("F0");
+            answerWords += "\n" + operatorStrings[(i - 1)] + randomised[i].ToString("F0");
         }
 
         answerWords += "\n= ";
