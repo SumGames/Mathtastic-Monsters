@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 30
   minNumber: 10
   maxNumber: 99
   Operator: 6
@@ -3673,7 +3673,7 @@ RectTransform:
   m_LocalScale: {x: 1.019589, y: 1.0195888, z: 1.019589}
   m_Children: []
   m_Father: {fileID: 751589143}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7215,19 +7215,19 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
-  minNumber: 0
-  maxNumber: 0
-  Operator: 0
-  minAnswer: 1
-  maxAnswer: 100000
+  levelTime: 30
+  minNumber: 20
+  maxNumber: 60
+  Operator: 6
+  minAnswer: 10
+  maxAnswer: 140
   difficulty: 0
-  MonsterHealth: 6
-  MonsterAttack: 1
+  MonsterHealth: 10
+  MonsterAttack: 0.5
   preventRounding: 0
   secondFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 50
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
@@ -14070,7 +14070,6 @@ Transform:
   - {fileID: 508652010}
   - {fileID: 574737961}
   - {fileID: 1995756100}
-  - {fileID: 847845817}
   - {fileID: 189936180}
   - {fileID: 1589054713}
   - {fileID: 302607801}
@@ -16244,12 +16243,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850981980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 689.9749, y: 5.9913983, z: -5857.925}
+  m_LocalPosition: {x: 821.8749, y: -189.77861, z: -5857.925}
   m_LocalScale: {x: 63.500004, y: 63.500004, z: 63.500004}
   m_Children:
   - {fileID: 1352538777}
-  m_Father: {fileID: 751589143}
-  m_RootOrder: 4
+  m_Father: {fileID: 1446319019}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &847845818
 MonoBehaviour:
@@ -19857,7 +19856,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 30
   minNumber: 10
   maxNumber: 99
   Operator: 6
@@ -28742,6 +28741,7 @@ RectTransform:
   - {fileID: 1678135493}
   - {fileID: 1819195702}
   - {fileID: 230282087}
+  - {fileID: 847845817}
   m_Father: {fileID: 508652010}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31734,7 +31734,7 @@ Transform:
   m_LocalScale: {x: 32.626846, y: 42.858574, z: 1.019589}
   m_Children: []
   m_Father: {fileID: 751589143}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1597082201
 GameObject:
@@ -33682,7 +33682,7 @@ Prefab:
     - target: {fileID: 224387641006707752, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224387641006707752, guid: 7d5394e556008834994e831b06e0ceeb,
         type: 2}
@@ -34397,7 +34397,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 30
   minNumber: 10
   maxNumber: 99
   Operator: 6
@@ -35762,7 +35762,7 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 2
-  levelTime: 0
+  levelTime: 30
   minNumber: 10
   maxNumber: 99
   Operator: 6

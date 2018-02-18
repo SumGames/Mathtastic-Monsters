@@ -116,7 +116,7 @@ public class questionManager : MonoBehaviour
                 oper = "÷ ";
                 break;
             default:
-                return CalculateBODMAS(a_running, resetTime);
+                return CalculateBODMAS(a_running, 0, resetTime);
 
         }
 
@@ -287,7 +287,7 @@ public class questionManager : MonoBehaviour
         return op;
     }
 
-    bool CalculateBODMAS(QuizButton a_running, bool resetTime = true)
+    bool CalculateBODMAS(QuizButton a_running, int failures, bool resetTime = true)
     {
         float[] randomised = new float[a_running.variableCount];
 
@@ -389,11 +389,15 @@ public class questionManager : MonoBehaviour
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if (answer <= a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
+        if ((answer <= a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole) && failures < 20)
         {
-            return CalculateBODMAS(a_running, resetTime);
+            int failed = failures + 1;
+
+            return CalculateBODMAS(a_running, failed, resetTime);
 
         }
+        if (failures >= 20)
+            Debug.Log("Failed");
 
         string answerNeeded = answer.ToString("F0");
 

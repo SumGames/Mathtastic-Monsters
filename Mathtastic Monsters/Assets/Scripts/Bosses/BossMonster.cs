@@ -92,9 +92,6 @@ public class BossMonster : Monster
 
         CheckDeath(true);
 
-        Debug.Log("Player hit");
-
-
         CreateQuestion();
     }
     //Player attacks monster.
@@ -415,8 +412,6 @@ public class BossMonster : Monster
 
     internal void CreateMultipleChoice()
     {
-        Debug.Log("fort");
-
         abacus.gameObject.SetActive(true);
 
 
