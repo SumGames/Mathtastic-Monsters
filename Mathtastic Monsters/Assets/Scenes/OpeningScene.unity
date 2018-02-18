@@ -171,11 +171,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 21266256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -3.537, z: 2.131096}
-  m_LocalScale: {x: 0.38667357, y: 0.38667357, z: 0.38667357}
+  m_LocalPosition: {x: 2.8950713, y: -4.2059417, z: 1.1304567}
+  m_LocalScale: {x: 0.4123704, y: 0.4123704, z: 0.4123704}
   m_Children: []
-  m_Father: {fileID: 356642461}
-  m_RootOrder: 3
+  m_Father: {fileID: 1637232473}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &57410516
 GameObject:
@@ -500,7 +500,6 @@ Transform:
   - {fileID: 2103583345}
   - {fileID: 1259808528}
   - {fileID: 1793819494}
-  - {fileID: 21266258}
   m_Father: {fileID: 956008652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1993,7 +1992,7 @@ GameObject:
   - component: {fileID: 894900220}
   - component: {fileID: 894900219}
   m_Layer: 5
-  m_Name: Image
+  m_Name: AIE Stamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4051,6 +4050,7 @@ Transform:
   - {fileID: 726718451}
   - {fileID: 2006003337}
   - {fileID: 894900218}
+  - {fileID: 21266258}
   m_Father: {fileID: 956008652}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
