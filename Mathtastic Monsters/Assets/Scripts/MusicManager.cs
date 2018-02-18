@@ -130,12 +130,23 @@ public class MusicManager : MonoBehaviour
     {
         AudioClip adding = null;
 
-        if (a_boss)
+        int op;
+
+        if ((int)a_op > (int)operators.Division)
         {
-            adding = combatMusic[(int)a_op];
+            op = (int)operators.Fortress;
         }
         else
-            adding = bossMusic[(int)a_op];
+        {
+            op = (int)a_op;
+        }
+
+        if (a_boss)
+        {
+            adding = combatMusic[op];
+        }
+        else
+            adding = bossMusic[op];
 
         if (adding != null)
         {

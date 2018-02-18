@@ -248,11 +248,8 @@ public class BossMonster : Monster
                 CreateDivision();
                 break;
 
-            case operators.AddSub:
-            case operators.AddSubMult:
-            case operators.AddSubMultDiv:
-            case operators.Fortress:
-                CreateMultipleChoice();
+            default:
+                CreateCalculi();
                 break;
         }
 
@@ -410,7 +407,7 @@ public class BossMonster : Monster
         }
     }
 
-    internal void CreateMultipleChoice()
+    internal void CreateCalculi()
     {
         abacus.gameObject.SetActive(true);
 
