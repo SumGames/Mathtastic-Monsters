@@ -3,6 +3,7 @@ using UnityEngine;
 
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System;
 
 public class equipmentList : MonoBehaviour
 {
@@ -359,7 +360,7 @@ public class equipmentList : MonoBehaviour
         }
 
 
-        if (nameGiven == "Lilly")
+        if (String.Equals(nameGiven, "Lilly", StringComparison.OrdinalIgnoreCase))
         {
             ByPassRestrictions();
             return;

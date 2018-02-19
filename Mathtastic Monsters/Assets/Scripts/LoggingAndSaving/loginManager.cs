@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -99,7 +100,9 @@ public class loginManager : MonoBehaviour
             return;
         }
 
-        if (inputNames[(index - 1)].text == "Lilly")
+        bool lilly = String.Equals(inputNames[(index - 1)].text, "Lilly", StringComparison.OrdinalIgnoreCase);
+
+        if (lilly)
         {
             SetNameUsingIndex(index, inputNames[(index - 1)].text);
             list.startGame("Lilly", true);
