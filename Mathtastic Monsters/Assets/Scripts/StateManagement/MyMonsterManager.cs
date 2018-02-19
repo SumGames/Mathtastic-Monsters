@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MyMonsterManager : ParentsStateManager
 {
-    public GameObject mymonsterSelection; //The container that takes you to the monster overview
     public GameObject lillyhomeSelection; //Above, for Lillys home
 
 
@@ -39,9 +38,6 @@ public class MyMonsterManager : ParentsStateManager
         gameState = newState;
         switch (gameState)
         {
-            case playStatus.MyMonster:
-                mymonsterSelection.SetActive(true);
-                break;
             case playStatus.LillyHome:
                 lillyhomeSelection.SetActive(true);
 
@@ -59,7 +55,6 @@ public class MyMonsterManager : ParentsStateManager
     //Disables all objects by default so it doesn't have to be done manually.
     void disableObjects()
     {
-        mymonsterSelection.SetActive(false);
         lillyhomeSelection.SetActive(false);
     }
 
