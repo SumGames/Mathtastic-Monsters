@@ -42,7 +42,7 @@ public class questionManager : MonoBehaviour
 
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal bool MakeQuestion(QuizButton a_running, bool resetTime = true, OverRidePhases overRide = OverRidePhases.Default)
+    internal bool MakeQuestion(QuizButton a_running, bool bossAttacking=false)
     {
         if (calculator == null)
             calculator = FindObjectOfType<Calculator>();
@@ -116,7 +116,7 @@ public class questionManager : MonoBehaviour
                 oper = "÷ ";
                 break;
             default:
-                return CalculateBODMAS(a_running, 0, resetTime);
+                return CalculateBODMAS(a_running, 0, bossAttacking);
 
         }
 
@@ -134,13 +134,13 @@ public class questionManager : MonoBehaviour
         //if Answer is too low/too high, or requires rounding to solve, we try again.
         if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
         {
-            return MakeQuestion(a_running, resetTime, overRide);
+            return MakeQuestion(a_running, bossAttacking);
 
         }
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, multiple, overRide);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, multiple, bossAttacking);
 
         string answerWords;
 
@@ -287,7 +287,7 @@ public class questionManager : MonoBehaviour
         return op;
     }
 
-    bool CalculateBODMAS(QuizButton a_running, int failures, bool resetTime = true)
+    bool CalculateBODMAS(QuizButton a_running, int failures, bool bossAttacking)
     {
         float[] randomised = new float[a_running.variableCount];
 
@@ -393,7 +393,7 @@ public class questionManager : MonoBehaviour
         {
             int failed = failures + 1;
 
-            return CalculateBODMAS(a_running, failed, resetTime);
+            return CalculateBODMAS(a_running, failed, bossAttacking);
 
         }
         if (failures >= 20)
@@ -401,7 +401,7 @@ public class questionManager : MonoBehaviour
 
         string answerNeeded = answer.ToString("F0");
 
-        bool enemyPhase = container.SetMultiple((int)answer, a_running, resetTime, 1, OverRidePhases.Default);
+        bool enemyPhase = container.SetMultiple((int)answer, a_running, 1, bossAttacking);
 
         string answerWords;
 

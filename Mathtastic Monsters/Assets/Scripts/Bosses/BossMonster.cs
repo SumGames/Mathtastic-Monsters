@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum OverRidePhases
-{
-    Default,
-    EnemyAttack,
-    EnemyDefend
-
-}
-
-
 public class BossMonster : Monster
 {
     operators Operator; //Our current operator affects not just question, but mechanic/gimmick.
@@ -103,7 +94,7 @@ public class BossMonster : Monster
 
         if (Operator == operators.Multiplication)
         {
-            
+
 
             multiplicationHeads(1);
             return;
@@ -339,10 +330,10 @@ public class BossMonster : Monster
     }
 
     internal void CreateMultiplication()
-    {        
+    {
         if (multAttacks <= 0)
         {
-            questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+            questions.MakeQuestion(m_button, true);
             multiplicationContainer.gameObject.SetActive(false);
 
         }
@@ -367,7 +358,7 @@ public class BossMonster : Monster
 
         if (!enemyPhase)
         {
-            questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+            questions.MakeQuestion(m_button, true);
         }
         else
         {
@@ -412,7 +403,7 @@ public class BossMonster : Monster
         abacus.gameObject.SetActive(true);
 
 
-        questions.MakeQuestion(m_button, true, OverRidePhases.EnemyDefend);
+        questions.MakeQuestion(m_button, true);
 
 
         multipleContainer.DisableThisAndCalculator();
@@ -465,7 +456,7 @@ public class BossMonster : Monster
     int headCheck(int damage)
     {
         if (multHealthThree > 0)
-        {           
+        {
             multHealthThree -= damage;
 
             bar.SetEnemyBars(3, multHealthThree);

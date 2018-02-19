@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+
 public enum TransitioningObjects
 {
     SwapToMultiple,
@@ -77,10 +78,10 @@ public class multipleContainer : MonoBehaviour
     }
 
 
-    internal bool SetMultiple(int answer, QuizButton a_running, bool resetTime, float multiple, OverRidePhases overRide)
+    internal bool SetMultiple(int answer, QuizButton a_running, float multiple, bool BossAttacking=false)
     {
         enemyAnswerNeeded = answer;
-        if (overRide == OverRidePhases.Default)
+        if (!BossAttacking)
         {
             if (attacks > 0)
             {
@@ -94,11 +95,7 @@ public class multipleContainer : MonoBehaviour
                 attacking = true;
             }
         }
-        else if (overRide == OverRidePhases.EnemyAttack)
-        {
-            attacking = true;
-        }
-        else if (overRide == OverRidePhases.EnemyDefend)
+        else
         {
             attacking = false;
         }
@@ -117,13 +114,8 @@ public class multipleContainer : MonoBehaviour
             attacks--;
             TransitionButtons(false, a_running);
         }
-        if (!resetTime)
-        {
-            return true;
-        }
 
-
-        if (a_running && resetTime)
+        if (a_running)
         {
             player.SetTime(enemyPhase, a_running.enemPhaseTime);
         }
