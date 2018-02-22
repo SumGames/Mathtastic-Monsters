@@ -19,10 +19,10 @@ public class ArmPart : ItemPart
 
     public GameObject foot;
 
-    public GameObject Fourankle;
+
     public GameObject FourFoot;
 
-    public void EquipArm(TorsoPart torso, GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot, GameObject ankleSpot)
+    public void EquipArm(TorsoPart torso, GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot)
     {
         upperArmSpot.transform.localScale = Scale;
 
@@ -41,7 +41,7 @@ public class ArmPart : ItemPart
         if (FourFoot)
         {
             foot.SetActive(true);
-            Fourankle.SetActive(false);
+
             FourFoot.SetActive(false);
         }
 
@@ -60,12 +60,6 @@ public class ArmPart : ItemPart
             {
                 FourFoot.SetActive(true);
                 foot.SetActive(false);
-
-                Fourankle.SetActive(true);
-
-                if (ankleSpot)
-                    Fourankle.transform.SetParent(ankleSpot.transform, false);
-
             }
 
             if (armType == ArmType.FourLeg)
@@ -92,12 +86,14 @@ public class ArmPart : ItemPart
     {
         Destroy(foreArm);
         Destroy(hand);
-        Destroy(gameObject);
+        Destroy(foot);
         if (FourFoot)
         {
             Destroy(FourFoot);
-            Destroy(Fourankle);
         }
+
+        Destroy(gameObject);
+
     }
 
 }

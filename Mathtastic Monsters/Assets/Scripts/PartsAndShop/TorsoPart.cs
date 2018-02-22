@@ -60,8 +60,6 @@ public class TorsoPart : ItemPart
 
     public Renderer TorsoMesh;
 
-    public GameObject RightFrontAnkleSpot;
-    public GameObject leftFrontAnkleSpot;
 
 
     // Use this for initialization
