@@ -17,26 +17,74 @@ public class ArmPart : ItemPart
 
     public ArmType armType;
 
-    public void EquipArm(TorsoPart torso, GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot)
+    public GameObject foot;
+
+    public GameObject Fourankle;
+    public GameObject FourFoot;
+
+    public void EquipArm(TorsoPart torso, GameObject upperArmSpot, GameObject foreArmSpot,  GameObject handSpot, GameObject ankleSpot)
     {
         upperArmSpot.transform.localScale = Scale;
 
         transform.SetParent(upperArmSpot.transform, false);
-        foreArm.transform.SetParent(foreArm.transform, false);
-        hand.transform.SetParent(hand.transform, false);
-
-        if (torso.bodyType == BodyType.FourLeg && armType == ArmType.Biped)
+        if (torso.bodyType != BodyType.FourArm)
         {
-            transform.localScale = new Vector3(1, 1.4f, 1);
-            foreArm.transform.localScale = new Vector3(1, 1.4f, 1);
-            hand.transform.rotation = new Quaternion(0, 20, -70, 0);
-            hand.transform.localPosition += new Vector3(0, .1f, 0);
+            foreArm.transform.SetParent(foreArmSpot.transform, false);
+            hand.transform.SetParent(handSpot.transform, false);
+
+            foreArm.transform.localPosition = Vector3.zero;
+            foreArm.transform.localRotation = Quaternion.identity;
+
+            hand.transform.localPosition = Vector3.zero;
+            hand.transform.localRotation = Quaternion.identity;
+        }
+        if (FourFoot)
+        {
+            foot.SetActive(true);
+            Fourankle.SetActive(false);
+            FourFoot.SetActive(false);
         }
 
+        if (torso.bodyType == BodyType.FourLeg)
+        {
+            transform.localScale += new Vector3(0, .6f, 0);
+            foreArm.transform.localScale += new Vector3(0, .6f, 0);
+
+            hand.transform.rotation = new Quaternion(0, 20, -70, 0);
+            
+            foreArm.transform.localPosition += new Vector3(0, .2f, 0);
+
+            hand.transform.localPosition += new Vector3(0, -.15f, 0);
+
+            if (FourFoot)
+            {
+                FourFoot.SetActive(true);
+                foot.SetActive(false);
+
+                Fourankle.SetActive(true);
+
+                if (ankleSpot)
+                    Fourankle.transform.SetParent(ankleSpot.transform, false);
+
+            }
+
+            if (armType == ArmType.FourLeg)
+            {
+                foreArm.transform.localPosition += new Vector3(-0.036f, -0.07f, 0.045f);
+            }
+
+        }
         if (textureMaterial)
         {
             foreArm.GetComponentInChildren<Renderer>().material = textureMaterial;
             hand.GetComponentInChildren<Renderer>().material = textureMaterial;
+            if (FourFoot && FourFoot.gameObject.activeSelf)
+            {
+                foreach (Renderer item in FourFoot.GetComponentsInChildren<Renderer>())
+                {
+                    item.material = textureMaterial;
+                }
+            }
         }
     }
 
@@ -45,7 +93,11 @@ public class ArmPart : ItemPart
         Destroy(foreArm);
         Destroy(hand);
         Destroy(gameObject);
-
+        if (FourFoot)
+        {
+            Destroy(FourFoot);
+            Destroy(Fourankle);
+        }
     }
 
 }

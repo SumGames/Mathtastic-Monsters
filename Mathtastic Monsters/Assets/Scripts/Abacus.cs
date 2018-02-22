@@ -10,6 +10,11 @@ public class Abacus : MonoBehaviour
     public int ThreeValue;
     public int FourValue;
 
+    int onesDefault = 1;
+    int twosDeefault = 2;
+    int threesDefault = 10;
+    int foursDefault = 20;
+
 
     public GameObject[] OneBlocks;
     public GameObject[] oneSpotNegatives;

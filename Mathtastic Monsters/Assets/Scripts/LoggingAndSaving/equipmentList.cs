@@ -397,7 +397,7 @@ public class equipmentList : MonoBehaviour
         {
             GameObject adding = Instantiate(currentLeftArmPrefab, parent.LeftArmUpper.transform, false);
             ArmPart armPart = adding.GetComponent<ArmPart>();
-            armPart.EquipArm(parent, parent.LeftArmUpper, parent.LeftArmFore, parent.LeftArmHand);
+            armPart.EquipArm(parent, parent.LeftArmUpper, parent.LeftArmFore, parent.LeftArmHand, parent.leftFrontAnkleSpot);
             if (caller != null)
             {
                 caller.leftArmEquipped = armPart;
@@ -408,7 +408,7 @@ public class equipmentList : MonoBehaviour
             GameObject adding = Instantiate(currentRightArmPrefab, parent.RightArmUpper.transform, false);
             ArmPart armPart = adding.GetComponent<ArmPart>();
 
-            armPart.EquipArm(parent, parent.RightArmUpper, parent.RightArmFore, parent.RightArmHand);
+            armPart.EquipArm(parent, parent.RightArmUpper, parent.RightArmFore, parent.RightArmHand, null);
             if (caller != null)
             {
                 caller.rightArmEquipped = armPart;
@@ -448,7 +448,7 @@ public class equipmentList : MonoBehaviour
                 GameObject adding = Instantiate(currentRightArmPrefab, parent.LowerRightArmUpper.transform, false);
                 ArmPart armPart = adding.GetComponent<ArmPart>();
 
-                armPart.EquipArm(parent, parent.LowerRightArmUpper, parent.LowerRightArmFore, parent.LowerRightArmHand);
+                armPart.EquipArm(parent, parent.LowerRightArmUpper, parent.LowerRightArmFore, parent.LowerRightArmHand, parent.RightFrontAnkleSpot);
             }
 
             if (currentLeftArmPrefab != null)
@@ -456,7 +456,7 @@ public class equipmentList : MonoBehaviour
                 GameObject adding = Instantiate(currentLeftArmPrefab, parent.LowerLeftArmUpper.transform, false);
                 ArmPart armPart = adding.GetComponent<ArmPart>();
 
-                armPart.EquipArm(parent, parent.LowerLeftArmUpper, parent.LowerLeftArmFore, parent.LowerLeftArmHand);
+                armPart.EquipArm(parent, parent.LowerLeftArmUpper, parent.LowerLeftArmFore, parent.LowerLeftArmHand, null);
             }
 
         }
