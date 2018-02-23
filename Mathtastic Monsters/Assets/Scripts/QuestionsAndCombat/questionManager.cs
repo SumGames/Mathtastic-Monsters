@@ -245,7 +245,7 @@ public class questionManager : MonoBehaviour
         return false;
     }
 
-    bool IsWhole(float answer)
+    internal bool IsWhole(float answer)
     {
         if (Mathf.Floor(answer) == answer)
         {

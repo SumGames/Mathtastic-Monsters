@@ -155,7 +155,7 @@ public class MultiplicationContainer : MonoBehaviour
                 multiplicationBoxes[i] = box;
                 multiplicationBoxes[i].GetComponent<Image>().color = Color.yellow;
 
-                if (i == 1)
+                if (multiplicationBoxes[0] && multiplicationBoxes[1])
                     submit.interactable = true;
 
                 return;
