@@ -17,7 +17,8 @@ public class questionManager : MonoBehaviour
 
     bool justTransitioned;
 
-    int failures = 0;
+
+    public float answer;
 
     void Update()
     {
@@ -53,7 +54,7 @@ public class questionManager : MonoBehaviour
         button = a_running;
 
         float[] numbers = new float[button.variableCount];
-        float answer = -2;
+        answer = -2;
         string oper = "";
 
         int rand = 1;
@@ -66,7 +67,6 @@ public class questionManager : MonoBehaviour
 
         float multiple = 1;
 
-        failures = 0;
 
         switch (a_running.Operator)
         {
@@ -256,7 +256,7 @@ public class questionManager : MonoBehaviour
     }
 
 
-    List<operators> ChooseOperators(operators main, int size)
+    internal List<operators> ChooseOperators(operators main, int size)
     {
         int newOp = 0;
 
@@ -375,13 +375,13 @@ public class questionManager : MonoBehaviour
                 continue;
             }
         }
-        int answer = summingNumbers[0];
+        answer = summingNumbers[0];
 
         bool rounding = a_running.preventRounding;
 
         if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
         {
-            rounding = PreventRounding(randomised, a_running, answer);
+            rounding = PreventRounding(randomised, a_running, (int)answer);
         }
 
 

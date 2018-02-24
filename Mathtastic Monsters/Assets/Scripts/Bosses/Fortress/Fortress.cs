@@ -1,109 +1,114 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fortress : MonoBehaviour
 {
-
-    /*
     public questionManager questionManager;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
-    bool CalculateBODMAS(QuizButton a_running, int failures, bool bossAttacking)
+
+    float[] variablesUsed;
+
+    List<operators> StoredOps;
+
+    float AnswerNeeded;
+
+    public FortressButton[] FortressButtons;
+
+
+    public Button Defend;
+
+    public Text[] operatorsText;
+
+    public Text AnswerText;
+
+    int variableCount;
+
+
+    public FortressDragger[] Draggers;
+
+
+    public BossMonster bossMonster;
+
+
+    // Update is called once per frame
+    void Update()
     {
-        float[] randomised = new float[a_running.variableCount];
+
+    }
+
+    internal void CalculateBODMAS(QuizButton a_running, int failures)
+    {
+        variableCount = a_running.variableCount;
+
+
+        variablesUsed = new float[variableCount];
 
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            randomised[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
+            variablesUsed[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
         }
 
 
         List<int> summingNumbers = new List<int>(5);
 
+        List<operators> summingOps;
 
-        List<operators> ops = ChooseOperators(a_running.Operator, (a_running.variableCount - 1));
+        summingOps = questionManager.ChooseOperators(a_running.Operator, (variableCount - 1));
 
-        string[] operatorStrings = new string[ops.Count];
 
-        for (int i = 0; i < operatorStrings.Length; i++)
-        {
-            switch (ops[i])
-            {
-                case operators.Addition:
-                    operatorStrings[i] = "+ ";
-                    break;
-                case operators.Subtraction:
-                    operatorStrings[i] = "- ";
-                    break;
-                case operators.Multiplication:
-                    operatorStrings[i] = "x ";
-                    break;
-                case operators.Division:
-                    operatorStrings[i] = "/ ";
-                    break;
-                default:
-                    break;
-            }
-        }
+        StoredOps = new List<operators>(summingOps);
+
+
 
         //Randomise as many numbers as required, within range.
-        for (int i = 0; i < a_running.variableCount; i++)
+        for (int i = 0; i < variableCount; i++)
         {
-            summingNumbers.Add((int)randomised[i]);
+            summingNumbers.Add((int)variablesUsed[i]);
         }
 
 
-        while (ops.Count > 0)
+        while (summingOps.Count > 0)
         {
-            if (ops.Contains(operators.Division))
+            if (summingOps.Contains(operators.Division))
             {
-                int i = ops.IndexOf(operators.Division);
+                int i = summingOps.IndexOf(operators.Division);
 
                 summingNumbers[i] /= summingNumbers[(i + 1)];
                 summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
+                summingOps.RemoveAt(i);
                 continue;
             }
 
-            if (ops.Contains(operators.Multiplication))
+            if (summingOps.Contains(operators.Multiplication))
             {
-                int i = ops.IndexOf(operators.Multiplication);
+                int i = summingOps.IndexOf(operators.Multiplication);
 
                 summingNumbers[i] *= summingNumbers[(i + 1)];
                 summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
+                summingOps.RemoveAt(i);
                 continue;
             }
 
-            if (ops.Contains(operators.Addition))
+            if (summingOps.Contains(operators.Addition))
             {
-                int i = ops.IndexOf(operators.Addition);
+                int i = summingOps.IndexOf(operators.Addition);
 
                 summingNumbers[i] += summingNumbers[(i + 1)];
                 summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
+                summingOps.RemoveAt(i);
                 continue;
             }
-            if (ops.Contains(operators.Subtraction))
+            if (summingOps.Contains(operators.Subtraction))
             {
-                int i = ops.IndexOf(operators.Subtraction);
+                int i = summingOps.IndexOf(operators.Subtraction);
 
                 summingNumbers[i] -= summingNumbers[(i + 1)];
 
                 summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
+                summingOps.RemoveAt(i);
                 continue;
             }
         }
@@ -118,64 +123,177 @@ public class Fortress : MonoBehaviour
         {
             int failed = failures + 1;
 
-            return CalculateBODMAS(a_running, failed, bossAttacking);
-
+            CalculateBODMAS(a_running, failed);
+            return;
         }
+
         if (failures >= 20)
             Debug.Log("Failed");
 
-        string answerNeeded = answer.ToString("F0");
+
+        ResetAll();
 
 
 
-        string answerWords;
+        AnswerNeeded = summingNumbers[0];
 
-        answerWords = "   ";
-        answerWords += randomised[0].ToString("F0");
 
-        for (int i = 1; i < a_running.variableCount; i++)
+        for (int i = 0; i < operatorsText.Length; i++)
         {
-            answerWords += "\n" + operatorStrings[(i - 1)] + randomised[i].ToString("F0");
-        }
-
-        answerWords += "\n= ";
-        GetComponent<Text>().text = answerWords;
-
-        calculator.answerNeeded = answerNeeded;
-
-        return enemyPhase;
-    }
-
-
-    List<operators> ChooseOperators(operators main, int size)
-    {
-        int newOp = 0;
-
-        List<operators> op = new List<operators>();
-
-        for (int i = 0; i < size; i++)
-        {
-
-            switch (main)
+            if (i < (variableCount - 1))
             {
-                case operators.AddSub:
-                    newOp = Random.Range(0, 2);
-                    break;
-                case operators.AddSubMult:
-                    newOp = Random.Range(0, 3);
-                    break;
-                case operators.AddSubMultDiv:
-                    newOp = Random.Range(0, 4);
-                    break;
-                case operators.Fortress:
-                    newOp = Random.Range(0, 4);
-                    break;
-                default:
-                    break;
+
+                switch (StoredOps[i])
+                {
+                    case operators.Addition:
+                        operatorsText[i].text = "+ ";
+                        break;
+                    case operators.Subtraction:
+                        operatorsText[i].text = "- ";
+                        break;
+                    case operators.Multiplication:
+                        operatorsText[i].text = "x ";
+                        break;
+                    case operators.Division:
+                        operatorsText[i].text = "/ ";
+                        break;
+                    default:
+                        break;
+                }
             }
-            op.Add((operators)newOp);
+            else
+            {
+                operatorsText[i].gameObject.SetActive(false);
+                FortressButtons[(i + 1)].gameObject.SetActive(false);
+            }
         }
-        return op;
+        AnswerText.text = " = " + AnswerNeeded.ToString();
+
+        SetDraggers();
+
+        Defend.interactable = false;
     }
-    */
+
+
+    void SetDraggers()
+    {
+
+        for (int i = 0; i < variableCount; i++)
+        {
+            int index = Random.Range(0, 3);
+
+            while (Draggers[index].DraggerAnswer > 0)
+            {
+                index = Random.Range(0, 3);
+            }
+
+            Draggers[index].SetDragger((int)variablesUsed[i]);
+        }
+    }
+
+    internal bool CheckDefenceReady()
+    {
+
+        for (int i = 0; i < variableCount; i++)
+        {
+            if (!FortressButtons[i].draggedIn)
+            {
+                Defend.interactable = false;
+                return false;
+            }
+        }
+        Defend.interactable = true;
+
+        return true;
+    }
+
+    public void FortressDefend()
+    {
+        if (!CheckDefenceReady())
+            return;
+
+
+        List<int> summingNumbers = new List<int>();
+
+        List<operators> summingOps;
+
+
+        summingOps = new List<operators>(StoredOps);
+
+        for (int i = 0; i < variableCount; i++)
+        {
+            summingNumbers.Add(FortressButtons[i].draggedIn.DraggerAnswer);
+        }
+
+
+        while (summingOps.Count > 0)
+        {
+            if (summingOps.Contains(operators.Division))
+            {
+                int i = summingOps.IndexOf(operators.Division);
+
+                summingNumbers[i] /= summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
+                summingOps.RemoveAt(i);
+                continue;
+            }
+
+            if (summingOps.Contains(operators.Multiplication))
+            {
+                int i = summingOps.IndexOf(operators.Multiplication);
+
+                summingNumbers[i] *= summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
+                summingOps.RemoveAt(i);
+                continue;
+            }
+
+            if (summingOps.Contains(operators.Addition))
+            {
+                int i = summingOps.IndexOf(operators.Addition);
+
+                summingNumbers[i] += summingNumbers[(i + 1)];
+                summingNumbers.RemoveAt(i + 1);
+                summingOps.RemoveAt(i);
+                continue;
+            }
+            if (summingOps.Contains(operators.Subtraction))
+            {
+                int i = summingOps.IndexOf(operators.Subtraction);
+
+                summingNumbers[i] -= summingNumbers[(i + 1)];
+
+                summingNumbers.RemoveAt(i + 1);
+                summingOps.RemoveAt(i);
+                continue;
+            }
+        }
+
+
+        int answer = summingNumbers[0];
+
+        if (answer == AnswerNeeded)
+        {
+            bossMonster.MonsterHurt();
+        }
+        else
+        {
+            bossMonster.EnemyAttack();
+        }
+    }
+
+    void ResetAll()
+    {
+        foreach (FortressButton item in FortressButtons)
+        {
+            item.ResetButton();
+        }
+        foreach (FortressDragger item in Draggers)
+        {
+            item.ResetDragger();
+
+        }
+
+    }
+
 }

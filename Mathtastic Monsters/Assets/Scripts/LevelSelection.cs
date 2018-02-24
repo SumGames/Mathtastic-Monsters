@@ -60,7 +60,6 @@ public class LevelSelection : MonoBehaviour
             }
             if (swipeTime > swipeTimeNeeded && swipeDistance > minSwipeDistance)
             {
-                Debug.Log(swipeDistance);
                 IncrementIndex(swipeDirectionPositive);
             }
         }

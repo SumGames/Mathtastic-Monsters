@@ -29,8 +29,6 @@ public class BossMonster : Monster
 
     public MultiplicationContainer multiplicationContainer;
 
-    public Abacus abacus;
-
     public Calculator calculator;
 
 
@@ -45,6 +43,9 @@ public class BossMonster : Monster
 
     public SubtractionContainer subtractionContainer;
 
+    public Fortress Fortress;
+    public GameObject DefendSide;
+    public Abacus abacus;
 
     // Use this for initialization
     void Start()
@@ -223,6 +224,8 @@ public class BossMonster : Monster
 
         subtractionContainer.gameObject.SetActive(false);
 
+        Fortress.gameObject.SetActive(false);
+
         switch (Operator)
         {
             case operators.Addition:
@@ -390,23 +393,62 @@ public class BossMonster : Monster
             case operators.Division:
                 bossDivision.gameObject.SetActive(setActive);
                 break;
-            case operators.AddSubMultDiv:
-                abacus.gameObject.SetActive(setActive);
-                break;
             default:
+                Fortress.gameObject.SetActive(setActive);
                 break;
         }
     }
 
     internal void CreateCalculi()
     {
-        abacus.gameObject.SetActive(true);
+        Fortress.gameObject.SetActive(true);
+
+        if (!enemyPhase)
+        {
+            DefendSide.SetActive(false);
+
+            enemyPhase = true;
+
+            questions.MakeQuestion(m_button, true);
+
+            if (m_button.quizIndex < 9)
+            {
+                abacus.gameObject.SetActive(false);
+                return;
+            }
+            else if (m_button.quizIndex < 13)
+            {
+                abacus.gameObject.SetActive(true);
+                abacus.ResetAbacus(false, questions.answer);
+
+                multipleContainer.DisableThisAndCalculator();
+                return;
+            }
+            else
+            {
+                abacus.gameObject.SetActive(true);
+                abacus.ResetAbacus(false, questions.answer);
+
+                multipleContainer.DisableThisAndCalculator();
+                return;
+            }
+        }
+        else
+        {
+            multipleContainer.DisableThisAndCalculator();
+
+            questions.GetComponent<Text>().text = "";
+
+            DefendSide.SetActive(true);
+            abacus.gameObject.SetActive(false);
 
 
-        questions.MakeQuestion(m_button, true);
 
+            enemyPhase = false;
+            Fortress.CalculateBODMAS(m_button, 0);
 
-        multipleContainer.DisableThisAndCalculator();
+            player.SetTime(true, m_button.levelTime);
+        }
     }
 
 

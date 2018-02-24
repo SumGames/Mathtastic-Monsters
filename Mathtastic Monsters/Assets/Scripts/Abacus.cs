@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Abacus : MonoBehaviour
 {
-    public int OneValue;
-    public int TwoValue;
-    public int ThreeValue;
-    public int FourValue;
+    int OneValue;
+    int TwoValue;
+    int ThreeValue;
+    int FourValue;
 
     int onesDefault = 1;
-    int twosDeefault = 2;
+    int twosDefault = 2;
     int threesDefault = 10;
     int foursDefault = 20;
 
@@ -56,20 +56,28 @@ public class Abacus : MonoBehaviour
 
     float timer;
 
-    // Use this for initialization
-    void Start()
+    public void ResetAbacus(bool random, float Goal)
     {
+        ClickBarOne(OneBlocks.Length);
+        ClickBarTwo(TwoBlocks.Length);
+        ClickBarThree(ThreeBlocks.Length);
+        ClickBarFour(FourBlocks.Length);
 
-
-        if (testing)
+        if (random)
         {
-            SetRandom();
+            SetRandom((int)Goal);
 
         }
         else
         {
-            setText();
+            OneValue = onesDefault;
+            TwoValue = twosDefault;
+            ThreeValue = threesDefault;
+            FourValue = foursDefault;
+
         }
+        setText();
+
     }
 
     void setText()
@@ -87,12 +95,19 @@ public class Abacus : MonoBehaviour
 
     }
 
-    internal void SetRandom()
+    internal void SetRandom(int goal=0)
     {
-        Total = Random.Range(10, 200);
+        if (goal == 0)
+        {
 
-        GoalText.text = "Goal is: " + Total.ToString();
+            Total = Random.Range(10, 200);
 
+            GoalText.text = "Goal is: " + Total.ToString();
+        }
+        else
+        {
+            Total = goal;
+        }
 
         int remaining = Total;
 
@@ -128,8 +143,6 @@ public class Abacus : MonoBehaviour
 
             FourValue = value / bars;
         }
-
-        setText();
     }
 
 
