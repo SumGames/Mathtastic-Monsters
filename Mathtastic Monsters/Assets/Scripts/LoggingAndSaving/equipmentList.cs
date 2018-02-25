@@ -239,7 +239,7 @@ public class equipmentList : MonoBehaviour
     //Build the arrays for the equipmentlists, and set everything to false/0/null.
     void NewGame()
     {
-        equip.StarsAcquired = new int[50];
+        equip.StarsAcquired = new int[75];
 
         PlayerPrefs.SetInt("Transitions", 1);
 
@@ -469,7 +469,7 @@ public class equipmentList : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            equip.completedLevels[i] = 11;
+            equip.completedLevels[i] = 16;
         }
         equip.shards = 999999;
 

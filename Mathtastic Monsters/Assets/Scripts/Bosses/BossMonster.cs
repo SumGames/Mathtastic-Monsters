@@ -190,7 +190,7 @@ public class BossMonster : Monster
 
         if (Operator > operators.Division && m_button.quizIndex < 9)
         {
-            Fortress.SetPatience(10);
+            Fortress.SetPatience(5);
         }
         else
         {
