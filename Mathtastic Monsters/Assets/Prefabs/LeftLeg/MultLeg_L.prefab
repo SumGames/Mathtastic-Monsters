@@ -140,23 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1821012921938716
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4356211587742888}
-  - component: {fileID: 33723780960728566}
-  - component: {fileID: 23701814715721858}
-  m_Layer: 0
-  m_Name: Preset_Foot_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1985696545022282
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,11 +176,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513868398877712}
-  m_LocalRotation: {x: -0.000000029802322, y: 0.7679695, z: -0, w: 0.6404864}
-  m_LocalPosition: {x: -0.51, y: 1.43, z: 1.36}
-  m_LocalScale: {x: 40, y: 35, z: 40}
+  m_LocalRotation: {x: 0.21060692, y: 0.6750147, z: 0.67501456, w: 0.21060687}
+  m_LocalPosition: {x: 0.028719172, y: -0.061382387, z: 0.039916277}
+  m_LocalScale: {x: 1.3123386, y: 1.1482944, z: 1.3123384}
   m_Children: []
-  m_Father: {fileID: 4356211587742888}
+  m_Father: {fileID: 4796784827465222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 100.344, z: 0}
 --- !u!4 &4354533662985212
@@ -213,20 +196,6 @@ Transform:
   m_Father: {fileID: 4890244810225204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -24.136002, y: -2.7810001, z: 6.7760005}
---- !u!4 &4356211587742888
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821012921938716}
-  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: 0.27059793, w: 0.65328157}
-  m_LocalPosition: {x: 0.008999982, y: -0.018000104, z: -0.006999825}
-  m_LocalScale: {x: 0.032808438, y: 0.032808404, z: 0.032808438}
-  m_Children:
-  - {fileID: 4112990739637012}
-  m_Father: {fileID: 4796784827465222}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 90}
 --- !u!4 &4432740975963060
 Transform:
   m_ObjectHideFlags: 1
@@ -281,7 +250,7 @@ Transform:
   m_LocalPosition: {x: -0.24601099, y: 1.1055498, z: 0.1139984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4356211587742888}
+  - {fileID: 4112990739637012}
   m_Father: {fileID: 4686369478238710}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -473,38 +442,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23701814715721858
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821012921938716}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 5c12f6936f515674cabd5fe77f5b86ca, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!33 &33351598697374240
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -519,13 +456,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513868398877712}
   m_Mesh: {fileID: 4300012, guid: 7850ac37dae1cae4c8e90beee3e74029, type: 3}
---- !u!33 &33723780960728566
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821012921938716}
-  m_Mesh: {fileID: 4300030, guid: 5ac4f47cd522fe149a57ba622e91afd5, type: 3}
 --- !u!33 &33739729973533880
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -559,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
+  owned: 0
   cost: 0
   ability: 0
   textureMaterial: {fileID: 0}
