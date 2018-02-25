@@ -58,10 +58,7 @@ public class Abacus : MonoBehaviour
 
     public void ResetAbacus(bool random, float Goal)
     {
-        ClickBarOne(OneBlocks.Length - 1);
-        ClickBarTwo(TwoBlocks.Length - 1);
-        ClickBarThree(ThreeBlocks.Length - 1);
-        ClickBarFour(FourBlocks.Length - 1);
+        ResetBars();
 
         if (random)
         {
@@ -145,6 +142,21 @@ public class Abacus : MonoBehaviour
         }
     }
 
+
+    void ResetBars()
+    {
+        for (int i = (OneBlocks.Length-1); i >= 0; i--)
+        {
+            OneBlocks[i].transform.position = oneSpotNegatives[i].transform.position;
+            shiftedOnes[i] = false;
+            TwoBlocks[i].transform.position = TwoSpotNegatives[i].transform.position;
+            shiftedTwos[i] = false;
+            ThreeBlocks[i].transform.position = ThreeSpotNegatives[i].transform.position;
+            shiftedThrees[i] = false;
+            FourBlocks[i].transform.position = FourSpotNegatives[i].transform.position;
+            shiftedFours[i] = false;
+        }
+    }
 
 
     public void ClickBarOne(int index)

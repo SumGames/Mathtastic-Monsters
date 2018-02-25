@@ -16,7 +16,6 @@ public class CombinedShop : MonoBehaviour
     public Button CurrentButton; //Turns off if we don't own this item.
 
     public Button BuyOrEquip;
-    public Text BuyOrEquipText;
 
 
 
@@ -32,6 +31,8 @@ public class CombinedShop : MonoBehaviour
     int stars;
 
     internal bool Refresh;
+
+    public SelectPartTypes selectPart;
 
     // Use this for initialization
     internal void Begin (equipmentList a_list)
@@ -68,7 +69,6 @@ public class CombinedShop : MonoBehaviour
         if (currentPart == null)
         {
             BuyOrEquip.interactable = false;
-            BuyOrEquipText.text = "";
             displayCurrent.text = "";
             return;
         }
@@ -87,32 +87,31 @@ public class CombinedShop : MonoBehaviour
             displayCurrent.text = currentPart.gameObject.name;
         }
 
-        BuyOrEquipText.text = "Buy";
-
         if (part.owned)
         {
             BuyOrEquip.interactable = true;
-            BuyOrEquipText.text = "Equip.";
+            selectPart.SelectEquipButton(true);
             return;
         }       
         else if (stars < part.starRequired)
         {
             displayCurrent.text = "Not enough Stars.\n Needs " + part.starRequired + " Stars";
             BuyOrEquip.interactable = false;
+            selectPart.SelectEquipButton(false);
         }
 
         else if (manager.shards < part.cost)
         {
             displayCurrent.text = "Can't afford.\n Costs " + part.cost + " Shards";
             BuyOrEquip.interactable = false;
+            selectPart.SelectEquipButton(false);
         }
         else
         {
-            displayCurrent.text = "Buy " + currentPart.gameObject.name + "?";
+            displayCurrent.text = "Buy " + currentPart.gameObject.name + "for " + part.cost + "?";
 
             BuyOrEquip.interactable = true;
-
-            BuyOrEquipText.text = "Buy " + currentPart.gameObject.name + "for " + part.cost + "?";
+            selectPart.SelectEquipButton(false);
         }
     }
 
@@ -121,6 +120,8 @@ public class CombinedShop : MonoBehaviour
         currentType = (partType)type;
         currentIndex = 0;
         getPart();
+
+        shop.ReadyPart();
 
         Refresh = true;
 

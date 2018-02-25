@@ -600,7 +600,7 @@ public class BossMonster : Monster
     {
         AbacusAttempts = arrows;
 
-        if (arrows < 0)
+        if (arrows <= 0)
             return false;
 
         ArrowContainer.gameObject.SetActive(true);

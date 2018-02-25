@@ -2,9 +2,6 @@
 
 public class BossButton : QuizButton
 {
-    public int maxDepth = -3; //The level the Subtraction boss will run to when hurt.
-
-
     public override void buttonUsed(phases phase)
     {
         p_manager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
