@@ -58,10 +58,10 @@ public class Abacus : MonoBehaviour
 
     public void ResetAbacus(bool random, float Goal)
     {
-        ClickBarOne(OneBlocks.Length);
-        ClickBarTwo(TwoBlocks.Length);
-        ClickBarThree(ThreeBlocks.Length);
-        ClickBarFour(FourBlocks.Length);
+        ClickBarOne(OneBlocks.Length - 1);
+        ClickBarTwo(TwoBlocks.Length - 1);
+        ClickBarThree(ThreeBlocks.Length - 1);
+        ClickBarFour(FourBlocks.Length - 1);
 
         if (random)
         {

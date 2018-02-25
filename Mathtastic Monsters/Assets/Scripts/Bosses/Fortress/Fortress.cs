@@ -31,6 +31,10 @@ public class Fortress : MonoBehaviour
 
     public BossMonster bossMonster;
 
+    public GameObject patience;
+    public Text PatienceText;
+    int PatienceLeft;
+
 
     // Update is called once per frame
     void Update()
@@ -269,12 +273,16 @@ public class Fortress : MonoBehaviour
             }
         }
 
-
         int answer = summingNumbers[0];
 
         if (answer == AnswerNeeded)
         {
-            bossMonster.MonsterHurt();
+            if (patience.gameObject.activeSelf)
+            {
+                SetPatience();
+            }
+
+            bossMonster.CreateQuestion();
         }
         else
         {
@@ -293,7 +301,27 @@ public class Fortress : MonoBehaviour
             item.ResetDragger();
 
         }
-
     }
 
+    internal void SetPatience(int a_PatienceSet=-1)
+    {
+        if (a_PatienceSet > 0)
+        {
+            PatienceLeft = a_PatienceSet;
+            patience.SetActive(true);
+            PatienceText.text = PatienceLeft.ToString();
+            return;
+        }
+        PatienceLeft--;
+
+        if (PatienceLeft < 0)
+        {
+            bossMonster.health = -2;
+            bossMonster.CheckDeath(true);
+            bossMonster.sprite.gameObject.SetActive(false);
+        }
+
+        patience.SetActive(true);
+        PatienceText.text = PatienceLeft.ToString();
+    }
 }

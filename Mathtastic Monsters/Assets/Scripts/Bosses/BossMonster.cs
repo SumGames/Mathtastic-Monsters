@@ -47,6 +47,13 @@ public class BossMonster : Monster
     public GameObject DefendSide;
     public Abacus abacus;
 
+
+    public GameObject ArrowContainer;
+    public GameObject ArrowStart;
+    int AbacusAttempts;
+    public GameObject[] Arrows;
+    bool ArrowsFired;
+
     // Use this for initialization
     void Start()
     {
@@ -58,13 +65,30 @@ public class BossMonster : Monster
     //Update healthbar as it changes.
     void Update()
     {
+        if (ArrowsFired)
+        {
+            abacus.gameObject.SetActive(false);
+
+            if (ArrowContainer.transform.localPosition.x < 0)
+            {
+                ArrowContainer.transform.localPosition += new Vector3(350 * Time.deltaTime, 0, 0);
+            }
+            else
+            {
+                ArrowsFired = false;
+
+                CalculusDamage(AbacusAttempts);
+                ArrowContainer.gameObject.SetActive(false);
+            }
+        }
 
     }
-
 
     //Player was wrong or so slow, enemy gets an attack!
     internal override void EnemyAttack()
     {
+        if (ArrowsFired)
+            return;
 
         if (feedback == null)
             feedback = FindObjectOfType<combatFeedback>();
@@ -139,6 +163,9 @@ public class BossMonster : Monster
     //Monster is initiated.
     public override void loadMonster()
     {
+        ArrowsFired = false;
+        ArrowContainer.SetActive(false);
+
         questions = FindObjectOfType<questionManager>();
 
         if (!multipleContainer)
@@ -159,6 +186,15 @@ public class BossMonster : Monster
             m_button.enemyChoices = 2;
             m_button.enemyAnswerRange = 3;
             bossSpacing = 4;
+        }
+
+        if (Operator > operators.Division && m_button.quizIndex < 9)
+        {
+            Fortress.SetPatience(10);
+        }
+        else
+        {
+            Fortress.patience.gameObject.SetActive(false);
         }
 
         if (sprite != null)
@@ -403,6 +439,8 @@ public class BossMonster : Monster
     {
         Fortress.gameObject.SetActive(true);
 
+        ArrowContainer.gameObject.SetActive(false);
+
         if (!enemyPhase)
         {
             DefendSide.SetActive(false);
@@ -418,6 +456,10 @@ public class BossMonster : Monster
             }
             else if (m_button.quizIndex < 13)
             {
+
+                ArrowContainer.gameObject.SetActive(true);
+                setArrows(3);
+
                 abacus.gameObject.SetActive(true);
                 abacus.ResetAbacus(false, questions.answer);
 
@@ -426,6 +468,9 @@ public class BossMonster : Monster
             }
             else
             {
+                setArrows(3);
+                ArrowContainer.gameObject.SetActive(true);
+
                 abacus.gameObject.SetActive(true);
                 abacus.ResetAbacus(false, questions.answer);
 
@@ -538,11 +583,67 @@ public class BossMonster : Monster
     {
         if (abacus.CalculateTotal().ToString() == calculator.answerNeeded)
         {
-            MonsterHurt();
+            ArrowsFired = true;
         }
         else
         {
-            EnemyAttack();
+            Debug.Log(AbacusAttempts);
+
+            if (!setArrows((AbacusAttempts - 1)))
+            {
+                EnemyAttack();
+            }
         }
+    }
+
+    bool setArrows(int arrows)
+    {
+        AbacusAttempts = arrows;
+
+        if (arrows < 0)
+            return false;
+
+        ArrowContainer.gameObject.SetActive(true);
+        ArrowContainer.transform.localPosition = ArrowStart.transform.localPosition;
+
+        for (int i = 0; i < Arrows.Length; i++)
+        {
+            if (i < arrows)
+            {
+                Arrows[i].gameObject.SetActive(true);
+            }
+            else
+                Arrows[i].gameObject.SetActive(false);
+        }
+
+        return true;
+    }
+
+    internal void CalculusDamage(int inflicted)
+    {
+        if (feedback == null)
+            feedback = FindObjectOfType<combatFeedback>();
+
+
+        if (animator)
+            animator.Play("Hurt");
+
+        sprite.transform.localPosition = startingPosition;
+        sprite.transform.localRotation = startingRotation;
+
+
+        if (feedback == null)
+            feedback = FindObjectOfType<combatFeedback>();
+
+        feedback.DamageSet(SetFeedback.EnemyHit);
+
+        health -= inflicted;
+
+        bar.changeHealth(false, health);
+
+        CreateQuestion();
+
+        CheckDeath(true);
+
     }
 }
