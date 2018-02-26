@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4979929370014560}
   - component: {fileID: 114781250741610154}
   m_Layer: 0
-  m_Name: Multi_Mon_Head
+  m_Name: Multi_Burnt_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
-  cost: 0
-  ability: 2
-  textureMaterial: {fileID: 0}
+  cost: 20
+  ability: 7
+  textureMaterial: {fileID: 2100000, guid: ec174af7afe121f48be758526c5027be, type: 2}
   starRequired: 0

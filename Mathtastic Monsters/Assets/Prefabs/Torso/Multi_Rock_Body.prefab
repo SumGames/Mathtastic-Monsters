@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 95809109122772688}
   - component: {fileID: 114235792781474528}
   m_Layer: 0
-  m_Name: FourLegsWood
+  m_Name: Multi_Rock_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,10 +1068,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
-  cost: 0
-  ability: 0
-  textureMaterial: {fileID: 0}
+  owned: 0
+  cost: 20
+  ability: 8
+  textureMaterial: {fileID: 2100000, guid: 7d28f70dca98ed646891465bb8fe5420, type: 2}
   starRequired: 0
   neckForHead: {fileID: 1226679669067034}
   LeftArmUpper: {fileID: 1958467019104668}

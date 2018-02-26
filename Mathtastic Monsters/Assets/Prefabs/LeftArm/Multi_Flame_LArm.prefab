@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4698580204805220}
   - component: {fileID: 114318021358990148}
   m_Layer: 0
-  m_Name: MultFront_L
+  m_Name: Multi_Flame_LArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,10 +530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
-  cost: 0
-  ability: 2
-  textureMaterial: {fileID: 0}
+  owned: 0
+  cost: 20
+  ability: 9
+  textureMaterial: {fileID: 2100000, guid: 483ebb6cc3d99524098a7e76698ebc69, type: 2}
   starRequired: 0
   foreArm: {fileID: 1702018300656896}
   hand: {fileID: 1380940119797736}
