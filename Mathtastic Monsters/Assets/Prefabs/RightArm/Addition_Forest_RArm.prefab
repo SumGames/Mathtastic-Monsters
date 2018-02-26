@@ -65,8 +65,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4188258378723632}
-  - component: {fileID: 33087969387695510}
-  - component: {fileID: 23398201758711422}
   m_Layer: 0
   m_Name: Upper_Arm_R
   m_TagString: Untagged
@@ -286,38 +284,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23398201758711422
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1580670711012428}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 6a254df271ace4c43b9acc33f7f49885, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23663909290982888
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -350,13 +316,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33087969387695510
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1580670711012428}
-  m_Mesh: {fileID: 4300016, guid: 08084e907c4b5db459120713e20054fc, type: 3}
 --- !u!33 &33308792681046652
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -390,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 0
+  owned: 1
   cost: 20
   ability: 3
   textureMaterial: {fileID: 2100000, guid: c3af2b49e9795f242a1801e6571a24c9, type: 2}
@@ -398,3 +357,5 @@ MonoBehaviour:
   foreArm: {fileID: 1021261653328654}
   hand: {fileID: 1568204463148308}
   armType: 0
+  foot: {fileID: 0}
+  FourFoot: {fileID: 0}

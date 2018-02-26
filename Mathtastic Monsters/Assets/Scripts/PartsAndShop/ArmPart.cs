@@ -71,13 +71,16 @@ public class ArmPart : ItemPart
         if (textureMaterial)
         {
             foreArm.GetComponentInChildren<Renderer>().material = textureMaterial;
-            hand.GetComponentInChildren<Renderer>().material = textureMaterial;
             if (FourFoot && FourFoot.gameObject.activeSelf)
             {
                 foreach (Renderer item in FourFoot.GetComponentsInChildren<Renderer>())
                 {
                     item.material = textureMaterial;
                 }
+            }
+            else
+            {
+                hand.GetComponentInChildren<Renderer>().material = textureMaterial;
             }
         }
     }
