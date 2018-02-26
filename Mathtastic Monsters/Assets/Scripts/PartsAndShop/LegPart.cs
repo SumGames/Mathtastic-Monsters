@@ -39,6 +39,11 @@ public class LegPart : ItemPart
         {
             Shin.GetComponentInChildren<Renderer>().material = textureMaterial;
             Foot.GetComponentInChildren<Renderer>().material = textureMaterial;
+
+            if(Ankle)
+            {
+                Ankle.GetComponentInChildren<Renderer>().material = textureMaterial;
+            }
         }
     }
 
