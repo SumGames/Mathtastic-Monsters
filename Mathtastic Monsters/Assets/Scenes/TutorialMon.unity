@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -727,15 +727,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1aab068d1be84995bdb78723c991e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPart: {fileID: 0}
-  displayCurrent: {fileID: 1499723596}
-  equipItemButton: {fileID: 2115169530}
-  Currency: {fileID: 494302864}
   abilityText: {fileID: 2125796664}
   previewParent: {fileID: 1951066333}
   tutorial: {fileID: 0}
-  sounds: []
   purchase: {fileID: 0}
+  combinedShop: {fileID: 0}
 --- !u!82 &265751938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -874,13 +870,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 304129650}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -1.3, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_Father: {fileID: 2131690630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311171939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,12 +1113,9 @@ MonoBehaviour:
   prefabbedList: {fileID: 1409324482353038, guid: 7dca58c89642b224bb7b72b7ae01943c,
     type: 2}
   header: {fileID: 0}
-  mymonsterSelection: {fileID: 1436880114}
-  monstercustomisationSelection: {fileID: 812936328}
   lillyhomeSelection: {fileID: 2112569547}
   gameInstruction: {fileID: 0}
-  shop: {fileID: 265751937}
-  parts: {fileID: 735171135}
+  combinedShop: {fileID: 0}
 --- !u!4 &382568556
 Transform:
   m_ObjectHideFlags: 0
@@ -1644,7 +1637,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543391329
 GameObject:
@@ -6089,7 +6082,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 304129652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
