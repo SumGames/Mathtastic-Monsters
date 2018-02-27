@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4686646316540958}
   - component: {fileID: 114126547963530356}
   m_Layer: 0
-  m_Name: Div_Arm_Basic
+  m_Name: Div_Sand_RArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
   cost: 20
-  ability: 6
-  textureMaterial: {fileID: 0}
+  ability: 11
+  textureMaterial: {fileID: 2100000, guid: befce3fda5611e24ca91e4d1310489bb, type: 2}
   starRequired: 0
   foreArm: {fileID: 1120340433973508}
   hand: {fileID: 1485970033433068}

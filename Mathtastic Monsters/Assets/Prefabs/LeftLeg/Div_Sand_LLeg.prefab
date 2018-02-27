@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4516184069267716}
   - component: {fileID: 114205246959139700}
   m_Layer: 0
-  m_Name: Div_Leg_L
+  m_Name: Div_Sand_LLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,8 +392,8 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
   cost: 20
-  ability: 6
-  textureMaterial: {fileID: 0}
+  ability: 11
+  textureMaterial: {fileID: 2100000, guid: befce3fda5611e24ca91e4d1310489bb, type: 2}
   starRequired: 0
   Shin: {fileID: 1929336347202896}
   Ankle: {fileID: 1105255306005550}

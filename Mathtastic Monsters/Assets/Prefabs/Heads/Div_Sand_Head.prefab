@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4480701308067330}
   - component: {fileID: 114892749363970784}
   m_Layer: 0
-  m_Name: Div_Head
+  m_Name: Div_Sand_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
-  cost: 0
-  ability: 2
-  textureMaterial: {fileID: 0}
+  owned: 0
+  cost: 20
+  ability: 11
+  textureMaterial: {fileID: 2100000, guid: befce3fda5611e24ca91e4d1310489bb, type: 2}
   starRequired: 0

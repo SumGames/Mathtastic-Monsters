@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4107645761789784}
   - component: {fileID: 114468545316282130}
   m_Layer: 0
-  m_Name: Div_L_Arm
+  m_Name: Div_Treasure_LArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
   cost: 20
-  ability: 6
-  textureMaterial: {fileID: 0}
+  ability: 10
+  textureMaterial: {fileID: 2100000, guid: b55c04f3bcb377749bcef3a1769e10b4, type: 2}
   starRequired: 0
   foreArm: {fileID: 1232230118369402}
   hand: {fileID: 1958511223810272}
