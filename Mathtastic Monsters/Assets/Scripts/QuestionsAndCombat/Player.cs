@@ -392,10 +392,14 @@ public class Player : MonoBehaviour
         float healing = maxHealth / 10;
         healing *= pieces;
 
+        Debug.Log("Healing");
+
         currentHealth += healing;
 
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
+
+        Healthbar.changeHealth(true, currentHealth);
 
     }
 }

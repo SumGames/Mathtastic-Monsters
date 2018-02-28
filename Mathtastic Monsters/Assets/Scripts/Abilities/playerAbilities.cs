@@ -85,14 +85,13 @@ public class playerAbilities : MonoBehaviour
     {
         float returning = 1;
 
-        if (abilities.ContainsKey(abilityTypes.Mastery) && abilities[abilityTypes.Mastery] >= 3) //If we have More than 3 exp boosting parts...
+        if (abilities.ContainsKey(abilityTypes.Mastery))
         {
-            int mastery = abilities[abilityTypes.Mastery] % 3;
+            float mastery = abilities[abilityTypes.Mastery] * 0.02f;
 
-            returning += (Crits * (.10f * mastery));
+            returning += (Crits * mastery);
 
-            returning += (Counters * (.10f * mastery));
-
+            returning += (Counters * mastery);
         }
 
         if (abilities.ContainsKey(abilityTypes.Scavenger)) //If we have at least 1 scavenger part.
