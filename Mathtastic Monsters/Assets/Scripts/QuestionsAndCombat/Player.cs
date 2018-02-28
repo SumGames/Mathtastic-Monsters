@@ -361,7 +361,6 @@ public class Player : MonoBehaviour
                 parent.quizRunning.parent.incrementCompleted();
 
             }
-
             else //Divide experience to a quarter.
             {
                 exp *= .25f;

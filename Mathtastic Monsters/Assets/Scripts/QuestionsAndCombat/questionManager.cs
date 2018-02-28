@@ -264,7 +264,6 @@ public class questionManager : MonoBehaviour
 
         for (int i = 0; i < size; i++)
         {
-
             switch (main)
             {
                 case operators.AddSub:

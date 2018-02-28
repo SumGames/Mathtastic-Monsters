@@ -148,6 +148,10 @@ public class LevelSelection : MonoBehaviour
     {
         if (!list)
             list = FindObjectOfType<equipmentList>();
+
+        if (a_button.boss)
+            return;
+
         currentLevel = a_button.quizIndex;
         if ((int)a_button.Operator > (int)classType.Calculi)
             currentSubject = classType.Calculi;
