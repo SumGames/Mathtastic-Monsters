@@ -5355,11 +5355,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4524581365295576, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.9726869
+      value: -0.785
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.368
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5383,11 +5383,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1936892132068418, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936892132068418, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
+      propertyPath: m_Name
+      value: GoldParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad3adcc6c6dad1a4798671c95a3cc287, type: 2}
@@ -6974,7 +6978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.332, y: 2.543}
+  m_AnchoredPosition: {x: -2.3319998, y: 2.5430002}
   m_SizeDelta: {x: 122.725, y: 100.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338444653
@@ -20889,9 +20893,9 @@ Transform:
   m_LocalPosition: {x: 182.66867, y: -19.868196, z: -7621.8857}
   m_LocalScale: {x: 84.075005, y: 84.075005, z: 84.075005}
   m_Children:
-  - {fileID: 275862118}
   - {fileID: 1719203343}
   - {fileID: 2113057377}
+  - {fileID: 275862118}
   - {fileID: 156558063}
   - {fileID: 1195250827}
   - {fileID: 1935839342}
@@ -32165,7 +32169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.763, y: 2.445}
+  m_AnchoredPosition: {x: -0.763, y: 2.4449997}
   m_SizeDelta: {x: 122.725, y: 100.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472479559
@@ -38009,11 +38013,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4524581365295576, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.7593536
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 2.339
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -38037,11 +38041,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936892132068418, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936892132068418, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
+      propertyPath: m_Name
+      value: BronzeParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31526d83630fc4a4fb56a37ec4c7bab7, type: 2}
@@ -46593,11 +46601,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4524581365295576, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.3810203
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.482
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
       propertyPath: m_LocalPosition.z
@@ -46621,11 +46629,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4524581365295576, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1936892132068418, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936892132068418, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
+      propertyPath: m_Name
+      value: SilverParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 665530ee88bedc543aae9bceff7fb028, type: 2}
