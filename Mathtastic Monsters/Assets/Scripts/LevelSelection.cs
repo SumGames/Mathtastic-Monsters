@@ -146,7 +146,7 @@ public class LevelSelection : MonoBehaviour
         {
             HardMode = false;
             NormalMode.GetComponent<Image>().sprite = NormalSprite[1];
-            HardButton.GetComponent<Image>().sprite = HardSprite[1];
+            HardButton.GetComponent<Image>().sprite = HardSprite[0];
 
 
             if (selectedSelection.buttonLabel.Length > currentLevel)
