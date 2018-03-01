@@ -140,8 +140,20 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
-    public void SetHardMode(bool hard)
+    public void SetHardMode(bool a_hard)
     {
+        bool hard = a_hard;
+
+        if (hard)
+        {
+            starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
+
+            if (!((starsUnlocked >= 2) || currentContainer.buttons[currentLevel].hardMode == null))
+            {
+                hard = false;
+            }
+        }
+
         if (!hard)
         {
             HardMode = false;
