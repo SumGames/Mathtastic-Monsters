@@ -2296,6 +2296,8 @@ MonoBehaviour:
   - {fileID: 815868342}
   - {fileID: 1428952761}
   - {fileID: 980510522}
+  buttonLabel: []
+  buttonLabelHard: []
 --- !u!4 &101824538
 Transform:
   m_ObjectHideFlags: 0
@@ -7994,8 +7996,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90.655785}
   m_LocalScale: {x: 0.011894142, y: 0.011894142, z: 0.011894142}
-  m_Children:
-  - {fileID: 474240262}
+  m_Children: []
   m_Father: {fileID: 977039560}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8420,8 +8421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.9569998, y: -0.93700004}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -4.1399994, y: -0.93700004}
+  m_SizeDelta: {x: 62.6, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421138865
 MonoBehaviour:
@@ -9849,80 +9850,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474163171}
---- !u!1 &474240259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 474240262}
-  - component: {fileID: 474240261}
-  - component: {fileID: 474240260}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &474240260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 474240259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 14
-    m_MaxSize: 60
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &474240261
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 474240259}
---- !u!224 &474240262
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 474240259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 407740145}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &480293090
 Prefab:
   m_ObjectHideFlags: 0
@@ -20226,8 +20153,15 @@ MonoBehaviour:
   - {fileID: 1487251620}
   - {fileID: 101824537}
   StartButton: {fileID: 407740148}
-  StartButtonText: {fileID: 474240260}
+  NormalMode: {fileID: 421138865}
   HardButton: {fileID: 1583593732}
+  NormalSprite:
+  - {fileID: 21300000, guid: 87df4865f8827b64aad322d7c44d5c3c, type: 3}
+  - {fileID: 21300000, guid: 2f82e839cf879814da7143876aae324e, type: 3}
+  HardSprite:
+  - {fileID: 21300000, guid: a2fde48751f7d024caf5a7e10a5c3d90, type: 3}
+  - {fileID: 21300000, guid: 12acb0670cc41b448b9624c67621e5eb, type: 3}
+  Generic: {fileID: 21300000, guid: bdb1d45c3363e76468dc0e441b11da3a, type: 3}
 --- !u!1 &978991031
 GameObject:
   m_ObjectHideFlags: 0
@@ -21274,6 +21208,28 @@ MonoBehaviour:
   - {fileID: 1886835284}
   - {fileID: 1128181901}
   - {fileID: 508458929}
+  buttonLabel:
+  - {fileID: 21300000, guid: af49252b2b5c91c46a7289b3e2ddf418, type: 3}
+  - {fileID: 21300000, guid: cf61326d95de2d543b297f6761c23e9f, type: 3}
+  - {fileID: 21300000, guid: 9d915600456648e4b84252dae2c8ddc4, type: 3}
+  - {fileID: 21300000, guid: a9447d4e42e91cc42a0e3a4170b22584, type: 3}
+  - {fileID: 21300000, guid: 70708744a2b18604f97f0fc238fedf89, type: 3}
+  - {fileID: 21300000, guid: 83f137562346c334fbbc2dbcc787097b, type: 3}
+  - {fileID: 21300000, guid: 5f548c203f2950941b95021259b4f97a, type: 3}
+  - {fileID: 21300000, guid: 59b56deeeded61440af09adc36fcf283, type: 3}
+  - {fileID: 21300000, guid: af8b8880730b0f34e8eee1bd5269cead, type: 3}
+  - {fileID: 21300000, guid: ff6627867efaa9149bbb1afc137af7d3, type: 3}
+  buttonLabelHard:
+  - {fileID: 21300000, guid: b4b3f336cf130fd4db79dda967db6021, type: 3}
+  - {fileID: 21300000, guid: 0bd4963f1b6bcd541abdd6db09612651, type: 3}
+  - {fileID: 21300000, guid: 9135dee447ae35a47a4237bfa5e4c920, type: 3}
+  - {fileID: 21300000, guid: 98791a4aa3076f14bb78f3c54ec76607, type: 3}
+  - {fileID: 21300000, guid: 78b0e96347648dd40923f9dcd85c3e28, type: 3}
+  - {fileID: 21300000, guid: b9207d16e6a6edb45b2e1700ba06f846, type: 3}
+  - {fileID: 21300000, guid: 10c042cf5d3ddc24b84f3aee43bb6156, type: 3}
+  - {fileID: 21300000, guid: 79dbde82267a8dc4cb18b7fcbfa0f8b7, type: 3}
+  - {fileID: 21300000, guid: 53548e2046a30fd44894d432e071fbf5, type: 3}
+  - {fileID: 21300000, guid: 00115be871346c949866898e1ad81801, type: 3}
 --- !u!4 &1003558045
 Transform:
   m_ObjectHideFlags: 0
@@ -21409,6 +21365,8 @@ MonoBehaviour:
   - {fileID: 1252960459}
   - {fileID: 1901063772}
   - {fileID: 1488443442}
+  buttonLabel: []
+  buttonLabelHard: []
 --- !u!4 &1010759665
 Transform:
   m_ObjectHideFlags: 0
@@ -27664,6 +27622,8 @@ MonoBehaviour:
   - {fileID: 910283361}
   - {fileID: 14233987}
   - {fileID: 305746315}
+  buttonLabel: []
+  buttonLabelHard: []
 --- !u!4 &1285708195
 Transform:
   m_ObjectHideFlags: 0
@@ -31502,6 +31462,8 @@ MonoBehaviour:
   - {fileID: 1763371112}
   - {fileID: 1532936944}
   - {fileID: 808969494}
+  buttonLabel: []
+  buttonLabelHard: []
 --- !u!4 &1487251621
 Transform:
   m_ObjectHideFlags: 0
@@ -33136,8 +33098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2940001, y: -0.913}
-  m_SizeDelta: {x: 100, y: 78}
+  m_AnchoredPosition: {x: -0.93000007, y: -0.93700004}
+  m_SizeDelta: {x: 62.6, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583593732
 MonoBehaviour:

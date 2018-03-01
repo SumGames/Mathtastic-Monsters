@@ -31,9 +31,14 @@ public class LevelSelection : MonoBehaviour
 
     bool HardMode;
     public Button StartButton;
-    public Text StartButtonText;
 
+    public Button NormalMode;
     public Button HardButton;
+
+    public Sprite[] NormalSprite;
+    public Sprite[] HardSprite;
+
+    public Sprite Generic;
 
     void Start()
     {
@@ -140,12 +145,33 @@ public class LevelSelection : MonoBehaviour
         if (!hard)
         {
             HardMode = false;
-            StartButton.GetComponent<Image>().color = Color.green;
+            NormalMode.GetComponent<Image>().sprite = NormalSprite[1];
+            HardButton.GetComponent<Image>().sprite = HardSprite[1];
+
+
+            if (selectedSelection.buttonLabel.Length > currentLevel)
+            {
+                StartButton.GetComponent<Image>().sprite = selectedSelection.buttonLabel[currentLevel];
+            }
+            else
+            {
+                StartButton.GetComponent<Image>().sprite = Generic;
+            }
         }
         else
         {
+            NormalMode.GetComponent<Image>().sprite = NormalSprite[0];
+            HardButton.GetComponent<Image>().sprite = HardSprite[1];
             HardMode = true;
-            StartButton.GetComponent<Image>().color = Color.red;
+
+            if (selectedSelection.buttonLabelHard.Length > currentLevel)
+            {
+                StartButton.GetComponent<Image>().sprite = selectedSelection.buttonLabelHard[currentLevel];
+            }
+            else
+            {
+                StartButton.GetComponent<Image>().sprite = Generic;
+            }
         }
 
     }
@@ -153,9 +179,10 @@ public class LevelSelection : MonoBehaviour
     //Disable buttons, add names as required.
     void SetButtons()
     {
+        SetHardMode(HardMode);
+
         SetupGroups((int)currentSubject);
 
-        StartButtonText.text = currentContainer.buttons[currentLevel].name;
         for (int i = 0; i < 10; i++)
         {
             if (i <= currentContainer.completedQuestions)
