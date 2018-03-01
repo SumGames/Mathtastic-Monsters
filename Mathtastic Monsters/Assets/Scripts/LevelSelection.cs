@@ -29,9 +29,15 @@ public class LevelSelection : MonoBehaviour
     public ButtonSelection[] subjectGroups;
     ButtonSelection selectedSelection;
 
+    bool HardMode;
+    public Button StartButton;
+    public Text StartButtonText;
+
+    public Button HardButton;
+
     void Start()
     {
-
+        SetHardMode(false);
     }
     void Update()
     {
@@ -110,28 +116,46 @@ public class LevelSelection : MonoBehaviour
     }
 
     //Start playing with the button's level..
-    public void UseNormalButton()
+    public void StartGame()
     {
-        currentContainer.buttons[currentLevel].buttonUsed(phases.next);
-        gameObject.SetActive(false);
+        if (!HardMode)
+        {
+            currentContainer.buttons[currentLevel].buttonUsed(phases.next);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            QuizButton button = currentContainer.buttons[currentLevel].hardMode;
+            button.quizIndex = currentContainer.buttons[currentLevel].quizIndex;
+            if (button == null)
+                return;
+            button.Hard = true;
+            button.buttonUsed(phases.None);
+            gameObject.SetActive(false);
+        }
     }
-    //Star our normal button's hard mode.
-    public void useHardButton()
+
+    public void SetHardMode(bool hard)
     {
-        QuizButton button = currentContainer.buttons[currentLevel].hardMode;
-        button.quizIndex = currentContainer.buttons[currentLevel].quizIndex;
-        if (button == null)
-            return;
-        button.Hard = true;
-        button.buttonUsed(phases.None);
-        gameObject.SetActive(false);
+        if (!hard)
+        {
+            HardMode = false;
+            StartButton.GetComponent<Image>().color = Color.green;
+        }
+        else
+        {
+            HardMode = true;
+            StartButton.GetComponent<Image>().color = Color.red;
+        }
+
     }
+
     //Disable buttons, add names as required.
     void SetButtons()
     {
         SetupGroups((int)currentSubject);
 
-        selectedSelection.Normal.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].name;
+        StartButtonText.text = currentContainer.buttons[currentLevel].name;
         for (int i = 0; i < 10; i++)
         {
             if (i <= currentContainer.completedQuestions)
@@ -191,11 +215,13 @@ public class LevelSelection : MonoBehaviour
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
         if (currentLevel == 4 || currentLevel == 9)
         {
+            SetHardMode(false);
+
             medal.gameObject.SetActive(true);
 
             medal.SetChangingTalisman(list, talismanManager, currentSubject);
 
-            selectedSelection.Hard.gameObject.SetActive(false);
+            HardButton.gameObject.SetActive(false);
             starOne.gameObject.SetActive(false);
             starTwo.gameObject.SetActive(false);
             starThree.gameObject.SetActive(false);
@@ -205,22 +231,13 @@ public class LevelSelection : MonoBehaviour
             return;
         }
         medal.gameObject.SetActive(false);
-        selectedSelection.Hard.gameObject.SetActive(true);
+        HardButton.gameObject.SetActive(true);
         starOne.gameObject.SetActive(true);
         starTwo.gameObject.SetActive(true);
         starThree.gameObject.SetActive(true);
         starOne.interactable = (starsUnlocked >= 1);
         starTwo.interactable = (starsUnlocked >= 2);
-        selectedSelection.Hard.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
-
-        if (currentContainer.buttons[currentLevel].hardMode != null && selectedSelection.Hard.interactable)
-        {
-            selectedSelection.Hard.GetComponentInChildren<Text>().text = currentContainer.buttons[currentLevel].hardMode.name;
-        }
-        else
-        {
-            selectedSelection.Hard.GetComponentInChildren<Text>().text = "Locked";
-        }
+        HardButton.interactable = ((starsUnlocked >= 2) && currentContainer.buttons[currentLevel].hardMode != null);
 
         starThree.interactable = (starsUnlocked >= 3);
         bronzestarParticle.SetActive(starOne.interactable);
