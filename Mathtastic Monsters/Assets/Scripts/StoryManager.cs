@@ -180,6 +180,7 @@ public class StoryManager : MonoBehaviour
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(0, 0, 0);
             movementIncrement = 0;
+            monsterSpot.gameObject.SetActive(true);
         }
         if (position == phases.previous)
         {
