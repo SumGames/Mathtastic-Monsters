@@ -472,8 +472,6 @@ public class questionManager : MonoBehaviour
             default:
                 returning.Add((int)Random.Range(a_button.minNumber, (a_button.maxNumber + 1)));
 
-                Debug.Log(returning[0]);
-
                 newop = Random.Range(0, a_button.secondFixedNumber.Length);
                 returning.Add(a_button.secondFixedNumber[newop]);
 

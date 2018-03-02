@@ -472,7 +472,7 @@ public class BossMonster : Monster
                 ArrowContainer.gameObject.SetActive(true);
 
                 abacus.gameObject.SetActive(true);
-                abacus.ResetAbacus(false, questions.answer);
+                abacus.ResetAbacus(true, questions.answer);
 
                 multipleContainer.DisableThisAndCalculator();
                 return;

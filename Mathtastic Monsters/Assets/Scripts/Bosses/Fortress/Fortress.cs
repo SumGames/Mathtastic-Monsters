@@ -36,6 +36,9 @@ public class Fortress : MonoBehaviour
     int PatienceLeft;
 
 
+    operators mainOp;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -44,6 +47,8 @@ public class Fortress : MonoBehaviour
 
     internal void CalculateBODMAS(QuizButton a_running, int failures)
     {
+        mainOp = a_running.Operator;
+
         variableCount = a_running.variableCount;
 
 
@@ -71,57 +76,77 @@ public class Fortress : MonoBehaviour
             summingNumbers.Add((int)variablesUsed[i]);
         }
 
-
-        while (summingOps.Count > 0)
+        if (a_running.Operator == operators.AddSubMultDiv)
         {
-            if (summingOps.Contains(operators.Division))
+            float total;
+
+            total = summingNumbers[0] / summingNumbers[1];
+            switch (summingOps[1])
             {
-                int i = summingOps.IndexOf(operators.Division);
-
-                summingNumbers[i] /= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
+                case operators.Addition:
+                    total = total + summingNumbers[2];
+                    break;
+                case operators.Subtraction:
+                    total = total - summingNumbers[2];
+                    break;
             }
+            total = total * summingNumbers[3];
 
-            if (summingOps.Contains(operators.Multiplication))
-            {
-                int i = summingOps.IndexOf(operators.Multiplication);
-
-                summingNumbers[i] *= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
-
-            if (summingOps.Contains(operators.Addition))
-            {
-                int i = summingOps.IndexOf(operators.Addition);
-
-                summingNumbers[i] += summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
-            if (summingOps.Contains(operators.Subtraction))
-            {
-                int i = summingOps.IndexOf(operators.Subtraction);
-
-                summingNumbers[i] -= summingNumbers[(i + 1)];
-
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
+            AnswerNeeded = total;
         }
-        float answer = summingNumbers[0];
+        else
+        {
+            while (summingOps.Count > 0)
+            {
+                if (summingOps.Contains(operators.Division))
+                {
+                    int i = summingOps.IndexOf(operators.Division);
 
+                    summingNumbers[i] /= summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
 
-        bool whole = questionManager.IsWhole(answer);
+                if (summingOps.Contains(operators.Multiplication))
+                {
+                    int i = summingOps.IndexOf(operators.Multiplication);
+
+                    summingNumbers[i] *= summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+
+                if (summingOps.Contains(operators.Addition))
+                {
+                    int i = summingOps.IndexOf(operators.Addition);
+
+                    summingNumbers[i] += summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+                if (summingOps.Contains(operators.Subtraction))
+                {
+                    int i = summingOps.IndexOf(operators.Subtraction);
+
+                    summingNumbers[i] -= summingNumbers[(i + 1)];
+
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+            }
+            AnswerNeeded = summingNumbers[0];
+
+        }
+
+        bool whole = questionManager.IsWhole(AnswerNeeded);
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if ((answer <= a_running.minAnswer || answer > a_running.maxAnswer || !whole) && failures < 20)
+        if ((AnswerNeeded <= a_running.minAnswer || AnswerNeeded > a_running.maxAnswer || !whole) && failures < 20)
         {
             int failed = failures + 1;
 
@@ -137,37 +162,47 @@ public class Fortress : MonoBehaviour
 
 
 
-        AnswerNeeded = summingNumbers[0];
 
-
-        for (int i = 0; i < operatorsText.Length; i++)
+        if (a_running.Operator == operators.AddSubMultDiv)
         {
-            if (i < (variableCount - 1))
-            {
+            operatorsText[3].text = "(";
+            operatorsText[0].text = " / ";
+            operatorsText[1].text = " + ";
+            operatorsText[2].text = ") x ";
 
-                switch (StoredOps[i])
+            operatorsText[2].gameObject.SetActive(true);
+            FortressButtons[3].gameObject.SetActive(true);
+        }
+        else
+        {
+            operatorsText[3].text = "";
+            for (int i = 0; i < 3; i++)
+            {
+                if (i < (variableCount - 1))
                 {
-                    case operators.Addition:
-                        operatorsText[i].text = "+ ";
-                        break;
-                    case operators.Subtraction:
-                        operatorsText[i].text = "- ";
-                        break;
-                    case operators.Multiplication:
-                        operatorsText[i].text = "x ";
-                        break;
-                    case operators.Division:
-                        operatorsText[i].text = "/ ";
-                        break;
-                    default:
-                        break;
+
+                    switch (StoredOps[i])
+                    {
+                        case operators.Addition:
+                            operatorsText[i].text = "+ ";
+                            break;
+                        case operators.Subtraction:
+                            operatorsText[i].text = "- ";
+                            break;
+                        case operators.Multiplication:
+                            operatorsText[i].text = "x ";
+                            break;
+                        case operators.Division:
+                            operatorsText[i].text = "/ ";
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
-            else
-            {
-                operatorsText[i].gameObject.SetActive(false);
-                FortressButtons[(i + 1)].gameObject.SetActive(false);
-            }
+
+            operatorsText[2].gameObject.SetActive(false);
+            FortressButtons[3].gameObject.SetActive(false);
         }
         AnswerText.text = " = " + AnswerNeeded.ToString();
 
@@ -227,51 +262,73 @@ public class Fortress : MonoBehaviour
             summingNumbers.Add(FortressButtons[i].draggedIn.DraggerAnswer);
         }
 
+        float answer = 0;
 
-        while (summingOps.Count > 0)
+        if (mainOp == operators.AddSubMultDiv)
         {
-            if (summingOps.Contains(operators.Division))
+            float total;
+
+            total = summingNumbers[0] / summingNumbers[1];
+            switch (summingOps[1])
             {
-                int i = summingOps.IndexOf(operators.Division);
-
-                summingNumbers[i] /= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
+                case operators.Addition:
+                    total = total + summingNumbers[2];
+                    break;
+                case operators.Subtraction:
+                    total = total - summingNumbers[2];
+                    break;
             }
+            total = total * summingNumbers[3];
 
-            if (summingOps.Contains(operators.Multiplication))
-            {
-                int i = summingOps.IndexOf(operators.Multiplication);
-
-                summingNumbers[i] *= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
-
-            if (summingOps.Contains(operators.Addition))
-            {
-                int i = summingOps.IndexOf(operators.Addition);
-
-                summingNumbers[i] += summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
-            if (summingOps.Contains(operators.Subtraction))
-            {
-                int i = summingOps.IndexOf(operators.Subtraction);
-
-                summingNumbers[i] -= summingNumbers[(i + 1)];
-
-                summingNumbers.RemoveAt(i + 1);
-                summingOps.RemoveAt(i);
-                continue;
-            }
+            answer = total;
         }
+        else
+        {
+            while (summingOps.Count > 0)
+            {
+                if (summingOps.Contains(operators.Division))
+                {
+                    int i = summingOps.IndexOf(operators.Division);
 
-        int answer = summingNumbers[0];
+                    summingNumbers[i] /= summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+
+                if (summingOps.Contains(operators.Multiplication))
+                {
+                    int i = summingOps.IndexOf(operators.Multiplication);
+
+                    summingNumbers[i] *= summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+
+                if (summingOps.Contains(operators.Addition))
+                {
+                    int i = summingOps.IndexOf(operators.Addition);
+
+                    summingNumbers[i] += summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+                if (summingOps.Contains(operators.Subtraction))
+                {
+                    int i = summingOps.IndexOf(operators.Subtraction);
+
+                    summingNumbers[i] -= summingNumbers[(i + 1)];
+
+                    summingNumbers.RemoveAt(i + 1);
+                    summingOps.RemoveAt(i);
+                    continue;
+                }
+            }
+            answer = summingNumbers[0];
+
+        }
 
         if (answer == AnswerNeeded)
         {
