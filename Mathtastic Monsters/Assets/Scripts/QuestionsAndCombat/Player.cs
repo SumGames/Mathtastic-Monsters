@@ -105,6 +105,7 @@ public class Player : MonoBehaviour
         {
             abilities = GetComponent<playerAbilities>();
             abilities.Begin();
+            Debug.Log("abilities begun");
         }
 
         abilities.SetupAbilities(a_boss);

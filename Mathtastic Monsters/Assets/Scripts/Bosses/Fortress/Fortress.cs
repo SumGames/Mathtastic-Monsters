@@ -8,7 +8,7 @@ public class Fortress : MonoBehaviour
 
 
 
-    float[] variablesUsed;
+    List<float> variablesUsed;
 
     List<operators> StoredOps;
 
@@ -47,16 +47,14 @@ public class Fortress : MonoBehaviour
         variableCount = a_running.variableCount;
 
 
-        variablesUsed = new float[variableCount];
-
-        //Randomise as many numbers as required, within range.
-        for (int i = 0; i < a_running.variableCount; i++)
-        {
-            variablesUsed[i] = (int)Random.Range(a_running.minNumber, (a_running.maxNumber + 1));
-        }
+        variablesUsed = new List<float>(variableCount);
 
 
-        List<int> summingNumbers = new List<int>(5);
+        variablesUsed = questionManager.randomiseBODMASNumbers(a_running);
+
+
+
+        List<float> summingNumbers = new List<float>(5);
 
         List<operators> summingOps;
 
@@ -116,7 +114,7 @@ public class Fortress : MonoBehaviour
                 continue;
             }
         }
-        int answer = summingNumbers[0];
+        float answer = summingNumbers[0];
 
 
         bool whole = questionManager.IsWhole(answer);

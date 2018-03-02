@@ -170,6 +170,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0600000009000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -247,6 +248,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -1017,6 +1019,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 3
@@ -1076,6 +1079,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0300000004000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -1232,8 +1236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
+  variableCount: 3
+  levelTime: 60
   minNumber: 10
   maxNumber: 99
   Operator: 6
@@ -1244,8 +1248,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -2372,6 +2377,7 @@ MonoBehaviour:
   MonsterAttack: 0
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 6000
   enemyChoices: 2
@@ -3034,6 +3040,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -3508,6 +3515,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -3798,6 +3806,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
@@ -3875,6 +3884,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -3996,11 +4006,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
+  variableCount: 4
+  levelTime: 60
   minNumber: 10
   maxNumber: 99
-  Operator: 6
+  Operator: 7
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -4008,8 +4018,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -4380,6 +4391,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 80000
   enemyChoices: 3
@@ -5009,6 +5021,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -5246,11 +5259,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
+  variableCount: 4
+  levelTime: 60
   minNumber: 10
-  maxNumber: 99
-  Operator: 6
+  maxNumber: 20
+  Operator: 7
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -5258,8 +5271,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -5803,11 +5817,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
-  minNumber: 10
-  maxNumber: 99
-  Operator: 6
+  variableCount: 4
+  levelTime: 60
+  minNumber: 12
+  maxNumber: 20
+  Operator: 7
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -5815,8 +5829,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -6273,6 +6288,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -7874,6 +7890,7 @@ MonoBehaviour:
   MonsterAttack: 0.5
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 100
   enemyChoices: 3
@@ -8002,7 +8019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.385766, y: 0.682}
+  m_AnchoredPosition: {x: -2.385766, y: 0.6819999}
   m_SizeDelta: {x: 327.55, y: 189.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407740146
@@ -8352,6 +8369,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
@@ -8421,7 +8439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.79, y: -0.966}
+  m_AnchoredPosition: {x: -3.79, y: -0.9660001}
   m_SizeDelta: {x: 62.6, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421138865
@@ -9391,6 +9409,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0600000009000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -11265,6 +11284,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -12165,6 +12185,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -13125,6 +13146,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0400000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -13202,6 +13224,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -13531,6 +13554,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -14132,6 +14156,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0700000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -14428,6 +14453,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -14756,6 +14782,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: bd34a64a7cc447f41b5a3b206ca30db0, type: 2}
   enemPhaseTime: 60
   enemyChoices: 3
@@ -15363,6 +15390,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 040000000700000008000000090000000b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
@@ -15619,6 +15647,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
@@ -16214,6 +16243,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000009000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -16604,6 +16634,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 5
@@ -16754,6 +16785,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -17644,6 +17676,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -17996,8 +18029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 10
+  variableCount: 3
+  levelTime: 60
   minNumber: 1
   maxNumber: 48
   Operator: 5
@@ -18008,8 +18041,9 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -18211,6 +18245,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 060000000700000008000000090000000b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
@@ -19571,6 +19606,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -19908,6 +19944,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -19985,6 +20022,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -20062,6 +20100,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -20465,6 +20504,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -21029,8 +21069,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
+  variableCount: 3
+  levelTime: 60
   minNumber: 10
   maxNumber: 99
   Operator: 6
@@ -21041,8 +21081,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -21153,6 +21194,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -21432,6 +21474,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -21529,6 +21572,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -23332,6 +23376,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -23409,6 +23454,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -24128,6 +24174,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0700000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -24284,6 +24331,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -25080,6 +25128,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0300000006000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -25877,11 +25926,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
+  variableCount: 4
+  levelTime: 60
   minNumber: 10
   maxNumber: 99
-  Operator: 6
+  Operator: 7
   minAnswer: 1
   maxAnswer: 198
   difficulty: 14
@@ -25889,8 +25938,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -26332,6 +26382,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: bd34a64a7cc447f41b5a3b206ca30db0, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -26379,8 +26430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 10
+  variableCount: 3
+  levelTime: 60
   minNumber: 10
   maxNumber: 89
   Operator: 5
@@ -26391,8 +26442,9 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -26718,6 +26770,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0300000006000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -26935,6 +26988,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1276757086025982, guid: 0218ffd0c1b68e548863a9afc85e6c3a, type: 2}
   enemPhaseTime: 10
   enemyChoices: 2
@@ -27012,6 +27066,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0400000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -27211,6 +27266,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 01000000020000000300000004000000050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
@@ -27363,6 +27419,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 3
@@ -28229,6 +28286,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -29267,6 +29325,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -29392,11 +29451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 3
+  variableCount: 4
   levelTime: 200
   minNumber: 20
   maxNumber: 60
-  Operator: 6
+  Operator: 7
   minAnswer: 10
   maxAnswer: 140
   difficulty: 0
@@ -29404,6 +29463,7 @@ MonoBehaviour:
   MonsterAttack: 0.5
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 100
   enemyChoices: 3
@@ -29976,6 +30036,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0400000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -30053,6 +30114,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0700000009000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -30130,6 +30192,7 @@ MonoBehaviour:
   MonsterAttack: 0.5
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 100
   enemyChoices: 3
@@ -30807,6 +30870,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 5
   enemyChoices: 3
@@ -31737,6 +31801,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -31888,6 +31953,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1276757086025982, guid: 0218ffd0c1b68e548863a9afc85e6c3a, type: 2}
   enemPhaseTime: 10
   enemyChoices: 2
@@ -33098,7 +33164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.01, y: -0.966}
+  m_AnchoredPosition: {x: -1.01, y: -0.9660001}
   m_SizeDelta: {x: 62.6, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583593732
@@ -33563,6 +33629,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -33806,8 +33873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 10
+  variableCount: 3
+  levelTime: 60
   minNumber: 1
   maxNumber: 9
   Operator: 5
@@ -33818,8 +33885,9 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -34277,6 +34345,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0700000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -35128,6 +35197,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -35175,8 +35245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 10
+  variableCount: 3
+  levelTime: 60
   minNumber: 1
   maxNumber: 9
   Operator: 5
@@ -35187,8 +35257,9 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -36327,10 +36398,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
-  minNumber: 10
-  maxNumber: 99
+  variableCount: 3
+  levelTime: 60
+  minNumber: 1
+  maxNumber: 20
   Operator: 6
   minAnswer: 1
   maxAnswer: 198
@@ -36339,8 +36410,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -36617,6 +36689,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -37137,6 +37210,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -37649,6 +37723,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 050000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
@@ -37792,10 +37867,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: 0
   quizIndex: 0
-  variableCount: 2
-  levelTime: 30
-  minNumber: 10
-  maxNumber: 99
+  variableCount: 3
+  levelTime: 60
+  minNumber: 1
+  maxNumber: 9
   Operator: 6
   minAnswer: 1
   maxAnswer: 198
@@ -37804,8 +37879,9 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 8
+  enemPhaseTime: 100
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -38030,6 +38106,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 01000000020000000300000005000000060000000a000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 50
   enemyChoices: 3
@@ -38523,6 +38600,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0400000008000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 25
   enemyChoices: 3
@@ -40293,6 +40371,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -40563,6 +40642,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -40788,6 +40868,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: bd34a64a7cc447f41b5a3b206ca30db0, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -42489,6 +42570,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -43284,6 +43366,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3
@@ -43361,6 +43444,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 1
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
@@ -43685,6 +43769,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
@@ -43904,6 +43989,7 @@ MonoBehaviour:
   MonsterAttack: 2
   preventRounding: 0
   secondFixedNumber: 0300000004000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
@@ -45358,6 +45444,7 @@ MonoBehaviour:
   MonsterAttack: 1
   preventRounding: 0
   secondFixedNumber: 0100000002000000
+  thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 15
   enemyChoices: 3

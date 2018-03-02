@@ -50,6 +50,8 @@ public class QuizButton : MonoBehaviour
 
     public int[] secondFixedNumber = { 1, 2 };
 
+    public int[] thirdFixedNumber = { 1, 2 };
+
     public GameObject monsterArt;
 
 

@@ -262,45 +262,45 @@ public class questionManager : MonoBehaviour
 
         List<operators> op = new List<operators>();
 
-        for (int i = 0; i < size; i++)
+        switch (main)
         {
-            switch (main)
-            {
-                case operators.AddSub:
+            case operators.AddSub:
+                for (int i = 0; i < size; i++)
+                {
                     newOp = Random.Range(0, 2);
-                    break;
-                case operators.AddSubMult:
-                    newOp = Random.Range(0, 3);
-                    break;
-                case operators.AddSubMultDiv:
-                    newOp = Random.Range(0, 4);
-                    break;
-                case operators.Fortress:
-                    newOp = Random.Range(0, 4);
-                    break;
-                default:
-                    break;
-            }
-            op.Add((operators)newOp);
+                    op.Add((operators)newOp);
+                }
+                break;
+            case operators.AddSubMult:
+                op.Add(operators.Multiplication);
+                newOp = Random.Range(0, 2);
+                op.Add((operators)newOp);
+                break;
+            default:
+                op.Add(operators.Division);
+                newOp = Random.Range(0, 2);
+                op.Add((operators)newOp);
+                op.Add(operators.Multiplication);
+                break;
         }
+
         return op;
     }
 
     bool CalculateBODMAS(QuizButton a_running, int failures, bool bossAttacking)
     {
-        float[] randomised = new float[a_running.variableCount];
+        List<float> randomised = new List<float>(5);
 
-        //Randomise as many numbers as required, within range.
-        for (int i = 0; i < a_running.variableCount; i++)
-        {
-            randomised[i] = (int)Random.Range(button.minNumber, (button.maxNumber + 1));
-        }
-
-
-        List<int> summingNumbers = new List<int>(5);
+        List<float> summingNumbers = new List<float>(5);
 
 
         List<operators> ops = ChooseOperators(a_running.Operator, (a_running.variableCount - 1));
+
+
+
+        randomised = randomiseBODMASNumbers(a_running);
+
+
 
         string[] operatorStrings = new string[ops.Count];
 
@@ -328,67 +328,71 @@ public class questionManager : MonoBehaviour
         //Randomise as many numbers as required, within range.
         for (int i = 0; i < a_running.variableCount; i++)
         {
-            summingNumbers.Add((int)randomised[i]);
+            summingNumbers.Add(randomised[i]);
         }
 
-
-        while (ops.Count > 0)
+        if (a_running.Operator == operators.AddSubMultDiv)
         {
-            if (ops.Contains(operators.Division))
+
+            float total;
+
+            total = summingNumbers[0] / summingNumbers[1];
+            switch (ops[1])
             {
-                int i = ops.IndexOf(operators.Division);
-
-                summingNumbers[i] /= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
-                continue;
+                case operators.Addition:
+                    total = total + summingNumbers[2];
+                    break;
+                case operators.Subtraction:
+                    total = total - summingNumbers[2];
+                    break;
             }
+            total = total * summingNumbers[3];
 
-            if (ops.Contains(operators.Multiplication))
-            {
-                int i = ops.IndexOf(operators.Multiplication);
-
-                summingNumbers[i] *= summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
-                continue;
-            }
-
-            if (ops.Contains(operators.Addition))
-            {
-                int i = ops.IndexOf(operators.Addition);
-
-                summingNumbers[i] += summingNumbers[(i + 1)];
-                summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
-                continue;
-            }
-            if (ops.Contains(operators.Subtraction))
-            {
-                int i = ops.IndexOf(operators.Subtraction);
-
-                summingNumbers[i] -= summingNumbers[(i + 1)];
-
-                summingNumbers.RemoveAt(i + 1);
-                ops.RemoveAt(i);
-                continue;
-            }
+            answer = total;
         }
-        answer = summingNumbers[0];
-
-        bool rounding = a_running.preventRounding;
-
-        if (a_running.preventRounding) //if box is ticked, need to make sure numbers don't require rounding up.
+        else
         {
-            rounding = PreventRounding(randomised, a_running, (int)answer);
-        }
+            while (ops.Count > 0)
+            {
+                if (ops.Contains(operators.Multiplication))
+                {
+                    int i = ops.IndexOf(operators.Multiplication);
 
+                    summingNumbers[i] *= summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    ops.RemoveAt(i);
+                    continue;
+                }
+
+                if (ops.Contains(operators.Addition))
+                {
+                    int i = ops.IndexOf(operators.Addition);
+
+                    summingNumbers[i] += summingNumbers[(i + 1)];
+                    summingNumbers.RemoveAt(i + 1);
+                    ops.RemoveAt(i);
+                    continue;
+                }
+                if (ops.Contains(operators.Subtraction))
+                {
+                    int i = ops.IndexOf(operators.Subtraction);
+
+                    summingNumbers[i] -= summingNumbers[(i + 1)];
+
+                    summingNumbers.RemoveAt(i + 1);
+                    ops.RemoveAt(i);
+                    continue;
+                }
+            }
+            answer = summingNumbers[0];
+
+        }
 
         bool whole = IsWhole(answer);
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if ((answer <= a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole) && failures < 20)
+        if ((answer <= a_running.minAnswer || answer > a_running.maxAnswer || !whole) && failures < 20)
         {
             int failed = failures + 1;
 
@@ -404,19 +408,83 @@ public class questionManager : MonoBehaviour
 
         string answerWords;
 
-        answerWords = "   ";
-        answerWords += randomised[0].ToString("F0");
-
-        for (int i = 1; i < a_running.variableCount; i++)
+        if (a_running.Operator == operators.AddSubMultDiv)
         {
-            answerWords += "\n" + operatorStrings[(i - 1)] + randomised[i].ToString("F0");
+            answerWords = BODMASDivisionQuestion(operatorStrings, randomised);
         }
+        else
+        {
+            answerWords = "   ";
+            answerWords += randomised[0].ToString("F0");
 
+            for (int i = 1; i < a_running.variableCount; i++)
+            {
+                answerWords += "\n" + operatorStrings[(i - 1)] + randomised[i].ToString("F0");
+            }
+
+        }
         answerWords += "\n= ";
         GetComponent<Text>().text = answerWords;
 
         calculator.answerNeeded = answerNeeded;
 
         return enemyPhase;
+    }
+
+    string BODMASDivisionQuestion(string[] a_opStrings, List<float> Randomised)
+    {
+        string returning = "(" + Randomised[0] + " / " + Randomised[1] + " " + a_opStrings[1] + " " + Randomised[2] + ")\nx " + Randomised[3];
+
+
+        return returning;
+    }
+
+
+    internal List<float> randomiseBODMASNumbers(QuizButton a_button)
+    {
+        int newop;
+        List<float> returning = new List<float>(a_button.variableCount);
+
+        switch (a_button.Operator)
+        {
+            case operators.AddSub:
+                //Randomise as many numbers as required, within range.
+                for (int i = 0; i < a_button.variableCount; i++)
+                {
+                    if (a_button.Operator == operators.AddSub)
+                    {
+                        int test = (int)Random.Range(a_button.minNumber, (a_button.maxNumber));
+                        returning.Add(test);
+
+                    }
+                }
+
+                break;
+            case operators.AddSubMult:
+                newop = Random.Range(0, a_button.secondFixedNumber.Length);
+                returning.Add(a_button.secondFixedNumber[newop]);
+
+                newop = Random.Range(1, 12);
+                returning.Add(newop);
+
+                returning.Add((int)Random.Range(a_button.minNumber, (a_button.maxNumber + 1)));
+                break;
+            default:
+                returning.Add((int)Random.Range(a_button.minNumber, (a_button.maxNumber + 1)));
+
+                Debug.Log(returning[0]);
+
+                newop = Random.Range(0, a_button.secondFixedNumber.Length);
+                returning.Add(a_button.secondFixedNumber[newop]);
+
+                newop = Random.Range(1, 12);
+                returning.Add(newop);
+
+                newop = Random.Range(1, 12);
+                returning.Add(newop);
+
+                break;
+        }
+        return returning;
     }
 }
