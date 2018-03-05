@@ -161,8 +161,6 @@ public class Abacus : MonoBehaviour
 
     public void ClickBarOne(int index)
     {
-        Debug.Log(index);
-
         if (!shiftedOnes[index])
         {
             for (int i = index; i < OneBlocks.Length; i++)

@@ -78,21 +78,18 @@ public class Fortress : MonoBehaviour
 
         if (a_running.Operator == operators.AddSubMultDiv)
         {
-            float total;
 
-            total = summingNumbers[0] / summingNumbers[1];
+            AnswerNeeded = summingNumbers[0] / summingNumbers[1];
             switch (summingOps[1])
             {
                 case operators.Addition:
-                    total = total + summingNumbers[2];
+                    AnswerNeeded = AnswerNeeded + summingNumbers[2];
                     break;
                 case operators.Subtraction:
-                    total = total - summingNumbers[2];
+                    AnswerNeeded = AnswerNeeded - summingNumbers[2];
                     break;
             }
-            total = total * summingNumbers[3];
-
-            AnswerNeeded = total;
+            AnswerNeeded = AnswerNeeded * summingNumbers[3];
         }
         else
         {
@@ -159,9 +156,7 @@ public class Fortress : MonoBehaviour
 
 
         ResetAll();
-
-
-
+       
 
         if (a_running.Operator == operators.AddSubMultDiv)
         {
@@ -214,14 +209,13 @@ public class Fortress : MonoBehaviour
 
     void SetDraggers()
     {
-
         for (int i = 0; i < variableCount; i++)
         {
-            int index = Random.Range(0, 3);
+            int index = Random.Range(0, (variableCount));
 
             while (Draggers[index].DraggerAnswer > 0)
             {
-                index = Random.Range(0, 3);
+                index = Random.Range(0, (variableCount));
             }
 
             Draggers[index].SetDragger((int)variablesUsed[i]);
