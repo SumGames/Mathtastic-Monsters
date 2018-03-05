@@ -33,6 +33,7 @@ public class LevelSelection : MonoBehaviour
     public Button StartButton;
 
     public Button NormalMode;
+    public Button BossButton;
     public Button HardButton;
 
     public Sprite[] NormalSprite;
@@ -260,6 +261,8 @@ public class LevelSelection : MonoBehaviour
 
             medal.SetChangingTalisman(list, talismanManager, currentSubject);
 
+            BossButton.gameObject.SetActive(true);
+            NormalMode.gameObject.SetActive(false);
             HardButton.gameObject.SetActive(false);
             starOne.gameObject.SetActive(false);
             starTwo.gameObject.SetActive(false);
@@ -269,6 +272,8 @@ public class LevelSelection : MonoBehaviour
             goldstarParticle.gameObject.SetActive(false);
             return;
         }
+        NormalMode.gameObject.SetActive(true);
+        BossButton.gameObject.SetActive(false);
         medal.gameObject.SetActive(false);
         HardButton.gameObject.SetActive(true);
         starOne.gameObject.SetActive(true);
