@@ -18,6 +18,9 @@ public class abilityButton : MonoBehaviour
     playerAbilities abilities; //reference to player's ability manager.
 
 
+    public int turnsSinceCharged;
+    public int chargeTimeNeeded;
+
     //Begins setting up button.
 
     //buttontype is the avility this button will be responsible for.
@@ -31,6 +34,17 @@ public class abilityButton : MonoBehaviour
         chargesLeft = charges;
 
         SetButtonActive();
+
+        if (buttonType == abilityTypes.Dodge || buttonType == abilityTypes.Freeze)
+        {
+            SetChargingButton(charges);
+        }
+        else
+        {
+            turnsSinceCharged = 0;
+            chargeTimeNeeded = 0;
+        }
+
     }
 
     //If type is set to none, everything will be considered default.
@@ -52,6 +66,21 @@ public class abilityButton : MonoBehaviour
     //This checks if they're active and of that type, and if so, changes their status.
     public void DisablePhase(bool enemyPhase)
     {
+        switch (thisButton)
+        {
+            case abilityTypes.Dodge:
+                if (!enemyPhase)
+                    incrementCharge();
+                break;
+            case abilityTypes.Freeze:
+                if (!enemyPhase)
+                    incrementCharge();
+                break;
+            default:
+                break;
+        }
+
+
         switch (thisButton)
         {
             case abilityTypes.Dodge:
@@ -113,7 +142,7 @@ public class abilityButton : MonoBehaviour
                 m_button.interactable = false;
                 return;
             case abilityTypes.Dodge:
-                chargesNeeded = 2;
+                chargesNeeded = 1;
                 break;
             case abilityTypes.BarkSkin:
                 m_button.interactable = false;
@@ -125,7 +154,7 @@ public class abilityButton : MonoBehaviour
                 m_button.interactable = false;
                 return;
             case abilityTypes.Freeze:
-                chargesNeeded = 2;
+                chargesNeeded = 1;
                 break;
             case abilityTypes.Burn:
                 chargesNeeded = 2;
@@ -161,16 +190,70 @@ public class abilityButton : MonoBehaviour
                 break;
         }
 
-        //If not enough charges left, disable it.
-        if (chargesLeft < chargesNeeded || chargesNeeded == 0)
-            m_button.gameObject.SetActive(false);
+        if (thisButton != abilityTypes.Dodge && thisButton != abilityTypes.Freeze)
+        {
 
+            //If not enough charges left, disable it.
+            if (chargesLeft < chargesNeeded || chargesNeeded == 0)
+                m_button.gameObject.SetActive(false);
 
+        }
         //If charges are left, tell us how many uses left.
         if (chargesLeft > 0 && chargesNeeded > 0)
         {
             int uses = chargesLeft / chargesNeeded;
             m_text.text += "(" + uses.ToString() + ")";
         }
+    }
+
+    void SetChargingButton(int chargSpeed)
+    {
+        Debug.Log("Charge ");
+
+        int uses = 1;
+
+        switch (chargSpeed)
+        {
+            case 1:
+                chargeTimeNeeded = 8;
+                break;
+            case 2:
+                chargeTimeNeeded = 7;
+                break;
+            case 3:
+                chargeTimeNeeded = 6;
+                break;
+            case 4:
+                chargeTimeNeeded = 5;
+                break;
+            case 5:
+                chargeTimeNeeded = 4;
+                break;
+            case 6:
+                chargeTimeNeeded = 3;
+                break;
+            default:
+                break;
+        }
+
+        chargesLeft = chargesNeeded;
+    }
+
+    void incrementCharge()
+    {
+        int usesLeft = chargesLeft / chargesNeeded;
+
+        turnsSinceCharged++;
+        if (turnsSinceCharged >= chargeTimeNeeded)
+        {
+            usesLeft++;
+            turnsSinceCharged = 0;
+
+            chargesLeft = usesLeft * chargesNeeded;
+
+            int uses = chargesLeft / chargesNeeded;
+            m_text.text = thisButton.ToString() + "(" + uses.ToString() + ")";
+        }
+        
     }
 }
