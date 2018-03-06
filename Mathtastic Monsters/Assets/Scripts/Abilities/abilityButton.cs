@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class abilityButton : MonoBehaviour 
+public class abilityButton : MonoBehaviour
 {
     abilityTypes thisButton; //This button's current ability.
 
     //Active buttons are disabled if charges left is less than needed.
-    public int chargesLeft; 
+    public int chargesLeft;
     public int chargesNeeded;
 
     Button m_button;
@@ -26,7 +26,7 @@ public class abilityButton : MonoBehaviour
     //buttontype is the avility this button will be responsible for.
     //Charges if how many uses it has.
     //a_abilities is a reference to the ability manager.
-    internal void SetUpButton(abilityTypes buttonType,int charges,playerAbilities a_abilities)
+    internal void SetUpButton(abilityTypes buttonType, int charges, playerAbilities a_abilities)
     {
         abilities = a_abilities;
 
@@ -60,6 +60,7 @@ public class abilityButton : MonoBehaviour
         abilities.useButton(thisButton);
         chargesLeft -= chargesNeeded;
         SetButtonActive();
+
     }
 
     //Most active buttons do not work in some phases.
@@ -70,32 +71,13 @@ public class abilityButton : MonoBehaviour
         {
             case abilityTypes.Dodge:
                 if (!enemyPhase)
-                    incrementCharge();
+                    IncrementCharge();
+                SetChargingActive(enemyPhase);
                 break;
             case abilityTypes.Freeze:
                 if (!enemyPhase)
-                    incrementCharge();
-                break;
-            default:
-                break;
-        }
-
-
-        switch (thisButton)
-        {
-            case abilityTypes.Dodge:
-                if (enemyPhase && chargesLeft >= chargesNeeded)
-                    m_button.interactable = true;
-                else
-                    m_button.interactable = false;
-                break;
-
-            case abilityTypes.Freeze:
-                if (!enemyPhase && chargesLeft >= chargesNeeded)
-                    m_button.interactable = true;
-                else
-                    m_button.interactable = false;
-
+                    IncrementCharge();
+                SetChargingActive(!enemyPhase);
                 break;
             case abilityTypes.Burn:
                 if (enemyPhase && chargesLeft >= chargesNeeded)
@@ -130,7 +112,6 @@ public class abilityButton : MonoBehaviour
         m_text.text = thisButton.ToString();
 
         chargesNeeded = 0;
-        m_button.interactable = true;
         gameObject.SetActive(true);
 
         switch (thisButton)
@@ -158,12 +139,14 @@ public class abilityButton : MonoBehaviour
                 break;
             case abilityTypes.Burn:
                 chargesNeeded = 2;
+                m_button.interactable = true;
                 break;
             case abilityTypes.BoulderFist:
                 m_button.interactable = false;
                 return;
             case abilityTypes.FireStorm:
                 chargesNeeded = chargesLeft;
+                m_button.interactable = true;
                 break;
             case abilityTypes.Mastery:
                 m_button.interactable = false;
@@ -173,9 +156,12 @@ public class abilityButton : MonoBehaviour
                 return;
             case abilityTypes.Hourglass:
                 chargesNeeded = chargesLeft;
+                m_button.interactable = true;
                 break;
             case abilityTypes.StorePower:
                 chargesNeeded = chargesLeft;
+                m_button.interactable = true;
+
                 break;
             case abilityTypes.ArmourUp:
                 m_button.interactable = false;
@@ -210,8 +196,6 @@ public class abilityButton : MonoBehaviour
     {
         Debug.Log("Charge ");
 
-        int uses = 1;
-
         switch (chargSpeed)
         {
             case 1:
@@ -239,7 +223,7 @@ public class abilityButton : MonoBehaviour
         chargesLeft = chargesNeeded;
     }
 
-    void incrementCharge()
+    void IncrementCharge()
     {
         int usesLeft = chargesLeft / chargesNeeded;
 
@@ -254,6 +238,21 @@ public class abilityButton : MonoBehaviour
             int uses = chargesLeft / chargesNeeded;
             m_text.text = thisButton.ToString() + "(" + uses.ToString() + ")";
         }
-        
+    }
+
+    void SetChargingActive(bool setActive)
+    {
+        int usesLeft = chargesLeft / chargesNeeded;
+
+        if (setActive && usesLeft > 0)
+        {
+            m_button.interactable = true;
+        }
+        else
+        {
+            Debug.Log("False");
+            m_button.interactable = false;
+        }
+
     }
 }

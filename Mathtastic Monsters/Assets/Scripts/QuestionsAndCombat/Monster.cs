@@ -97,7 +97,7 @@ public class Monster : MonoBehaviour
     internal void SkipQuestion()
     {        
         enemyPhase = !enemyPhase;
-        player.EndTurn(enemyPhase);
+        //player.EndTurn(enemyPhase);
         enemyPhase = questions.MakeQuestion(parent.quizRunning);
     }
 
