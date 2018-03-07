@@ -15,35 +15,36 @@ public class questionManager : MonoBehaviour
 
     internal string questionNeeded;
 
-    bool justTransitioned;
-
 
     public float answer;
+
+    Text text;
+
+
 
     void Update()
     {
         if (!transition)
             return;
 
-        if (transition.transitionState == TransitionState.None && justTransitioned)
+        if (!text)
+            text = GetComponent<Text>();
+
+        if (transition.transitionState == TransitionState.None)
         {
             GetComponent<Text>().text = questionNeeded;
-            justTransitioned = false;
+            text.enabled = true;
         }
         else if (transition.transitionState != TransitionState.None)
         {
-            if (GetComponent<Text>().text != "")
-            {
-                questionNeeded = GetComponent<Text>().text;
-                GetComponent<Text>().text = "";
-                justTransitioned = true;
-            }
+            text.enabled = false;
+
         }
     }
 
 
     //Uses given values to calculate a random sum and its components, then store and display them.
-    internal bool MakeQuestion(QuizButton a_running, bool bossAttacking=false)
+    internal bool MakeQuestion(QuizButton a_running, bool bossAttacking = false)
     {
         if (calculator == null)
             calculator = FindObjectOfType<Calculator>();
@@ -156,10 +157,7 @@ public class questionManager : MonoBehaviour
 
         answerWords += "\n= ";
 
-        justTransitioned = true;
         questionNeeded = answerWords;
-
-        GetComponent<Text>().text = answerWords;
 
         calculator.answerNeeded = answerNeeded;
 
@@ -287,6 +285,8 @@ public class questionManager : MonoBehaviour
         return op;
     }
 
+    public List<operators> ops;
+
     bool CalculateBODMAS(QuizButton a_running, int failures, bool bossAttacking)
     {
         List<float> randomised = new List<float>(5);
@@ -294,7 +294,7 @@ public class questionManager : MonoBehaviour
         List<float> summingNumbers = new List<float>(5);
 
 
-        List<operators> ops = ChooseOperators(a_running.Operator, (a_running.variableCount - 1));
+        ops = ChooseOperators(a_running.Operator, (a_running.variableCount - 1));
 
 
 
@@ -352,37 +352,23 @@ public class questionManager : MonoBehaviour
         }
         else
         {
-            while (ops.Count > 0)
+            for (int i = 0; i < ops.Count; i++)
             {
-                if (ops.Contains(operators.Multiplication))
+                switch (ops[i])
                 {
-                    int i = ops.IndexOf(operators.Multiplication);
-
-                    summingNumbers[i] *= summingNumbers[(i + 1)];
-                    summingNumbers.RemoveAt(i + 1);
-                    ops.RemoveAt(i);
-                    continue;
+                    case operators.Addition:
+                        summingNumbers[0] += summingNumbers[i + 1];
+                        break;
+                    case operators.Subtraction:
+                        summingNumbers[0] -= summingNumbers[i + 1];
+                        break;
+                    case operators.Multiplication:
+                        summingNumbers[0] *= summingNumbers[i + 1];
+                        break;
+                    default:
+                        break;
                 }
 
-                if (ops.Contains(operators.Addition))
-                {
-                    int i = ops.IndexOf(operators.Addition);
-
-                    summingNumbers[i] += summingNumbers[(i + 1)];
-                    summingNumbers.RemoveAt(i + 1);
-                    ops.RemoveAt(i);
-                    continue;
-                }
-                if (ops.Contains(operators.Subtraction))
-                {
-                    int i = ops.IndexOf(operators.Subtraction);
-
-                    summingNumbers[i] -= summingNumbers[(i + 1)];
-
-                    summingNumbers.RemoveAt(i + 1);
-                    ops.RemoveAt(i);
-                    continue;
-                }
             }
             answer = summingNumbers[0];
 
@@ -424,9 +410,9 @@ public class questionManager : MonoBehaviour
 
         }
         answerWords += "\n= ";
-        GetComponent<Text>().text = answerWords;
-
         calculator.answerNeeded = answerNeeded;
+
+        questionNeeded = answerWords;
 
         return enemyPhase;
     }
