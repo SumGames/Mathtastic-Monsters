@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 95780476145639014}
   - component: {fileID: 114814826145542400}
   m_Layer: 0
-  m_Name: Knight Body
+  m_Name: Guardian Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,10 +866,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
-  cost: 100
-  ability: 15
-  textureMaterial: {fileID: 2100000, guid: 620130b4c4ba9974e822a162e74151e2, type: 2}
-  starRequired: 90
+  cost: 90
+  ability: 13
+  textureMaterial: {fileID: 2100000, guid: 9ade548979de5a54aaf4c55184cdc5b1, type: 2}
+  starRequired: 70
   neckForHead: {fileID: 1371151613929814}
   LeftArmUpper: {fileID: 1757673751691702}
   LeftArmFore: {fileID: 1217717819077318}

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4742219188711600}
   - component: {fileID: 114648396335217310}
   m_Layer: 0
-  m_Name: Knight Left Arm
+  m_Name: Guardian Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,10 +321,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
-  cost: 100
-  ability: 15
-  textureMaterial: {fileID: 2100000, guid: 620130b4c4ba9974e822a162e74151e2, type: 2}
-  starRequired: 90
+  cost: 90
+  ability: 13
+  textureMaterial: {fileID: 2100000, guid: 9ade548979de5a54aaf4c55184cdc5b1, type: 2}
+  starRequired: 70
   foreArm: {fileID: 1381919343147514}
   hand: {fileID: 1249651047022342}
   armType: 0

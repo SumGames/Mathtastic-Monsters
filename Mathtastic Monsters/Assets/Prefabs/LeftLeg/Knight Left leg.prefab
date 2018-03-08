@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4378034459849422}
   - component: {fileID: 114037213967680436}
   m_Layer: 0
-  m_Name: Knight Left leg
+  m_Name: Knight Left Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,11 +420,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
-  cost: 0
-  ability: 0
-  textureMaterial: {fileID: 0}
-  starRequired: 0
+  owned: 0
+  cost: 100
+  ability: 15
+  textureMaterial: {fileID: 2100000, guid: 620130b4c4ba9974e822a162e74151e2, type: 2}
+  starRequired: 90
   Shin: {fileID: 1820874110134648}
   Ankle: {fileID: 1670055360804764}
   Foot: {fileID: 1282353109845290}

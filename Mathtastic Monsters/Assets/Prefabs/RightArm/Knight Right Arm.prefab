@@ -320,11 +320,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
-  owned: 1
-  cost: 0
-  ability: 0
-  textureMaterial: {fileID: 0}
-  starRequired: 0
+  owned: 0
+  cost: 100
+  ability: 15
+  textureMaterial: {fileID: 2100000, guid: 620130b4c4ba9974e822a162e74151e2, type: 2}
+  starRequired: 90
   foreArm: {fileID: 1875699739416460}
   hand: {fileID: 1319782330401198}
   armType: 0

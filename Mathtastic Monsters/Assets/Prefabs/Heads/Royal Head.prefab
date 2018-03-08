@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4470950183718110}
   - component: {fileID: 114027591159223250}
   m_Layer: 0
-  m_Name: Knight Head
+  m_Name: Royal Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scale: {x: 1, y: 1, z: 1}
   owned: 0
-  cost: 100
-  ability: 15
-  textureMaterial: {fileID: 2100000, guid: 620130b4c4ba9974e822a162e74151e2, type: 2}
-  starRequired: 90
+  cost: 95
+  ability: 14
+  textureMaterial: {fileID: 2100000, guid: 95cbba60dc4cae940bf2fe697fd14e75, type: 2}
+  starRequired: 80
