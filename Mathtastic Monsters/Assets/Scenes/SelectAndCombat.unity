@@ -1238,21 +1238,21 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 3
   levelTime: 60
-  minNumber: 10
+  minNumber: 20
   maxNumber: 99
   Operator: 6
   minAnswer: 1
-  maxAnswer: 198
+  maxAnswer: 243
   difficulty: 14
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0b0000000c000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 100
-  enemyChoices: 3
-  enemyAnswerRange: 4
+  enemPhaseTime: 20
+  enemyChoices: 5
+  enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -8071,22 +8071,22 @@ MonoBehaviour:
   boss: 0
   quizIndex: 0
   variableCount: 3
-  levelTime: 200
-  minNumber: 20
-  maxNumber: 60
+  levelTime: 30
+  minNumber: 1
+  maxNumber: 99
   Operator: 6
-  minAnswer: 10
-  maxAnswer: 140
+  minAnswer: 1
+  maxAnswer: 243
   difficulty: 0
-  MonsterHealth: 10
+  MonsterHealth: 120
   MonsterAttack: 0.5
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 100
-  enemyChoices: 3
-  enemyAnswerRange: 2
+  enemPhaseTime: 15
+  enemyChoices: 5
+  enemyAnswerRange: 10
   hardMode: {fileID: 0}
   previousLevelString: You won!
   previousTime: 6
@@ -19046,7 +19046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85400003, y: 0.036792077}
   m_AnchorMax: {x: 0.90378296, y: 0.934736}
-  m_AnchoredPosition: {x: -0.25, y: 0.17773438}
+  m_AnchoredPosition: {x: 0, y: 0.17773438}
   m_SizeDelta: {x: -0.20000076, y: -0.27000046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913928648
@@ -21604,18 +21604,18 @@ MonoBehaviour:
   variableCount: 3
   levelTime: 60
   minNumber: 10
-  maxNumber: 99
+  maxNumber: 49
   Operator: 6
   minAnswer: 1
-  maxAnswer: 198
+  maxAnswer: 145
   difficulty: 14
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0700000008000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 100
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -30919,7 +30919,7 @@ MonoBehaviour:
   secondFixedNumber: 0100000002000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 15
+  enemPhaseTime: 20
   enemyChoices: 3
   enemyAnswerRange: 2
   hardMode: {fileID: 0}
@@ -31303,6 +31303,7 @@ MonoBehaviour:
   button: {fileID: 0}
   transition: {fileID: 18983144}
   answer: 0
+  ops: 
 --- !u!114 &1446319021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37149,18 +37150,18 @@ MonoBehaviour:
   variableCount: 3
   levelTime: 60
   minNumber: 1
-  maxNumber: 20
+  maxNumber: 19
   Operator: 6
-  minAnswer: 1
+  minAnswer: 127
   maxAnswer: 198
   difficulty: 14
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 03000000040000000600000009000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 100
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
@@ -38690,15 +38691,15 @@ MonoBehaviour:
   maxNumber: 9
   Operator: 6
   minAnswer: 1
-  maxAnswer: 198
+  maxAnswer: 129
   difficulty: 14
   MonsterHealth: 15
-  MonsterAttack: 2
+  MonsterAttack: 1
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0100000002000000050000000a000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
-  enemPhaseTime: 100
+  enemPhaseTime: 40
   enemyChoices: 3
   enemyAnswerRange: 4
   hardMode: {fileID: 0}
