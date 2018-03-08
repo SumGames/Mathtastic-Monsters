@@ -266,6 +266,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1965507}
+--- !u!1 &4066310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4066313}
+  - component: {fileID: 4066312}
+  - component: {fileID: 4066311}
+  m_Layer: 5
+  m_Name: Fort12_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4066311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4066310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 4
+  levelTime: 90
+  minNumber: 1
+  maxNumber: 5
+  Operator: 7
+  minAnswer: 1
+  maxAnswer: 180
+  difficulty: 67
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondFixedNumber: 03000000040000000600000009000000
+  thirdFixedNumber: 0100000002000000
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
+  enemPhaseTime: 45
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+  previousLevelString: You won!
+  previousTime: 6
+  nextLevelString: ' Entering level X!'
+  nextime: 10
+  enemyString: Now Fight!!
+  enemyTime: 2
+--- !u!222 &4066312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4066310}
+--- !u!224 &4066313
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4066310}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0003077, y: 1.0003077, z: 1.0003077}
+  m_Children: []
+  m_Father: {fileID: 282019933}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00016784668, y: 0.00006866455}
+  m_SizeDelta: {x: 189.1, y: 77.4}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9231242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,11 +4280,11 @@ MonoBehaviour:
   variableCount: 4
   levelTime: 120
   minNumber: 1
-  maxNumber: 12
+  maxNumber: 5
   Operator: 7
   minAnswer: 1
-  maxAnswer: 60
-  difficulty: 14
+  maxAnswer: 180
+  difficulty: 64
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
@@ -4216,7 +4294,7 @@ MonoBehaviour:
   enemPhaseTime: 60
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 2027703719}
   previousLevelString: You won!
   previousTime: 6
   nextLevelString: ' Entering level X!'
@@ -4238,7 +4316,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.20004}
   m_LocalScale: {x: 0.15572546, y: 0.15572546, z: 0.15572546}
-  m_Children: []
+  m_Children:
+  - {fileID: 2027703721}
   m_Father: {fileID: 1692169361}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5533,11 +5612,11 @@ MonoBehaviour:
   variableCount: 4
   levelTime: 120
   minNumber: 1
-  maxNumber: 12
+  maxNumber: 5
   Operator: 7
   minAnswer: 1
-  maxAnswer: 60
-  difficulty: 14
+  maxAnswer: 180
+  difficulty: 62
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
@@ -5547,7 +5626,7 @@ MonoBehaviour:
   enemPhaseTime: 60
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 4066311}
   previousLevelString: You won!
   previousTime: 6
   nextLevelString: ' Entering level X!'
@@ -5569,7 +5648,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.20004}
   m_LocalScale: {x: 0.15572546, y: 0.15572546, z: 0.15572546}
-  m_Children: []
+  m_Children:
+  - {fileID: 4066313}
   m_Father: {fileID: 1692169361}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6091,11 +6171,11 @@ MonoBehaviour:
   variableCount: 4
   levelTime: 120
   minNumber: 1
-  maxNumber: 12
+  maxNumber: 5
   Operator: 7
   minAnswer: 1
-  maxAnswer: 60
-  difficulty: 14
+  maxAnswer: 180
+  difficulty: 60
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
@@ -6105,7 +6185,7 @@ MonoBehaviour:
   enemPhaseTime: 60
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 2028053956}
   previousLevelString: You won!
   previousTime: 6
   nextLevelString: ' Entering level X!'
@@ -6127,7 +6207,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.20004}
   m_LocalScale: {x: 0.15572546, y: 0.15572546, z: 0.15572546}
-  m_Children: []
+  m_Children:
+  - {fileID: 2028053958}
   m_Father: {fileID: 1692169361}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15991,6 +16072,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780108254}
+--- !u!1 &784941427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 784941430}
+  - component: {fileID: 784941429}
+  - component: {fileID: 784941428}
+  m_Layer: 5
+  m_Name: Fort14_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &784941428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784941427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 4
+  levelTime: 90
+  minNumber: 1
+  maxNumber: 5
+  Operator: 7
+  minAnswer: 1
+  maxAnswer: 180
+  difficulty: 71
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondFixedNumber: 0b0000000c000000
+  thirdFixedNumber: 0100000002000000
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
+  enemPhaseTime: 45
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+  previousLevelString: You won!
+  previousTime: 6
+  nextLevelString: ' Entering level X!'
+  nextime: 10
+  enemyString: Now Fight!!
+  enemyTime: 2
+--- !u!222 &784941429
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784941427}
+--- !u!224 &784941430
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784941427}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0003077, y: 1.0003077, z: 1.0003077}
+  m_Children: []
+  m_Father: {fileID: 1205074054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00016784668, y: 0.00006866455}
+  m_SizeDelta: {x: 189.1, y: 77.4}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &789372319
 GameObject:
   m_ObjectHideFlags: 0
@@ -26787,11 +26946,11 @@ MonoBehaviour:
   variableCount: 4
   levelTime: 120
   minNumber: 1
-  maxNumber: 12
+  maxNumber: 5
   Operator: 7
   minAnswer: 1
-  maxAnswer: 60
-  difficulty: 14
+  maxAnswer: 180
+  difficulty: 66
   MonsterHealth: 15
   MonsterAttack: 1
   preventRounding: 0
@@ -26801,7 +26960,7 @@ MonoBehaviour:
   enemPhaseTime: 60
   enemyChoices: 3
   enemyAnswerRange: 4
-  hardMode: {fileID: 0}
+  hardMode: {fileID: 784941428}
   previousLevelString: You won!
   previousTime: 6
   nextLevelString: ' Entering level X!'
@@ -26823,7 +26982,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.20004}
   m_LocalScale: {x: 0.15572546, y: 0.15572546, z: 0.15572546}
-  m_Children: []
+  m_Children:
+  - {fileID: 784941430}
   m_Father: {fileID: 1692169361}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30414,16 +30574,16 @@ MonoBehaviour:
   quizIndex: 0
   variableCount: 4
   levelTime: 200
-  minNumber: 5
-  maxNumber: 20
+  minNumber: 1
+  maxNumber: 5
   Operator: 7
-  minAnswer: 10
-  maxAnswer: 200
-  difficulty: 0
+  minAnswer: 1
+  maxAnswer: 180
+  difficulty: 100
   MonsterHealth: 10
   MonsterAttack: 0.5
   preventRounding: 0
-  secondFixedNumber: 0100000002000000
+  secondFixedNumber: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
   thirdFixedNumber: 0100000002000000
   monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
   enemPhaseTime: 100
@@ -44439,6 +44599,162 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myType: 0
+--- !u!1 &2027703718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2027703721}
+  - component: {fileID: 2027703720}
+  - component: {fileID: 2027703719}
+  m_Layer: 5
+  m_Name: Fort13_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2027703719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027703718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 4
+  levelTime: 90
+  minNumber: 1
+  maxNumber: 5
+  Operator: 7
+  minAnswer: 1
+  maxAnswer: 180
+  difficulty: 69
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondFixedNumber: 0700000008000000
+  thirdFixedNumber: 0100000002000000
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
+  enemPhaseTime: 45
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+  previousLevelString: You won!
+  previousTime: 6
+  nextLevelString: ' Entering level X!'
+  nextime: 10
+  enemyString: Now Fight!!
+  enemyTime: 2
+--- !u!222 &2027703720
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027703718}
+--- !u!224 &2027703721
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2027703718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0003077, y: 1.0003077, z: 1.0003077}
+  m_Children: []
+  m_Father: {fileID: 197618942}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00016784668, y: 0.00006866455}
+  m_SizeDelta: {x: 189.1, y: 77.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2028053955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2028053958}
+  - component: {fileID: 2028053957}
+  - component: {fileID: 2028053956}
+  m_Layer: 5
+  m_Name: Fort11_Hard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2028053956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028053955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1585a33e6fbf32442a95bac775f5d92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: 0
+  quizIndex: 0
+  variableCount: 4
+  levelTime: 90
+  minNumber: 1
+  maxNumber: 5
+  Operator: 7
+  minAnswer: 1
+  maxAnswer: 180
+  difficulty: 65
+  MonsterHealth: 20
+  MonsterAttack: 2
+  preventRounding: 0
+  secondFixedNumber: 0100000002000000050000000a000000
+  thirdFixedNumber: 0100000002000000
+  monsterArt: {fileID: 1687267849099020, guid: 28ba0ad6a301c454ead85ddcad590248, type: 2}
+  enemPhaseTime: 45
+  enemyChoices: 5
+  enemyAnswerRange: 10
+  hardMode: {fileID: 0}
+  previousLevelString: You won!
+  previousTime: 6
+  nextLevelString: ' Entering level X!'
+  nextime: 10
+  enemyString: Now Fight!!
+  enemyTime: 2
+--- !u!222 &2028053957
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028053955}
+--- !u!224 &2028053958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028053955}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0003077, y: 1.0003077, z: 1.0003077}
+  m_Children: []
+  m_Father: {fileID: 297062451}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00016784668, y: 0.000015258789}
+  m_SizeDelta: {x: 189.1, y: 77.4}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2032169419
 GameObject:
   m_ObjectHideFlags: 0
