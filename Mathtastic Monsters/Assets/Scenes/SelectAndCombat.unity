@@ -5278,9 +5278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 677298093}
-  questionText: {fileID: 0}
+  questionText: {fileID: 759317774}
   monsterSpot: {fileID: 468417858}
-  calculator: {fileID: 0}
+  calculator: {fileID: 1378722495}
   nextime: 0
   textDisplay: {fileID: 189936182}
   objectSpot: 0
@@ -6159,7 +6159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -6929,7 +6929,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -12216,7 +12216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -13348,7 +13348,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -15851,11 +15851,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2085180827}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 49.1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770468975
@@ -15871,7 +15871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17841,7 +17841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &853741161
 GameObject:
   m_ObjectHideFlags: 0
@@ -23423,7 +23423,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -24843,7 +24843,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 06e89f5afca4e2c40bdfdab8987e0a54,
       type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 06e89f5afca4e2c40bdfdab8987e0a54, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -24855,7 +24855,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -26123,7 +26123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -30583,7 +30583,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2085180827}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -30605,7 +30605,6 @@ MonoBehaviour:
   manager: {fileID: 382568555}
   ok: {fileID: 573083426}
   cancel: {fileID: 329710927}
-  sounds: []
   attack: {fileID: 2085180832}
   hurt: {fileID: 2085180831}
   monsterManager: {fileID: 0}
@@ -33040,7 +33039,7 @@ RectTransform:
   m_LocalScale: {x: 1.019589, y: 1.019589, z: 1.019589}
   m_Children: []
   m_Father: {fileID: 2085180827}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -33608,7 +33607,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -34037,7 +34036,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -38449,7 +38448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -41438,7 +41437,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -42855,7 +42854,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1378722495}
         m_MethodName: AddInput
         m_Mode: 5
         m_Arguments:
@@ -43088,7 +43087,7 @@ RectTransform:
   m_LocalScale: {x: 1.0196838, y: 1.0196838, z: 1.0196838}
   m_Children: []
   m_Father: {fileID: 2085180827}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46065,10 +46064,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -46.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 770468974}
   - {fileID: 1490865482}
   - {fileID: 1941735014}
   - {fileID: 1378722494}
+  - {fileID: 770468974}
   m_Father: {fileID: 230282087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

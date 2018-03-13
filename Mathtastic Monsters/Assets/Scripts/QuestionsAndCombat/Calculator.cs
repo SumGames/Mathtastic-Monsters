@@ -14,7 +14,6 @@ public class Calculator : MonoBehaviour
 
     public Button ok;
     public Button cancel;
-    public AudioSource[] sounds;
     public AudioSource attack;
     public AudioSource hurt;
 
@@ -24,10 +23,6 @@ public class Calculator : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        sounds = GetComponents<AudioSource>();
-        attack = sounds[0];
-        hurt = sounds[1];
-
         if (manager == null)
             manager = GameObject.Find("Manager").GetComponent<StateManager>();
 
