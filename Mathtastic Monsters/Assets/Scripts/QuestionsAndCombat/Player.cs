@@ -286,11 +286,11 @@ public class Player : MonoBehaviour
         if (Disable)
         {
             Timer = 100000;
-            SliderFill.enabled = false;
+            timeLeft.gameObject.SetActive(false);
         }
-        else if(SliderFill)
+        else
         {
-            SliderFill.enabled = true;
+            timeLeft.gameObject.SetActive(true);
         }
 
 

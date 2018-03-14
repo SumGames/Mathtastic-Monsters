@@ -9,7 +9,6 @@ public class MultiplicationContainer : MonoBehaviour
 
     public int[] AnswerList = new int[6];
 
-    public Text QuestionText;
 
     public int CorrectAnswer;
 
@@ -23,6 +22,8 @@ public class MultiplicationContainer : MonoBehaviour
 
 
     int enemyChoices;
+
+    questionManager questionManager;
 
 
     // Use this for initialization
@@ -48,7 +49,12 @@ public class MultiplicationContainer : MonoBehaviour
 
         ClearEverything();
 
-        QuestionText.text = CreateCorrectAnswer(button);
+        if (!questionManager)
+            questionManager = FindObjectOfType<questionManager>();
+
+
+        questionManager.questionNeeded = CreateCorrectAnswer(button);
+
 
         boss = a_boss;
 

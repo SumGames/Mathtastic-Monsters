@@ -482,7 +482,8 @@ public class BossMonster : Monster
         {
             multipleContainer.DisableThisAndCalculator();
 
-            questions.GetComponent<Text>().text = "";
+            questions.questionNeeded = "";
+
 
             DefendSide.SetActive(true);
             abacus.gameObject.SetActive(false);

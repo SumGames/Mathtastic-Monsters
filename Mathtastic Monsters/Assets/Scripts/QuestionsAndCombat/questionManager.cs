@@ -21,7 +21,6 @@ public class questionManager : MonoBehaviour
     Text text;
 
 
-
     void Update()
     {
         if (!transition)
@@ -30,9 +29,12 @@ public class questionManager : MonoBehaviour
         if (!text)
             text = GetComponent<Text>();
 
+
+
         if (transition.transitionState == TransitionState.None)
         {
             GetComponent<Text>().text = questionNeeded;
+
             text.enabled = true;
         }
         else if (transition.transitionState != TransitionState.None)

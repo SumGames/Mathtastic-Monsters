@@ -29,7 +29,6 @@ public class SubtractionContainer : MonoBehaviour
 
     public CombatStateManager stateManager;
 
-    public Text questionText;
 
     float bossMaxHealth;
     float bossHealth;
@@ -53,7 +52,8 @@ public class SubtractionContainer : MonoBehaviour
 
     internal void LaunchTorpedo()
     {
-        questionText.text = "";
+        FindObjectOfType<questionManager>().questionNeeded = "";
+
 
         if (stateManager.gameState != playStatus.playing)
             return;

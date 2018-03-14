@@ -39,6 +39,8 @@ public class BossDivision : MonoBehaviour
 
 
         SetDraggerButtons();
+
+        FindObjectOfType<questionManager>().questionNeeded = "";
     }
 
 

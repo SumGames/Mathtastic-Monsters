@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Fortress : MonoBehaviour
 {
+    public Text AnswerText;
+
     public questionManager questionManager;
 
 
@@ -21,7 +23,6 @@ public class Fortress : MonoBehaviour
 
     public Text[] operatorsText;
 
-    public Text AnswerText;
 
     int variableCount;
 

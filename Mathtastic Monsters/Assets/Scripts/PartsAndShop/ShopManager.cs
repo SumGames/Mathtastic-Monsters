@@ -83,6 +83,8 @@ public class ShopManager : MonoBehaviour
         if (combinedShop.currentType == partType.LeftArm || combinedShop.currentType == partType.RightArm)
         {
             previewParent.transform.eulerAngles = new Vector3(180, 0, 0);
+            preview.transform.localPosition = new Vector3(0, -0.5f);
+            preview.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
         else
         {
