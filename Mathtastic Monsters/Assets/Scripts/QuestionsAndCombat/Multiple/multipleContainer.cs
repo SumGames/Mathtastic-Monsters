@@ -42,6 +42,8 @@ public class multipleContainer : MonoBehaviour
 
     public GameObject Defend;
 
+    public GameObject MultipleBackground;
+
 
     // Use this for initialization
     void Start()
@@ -80,6 +82,8 @@ public class multipleContainer : MonoBehaviour
 
     internal bool SetMultiple(int answer, QuizButton a_running, float multiple, bool BossAttacking=false)
     {
+        
+
         enemyAnswerNeeded = answer;
         if (!BossAttacking)
         {
@@ -127,10 +131,14 @@ public class multipleContainer : MonoBehaviour
 
     void MultipleAnswers(QuizButton a_running, float multiple)
     {
+        Debug.Log("true");
+
         SelectedAnswer = null;
         submit.interactable = false;
 
         DisableMultipleChoiceButtons();
+
+        MultipleBackground.SetActive(true);
 
         TransitionButtons(true, a_running);
 
@@ -222,6 +230,8 @@ public class multipleContainer : MonoBehaviour
 
     void DisableMultipleChoiceButtons()
     {
+        MultipleBackground.SetActive(false);
+
         if (Defend)
             Defend.gameObject.SetActive(false);
 

@@ -3720,7 +3720,7 @@ MonoBehaviour:
   - {fileID: 2111091669}
   - {fileID: 164567506}
   AnswerList: 000000000000000000000000000000000000000000000000
-  QuestionText: {fileID: 0}
+  QuestionText: {fileID: 759317774}
   CorrectAnswer: 0
   multiplicationBoxes:
   - {fileID: 0}
@@ -8783,7 +8783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.1, y: 0.7}
+  m_AnchoredPosition: {x: 0.099999994, y: 0.70000005}
   m_SizeDelta: {x: -17.4, y: -11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420175757
@@ -14399,7 +14399,7 @@ MonoBehaviour:
   subtractionBottom: {fileID: 1940008109}
   bossDivision: {fileID: 1341949668}
   multiplicationContainer: {fileID: 155898116}
-  calculator: {fileID: 0}
+  calculator: {fileID: 1378722495}
   subtractionContainer: {fileID: 1778991497}
   Fortress: {fileID: 1761222689}
   DefendSide: {fileID: 569076185}
@@ -17825,6 +17825,7 @@ MonoBehaviour:
   SelectedAnswer: {fileID: 0}
   submit: {fileID: 1191045039}
   Defend: {fileID: 1191045037}
+  MultipleBackground: {fileID: 2123749181}
 --- !u!1 &850981980
 GameObject:
   m_ObjectHideFlags: 0
@@ -17841,7 +17842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &853741161
 GameObject:
   m_ObjectHideFlags: 0
@@ -29935,7 +29936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: 0.8}
+  m_AnchoredPosition: {x: 0.5, y: 0.79999995}
   m_SizeDelta: {x: -18.1, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328402908
@@ -30150,7 +30151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341949666}
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: -202, y: -26.923773, z: -323}
+  m_LocalPosition: {x: -165, y: -26.923773, z: -387}
   m_LocalScale: {x: 64.27624, y: 64.27624, z: 64.27624}
   m_Children:
   - {fileID: 1628999584}
@@ -31977,7 +31978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.2, y: 1.2}
+  m_AnchoredPosition: {x: 0.19999999, y: 1.2}
   m_SizeDelta: {x: -19.5, y: -12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448555902
@@ -35737,7 +35738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.7, y: 0.8}
+  m_AnchoredPosition: {x: 0.70000005, y: 0.79999995}
   m_SizeDelta: {x: -18.6, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651131971
@@ -37437,7 +37438,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1700453003}
   m_OnClick:
     m_PersistentCalls:
@@ -38797,7 +38798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce7e2e80aca7e145a53c4852b27a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionManager: {fileID: 0}
+  questionManager: {fileID: 759317773}
   FortressButtons:
   - {fileID: 1458742650}
   - {fileID: 1073897794}
@@ -39156,7 +39157,7 @@ MonoBehaviour:
   FiredTorpedo: {fileID: 0}
   storyManager: {fileID: 255308281}
   stateManager: {fileID: 382568555}
-  questionText: {fileID: 0}
+  questionText: {fileID: 759317774}
 --- !u!1 &1779347332
 GameObject:
   m_ObjectHideFlags: 0
@@ -41015,7 +41016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: 0.7}
+  m_AnchoredPosition: {x: 0.5, y: 0.70000005}
   m_SizeDelta: {x: -18.1, y: -11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855902660
