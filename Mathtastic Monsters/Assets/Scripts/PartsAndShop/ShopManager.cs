@@ -78,7 +78,17 @@ public class ShopManager : MonoBehaviour
             Destroy(preview);
 
         preview = Instantiate(currentPart, previewParent.transform, false);
-        preview.transform.localScale = preview.GetComponent<ItemPart>().Scale;
+
+
+        if (combinedShop.currentType == partType.LeftArm || combinedShop.currentType == partType.RightArm)
+        {
+            previewParent.transform.eulerAngles = new Vector3(180, 0, 0);
+        }
+        else
+        {
+            previewParent.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
 
         if (abilities == null)
             abilities = FindObjectOfType<AbilitiesManager>();
