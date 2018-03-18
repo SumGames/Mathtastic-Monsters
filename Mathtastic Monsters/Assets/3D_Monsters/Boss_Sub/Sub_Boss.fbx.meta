@@ -1,0 +1,719 @@
+fileFormatVersion: 2
+guid: bd333cba27f88ef489d81b4a8637def6
+timeCreated: 1521368324
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Gatherpoint
+    100002: Head
+    100004: Head_End
+    100006: Root
+    100008: //RootNode
+    100010: Subterror
+    100012: Tenticle_1_Jnt
+    100014: Tenticle_1_Jnt_1
+    100016: Tenticle_1_Jnt_2
+    100018: Tenticle_1_Jnt_3
+    100020: Tenticle_1_Jnt_4
+    100022: Tenticle_1_Jnt_5
+    100024: Tenticle_2_Jnt
+    100026: Tenticle_2_Jnt_1
+    100028: Tenticle_2_Jnt_2
+    100030: Tenticle_2_Jnt_3
+    100032: Tenticle_2_Jnt_4
+    100034: Tenticle_2_Jnt_5
+    100036: Tenticle_3_Jnt
+    100038: Tenticle_3_Jnt_1
+    100040: Tenticle_3_Jnt_2
+    100042: Tenticle_3_Jnt_3
+    100044: Tenticle_3_Jnt_4
+    100046: Tenticle_3_Jnt_5
+    100048: Tenticle_4_Jnt
+    100050: Tenticle_4_Jnt_1
+    100052: Tenticle_4_Jnt_2
+    100054: Tenticle_4_Jnt_3
+    100056: Tenticle_4_Jnt_4
+    100058: Tenticle_4_Jnt_5
+    100060: Tenticle_5_Jnt
+    100062: Tenticle_5_Jnt_1
+    100064: Tenticle_5_Jnt_2
+    100066: Tenticle_5_Jnt_3
+    100068: Tenticle_5_Jnt_4
+    100070: Tenticle_5_Jnt_5
+    100072: Tenticle_6_Jnt
+    100074: Tenticle_6_Jnt_1
+    100076: Tenticle_6_Jnt_2
+    100078: Tenticle_6_Jnt_3
+    100080: Tenticle_6_Jnt_4
+    100082: Tenticle_6_Jnt_5
+    100084: Tenticle_7_Jnt7
+    100086: Tenticle_7_Jnt_1
+    100088: Tenticle_7_Jnt_2
+    100090: Tenticle_7_Jnt_3
+    100092: Tenticle_7_Jnt_4
+    100094: Tenticle_7_Jnt_5
+    100096: Trident
+    100098: Trident_Tenticle_Jnt
+    100100: Trident_Tenticle_Jnt_1
+    100102: Trident_Tenticle_Jnt_2
+    400000: Gatherpoint
+    400002: Head
+    400004: Head_End
+    400006: Root
+    400008: //RootNode
+    400010: Subterror
+    400012: Tenticle_1_Jnt
+    400014: Tenticle_1_Jnt_1
+    400016: Tenticle_1_Jnt_2
+    400018: Tenticle_1_Jnt_3
+    400020: Tenticle_1_Jnt_4
+    400022: Tenticle_1_Jnt_5
+    400024: Tenticle_2_Jnt
+    400026: Tenticle_2_Jnt_1
+    400028: Tenticle_2_Jnt_2
+    400030: Tenticle_2_Jnt_3
+    400032: Tenticle_2_Jnt_4
+    400034: Tenticle_2_Jnt_5
+    400036: Tenticle_3_Jnt
+    400038: Tenticle_3_Jnt_1
+    400040: Tenticle_3_Jnt_2
+    400042: Tenticle_3_Jnt_3
+    400044: Tenticle_3_Jnt_4
+    400046: Tenticle_3_Jnt_5
+    400048: Tenticle_4_Jnt
+    400050: Tenticle_4_Jnt_1
+    400052: Tenticle_4_Jnt_2
+    400054: Tenticle_4_Jnt_3
+    400056: Tenticle_4_Jnt_4
+    400058: Tenticle_4_Jnt_5
+    400060: Tenticle_5_Jnt
+    400062: Tenticle_5_Jnt_1
+    400064: Tenticle_5_Jnt_2
+    400066: Tenticle_5_Jnt_3
+    400068: Tenticle_5_Jnt_4
+    400070: Tenticle_5_Jnt_5
+    400072: Tenticle_6_Jnt
+    400074: Tenticle_6_Jnt_1
+    400076: Tenticle_6_Jnt_2
+    400078: Tenticle_6_Jnt_3
+    400080: Tenticle_6_Jnt_4
+    400082: Tenticle_6_Jnt_5
+    400084: Tenticle_7_Jnt7
+    400086: Tenticle_7_Jnt_1
+    400088: Tenticle_7_Jnt_2
+    400090: Tenticle_7_Jnt_3
+    400092: Tenticle_7_Jnt_4
+    400094: Tenticle_7_Jnt_5
+    400096: Trident
+    400098: Trident_Tenticle_Jnt
+    400100: Trident_Tenticle_Jnt_1
+    400102: Trident_Tenticle_Jnt_2
+    2300000: Trident
+    3300000: Trident
+    4300000: Subterror
+    4300002: Trident
+    7400000: Hit
+    7400002: Idle
+    7400004: Attack
+    7400006: Death
+    9500000: //RootNode
+    13700000: Subterror
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Gatherpoint
+        weight: 1
+      - path: Root/Gatherpoint/Head
+        weight: 1
+      - path: Root/Gatherpoint/Head/Head_End
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4/Tenticle_1_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4/Tenticle_2_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4/Tenticle_3_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4/Tenticle_4_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4/Tenticle_5_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4/Tenticle_6_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4/Tenticle_7_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2/Trident
+        weight: 1
+      - path: Subterror
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Gatherpoint
+        weight: 1
+      - path: Root/Gatherpoint/Head
+        weight: 1
+      - path: Root/Gatherpoint/Head/Head_End
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4/Tenticle_1_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4/Tenticle_2_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4/Tenticle_3_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4/Tenticle_4_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4/Tenticle_5_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4/Tenticle_6_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4/Tenticle_7_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2/Trident
+        weight: 1
+      - path: Subterror
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Gatherpoint
+        weight: 1
+      - path: Root/Gatherpoint/Head
+        weight: 1
+      - path: Root/Gatherpoint/Head/Head_End
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4/Tenticle_1_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4/Tenticle_2_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4/Tenticle_3_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4/Tenticle_4_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4/Tenticle_5_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4/Tenticle_6_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4/Tenticle_7_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2/Trident
+        weight: 1
+      - path: Subterror
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 257
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Gatherpoint
+        weight: 1
+      - path: Root/Gatherpoint/Head
+        weight: 1
+      - path: Root/Gatherpoint/Head/Head_End
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_1_Jnt/Tenticle_1_Jnt_1/Tenticle_1_Jnt_2/Tenticle_1_Jnt_3/Tenticle_1_Jnt_4/Tenticle_1_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_2_Jnt/Tenticle_2_Jnt_1/Tenticle_2_Jnt_2/Tenticle_2_Jnt_3/Tenticle_2_Jnt_4/Tenticle_2_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_3_Jnt/Tenticle_3_Jnt_1/Tenticle_3_Jnt_2/Tenticle_3_Jnt_3/Tenticle_3_Jnt_4/Tenticle_3_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_4_Jnt/Tenticle_4_Jnt_1/Tenticle_4_Jnt_2/Tenticle_4_Jnt_3/Tenticle_4_Jnt_4/Tenticle_4_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_5_Jnt/Tenticle_5_Jnt_1/Tenticle_5_Jnt_2/Tenticle_5_Jnt_3/Tenticle_5_Jnt_4/Tenticle_5_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_6_Jnt/Tenticle_6_Jnt_1/Tenticle_6_Jnt_2/Tenticle_6_Jnt_3/Tenticle_6_Jnt_4/Tenticle_6_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4
+        weight: 1
+      - path: Root/Gatherpoint/Tenticle_7_Jnt7/Tenticle_7_Jnt_1/Tenticle_7_Jnt_2/Tenticle_7_Jnt_3/Tenticle_7_Jnt_4/Tenticle_7_Jnt_5
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2
+        weight: 1
+      - path: Root/Gatherpoint/Trident_Tenticle_Jnt/Trident_Tenticle_Jnt_1/Trident_Tenticle_Jnt_2/Trident
+        weight: 1
+      - path: Subterror
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
