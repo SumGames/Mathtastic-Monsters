@@ -142,12 +142,12 @@ public class TutorialMonster : MonoBehaviour
 
         for (int i = 1; i < 2; i++)
         {
-            answerWords += "\n" + oper + numbers[i].ToString("F0");
+            answerWords += " " + oper + numbers[i].ToString("F0");
 
             answer += numbers[i];
         }
 
-        answerWords += "\n= ";
+        answerWords += " = ";
 
         calculator.SetAnswer(answerNeeded, answerWords);
     }

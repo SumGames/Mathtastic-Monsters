@@ -89,7 +89,7 @@ public class BossDivision : MonoBehaviour
         answerWords += numberRandom.ToString("F0");
 
 
-        answerWords += "\n ÷" + numberEither.ToString("F0");
+        answerWords += " ÷ " + numberEither.ToString("F0");
 
 
         return answerWords;

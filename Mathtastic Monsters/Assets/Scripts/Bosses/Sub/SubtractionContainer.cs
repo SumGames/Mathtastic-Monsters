@@ -137,7 +137,7 @@ public class SubtractionContainer : MonoBehaviour
         answerWords += numberRandom[0].ToString("F0");
 
 
-        answerWords += "\n -" + numberRandom[1].ToString("F0");
+        answerWords += "-" + numberRandom[1].ToString("F0");
 
         questions[index] = answerWords;
 

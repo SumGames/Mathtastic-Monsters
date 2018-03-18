@@ -152,12 +152,12 @@ public class questionManager : MonoBehaviour
 
         for (int i = 1; i < a_running.variableCount; i++)
         {
-            answerWords += "\n" + oper + numbers[i].ToString("F0");
+            answerWords += oper + numbers[i].ToString("F0");
 
             answer += numbers[i];
         }
 
-        answerWords += "\n= ";
+        answerWords += "= ";
 
         questionNeeded = answerWords;
 
@@ -407,11 +407,11 @@ public class questionManager : MonoBehaviour
 
             for (int i = 1; i < a_running.variableCount; i++)
             {
-                answerWords += "\n" + operatorStrings[(i - 1)] + randomised[i].ToString("F0");
+                answerWords += operatorStrings[(i - 1)] + randomised[i].ToString("F0");
             }
 
         }
-        answerWords += "\n= ";
+        answerWords += "= ";
         calculator.answerNeeded = answerNeeded;
 
         questionNeeded = answerWords;
@@ -421,7 +421,7 @@ public class questionManager : MonoBehaviour
 
     string BODMASDivisionQuestion(string[] a_opStrings, List<float> Randomised)
     {
-        string returning = "(" + Randomised[0] + " / " + Randomised[1] + " " + a_opStrings[1] + " " + Randomised[2] + ")\nx " + Randomised[3];
+        string returning = "(" + Randomised[0] + " / " + Randomised[1] + " " + a_opStrings[1] + " " + Randomised[2] + ")x " + Randomised[3];
 
 
         return returning;
