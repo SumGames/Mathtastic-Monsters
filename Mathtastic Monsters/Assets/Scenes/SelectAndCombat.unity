@@ -7088,7 +7088,7 @@ GameObject:
   - component: {fileID: 338444654}
   - component: {fileID: 338444653}
   m_Layer: 5
-  m_Name: Stars2
+  m_Name: Stars_Silver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7102,15 +7102,15 @@ RectTransform:
   m_GameObject: {fileID: 338444651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90.655785}
-  m_LocalScale: {x: 0.016969549, y: 0.014141296, z: 0.014141296}
+  m_LocalScale: {x: 0.01612107, y: 0.01343423, z: 0.01343423}
   m_Children: []
   m_Father: {fileID: 977039560}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.3129983, y: 2.6809998}
-  m_SizeDelta: {x: 85, y: 100.155}
+  m_AnchoredPosition: {x: -2.3269997, y: 2.6890001}
+  m_SizeDelta: {x: 81.439, y: 100.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338444653
 MonoBehaviour:
@@ -11461,7 +11461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.61, y: -0.9}
+  m_AnchoredPosition: {x: -1.6100001, y: -0.9}
   m_SizeDelta: {x: 104.45, y: 314.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536960932
@@ -16502,8 +16502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4151084, y: 0.14487095}
   m_AnchorMax: {x: 0.47421682, y: 0.855}
-  m_AnchoredPosition: {x: -0.125, y: 0}
-  m_SizeDelta: {x: -0.80000305, y: -0.5999985}
+  m_AnchoredPosition: {x: 1.300003, y: -0.3}
+  m_SizeDelta: {x: -31.8, y: 4.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789372321
 MonoBehaviour:
@@ -16524,7 +16524,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a7eff8411e60a0b43b97d022873e1b3b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 163b3008e517b2f4eac8594619979da2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23318,8 +23318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.54556656, y: 0.14487095}
   m_AnchorMax: {x: 0.6033498, y: 0.855}
-  m_AnchoredPosition: {x: 0, y: -0.00005340576}
-  m_SizeDelta: {x: 0.19999695, y: -0.5999985}
+  m_AnchoredPosition: {x: 4, y: 0.19999999}
+  m_SizeDelta: {x: -17.869, y: 5.3552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033696366
 MonoBehaviour:
@@ -23340,7 +23340,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 592a5b9548c5ff942a162df595cbee51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3fde3cf4574e13408a2e33b0185a5cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26905,7 +26905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.95000005, y: -2.68}
+  m_AnchoredPosition: {x: 0.95000005, y: -2.6800003}
   m_SizeDelta: {x: 223.95, y: 93.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191045039
@@ -32819,7 +32819,7 @@ GameObject:
   - component: {fileID: 1472479560}
   - component: {fileID: 1472479559}
   m_Layer: 5
-  m_Name: Stars3
+  m_Name: Stars_Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32833,15 +32833,15 @@ RectTransform:
   m_GameObject: {fileID: 1472479557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90.655785}
-  m_LocalScale: {x: 0.016969549, y: 0.014141296, z: 0.014141296}
+  m_LocalScale: {x: 0.01612107, y: 0.01343423, z: 0.01343423}
   m_Children: []
   m_Father: {fileID: 977039560}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.669, y: 2.6115}
-  m_SizeDelta: {x: 85, y: 100.155}
+  m_AnchoredPosition: {x: -0.69499993, y: 2.593}
+  m_SizeDelta: {x: 81.439, y: 100.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472479559
 MonoBehaviour:
@@ -43069,7 +43069,7 @@ GameObject:
   - component: {fileID: 1935839344}
   - component: {fileID: 1935839343}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Star_Bronze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43083,15 +43083,15 @@ RectTransform:
   m_GameObject: {fileID: 1935839341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90.655785}
-  m_LocalScale: {x: 0.016969549, y: 0.014141296, z: 0.014141296}
+  m_LocalScale: {x: 0.01612107, y: 0.01343423, z: 0.01343423}
   m_Children: []
   m_Father: {fileID: 977039560}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.037, y: 2.5996}
-  m_SizeDelta: {x: 85, y: 100.155}
+  m_AnchoredPosition: {x: -4.0410004, y: 2.5819998}
+  m_SizeDelta: {x: 81.439, y: 100.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935839343
 MonoBehaviour:
