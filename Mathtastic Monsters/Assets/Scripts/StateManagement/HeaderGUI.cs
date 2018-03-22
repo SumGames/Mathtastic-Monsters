@@ -19,8 +19,7 @@ public class HeaderGUI : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-
+    {        
     }
 
     private void Update()
@@ -28,6 +27,7 @@ public class HeaderGUI : MonoBehaviour
         if (!list)
         {
             list = FindObjectOfType<equipmentList>();
+            UINeedsUpdate = true;
         }
 
         if (shardsUI && UINeedsUpdate)

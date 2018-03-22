@@ -22,7 +22,10 @@ public class CombatStateManager : ParentsStateManager
     public GameObject mathfortressSelection; //Above, for Math Fortress
 
     public GameObject combatContainer; //Container which has player, calculator and enemy.
-    public GameObject resetContainer; // The back and restart buttons, that appear after a level finishes.
+
+    public GameObject WinContainer; //Back, loss and restart buttons
+    public GameObject loseContainer;// The back and restart buttons, that appear after a level finishes;
+
 
     public GameObject retreatObject;
 
@@ -151,7 +154,7 @@ public class CombatStateManager : ParentsStateManager
 
                 combatContainer.SetActive(true);
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
-                resetContainer.SetActive(true);
+                loseContainer.SetActive(true);
                 container.DisableThisAndCalculator();
                 break;
             case playStatus.Won:
@@ -159,7 +162,7 @@ public class CombatStateManager : ParentsStateManager
                 nextButton.ready();
                 combatContainer.SetActive(true);
                 enemyContainer.gameObject.SetActive(false);
-                resetContainer.SetActive(true);
+                WinContainer.SetActive(true);
                 int exp = player.CalculateExperience();
                 list.equip.shards += exp;
                 container.DisableThisAndCalculator();
@@ -224,7 +227,10 @@ public class CombatStateManager : ParentsStateManager
     {
         combatContainer.SetActive(false);
         subjectContainer.SetActive(false);
-        resetContainer.SetActive(false);
+
+        WinContainer.SetActive(false);
+        loseContainer.SetActive(false);
+
         additionSelection.SetActive(false);
         subtractionSelection.SetActive(false);
         multiplicationSelection.SetActive(false);

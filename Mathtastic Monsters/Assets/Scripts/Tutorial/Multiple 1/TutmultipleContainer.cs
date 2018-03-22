@@ -54,7 +54,7 @@ public class TutmultipleContainer : MonoBehaviour
     void MultipleAnswers()
     {
         calculator.SetActive(false);
-
+        gameObject.SetActive(true);
         foreach (TutMultipleAnswer item in answers)
         {
             item.setAnswer(-1);
