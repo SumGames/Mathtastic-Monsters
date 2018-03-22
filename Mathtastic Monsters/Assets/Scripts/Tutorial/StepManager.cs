@@ -78,8 +78,6 @@ public class StepManager : MonoBehaviour
         backgrounds.startBack(playStatus.subjectSelect);
 
 
-
-
         myButton = gameObject.GetComponent<Button>();
         SetStep(1);
     }

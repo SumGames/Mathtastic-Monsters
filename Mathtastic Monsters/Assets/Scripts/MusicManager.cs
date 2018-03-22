@@ -22,6 +22,11 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] bossMusic = new AudioClip[6];
 
 
+    public float pitchLowest = 0.8f;
+
+    public float pitchMidd = 1;
+
+    public float pitchUpper = 1.25f;
 
     // Use this for initialization
     void Start()
@@ -33,11 +38,35 @@ public class MusicManager : MonoBehaviour
         click.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
     }
 
+    public void AdjustPitch(int Value)
+    {
+        if (Value < 0)
+        {
+            musicSource.pitch = pitchLowest;
+        }
+        else if (Value == 0)
+            musicSource.pitch = 1;
+        else if (Value == 1)
+        {
+            musicSource.pitch = pitchMidd;
+        }
+        else
+        {
+            musicSource.pitch = pitchUpper;
+        }
+
+
+    }
+
+
     //Select a music clip, and check if the clip is different. If so, swap it in and play it.
     public void setMusic(playStatus newState)
     {
         if (musicSource == null)
             musicSource = gameObject.GetComponent<AudioSource>();
+
+
+        musicSource.pitch = 1;
 
 
         AudioClip adding = null;

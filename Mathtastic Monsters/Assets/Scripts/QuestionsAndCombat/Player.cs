@@ -77,6 +77,8 @@ public class Player : MonoBehaviour
 
     public Image SliderFill;
 
+    MusicManager music;
+
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
@@ -150,6 +152,8 @@ public class Player : MonoBehaviour
     //Counts down time while game is playing. Tale damage if hits 0.
     void Update()
     {
+        music = FindObjectOfType<MusicManager>();
+
         if (!list)
         {
             list = FindObjectOfType<equipmentList>();
@@ -166,11 +170,20 @@ public class Player : MonoBehaviour
 
 
         if (Timer > greenZone)
+        {
+            music.AdjustPitch(-1);
             bar.color = Color.green;
+        }
         else if (Timer < redZone)
+        {
+            music.AdjustPitch(2);
             bar.color = Color.red;
+        }
         else
+        {
+            music.AdjustPitch(1);
             bar.color = Color.yellow;
+        }
 
         if (manager.isPlaying() && (!transition || transition.transitionState == TransitionState.None) && (!storyManager || storyManager.phase == phases.None))
         {
