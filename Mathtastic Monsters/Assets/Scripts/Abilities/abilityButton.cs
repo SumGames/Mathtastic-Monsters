@@ -13,7 +13,6 @@ public class abilityButton : MonoBehaviour
 
     Button m_button;
 
-    Text m_text; //On button, Displays ability name and uses left.
 
     playerAbilities abilities; //reference to player's ability manager.
 
@@ -34,6 +33,8 @@ public class abilityButton : MonoBehaviour
         chargesLeft = charges;
 
         SetButtonActive();
+
+        GetComponent<Image>().sprite = abilities.Icons[((int)thisButton - 1)];
 
         if (buttonType == abilityTypes.Dodge || buttonType == abilityTypes.Freeze)
         {
@@ -102,14 +103,11 @@ public class abilityButton : MonoBehaviour
     //Set info using the ability's type.
     //This determines if the ability is usable, it's cost, it's name, etc.
     internal void SetButtonActive()
-    {
+    {        
         if (!m_button)
         {
             m_button = gameObject.GetComponent<Button>();
-            m_text = GetComponentInChildren<Text>();
         }
-
-        m_text.text = thisButton.ToString();
 
         chargesNeeded = 0;
         gameObject.SetActive(true);
@@ -188,7 +186,6 @@ public class abilityButton : MonoBehaviour
         if (chargesLeft > 0 && chargesNeeded > 0)
         {
             int uses = chargesLeft / chargesNeeded;
-            m_text.text += "(" + uses.ToString() + ")";
         }
     }
 
@@ -236,7 +233,7 @@ public class abilityButton : MonoBehaviour
             chargesLeft = usesLeft * chargesNeeded;
 
             int uses = chargesLeft / chargesNeeded;
-            m_text.text = thisButton.ToString() + "(" + uses.ToString() + ")";
+
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerAbilities : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class playerAbilities : MonoBehaviour
     public int Crits; //Number of crits we got since starting fight.
     public int Counters; //Number of counters since star.
 
-    public int attacking; //Number of attacks since in a row since last taken damage. Used in store power. 
+    public int attacking; //Number of attacks since in a row since last taken damage. Used in store power.
+
+    public Sprite[] Icons;
 
 
     //initialization, called manually by player when it's ready.
@@ -30,7 +33,6 @@ public class playerAbilities : MonoBehaviour
 
         manager = FindObjectOfType<AbilitiesManager>();
         manager.setAbilities();
-
     }
 
     //Called every time a monster fight starts. If fight is a boss, everything is turned off.

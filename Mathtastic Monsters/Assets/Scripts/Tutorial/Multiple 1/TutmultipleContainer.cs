@@ -12,7 +12,6 @@ public class TutmultipleContainer : MonoBehaviour
 
     public TutorialPlayer player;
 
-    TutmultipleContainer container;
     TutorialMonster monster;
 
     internal TutMultipleAnswer SelectedAnswer;
@@ -116,7 +115,6 @@ public class TutmultipleContainer : MonoBehaviour
 
         if (!monster)
         {
-            container = FindObjectOfType<TutmultipleContainer>();
             monster = FindObjectOfType<TutorialMonster>();
         }
 
