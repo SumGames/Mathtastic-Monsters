@@ -131,8 +131,6 @@ public class multipleContainer : MonoBehaviour
 
     void MultipleAnswers(QuizButton a_running, float multiple)
     {
-        Debug.Log("true");
-
         SelectedAnswer = null;
         submit.interactable = false;
 

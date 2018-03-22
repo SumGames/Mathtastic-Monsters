@@ -35,6 +35,15 @@ public class playerAbilities : MonoBehaviour
         manager.setAbilities();
     }
 
+    internal void ableAbilities(bool Able)
+    {
+        for (int i = 0; i < abilityButtons.Length; i++)
+        {
+            abilityButtons[i].GetComponent<Image>().enabled = Able;
+        }
+    }
+
+
     //Called every time a monster fight starts. If fight is a boss, everything is turned off.
     internal void SetupAbilities(bool a_boss)
     {

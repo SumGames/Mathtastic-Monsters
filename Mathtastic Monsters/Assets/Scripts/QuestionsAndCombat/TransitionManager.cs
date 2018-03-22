@@ -13,6 +13,8 @@ public enum TransitionState
 
 public class TransitionManager : MonoBehaviour
 {
+    public playerAbilities abilities;
+
     public float transitionSpeed = 1;
 
     public float transitionMin = 0.1f;
@@ -55,12 +57,15 @@ public class TransitionManager : MonoBehaviour
                 calSize = 1;
                 Calculator.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
+                abilities.ableAbilities(true);
+                return;
             }
             else
             {
                 Calculator.SetActive(true);
                 calSize += Time.deltaTime * transitionSpeed;
                 Calculator.transform.localScale = new Vector3(calSize, calSize);
+                abilities.ableAbilities(false);
             }
         }
         if (transitionState == TransitionState.MultGrow)
@@ -71,6 +76,8 @@ public class TransitionManager : MonoBehaviour
                 choSize = 1;
                 MultipleChoice.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
+                abilities.ableAbilities(true);
+                return;
             }
             else
             {
@@ -79,6 +86,8 @@ public class TransitionManager : MonoBehaviour
                 MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
             }
         }
+
+        abilities.ableAbilities(false);
 
         if (transitionState == TransitionState.CalculatorShrink)
         {
@@ -110,6 +119,7 @@ public class TransitionManager : MonoBehaviour
                 MultipleChoice.SetActive(true);
                 choSize -= Time.deltaTime * transitionSpeed;
                 MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
+
             }
         }
 

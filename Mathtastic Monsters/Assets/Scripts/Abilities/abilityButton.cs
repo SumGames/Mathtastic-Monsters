@@ -247,7 +247,6 @@ public class abilityButton : MonoBehaviour
         }
         else
         {
-            Debug.Log("False");
             m_button.interactable = false;
         }
 
