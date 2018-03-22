@@ -182,11 +182,6 @@ public class abilityButton : MonoBehaviour
                 m_button.gameObject.SetActive(false);
 
         }
-        //If charges are left, tell us how many uses left.
-        if (chargesLeft > 0 && chargesNeeded > 0)
-        {
-            int uses = chargesLeft / chargesNeeded;
-        }
     }
 
     void SetChargingButton(int chargSpeed)
@@ -231,8 +226,6 @@ public class abilityButton : MonoBehaviour
             turnsSinceCharged = 0;
 
             chargesLeft = usesLeft * chargesNeeded;
-
-            int uses = chargesLeft / chargesNeeded;
 
         }
     }

@@ -219,7 +219,7 @@ public class StepManager : MonoBehaviour
 
             case 14:
                 multContainer.SetActive(true);
-                QuestionText.text = "4\n+5=";
+                QuestionText.text = "4 + 5 = ";
                 multRight.interactable = true;                
                 myButton.interactable = false;
                 lillyText.text = "To evade, hit the button with the Correct Answer.";
@@ -233,6 +233,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 16:
+                QuestionText.text = "";
                 multRight.gameObject.SetActive(false);
                 multSubmit.gameObject.SetActive(false);
                 myButton.interactable = true;
