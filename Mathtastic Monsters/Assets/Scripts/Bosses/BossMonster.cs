@@ -363,7 +363,7 @@ public class BossMonster : Monster
 
         answerWords += " = " + result.ToString();
 
-        questions.GetComponent<Text>().text = answerWords;
+
         questions.questionNeeded = answerWords;
 
     }
@@ -400,9 +400,7 @@ public class BossMonster : Monster
             questions.MakeQuestion(m_button, true);
         }
         else
-        {
-            questions.GetComponent<Text>().text = "";
-
+        {       
             player.SetTime(true, m_button.enemPhaseTime);
 
 

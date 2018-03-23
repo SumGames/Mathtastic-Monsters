@@ -142,7 +142,6 @@ public class Monster : MonoBehaviour
 
         multipleContainer.SetAttacks(false, true);
 
-        questions = FindObjectOfType<questionManager>();
 
         DestroyMonster();
 

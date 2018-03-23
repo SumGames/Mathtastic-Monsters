@@ -18,28 +18,30 @@ public class questionManager : MonoBehaviour
 
     public float answer;
 
-    Text text;
-
+    public Text[] texts;
 
     void Update()
     {
         if (!transition)
             return;
-
-        if (!text)
-            text = GetComponent<Text>();
-
-
-
+    
         if (transition.transitionState == TransitionState.None)
         {
-            GetComponent<Text>().text = questionNeeded;
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].text = questionNeeded;
+                texts[i].enabled = true;
 
-            text.enabled = true;
+            }
+
         }
         else if (transition.transitionState != TransitionState.None)
         {
-            text.enabled = false;
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].enabled = false;
+
+            }
 
         }
     }
