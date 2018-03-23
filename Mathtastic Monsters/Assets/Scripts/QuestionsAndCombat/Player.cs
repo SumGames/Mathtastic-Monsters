@@ -33,13 +33,10 @@ public class Player : MonoBehaviour
     public Healthbars Healthbar;
 
 
-    public Slider timeLeft; //Visually represents time.
+    //public Slider timeLeft; //Visually represents time.
 
     float greenZone; //At over the crit timer, the bar is green.
     float redZone; //When under 25% left, it turns red.
-    //At all other times, turn yellow.
-    public Image bar; //Display of the timer bar. Used to change its colour.
-
 
 
     public GameObject container;
@@ -75,7 +72,8 @@ public class Player : MonoBehaviour
 
     public TransitionManager transition;
 
-    public Image SliderFill;
+
+    public TimerManager timerManager;
 
     MusicManager music;
 
@@ -164,7 +162,9 @@ public class Player : MonoBehaviour
 
         if (Frozen > 0)
         {
-            bar.color = Color.cyan;
+
+
+            timerManager.sliderColour(Color.cyan);
             return;
         }
 
@@ -172,23 +172,24 @@ public class Player : MonoBehaviour
         if (Timer > greenZone)
         {
             music.AdjustPitch(-1);
-            bar.color = Color.green;
+            timerManager.sliderColour(Color.green);
         }
         else if (Timer < redZone)
         {
             music.AdjustPitch(2);
-            bar.color = Color.red;
+            timerManager.sliderColour(Color.red);
         }
         else
         {
             music.AdjustPitch(1);
-            bar.color = Color.yellow;
+            timerManager.sliderColour(Color.yellow);
         }
 
         if (manager.isPlaying() && (!transition || transition.transitionState == TransitionState.None) && (!storyManager || storyManager.phase == phases.None))
         {
             Timer -= Time.deltaTime;
-            timeLeft.value = Timer;
+
+            timerManager.SetTimeLeft(Timer);
 
             if (Timer < 0)
             {
@@ -299,34 +300,25 @@ public class Player : MonoBehaviour
         if (Disable)
         {
             Timer = 100000;
-            timeLeft.gameObject.SetActive(false);
+            timerManager.SetMaxTime(Disable, Timer);
+            return;
         }
-        else
-        {
-            timeLeft.gameObject.SetActive(true);
-        }
-
-
-
 
         if (resetTime == 0)
         {
             resetTime = 15;
         }
 
-
-
         if (enemyPhase)
         {
             Timer = enemyTime * counterTimeModifier;
-            timeLeft.maxValue = Timer;
-            timeLeft.value = Timer;
+
+            timerManager.SetMaxTime(Disable, Timer);
         }
         else
         {
             Timer = resetTime;
-            timeLeft.maxValue = resetTime;
-            timeLeft.value = resetTime;
+            timerManager.SetMaxTime(Disable, Timer);
         }
 
 
