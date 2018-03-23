@@ -42,6 +42,7 @@ public class CombatStateManager : ParentsStateManager
     public GameObject levelSelect;
 
 
+
     //Start off by linking every internal object to each other.
     void Start()
     {
@@ -155,7 +156,10 @@ public class CombatStateManager : ParentsStateManager
                 combatContainer.SetActive(true);
                 FindObjectOfType<TorsoPart>().Animate(Animations.Dead);
                 loseContainer.SetActive(true);
+                loseContainer.GetComponent<WinState>().End(0);
+
                 container.DisableThisAndCalculator();
+
                 break;
             case playStatus.Won:
 				checkLevelsAvailable();
@@ -164,6 +168,7 @@ public class CombatStateManager : ParentsStateManager
                 enemyContainer.gameObject.SetActive(false);
                 WinContainer.SetActive(true);
                 int exp = player.CalculateExperience();
+                WinContainer.GetComponent<WinState>().End(exp);
                 list.equip.shards += exp;
                 container.DisableThisAndCalculator();
                 break;

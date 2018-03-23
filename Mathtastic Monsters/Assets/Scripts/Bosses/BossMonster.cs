@@ -356,12 +356,12 @@ public class BossMonster : Monster
         {
 
             if (first == i)
-                answerWords += "__";
+                answerWords += " + __ ";
             else
-                answerWords += "+ " + numbers[i].ToString("F0");
+                answerWords += " + " + numbers[i].ToString("F0");
         }
 
-        answerWords += "= " + result.ToString();
+        answerWords += " = " + result.ToString();
 
         questions.GetComponent<Text>().text = answerWords;
         questions.questionNeeded = answerWords;
