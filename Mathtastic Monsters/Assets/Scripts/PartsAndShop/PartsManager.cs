@@ -32,10 +32,8 @@ public class PartsManager : MonoBehaviour
 
     public Text displayCurrent; //Display the name of the currentPart.
     public Button equipItemButton; //Turns off if we don't own this item.
-
-
-    public Text previewAbilities;
-    AbilitiesManager abilities;
+    
+    public AbilitiesManager abilities;
     bool changed = false;
 
     monsterSteps tutorial;
@@ -44,6 +42,23 @@ public class PartsManager : MonoBehaviour
 
 
     CombinedShop combinedShop;
+
+
+
+    public Image[] previewIcons;
+
+    public Sprite[] iconsList;
+
+
+    public GameObject AbilityDescription;
+
+
+    int[] abilityList = new int[6];
+
+    public Text Name;
+    public Image DescriptionImage;
+    public Text UsesText;
+    public Text DescriptionText;
 
 
     // Use this for initialization
@@ -57,7 +72,7 @@ public class PartsManager : MonoBehaviour
 
         tutorial = FindObjectOfType<monsterSteps>();
 
-        previewAbilities.text = abilities.setAbilities(list);
+        changed = true;
 
     }
 
@@ -73,9 +88,35 @@ public class PartsManager : MonoBehaviour
 
         if (changed)
         {
-            previewAbilities.text = abilities.setAbilities(list);
+            settingAbilityIcons();
+
             changed = false;
             combinedShop.Refresh = true;
+        }
+    }
+
+
+    void settingAbilityIcons()
+    {
+        abilities.setAbilities(list);
+
+        for (int i = 0; i < previewIcons.Length; i++)
+        {
+            previewIcons[i].enabled = false;
+        }
+
+
+        int j = 0;
+        for (int i = 1; i < abilities.abilities.Length && j < previewIcons.Length; i++)
+        {
+            if (abilities.abilities[i] > 0)
+            {
+                abilityList[j] = i;
+
+                previewIcons[j].sprite = iconsList[(i - 1)];
+                previewIcons[j].enabled = true;
+                j++;
+            }
         }
     }
 
@@ -272,5 +313,27 @@ public class PartsManager : MonoBehaviour
 
 
         list.BuildCharacter(parentOfTorso, this);
+    }
+
+
+    public void ChecKability(int i)
+    {
+        AbilityDescription.SetActive(true);
+
+        abilityTypes ability = (abilityTypes)abilityList[i];
+
+        Name.text = ability.ToString();
+
+        DescriptionImage.sprite = iconsList[(abilityList[i] - 1)];
+
+        UsesText.text = "Strength = " + abilities.abilities[abilityList[i]];
+
+        DescriptionText.text = abilities.displayPower(ability);
+
+    }
+
+    public void CloseAgain()
+    {
+        AbilityDescription.SetActive(false);
     }
 }

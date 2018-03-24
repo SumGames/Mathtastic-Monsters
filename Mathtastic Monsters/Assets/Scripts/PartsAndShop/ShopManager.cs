@@ -11,6 +11,8 @@ public class ShopManager : MonoBehaviour
 
 
     public Text abilityText;
+    public Image abilityImage;
+
     public GameObject previewParent;
     GameObject preview;
 
@@ -33,7 +35,7 @@ public class ShopManager : MonoBehaviour
         combinedShop = shop;
 
         gUI = FindObjectOfType<HeaderGUI>();
-      
+
 
         if (manager == null)
         {
@@ -96,7 +98,14 @@ public class ShopManager : MonoBehaviour
             abilities = FindObjectOfType<AbilitiesManager>();
 
         abilityText.text = abilities.displayPower(part.ability);
+
+        if (part.ability != abilityTypes.None)
+        {
+            abilityImage.enabled = true;
+            int ico = (int)part.ability - 1;
+            abilityImage.sprite = combinedShop.parts.iconsList[ico];
+        }
+        else
+            abilityImage.enabled = false;
     }
-
-
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum abilityTypes
 {
@@ -31,6 +32,7 @@ public class AbilitiesManager : MonoBehaviour
 
     public int[] abilities;
 
+
     // Use this for initialization
     void Start()
     {
@@ -48,52 +50,52 @@ public class AbilitiesManager : MonoBehaviour
             case abilityTypes.None:
                 break;
             case abilityTypes.Scavenger:
-                a_string += " "+ a_type.ToString() + ": Collect more shards per piece";
+                a_string += a_type.ToString() + ": Collect more shards per piece";
                 break;
             case abilityTypes.Dodge:
-                a_string += " " + a_type.ToString() + ": Use during enemy turn to avoid it's attack. (1 charge per 2 pieces)";
+                a_string += a_type.ToString() + ": Use during enemy turn to avoid it's attack. (1 charge per 2 pieces)";
                 break;
             case abilityTypes.BarkSkin:
-                a_string += " " + a_type.ToString() + ": Take less damage per piece equipped.";
+                a_string += a_type.ToString() + ": Take less damage per piece equipped.";
                 break;
             case abilityTypes.SuperSpeed:
-                a_string += " " + abilityTypes.SuperSpeed + ": Gain more time per piece equipped.";
+                a_string += a_type.ToString() + ": Gain more time per piece equipped.";
                 break;
             case abilityTypes.SlimeSkin:
-                a_string += " " + a_type.ToString() + ": Return some damage when you're hit.";
+                a_string += a_type.ToString() + ": Return some damage when you're hit.";
                 break;
             case abilityTypes.Freeze:
-                a_string += " " + a_type.ToString() + ": Freeze Timer until end of player's phase. Attack cannot crit. (1 charge per 2 pieces)";
+                a_string += a_type.ToString() + ": Freeze Timer until end of player's phase. Attack cannot crit. (1 charge per 2 pieces)";
                 break;
             case abilityTypes.Burn:
-                a_string += " " + a_type.ToString() + ": Remove one multiple choice answer. One use per piece.";
+                a_string += a_type.ToString() + ": Remove one multiple choice answer. One use per piece.";
                 break;
             case abilityTypes.BoulderFist:
-                a_string += " " + a_type.ToString() + ": Increase damage, and crits, per piece.";
+                a_string += a_type.ToString() + ": Increase damage, and crits, per piece.";
                 break;
             case abilityTypes.FireStorm:
-                a_string += " " + a_type.ToString() + ": Damage enemy. Only one use, but intensity scales with pieces equipped.";
+                a_string += a_type.ToString() + ": Damage enemy. Only one use, but intensity scales with pieces equipped.";
                 break;
             case abilityTypes.Mastery:
-                a_string += " " + a_type.ToString() + ": Gain extra shards for each counter and crit. Increases in strength per 3 pieces.";
+                a_string += a_type.ToString() + ": Gain extra shards for each counter and crit. Increases in strength per 3 pieces.";
                 break;
             case abilityTypes.SandSlice:
-                a_string += " " + a_type.ToString() + ": Increase counter damage, and enemy timer, per piece.";
+                a_string += a_type.ToString() + ": Increase counter damage, and enemy timer, per piece.";
                 break;
             case abilityTypes.Hourglass:
-                a_string += " " + a_type.ToString() + ": Restore your health. Only one use, but intensity scales with pieces equipped.";
+                a_string += a_type.ToString() + ": Restore your health. Only one use, but intensity scales with pieces equipped.";
                 break;
             case abilityTypes.StorePower:
-                a_string += " " + a_type.ToString() + ": One use. Damage increases, per piece, as you answer questions. ";
+                a_string += a_type.ToString() + ": One use. Damage increases, per piece, as you answer questions. ";
                 break;
             case abilityTypes.ArmourUp:
-                a_string += " " + a_type.ToString() + ": Gain health per piece.";
+                a_string += a_type.ToString() + ": Gain health per piece.";
                 break;
             case abilityTypes.DoubleStrike:
-                a_string += " " + a_type.ToString() + ": Gain a second player turn when 5 pieces equipped..";
+                a_string += a_type.ToString() + ": Gain a second player turn when 5 pieces equipped..";
                 break;
             case abilityTypes.TimeLord:
-                a_string += " " + a_type.ToString() + ": Time does not move. All attacks crit. Requires entire set equipped.";
+                a_string += a_type.ToString() + ": Time does not move. All attacks crit. Requires entire set.";
                 break;
             default:
                 break;
@@ -104,7 +106,7 @@ public class AbilitiesManager : MonoBehaviour
     //Set up abiltiies for display. 
     //First empty the array, then check every equipped part for an ability.
     //Finally, display every single ability's description along with its charges.
-    public string setAbilities(equipmentList a_list=null)
+    public void setAbilities(equipmentList a_list = null)
     {
         if (!list && a_list)
         {
@@ -112,6 +114,8 @@ public class AbilitiesManager : MonoBehaviour
         }
 
         Array.Clear(abilities, 0, abilities.Length);
+
+        int[] parts = new int[6];
 
         CheckPart(list.currentTorsoPrefab);
         CheckPart(list.currentHeadPrefab);
@@ -122,17 +126,7 @@ public class AbilitiesManager : MonoBehaviour
         CheckPart(list.currentLeftLegPrefab);
         CheckPart(list.currentRightLegPrefab);
 
-        string returning = "";
 
-
-        for (int i = 0; i < abilities.Length; i++)
-        {
-            if (abilities[i] > 0)
-            {
-                returning += abilities[i].ToString() + displayPower((abilityTypes)i) + "\n";
-            }
-        }
-        return returning;
     }
 
     //Check if the part has an ability, and increment it.
@@ -144,5 +138,7 @@ public class AbilitiesManager : MonoBehaviour
         ItemPart part = a_part.GetComponent<ItemPart>();
 
         abilities[(int)part.ability]++;
+
+        return;
     }
 }
