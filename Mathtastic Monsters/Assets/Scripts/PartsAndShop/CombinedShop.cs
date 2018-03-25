@@ -34,9 +34,6 @@ public class CombinedShop : MonoBehaviour
 
     public SelectPartTypes selectPart;
 
-    public monsterSteps monsterSteps;
-
-
     // Use this for initialization
     internal void Begin (equipmentList a_list)
     {
@@ -68,14 +65,6 @@ public class CombinedShop : MonoBehaviour
             return;
 
         Refresh = false;
-
-        if (monsterSteps && !monsterSteps.EnableEquip)
-        {
-            BuyOrEquip.interactable = false;
-            displayCurrent.text = "";
-            return;
-        }
-
 
         if (currentPart == null)
         {
@@ -124,7 +113,6 @@ public class CombinedShop : MonoBehaviour
             BuyOrEquip.interactable = true;
             selectPart.SelectEquipButton(false);
         }
-
     }
 
     public void setType(int type)

@@ -18,7 +18,6 @@ public class TutmultipleContainer : MonoBehaviour
 
     public Button submit;
 
-    public GameObject scalar;
 
     // Use this for initialization
     void Start()
@@ -55,7 +54,6 @@ public class TutmultipleContainer : MonoBehaviour
     {
         calculator.SetActive(false);
         gameObject.SetActive(true);
-        scalar.gameObject.SetActive(true);
         foreach (TutMultipleAnswer item in answers)
         {
             item.setAnswer(-1);
@@ -96,7 +94,6 @@ public class TutmultipleContainer : MonoBehaviour
         }
         calculator.SetActive(true);
         submit.gameObject.SetActive(false);
-        scalar.gameObject.SetActive(false);
     }
 
     public void interactableButtons(bool canInteract)
