@@ -8,47 +8,64 @@ public class monsterSteps : MonoBehaviour
     public Text lillyText;
     internal int tutorialStage;
 
-    public GameObject selectionContainer;
-    public GameObject shopContainer;
-    public GameObject customiseContainer;
 
-    public Button toShop;
     public Button headButton;
 
     public Button nextPart;
     public Button prevPart;
-    public Button buyPart;
-
-    public Button shopback;
-    public Button toCustom;
-
-    public Button equipButton;
-    public Button[] equipment;
 
 
-    public GameObject[] OutlineGlows;
+    public Button[] otherSlots;
+
     public Button myButton;
+
+
+    //Links to part and shop managers. Links them to list and tells them to start.
+    public CombinedShop combinedShop;
+
+
+    equipmentList list;
+
+
+    public GameObject prefabbedList;
+
+    public bool EnableEquip;
+
+
+    public GameObject[] outlinesAndArrows;
 
 
     // Use this for initialization
     void Start()
     {
-        selectionContainer.SetActive(true);
-        shopContainer.SetActive(false);
-        customiseContainer.SetActive(false);
+        list = FindObjectOfType<equipmentList>();
+        if (list == null)
+        {
+            GameObject adding = Instantiate(prefabbedList, null, false);
+            list = adding.GetComponent<equipmentList>();
+            adding.name = "List";
+
+            StateManager check = gameObject.GetComponent<StateManager>();
+
+            if (!check)
+                list.startGame("Guest", true);
+        }
+
+        combinedShop.Begin(list);
 
         headButton.interactable = false;
         nextPart.interactable = false;
         prevPart.interactable = false;
-        buyPart.interactable = false;
-        shopback.interactable = false;
+        EnableEquip = false;
 
-        foreach (Button item in equipment)
+        foreach (Button item in otherSlots)
         {
             item.interactable = false;
         }
 
         SetStep(1);
+
+        enableOutlines(-1);
     }
 
     void Update()
@@ -71,110 +88,114 @@ public class monsterSteps : MonoBehaviour
         switch (a_step)
         {
             case 1:
-                lillyText.text = "Hello, Hero! This is my little home away from evil.\n Isn't it nice?";
+                lillyText.text = "Welcome to my workshop! Isn't it nice?";
                 myButton.interactable = true;
-                toShop.interactable = false;
                 break;
 
             case 2:
-                lillyText.text = "It's here that I can help you by making monster parts!";
+                lillyText.text = "This is where you can buy and equip new parts!";
                 break;
 
             case 3:
-                lillyText.text = "Let me show you. Let's go to my shop!";
-                myButton.interactable = false;
-                toShop.interactable = true;
+                lillyText.text = "You can choose part types by clicking these buttons!";
+                enableOutlines(0);
                 break;
 
             case 4:
-                lillyText.text = "Home, sweet home!";
+                lillyText.text = "Here you can press the arrows to select the part.!";
+                enableOutlines(1);
                 myButton.interactable = true;
-                toShop.interactable = false;
-                selectionContainer.SetActive(false);
-                shopContainer.SetActive(true);
                 break;
 
             case 5:
-                lillyText.text = "Did you notice those shards you got from beating that beast?";
+                lillyText.text = "This area shows the part you've selecred, along with it's ability!";
+                enableOutlines(2);
                 break;
 
             case 6:
-                lillyText.text = "You can use those to purchase new heads, Torsos, arms and legs!";
+                lillyText.text = "Use this button to spend shards and buy parts, then equip them!";
+                enableOutlines(3);
                 break;
 
             case 7:
-                lillyText.text = "I noticed your monster is lacking a head. Why don't we look at them?";
-                myButton.interactable = false;
-                headButton.interactable = true;
+                lillyText.text = "And over here you can see what your monster looks like, along with any abilities it has!";
+                enableOutlines(4);
                 break;
 
+            /*
+                        case 8:
+                            lillyText.text = "You can look at parts by tapping the arrows.";
+                            myButton.interactable = true;
+                            headButton.interactable = false;
+                            break;
 
-            case 8:
-                lillyText.text = "You can look at parts by tapping the arrows.";
-                myButton.interactable = true;
-                headButton.interactable = false;
-                break;
+                        case 9:
+                            lillyText.text = "Pick out a nice one and tap on its name to Buy It!";
+                            prevPart.interactable = true;
+                            nextPart.interactable = true;
+                            myButton.interactable = false;
+                            buyPart.interactable = true;
 
-            case 9:
-                lillyText.text = "Pick out a nice one and tap on its name to Buy It!";
-                prevPart.interactable = true;
-                nextPart.interactable = true;
-                myButton.interactable = false;
-                buyPart.interactable = true;
+                            break;
 
-                break;
+                        case 10:
+                            lillyText.text = "Oooh, a fine choice! Now to put it on! Now if we could just go back...";
+                            headButton.interactable = false;
+                            nextPart.interactable = false;
+                            prevPart.interactable = false;
+                            buyPart.interactable = false;
+                            myButton.interactable = false;
+                            break;
 
-            case 10:
-                lillyText.text = "Oooh, a fine choice! Now to put it on! Now if we could just go back...";
-                headButton.interactable = false;
-                nextPart.interactable = false;
-                prevPart.interactable = false;
-                buyPart.interactable = false;
-                myButton.interactable = false;
+                        case 11:
+                            lillyText.text = "Your room is over here, Hero!";
+                            myButton.interactable = false;
 
-                shopback.interactable = true;
-                break;
+                            break;
 
-            case 11:
-                lillyText.text = "Your room is over here, Hero!";
-                shopback.interactable = false;
-                toCustom.interactable = true;
-                myButton.interactable = false;
+                        case 12:
+                            lillyText.text = "This is your room! I'll chuck your extra pieces on the pile when they're not in use.";
+                            myButton.interactable = true;
+                            break;
+                        case 13:
+                            lillyText.text = "Your wardrobe works much like my shop.";            
+                            break;
 
-                break;
+                        case 14:
+                            lillyText.text = "Click the arrows limb names to change types, and the arrows to switch between parts you own";
 
-            case 12:
-                lillyText.text = "This is your room! I'll chuck your extra pieces on the pile when they're not in use.";
-                toCustom.interactable = false;
-                myButton.interactable = true;
-                break;
-            case 13:
-                lillyText.text = "Your wardrobe works much like my shop.";            
-                break;
+                            break;
+                        case 15:
+                            lillyText.text = "Clicking on the name will remove or replace a part.\n But keep in mind that changing or remove the chest will-";
+                            myButton.interactable = false;
+                            break;
 
-            case 14:
-                lillyText.text = "Click the arrows limb names to change types, and the arrows to switch between parts you own";
+                        case 16:
+                            lillyText.text = "-Remove everything else!\nOh... Why don't you build your monster yourself? Let me know when you're done!";
+                            myButton.interactable = true;
+                            foreach (Button item in otherSlots)
+                            {
+                                item.interactable = true;
+                            }
+                            break;
+                        //https://docs.google.com/document/d/155cqU4X-KrRZv3BxWMFZFX1zls94GhRntpJP6tYW5Sk/edit#heading=h.gjdgxs
+                        */
 
-                break;
-            case 15:
-                lillyText.text = "Clicking on the name will remove or replace a part.\n But keep in mind that changing or remove the chest will-";
-                myButton.interactable = false;
-                equipButton.interactable = true;
-                break;
-
-            case 16:
-                lillyText.text = "-Remove everything else!\nOh... Why don't you build your monster yourself? Let me know when you're done!";
-                myButton.interactable = true;
-                foreach (Button item in equipment)
-                {
-                    item.interactable = true;
-                }
-                break;
-            //https://docs.google.com/document/d/155cqU4X-KrRZv3BxWMFZFX1zls94GhRntpJP6tYW5Sk/edit#heading=h.gjdgxs
             default:
                 Destroy(gameObject);
                 SceneManager.LoadScene(1);
                 break;
+        }
+    }
+
+    void enableOutlines(int index)
+    {
+        for (int i = 0; i < outlinesAndArrows.Length; i++)
+        {
+            if (i == index)
+                outlinesAndArrows[i].SetActive(true);
+            else
+                outlinesAndArrows[i].SetActive(false);
         }
     }
 }

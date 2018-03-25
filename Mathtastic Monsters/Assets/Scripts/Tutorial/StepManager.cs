@@ -23,7 +23,6 @@ public class StepManager : MonoBehaviour
     public GameObject combatContainer;
     public GameObject calculator;
 
-    public GameObject[] OutlineGlows;
 
     equipmentList list;
     public GameObject prefabbedList;
@@ -47,7 +46,7 @@ public class StepManager : MonoBehaviour
     public Button multRight;
     public Button multSubmit;
 
-    public GameObject[] greenArrows;
+    public GameObject[] outlinesAndArrows;
 
     public Button toAddition;
 
@@ -78,7 +77,6 @@ public class StepManager : MonoBehaviour
         backgrounds.startBack(playStatus.subjectSelect);
 
 
-        myButton = gameObject.GetComponent<Button>();
         SetStep(1);
     }
 
@@ -104,10 +102,7 @@ public class StepManager : MonoBehaviour
         {
             case 1:
                 multContainer.SetActive(false);
-                EnableArrows(-1);
-
-                foreach (GameObject item in OutlineGlows)
-                    item.SetActive(false);
+                enableOutlines(-1);
 
                 combatContainer.SetActive(false);
                 lillyText.text = "Hi there, " + list.playerName + "!\nWelcome to the world of Mathtastic Monsters!";
@@ -120,7 +115,7 @@ public class StepManager : MonoBehaviour
                 lillyText.text = "My name is Lilly! I need your to beat Lord Calculi!";
                 break;
             case 3:
-                EnableArrows(0);
+                enableOutlines(0);
                 toAddition.interactable = true;
                 myButton.interactable = false;
                 lillyText.text = "Theres a monster on my island! Come over quick!";
@@ -128,7 +123,7 @@ public class StepManager : MonoBehaviour
                 FindObjectOfType<equipmentList>().RemoveHead();
                 break;
             case 4:
-                EnableArrows(-1);
+                enableOutlines(-1);
                 lillyText.text = "The beast is frozen. Let me explain.";
                 combatContainer.SetActive(true);
                 calculator.SetActive(false);
@@ -146,35 +141,31 @@ public class StepManager : MonoBehaviour
             case 5:
                 calculator.SetActive(true);
                 lillyText.text = "This is your monsterlator!";
-                EnableArrows(1);
+                enableOutlines(1);
                 break;
             case 6:
                 lillyText.text = "This is your health bar. We'll lose if it runs out.";
-                OutlineGlows[0].SetActive(true);
+                enableOutlines(6);
                 break;
             case 7:
 
                 lillyText.text = "This is the enemy's health. Empty it to win!";
-                OutlineGlows[0].SetActive(false);
-                OutlineGlows[1].SetActive(true);
+                enableOutlines(4);
                 break;
             case 8:
                 lillyText.text = "This is the timer. The monster will attack when it hits 0.";
-                OutlineGlows[1].SetActive(false);
-                OutlineGlows[2].SetActive(true);
+                enableOutlines(2);
                 break;
             case 9:
                 lillyText.text = "This is its question. Answering it will weaken the beast";
-                OutlineGlows[2].SetActive(false);
-                OutlineGlows[3].SetActive(true);
+                enableOutlines(7);
                 break;
             case 10:
                 myButton.interactable = false;
                 AttackChoice.interactable = true;
                 lillyText.text = "Tapping on numbers writes your answer";
                 QuestionText.text = "4 + 2 = ";
-                OutlineGlows[3].SetActive(false);
-                OutlineGlows[4].SetActive(true);
+                enableOutlines(1);                
                 break;
             case 11:
                 AttackChoice.gameObject.SetActive(false);
@@ -183,8 +174,7 @@ public class StepManager : MonoBehaviour
                 lillyText.text = "Hitting attack will submit your answer!";
                 QuestionText.text = "4 + 2 = ";
                 InputText.text = "6";
-                OutlineGlows[4].SetActive(false);
-                OutlineGlows[5].SetActive(true);
+                enableOutlines(3);
                 break;
             case 12:
                 myButton.interactable = true;
@@ -192,7 +182,7 @@ public class StepManager : MonoBehaviour
                 QuestionText.text = "";
                 InputText.text = "";
                 lillyText.text = "Good work! Note that answering while the timer is in the Green zone will result in double damage!";
-                OutlineGlows[5].SetActive(false);
+                enableOutlines(-1);
                 break;
 
             case 13:
@@ -207,7 +197,7 @@ public class StepManager : MonoBehaviour
                 multSubmit.interactable = false;
 
                 TutorialMonster.MakeQuestion(1);
-                OutlineGlows[6].SetActive(false);
+                enableOutlines(1);
                 QuestionText.text = "4 + 5 = ";
                 for (int i = 0; i < multWrong.Length; i++)
                 {
@@ -216,6 +206,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 14:
+                enableOutlines(5);
                 multContainer.SetActive(true);
                 QuestionText.text = "4 + 5 = ";
                 multRight.interactable = true;                
@@ -224,6 +215,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 15:
+                enableOutlines(3);
                 multContainer.SetActive(true);
                 multRight.interactable = false;
                 multSubmit.interactable = true;
@@ -231,6 +223,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 16:
+                enableOutlines(-1);
                 QuestionText.text = "";
                 multRight.gameObject.SetActive(false);
                 multSubmit.gameObject.SetActive(false);
@@ -272,6 +265,8 @@ public class StepManager : MonoBehaviour
                     list.equip.shards += 20;
                     lillyText.text += "\nYou also got 20 shards!";
                     list.equip.tutorialComplete = true;
+                    FindObjectOfType<HeaderGUI>().UINeedsUpdate = true;
+
                 }                
                 TutorialMonster.gameObject.SetActive(false);
                 TutorialMonster.healthBar.gameObject.SetActive(false);
@@ -296,14 +291,14 @@ public class StepManager : MonoBehaviour
         tutorialCalculator.ButtonsActive(false);
     }
 
-    void EnableArrows(int arrow)
+    void enableOutlines(int index)
     {
-        for (int i = 0; i < greenArrows.Length; i++)
+        for (int i = 0; i < outlinesAndArrows.Length; i++)
         {
-            if (i == arrow)
-                greenArrows[i].gameObject.SetActive(true);
+            if (i == index)
+                outlinesAndArrows[i].SetActive(true);
             else
-                greenArrows[i].gameObject.SetActive(false);
+                outlinesAndArrows[i].SetActive(false);
         }
     }
 
