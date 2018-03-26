@@ -53,26 +53,16 @@ public class DivisionDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             Vector3 inputMoved = new Vector3();
             if (Input.touchCount > 0)
             {
-
-                lastKnownMousePosition = Input.GetTouch(0).position;
-
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                inputMoved = (Vector3)Input.GetTouch(0).position - lastKnownMousePosition;
-
-                lastKnownMousePosition = ray.origin;
-
+                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 9));
+                return;
             }
             if (Input.GetMouseButton(0))
             {
-                // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                //inputMoved = ray.origin - lastKnownMousePosition;
+                inputMoved = ray.origin - lastKnownMousePosition;
 
-                //lastKnownMousePosition = ray.origin;
-
-                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 9));
-                return;
+                lastKnownMousePosition = ray.origin;
             }
 
             transform.position += inputMoved;

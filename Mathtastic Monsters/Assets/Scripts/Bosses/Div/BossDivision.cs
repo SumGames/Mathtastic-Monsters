@@ -155,9 +155,7 @@ public class BossDivision : MonoBehaviour
 
             draggers[index].GetComponentInChildren<Text>().text = AnswerList[i].ToString();
             draggers[index].SetDragger(AnswerList[i]);
-            Debug.Log("Setting" + index + " to " + AnswerList[i]);
         }
-        Debug.Log("ended");
     }
 
 
