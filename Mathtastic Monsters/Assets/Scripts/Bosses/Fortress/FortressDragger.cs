@@ -56,13 +56,9 @@ public class FortressDragger : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (Input.touchCount > 0)
             {
 
-                lastKnownMousePosition = Input.GetTouch(0).position;
 
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 9));
 
-                inputMoved = (Vector3)Input.GetTouch(0).position - lastKnownMousePosition;
-
-                lastKnownMousePosition = ray.origin;
 
             }
             if (Input.GetMouseButton(0))

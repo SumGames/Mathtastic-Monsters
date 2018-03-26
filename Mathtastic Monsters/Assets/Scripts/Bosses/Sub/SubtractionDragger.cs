@@ -62,14 +62,12 @@ public class SubtractionDragger : MonoBehaviour, IPointerDownHandler, IPointerUp
             if (Input.touchCount > 0)
             {
 
-                lastKnownMousePosition = Input.GetTouch(0).position;
+                Vector3 input = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 0);
 
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                inputMoved = (Vector3)Input.GetTouch(0).position - lastKnownMousePosition;
+                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 9));
 
-                lastKnownMousePosition = ray.origin;
-
+                return;
             }
             if (Input.GetMouseButton(0))
             {
@@ -78,10 +76,9 @@ public class SubtractionDragger : MonoBehaviour, IPointerDownHandler, IPointerUp
                 inputMoved = ray.origin - lastKnownMousePosition;
 
                 lastKnownMousePosition = ray.origin;
-            }
 
-            transform.position += inputMoved;
-
+                transform.position += inputMoved;
+            }            
         }
     }
 
