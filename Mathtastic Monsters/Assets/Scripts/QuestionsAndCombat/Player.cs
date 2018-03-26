@@ -354,13 +354,6 @@ public class Player : MonoBehaviour
 
         if (parent.quizRunning.Hard)
         {
-            if (list.equip.StarsAcquired[3] == 3)
-            {
-                exp *= .25f;
-            }            
-        }
-        else
-        {
             int completed = parent.quizRunning.parent.getCompleted();
             if (parent.quizRunning.quizIndex == completed) //Level was not completed, unlock next.
             {

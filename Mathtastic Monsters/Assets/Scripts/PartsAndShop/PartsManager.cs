@@ -157,10 +157,6 @@ public class PartsManager : MonoBehaviour
             case partType.Head:
                 if (headEquipped != null && currentPart.name == headEquipped.gameObject.name)
                 {
-                    Destroy(headEquipped.gameObject);
-                    headEquipped = null;
-
-                    list.ChangeEquip(null, partType.Head, -2);
                     return;
                 }
                 if (headEquipped != null)
@@ -177,9 +173,6 @@ public class PartsManager : MonoBehaviour
             case partType.LeftArm:
                 if (leftArmEquipped != null && currentPart.name == leftArmEquipped.gameObject.name)
                 {
-                    leftArmEquipped.deleteArm();
-                    leftArmEquipped = null;
-                    list.ChangeEquip(null, partType.LeftArm, -2);
                     return;
                 }
                 if (leftArmEquipped != null)
@@ -198,9 +191,6 @@ public class PartsManager : MonoBehaviour
             case partType.RightArm:
                 if (rightArmEquipped != null && currentPart.name == rightArmEquipped.gameObject.name)
                 {
-                    rightArmEquipped.deleteArm();
-                    rightArmEquipped = null;
-                    list.ChangeEquip(null, partType.RightArm, -2);
                     return;
                 }
                 if (rightArmEquipped != null)
@@ -222,9 +212,6 @@ public class PartsManager : MonoBehaviour
             case partType.LeftLeg:
                 if (leftLegEquipped != null && currentPart.name == leftLegEquipped.gameObject.name)
                 {
-                    leftLegEquipped.DeleteLeg();
-                    leftLegEquipped = null;
-                    list.ChangeEquip(null, partType.LeftLeg, -2);
                     return;
                 }
                 if (leftLegEquipped != null)
@@ -244,10 +231,6 @@ public class PartsManager : MonoBehaviour
             case partType.RightLeg:
                 if (rightLegEquipped != null && currentPart.name == rightLegEquipped.gameObject.name)
                 {
-                    rightLegEquipped.DeleteLeg();
-                    rightLegEquipped = null;
-                    list.ChangeEquip(null, partType.RightLeg, -2);
-                    return;
                 }
                 if (rightLegEquipped != null)
                 {

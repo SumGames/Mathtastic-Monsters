@@ -236,10 +236,14 @@ public class abilityButton : MonoBehaviour
 
         if (setActive && usesLeft > 0)
         {
+            Debug.Log("interactable");
+
             m_button.interactable = true;
         }
         else
         {
+            m_button.interactable = false;
+            m_button.interactable = true;            
             m_button.interactable = false;
         }
 
