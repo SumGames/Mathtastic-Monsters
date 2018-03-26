@@ -56,7 +56,7 @@ public class AbilitiesManager : MonoBehaviour
                 a_string += a_type.ToString() + ": Use when defending to dodge an enemy attack, more parts? More chances to dodge!";
                 break;
             case abilityTypes.BarkSkin:
-                a_string += a_type.ToString() + ": Take less damage monster part!";
+                a_string += a_type.ToString() + ": Take less damage per monster part!";
                 break;
             case abilityTypes.SuperSpeed:
                 a_string += a_type.ToString() + ": Get more time to answer questions with each monster part!";
