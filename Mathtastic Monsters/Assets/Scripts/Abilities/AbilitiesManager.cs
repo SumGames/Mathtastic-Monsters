@@ -50,52 +50,52 @@ public class AbilitiesManager : MonoBehaviour
             case abilityTypes.None:
                 break;
             case abilityTypes.Scavenger:
-                a_string += a_type.ToString() + ": Collect more shards per piece";
+                a_string += a_type.ToString() + ": Collect more shards per monster part!";
                 break;
             case abilityTypes.Dodge:
-                a_string += a_type.ToString() + ": Use during enemy turn to avoid it's attack. (1 charge per 2 pieces)";
+                a_string += a_type.ToString() + ": Use when defending to dodge an enemy attack, more parts? More chances to dodge!";
                 break;
             case abilityTypes.BarkSkin:
-                a_string += a_type.ToString() + ": Take less damage per piece equipped.";
+                a_string += a_type.ToString() + ": Take less damage monster part!";
                 break;
             case abilityTypes.SuperSpeed:
-                a_string += a_type.ToString() + ": Gain more time per piece equipped.";
+                a_string += a_type.ToString() + ": Get more time to answer questions with each monster part!";
                 break;
             case abilityTypes.SlimeSkin:
-                a_string += a_type.ToString() + ": Return some damage when you're hit.";
+                a_string += a_type.ToString() + ": Return damage when you're hit, more parts? More damage!";
                 break;
             case abilityTypes.Freeze:
-                a_string += a_type.ToString() + ": Freeze Timer until end of player's phase. Attack cannot crit. (1 charge per 2 pieces)";
+                a_string += a_type.ToString() + ": Freeze the timer bar during the attack phase! More parts? More freeze!";
                 break;
             case abilityTypes.Burn:
-                a_string += a_type.ToString() + ": Remove one multiple choice answer. One use per piece.";
+                a_string += a_type.ToString() + ": Remove one multiple choice answer, one use per monster part!";
                 break;
             case abilityTypes.BoulderFist:
-                a_string += a_type.ToString() + ": Increase damage, and crits, per piece.";
+                a_string += a_type.ToString() + ": Your attack and critical attacks are stronger per monster part!";
                 break;
             case abilityTypes.FireStorm:
-                a_string += a_type.ToString() + ": Damage enemy. Only one use, but intensity scales with pieces equipped.";
+                a_string += a_type.ToString() + ": Hurl a large firestorm at the enemy monster for big damage! More parts? More damage!";
                 break;
             case abilityTypes.Mastery:
-                a_string += a_type.ToString() + ": Gain extra shards for each counter and crit. Increases in strength per 3 pieces.";
+                a_string += a_type.ToString() + ": Get bonus shards when you do a critical attack or a counterattack! More parts? More shards!";
                 break;
             case abilityTypes.SandSlice:
-                a_string += a_type.ToString() + ": Increase counter damage, and enemy timer, per piece.";
+                a_string += a_type.ToString() + ": Your countertattack is stronger per monster part!.";
                 break;
             case abilityTypes.Hourglass:
-                a_string += a_type.ToString() + ": Restore your health. Only one use, but intensity scales with pieces equipped.";
+                a_string += a_type.ToString() + ": Heal yourself right away, more parts? More health!";
                 break;
             case abilityTypes.StorePower:
-                a_string += a_type.ToString() + ": One use. Damage increases, per piece, as you answer questions. ";
+                a_string += a_type.ToString() + ": Store power away with each question you get right then unleash it at the enemy for massive damage! ";
                 break;
             case abilityTypes.ArmourUp:
-                a_string += a_type.ToString() + ": Gain health per piece.";
+                a_string += a_type.ToString() + ": Start with more health, more parts? More health!";
                 break;
             case abilityTypes.DoubleStrike:
-                a_string += a_type.ToString() + ": Gain a second player turn when 5 pieces equipped..";
+                a_string += a_type.ToString() + ": Get a chance to have a second attack! With more parts your chance is greater!";
                 break;
             case abilityTypes.TimeLord:
-                a_string += a_type.ToString() + ": Time does not move. All attacks crit. Requires entire set.";
+                a_string += a_type.ToString() + ": The Ruler of Math! Time stands still and you are all powerful!";
                 break;
             default:
                 break;
