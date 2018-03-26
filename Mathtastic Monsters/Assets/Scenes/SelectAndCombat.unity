@@ -249,7 +249,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 050000000a000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -2093,7 +2093,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a50257fc0520a8d40a5cd84111c1490e, type: 3}
+    m_Font: {fileID: 12800000, guid: 3103d21cabcb5b54e9a307ee6059a498, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -4167,7 +4167,7 @@ MonoBehaviour:
   preventRounding: 1
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -4493,7 +4493,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 050000000a000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -5694,12 +5694,9 @@ Transform:
   - {fileID: 1330276160}
   - {fileID: 956532573}
   - {fileID: 2075813185}
-  - {fileID: 1944185641}
-  - {fileID: 1033726347}
   - {fileID: 1506834625}
   - {fileID: 1524815727}
   - {fileID: 403579275}
-  - {fileID: 2021067165}
   m_Father: {fileID: 508652010}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5718,7 +5715,7 @@ MonoBehaviour:
   - {fileID: 403579278}
   - {fileID: 1524815730}
   - {fileID: 1506834628}
-  shardsEarned: {fileID: 2021067163}
+  shardsEarned: {fileID: 0}
   monsterM: {fileID: 289822712}
 --- !u!1 &241325927
 GameObject:
@@ -9331,7 +9328,7 @@ RectTransform:
   m_LocalScale: {x: 3.332424, y: 3.332424, z: 3.332424}
   m_Children: []
   m_Father: {fileID: 240765200}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11023,7 +11020,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0600000009000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -12314,7 +12311,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13237,7 +13234,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0100000002000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -16177,7 +16174,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0700000008000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -16742,7 +16739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &751589143
 Transform:
   m_ObjectHideFlags: 0
@@ -19177,7 +19174,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19393,7 +19390,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21582,7 +21579,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22465,7 +22462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146, y: -207.7}
+  m_AnchoredPosition: {x: 14.700001, y: -207.7}
   m_SizeDelta: {x: 193, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956532574
@@ -22626,7 +22623,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 050000000a000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -22783,7 +22780,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0100000002000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -24812,74 +24809,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1033696364}
---- !u!1 &1033726346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1033726347}
-  - component: {fileID: 1033726349}
-  - component: {fileID: 1033726348}
-  m_Layer: 5
-  m_Name: Shards
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1033726347
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033726346}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3329432, y: 3.3329432, z: 3.3329432}
-  m_Children: []
-  m_Father: {fileID: 240765200}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -147, y: -154.4}
-  m_SizeDelta: {x: 32, y: 44}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1033726348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033726346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 163b3008e517b2f4eac8594619979da2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1033726349
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033726346}
 --- !u!1 &1033764703
 GameObject:
   m_ObjectHideFlags: 0
@@ -26381,7 +26310,7 @@ MonoBehaviour:
   preventRounding: 1
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -27181,7 +27110,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0700000008000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -27570,8 +27499,8 @@ RectTransform:
   m_Father: {fileID: 1070398253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -28069,7 +27998,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0300000006000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -28314,8 +28243,8 @@ RectTransform:
   m_Father: {fileID: 536258084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -30048,7 +29977,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0400000008000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -31296,7 +31225,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -31812,7 +31741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145.6, y: -101.2}
+  m_AnchoredPosition: {x: 15.299999, y: -101.2}
   m_SizeDelta: {x: 192.6, y: 66.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330276161
@@ -32791,7 +32720,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -33231,7 +33160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1395773092
 Transform:
   m_ObjectHideFlags: 0
@@ -33600,7 +33529,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0400000008000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -33679,7 +33608,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0700000009000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -33808,8 +33737,8 @@ RectTransform:
   m_Father: {fileID: 840916849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -34280,7 +34209,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -35719,7 +35648,7 @@ RectTransform:
   m_LocalScale: {x: 3.332424, y: 3.332424, z: 3.332424}
   m_Children: []
   m_Father: {fileID: 240765200}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -36310,7 +36239,7 @@ RectTransform:
   m_LocalScale: {x: 3.332424, y: 3.332424, z: 3.332424}
   m_Children: []
   m_Father: {fileID: 240765200}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -37229,7 +37158,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a50257fc0520a8d40a5cd84111c1490e, type: 3}
+    m_Font: {fileID: 12800000, guid: 3103d21cabcb5b54e9a307ee6059a498, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -37927,7 +37856,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -41380,7 +41309,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -42038,7 +41967,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0b0000000c000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 34f634355363b5f47b8b4e9cfd1ecd79, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -42786,7 +42715,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 050000000a000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -43494,7 +43423,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 494b54acc82fdc84aa61ea20ec49a193, type: 3}
+    m_Font: {fileID: 12800000, guid: 3103d21cabcb5b54e9a307ee6059a498, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -43528,8 +43457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: -159.8}
-  m_SizeDelta: {x: 135.7, y: 147.6}
+  m_AnchoredPosition: {x: -31.400002, y: -155.69998}
+  m_SizeDelta: {x: 135.7, y: 88.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1805307029
 GameObject:
@@ -47328,74 +47257,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1941735013}
---- !u!1 &1944185640
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1944185641}
-  - component: {fileID: 1944185643}
-  - component: {fileID: 1944185642}
-  m_Layer: 5
-  m_Name: Shard_BG_Box
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1944185641
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1944185640}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.332424, y: 3.332424, z: 3.332424}
-  m_Children: []
-  m_Father: {fileID: 240765200}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82.98705, y: -143.17761}
-  m_SizeDelta: {x: 75, y: 65}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1944185642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1944185640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.803}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9b7eb0d3570df2d41a123608a0093d50, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1944185643
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1944185640}
 --- !u!1 &1953727764
 GameObject:
   m_ObjectHideFlags: 0
@@ -49342,80 +49203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myType: 0
---- !u!1 &2021067162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2021067165}
-  - component: {fileID: 2021067164}
-  - component: {fileID: 2021067163}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2021067163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2021067162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 494b54acc82fdc84aa61ea20ec49a193, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 200
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 6666
---- !u!222 &2021067164
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2021067162}
---- !u!224 &2021067165
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2021067162}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9998858, y: 0.9998858, z: 0.9998858}
-  m_Children: []
-  m_Father: {fileID: 240765200}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.994728, y: -159.7749}
-  m_SizeDelta: {x: 135.7, y: 147.6}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2027703718
 GameObject:
   m_ObjectHideFlags: 0
@@ -49715,7 +49502,7 @@ MonoBehaviour:
   preventRounding: 1
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 5
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -50177,7 +49964,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 411da92e9c2b55d4a91233bdeb745627, type: 2}
   enemPhaseTime: 20
   enemyChoices: 5
   enemyAnswerRange: 10
@@ -50397,7 +50184,7 @@ MonoBehaviour:
   preventRounding: 0
   secondFixedNumber: 0300000004000000
   thirdFixedNumber: 0100000002000000
-  monsterArt: {fileID: 1104025590142314, guid: a8d7f44d7856b8348b748d1559ec8e6f, type: 2}
+  monsterArt: {fileID: 1687267849099020, guid: 9bb1f522ff44d0748b5248ccc8125320, type: 2}
   enemPhaseTime: 10
   enemyChoices: 5
   enemyAnswerRange: 10
