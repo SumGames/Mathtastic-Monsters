@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: 0995c6f95cd6d63418b227b815ee1e28
+timeCreated: 1522049269
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle_L
+    100002: Ankle_R
+    100004: Back_1
+    100006: Back_2
+    100008: Base
+    100010: Collar_Bone_L
+    100012: Collar_Bone_R
+    100014: //RootNode
+    100016: Divisor
+    100018: Elbow_L
+    100020: Elbow_R
+    100022: Foot_L
+    100024: Foot_R
+    100026: Hand_L
+    100028: Hand_R
+    100030: Head
+    100032: Head_End
+    100034: Hip_L
+    100036: Hip_R
+    100038: Knee_L
+    100040: Knee_R
+    100042: Neck
+    100044: pCube3
+    100046: pCylinder27
+    100048: Root
+    100050: Shoulder_L
+    100052: Shoulder_R
+    100054: Tail_1
+    100056: Tail_2
+    100058: Tail_3
+    100060: Tail_4
+    100062: Tail_End
+    100064: Toe_End_L
+    100066: Toe_End_R
+    400000: Ankle_L
+    400002: Ankle_R
+    400004: Back_1
+    400006: Back_2
+    400008: Base
+    400010: Collar_Bone_L
+    400012: Collar_Bone_R
+    400014: //RootNode
+    400016: Divisor
+    400018: Elbow_L
+    400020: Elbow_R
+    400022: Foot_L
+    400024: Foot_R
+    400026: Hand_L
+    400028: Hand_R
+    400030: Head
+    400032: Head_End
+    400034: Hip_L
+    400036: Hip_R
+    400038: Knee_L
+    400040: Knee_R
+    400042: Neck
+    400044: pCube3
+    400046: pCylinder27
+    400048: Root
+    400050: Shoulder_L
+    400052: Shoulder_R
+    400054: Tail_1
+    400056: Tail_2
+    400058: Tail_3
+    400060: Tail_4
+    400062: Tail_End
+    400064: Toe_End_L
+    400066: Toe_End_R
+    2300000: pCube3
+    2300002: pCylinder27
+    3300000: pCube3
+    3300002: pCylinder27
+    4300000: pCube3
+    4300002: pCylinder27
+    4300004: Divisor
+    7400000: Idle
+    7400002: Attack
+    7400004: Hit
+    7400006: Death
+    9500000: //RootNode
+    13700000: Divisor
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Divisor
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Base
+        weight: 1
+      - path: Root/Base/Back_1
+        weight: 1
+      - path: Root/Base/Back_1/Back_2
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L/pCylinder27
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R/pCube3
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head/Head_End
+        weight: 1
+      - path: Root/Base/Hip_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L/Toe_End_L
+        weight: 1
+      - path: Root/Base/Hip_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R/Toe_End_R
+        weight: 1
+      - path: Root/Base/Tail_1
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4/Tail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Divisor
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Base
+        weight: 1
+      - path: Root/Base/Back_1
+        weight: 1
+      - path: Root/Base/Back_1/Back_2
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L/pCylinder27
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R/pCube3
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head/Head_End
+        weight: 1
+      - path: Root/Base/Hip_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L/Toe_End_L
+        weight: 1
+      - path: Root/Base/Hip_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R/Toe_End_R
+        weight: 1
+      - path: Root/Base/Tail_1
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4/Tail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Take 001
+      firstFrame: 140
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Divisor
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Base
+        weight: 1
+      - path: Root/Base/Back_1
+        weight: 1
+      - path: Root/Base/Back_1/Back_2
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L/pCylinder27
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R/pCube3
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head/Head_End
+        weight: 1
+      - path: Root/Base/Hip_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L/Toe_End_L
+        weight: 1
+      - path: Root/Base/Hip_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R/Toe_End_R
+        weight: 1
+      - path: Root/Base/Tail_1
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4/Tail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Divisor
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Base
+        weight: 1
+      - path: Root/Base/Back_1
+        weight: 1
+      - path: Root/Base/Back_1/Back_2
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_L/Shoulder_L/Elbow_L/Hand_L/pCylinder27
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Collar_Bone_R/Shoulder_R/Elbow_R/Hand_R/pCube3
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head
+        weight: 1
+      - path: Root/Base/Back_1/Back_2/Neck/Head/Head_End
+        weight: 1
+      - path: Root/Base/Hip_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Base/Hip_L/Knee_L/Ankle_L/Foot_L/Toe_End_L
+        weight: 1
+      - path: Root/Base/Hip_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Base/Hip_R/Knee_R/Ankle_R/Foot_R/Toe_End_R
+        weight: 1
+      - path: Root/Base/Tail_1
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4
+        weight: 1
+      - path: Root/Base/Tail_1/Tail_2/Tail_3/Tail_4/Tail_End
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
