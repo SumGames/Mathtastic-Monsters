@@ -120,7 +120,7 @@ public class StepManager : MonoBehaviour
                 myButton.interactable = false;
                 lillyText.text = "Theres a monster on my island! Come over quick!";
                 levelSelect.SetActive(true);
-                FindObjectOfType<equipmentList>().RemoveHead();
+
                 break;
             case 4:
                 enableOutlines(-1);
