@@ -326,7 +326,7 @@ public class PartsManager : MonoBehaviour
 
         DescriptionImage.sprite = iconsList[(abilityList[i] - 1)];
 
-        UsesText.text = "Strength = " + abilities.abilities[abilityList[i]];
+        UsesText.text = "Parts = " + abilities.abilities[abilityList[i]];
 
         DescriptionText.text = abilities.displayPower(ability);
 
