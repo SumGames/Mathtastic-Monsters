@@ -13,16 +13,17 @@ public class WinState : MonoBehaviour
 
     equipmentList list;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    // Use this for initialization
+    void Start()
     {
-		
-	}
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     internal void End(int earned)
     {
@@ -41,6 +42,23 @@ public class WinState : MonoBehaviour
 
         int starsUnlocked = list.equip.StarsAcquired[((subject * 10) + index)];
 
+
+
+        if (button.boss)
+        {
+            foreach (Button item in stars)
+            {
+                item.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (Button item in stars)
+            {
+                item.gameObject.SetActive(true);
+            }
+        }
+
         stars[0].interactable = (starsUnlocked >= 1);
         stars[1].interactable = (starsUnlocked >= 2);
         stars[2].interactable = (starsUnlocked >= 3);
@@ -49,5 +67,4 @@ public class WinState : MonoBehaviour
         if (shardsEarned)
             shardsEarned.text = earned.ToString();
     }
-
 }

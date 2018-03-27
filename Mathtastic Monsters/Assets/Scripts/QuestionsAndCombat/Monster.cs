@@ -31,7 +31,7 @@ public class Monster : MonoBehaviour
 
     internal MusicManager music;
 
-    internal multipleContainer multipleContainer;
+    public multipleContainer multipleContainer;
 
     public Vector3 startingPosition;
     public Quaternion startingRotation;

@@ -17,8 +17,6 @@ public class StoryManager : MonoBehaviour
     QuizButton button;
     public BossMonster boss;
 
-    public Text questionText;
-
     public GameObject monsterSpot;
 
     public Calculator calculator;
@@ -47,7 +45,11 @@ public class StoryManager : MonoBehaviour
 
     public GameObject textBackground;
 
-    public GameObject CalculatorObject;
+    public GameObject calculatorParent;
+
+    public TransitionManager transitionManager;
+
+    public Button[] calcButtons;
 
     // Use this for initialization
     void Start()
@@ -169,19 +171,34 @@ public class StoryManager : MonoBehaviour
     }
     void SetMovementStartAndSpeed(phases position)
     {
-        questionText.enabled = false;
-
         if (position == phases.enemy || position == phases.None)
         {
             if (position == phases.None)
-                questionText.enabled = true;
 
 
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(0, 0, 0);
             movementIncrement = 0;
             monsterSpot.gameObject.SetActive(true);
+
+            calculatorParent.SetActive(true);
+            transitionManager.TransitionContainers(TransitioningObjects.SwapToCalculator);
         }
+        if (position == phases.None)
+        {
+            foreach (Button item in calcButtons)
+            {
+                item.interactable = true;
+            }
+        }
+        else
+        {
+            foreach (Button item in calcButtons)
+            {
+                item.interactable = false;
+            }
+        }
+
         if (position == phases.previous)
         {
             if (previousTime == 0)
@@ -195,6 +212,8 @@ public class StoryManager : MonoBehaviour
             movingObject.transform.localPosition = new Vector3(objectSpot, 0, 0);
             movementIncrement = -(1200 / previousTime);
             textDisplay.text = previousLevelWords;
+
+            calculatorParent.SetActive(false);
         }
         else if (position == phases.next)
         {
@@ -211,6 +230,7 @@ public class StoryManager : MonoBehaviour
             movementIncrement = -(1200 / nextime);
             textDisplay.text = nextLevelWords;
 
+            calculatorParent.SetActive(false);
         }
     }
 }
