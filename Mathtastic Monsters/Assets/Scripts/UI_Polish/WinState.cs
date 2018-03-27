@@ -46,7 +46,8 @@ public class WinState : MonoBehaviour
         stars[2].interactable = (starsUnlocked >= 3);
 
 
-        shardsEarned.text = earned.ToString();
+        if (shardsEarned)
+            shardsEarned.text = earned.ToString();
     }
 
 }

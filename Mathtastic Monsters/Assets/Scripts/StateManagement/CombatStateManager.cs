@@ -26,9 +26,6 @@ public class CombatStateManager : ParentsStateManager
     public GameObject WinContainer; //Back, loss and restart buttons
     public GameObject loseContainer;// The back and restart buttons, that appear after a level finishes;
 
-
-    public GameObject retreatObject;
-
     Text gameInstruction; //Tells player what to do.
 
 
@@ -147,7 +144,6 @@ public class CombatStateManager : ParentsStateManager
                 player.gameObject.SetActive(true);
                 enemyContainer.gameObject.SetActive(true);
                 combatContainer.SetActive(true);
-                retreatObject.SetActive(true);
                 container.gameObject.SetActive(true);
                 break;
             case playStatus.Lost:
@@ -241,9 +237,7 @@ public class CombatStateManager : ParentsStateManager
         multiplicationSelection.SetActive(false);
         divisionSelection.SetActive(false);
         mathfortressSelection.SetActive(false);
-        //login.SetActive(false);
         nextButton.gameObject.SetActive(false);
-        retreatObject.SetActive(false);
         levelSelect.SetActive(false);
     }
 
