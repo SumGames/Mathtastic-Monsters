@@ -157,8 +157,8 @@ public class CombatStateManager : ParentsStateManager
                 container.DisableThisAndCalculator();
 
                 break;
-            case playStatus.Won:
-				checkLevelsAvailable();
+            case playStatus.Won:                
+                checkLevelsAvailable();
                 nextButton.ready();
                 combatContainer.SetActive(true);
                 enemyContainer.gameObject.SetActive(false);
@@ -167,6 +167,7 @@ public class CombatStateManager : ParentsStateManager
                 WinContainer.GetComponent<WinState>().End(exp);
                 list.equip.shards += exp;
                 container.DisableThisAndCalculator();
+                FindObjectOfType<TorsoPart>().Animate(Animations.Attack);
                 break;
             case playStatus.MyMonster:
                 SceneManager.LoadScene(2);
