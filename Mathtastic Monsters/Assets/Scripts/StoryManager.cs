@@ -182,7 +182,7 @@ public class StoryManager : MonoBehaviour
             monsterSpot.gameObject.SetActive(true);
 
             calculatorParent.SetActive(true);
-            transitionManager.TransitionContainers(TransitioningObjects.SwapToCalculator);
+            //transitionManager.TransitionContainers(TransitioningObjects.SwapToCalculator);
         }
         if (position == phases.None)
         {
