@@ -20,6 +20,8 @@ public class questionManager : MonoBehaviour
 
     public Text[] texts;
 
+    float previousAnswer = -1;
+
     void Update()
     {
         if (!transition)
@@ -137,11 +139,11 @@ public class questionManager : MonoBehaviour
 
 
         //if Answer is too low/too high, or requires rounding to solve, we try again.
-        if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole)
+        if (answer < a_running.minAnswer || answer > a_running.maxAnswer || rounding || !whole || answer == previousAnswer)
         {
             return MakeQuestion(a_running, bossAttacking);
-
         }
+        previousAnswer = answer;
 
         string answerNeeded = answer.ToString("F0");
 
