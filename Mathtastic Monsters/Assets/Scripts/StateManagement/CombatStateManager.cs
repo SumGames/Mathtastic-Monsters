@@ -244,8 +244,6 @@ public class CombatStateManager : ParentsStateManager
 
     public void BackButton()
     {
-        
-
         switch (gameState)
         {
             case playStatus.subjectSelect:

@@ -352,7 +352,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (parent.quizRunning.Hard)
+        if (!parent.quizRunning.Hard)
         {
             int completed = parent.quizRunning.parent.getCompleted();
             if (parent.quizRunning.quizIndex == completed) //Level was not completed, unlock next.
