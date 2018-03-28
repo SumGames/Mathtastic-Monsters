@@ -41,6 +41,12 @@ public class LevelSelection : MonoBehaviour
 
     public Sprite Generic;
 
+
+
+    public GameObject SealContainer;
+    public Text SealText;
+
+
     void Start()
     {
         SetHardMode(false);
@@ -119,6 +125,9 @@ public class LevelSelection : MonoBehaviour
         op.gameObject.SetActive(false);
 
         SetButtons();
+
+        ChangeIndex(currentLevel);
+
     }
 
     //Start playing with the button's level..
@@ -196,7 +205,7 @@ public class LevelSelection : MonoBehaviour
 
         SetupGroups((int)currentSubject);
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < selectedSelection.buttons.Length; i++)
         {
             if (i <= currentContainer.completedQuestions)
                 selectedSelection.buttons[i].interactable = true;
@@ -294,6 +303,44 @@ public class LevelSelection : MonoBehaviour
         currentLevel = a_index;
         SetButtons();
         CheckStars(currentContainer.buttons[a_index]);
+
+        if (currentSubject == classType.Calculi)
+        {
+            Debug.Log("checking");
+
+            bool seal = FindObjectOfType<CombatStateManager>().CanContinueFort(currentLevel);
+
+
+                if (!seal)
+            {
+                SealContainer.SetActive(true);
+
+
+                if (currentLevel < 5)
+                {
+                    SealText.text = "Defeat Add+Sub. Also, don't cheat.";
+                    return;
+                }
+                else if (currentLevel < 10)
+                {
+                    SealText.text = "Complete the Multiplication Mountain to unlock the way!";
+                    Debug.Log("Med");
+                }
+                else
+                {
+                    SealText.text = "Complete the Division Sands to unlock the way!";
+                    Debug.Log("High?");
+                }
+            }
+            else
+            {
+                SealContainer.SetActive(false);
+            }
+        }
+        else
+        {
+            SealContainer.SetActive(false);
+        }
     }
     //Swiped Right for true, left for false.
     //Add/Remove 1 from index as needed.

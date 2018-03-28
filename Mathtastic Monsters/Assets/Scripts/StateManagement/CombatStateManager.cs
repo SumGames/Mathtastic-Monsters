@@ -38,7 +38,11 @@ public class CombatStateManager : ParentsStateManager
 
     public GameObject levelSelect;
 
-
+    public bool AddComplete;
+    public bool SubComplete;
+    public bool multComplete;
+    public bool DivComplete;
+    public bool FortComplete;
 
     //Start off by linking every internal object to each other.
     void Start()
@@ -196,6 +200,11 @@ public class CombatStateManager : ParentsStateManager
         //For Sub, check nothing.
         subjectButtons[0].interactable = true;
 
+        AddComplete = list.equip.completedLevels[0] >= 10;
+        SubComplete = list.equip.completedLevels[1] >= 10;
+        multComplete = list.equip.completedLevels[2] >= 10;
+        DivComplete = list.equip.completedLevels[3] >= 10;
+
         //For Mult, checking Add.
         if (list.equip.completedLevels[0] >= 5)
             subjectButtons[1].interactable = true;
@@ -210,14 +219,7 @@ public class CombatStateManager : ParentsStateManager
 
         //For Fortess, checking all..
 
-        bool all = true;
-        for (int i = 0; i < 4; i++)
-        {
-            if (list.equip.completedLevels[i] <= 9)
-                all = false;
-        }
-
-        if (all)
+        if (AddComplete && SubComplete)
             subjectButtons[3].interactable = true;
         else
             subjectButtons[3].interactable = false;
@@ -238,7 +240,6 @@ public class CombatStateManager : ParentsStateManager
         multiplicationSelection.SetActive(false);
         divisionSelection.SetActive(false);
         mathfortressSelection.SetActive(false);
-        nextButton.gameObject.SetActive(false);
         levelSelect.SetActive(false);
     }
 
@@ -261,5 +262,26 @@ public class CombatStateManager : ParentsStateManager
                 changeState(playStatus.subjectSelect);
                 break;
         }
+    }
+
+    internal bool CanContinueFort(int index)
+    {
+        if (index < 5)
+        {
+            if (AddComplete && SubComplete)
+                return true;
+        }
+        else if (index < 10)
+        {
+            if (AddComplete && SubComplete && multComplete)
+                return true;
+        }
+        else
+        {
+            if (AddComplete && SubComplete && multComplete)
+                return true;
+        }
+        return false;
+
     }
 }
