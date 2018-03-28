@@ -8,7 +8,7 @@ public class LevelSelection : MonoBehaviour
     public questionContainer[] containers; //The containers that store all buttons for addition, etc.
     public questionContainer currentContainer; //The one the player selected.
     equipmentList list;
-    classType currentSubject;
+    internal classType currentSubject;
     public int currentLevel;
     int starsUnlocked; //How many stars we have for this level.
     public Button starOne, starTwo, starThree; //Stars light up if we have their star.
