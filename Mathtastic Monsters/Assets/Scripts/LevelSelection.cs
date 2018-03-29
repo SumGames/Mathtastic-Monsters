@@ -324,12 +324,10 @@ public class LevelSelection : MonoBehaviour
                 else if (currentLevel < 10)
                 {
                     SealText.text = "Save Mt.Multiplication from Multisaurus to progress further!";
-                    Debug.Log("Med");
                 }
                 else
                 {
                     SealText.text = "Save the Division Dunes from Divisor to face Lord Calculi once and for all!";
-                    Debug.Log("High?");
                 }
             }
             else

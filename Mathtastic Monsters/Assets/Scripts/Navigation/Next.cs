@@ -23,7 +23,7 @@ public class Next : MonoBehaviour
 
         if (button.Operator > operators.Division)
         {
-            if (!combatState.CanContinueFort(button.quizIndex))
+            if (!combatState.CanContinueFort(button.quizIndex + 1))
             {
                 gameObject.SetActive(false);
                 return;

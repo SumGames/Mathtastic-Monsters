@@ -374,6 +374,8 @@ public class questionManager : MonoBehaviour
                     default:
                         break;
                 }
+                if (summingNumbers[0] < 0)
+                    return CalculateBODMAS(a_running, failures, bossAttacking);
 
             }
             answer = summingNumbers[0];
