@@ -318,17 +318,17 @@ public class LevelSelection : MonoBehaviour
 
                 if (currentLevel < 5)
                 {
-                    SealText.text = "Defeat Add+Sub. Also, don't cheat.";
+                    SealText.text = "Defeat Add+Sub. Also, don't cheat.Good Advice Colin :)<3";
                     return;
                 }
                 else if (currentLevel < 10)
                 {
-                    SealText.text = "Complete the Multiplication Mountain to unlock the way!";
+                    SealText.text = "Save Mt.Multiplication from Multisaurus to progress further!";
                     Debug.Log("Med");
                 }
                 else
                 {
-                    SealText.text = "Complete the Division Sands to unlock the way!";
+                    SealText.text = "Save the Division Dunes from Divisor to face Lord Calculi once and for all!";
                     Debug.Log("High?");
                 }
             }
