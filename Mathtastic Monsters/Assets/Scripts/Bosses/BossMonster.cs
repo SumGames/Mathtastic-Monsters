@@ -54,6 +54,8 @@ public class BossMonster : Monster
     public GameObject[] Arrows;
     bool ArrowsFired;
 
+    hydraTestAnimation hydraAnimation;
+
     // Use this for initialization
     void Start()
     {
@@ -205,7 +207,7 @@ public class BossMonster : Monster
         {
             sprite = Instantiate(parent.quizRunning.monsterArt, monsterSpot.transform, false);
             sprite.transform.localScale = parent.quizRunning.monsterArt.transform.localScale;
-            animator = sprite.GetComponent<Animator>();
+            animator = sprite.GetComponentInChildren<Animator>();
             startingPosition = sprite.transform.localPosition;
             startingRotation = sprite.transform.localRotation;
         }
@@ -541,19 +543,35 @@ public class BossMonster : Monster
 
     int headCheck(int damage)
     {
+        if(!hydraAnimation)
+        {
+            hydraAnimation = FindObjectOfType<hydraTestAnimation>();
+        }
+
+
         if (multHealthThree > 0)
         {
             multHealthThree -= damage;
 
             bar.SetEnemyBars(3, multHealthThree);
 
+
             if (multHealthThree > 0)
                 return 3;
             else
+            {
+                if (hydraAnimation)
+                    hydraAnimation.KillOne();
+
                 return 2;
+
+            }
         }
         if (multHealthTwo > 0)
         {
+            if (hydraAnimation)
+                hydraAnimation.KillOne();
+
             multHealthTwo -= damage;
 
             bar.SetEnemyBars(2, multHealthTwo);
@@ -561,10 +579,18 @@ public class BossMonster : Monster
             if (multHealthTwo > 0)
                 return 2;
             else
+            {
+                if (hydraAnimation)
+                    hydraAnimation.killTwo();
+
                 return 1;
+            }
         }
         if (multHealthOne > 0)
         {
+            if (hydraAnimation)
+                hydraAnimation.killTwo();
+
             multHealthOne -= damage;
 
             health = multHealthOne;
