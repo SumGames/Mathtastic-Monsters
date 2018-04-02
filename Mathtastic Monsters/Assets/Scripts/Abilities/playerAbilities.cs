@@ -35,7 +35,7 @@ public class playerAbilities : MonoBehaviour
         manager.setAbilities();
     }
 
-    internal void ableAbilities(bool Able)
+    internal void AbleAbilities(bool Able)
     {
         for (int i = 0; i < abilityButtons.Length; i++)
         {

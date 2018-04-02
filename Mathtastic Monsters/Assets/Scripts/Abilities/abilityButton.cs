@@ -82,9 +82,12 @@ public class abilityButton : MonoBehaviour
                 break;
             case abilityTypes.Burn:
                 if (enemyPhase && chargesLeft >= chargesNeeded)
+                {
                     m_button.interactable = true;
+                }
                 else
                 {
+                    m_button.interactable = true;
                     m_button.interactable = false;
 
                 }
@@ -136,7 +139,7 @@ public class abilityButton : MonoBehaviour
                 chargesNeeded = 1;
                 break;
             case abilityTypes.Burn:
-                chargesNeeded = 2;
+                chargesNeeded = 1;
                 m_button.interactable = true;
                 break;
             case abilityTypes.BoulderFist:
@@ -173,15 +176,9 @@ public class abilityButton : MonoBehaviour
             default:
                 break;
         }
-
-        if (thisButton != abilityTypes.Dodge && thisButton != abilityTypes.Freeze)
-        {
-
-            //If not enough charges left, disable it.
-            if (chargesLeft < chargesNeeded || chargesNeeded == 0)
-                m_button.gameObject.SetActive(false);
-
-        }
+        //If not enough charges left, disable it.
+        if (chargesLeft < chargesNeeded || chargesNeeded == 0)
+            m_button.interactable = false;
     }
 
     void SetChargingButton(int chargSpeed)
@@ -236,8 +233,6 @@ public class abilityButton : MonoBehaviour
 
         if (setActive && usesLeft > 0)
         {
-            Debug.Log("interactable");
-
             m_button.interactable = true;
         }
         else

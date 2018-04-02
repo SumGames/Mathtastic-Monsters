@@ -57,7 +57,7 @@ public class TransitionManager : MonoBehaviour
                 calSize = 1;
                 Calculator.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
-                abilities.ableAbilities(true);
+                abilities.AbleAbilities(true);
                 return;
             }
             else
@@ -65,7 +65,7 @@ public class TransitionManager : MonoBehaviour
                 Calculator.SetActive(true);
                 calSize += Time.deltaTime * transitionSpeed;
                 Calculator.transform.localScale = new Vector3(calSize, calSize);
-                abilities.ableAbilities(false);
+                abilities.AbleAbilities(false);
             }
         }
         if (transitionState == TransitionState.MultGrow)
@@ -76,7 +76,7 @@ public class TransitionManager : MonoBehaviour
                 choSize = 1;
                 MultipleChoice.transform.localScale = new Vector3(1, 1, 1);
                 transitionState = TransitionState.None;
-                abilities.ableAbilities(true);
+                abilities.AbleAbilities(true);
                 return;
             }
             else
@@ -87,7 +87,7 @@ public class TransitionManager : MonoBehaviour
             }
         }
 
-        abilities.ableAbilities(false);
+        abilities.AbleAbilities(false);
 
         if (transitionState == TransitionState.CalculatorShrink)
         {
