@@ -304,7 +304,7 @@ public class BossMonster : Monster
 
     //We're creating a simple question like a normal monster one, but we're going to answer it using the addition container instead of anything else.
     void CreateAddition()
-    {
+    {    
         additionContainer.gameObject.SetActive(true);
 
         int[] numbers = new int[m_button.variableCount];
@@ -368,6 +368,7 @@ public class BossMonster : Monster
 
         questions.questionNeeded = answerWords;
 
+        multipleContainer.DisableThisAndCalculator();
     }
 
     internal void CreateMultiplication()

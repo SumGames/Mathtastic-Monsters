@@ -28,6 +28,9 @@ public class AdditionContainer : MonoBehaviour
 
         DisableMultiple();//Turn off all buttons.
 
+
+
+
         enemyAnswerNeeded = boss.answerNeeded;
 
         player.SetTime(true, a_running.levelTime);
