@@ -21,6 +21,9 @@ public class OptionsManager : MonoBehaviour
     public Slider VolumeSlider;
 
 
+    GameObject starParticle;
+
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +32,14 @@ public class OptionsManager : MonoBehaviour
         MusicSlider.value = PlayerPrefs.GetFloat("Music", 0.3f);
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 0.3f);
 
+        starParticle = GameObject.Find("BronzeParticle");
+        if (starParticle)
+        {
+            if (starParticle.activeSelf)
+                starParticle.SetActive(false);
+            else
+                starParticle = null;
+        }
 
         changeState(playStatus.Options);
 
@@ -43,8 +54,6 @@ public class OptionsManager : MonoBehaviour
         {
             Destroy(Tut.gameObject);
         }
-
-
     }
 
     public void changeVolume(Slider used)
@@ -116,6 +125,9 @@ public class OptionsManager : MonoBehaviour
                 creditsSelection.SetActive(true);
                 break;
             default:
+                if (starParticle)
+                    starParticle.gameObject.SetActive(true);
+
                 Destroy(gameObject);
                 Time.timeScale = 1;
                 break;
