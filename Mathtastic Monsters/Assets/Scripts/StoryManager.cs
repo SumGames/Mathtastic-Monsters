@@ -51,6 +51,9 @@ public class StoryManager : MonoBehaviour
 
     public Button[] calcButtons;
 
+    backgroundManager background;
+
+
     // Use this for initialization
     void Start()
     {
@@ -63,6 +66,9 @@ public class StoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!background)
+            background = FindObjectOfType<backgroundManager>();
+
         if (phase != phases.None)
         {
             if (button.boss)
@@ -116,6 +122,11 @@ public class StoryManager : MonoBehaviour
 
     void EndMovement()
     {
+        if (!background)
+            background = FindObjectOfType<backgroundManager>();
+        if (background.currentScroll)
+            background.currentScroll.ScrollAll(false);
+
         phase = phases.None;
         SetMovementStartAndSpeed(phase);
 
@@ -141,6 +152,7 @@ public class StoryManager : MonoBehaviour
             EndMovement();
             return;
         }
+
         textBackground.SetActive(true);
         textDisplay.gameObject.SetActive(true);
 
@@ -171,10 +183,13 @@ public class StoryManager : MonoBehaviour
     }
     void SetMovementStartAndSpeed(phases position)
     {
+        if (!background)
+            background = FindObjectOfType<backgroundManager>();
+
         if (position == phases.enemy || position == phases.None)
         {
-            if (position == phases.None)
-
+            if (background.currentScroll)
+                background.currentScroll.ScrollAll(false);
 
             objectSpot = 0;
             movingObject.transform.localPosition = new Vector3(0, 0, 0);
@@ -201,6 +216,9 @@ public class StoryManager : MonoBehaviour
 
         if (position == phases.previous)
         {
+            if (background.currentScroll)
+                background.currentScroll.ScrollAll(true);
+
             if (previousTime == 0)
             {
                 movementIncrement = 0;
@@ -217,6 +235,9 @@ public class StoryManager : MonoBehaviour
         }
         else if (position == phases.next)
         {
+            if (background.currentScroll)
+                background.currentScroll.ScrollAll(true);
+
             if (nextime == 0)
             {
                 movementIncrement = 0;

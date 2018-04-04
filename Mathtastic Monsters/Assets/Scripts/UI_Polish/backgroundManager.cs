@@ -20,6 +20,16 @@ public class backgroundManager : MonoBehaviour
 
     Sprite newImage;
 
+
+    public GameObject AddPrefab;
+    public GameObject subPrefab;
+    public GameObject mulPrefab;
+    public GameObject divPrefab;
+    public GameObject ForPrefab;
+
+    internal ScrollingParent currentScroll;
+
+
     //Initiate scene by setting background and setting up objects
     internal void startBack(playStatus a_state)
     {
@@ -35,7 +45,6 @@ public class backgroundManager : MonoBehaviour
         changeBack(a_state);
     }
 
-
     //We're changing states, which means changing the background to suit that state.
     public void changeBack(playStatus a_state)
     {
@@ -44,6 +53,7 @@ public class backgroundManager : MonoBehaviour
 
         newImage = null;
 
+        GameObject scroller = null;
 
         switch (a_state)
         {
@@ -54,18 +64,27 @@ public class backgroundManager : MonoBehaviour
                 newImage = subjectScreen;
                 break;
             case playStatus.Addition:
+                //scroller = Instantiate(AddPrefab, transform, false);
                 newImage = additionScreen;
                 break;
             case playStatus.Subtraction:
+                //scroller = Instantiate(subPrefab, transform, false);
+
                 newImage = subtractionScreen;
                 break;
             case playStatus.Multiplication:
+                //scroller = Instantiate(mulPrefab, transform, false);
+
                 newImage = multiplicationScreen;
                 break;
             case playStatus.Division:
+                //scroller = Instantiate(divPrefab, transform, false);
+
                 newImage = divisionScreen;
                 break;
             case playStatus.MathFortress:
+                //scroller = Instantiate(ForPrefab, transform, false);
+
                 newImage = mathfortressScreen;
                 break;
             case playStatus.playing:
@@ -98,6 +117,21 @@ public class backgroundManager : MonoBehaviour
             default:
                 break;
         }
+
+        if(scroller)
+        {
+            currentScroll = scroller.GetComponent<ScrollingParent>();
+
+            thisScreen.enabled = false;
+            return;
+        }
+
+
+        if (currentScroll)
+        {
+            Destroy(currentScroll.gameObject);
+        }
+
 
         if (newImage != null)
         {

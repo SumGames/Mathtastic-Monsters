@@ -10,14 +10,26 @@ public class ScrollingObject : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-        //Get and store a reference to the Rigidbody2D attached to this GameObject.
-        scrollImage = GetComponent<Rigidbody2D>();
-        //Start the object moving.
-        scrollImage.velocity = new Vector2(scrollSpeed, 0);
+    {        
+        //Start the object moving.        
     }
     void Update()
     {
 
+    }
+
+    internal void Scroll(bool move)
+    {
+        if (!scrollImage)
+            scrollImage = GetComponent<Rigidbody2D>();
+
+        if(move)
+        {
+            scrollImage.velocity = new Vector2(scrollSpeed, 0);
+        }
+        else
+        {
+            scrollImage.velocity = new Vector2(0, 0);
+        }
     }
 }
