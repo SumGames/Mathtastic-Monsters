@@ -100,7 +100,7 @@ public class MusicManager : MonoBehaviour
                 musicSource.Stop();
                 return;
             case playStatus.Won:
-                adding = music[8];
+                musicSource.Stop();
                 break;
             case playStatus.Lost:
                 musicSource.loop = false;
