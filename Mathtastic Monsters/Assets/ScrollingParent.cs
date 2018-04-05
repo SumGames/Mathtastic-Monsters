@@ -5,10 +5,12 @@ using UnityEngine;
 public class ScrollingParent : MonoBehaviour
 {
 
+    public bool autoStart;
 
 	// Use this for initialization
 	void Start ()
     {
+        ScrollAll(autoStart);
 	}
 	
 	// Update is called once per frame
