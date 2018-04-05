@@ -112,7 +112,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 2:
-                lillyText.text = "My name is Lilly! I need your to beat Lord Calculi!";
+                lillyText.text = "My name is Lilly! I need your help to beat Lord Calculi!";
                 break;
             case 3:
                 enableOutlines(0);
@@ -181,7 +181,7 @@ public class StepManager : MonoBehaviour
                 ConfirmAttack.gameObject.SetActive(false);
                 QuestionText.text = "";
                 InputText.text = "";
-                lillyText.text = "Good work! Note that answering while the timer is in the Green zone will result in double damage!";
+                lillyText.text = "Good work! answer quickly while the timer is Green and you'll deal double damage!";
                 enableOutlines(-1);
                 break;
 
