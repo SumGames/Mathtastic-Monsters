@@ -22,6 +22,7 @@ public class OptionsManager : MonoBehaviour
 
 
     GameObject starParticle;
+    GameObject gold;
 
 
     // Use this for initialization
@@ -31,6 +32,15 @@ public class OptionsManager : MonoBehaviour
 
         MusicSlider.value = PlayerPrefs.GetFloat("Music", 0.3f);
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 0.3f);
+
+        gold = GameObject.Find("BronzeWin");
+        if(gold)
+        {
+            if (gold.activeSelf)
+                gold.SetActive(false);
+            else
+                gold = null;
+        }
 
         starParticle = GameObject.Find("BronzeParticle");
         if (starParticle)
@@ -128,6 +138,8 @@ public class OptionsManager : MonoBehaviour
                 if (starParticle)
                     starParticle.gameObject.SetActive(true);
 
+                if (gold)
+                    gold.gameObject.SetActive(true);
                 Destroy(gameObject);
                 Time.timeScale = 1;
                 break;

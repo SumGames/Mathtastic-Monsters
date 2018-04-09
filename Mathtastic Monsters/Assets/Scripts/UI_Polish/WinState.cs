@@ -13,6 +13,13 @@ public class WinState : MonoBehaviour
 
     equipmentList list;
 
+
+    public GameObject bronzeParticle;
+    public GameObject silverParticle;
+    public GameObject goldParticle;
+
+
+
     // Use this for initialization
     void Start()
     {
@@ -62,6 +69,12 @@ public class WinState : MonoBehaviour
         stars[0].interactable = (starsUnlocked >= 1);
         stars[1].interactable = (starsUnlocked >= 2);
         stars[2].interactable = (starsUnlocked >= 3);
+
+
+        bronzeParticle.SetActive(stars[0].interactable);
+        silverParticle.SetActive(stars[1].interactable);
+        goldParticle.SetActive(stars[2].interactable);
+
 
 
         if (shardsEarned)
