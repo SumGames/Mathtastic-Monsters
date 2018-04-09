@@ -262,7 +262,7 @@ public class LevelSelection : MonoBehaviour
         SetupGroups((int)currentSubject);
 
         starsUnlocked = list.equip.StarsAcquired[(((int)currentSubject * 10) + currentLevel)];
-        if (currentLevel == 4 || currentLevel == 9)
+        if (currentLevel == 4 || currentLevel == 9 || currentLevel == 14)
         {
             SetHardMode(false);
 

@@ -9,6 +9,8 @@ public class helpPopup : MonoBehaviour
 
     public Sprite[] HelpImages;
 
+    public Sprite FortTen;
+
     public LevelSelection levelSelection;
 
 	// Use this for initialization
@@ -27,7 +29,7 @@ public class helpPopup : MonoBehaviour
     {
         classType type = classType.Addition;
 
-        type = levelSelection.currentSubject;
+        type = levelSelection.currentSubject;        
 
         int index = (int)type;
 
@@ -46,7 +48,14 @@ public class helpPopup : MonoBehaviour
                 HelpPanel.sprite = HelpImages[3];
                 break;
             case classType.Calculi:
-                HelpPanel.sprite = HelpImages[4];
+                if (levelSelection.currentLevel > 7)
+                {
+                    HelpPanel.sprite = FortTen;
+                }
+                else
+                {
+                    HelpPanel.sprite = HelpImages[4];
+                }
                 break;
             default:
                 return;
