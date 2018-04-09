@@ -12,12 +12,14 @@ public class ScrollingObject : MonoBehaviour
 
     private float groundHorizontalLength;
 
+    RectTransform rect;
+
+
     // Use this for initialization
     void Start()
     {
-        RectTransform rect = GetComponent<RectTransform>();
+        rect = GetComponent<RectTransform>();
         groundHorizontalLength = rect.rect.width;
-
     }
 
     void Update()
