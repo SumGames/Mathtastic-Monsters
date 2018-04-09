@@ -349,7 +349,7 @@ public class BossMonster : Monster
 
         if (first == 0)
         {
-            answerWords += "__";
+            answerWords += "_";
         }
         else
             answerWords += numbers[0].ToString("F0");
@@ -358,7 +358,7 @@ public class BossMonster : Monster
         {
 
             if (first == i)
-                answerWords += " + __ ";
+                answerWords += " + _ ";
             else
                 answerWords += " + " + numbers[i].ToString("F0");
         }

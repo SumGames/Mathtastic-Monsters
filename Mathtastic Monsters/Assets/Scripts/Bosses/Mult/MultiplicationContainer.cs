@@ -87,7 +87,7 @@ public class MultiplicationContainer : MonoBehaviour
         AnswerList[1] = numberTwo;
 
 
-        return "_ x _=" + CorrectAnswer.ToString();
+        return "_ x _ = " + CorrectAnswer.ToString();
     }
 
     void SetBoxes(QuizButton button)
