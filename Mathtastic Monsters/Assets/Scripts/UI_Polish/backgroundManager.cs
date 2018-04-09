@@ -64,8 +64,8 @@ public class backgroundManager : MonoBehaviour
                 newImage = subjectScreen;
                 break;
             case playStatus.Addition:
-                //scroller = Instantiate(AddPrefab, transform, false);
-                newImage = additionScreen;
+                scroller = Instantiate(AddPrefab, transform, false);
+                //newImage = additionScreen;
                 break;
             case playStatus.Subtraction:
                 //scroller = Instantiate(subPrefab, transform, false);
