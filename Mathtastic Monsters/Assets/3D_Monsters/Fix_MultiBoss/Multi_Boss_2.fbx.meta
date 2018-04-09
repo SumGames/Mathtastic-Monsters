@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 50b7e719bdfc8a34c9bab2d9c71e2eff
+timeCreated: 1523316190
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle_L
+    100002: Ankle_R
+    100004: Back_1
+    100006: Back_2
+    100008: Back_3
+    100010: CollarBone_L
+    100012: CollarBone_R
+    100014: Foot_End_L
+    100016: Foot_End_R
+    100018: Foot_L
+    100020: Foot_R
+    100022: Head_End_L
+    100024: Head_End_M
+    100026: Head_End_R
+    100028: Head_L
+    100030: Head_M
+    100032: Head_R
+    100034: ikHandle1
+    100036: ikHandle2
+    100038: Knee_L
+    100040: Knee_R
+    100042: //RootNode
+    100044: Multi_Boss_Body
+    100046: Neck_1_L
+    100048: Neck_1_M
+    100050: Neck_1_R
+    100052: Neck_2_L
+    100054: Neck_2_M
+    100056: Neck_2_R
+    100058: Neck_3_L
+    100060: Neck_3_M
+    100062: Neck_3_R
+    100064: Neck_4_L
+    100066: Neck_4_M
+    100068: Neck_4_R
+    100070: Neck_5_L
+    100072: Neck_5_M
+    100074: Neck_5_R
+    100076: Neck_6_L
+    100078: Neck_6_M
+    100080: Neck_6_R
+    100082: Neck_7_L
+    100084: Neck_7_M
+    100086: Neck_7_R
+    100088: Root
+    100090: Shoulder_L
+    100092: Shoulder_R
+    400000: Ankle_L
+    400002: Ankle_R
+    400004: Back_1
+    400006: Back_2
+    400008: Back_3
+    400010: CollarBone_L
+    400012: CollarBone_R
+    400014: Foot_End_L
+    400016: Foot_End_R
+    400018: Foot_L
+    400020: Foot_R
+    400022: Head_End_L
+    400024: Head_End_M
+    400026: Head_End_R
+    400028: Head_L
+    400030: Head_M
+    400032: Head_R
+    400034: ikHandle1
+    400036: ikHandle2
+    400038: Knee_L
+    400040: Knee_R
+    400042: //RootNode
+    400044: Multi_Boss_Body
+    400046: Neck_1_L
+    400048: Neck_1_M
+    400050: Neck_1_R
+    400052: Neck_2_L
+    400054: Neck_2_M
+    400056: Neck_2_R
+    400058: Neck_3_L
+    400060: Neck_3_M
+    400062: Neck_3_R
+    400064: Neck_4_L
+    400066: Neck_4_M
+    400068: Neck_4_R
+    400070: Neck_5_L
+    400072: Neck_5_M
+    400074: Neck_5_R
+    400076: Neck_6_L
+    400078: Neck_6_M
+    400080: Neck_6_R
+    400082: Neck_7_L
+    400084: Neck_7_M
+    400086: Neck_7_R
+    400088: Root
+    400090: Shoulder_L
+    400092: Shoulder_R
+    4300000: Multi_Boss_Body
+    7400000: Idle
+    7400002: Hit
+    7400004: Attack
+    7400006: Death
+    9500000: //RootNode
+    13700000: Multi_Boss_Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: Multi_Boss_Body
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back_3
+        weight: 1
+      - path: Root/Back_3/Back_2
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L/Foot_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R/Foot_End_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L/Head_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M/Head_End_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R/Head_End_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: Multi_Boss_Body
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back_3
+        weight: 1
+      - path: Root/Back_3/Back_2
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L/Foot_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R/Foot_End_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L/Head_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M/Head_End_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R/Head_End_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 110
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: Multi_Boss_Body
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back_3
+        weight: 1
+      - path: Root/Back_3/Back_2
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L/Foot_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R/Foot_End_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L/Head_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M/Head_End_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R/Head_End_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: Multi_Boss_Body
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back_3
+        weight: 1
+      - path: Root/Back_3/Back_2
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_L/Shoulder_L/Knee_L/Ankle_L/Foot_L/Foot_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/CollarBone_R/Shoulder_R/Knee_R/Ankle_R/Foot_R/Foot_End_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_L/Neck_6_L/Neck_5_L/Neck_4_L/Neck_3_L/Neck_2_L/Neck_1_L/Head_L/Head_End_L
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_M/Neck_6_M/Neck_5_M/Neck_4_M/Neck_3_M/Neck_2_M/Neck_1_M/Head_M/Head_End_M
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R
+        weight: 1
+      - path: Root/Back_3/Back_2/Back_1/Neck_7_R/Neck_6_R/Neck_5_R/Neck_4_R/Neck_3_R/Neck_2_R/Neck_1_R/Head_R/Head_End_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
