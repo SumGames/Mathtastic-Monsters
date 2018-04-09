@@ -7,6 +7,9 @@ public class ScrollingParent : MonoBehaviour
 
     public bool autoStart;
 
+    public float speed;
+
+
 	// Use this for initialization
 	void Start ()
     {
@@ -31,7 +34,7 @@ public class ScrollingParent : MonoBehaviour
 
         foreach (ScrollingObject item in objects)
         {
-            item.Scroll(progress, 0.1f);
+            item.Scroll(progress, speed);
         }
     }
 
