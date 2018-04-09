@@ -33,7 +33,7 @@ public class ScrollingObject : MonoBehaviour
         }
     }
 
-    internal void Scroll(bool move)
+    internal void Scroll(bool move, float speed)
     {
         scrolling = move;
 
@@ -42,7 +42,7 @@ public class ScrollingObject : MonoBehaviour
 
         if (move)
         {
-            scrollImage.velocity = new Vector2(scrollSpeed, 0);
+            scrollImage.velocity = new Vector2(scrollSpeed*speed, 0);
         }
         else
         {

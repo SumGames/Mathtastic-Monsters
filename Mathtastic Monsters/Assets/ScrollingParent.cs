@@ -31,7 +31,7 @@ public class ScrollingParent : MonoBehaviour
 
         foreach (ScrollingObject item in objects)
         {
-            item.Scroll(progress);
+            item.Scroll(progress, 0.1f);
         }
     }
 
