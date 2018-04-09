@@ -13,7 +13,6 @@ public class TutorialMonster : MonoBehaviour
 
 
     public GameObject monsterSpot;
-    public GameObject sprite;
 
 
     public TutorialCalculator calculator;
@@ -24,6 +23,9 @@ public class TutorialMonster : MonoBehaviour
     public TutmultipleContainer container;
 
     combatFeedback feedback;
+
+    public GameObject MonsterPrefab;
+    Animator Animator;
 
     //Update healthbar as it changes.
     void Update()
@@ -36,6 +38,8 @@ public class TutorialMonster : MonoBehaviour
         if (!enemyAttackPhase)
         {
             health -= player.PlayerAttack();
+
+            Animator.Play("Hurt");
 
             CheckDeath();
         }
@@ -55,6 +59,8 @@ public class TutorialMonster : MonoBehaviour
         {
             player.DamagePlayer(attack);
 
+            Animator.Play("Attack");
+
             FindObjectOfType<StepManager>().ProgressTutorial();
         }
         else
@@ -71,9 +77,9 @@ public class TutorialMonster : MonoBehaviour
 
         if (health <= 0)
         {
+            Animator.Play("Death");
 
             FindObjectOfType<StepManager>().playerWon();
-
             return;
         }
     }
@@ -84,6 +90,9 @@ public class TutorialMonster : MonoBehaviour
     {
         if (!healthBar)
             healthBar = FindObjectOfType<Healthbars>();
+
+        GameObject Mon = Instantiate(MonsterPrefab, monsterSpot.transform);
+        Animator = Mon.GetComponent<Animator>();
 
 
         MakeQuestion();
