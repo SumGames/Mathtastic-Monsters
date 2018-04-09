@@ -53,6 +53,8 @@ public class StoryManager : MonoBehaviour
 
     backgroundManager background;
 
+    public Healthbars healthbars;
+
 
     // Use this for initialization
     void Start()
@@ -106,13 +108,14 @@ public class StoryManager : MonoBehaviour
                     timer = 0;
                     textDisplay.text = enemyWords;
                     SetMovementStartAndSpeed(phase);
+                    healthbars.wait = false;
                 }
                 break;
             case phases.enemy:
                 if (timer > enemyTime)
                 {
+                    healthbars.wait = false;
                     EndMovement();
-
                 }
                 break;
             default:
@@ -178,6 +181,7 @@ public class StoryManager : MonoBehaviour
             enemyTime = 0;
             previousTime = 0;
             nextime = 0;
+            healthbars.skipRefill();
         }
 
     }

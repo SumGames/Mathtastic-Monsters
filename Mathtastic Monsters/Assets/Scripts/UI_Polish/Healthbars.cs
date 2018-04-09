@@ -25,15 +25,32 @@ public class Healthbars : MonoBehaviour
 
     bool multiActive;
 
+    internal bool wait;
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
+
+
+    internal void skipRefill()
+    {
+        playerFill = playerHealth;
+        enemyFill = enemyHealth;
+        secondFill = secondHealth;
+        thirdFill = thirdHealth;
+    }
+
+
 	
-	// Update is called once per frame
+    // Update is called once per frame
     //For each bar it slowly empties out as they take damage, using the difference between the two to determine speed.
 	void Update ()
     {
+        if (wait)
+            return;
+
         if (playerBar != null)
         {
             playerFill = Mathf.Lerp(playerFill, playerHealth, Time.deltaTime);
@@ -64,8 +81,10 @@ public class Healthbars : MonoBehaviour
 
 
     //Called at the start of the a fight, setting the character's healthbar to max.
-    public void setMaxHealth(float Max, bool player, bool Three=false)
+    public void setMaxHealth(float Max, bool player, bool Three = false)
     {
+        wait = true;
+
         if (Three)
         {
             Debug.Log("Start");
@@ -75,28 +94,27 @@ public class Healthbars : MonoBehaviour
             SecondBar.gameObject.SetActive(true);
 
             ThirdBar.gameObject.SetActive(true);
-            enemyBar.maxValue = enemyHealth = enemyFill = 4;
-            SecondBar.maxValue = secondHealth = secondFill = 4;
-            ThirdBar.maxValue = secondHealth = thirdFill = 4;
+            enemyBar.maxValue = enemyHealth = 4;
+            SecondBar.maxValue = secondHealth = 4;
+            ThirdBar.maxValue = secondHealth = 4;
 
             return;
         }
         if (player)
         {
-            playerBar.maxValue = playerHealth = playerFill = Max;
+            playerBar.maxValue = playerHealth = Max;
         }
         else
         {
             multiActive = false;
 
-            enemyBar.maxValue = enemyHealth = enemyFill = Max;
+            enemyBar.maxValue = enemyHealth = Max;
             if (SecondBar)
             {
                 SecondBar.gameObject.SetActive(false);
                 ThirdBar.gameObject.SetActive(false);
             }
         }
-
     }
 
     //After a character is damaged, set health so we can lerp down to that level.
