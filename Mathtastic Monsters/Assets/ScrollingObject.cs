@@ -10,7 +10,7 @@ public class ScrollingObject : MonoBehaviour
 
     bool scrolling;
 
-    private float groundHorizontalLength;
+    public float groundHorizontalLength;
 
     RectTransform rect;
 
@@ -18,15 +18,39 @@ public class ScrollingObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //Leave position is 478 for an object of 100 width.
+        //Ideal width is 854.
+
         rect = GetComponent<RectTransform>();
         groundHorizontalLength = rect.rect.width;
+
+        float width = Camera.main.pixelWidth;
+
+        Debug.Log(width);
+        return;
+        Debug.Log(groundHorizontalLength);
+
+        float Division = 854 / groundHorizontalLength;
+        Debug.Log(Division);
+
+
+//        Division = groundHorizontalLength * Division;
+//        Debug.Log(Division);
+
     }
 
     void Update()
     {
         if (scrolling)
         {
-            if (transform.localPosition.x < -groundHorizontalLength)
+            float width = (groundHorizontalLength / 2);
+
+            float cameraOffScreen = -(Camera.main.pixelWidth) / 2;
+
+            float currentPositionX = transform.localPosition.x + width;
+
+
+            if (currentPositionX < cameraOffScreen)
             {
                 RepositionBackground();
             }
@@ -57,6 +81,6 @@ public class ScrollingObject : MonoBehaviour
         Vector2 groundOffSet = new Vector2(groundHorizontalLength * 2f, 0);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
-        transform.localPosition = (Vector2)transform.localPosition + groundOffSet;
+        transform.localPosition = (Vector2)transform.localPosition * -1;
     }
 }
