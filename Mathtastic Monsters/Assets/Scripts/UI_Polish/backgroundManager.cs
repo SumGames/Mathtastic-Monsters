@@ -120,6 +120,9 @@ public class backgroundManager : MonoBehaviour
 
         if(scroller)
         {
+            if (currentScroll)
+                Destroy(currentScroll.gameObject);
+
             currentScroll = scroller.GetComponent<ScrollingParent>();
 
             thisScreen.enabled = false;
