@@ -83,7 +83,7 @@ public class ScrollingObject : MonoBehaviour
         //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
 
 
-        Vector3 groundOffSet = transform.position;
+        Vector3 groundOffSet = transform.localPosition;
         groundOffSet.x = transform.localPosition.x * -1;
 
 
