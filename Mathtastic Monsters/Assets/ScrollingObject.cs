@@ -14,6 +14,7 @@ public class ScrollingObject : MonoBehaviour
 
     RectTransform rect;
 
+    float CameraWidth;
 
     // Use this for initialization
     void Start()
@@ -24,18 +25,12 @@ public class ScrollingObject : MonoBehaviour
         rect = GetComponent<RectTransform>();
         groundHorizontalLength = rect.rect.width;
 
-        float width = Camera.main.pixelWidth;
+        CameraWidth = Camera.main.pixelWidth;
 
-        Debug.Log(width);
-        return;
-        Debug.Log(groundHorizontalLength);
+        Debug.Log(CameraWidth);
 
-        float Division = 854 / groundHorizontalLength;
-        Debug.Log(Division);
-
-
-//        Division = groundHorizontalLength * Division;
-//        Debug.Log(Division);
+        if (CameraWidth < 800)
+            CameraWidth = 800;
 
     }
 
@@ -45,7 +40,7 @@ public class ScrollingObject : MonoBehaviour
         {
             float width = (groundHorizontalLength / 2);
 
-            float cameraOffScreen = -(Camera.main.pixelWidth) / 2;
+            float cameraOffScreen = -(CameraWidth) / 2;
 
             float currentPositionX = transform.localPosition.x + width;
 
@@ -78,13 +73,17 @@ public class ScrollingObject : MonoBehaviour
     private void RepositionBackground()
     {
         //This is how far to the right we will move our background object, in this case, twice its length. This will position it directly to the right of the currently visible background object.
-        //Vector2 groundOffSet = new Vector2(groundHorizontalLength * 2f, 0);
+
+        float jump = transform.localPosition.x + (groundHorizontalLength * 2);
+
+
+        Vector3 groundOffSet = new Vector3(jump, transform.localPosition.y, transform.localPosition.z);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
 
 
-        Vector3 groundOffSet = transform.localPosition;
-        groundOffSet.x = transform.localPosition.x * -1;
+//        Vector3 groundOffSet = transform.localPosition;
+  //      groundOffSet.x = transform.localPosition.x * -1;
 
 
         transform.localPosition = groundOffSet;
