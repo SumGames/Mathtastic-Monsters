@@ -68,24 +68,24 @@ public class backgroundManager : MonoBehaviour
                 //newImage = additionScreen;
                 break;
             case playStatus.Subtraction:
-                //scroller = Instantiate(subPrefab, transform, false);
+                scroller = Instantiate(subPrefab, transform, false);
 
-                newImage = subtractionScreen;
+                //newImage = subtractionScreen;
                 break;
             case playStatus.Multiplication:
-                //scroller = Instantiate(mulPrefab, transform, false);
+                scroller = Instantiate(mulPrefab, transform, false);
 
-                newImage = multiplicationScreen;
+                //newImage = multiplicationScreen;
                 break;
             case playStatus.Division:
-                //scroller = Instantiate(divPrefab, transform, false);
+                scroller = Instantiate(divPrefab, transform, false);
 
-                newImage = divisionScreen;
+                //newImage = divisionScreen;
                 break;
             case playStatus.MathFortress:
-                //scroller = Instantiate(ForPrefab, transform, false);
+                scroller = Instantiate(ForPrefab, transform, false);
 
-                newImage = mathfortressScreen;
+                //newImage = mathfortressScreen;
                 break;
             case playStatus.playing:
                 return;
