@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class ScrollingObject : MonoBehaviour
 {
-    private Rigidbody2D scrollImage;
     public float scrollSpeed;
 
-    bool scrolling;
+    public bool scrolling;
 
     public float groundHorizontalLength;
 
@@ -16,18 +15,17 @@ public class ScrollingObject : MonoBehaviour
 
     float CameraWidth;
 
+    public float movementSpeed;
+
+
     // Use this for initialization
     void Start()
     {
-        //Leave position is 478 for an object of 100 width.
-        //Ideal width is 854.
-
         rect = GetComponent<RectTransform>();
         groundHorizontalLength = rect.rect.width;
 
         CameraWidth = Camera.main.pixelWidth;
 
-        Debug.Log(CameraWidth);
 
         if (CameraWidth < 800)
             CameraWidth = 800;
@@ -36,8 +34,11 @@ public class ScrollingObject : MonoBehaviour
 
     void Update()
     {
+        
         if (scrolling)
         {
+            transform.Translate(new Vector3(movementSpeed, 0, 0));
+
             float width = (groundHorizontalLength / 2);
 
             float cameraOffScreen = -(CameraWidth) / 2;
@@ -52,21 +53,12 @@ public class ScrollingObject : MonoBehaviour
         }
     }
 
-    internal void Scroll(bool move, float speed)
+    internal void Scroll(bool move, float a_speed)
     {
+        movementSpeed = scrollSpeed * a_speed * 1;
+
+
         scrolling = move;
-
-        if (!scrollImage)
-            scrollImage = GetComponent<Rigidbody2D>();
-
-        if (move)
-        {
-            scrollImage.velocity = new Vector2(scrollSpeed*speed, 0);
-        }
-        else
-        {
-            scrollImage.velocity = new Vector2(0, 0);
-        }
     }
 
     //Moves the object this script is attached to right in order to create our looping background effect.
