@@ -78,9 +78,16 @@ public class ScrollingObject : MonoBehaviour
     private void RepositionBackground()
     {
         //This is how far to the right we will move our background object, in this case, twice its length. This will position it directly to the right of the currently visible background object.
-        Vector2 groundOffSet = new Vector2(groundHorizontalLength * 2f, 0);
+        //Vector2 groundOffSet = new Vector2(groundHorizontalLength * 2f, 0);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
-        transform.localPosition = (Vector2)transform.localPosition * -1;
+
+
+        Vector3 groundOffSet = transform.position;
+        groundOffSet.x = transform.localPosition.x * -1;
+
+
+        transform.localPosition = groundOffSet;
+
     }
 }
