@@ -64,7 +64,7 @@ public class TransitionManager : MonoBehaviour
             {
                 Calculator.SetActive(true);
                 calSize += Time.deltaTime * transitionSpeed;
-                Calculator.transform.localScale = new Vector3(calSize, calSize);
+                Calculator.transform.localScale = new Vector3(calSize, calSize, 1);
                 abilities.AbleAbilities(false);
             }
         }
@@ -83,7 +83,7 @@ public class TransitionManager : MonoBehaviour
             {
                 MultipleChoice.SetActive(true);
                 choSize += Time.deltaTime * transitionSpeed;
-                MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
+                MultipleChoice.transform.localScale = new Vector3(choSize, choSize, 1);
             }
         }
 
@@ -95,14 +95,14 @@ public class TransitionManager : MonoBehaviour
             {
                 Calculator.SetActive(true);
                 calSize = transitionMin;
-                Calculator.transform.localScale = new Vector3(0, 0, 0);
+                Calculator.transform.localScale = new Vector3(0, 0, 1);
                 transitionState = TransitionState.MultGrow;
             }
             else
             {
                 Calculator.SetActive(true);
                 calSize -= Time.deltaTime * transitionSpeed;
-                Calculator.transform.localScale = new Vector3(calSize, calSize);
+                Calculator.transform.localScale = new Vector3(calSize, calSize, 1);
             }
         }
         if (transitionState == TransitionState.MultShrink)
@@ -111,15 +111,14 @@ public class TransitionManager : MonoBehaviour
             {
                 MultipleChoice.SetActive(true);
                 choSize = transitionMin;
-                MultipleChoice.transform.localScale = new Vector3(0, 0, 0);
+                MultipleChoice.transform.localScale = new Vector3(0, 0, 1);
                 transitionState = TransitionState.CalculatorGrow;
             }
             else
             {
                 MultipleChoice.SetActive(true);
                 choSize -= Time.deltaTime * transitionSpeed;
-                MultipleChoice.transform.localScale = new Vector3(choSize, choSize);
-
+                MultipleChoice.transform.localScale = new Vector3(choSize, choSize, 1);
             }
         }
 
