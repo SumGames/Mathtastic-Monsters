@@ -12,8 +12,10 @@ public class WinAnimation : MonoBehaviour
 
 
     int shardsLeft;
-    float increment = 0.5f;
+    public float increment = 0.5f;
     float Timer;
+
+    public float Speed;
 
 
 	// Use this for initialization
@@ -32,7 +34,7 @@ public class WinAnimation : MonoBehaviour
                 GameObject shard = Instantiate(ShardPrefab, transform.position, transform.rotation, this.transform);
 
                 WinShard winShard = shard.GetComponent<WinShard>();
-                winShard.FireShard(EndShard);
+                winShard.FireShard(EndShard, Speed);
                 shardList.Add(winShard);
                 shardsLeft--;
             }

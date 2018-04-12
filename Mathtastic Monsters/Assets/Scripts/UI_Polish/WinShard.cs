@@ -10,7 +10,9 @@ public class WinShard : MonoBehaviour
 
     public bool fired;
 
-    public float distance;    
+    public float distance;
+
+    float speedGiven;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +25,7 @@ public class WinShard : MonoBehaviour
         if (fired)
         {
 
-            rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, end.anchoredPosition, (Time.deltaTime * 100));
+            rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, end.anchoredPosition, (Time.deltaTime * 100 * speedGiven));
 
             distance = Vector3.Distance(rect.anchoredPosition, end.anchoredPosition);
 
@@ -35,8 +37,10 @@ public class WinShard : MonoBehaviour
         }
     }
 
-    public void FireShard(RectTransform a_end)
+    public void FireShard(RectTransform a_end, float a_speed)
     {
+        speedGiven = a_speed;
+
         rect = GetComponent<RectTransform>();
 
         fired = true;
