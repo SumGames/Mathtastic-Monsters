@@ -16,6 +16,7 @@ public class HeaderGUI : MonoBehaviour
 
     TalismanManager talismans;
 
+    int shardCount;
 
     // Use this for initialization
     void Start()
@@ -34,13 +35,16 @@ public class HeaderGUI : MonoBehaviour
         {
             if (list && list.equip != null)
             {
-                UpdateUI();
+                UpdateUI(true);
             }
         }
     }
 
-    void UpdateUI()
+    internal void UpdateUI(bool andShards)
     {
+        if (andShards)
+            shardCount = list.equip.shards;
+
         shardsUI.text = list.getShards();
         starsUI.text = list.equip.GetTotalStars().ToString();
         playernameUI.text = list.playerName;
@@ -54,7 +58,11 @@ public class HeaderGUI : MonoBehaviour
             talismans.SetStaticTalismans();
 
         }
+    }
 
-
+    internal void incrementShards()
+    {
+        shardCount++;
+        shardsUI.text = shardCount.ToString();
     }
 }

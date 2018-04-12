@@ -78,9 +78,19 @@ public class ParentsStateManager : MonoBehaviour
     //Change the game's state, closing/opening containers and changing text.
     public virtual void changeState(playStatus newState)
     {
-        if (header)
-            header.UINeedsUpdate = true;
 
+        if (header)
+        {
+            if (newState == playStatus.Won)
+            {
+                header.UpdateUI(false);
+            }
+            else
+            {
+                header.UINeedsUpdate = true;
+            }
+
+        }
         backgrounds.changeBack(newState);
 
         if (manager == null)

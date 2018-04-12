@@ -18,6 +18,7 @@ public class WinState : MonoBehaviour
     public GameObject silverParticle;
     public GameObject goldParticle;
 
+    public WinAnimation winAnimation;
 
 
     // Use this for initialization
@@ -34,6 +35,8 @@ public class WinState : MonoBehaviour
 
     internal void End(int earned)
     {
+        winAnimation.GiveShards(earned);
+
         list = FindObjectOfType<equipmentList>();
 
         QuizButton button = monsterM.quizRunning;

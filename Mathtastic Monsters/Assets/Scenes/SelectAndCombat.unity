@@ -5658,6 +5658,7 @@ MonoBehaviour:
   bronzeParticle: {fileID: 0}
   silverParticle: {fileID: 0}
   goldParticle: {fileID: 0}
+  winAnimation: {fileID: 0}
 --- !u!1 &241325927
 GameObject:
   m_ObjectHideFlags: 0
@@ -33874,7 +33875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1395773092
 Transform:
   m_ObjectHideFlags: 0
@@ -33921,6 +33922,7 @@ MonoBehaviour:
   bronzeParticle: {fileID: 123412155}
   silverParticle: {fileID: 881526608}
   goldParticle: {fileID: 1198886917}
+  winAnimation: {fileID: 1859709987}
 --- !u!1 &1398724426
 GameObject:
   m_ObjectHideFlags: 0
@@ -44468,6 +44470,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1829328756}
+--- !u!1 &1831514325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1831514326}
+  - component: {fileID: 1831514328}
+  - component: {fileID: 1831514327}
+  m_Layer: 5
+  m_Name: Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1831514326
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831514325}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.39990592, y: 0.39990592, z: 0.39990592}
+  m_Children: []
+  m_Father: {fileID: 1859709984}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.4151084, y: 0.14487095}
+  m_AnchorMax: {x: 0.47421682, y: 0.855}
+  m_AnchoredPosition: {x: 46.079582, y: 171.16907}
+  m_SizeDelta: {x: 32.568726, y: 18.69172}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1831514327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831514325}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 163b3008e517b2f4eac8594619979da2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1831514328
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831514325}
 --- !u!1 &1832384974
 GameObject:
   m_ObjectHideFlags: 0
@@ -45567,6 +45637,7 @@ GameObject:
   - component: {fileID: 1859709984}
   - component: {fileID: 1859709986}
   - component: {fileID: 1859709985}
+  - component: {fileID: 1859709987}
   m_Layer: 5
   m_Name: Shards
   m_TagString: Untagged
@@ -45583,7 +45654,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5000682, y: 2.5000682, z: 2.5000682}
-  m_Children: []
+  m_Children:
+  - {fileID: 1831514326}
   m_Father: {fileID: 1395773092}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45625,6 +45697,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1859709983}
+--- !u!114 &1859709987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859709983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb9afff895d1b448ae50834e5a3fdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShardPrefab: {fileID: 1232357457028396, guid: 4e982ab13052fd840b2114ecee390682,
+    type: 2}
+  EndShard: {fileID: 1831514326}
 --- !u!1 &1863143489
 GameObject:
   m_ObjectHideFlags: 0

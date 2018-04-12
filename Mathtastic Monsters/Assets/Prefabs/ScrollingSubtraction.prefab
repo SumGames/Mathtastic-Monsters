@@ -1003,6 +1003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -5
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114059508117051846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1042,6 +1045,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -20
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114137920836273848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1081,6 +1087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -25
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114233479841782518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1093,6 +1102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -30
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114266047305903496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1159,6 +1171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -10
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114329829024722360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1198,6 +1213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114454244773426126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1210,6 +1228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -5
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114476159459563064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,6 +1243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -30
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114491031264878052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,6 +1312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -15
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114563892343483902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1300,6 +1327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114637565952076952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1312,6 +1342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -20
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114685307204064332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1378,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoStart: 0
-  speed: 0.05
+  speed: 0.005
 --- !u!114 &114808873379310290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,6 +1451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -15
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114869387586443672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1430,6 +1466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -25
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114895792590801536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1442,6 +1481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: -10
+  scrolling: 0
+  groundHorizontalLength: 0
+  movementSpeed: 0
 --- !u!114 &114919738311916596
 MonoBehaviour:
   m_ObjectHideFlags: 1

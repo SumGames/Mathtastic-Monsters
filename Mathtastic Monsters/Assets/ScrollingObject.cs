@@ -27,9 +27,11 @@ public class ScrollingObject : MonoBehaviour
         CameraWidth = Camera.main.pixelWidth;
 
 
+
+
+
         if (CameraWidth < 800)
             CameraWidth = 800;
-
     }
 
     void Update()
@@ -46,8 +48,15 @@ public class ScrollingObject : MonoBehaviour
             float currentPositionX = transform.localPosition.x + width;
 
 
+            currentPositionX = (transform.localPosition.x + rect.rect.xMax);
+
+
+
+
             if (currentPositionX < cameraOffScreen)
             {
+                Debug.Log(currentPositionX);
+
                 RepositionBackground();
             }
         }
@@ -68,6 +77,7 @@ public class ScrollingObject : MonoBehaviour
 
         float jump = transform.localPosition.x + (groundHorizontalLength * 2);
 
+        jump = transform.localPosition.x * -1;
 
         Vector3 groundOffSet = new Vector3(jump, transform.localPosition.y, transform.localPosition.z);
 
