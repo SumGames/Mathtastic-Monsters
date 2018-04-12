@@ -45,7 +45,7 @@ public class ScrollingObject : MonoBehaviour
 
             float cameraOffScreen = -(CameraWidth) / 2;
 
-            float currentPositionX = transform.localPosition.x - width;
+            float currentPositionX = transform.localPosition.x + width;
 
 
             //currentPositionX = (transform.localPosition.x + rect.rect.xMax);
@@ -55,6 +55,8 @@ public class ScrollingObject : MonoBehaviour
 
             if (currentPositionX < cameraOffScreen)
             {
+                Debug.Log(currentPositionX);
+
                 RepositionBackground();
             }
         }
@@ -73,10 +75,7 @@ public class ScrollingObject : MonoBehaviour
     {
         //This is how far to the right we will move our background object, in this case, twice its length. This will position it directly to the right of the currently visible background object.
 
-        float jump = CameraWidth + (groundHorizontalLength / 16);
-
-        scrolling = false;
-
+        float jump = transform.localPosition.x + (groundHorizontalLength * 2);
 
        // jump = transform.localPosition.x * -1;
 
