@@ -18,6 +18,8 @@ public class ScrollingObject : MonoBehaviour
     public float movementSpeed;
 
 
+    public Vector3[] corners;
+
     // Use this for initialization
     void Start()
     {
@@ -26,9 +28,8 @@ public class ScrollingObject : MonoBehaviour
 
         CameraWidth = Camera.main.pixelWidth;
 
-
-
-
+        corners = new Vector3[4];
+        
 
         if (CameraWidth < 800)
             CameraWidth = 800;
@@ -36,7 +37,8 @@ public class ScrollingObject : MonoBehaviour
 
     void Update()
     {
-        
+        /*
+
         if (scrolling)
         {
             transform.Translate(new Vector3(movementSpeed, 0, 0));
@@ -60,6 +62,29 @@ public class ScrollingObject : MonoBehaviour
                 RepositionBackground();
             }
         }
+    */
+
+        if (scrolling)
+        {
+            transform.Translate(new Vector3(movementSpeed, 0, 0));
+
+            transform.Translate(new Vector3(-10, 0, 0));
+
+
+
+            rect.GetWorldCorners(corners);
+
+
+
+            float distPastX = corners[2].x;
+
+
+            if (distPastX <= 1)
+            {
+                RepositionBackground();
+            }
+        }
+
     }
 
     internal void Scroll(bool move, float a_speed)
@@ -73,13 +98,17 @@ public class ScrollingObject : MonoBehaviour
     //Moves the object this script is attached to right in order to create our looping background effect.
     private void RepositionBackground()
     {
-        //This is how far to the right we will move our background object, in this case, twice its length. This will position it directly to the right of the currently visible background object.
+        rect.GetWorldCorners(corners);
 
-        float jump = transform.localPosition.x + (groundHorizontalLength * 2);
+        float width = corners[2].x - corners[1].x / 2;
+
+
+        float jump = CameraWidth + width;
+
 
        // jump = transform.localPosition.x * -1;
 
-        Vector3 groundOffSet = new Vector3(jump, transform.localPosition.y, transform.localPosition.z);
+        Vector3 groundOffSet = new Vector3(jump, transform.position.y, transform.position.z);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera in front of the player.
 
@@ -88,7 +117,7 @@ public class ScrollingObject : MonoBehaviour
   //      groundOffSet.x = transform.localPosition.x * -1;
 
 
-        transform.localPosition = groundOffSet;
+        transform.position = groundOffSet;
 
     }
 }
