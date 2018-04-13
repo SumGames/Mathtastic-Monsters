@@ -20,6 +20,8 @@ public class ScrollingObject : MonoBehaviour
 
     public Vector3[] corners;
 
+    public ScrollingObject nextScrollingObject;
+
     // Use this for initialization
     void Start()
     {
@@ -68,9 +70,6 @@ public class ScrollingObject : MonoBehaviour
         {
             transform.Translate(new Vector3(movementSpeed, 0, 0));
 
-            transform.Translate(new Vector3(-10, 0, 0));
-
-
 
             rect.GetWorldCorners(corners);
 
@@ -79,7 +78,7 @@ public class ScrollingObject : MonoBehaviour
             float distPastX = corners[2].x;
 
 
-            if (distPastX <= 1)
+            if (distPastX <= 0)
             {
                 RepositionBackground();
             }
@@ -98,13 +97,30 @@ public class ScrollingObject : MonoBehaviour
     //Moves the object this script is attached to right in order to create our looping background effect.
     private void RepositionBackground()
     {
-        rect.GetWorldCorners(corners);
+        float jump = 0;
 
-        float width = corners[2].x - corners[1].x / 2;
+        if (nextScrollingObject)
+        {
+            rect.GetWorldCorners(corners);
+
+            float otherWidth = (nextScrollingObject.corners[2].x);
+
+            otherWidth = otherWidth - (otherWidth * .02f);
 
 
-        float jump = CameraWidth + width;
+            float myWidth = (corners[2].x - corners[1].x) / 2;
 
+            jump = otherWidth + myWidth;
+        }
+        else
+        {
+            rect.GetWorldCorners(corners);
+
+            float width = corners[2].x - corners[1].x / 2;
+
+
+            jump = CameraWidth + width;
+        }
 
        // jump = transform.localPosition.x * -1;
 
