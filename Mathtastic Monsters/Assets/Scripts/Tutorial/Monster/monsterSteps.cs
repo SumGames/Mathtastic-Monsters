@@ -108,7 +108,7 @@ public class monsterSteps : MonoBehaviour
                 break;
 
             case 5:
-                lillyText.text = "This area shows the part you've selecred, along with it's ability!";
+                lillyText.text = "This area shows the part you've selected, along with it's ability!";
                 enableOutlines(2);
                 break;
 
