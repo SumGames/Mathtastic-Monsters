@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
 {
 
     public StoryManager storyManager;
-    public ParticleSystem shards;
     internal float baseHealth = 6; //Player's starting health. prob affected by equipment.
     float maxHealth;
     public float currentHealth; //Health, set by maxHealth and lowered by enemy attacks.
@@ -378,7 +377,6 @@ public class Player : MonoBehaviour
 
         getShards.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
         victoryMusic.volume = PlayerPrefs.GetFloat("Volume", 0.3f);
-        shards.Play(true);
         getShards.Play();
         victoryMusic.Play();
 
