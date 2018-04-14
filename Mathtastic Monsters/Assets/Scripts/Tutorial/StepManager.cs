@@ -105,14 +105,14 @@ public class StepManager : MonoBehaviour
                 enableOutlines(-1);
 
                 combatContainer.SetActive(false);
-                lillyText.text = "Hi there, " + list.playerName + "!\nWelcome to the world of Mathtastic Monsters!";
+                lillyText.text = "Hi there, " + list.playerName + "!\nWelcome to the world of Monstertopia!";
                 toAddition.interactable = false;
                 levelSelect.SetActive(true);
                 myButton.interactable = true;
                 break;
 
             case 2:
-                lillyText.text = "My name is Lilly! I need your help to beat Lord Calculi!";
+                lillyText.text = "My name is Lilly! I need your help to beat Lord Calculi! He has stolen math from the world and you are my last hope!";
                 break;
             case 3:
                 enableOutlines(0);
@@ -124,7 +124,7 @@ public class StepManager : MonoBehaviour
                 break;
             case 4:
                 enableOutlines(-1);
-                lillyText.text = "The beast is frozen. Let me explain.";
+                lillyText.text = "I've frozen the monster for now. But I don't have much time. Let me explain.";
                 combatContainer.SetActive(true);
                 calculator.SetActive(false);
                 player.ResetPlayer();
@@ -140,30 +140,30 @@ public class StepManager : MonoBehaviour
                 break;
             case 5:
                 calculator.SetActive(true);
-                lillyText.text = "This is your monsterlator!";
+                lillyText.text = "You'll need to use the Monsterlator. Let me tell you how it works!";
                 enableOutlines(1);
                 break;
             case 6:
-                lillyText.text = "This is your health bar. We'll lose if it runs out.";
+                lillyText.text = "This is your health. You'll be defeated if it's empty.";
                 enableOutlines(6);
                 break;
             case 7:
 
-                lillyText.text = "This is the enemy's health. Empty it to win!";
+                lillyText.text = "This is the enemy monsters health. Empty it to defeat it!";
                 enableOutlines(4);
                 break;
             case 8:
-                lillyText.text = "This is the timer. The monster will attack when it hits 0.";
+                lillyText.text = "This is the timer. You must answer the math question before it runs out! Or you may get hurt";
                 enableOutlines(2);
                 break;
             case 9:
-                lillyText.text = "This is its question. Answering it will weaken the beast";
+                lillyText.text = "This is the enemy question. Answering it will weaken the monster!";
                 enableOutlines(7);
                 break;
             case 10:
                 myButton.interactable = false;
                 AttackChoice.interactable = true;
-                lillyText.text = "Tapping on numbers writes your answer";
+                lillyText.text = "Tapping on numbers will put your answer in the Monsterlator. Tap the answer to 4 + 2 now!";
                 QuestionText.text = "4 + 2 = ";
                 enableOutlines(1);                
                 break;
@@ -171,7 +171,7 @@ public class StepManager : MonoBehaviour
                 AttackChoice.gameObject.SetActive(false);
                 ConfirmAttack.interactable = true;
 
-                lillyText.text = "Hitting attack will submit your answer!";
+                lillyText.text = "Tapping attack will submit your answer!";
                 QuestionText.text = "4 + 2 = ";
                 InputText.text = "6";
                 enableOutlines(3);
@@ -181,7 +181,7 @@ public class StepManager : MonoBehaviour
                 ConfirmAttack.gameObject.SetActive(false);
                 QuestionText.text = "";
                 InputText.text = "";
-                lillyText.text = "Good work! answer quickly while the timer is Green and you'll deal double damage!";
+                lillyText.text = "Good work! answer quickly while the timer is green and you'll deal double damage!";
                 enableOutlines(-1);
                 break;
 
@@ -211,7 +211,7 @@ public class StepManager : MonoBehaviour
                 QuestionText.text = "4 + 5 = ";
                 multRight.interactable = true;                
                 myButton.interactable = false;
-                lillyText.text = "To evade, hit the button with the Correct Answer.";
+                lillyText.text = "To evade, tap the button with the correct answer!";
                 break;
 
             case 15:
@@ -219,7 +219,7 @@ public class StepManager : MonoBehaviour
                 multContainer.SetActive(true);
                 multRight.interactable = false;
                 multSubmit.interactable = true;
-                lillyText.text = "Good! Now tap the Defend to confirm your answer and block the attack!";
+                lillyText.text = "Good! Now tap the Defend button to confirm your answer and block the attack!";
                 break;
 
             case 16:
@@ -228,23 +228,23 @@ public class StepManager : MonoBehaviour
                 multRight.gameObject.SetActive(false);
                 multSubmit.gameObject.SetActive(false);
                 myButton.interactable = true;
-                lillyText.text = "Yay! By answering questions in this phase, you avoid damage! Answering quickly will result in a counter!";
+                lillyText.text = "Yay! By answering questions in the enemy turn, you avoid damage! Answering quickly will result in a counter!";
                 break;
             case 17:
                 multContainer.SetActive(false);
                 calculator.SetActive(true);
-                lillyText.text = "I'll now lower the freeze barrier when you're ready.";
+                lillyText.text = "I can't hold the freeze much longer.I'll lower it when you're ready!";
                 break;
 
             case 18:
-                lillyText.text = "Answer the monster's questions to lower its health!!";
+                lillyText.text = "Answer the monsters questions to lower its health!!";
                 TutorialMonster.MakeQuestion(2);
                 player.Frozen = 0;
                 tutorialCalculator.ButtonsActive(true);
                 myButton.interactable = false;
                 break;
             case 19:
-                lillyText.text = "Hero! Please be more careful! I had to freeze the beast again.";
+                lillyText.text = "Hero! Please be more careful! I had to freeze the beast again. I don't have much power left!";
                 myButton.interactable = true;
                 player.Frozen = 3;
                 tutorialCalculator.ButtonsActive(false);
@@ -259,7 +259,7 @@ public class StepManager : MonoBehaviour
                 }
                 myButton.interactable = true;
                 tutorialCalculator.ButtonsActive(false);
-                lillyText.text = "The beast has fallen! Good work, Hero!";
+                lillyText.text = "The monster has fallen! Good work, Hero!";
                 if (!list.equip.tutorialComplete)
                 {
                     list.equip.shards += 20;
@@ -274,7 +274,7 @@ public class StepManager : MonoBehaviour
                 break;
 
             case 21:
-                lillyText.text = "Since you're here, why don't I show you how to make parts?";
+                lillyText.text = "Since you're here, why don't I show you how to make parts using your shards!";
                 break;
             default:
                 Destroy(gameObject);
