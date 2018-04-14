@@ -107,7 +107,7 @@ public class ScrollingObject : MonoBehaviour
 
             float otherWidth = (nextScrollingObject.corners[2].x);
 
-            otherWidth = otherWidth - (otherWidth * .02f);
+            otherWidth = otherWidth - (1);
 
 
             float myWidth = (corners[2].x - corners[1].x) / 2;
