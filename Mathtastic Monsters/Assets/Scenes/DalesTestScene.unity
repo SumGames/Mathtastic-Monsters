@@ -212,6 +212,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114682979696090630, guid: 1cd2d84391ff7eb43a92da0438f1e309,
+        type: 2}
+      propertyPath: autoStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682979696090630, guid: 1cd2d84391ff7eb43a92da0438f1e309,
+        type: 2}
+      propertyPath: speed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cd2d84391ff7eb43a92da0438f1e309, type: 2}
   m_IsPrefabParent: 0
@@ -398,6 +408,7 @@ MonoBehaviour:
   movementSpeed: 0
   corners: []
   nextScrollingObject: {fileID: 0}
+  distPastX: 0
 --- !u!1 &426472458
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +590,7 @@ Canvas:
   m_GameObject: {fileID: 670352176}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

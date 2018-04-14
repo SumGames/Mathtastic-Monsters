@@ -22,6 +22,8 @@ public class ScrollingObject : MonoBehaviour
 
     public ScrollingObject nextScrollingObject;
 
+    public float distPastX;
+
     // Use this for initialization
     void Start()
     {
@@ -75,7 +77,7 @@ public class ScrollingObject : MonoBehaviour
 
 
 
-            float distPastX = corners[2].x;
+            distPastX = corners[2].x + 10;
 
 
             if (distPastX <= 0)
