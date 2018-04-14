@@ -16,7 +16,7 @@ public class WinAnimation : MonoBehaviour
     float Timer;
 
     public float Speed;
-
+    float effectiveSpeed = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class WinAnimation : MonoBehaviour
                 GameObject shard = Instantiate(ShardPrefab, transform.position, transform.rotation, this.transform);
 
                 WinShard winShard = shard.GetComponent<WinShard>();
-                winShard.FireShard(EndShard, Speed);
+                winShard.FireShard(EndShard, (Speed * effectiveSpeed));
                 shardList.Add(winShard);
                 shardsLeft--;
             }
@@ -56,6 +56,19 @@ public class WinAnimation : MonoBehaviour
         else
         {
             shardList = new List<WinShard>();
+        }
+
+        if (number > 20)
+        {
+            effectiveSpeed = number / 20;
+
+            increment = increment / effectiveSpeed;
+
+        }
+        else
+        {
+            effectiveSpeed = 1;
+            increment = 0.5f;
         }
 
 
