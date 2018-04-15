@@ -93,7 +93,7 @@ public class monsterSteps : MonoBehaviour
                 break;
 
             case 2:
-                lillyText.text = "This is where you can buy and equip new parts!";
+                lillyText.text = "This is where you can bring your monster shards to me and I'll make new parts out of them that you can equip! Some parts have special abilities that will help you in battle!";
                 break;
 
             case 3:
@@ -102,7 +102,7 @@ public class monsterSteps : MonoBehaviour
                 break;
 
             case 4:
-                lillyText.text = "Here you can press the arrows to select the part.!";
+                lillyText.text = "Here you can tap the arrows to have a look at available parts!";
                 enableOutlines(1);
                 myButton.interactable = true;
                 break;
@@ -113,12 +113,12 @@ public class monsterSteps : MonoBehaviour
                 break;
 
             case 6:
-                lillyText.text = "Use this button to spend shards and buy parts, then equip them!";
+                lillyText.text = "Use this button to use shards and create parts, then equip them!";
                 enableOutlines(3);
                 break;
 
             case 7:
-                lillyText.text = "And over here you can see what your monster looks like, along with any abilities it has!";
+                lillyText.text = "And over here you can see what your monster looks like, along with any abilities it has! You now have everything you need going forward! Good luck and make sure to check back in to see what I can make for you!";
                 enableOutlines(4);
                 break;
 
