@@ -40,11 +40,14 @@ public class Monster : MonoBehaviour
     void Start()
     {
         bar = FindObjectOfType<Healthbars>();
+
+
     }
 
     //Update healthbar as it changes.
     void Update()
     {
+
     }
 
     internal void abilityDamage(float damage)
@@ -165,6 +168,9 @@ public class Monster : MonoBehaviour
 
 
         bar.setMaxHealth(health, false);
+
+        if (parent.quizRunning.Hard)
+            bar.wait = false;
 
         if (!music)
             music = FindObjectOfType<MusicManager>();

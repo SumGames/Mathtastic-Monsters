@@ -27,6 +27,7 @@ public class TutorialMonster : MonoBehaviour
     public GameObject MonsterPrefab;
     Animator Animator;
 
+
     //Update healthbar as it changes.
     void Update()
     {        
@@ -35,6 +36,9 @@ public class TutorialMonster : MonoBehaviour
     //Monster's health is reduced by player's attack, possibly switching to won state.
     internal void MonsterHurt()
     {
+        if (feedback == null)
+            feedback = FindObjectOfType<combatFeedback>();
+
         if (!enemyAttackPhase)
         {
             health -= player.PlayerAttack();
@@ -46,6 +50,8 @@ public class TutorialMonster : MonoBehaviour
         else if (player.timeLeft.value > player.greenZone)
         {
             health -= 1;
+
+            feedback.DamageSet(SetFeedback.PlayerCountered);
 
             Animator.Play("Hurt");
 
@@ -69,6 +75,7 @@ public class TutorialMonster : MonoBehaviour
             player.DamagePlayer(attack);
 
             Animator.Play("Attack");
+            feedback.DamageSet(SetFeedback.PlayerHit);
 
             FindObjectOfType<StepManager>().ProgressTutorial();
         }

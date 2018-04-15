@@ -62,13 +62,13 @@ public class WinAnimation : MonoBehaviour
         {
             effectiveSpeed = number / 20;
 
-            increment = increment / effectiveSpeed;
+            increment = 0.3f / effectiveSpeed;
 
         }
         else
         {
             effectiveSpeed = 1;
-            increment = 0.5f;
+            increment = 0.3f;
         }
 
 
