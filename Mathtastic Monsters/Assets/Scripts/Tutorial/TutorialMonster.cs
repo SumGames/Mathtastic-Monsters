@@ -27,6 +27,10 @@ public class TutorialMonster : MonoBehaviour
     public GameObject MonsterPrefab;
     Animator Animator;
 
+    public Vector3 startingPosition;
+    public Quaternion startingRotation;
+
+    GameObject sprite;
 
     //Update healthbar as it changes.
     void Update()
@@ -89,6 +93,9 @@ public class TutorialMonster : MonoBehaviour
 
     void CheckDeath()
     {
+        sprite.transform.localPosition = startingPosition;
+        sprite.transform.localRotation = startingRotation;
+
         healthBar.changeHealth(false, health);
 
         if (health <= 0)
@@ -107,9 +114,12 @@ public class TutorialMonster : MonoBehaviour
         if (!healthBar)
             healthBar = FindObjectOfType<Healthbars>();
 
-        GameObject Mon = Instantiate(MonsterPrefab, monsterSpot.transform);
-        Animator = Mon.GetComponent<Animator>();
+        sprite = Instantiate(MonsterPrefab, monsterSpot.transform);
+        Animator = sprite.GetComponent<Animator>();
 
+
+        startingPosition = sprite.transform.localPosition;
+        startingRotation = sprite.transform.localRotation;
 
         MakeQuestion();
 
