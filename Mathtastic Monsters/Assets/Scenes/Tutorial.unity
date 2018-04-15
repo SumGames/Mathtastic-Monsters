@@ -2265,6 +2265,7 @@ RectTransform:
   - {fileID: 1011049420}
   - {fileID: 1795898463}
   - {fileID: 1969897068}
+  - {fileID: 931888023}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3257,6 +3258,7 @@ MonoBehaviour:
   enemyBar: {fileID: 557210441}
   SecondBar: {fileID: 0}
   ThirdBar: {fileID: 0}
+  wait: 0
 --- !u!1 &755463044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,6 +4162,48 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891014372}
+--- !u!1001 &908564730
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 543391330}
+    m_Modifications:
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.000015139581
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.000046182835
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1fb1147c5fd2e77419b884b66bdc57ca, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &915450802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4276,16 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 915450802}
+--- !u!1 &931888022 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1589139309383094, guid: 1fb1147c5fd2e77419b884b66bdc57ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 908564730}
+--- !u!4 &931888023 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4224119858511918, guid: 1fb1147c5fd2e77419b884b66bdc57ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 908564730}
 --- !u!1 &973235624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,6 +4854,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046989271}
+--- !u!114 &1100992693 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114937869340755318, guid: 1fb1147c5fd2e77419b884b66bdc57ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 908564730}
+  m_Script: {fileID: 11500000, guid: 3bb9afff895d1b448ae50834e5a3fdd6, type: 3}
 --- !u!1 &1121853135
 GameObject:
   m_ObjectHideFlags: 0
@@ -5880,6 +5940,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OptionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 224393229685917404, guid: 3d4aa6cdf91bab647bb9a8f0c6215e8c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d4aa6cdf91bab647bb9a8f0c6215e8c, type: 2}
@@ -8057,6 +8122,13 @@ MonoBehaviour:
   - {fileID: 1795898462}
   - {fileID: 1969897067}
   toAddition: {fileID: 756958628}
+  winContainer: {fileID: 931888022}
+  winAnimation: {fileID: 1100992693}
+  combatStuff:
+  - {fileID: 1849501095}
+  - {fileID: 1651885292}
+  - {fileID: 1358887212}
+  - {fileID: 1602298011}
 --- !u!222 &1853343190
 CanvasRenderer:
   m_ObjectHideFlags: 0

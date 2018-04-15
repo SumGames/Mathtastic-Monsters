@@ -43,6 +43,15 @@ public class TutorialMonster : MonoBehaviour
 
             CheckDeath();
         }
+        else if (player.timeLeft.value > player.greenZone)
+        {
+            health -= 1;
+
+            Animator.Play("Hurt");
+
+            CheckDeath();
+        }
+
 
         MakeQuestion();
     }
@@ -101,6 +110,8 @@ public class TutorialMonster : MonoBehaviour
         attack = 1;
 
         healthBar.setMaxHealth(health, false);
+
+        healthBar.wait = false;
     }
 
     //Uses given values to calculate a random sum and its components, then store and display them.

@@ -25,7 +25,7 @@ public class Healthbars : MonoBehaviour
 
     bool multiActive;
 
-    internal bool wait;
+    public bool wait;
 
 	// Use this for initialization
 	void Start ()
@@ -120,6 +120,9 @@ public class Healthbars : MonoBehaviour
     //After a character is damaged, set health so we can lerp down to that level.
     internal void changeHealth(bool player, float current)
     {
+
+        Debug.Log(current);
+
         if (player)
             playerHealth = current;
         else

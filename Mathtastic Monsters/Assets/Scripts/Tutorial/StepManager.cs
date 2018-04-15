@@ -50,6 +50,11 @@ public class StepManager : MonoBehaviour
 
     public Button toAddition;
 
+    public GameObject winContainer;
+    public WinAnimation winAnimation;
+
+
+    public GameObject[] combatStuff;
 
     // Use this for initialization
     void Start()
@@ -101,6 +106,7 @@ public class StepManager : MonoBehaviour
         switch (a_step)
         {
             case 1:
+                winContainer.SetActive(false);
                 multContainer.SetActive(false);
                 enableOutlines(-1);
 
@@ -257,16 +263,21 @@ public class StepManager : MonoBehaviour
                     player.ResetPlayer();
                     return;
                 }
+                winContainer.SetActive(true);
+                winAnimation.GiveShards(20);
                 myButton.interactable = true;
-                tutorialCalculator.ButtonsActive(false);
                 lillyText.text = "The monster has fallen! Good work, Hero!";
+
+                foreach (GameObject item in combatStuff)
+                {
+                    item.SetActive(false);
+                }
+
                 if (!list.equip.tutorialComplete)
                 {
                     list.equip.shards += 20;
                     lillyText.text += "\nYou also got 20 shards!";
                     list.equip.tutorialComplete = true;
-                    FindObjectOfType<HeaderGUI>().UINeedsUpdate = true;
-
                 }                
                 TutorialMonster.gameObject.SetActive(false);
                 TutorialMonster.healthBar.gameObject.SetActive(false);

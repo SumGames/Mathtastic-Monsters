@@ -22,7 +22,7 @@ public class TutorialPlayer : MonoBehaviour
 
     public Slider timeLeft; //Visually represents time.
 
-    float greenZone; //At over the crit timer, the bar is green.
+    internal float greenZone; //At over the crit timer, the bar is green.
     float redZone; //When under 25% left, it turns red.
     //At all other times, turn yellow.
     public Image bar; //Display of the timer bar. Used to change its colour.
