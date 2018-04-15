@@ -24,7 +24,7 @@ public class DivisionAnswers : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        GetComponent<Image>().color = Color.yellow;		
+        GetComponent<Image>().color = Color.white;		
 	}
 
     internal void SetAnswer(int a_answer)
@@ -48,7 +48,7 @@ public class DivisionAnswers : MonoBehaviour
             }
 
             draggedIn = collided;
-            draggedIn.GetComponent<Image>().color = Color.yellow;
+            draggedIn.GetComponent<Image>().color = Color.cyan;
         }
         else
         {
