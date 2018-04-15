@@ -56,7 +56,11 @@ public class NavigationButton : MonoBehaviour
         if (musicManager)
             musicManager.click.Play();
         FindObjectOfType<OptionsManager>().changeState(stateTarget);
+    }
 
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }
