@@ -25,6 +25,9 @@ public class MultiplicationContainer : MonoBehaviour
 
     questionManager questionManager;
 
+    public Sprite defaultSprite;
+    public Sprite clickedSprite;
+
 
     // Use this for initialization
     void Start()
@@ -127,7 +130,7 @@ public class MultiplicationContainer : MonoBehaviour
         for (int i = 0; i < 2; i++)
         {
             if (multiplicationBoxes[i] != null)
-                multiplicationBoxes[i].GetComponent<Image>().color = Color.white;
+                multiplicationBoxes[i].GetComponent<Image>().sprite = defaultSprite;
             multiplicationBoxes[i] = null;
         }
 
@@ -159,7 +162,7 @@ public class MultiplicationContainer : MonoBehaviour
             if (multiplicationBoxes[i] == null)
             {
                 multiplicationBoxes[i] = box;
-                multiplicationBoxes[i].GetComponent<Image>().color = Color.yellow;
+                multiplicationBoxes[i].GetComponent<Image>().sprite = clickedSprite;
 
                 if (multiplicationBoxes[0] && multiplicationBoxes[1])
                     submit.interactable = true;
@@ -168,15 +171,15 @@ public class MultiplicationContainer : MonoBehaviour
             }
             if (box == multiplicationBoxes[i])
             {
-                multiplicationBoxes[i].GetComponent<Image>().color = Color.white;
+                multiplicationBoxes[i].GetComponent<Image>().sprite = defaultSprite;
                 multiplicationBoxes[i] = null;
                 submit.interactable = false;
                 return;
             }
         }
-        multiplicationBoxes[nextPick].GetComponent<Image>().color = Color.white;
+        multiplicationBoxes[nextPick].GetComponent<Image>().sprite = defaultSprite;
         multiplicationBoxes[nextPick] = box;
-        multiplicationBoxes[nextPick].GetComponent<Image>().color = Color.yellow;
+        multiplicationBoxes[nextPick].GetComponent<Image>().sprite = clickedSprite;
 
         submit.interactable = true;
 
