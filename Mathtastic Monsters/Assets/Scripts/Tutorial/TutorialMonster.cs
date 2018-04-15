@@ -61,6 +61,11 @@ public class TutorialMonster : MonoBehaviour
 
             CheckDeath();
         }
+        else
+        {
+            feedback.DamageSet(SetFeedback.PlayerDodged);
+
+        }
 
 
         MakeQuestion();
