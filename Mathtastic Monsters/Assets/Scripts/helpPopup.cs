@@ -13,6 +13,8 @@ public class helpPopup : MonoBehaviour
 
     public LevelSelection levelSelection;
 
+    public GameObject moveArrows;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -61,10 +63,14 @@ public class helpPopup : MonoBehaviour
                 return;
         }
         HelpPanel.gameObject.SetActive(true);
+
+        moveArrows.SetActive(false);
     }
 
     public void DisableImage()
     {
+        moveArrows.SetActive(true);
+
         HelpPanel.gameObject.SetActive(false);
     }
 }
