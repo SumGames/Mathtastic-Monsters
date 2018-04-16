@@ -51,10 +51,9 @@ public class Abacus : MonoBehaviour
 
     public bool testing = false;
 
-    public Text GoalText;
-    public Text ResultText;
 
-    float timer;
+    public Text CurrentText;
+
 
     public void ResetAbacus(bool random, float Goal)
     {
@@ -85,26 +84,10 @@ public class Abacus : MonoBehaviour
         FourText.text = FourValue.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-
-    }
-
     internal void SetRandom(int goal=0)
     {
-        if (goal == 0)
-        {
-
-            Total = Random.Range(10, 200);
-
-            GoalText.text = "Goal is: " + Total.ToString();
-        }
-        else
-        {
-            Total = goal;
-        }
+        Total = goal;
+        
 
         int remaining = Total;
 
@@ -156,6 +139,7 @@ public class Abacus : MonoBehaviour
             FourBlocks[i].transform.position = FourSpotNegatives[i].transform.position;
             shiftedFours[i] = false;
         }
+        checkTotal();
     }
 
 
@@ -177,6 +161,7 @@ public class Abacus : MonoBehaviour
                 shiftedOnes[i] = false;
             }
         }
+        checkTotal();
     }
 
     public void ClickBarTwo(int index)
@@ -197,6 +182,7 @@ public class Abacus : MonoBehaviour
                 shiftedTwos[i] = false;
             }
         }
+        checkTotal();
     }
 
 
@@ -218,6 +204,7 @@ public class Abacus : MonoBehaviour
                 shiftedThrees[i] = false;
             }
         }
+        checkTotal();
     }
 
     public void ClickBarFour(int index)
@@ -238,6 +225,7 @@ public class Abacus : MonoBehaviour
                 shiftedFours[i] = false;
             }
         }
+        checkTotal();
     }
 
     public int CalculateTotal()
@@ -293,21 +281,9 @@ public class Abacus : MonoBehaviour
         return index;
     }
 
-    public void TestResult()
+    void checkTotal()
     {
-        int result = CalculateTotal();
-
-        if (result == Total)
-        {
-            ResultText.text = "Correct! Time: " + timer.ToString("N0");
-            timer = 0;
-            SetRandom();
-            return;
-        }
-
-
-        ResultText.text = result.ToString();
+        CurrentText.text = CalculateTotal().ToString();
 
     }
-
 }

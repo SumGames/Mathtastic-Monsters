@@ -613,8 +613,6 @@ public class BossMonster : Monster
         }
         else
         {
-            Debug.Log(AbacusAttempts);
-
             if (!setArrows((AbacusAttempts - 1)))
             {
                 EnemyAttack();
