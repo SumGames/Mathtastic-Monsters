@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class abilityButton : MonoBehaviour
 {
-    abilityTypes thisButton; //This button's current ability.
+    internal abilityTypes thisButton; //This button's current ability.
 
     //Active buttons are disabled if charges left is less than needed.
     public int chargesLeft;
@@ -115,6 +115,8 @@ public class abilityButton : MonoBehaviour
         chargesNeeded = 0;
         gameObject.SetActive(true);
 
+        ColorBlock block;
+
         switch (thisButton)
         {
             case abilityTypes.None:
@@ -122,18 +124,34 @@ public class abilityButton : MonoBehaviour
                 return;
             case abilityTypes.Scavenger:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.Dodge:
                 chargesNeeded = 1;
                 break;
             case abilityTypes.BarkSkin:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.SuperSpeed:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.SlimeSkin:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.Freeze:
                 chargesNeeded = 1;
@@ -144,6 +162,10 @@ public class abilityButton : MonoBehaviour
                 break;
             case abilityTypes.BoulderFist:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.FireStorm:
                 chargesNeeded = chargesLeft;
@@ -151,9 +173,17 @@ public class abilityButton : MonoBehaviour
                 break;
             case abilityTypes.Mastery:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.SandSlice:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.Hourglass:
                 chargesNeeded = chargesLeft;
@@ -166,12 +196,24 @@ public class abilityButton : MonoBehaviour
                 break;
             case abilityTypes.ArmourUp:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.DoubleStrike:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             case abilityTypes.TimeLord:
                 m_button.interactable = false;
+                block = m_button.colors;
+                block.normalColor = Color.gray;
+                block.disabledColor = Color.gray;
+                m_button.colors = block;
                 return;
             default:
                 break;

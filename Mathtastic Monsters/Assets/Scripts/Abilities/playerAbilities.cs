@@ -39,7 +39,8 @@ public class playerAbilities : MonoBehaviour
     {
         for (int i = 0; i < abilityButtons.Length; i++)
         {
-            abilityButtons[i].GetComponent<Image>().enabled = Able;
+            if (abilityButtons[i].thisButton != abilityTypes.None)
+                abilityButtons[i].gameObject.SetActive(Able);
         }
     }
 
