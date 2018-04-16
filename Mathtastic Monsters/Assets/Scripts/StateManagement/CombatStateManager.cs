@@ -44,6 +44,8 @@ public class CombatStateManager : ParentsStateManager
     public bool DivComplete;
     public bool FortComplete;
 
+    public helpPopup popup;
+
     //Start off by linking every internal object to each other.
     void Start()
     {
@@ -245,6 +247,8 @@ public class CombatStateManager : ParentsStateManager
 
     public void BackButton()
     {
+        popup.DisableImage();
+
         switch (gameState)
         {
             case playStatus.subjectSelect:
